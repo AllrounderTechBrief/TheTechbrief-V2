@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron: "0 */6 * * *"      # every 6 hours
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -32,12 +32,12 @@ jobs:
 
       - name: Download NLTK tokenizer data
         run: |
-          python -c "
+          python - << 'EOF'
           import nltk
           nltk.download('punkt', quiet=True)
           nltk.download('punkt_tab', quiet=True)
-          print('NLTK ready')
-          "
+          print("NLTK ready")
+          EOF
 
       - name: Run build script
         run: |
