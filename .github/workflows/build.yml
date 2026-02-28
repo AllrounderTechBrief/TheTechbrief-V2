@@ -5,7 +5,7 @@ on:
     branches: [ main ]
   schedule:
     - cron: "0 */6 * * *"      # every 6 hours
-  workflow_dispatch:            # manual trigger from Actions tab
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -19,41 +19,40 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0        # full history needed for git push
+          fetch-depth: 0
 
       - name: Setup Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: |
           pip install feedparser beautifulsoup4 sumy python-slugify jinja2 nltk
 
-      - name: Download NLTK tokenizer data (required by sumy)
+      - name: Download NLTK tokenizer data
         run: |
           python -c "
           import nltk
           nltk.download('punkt', quiet=True)
           nltk.download('punkt_tab', quiet=True)
-          print('NLTK data ready')
+          print('NLTK ready')
           "
 
       - name: Run build script
         run: |
           python scripts/build.py
-          echo "--- Generated files ---"
-          ls -la site/
-          test -f site/index.html || (echo "ERROR: site/index.html not generated" && exit 1)
+          echo "--- Generated files in docs/ ---"
+          ls -la docs/
+          test -f docs/index.html || (echo "ERROR: docs/index.html not found" && exit 1)
 
-      - name: Commit and push generated site back to main
+      - name: Commit and push generated site
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site/
-          # Only commit if there are actual changes
+          git add docs/
           if git diff --cached --quiet; then
-            echo "No site changes to commit."
+            echo "No changes to commit."
           else
             git commit -m "chore: auto-build site [skip ci]"
             git push origin main
