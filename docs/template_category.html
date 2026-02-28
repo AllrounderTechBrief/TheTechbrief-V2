@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="{{ meta.title }}">
   <meta name="twitter:description" content="{{ meta.description }}">
 
-  <!-- Structured Data -->
+  <!-- Breadcrumb + CollectionPage schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -28,6 +28,13 @@
     "name": "{{ meta.h1 }}",
     "description": "{{ meta.description }}",
     "url": "https://allroundertechbrief.github.io/TheTechBrief/{{ meta.slug }}.html",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://allroundertechbrief.github.io/TheTechBrief/"},
+        {"@type":"ListItem","position":2,"name":"{{ meta.h1 }}","item":"https://allroundertechbrief.github.io/TheTechBrief/{{ meta.slug }}.html"}
+      ]
+    },
     "isPartOf": {
       "@type": "WebSite",
       "name": "The Tech Brief",
@@ -36,7 +43,8 @@
     "publisher": {
       "@type": "Organization",
       "name": "The Tech Brief",
-      "url": "https://allroundertechbrief.github.io/TheTechBrief/"
+      "url": "https://allroundertechbrief.github.io/TheTechBrief/",
+      "email": "prerakm76@gmail.com"
     }
   }
   </script>
@@ -49,7 +57,6 @@
 </head>
 <body>
 
-<!-- Skip to content (accessibility) -->
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- ===== HEADER ===== -->
@@ -71,6 +78,7 @@
     <a href="consumer-tech.html">Consumer Tech</a>
     <a href="gaming.html">Gaming</a>
     <a href="evs-automotive.html">EVs &amp; Automotive</a>
+    <a href="startups-business.html">Startups &amp; Business</a>
     <a href="about.html" class="nav-cta">About</a>
   </nav>
 </header>
@@ -82,78 +90,55 @@
     <h1>{{ meta.h1 }}</h1>
     <p>{{ meta.h2 }}</p>
     <div class="editorial-badge" aria-label="Editorial quality indicator">
-      ✓ Editorially reviewed summaries — updated every 3 hours
+      ✓ Editorially reviewed summaries — updated every 6 hours
     </div>
   </div>
 </section>
 
-<!-- ===== QUICK ACTIONS ===== -->
-<div style="background: var(--surface); padding: 0 24px;">
-  <div class="quick-actions" style="max-width: 1280px; margin: 0 auto;" role="complementary" aria-label="Quick actions">
-    <div class="qa-item">
-      <a href="about.html#editorial-process">
-        <span class="qa-icon" aria-hidden="true">📖</span>
-        Read Original Analysis
-      </a>
-      <p>Understand how we add editorial context to every story we publish.</p>
-    </div>
-    <div class="qa-item">
-      <a href="index.html">
-        <span class="qa-icon" aria-hidden="true">🗞️</span>
-        Browse All Categories
-      </a>
-      <p>Explore AI, enterprise, cybersecurity and mobile news in one feed.</p>
-    </div>
-    <div class="qa-item">
-      <a href="contact.html">
-        <span class="qa-icon" aria-hidden="true">✉️</span>
-        Submit a Tip
-      </a>
-      <p>Spotted something we missed? Send us the link and a note.</p>
-    </div>
-    <p class="qa-trust">All summaries are editorially reviewed by The Tech Brief team. Original reporting © respective publishers; commentary © The Tech Brief 2025.</p>
+{% if meta.subcats %}
+<!-- ===== SUB-CATEGORY NAV ===== -->
+<div class="subcat-bar" role="navigation" aria-label="Sub-categories of {{ meta.h1 }}">
+  <div class="subcat-inner">
+    <span class="subcat-label">Browse:</span>
+    {% for sc in meta.subcats %}
+    <a href="{{ sc.href }}" class="subcat-pill">{{ sc.icon | safe }} {{ sc.label }}</a>
+    {% endfor %}
   </div>
 </div>
+{% endif %}
 
 <!-- ===== MAIN CONTENT ===== -->
 <main id="main-content">
   <div class="section">
     <div class="section-head">
       <h2>Latest in {{ meta.h1 }}</h2>
-      <span class="section-count">Curated from {{ cards|length }} sources</span>
+      <span class="section-count">{{ cards | length }} stories · updated every 6 hours</span>
     </div>
     <div class="grid">
       {% for card in cards %}
       <article class="card" aria-label="{{ card.title }}">
         {% if card.image %}
         <div class="card-img-wrap">
-          <img src="{{ card.image }}" alt="Illustration for: {{ card.title }}" loading="lazy" width="400" height="185">
+          <img src="{{ card.image }}" alt="{{ card.title }}" loading="lazy" width="400" height="185">
         </div>
         {% endif %}
         <div class="card-body">
           <h3><a href="{{ card.link }}" target="_blank" rel="noopener noreferrer">{{ card.title }}</a></h3>
           <p class="card-summary">{{ card.summary }}</p>
-          {% if card.commentary %}
-          <div class="card-commentary">
-            <strong>Why it matters</strong>
-            {{ card.commentary }}
-          </div>
-          {% endif %}
         </div>
         <div class="card-footer">
           <span class="source-tag">{{ card.source }}</span>
-          <span class="tag">{{ card.category }}</span>
-          <a href="{{ card.link }}" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: {{ card.title }}">Read original</a>
+          {% if card.date %}<span class="source-tag">{{ card.date }}</span>{% endif %}
+          <a href="{{ card.link }}" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: {{ card.title }}">Read original &#8594;</a>
         </div>
       </article>
       {% endfor %}
     </div>
   </div>
 
-  <!-- Editorial notice -->
-  <div class="section" style="padding-top: 0;">
+  <div class="section" style="padding-top:0;">
     <div class="info-box">
-      <p><strong>Editorial notice:</strong> Summaries on this page are derived from publicly available RSS feeds published by the named sources. The Tech Brief does not reproduce full article text. All original content, images and trademarks remain the property of their respective publishers. <a href="about.html">Read our editorial policy →</a></p>
+      <p><strong>Sources:</strong> Summaries on this page are derived from publicly available RSS feeds published by the named sources. The Tech Brief does not reproduce full article text. All original content, images and trademarks remain the property of their respective publishers. <a href="about.html">Read our editorial policy &#8594;</a></p>
     </div>
   </div>
 </main>
@@ -163,7 +148,7 @@
   <div class="footer-inner">
     <div class="footer-about">
       <span class="brand-name">The Tech Brief</span>
-      <p>An independent technology news aggregator delivering concise, editorially reviewed summaries from the world's most trusted tech publications. Updated every three hours, 24/7.</p>
+      <p>An independent technology publication delivering concise, editorially reviewed summaries from the world's most trusted tech sources. Updated every six hours, 24/7.</p>
     </div>
     <div class="footer-col">
       <h4>Categories</h4>
@@ -175,6 +160,7 @@
       <a href="consumer-tech.html">Consumer Tech</a>
       <a href="gaming.html">Gaming</a>
       <a href="evs-automotive.html">EVs &amp; Automotive</a>
+      <a href="startups-business.html">Startups &amp; Business</a>
     </div>
     <div class="footer-col">
       <h4>Site Info</h4>
@@ -188,14 +174,13 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© <span id="footer-year"></span> The Tech Brief — thetechbrief.in. All rights reserved.</span>
-    <span>AI-assisted summaries based on public RSS feeds. Trademarks belong to their respective owners.</span>
+    <span>&copy; <span id="footer-year"></span> The Tech Brief. All rights reserved.</span>
+    <span>Summaries based on public RSS feeds. Trademarks belong to their respective owners.</span>
   </div>
 </footer>
 
-<!-- ===== COOKIE BANNER ===== -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-  <p>We use cookies to improve your experience, analyse traffic, and support affiliate partnerships. See our <a href="legal/privacy.html">Privacy Policy</a> for details.</p>
+  <p>We use cookies to improve your experience and analyse traffic. See our <a href="legal/privacy.html">Privacy Policy</a> for details.</p>
   <div class="cookie-actions">
     <button class="btn primary" id="cookieAccept">Accept All</button>
     <button class="btn secondary" id="cookieReject">Reject</button>
@@ -204,28 +189,16 @@
 
 <script>
   document.getElementById('footer-year').textContent = new Date().getFullYear();
-
-  (function() {
-    var consent = localStorage.getItem('cookieConsent');
-    if (consent) { document.getElementById('cookieBanner').remove(); return; }
-    document.getElementById('cookieAccept').addEventListener('click', function() {
-      localStorage.setItem('cookieConsent', 'yes');
-      document.getElementById('cookieBanner').remove();
-    });
-    document.getElementById('cookieReject').addEventListener('click', function() {
-      localStorage.setItem('cookieConsent', 'no');
-      document.getElementById('cookieBanner').remove();
-    });
+  (function(){
+    var c=localStorage.getItem('cookieConsent');
+    if(c){document.getElementById('cookieBanner').remove();return;}
+    document.getElementById('cookieAccept').onclick=function(){localStorage.setItem('cookieConsent','yes');document.getElementById('cookieBanner').remove();};
+    document.getElementById('cookieReject').onclick=function(){localStorage.setItem('cookieConsent','no');document.getElementById('cookieBanner').remove();};
   })();
-
-  (function() {
-    var toggle = document.querySelector('.nav-toggle');
-    var nav = document.getElementById('site-nav');
-    if (!toggle || !nav) return;
-    toggle.addEventListener('click', function() {
-      var open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
+  (function(){
+    var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
+    if(!t||!n)return;
+    t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
   })();
 </script>
 </body>

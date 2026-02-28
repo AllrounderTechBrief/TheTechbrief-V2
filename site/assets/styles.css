@@ -658,3 +658,46 @@ button { cursor: pointer; font-family: inherit; }
 .cat-card-icon { font-size: 28px; line-height: 1; margin-bottom: 4px; }
 .cat-card-name { font-weight: 700; font-size: 15px; color: var(--ink); }
 .cat-card-desc { font-size: 12.5px; color: var(--ink-3); line-height: 1.4; }
+
+/* ===== SUB-CATEGORY BAR ===== */
+.subcat-bar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+.subcat-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  flex-wrap: wrap;
+}
+.subcat-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--ink-3);
+  margin-right: 4px;
+}
+.subcat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background .15s, border-color .15s;
+}
+.subcat-pill:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}

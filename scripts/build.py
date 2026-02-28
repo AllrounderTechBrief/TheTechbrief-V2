@@ -1,3 +1,25 @@
+"""
+Build script for The Tech Brief.
+Fetches RSS feeds → generates category pages + homepage into docs/.
+
+SOURCE OF TRUTH: site/ folder
+  - Edit templates in site/template_*.html
+  - Edit static pages (about, contact) in site/
+  - Edit RSS sources in data/feeds.json
+  - Edit category metadata in data/meta.json
+  - NEVER edit docs/ directly — it is overwritten on every build
+
+To add a new static page:
+  1. Create site/<slug>.html
+  2. Add '<slug>.html' to static_files in sync_static_assets()
+  3. Commit and push
+
+To add a new feed-driven category:
+  1. Add feeds to data/feeds.json
+  2. Add metadata to data/meta.json
+  3. Add category name to CATEGORY_ORDER in build_home()
+  4. Commit and push
+"""
 import os, json, re, time
 import feedparser
 from bs4 import BeautifulSoup
@@ -7,7 +29,7 @@ from jinja2 import Template
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 DATA = os.path.join(ROOT, 'data', 'feeds.json')
 META = os.path.join(ROOT, 'data', 'meta.json')
-SITE = os.path.join(ROOT, 'docs')          # ← outputs to docs/ (GitHub Pages compatible)
+SITE = os.path.join(ROOT, 'docs')
 
 # ── Load templates & data ──────────────────────────────────────────────────
 with open(os.path.join(ROOT, 'site', 'template_category.html'), 'r', encoding='utf-8') as f:
@@ -67,33 +89,33 @@ def _pick_img_tag(img):
 
 
 def first_image(entry):
+    # 1. media:content
     for m in (entry.get('media_content') or []):
         if _looks_like_image(m.get('url')):
             return m['url']
+    # 2. media:thumbnail
     for t in (entry.get('media_thumbnail') or []):
         if _looks_like_image(t.get('url')):
             return t['url']
+    # 3. enclosures
     for e in (entry.get('enclosures') or []):
         url = e.get('href') or e.get('url')
         if _looks_like_image(url) or 'image' in (e.get('type') or ''):
             return url
+    # 4. <content> HTML
     for c in (entry.get('content') or []):
         html = c.get('value') or c.get('content') or ''
         img = BeautifulSoup(html, 'html.parser').find('img')
         url = _pick_img_tag(img)
         if url:
             return url
+    # 5. <description> / <summary> HTML
     desc = entry.get('summary') or entry.get('description') or ''
     if desc:
         img = BeautifulSoup(desc, 'html.parser').find('img')
         url = _pick_img_tag(img)
         if url:
             return url
-    src = ((entry.get('source') or {}).get('title') or '').lower()
-    if 'tvbeurope' in src:
-        return 'https://www.tvbeurope.com/wp-content/uploads/sites/11/2022/01/tvbeurope-logo.png'
-    if 'newscaststudio' in src:
-        return 'https://www.newscaststudio.com/wp-content/themes/newscaststudio/images/logo.png'
     return None
 
 
@@ -111,33 +133,15 @@ def fmt_date(ts):
 # ── Sync static assets from site/ → docs/ ─────────────────────────────────
 
 def sync_static_assets():
-    """
-    Copy static files from site/ into docs/.
-
-    IMPORTANT: site/ is the SOURCE OF TRUTH for all static pages.
-    Never edit files directly in docs/ — the build overwrites docs/ on every run.
-
-    To change about.html, contact.html, or any static page:
-      → Edit site/<page>.html
-      → Commit and push → the build copies it to docs/ automatically
-
-    To add a new static category page:
-      1. Create site/<slug>.html
-      2. Add '<slug>.html' to static_files below
-      3. Commit and push
-    """
     import shutil
 
     static_dirs = ['assets', 'legal', 'articles']
 
-    # Static HTML pages copied verbatim from site/ to docs/ on every build.
-    # Add new static pages here when you create them in site/.
+    # Static pages that are NOT feed-generated (hand-authored in site/)
+    # Do NOT add feed-driven category pages here — build_category() handles them
     static_files = [
         'about.html',
         'contact.html',
-        'consumer-tech.html',    # Added Feb 2026 — Consumer Tech & Hardware Reviews
-        'gaming.html',           # Added Feb 2026 — Gaming News
-        'evs-automotive.html',   # Added Feb 2026 — EVs & Automotive Tech
         'robots.txt',
         'sitemap.xml',
         'template_category.html',
@@ -172,7 +176,7 @@ def build_category(category, urls):
         except Exception as ex:
             print(f'  Feed error {url}: {ex}')
             continue
-        for e in feed.entries[:10]:
+        for e in feed.entries[:12]:
             title   = e.get('title', 'Untitled')
             link    = e.get('link', '')
             source  = feed.feed.get('title', 'Unknown')
@@ -205,11 +209,16 @@ def build_category(category, urls):
 # ── Home builder ───────────────────────────────────────────────────────────
 
 def build_home(category_map):
-    # All categories included in the homepage "Latest" grid
     CATEGORY_ORDER = [
-        'AI News', 'Mobile & Gadgets', 'Cybersecurity Updates',
-        'Enterprise Tech', 'Broadcast Tech',
-        'Consumer Tech', 'Gaming', 'EVs & Automotive',
+        'AI News',
+        'Startups & Business',
+        'Mobile & Gadgets',
+        'Consumer Tech',
+        'Cybersecurity Updates',
+        'Enterprise Tech',
+        'Broadcast Tech',
+        'Gaming',
+        'EVs & Automotive',
     ]
 
     all_cards = []
@@ -217,15 +226,15 @@ def build_home(category_map):
 
     for cat in CATEGORY_ORDER:
         items = category_map.get(cat, [])
-        for item in items[:4]:
+        for item in items[:3]:
             if item['link'] not in seen:
                 all_cards.append(item)
                 seen.add(item['link'])
 
-    # Catch any additional categories not in the list above
+    # Catch any extra categories not listed above
     for cat, items in category_map.items():
         if cat not in CATEGORY_ORDER:
-            for item in items[:4]:
+            for item in items[:3]:
                 if item['link'] not in seen:
                     all_cards.append(item)
                     seen.add(item['link'])
@@ -233,11 +242,10 @@ def build_home(category_map):
     all_cards.sort(key=lambda x: x['ts'], reverse=True)
 
     meta = dict(META_MAP['Home'])
-    # featured=[] — the template now shows a category browse grid, not a featured strip
-    html = HOME_TPL.render(meta=meta, featured=[], cards=all_cards[:24])
+    html = HOME_TPL.render(meta=meta, featured=[], cards=all_cards[:27])
     with open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(html)
-    print(f'  Built index.html  (grid={len(all_cards[:24])})')
+    print(f'  Built index.html  (grid={len(all_cards[:27])})')
 
 
 # ── Entry point ────────────────────────────────────────────────────────────

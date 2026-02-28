@@ -28,5 +28,38 @@
     "https://gizmodo.com/rss",
     "https://www.androidauthority.com/feed/",
     "https://www.gsmarena.com/rss-news-reviews.php3"
+  ],
+  "Consumer Tech": [
+    "https://www.cnet.com/rss/all/",
+    "https://www.techradar.com/rss",
+    "https://www.tomsguide.com/feeds/all",
+    "https://feeds.pcmag.com/rss/pcmag/all",
+    "https://www.theverge.com/rss/reviews/index.xml",
+    "https://tools.wirecutter.com/feeds/wirecutter"
+  ],
+  "Gaming": [
+    "https://kotaku.com/rss",
+    "https://www.eurogamer.net/?format=rss",
+    "https://www.pcgamer.com/rss/",
+    "https://www.polygon.com/rss/index.xml",
+    "https://www.rockpapershotgun.com/feed",
+    "https://www.ign.com/articles/rss"
+  ],
+  "EVs & Automotive": [
+    "https://electrek.co/feed/",
+    "https://insideevs.com/feed/",
+    "https://techcrunch.com/category/transportation/feed/",
+    "https://www.caranddriver.com/rss/all.xml",
+    "https://www.motortrend.com/feeds/"
+  ],
+  "Startups & Business": [
+    "https://techcrunch.com/feed/",
+    "https://venturebeat.com/feed/",
+    "https://www.wired.com/feed/category/business/latest/rss",
+    "https://mashable.com/feed/",
+    "https://fortune.com/feed/",
+    "https://www.businessinsider.com/sai/rss",
+    "https://feeds.feedburner.com/crunchbase-news",
+    "https://news.crunchbase.com/feed/"
   ]
 }

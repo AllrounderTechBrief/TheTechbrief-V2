@@ -42,24 +42,53 @@
     "slug": "mobile-gadgets"
   },
   "Consumer Tech": {
-    "title": "Consumer Tech & Hardware Reviews | Tech Brief",
-    "description": "Consumer technology reviews, hardware comparisons, and buying guides. Editorially reviewed summaries from The Verge, CNET, Tom's Hardware, Wirecutter, and more.",
-    "h1": "Consumer Tech & Hardware Reviews",
-    "h2": "Product reviews, hardware comparisons and buying guides from The Verge, CNET & more",
-    "slug": "consumer-tech"
+    "title": "Consumer Tech Reviews \u2014 Laptops, Wearables, Smart Home & Gadgets | Tech Brief",
+    "description": "Expert consumer tech reviews and buying guides. Laptops, wearables, smart home devices, headphones, and the best gadgets \u2014 curated from CNET, TechRadar, PCMag, Wirecutter and more.",
+    "h1": "Consumer Tech & Reviews",
+    "h2": "Laptops, wearables, smart home and gadget reviews from CNET, TechRadar, PCMag &amp; Wirecutter",
+    "slug": "consumer-tech",
+    "subcats": [
+      {
+        "label": "Mobile & Gadgets",
+        "href": "mobile-gadgets.html",
+        "icon": "&#x1F4F1;"
+      },
+      {
+        "label": "Laptops",
+        "href": "laptops.html",
+        "icon": "&#x1F4BB;"
+      },
+      {
+        "label": "Wearables",
+        "href": "wearables.html",
+        "icon": "&#x231A;"
+      },
+      {
+        "label": "Smart Home",
+        "href": "smart-home.html",
+        "icon": "&#x1F3E0;"
+      }
+    ]
   },
   "Gaming": {
     "title": "Gaming News \u2014 Consoles, PC Games & Industry | Tech Brief",
-    "description": "Video game releases, console news, and gaming industry updates. Editorially reviewed summaries from IGN, Kotaku, Eurogamer, PC Gamer, and more.",
+    "description": "Video game releases, console news, reviews and gaming industry updates. From IGN, Kotaku, Eurogamer, Polygon, PC Gamer and Rock Paper Shotgun.",
     "h1": "Gaming News",
-    "h2": "Consoles, PC gaming & industry news from IGN, Kotaku, Eurogamer & more",
+    "h2": "Consoles, PC gaming, reviews &amp; industry news from Kotaku, Eurogamer, Polygon &amp; more",
     "slug": "gaming"
   },
   "EVs & Automotive": {
     "title": "EVs & Automotive Tech News | Tech Brief",
-    "description": "Electric vehicle launches, autonomous driving, and automotive technology news. Editorially reviewed summaries from Electrek, InsideEVs, The Verge, and more.",
+    "description": "Electric vehicle launches, autonomous driving, charging infrastructure and automotive technology. From Electrek, InsideEVs, TechCrunch Transport, Car and Driver and MotorTrend.",
     "h1": "EVs & Automotive Tech",
-    "h2": "Electric vehicles, autonomous driving & car tech from Electrek, InsideEVs & more",
+    "h2": "Electric vehicles, autonomous driving &amp; car tech from Electrek, InsideEVs &amp; more",
     "slug": "evs-automotive"
+  },
+  "Startups & Business": {
+    "title": "Startups, Tech Business & Funding News | Tech Brief",
+    "description": "Startup launches, funding rounds, M&A, Big Tech business updates, layoffs, market trends and regulatory news. From TechCrunch, VentureBeat, Wired, Fortune and more.",
+    "h1": "Startups & Tech Business",
+    "h2": "Funding rounds, acquisitions, Big Tech strategy &amp; regulatory news from TechCrunch, VentureBeat &amp; more",
+    "slug": "startups-business"
   }
 }
