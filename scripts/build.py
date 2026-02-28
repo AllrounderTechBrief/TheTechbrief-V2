@@ -7,12 +7,12 @@ from jinja2 import Template
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 DATA = os.path.join(ROOT, 'data', 'feeds.json')
 META = os.path.join(ROOT, 'data', 'meta.json')
-SITE = ROOT
+SITE = os.path.join(ROOT, 'docs')          # ← outputs to docs/ (GitHub Pages compatible)
 
-# Load templates
-with open(os.path.join(SITE, 'template_category.html'), 'r', encoding='utf-8') as f:
+# ── Load templates & data ──────────────────────────────────────────────────
+with open(os.path.join(ROOT, 'site', 'template_category.html'), 'r', encoding='utf-8') as f:
     CATEGORY_TPL = Template(f.read())
-with open(os.path.join(SITE, 'template_home.html'), 'r', encoding='utf-8') as f:
+with open(os.path.join(ROOT, 'site', 'template_home.html'), 'r', encoding='utf-8') as f:
     HOME_TPL = Template(f.read())
 with open(DATA, 'r', encoding='utf-8') as f:
     FEEDS = json.load(f)
@@ -20,7 +20,7 @@ with open(META, 'r', encoding='utf-8') as f:
     META_MAP = json.load(f)
 
 
-# ── Text helpers ─────────────────────────────────────────────────────────────
+# ── Text helpers ───────────────────────────────────────────────────────────
 
 def clean_text(html):
     txt = BeautifulSoup(html or '', 'html.parser').get_text(' ')
@@ -28,7 +28,6 @@ def clean_text(html):
 
 
 def summarize_text(text, sentences=2):
-    """Summarise with sumy/TextRank; fall back to truncation if unavailable."""
     text = (text or '').strip()
     if not text:
         return ''
@@ -38,17 +37,17 @@ def summarize_text(text, sentences=2):
         from sumy.summarizers.text_rank import TextRankSummarizer
         parser = PlaintextParser.from_string(text, Tokenizer('english'))
         summarizer = TextRankSummarizer()
-        sents = summarizer(parser.document, sentences)
-        if sents:
-            return ' '.join([str(s) for s in sents])
+        result = summarizer(parser.document, sentences)
+        if result:
+            return ' '.join(str(s) for s in result)
     except Exception:
         pass
-    # Fallback: first N sentences by period-split
     parts = re.split(r'(?<=[.!?])\s+', text)
-    return ' '.join(parts[:sentences]) if len(parts) >= sentences else text[:280]
+    joined = ' '.join(parts[:sentences])
+    return joined if joined else text[:280]
 
 
-# ── Image extraction ──────────────────────────────────────────────────────────
+# ── Image extraction ───────────────────────────────────────────────────────
 
 def _looks_like_image(url):
     if not url:
@@ -68,41 +67,33 @@ def _pick_img_tag(img):
 
 
 def first_image(entry):
-    # 1) media:content
     for m in (entry.get('media_content') or []):
         if _looks_like_image(m.get('url')):
             return m['url']
-    # 2) media:thumbnail
     for t in (entry.get('media_thumbnail') or []):
         if _looks_like_image(t.get('url')):
             return t['url']
-    # 3) enclosures
     for e in (entry.get('enclosures') or []):
         url = e.get('href') or e.get('url')
         if _looks_like_image(url) or 'image' in (e.get('type') or ''):
             return url
-    # 4) content:encoded blocks
     for c in (entry.get('content') or []):
         html = c.get('value') or c.get('content') or ''
         img = BeautifulSoup(html, 'html.parser').find('img')
         url = _pick_img_tag(img)
         if url:
             return url
-    # 5) summary HTML
     desc = entry.get('summary') or entry.get('description') or ''
     if desc:
         img = BeautifulSoup(desc, 'html.parser').find('img')
         url = _pick_img_tag(img)
         if url:
             return url
-    # 6) Broadcast source logo fallbacks
     src = ((entry.get('source') or {}).get('title') or '').lower()
     if 'tvbeurope' in src:
         return 'https://www.tvbeurope.com/wp-content/uploads/sites/11/2022/01/tvbeurope-logo.png'
     if 'newscaststudio' in src:
         return 'https://www.newscaststudio.com/wp-content/themes/newscaststudio/images/logo.png'
-    if 'vizrt' in src:
-        return 'https://www.vizrt.com/wp-content/uploads/2021/06/vizrt-logo.png'
     return None
 
 
@@ -112,13 +103,43 @@ def parse_time(entry):
 
 
 def fmt_date(ts):
-    """Return a human-readable date string from a Unix timestamp."""
     if not ts:
         return ''
     return time.strftime('%B %d, %Y', time.localtime(ts))
 
 
-# ── Category builder ──────────────────────────────────────────────────────────
+# ── Ensure docs/ mirrors site/ static assets on every run ─────────────────
+
+def sync_static_assets():
+    """
+    Copy static files from site/ into docs/ so they are always present
+    after a clean checkout (docs/ is gitignored for category pages but
+    static assets must persist).
+    """
+    import shutil
+    static_dirs  = ['assets', 'legal', 'articles']
+    static_files = [
+        'about.html', 'contact.html', 'robots.txt', 'sitemap.xml',
+        'template_category.html', 'template_home.html'
+    ]
+
+    src_root = os.path.join(ROOT, 'site')
+
+    for d in static_dirs:
+        src = os.path.join(src_root, d)
+        dst = os.path.join(SITE, d)
+        if os.path.isdir(src):
+            if os.path.exists(dst):
+                shutil.rmtree(dst)
+            shutil.copytree(src, dst)
+
+    for fname in static_files:
+        src = os.path.join(src_root, fname)
+        if os.path.isfile(src):
+            shutil.copy2(src, os.path.join(SITE, fname))
+
+
+# ── Category builder ───────────────────────────────────────────────────────
 
 def build_category(category, urls):
     items = []
@@ -129,23 +150,17 @@ def build_category(category, urls):
             print(f'  Feed error {url}: {ex}')
             continue
         for e in feed.entries[:10]:
-            title = e.get('title', 'Untitled')
-            link  = e.get('link', '')
+            title  = e.get('title', 'Untitled')
+            link   = e.get('link', '')
             source = feed.feed.get('title', 'Unknown')
             text   = clean_text(e.get('summary') or e.get('description') or '')
             summary = summarize_text(text, sentences=2)
             img    = first_image(e)
             ts     = parse_time(e)
             items.append({
-                'title':      title,
-                'link':       link,
-                'source':     source,
-                'summary':    summary,
-                'image':      img,
-                'ts':         ts,
-                'date':       fmt_date(ts),
-                'category':   category,
-                'commentary': ''
+                'title': title, 'link': link, 'source': source,
+                'summary': summary, 'image': img, 'ts': ts,
+                'date': fmt_date(ts), 'category': category, 'commentary': ''
             })
     items.sort(key=lambda x: x['ts'], reverse=True)
 
@@ -164,39 +179,30 @@ def build_category(category, urls):
     return items
 
 
-# ── Home builder ──────────────────────────────────────────────────────────────
+# ── Home builder ───────────────────────────────────────────────────────────
 
 def build_home(category_map):
-    """
-    Home layout:
-      featured  — top 1 item from each category (5 cards in highlight row)
-      all_cards — top 4 items per category interleaved, deduped (main grid)
-    """
     CATEGORY_ORDER = [
         'AI News', 'Mobile & Gadgets', 'Cybersecurity Updates',
         'Enterprise Tech', 'Broadcast Tech'
     ]
-
-    featured   = []   # 1 per category — highlight strip
-    all_cards  = []   # up to 4 per category — main grid
+    featured  = []
+    all_cards = []
 
     for cat in CATEGORY_ORDER:
         items = category_map.get(cat, [])
         if items:
             featured.append(items[0])
-            # Next 3 items go into main grid (skip the one already in featured)
             all_cards.extend(items[1:4])
 
-    # Fill main grid with any leftover items (categories not in ORDER)
-    seen_links = {c['link'] for c in featured} | {c['link'] for c in all_cards}
+    seen = {c['link'] for c in featured} | {c['link'] for c in all_cards}
     for cat, items in category_map.items():
         if cat not in CATEGORY_ORDER:
             for item in items[:4]:
-                if item['link'] not in seen_links:
+                if item['link'] not in seen:
                     all_cards.append(item)
-                    seen_links.add(item['link'])
+                    seen.add(item['link'])
 
-    # Sort main grid by timestamp
     all_cards.sort(key=lambda x: x['ts'], reverse=True)
 
     meta = dict(META_MAP['Home'])
@@ -206,9 +212,13 @@ def build_home(category_map):
     print(f'  Built index.html  (featured={len(featured)}, grid={len(all_cards[:20])})')
 
 
-# ── Entry point ───────────────────────────────────────────────────────────────
+# ── Entry point ────────────────────────────────────────────────────────────
 
 def main():
+    os.makedirs(SITE, exist_ok=True)
+    print('Syncing static assets to docs/…')
+    sync_static_assets()
+
     print('Building Tech Brief…')
     category_map = {}
     for cat, urls in FEEDS.items():
