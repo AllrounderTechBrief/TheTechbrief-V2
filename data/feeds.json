@@ -1,0 +1,32 @@
+{
+  "AI News": [
+    "https://techcrunch.com/tag/ai/feed/",
+    "https://www.wired.com/feed/tag/artificial-intelligence/latest/rss",
+    "https://www.technologyreview.com/feed/tag/artificial-intelligence/",
+    "https://venturebeat.com/category/ai/feed/",
+    "https://www.theverge.com/rss/artificial-intelligence/index.xml"
+  ],
+  "Broadcast Tech": [
+    "https://www.tvbeurope.com/feed",
+    "https://www.newscaststudio.com/feed/",
+    "https://aws.amazon.com/blogs/media/category/media-entertainment/feed/"
+  ],
+  "Enterprise Tech": [
+    "https://www.zdnet.com/topic/enterprise/rss.xml",
+    "https://www.infoworld.com/category/enterprise-it/index.rss",
+    "https://www.theregister.com/headlines.atom",
+    "https://siliconangle.com/feed/",
+    "https://www.crn.com/rss.xml"
+  ],
+  "Cybersecurity Updates": [
+    "https://www.csoonline.com/index.rss",
+    "https://www.darkreading.com/rss.xml"
+  ],
+  "Mobile & Gadgets": [
+    "https://www.theverge.com/rss/gadgets/index.xml",
+    "https://www.engadget.com/rss.xml",
+    "https://gizmodo.com/rss",
+    "https://www.androidauthority.com/feed/",
+    "https://www.gsmarena.com/rss-news-reviews.php3"
+  ]
+}

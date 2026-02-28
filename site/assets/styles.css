@@ -559,3 +559,66 @@ button { cursor: pointer; font-family: inherit; }
 .text-center { text-align: center; }
 .mt-4 { margin-top: 16px; }
 .mt-8 { margin-top: 32px; }
+/* =========================================================
+   APPEND THIS BLOCK to the END of site/assets/styles.css
+   ========================================================= */
+
+/* ---------- Featured Highlights Strip ---------- */
+.featured-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.featured-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  transition: transform .2s, box-shadow .2s;
+}
+.featured-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.featured-img-wrap { overflow: hidden; }
+.featured-card img {
+  width: 100%; height: 100%; object-fit: cover;
+  background: var(--surface-2);
+  display: block;
+  min-height: 180px;
+}
+.featured-body {
+  padding: 20px 24px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.featured-cat-pill {
+  display: inline-block;
+  background: var(--accent-2); color: #fff;
+  padding: 3px 10px; border-radius: 999px;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .3px; align-self: flex-start;
+}
+.featured-body h3 {
+  font-family: var(--font-serif); font-size: 21px; line-height: 1.28;
+  color: var(--ink);
+}
+.featured-body h3 a { color: inherit; }
+.featured-body h3 a:hover { color: var(--accent); }
+.featured-footer {
+  display: flex; align-items: center; gap: 12px;
+  margin-top: auto; padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .featured-card {
+    grid-template-columns: 1fr;
+  }
+  .featured-card img {
+    height: 180px; min-height: unset;
+  }
+}
