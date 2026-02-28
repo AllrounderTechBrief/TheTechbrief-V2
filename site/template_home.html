@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ meta.title }}</title>
+  <meta name="description" content="{{ meta.description }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://allroundertechbrief.github.io/TheTechBrief/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Tech Brief">
+  <meta property="og:title" content="{{ meta.title }}">
+  <meta property="og:description" content="{{ meta.description }}">
+  <meta property="og:url" content="https://allroundertechbrief.github.io/TheTechBrief/">
+  <meta property="og:image" content="https://allroundertechbrief.github.io/TheTechBrief/assets/og-home.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ meta.title }}">
+  <meta name="twitter:description" content="{{ meta.description }}">
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "The Tech Brief",
+    "url": "https://allroundertechbrief.github.io/TheTechBrief/",
+    "description": "{{ meta.description }}",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Editorial",
+      "email": "contact@thetechbrief.in"
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Structured Data: Website -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The Tech Brief",
+    "url": "https://allroundertechbrief.github.io/TheTechBrief/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://allroundertechbrief.github.io/TheTechBrief/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<!-- Skip to content (accessibility) -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" role="banner">
+  <a href="index.html" class="header-brand" aria-label="The Tech Brief — Home">
+    <div class="brand-icon" aria-hidden="true">TB</div>
+    <span class="brand-name">Tech Brief</span>
+  </a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="ai-news.html">AI News</a>
+    <a href="broadcast-tech.html">Broadcast Tech</a>
+    <a href="enterprise-tech.html">Enterprise Tech</a>
+    <a href="cybersecurity-updates.html">Cybersecurity</a>
+    <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
+    <a href="about.html" class="nav-cta">About</a>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" aria-label="Site introduction">
+  <div class="hero-inner">
+    <span class="hero-label">Updated Every 3 Hours</span>
+    <h1>{{ meta.h1 }}</h1>
+    <p class="hero-sub">{{ meta.h2 }}</p>
+    <nav class="cat-pill-row" aria-label="Browse by category">
+      <a href="ai-news.html" class="cat-pill">AI News</a>
+      <a href="broadcast-tech.html" class="cat-pill">Broadcast Tech</a>
+      <a href="enterprise-tech.html" class="cat-pill">Enterprise Tech</a>
+      <a href="cybersecurity-updates.html" class="cat-pill">Cybersecurity</a>
+      <a href="mobile-gadgets.html" class="cat-pill">Mobile &amp; Gadgets</a>
+    </nav>
+  </div>
+</section>
+
+<!-- ===== QUICK ACTIONS ===== -->
+<div class="section" style="padding-bottom: 0;">
+  <div class="quick-actions" role="complementary" aria-label="Quick actions">
+    <div class="qa-item">
+      <a href="about.html#editorial-process">
+        <span class="qa-icon" aria-hidden="true">📖</span>
+        Read Our Editorial Approach
+      </a>
+      <p>How we select, summarise and contextualise every story we publish.</p>
+    </div>
+    <div class="qa-item">
+      <a href="mobile-gadgets.html">
+        <span class="qa-icon" aria-hidden="true">📱</span>
+        Browse Enhanced Summaries
+      </a>
+      <p>Curated tech news with added editorial context across five categories.</p>
+    </div>
+    <div class="qa-item">
+      <a href="contact.html">
+        <span class="qa-icon" aria-hidden="true">✉️</span>
+        Submit a Tip or Story
+      </a>
+      <p>Spotted a story we should cover? Send us a link and a brief note.</p>
+    </div>
+    <p class="qa-trust">All summaries are independently reviewed by The Tech Brief editorial team. Original reporting © respective publishers; commentary and curation © The Tech Brief 2025.</p>
+  </div>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main id="main-content">
+  <div class="section">
+    <div class="section-head">
+      <h2>Latest Highlights</h2>
+      <span class="section-count">Top stories across all categories</span>
+      <span class="section-sub">Summaries sourced from trusted global publications</span>
+    </div>
+    <div class="grid">
+      {% for card in cards %}
+      <article class="card" aria-label="{{ card.title }}">
+        {% if card.image %}
+        <div class="card-img-wrap">
+          <img src="{{ card.image }}" alt="Illustration for: {{ card.title }}" loading="lazy" width="400" height="185">
+        </div>
+        {% endif %}
+        <div class="card-body">
+          <h3><a href="{{ card.link }}" target="_blank" rel="noopener noreferrer">{{ card.title }}</a></h3>
+          <p class="card-summary">{{ card.summary }}</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">{{ card.source }}</span>
+          <span class="tag">{{ card.category }}</span>
+          <a href="{{ card.link }}" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: {{ card.title }}">Read original</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Editorial notice -->
+  <div class="section" style="padding-top: 0;">
+    <div class="info-box">
+      <p><strong>About our summaries:</strong> The Tech Brief aggregates publicly available RSS feeds from reputable technology publications. Each summary is generated and reviewed for accuracy and relevance. We do not publish the full text of any third-party article. All original content, images, and trademarks belong to their respective publishers. <a href="about.html">Learn more about our editorial process →</a></p>
+    </div>
+  </div>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-about">
+      <span class="brand-name">The Tech Brief</span>
+      <p>An independent technology news aggregator delivering concise, editorially reviewed summaries from the world's most trusted tech publications. Updated every three hours, 24/7.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <a href="ai-news.html">AI News</a>
+      <a href="broadcast-tech.html">Broadcast Tech</a>
+      <a href="enterprise-tech.html">Enterprise Tech</a>
+      <a href="cybersecurity-updates.html">Cybersecurity</a>
+      <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
+    </div>
+    <div class="footer-col">
+      <h4>Site Info</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="legal/privacy.html">Privacy Policy</a>
+      <a href="legal/terms.html">Terms of Use</a>
+      <a href="legal/disclaimer.html">Disclaimer</a>
+      <a href="legal/copyright.html">Copyright</a>
+      <a href="legal/affiliate.html">Affiliate Disclosure</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="footer-year"></span> The Tech Brief — thetechbrief.in. All rights reserved.</span>
+    <span>AI-assisted summaries based on public RSS feeds. Trademarks belong to their respective owners.</span>
+  </div>
+</footer>
+
+<!-- ===== COOKIE BANNER ===== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <p>We use cookies to improve your experience, analyse traffic, and support affiliate partnerships. See our <a href="legal/privacy.html">Privacy Policy</a> for details.</p>
+  <div class="cookie-actions">
+    <button class="btn primary" id="cookieAccept">Accept All</button>
+    <button class="btn secondary" id="cookieReject">Reject</button>
+  </div>
+</div>
+
+<script>
+  // Footer year
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  // Cookie banner
+  (function() {
+    var consent = localStorage.getItem('cookieConsent');
+    if (consent) { document.getElementById('cookieBanner').remove(); return; }
+    document.getElementById('cookieAccept').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'yes');
+      document.getElementById('cookieBanner').remove();
+    });
+    document.getElementById('cookieReject').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'no');
+      document.getElementById('cookieBanner').remove();
+    });
+  })();
+
+  // Mobile nav toggle
+  (function() {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+    toggle.addEventListener('click', function() {
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  })();
+</script>
+</body>
+</html>
