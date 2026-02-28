@@ -3,31 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ meta.title }}</title>
-  <meta name="description" content="{{ meta.description }}">
+  <title>Consumer Tech & Hardware Reviews | Tech Brief</title>
+  <meta name="description" content="Consumer technology reviews, hardware comparisons, and buying guides. From The Verge, CNET, Tom's Hardware, Wirecutter, and more.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://allroundertechbrief.github.io/TheTechBrief/{{ meta.slug }}.html">
+  <link rel="canonical" href="https://allroundertechbrief.github.io/TheTechBrief/mobile-gadgets.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Tech Brief">
-  <meta property="og:title" content="{{ meta.title }}">
-  <meta property="og:description" content="{{ meta.description }}">
-  <meta property="og:url" content="https://allroundertechbrief.github.io/TheTechBrief/{{ meta.slug }}.html">
+  <meta property="og:title" content="Mobile & Gadget News — Smartphones, Wearables & Consumer Tech | Tech Brief">
+  <meta property="og:description" content="Smartphone launches, wearables, tablets, and consumer gadget news. Editorially reviewed summaries from The Verge, Engadget, CNET, Android Authority, Gizmodo, and GSMArena.">
+  <meta property="og:url" content="https://allroundertechbrief.github.io/TheTechBrief/mobile-gadgets.html">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ meta.title }}">
-  <meta name="twitter:description" content="{{ meta.description }}">
+  <meta name="twitter:title" content="Mobile & Gadget News — Smartphones, Wearables & Consumer Tech | Tech Brief">
+  <meta name="twitter:description" content="Smartphone launches, wearables, tablets, and consumer gadget news. Editorially reviewed summaries from The Verge, Engadget, CNET, Android Authority, Gizmodo, and GSMArena.">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "{{ meta.h1 }}",
-    "description": "{{ meta.description }}",
-    "url": "https://allroundertechbrief.github.io/TheTechBrief/{{ meta.slug }}.html",
+    "name": "Mobile & Gadget News",
+    "description": "Smartphone launches, wearables, tablets, and consumer gadget news. Editorially reviewed summaries from The Verge, Engadget, CNET, Android Authority, Gizmodo, and GSMArena.",
+    "url": "https://allroundertechbrief.github.io/TheTechBrief/mobile-gadgets.html",
     "isPartOf": {
       "@type": "WebSite",
       "name": "The Tech Brief",
@@ -78,9 +78,9 @@
 <!-- ===== CATEGORY HERO ===== -->
 <section class="cat-hero" aria-label="Category overview">
   <div class="cat-hero-inner">
-    <span class="cat-label">Tech Brief / {{ meta.h1 }}</span>
-    <h1>{{ meta.h1 }}</h1>
-    <p>{{ meta.h2 }}</p>
+    <span class="cat-label">Tech Brief / Mobile & Gadget News</span>
+    <h1>Mobile & Gadget News</h1>
+    <p>Smartphone launches, wearables and consumer tech highlights from The Verge, Engadget & more</p>
     <div class="editorial-badge" aria-label="Editorial quality indicator">
       ✓ Editorially reviewed summaries — updated every 3 hours
     </div>
@@ -119,42 +119,18 @@
 <main id="main-content">
   <div class="section">
     <div class="section-head">
-      <h2>Latest in {{ meta.h1 }}</h2>
-      <span class="section-count">Curated from {{ cards|length }} sources</span>
+      <h2>Latest in Consumer Tech</h2>
+      <span class="section-count">Curated from 40+ sources</span>
     </div>
-    <div class="grid">
-      {% for card in cards %}
-      <article class="card" aria-label="{{ card.title }}">
-        {% if card.image %}
-        <div class="card-img-wrap">
-          <img src="{{ card.image }}" alt="Illustration for: {{ card.title }}" loading="lazy" width="400" height="185">
-        </div>
-        {% endif %}
-        <div class="card-body">
-          <h3><a href="{{ card.link }}" target="_blank" rel="noopener noreferrer">{{ card.title }}</a></h3>
-          <p class="card-summary">{{ card.summary }}</p>
-          {% if card.commentary %}
-          <div class="card-commentary">
-            <strong>Why it matters</strong>
-            {{ card.commentary }}
-          </div>
-          {% endif %}
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">{{ card.source }}</span>
-          <span class="tag">{{ card.category }}</span>
-          <a href="{{ card.link }}" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: {{ card.title }}">Read original</a>
-        </div>
-      </article>
-      {% endfor %}
+    <div class="info-box" style="margin-top:24px;">
+      <p><strong>&#x1F6D2; Consumer Tech — Coming soon:</strong> This category is newly launched. Curated summaries will appear here shortly as the editorial feed is configured. Browse our existing categories from the navigation above, or <a href="contact.html">get in touch</a> with a story tip.</p>
     </div>
-  </div>
-
-  <!-- Editorial notice -->
-  <div class="section" style="padding-top: 0;">
-    <div class="info-box">
-      <p><strong>Editorial notice:</strong> Summaries on this page are derived from publicly available RSS feeds published by the named sources. The Tech Brief does not reproduce full article text. All original content, images and trademarks remain the property of their respective publishers. <a href="about.html">Read our editorial policy →</a></p>
-    </div>
+    <nav class="category-grid" style="margin-top:32px;" aria-label="Other categories">
+      <a href="ai-news.html" class="cat-card"><span class="cat-card-icon">&#x1F916;</span><span class="cat-card-name">AI News</span><span class="cat-card-desc">Machine learning, LLMs &amp; AI products</span></a>
+      <a href="mobile-gadgets.html" class="cat-card"><span class="cat-card-icon">&#x1F4F1;</span><span class="cat-card-name">Mobile &amp; Gadgets</span><span class="cat-card-desc">Smartphones, wearables &amp; devices</span></a>
+      <a href="cybersecurity-updates.html" class="cat-card"><span class="cat-card-icon">&#x1F510;</span><span class="cat-card-name">Cybersecurity</span><span class="cat-card-desc">Threats, breaches &amp; defences</span></a>
+      <a href="enterprise-tech.html" class="cat-card"><span class="cat-card-icon">&#x1F3E2;</span><span class="cat-card-name">Enterprise Tech</span><span class="cat-card-desc">Cloud, SaaS &amp; IT infrastructure</span></a>
+    </nav>
   </div>
 </main>
 

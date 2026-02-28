@@ -66,6 +66,9 @@
     <a href="enterprise-tech.html">Enterprise Tech</a>
     <a href="cybersecurity-updates.html">Cybersecurity</a>
     <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
+    <a href="consumer-tech.html">Consumer Tech</a>
+    <a href="gaming.html">Gaming</a>
+    <a href="evs-automotive.html">EVs &amp; Automotive</a>
     <a href="about.html" class="nav-cta">About</a>
   </nav>
 </header>
@@ -77,11 +80,14 @@
     <h1>Your Daily Technology Intelligence Brief</h1>
     <p class="hero-sub">Editorially reviewed summaries across AI, enterprise tech, cybersecurity, broadcast technology, and mobile — sourced from the world's most trusted publications.</p>
     <nav class="cat-pill-row" aria-label="Browse by category">
-      <a href="ai-news.html" class="cat-pill">🤖 AI News</a>
-      <a href="broadcast-tech.html" class="cat-pill">📡 Broadcast Tech</a>
-      <a href="enterprise-tech.html" class="cat-pill">🏢 Enterprise Tech</a>
-      <a href="cybersecurity-updates.html" class="cat-pill">🔐 Cybersecurity</a>
-      <a href="mobile-gadgets.html" class="cat-pill">📱 Mobile &amp; Gadgets</a>
+      <a href="ai-news.html" class="cat-pill">&#x1F916; AI News</a>
+      <a href="broadcast-tech.html" class="cat-pill">&#x1F4E1; Broadcast Tech</a>
+      <a href="enterprise-tech.html" class="cat-pill">&#x1F3E2; Enterprise Tech</a>
+      <a href="cybersecurity-updates.html" class="cat-pill">&#x1F510; Cybersecurity</a>
+      <a href="mobile-gadgets.html" class="cat-pill">&#x1F4F1; Mobile &amp; Gadgets</a>
+      <a href="consumer-tech.html" class="cat-pill">&#x1F6D2; Consumer Tech</a>
+      <a href="gaming.html" class="cat-pill">&#x1F3AE; Gaming</a>
+      <a href="evs-automotive.html" class="cat-pill">&#x1F697; EVs &amp; Automotive</a>
     </nav>
   </div>
 </section>
@@ -111,37 +117,59 @@
   </div>
 </div>
 
-<!-- ===== FEATURED HIGHLIGHTS (1 per category) ===== -->
+<!-- ===== BROWSE CATEGORIES ===== -->
 <main id="main-content">
-  {% if featured %}
   <div class="section" style="padding-bottom:0;">
     <div class="section-head">
-      <h2>Today's Top Story Per Category</h2>
-      <span class="section-count">5 categories · 1 highlight each</span>
+      <h2>Browse by Category</h2>
+      <span class="section-count">8 categories — updated every 6 hours</span>
     </div>
-    <div class="featured-strip">
-      {% for card in featured %}
-      <article class="featured-card" aria-label="Featured: {{ card.title }}">
-        {% if card.image %}
-        <div class="featured-img-wrap">
-          <img src="{{ card.image }}" alt="Illustration for: {{ card.title }}" loading="lazy" width="400" height="200">
-        </div>
-        {% endif %}
-        <div class="featured-body">
-          <span class="featured-cat-pill">{{ card.category }}</span>
-          <h3><a href="{{ card.link }}" target="_blank" rel="noopener noreferrer">{{ card.title }}</a></h3>
-          <p class="card-summary">{{ card.summary }}</p>
-          <div class="featured-footer">
-            <span class="source-tag">{{ card.source }}</span>
-            {% if card.date %}<span class="source-tag">{{ card.date }}</span>{% endif %}
-            <a href="{{ card.link }}" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: {{ card.title }}">Read original</a>
-          </div>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
+    <nav class="category-grid" aria-label="Browse all categories">
+      <a href="ai-news.html" class="cat-card">
+        <span class="cat-card-icon">&#x1F916;</span>
+        <span class="cat-card-name">AI News</span>
+        <span class="cat-card-desc">Machine learning, LLMs &amp; AI products</span>
+      </a>
+      <a href="broadcast-tech.html" class="cat-card">
+        <span class="cat-card-icon">&#x1F4E1;</span>
+        <span class="cat-card-name">Broadcast Tech</span>
+        <span class="cat-card-desc">TV, streaming &amp; production technology</span>
+      </a>
+      <a href="enterprise-tech.html" class="cat-card">
+        <span class="cat-card-icon">&#x1F3E2;</span>
+        <span class="cat-card-name">Enterprise Tech</span>
+        <span class="cat-card-desc">Cloud, SaaS &amp; IT infrastructure</span>
+      </a>
+      <a href="cybersecurity-updates.html" class="cat-card">
+        <span class="cat-card-icon">&#x1F510;</span>
+        <span class="cat-card-name">Cybersecurity</span>
+        <span class="cat-card-desc">Threats, breaches &amp; defences</span>
+      </a>
+      <a href="mobile-gadgets.html" class="cat-card">
+        <span class="cat-card-icon">&#x1F4F1;</span>
+        <span class="cat-card-name">Mobile &amp; Gadgets</span>
+        <span class="cat-card-desc">Smartphones, wearables &amp; devices</span>
+      </a>
+      <a href="consumer-tech.html" class="cat-card cat-card--new">
+        <span class="cat-card-badge">New</span>
+        <span class="cat-card-icon">&#x1F6D2;</span>
+        <span class="cat-card-name">Consumer Tech</span>
+        <span class="cat-card-desc">Reviews, hardware &amp; buying guides</span>
+      </a>
+      <a href="gaming.html" class="cat-card cat-card--new">
+        <span class="cat-card-badge">New</span>
+        <span class="cat-card-icon">&#x1F3AE;</span>
+        <span class="cat-card-name">Gaming</span>
+        <span class="cat-card-desc">Games, consoles &amp; industry news</span>
+      </a>
+      <a href="evs-automotive.html" class="cat-card cat-card--new">
+        <span class="cat-card-badge">New</span>
+        <span class="cat-card-icon">&#x1F697;</span>
+        <span class="cat-card-name">EVs &amp; Automotive</span>
+        <span class="cat-card-desc">Electric vehicles &amp; car tech</span>
+      </a>
+    </nav>
   </div>
-  {% endif %}
 
   <!-- ===== FULL GRID ===== -->
   <div class="section">
@@ -242,6 +270,9 @@
       <a href="enterprise-tech.html">Enterprise Tech</a>
       <a href="cybersecurity-updates.html">Cybersecurity</a>
       <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
+      <a href="consumer-tech.html">Consumer Tech</a>
+      <a href="gaming.html">Gaming</a>
+      <a href="evs-automotive.html">EVs &amp; Automotive</a>
     </div>
     <div class="footer-col">
       <h4>Site Info</h4>

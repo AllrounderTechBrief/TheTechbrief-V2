@@ -108,19 +108,40 @@ def fmt_date(ts):
     return time.strftime('%B %d, %Y', time.localtime(ts))
 
 
-# ── Ensure docs/ mirrors site/ static assets on every run ─────────────────
+# ── Sync static assets from site/ → docs/ ─────────────────────────────────
 
 def sync_static_assets():
     """
-    Copy static files from site/ into docs/ so they are always present
-    after a clean checkout (docs/ is gitignored for category pages but
-    static assets must persist).
+    Copy static files from site/ into docs/.
+
+    IMPORTANT: site/ is the SOURCE OF TRUTH for all static pages.
+    Never edit files directly in docs/ — the build overwrites docs/ on every run.
+
+    To change about.html, contact.html, or any static page:
+      → Edit site/<page>.html
+      → Commit and push → the build copies it to docs/ automatically
+
+    To add a new static category page:
+      1. Create site/<slug>.html
+      2. Add '<slug>.html' to static_files below
+      3. Commit and push
     """
     import shutil
-    static_dirs  = ['assets', 'legal', 'articles']
+
+    static_dirs = ['assets', 'legal', 'articles']
+
+    # Static HTML pages copied verbatim from site/ to docs/ on every build.
+    # Add new static pages here when you create them in site/.
     static_files = [
-        'about.html', 'contact.html', 'robots.txt', 'sitemap.xml',
-        'template_category.html', 'template_home.html'
+        'about.html',
+        'contact.html',
+        'consumer-tech.html',    # Added Feb 2026 — Consumer Tech & Hardware Reviews
+        'gaming.html',           # Added Feb 2026 — Gaming News
+        'evs-automotive.html',   # Added Feb 2026 — EVs & Automotive Tech
+        'robots.txt',
+        'sitemap.xml',
+        'template_category.html',
+        'template_home.html',
     ]
 
     src_root = os.path.join(ROOT, 'site')
@@ -137,6 +158,8 @@ def sync_static_assets():
         src = os.path.join(src_root, fname)
         if os.path.isfile(src):
             shutil.copy2(src, os.path.join(SITE, fname))
+        else:
+            print(f'  WARNING: static file not found in site/: {fname}')
 
 
 # ── Category builder ───────────────────────────────────────────────────────
@@ -150,13 +173,13 @@ def build_category(category, urls):
             print(f'  Feed error {url}: {ex}')
             continue
         for e in feed.entries[:10]:
-            title  = e.get('title', 'Untitled')
-            link   = e.get('link', '')
-            source = feed.feed.get('title', 'Unknown')
-            text   = clean_text(e.get('summary') or e.get('description') or '')
+            title   = e.get('title', 'Untitled')
+            link    = e.get('link', '')
+            source  = feed.feed.get('title', 'Unknown')
+            text    = clean_text(e.get('summary') or e.get('description') or '')
             summary = summarize_text(text, sentences=2)
-            img    = first_image(e)
-            ts     = parse_time(e)
+            img     = first_image(e)
+            ts      = parse_time(e)
             items.append({
                 'title': title, 'link': link, 'source': source,
                 'summary': summary, 'image': img, 'ts': ts,
@@ -182,20 +205,24 @@ def build_category(category, urls):
 # ── Home builder ───────────────────────────────────────────────────────────
 
 def build_home(category_map):
+    # All categories included in the homepage "Latest" grid
     CATEGORY_ORDER = [
         'AI News', 'Mobile & Gadgets', 'Cybersecurity Updates',
-        'Enterprise Tech', 'Broadcast Tech'
+        'Enterprise Tech', 'Broadcast Tech',
+        'Consumer Tech', 'Gaming', 'EVs & Automotive',
     ]
-    featured  = []
+
     all_cards = []
+    seen = set()
 
     for cat in CATEGORY_ORDER:
         items = category_map.get(cat, [])
-        if items:
-            featured.append(items[0])
-            all_cards.extend(items[1:4])
+        for item in items[:4]:
+            if item['link'] not in seen:
+                all_cards.append(item)
+                seen.add(item['link'])
 
-    seen = {c['link'] for c in featured} | {c['link'] for c in all_cards}
+    # Catch any additional categories not in the list above
     for cat, items in category_map.items():
         if cat not in CATEGORY_ORDER:
             for item in items[:4]:
@@ -206,17 +233,18 @@ def build_home(category_map):
     all_cards.sort(key=lambda x: x['ts'], reverse=True)
 
     meta = dict(META_MAP['Home'])
-    html = HOME_TPL.render(meta=meta, featured=featured, cards=all_cards[:20])
+    # featured=[] — the template now shows a category browse grid, not a featured strip
+    html = HOME_TPL.render(meta=meta, featured=[], cards=all_cards[:24])
     with open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(html)
-    print(f'  Built index.html  (featured={len(featured)}, grid={len(all_cards[:20])})')
+    print(f'  Built index.html  (grid={len(all_cards[:24])})')
 
 
 # ── Entry point ────────────────────────────────────────────────────────────
 
 def main():
     os.makedirs(SITE, exist_ok=True)
-    print('Syncing static assets to docs/…')
+    print('Syncing static assets from site/ to docs/…')
     sync_static_assets()
 
     print('Building Tech Brief…')

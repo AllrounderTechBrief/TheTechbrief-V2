@@ -1,8 +1,8 @@
 {
   "Home": {
-    "title": "Tech Brief — AI, Broadcast Tech, Enterprise IT, Cybersecurity & Mobile News",
-    "description": "Fast, editorially reviewed summaries of the latest technology news. AI, broadcast tech, enterprise IT, cybersecurity and mobile gadgets — updated every three hours from trusted global sources.",
-    "h1": "Tech Brief — Modern Technology News",
+    "title": "Tech Brief \u2014 AI, Broadcast Tech, Enterprise IT, Cybersecurity & Mobile News",
+    "description": "Fast, editorially reviewed summaries of the latest technology news. AI, broadcast tech, enterprise IT, cybersecurity and mobile gadgets \u2014 updated every three hours from trusted global sources.",
+    "h1": "Tech Brief \u2014 Modern Technology News",
     "h2": "Editorially reviewed summaries from the world's most trusted tech publications, updated every three hours.",
     "slug": "index"
   },
@@ -29,16 +29,37 @@
   },
   "Cybersecurity Updates": {
     "title": "Cybersecurity News & Threat Intelligence | Tech Brief",
-    "description": "Security threats, vulnerabilities, and defences covered daily. Editorially reviewed summaries from CSO Online and Dark Reading — two of the most trusted names in enterprise security.",
+    "description": "Security threats, vulnerabilities, and defences covered daily. Editorially reviewed summaries from CSO Online and Dark Reading \u2014 two of the most trusted names in enterprise security.",
     "h1": "Cybersecurity News & Threat Intelligence",
     "h2": "Security updates and threat intelligence from CSO Online & Dark Reading",
     "slug": "cybersecurity-updates"
   },
   "Mobile & Gadgets": {
-    "title": "Mobile & Gadget News — Smartphones, Wearables & Consumer Tech | Tech Brief",
+    "title": "Mobile & Gadget News \u2014 Smartphones, Wearables & Consumer Tech | Tech Brief",
     "description": "Smartphone launches, wearables, tablets, and consumer gadget news. Editorially reviewed summaries from The Verge, Engadget, CNET, Android Authority, Gizmodo, and GSMArena.",
     "h1": "Mobile & Gadget News",
     "h2": "Smartphone launches, wearables and consumer tech highlights from The Verge, Engadget & more",
     "slug": "mobile-gadgets"
+  },
+  "Consumer Tech": {
+    "title": "Consumer Tech & Hardware Reviews | Tech Brief",
+    "description": "Consumer technology reviews, hardware comparisons, and buying guides. Editorially reviewed summaries from The Verge, CNET, Tom's Hardware, Wirecutter, and more.",
+    "h1": "Consumer Tech & Hardware Reviews",
+    "h2": "Product reviews, hardware comparisons and buying guides from The Verge, CNET & more",
+    "slug": "consumer-tech"
+  },
+  "Gaming": {
+    "title": "Gaming News \u2014 Consoles, PC Games & Industry | Tech Brief",
+    "description": "Video game releases, console news, and gaming industry updates. Editorially reviewed summaries from IGN, Kotaku, Eurogamer, PC Gamer, and more.",
+    "h1": "Gaming News",
+    "h2": "Consoles, PC gaming & industry news from IGN, Kotaku, Eurogamer & more",
+    "slug": "gaming"
+  },
+  "EVs & Automotive": {
+    "title": "EVs & Automotive Tech News | Tech Brief",
+    "description": "Electric vehicle launches, autonomous driving, and automotive technology news. Editorially reviewed summaries from Electrek, InsideEVs, The Verge, and more.",
+    "h1": "EVs & Automotive Tech",
+    "h2": "Electric vehicles, autonomous driving & car tech from Electrek, InsideEVs & more",
+    "slug": "evs-automotive"
   }
 }
