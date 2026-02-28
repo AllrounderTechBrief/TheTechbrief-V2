@@ -28,7 +28,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "The Tech Brief",
-      "email": "contact@thetechbrief.in"
+      "email": "technodate3@gmail.com"
     },
     "potentialAction": {
       "@type": "SearchAction",
@@ -73,7 +73,7 @@
 <!-- ===== HERO ===== -->
 <section class="hero" aria-label="Site introduction">
   <div class="hero-inner">
-    <span class="hero-label">Updated Every 6 Hours — {{ meta.h1 }}</span>
+    <span class="hero-label">Updated Every 6 Hours — Technology Intelligence</span>
     <h1>Your Daily Technology Intelligence Brief</h1>
     <p class="hero-sub">Editorially reviewed summaries across AI, enterprise tech, cybersecurity, broadcast technology, and mobile — sourced from the world's most trusted publications.</p>
     <nav class="cat-pill-row" aria-label="Browse by category">
@@ -121,12 +121,8 @@
     </div>
     <div class="featured-strip">
       {% for card in featured %}
-      <article class="featured-card" aria-label="Featured: {{ card.title }}">
-        {% if card.image %}
-        <div class="featured-img-wrap">
-          <img src="{{ card.image }}" alt="Illustration for: {{ card.title }}" loading="lazy" width="400" height="200">
-        </div>
-        {% endif %}
+      <article class="featured-card{% if not card.image %} no-image{% endif %}" aria-label="Featured: {{ card.title }}">
+        {% if card.image %}<div class="featured-img-wrap"><img src="{{ card.image }}" alt="Illustration for: {{ card.title }}" loading="lazy" width="400" height="200"></div>{% endif %}
         <div class="featured-body">
           <span class="featured-cat-pill">{{ card.category }}</span>
           <h3><a href="{{ card.link }}" target="_blank" rel="noopener noreferrer">{{ card.title }}</a></h3>
@@ -175,7 +171,7 @@
   <!-- Editorial transparency notice -->
   <div class="section" style="padding-top:0;">
     <div class="info-box">
-      <p><strong>About our summaries:</strong> The Tech Brief aggregates publicly available RSS feeds from reputable technology publications. Each summary is generated and reviewed for accuracy. We do not reproduce full article text. All original content, images and trademarks remain the property of their respective publishers. <a href="about.html">Learn more about our editorial process →</a></p>
+      <p><strong>Our editorial commitment:</strong> The Tech Brief covers technology developments across five specialist categories. Every story we feature is selected on editorial merit, attributed to its original source, and linked directly to the full article. We do not reproduce full article text from third-party publications. All original content, images and trademarks remain the property of their respective publishers. <a href="about.html">Learn more about our editorial standards →</a></p>
     </div>
   </div>
 
@@ -233,7 +229,7 @@
   <div class="footer-inner">
     <div class="footer-about">
       <span class="brand-name">The Tech Brief</span>
-      <p>An independent technology news aggregator delivering concise, editorially reviewed summaries from the world's most trusted tech publications. Updated every six hours, 24/7.</p>
+      <p>An independent technology publication delivering expert insights and curated stories from leading technology sources worldwide. Published from Dublin, Ireland.</p>
     </div>
     <div class="footer-col">
       <h4>Categories</h4>
@@ -255,8 +251,8 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© <span id="footer-year"></span> The Tech Brief — thetechbrief.in. All rights reserved.</span>
-    <span>AI-assisted summaries based on public RSS feeds. Trademarks belong to their respective owners.</span>
+    <span>© <span id="footer-year"></span> The Tech Brief — Adamstown, Lucan, Dublin, Ireland. All rights reserved.</span>
+    <span>Independent technology publication. All trademarks belong to their respective owners.</span>
   </div>
 </footer>
 
