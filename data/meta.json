@@ -1,44 +1,44 @@
 {
   "Home": {
-    "title": "Tech Brief — AI, Broadcast Tech, Enterprise IT, Cybersecurity & Mobile News",
-    "description": "Fast, editorially reviewed summaries of the latest technology news. AI, broadcast tech, enterprise IT, cybersecurity and mobile gadgets — updated every three hours from trusted global sources.",
-    "h1": "Tech Brief — Modern Technology News",
-    "h2": "Editorially reviewed summaries from the world's most trusted tech publications, updated every three hours.",
+    "title": "The Tech Brief — AI, Broadcast, Enterprise, Cybersecurity & Mobile Technology News",
+    "description": "The Tech Brief is an independent technology publication covering AI, enterprise IT, cybersecurity, broadcast media, and consumer gadgets. Expert editorial coverage updated throughout the day.",
+    "h1": "The Tech Brief — Technology Intelligence",
+    "h2": "Expert editorial coverage of the technology stories that matter — AI, enterprise, cybersecurity, broadcast, and mobile.",
     "slug": "index"
   },
   "AI News": {
-    "title": "AI News & Machine Learning Updates | Tech Brief",
-    "description": "Stay current with the latest AI breakthroughs, machine learning research, automation trends, and large language model developments. Editorially reviewed summaries updated every three hours.",
-    "h1": "AI News",
-    "h2": "Breakthroughs in machine learning, automation, and AI industry developments",
+    "title": "AI & Machine Learning News | The Tech Brief",
+    "description": "Expert coverage of artificial intelligence, machine learning, and automation — from research breakthroughs to industry deployments and policy developments. Updated throughout the day.",
+    "h1": "AI & Machine Learning News",
+    "h2": "Developments in artificial intelligence, automation, and machine learning from across the industry",
     "slug": "ai-news"
   },
   "Broadcast Tech": {
-    "title": "Broadcast Technology & Media Workflow News | Tech Brief",
-    "description": "Industry updates in broadcast engineering, cloud production, playout systems, and media workflows. Sourced from Avid, Harmonic, Vizrt, TVB Europe, NewscastStudio, and AWS for Media.",
-    "h1": "Broadcast Technology & Media Workflow Updates",
-    "h2": "Industry insights from Avid, Harmonic, Pebble, Vizrt, TVB Europe & AWS for Media",
+    "title": "Broadcast Technology & Media Production News | The Tech Brief",
+    "description": "In-depth coverage of broadcast engineering, cloud production, IP workflows, and media technology from industry leaders including Avid, Harmonic, Vizrt, TVB Europe, and AWS for Media.",
+    "h1": "Broadcast Technology & Media Production",
+    "h2": "Industry coverage of broadcast engineering, cloud production, and media technology",
     "slug": "broadcast-tech"
   },
   "Enterprise Tech": {
-    "title": "Enterprise Technology & Cloud Infrastructure News | Tech Brief",
-    "description": "The latest enterprise IT trends: cloud infrastructure, servers, software platforms, and IT operations. Editorially reviewed summaries from ZDNet, InfoWorld, The Register, and SiliconAngle.",
-    "h1": "Enterprise Technology & Cloud Infrastructure News",
-    "h2": "Servers, cloud, and IT operations updates from ZDNet, InfoWorld, The Register & more",
+    "title": "Enterprise Technology & Cloud Infrastructure News | The Tech Brief",
+    "description": "Expert coverage of enterprise IT, cloud infrastructure, software platforms, and the technology decisions facing organisations at scale. Reporting from across the enterprise technology sector.",
+    "h1": "Enterprise Technology & Cloud Infrastructure",
+    "h2": "Cloud, software, and infrastructure coverage for enterprise technology professionals",
     "slug": "enterprise-tech"
   },
   "Cybersecurity Updates": {
-    "title": "Cybersecurity News & Threat Intelligence | Tech Brief",
-    "description": "Security threats, vulnerabilities, and defences covered daily. Editorially reviewed summaries from CSO Online and Dark Reading — two of the most trusted names in enterprise security.",
+    "title": "Cybersecurity News & Threat Intelligence | The Tech Brief",
+    "description": "Cybersecurity threat intelligence, vulnerability research, and defensive security coverage for professionals and organisations. Expert editorial reporting on the threats that matter.",
     "h1": "Cybersecurity News & Threat Intelligence",
-    "h2": "Security updates and threat intelligence from CSO Online & Dark Reading",
+    "h2": "Threat intelligence, security research, and defensive coverage for cybersecurity professionals",
     "slug": "cybersecurity-updates"
   },
   "Mobile & Gadgets": {
-    "title": "Mobile & Gadget News — Smartphones, Wearables & Consumer Tech | Tech Brief",
-    "description": "Smartphone launches, wearables, tablets, and consumer gadget news. Editorially reviewed summaries from The Verge, Engadget, CNET, Android Authority, Gizmodo, and GSMArena.",
-    "h1": "Mobile & Gadget News",
-    "h2": "Smartphone launches, wearables and consumer tech highlights from The Verge, Engadget & more",
+    "title": "Mobile & Consumer Technology News | The Tech Brief",
+    "description": "Smartphone launches, wearable technology, tablets, and consumer gadgets — expert editorial coverage of the devices and platforms that define how we live and work.",
+    "h1": "Mobile & Consumer Technology",
+    "h2": "Smartphones, wearables, and consumer gadgets — expert coverage of the devices shaping everyday life",
     "slug": "mobile-gadgets"
   }
 }
