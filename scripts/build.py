@@ -7,7 +7,7 @@ from jinja2 import Template
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 DATA = os.path.join(ROOT, 'data', 'feeds.json')
 META = os.path.join(ROOT, 'data', 'meta.json')
-SITE = os.path.join(ROOT, 'site')
+SITE = ROOT
 
 # Load templates
 with open(os.path.join(SITE, 'template_category.html'), 'r', encoding='utf-8') as f:
