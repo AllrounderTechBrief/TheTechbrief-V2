@@ -1,0 +1,59 @@
+name: Build Tech Brief
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install feedparser beautifulsoup4 sumy python-slugify jinja2 nltk
+
+      - name: Download NLTK tokenizer data
+        run: |
+          python - << 'EOF'
+          import nltk
+          nltk.download('punkt', quiet=True)
+          nltk.download('punkt_tab', quiet=True)
+          print("NLTK ready")
+          EOF
+
+      - name: Run build script
+        run: |
+          python scripts/build.py
+          echo "--- Generated files in docs/ ---"
+          ls -la docs/
+          test -f docs/index.html || (echo "ERROR: docs/index.html not found" && exit 1)
+
+      - name: Commit and push generated site
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: auto-build site [skip ci]"
+            git push origin main
+          fi
