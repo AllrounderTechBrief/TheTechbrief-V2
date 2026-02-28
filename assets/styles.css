@@ -576,37 +576,24 @@ button { cursor: pointer; font-family: inherit; }
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
   overflow: hidden;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 260px 1fr;
   transition: transform .2s, box-shadow .2s;
 }
 .featured-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
-.featured-img-wrap {
-  flex: 0 0 260px;
-  overflow: hidden;
-}
-/* Hide image column entirely when empty — prevents blank gap */
-.featured-card:not(:has(.featured-img-wrap)) {
-  flex-direction: column;
-}
-.featured-img-wrap:empty { display: none; }
+.featured-img-wrap { overflow: hidden; }
 .featured-card img {
   width: 100%; height: 100%; object-fit: cover;
   background: var(--surface-2);
   display: block;
-  min-height: 190px;
+  min-height: 180px;
 }
 .featured-body {
   padding: 20px 24px;
   display: flex; flex-direction: column; gap: 10px;
-  flex: 1;
-}
-/* No-image variant — full width body */
-.featured-card.no-image .featured-body {
-  padding: 24px 28px;
 }
 .featured-cat-pill {
   display: inline-block;
@@ -635,3 +622,39 @@ button { cursor: pointer; font-family: inherit; }
     height: 180px; min-height: unset;
   }
 }
+
+/* ===== CATEGORY GRID (homepage browse section) ===== */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.cat-card {
+  position: relative;
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 20px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color .15s, box-shadow .15s, transform .1s;
+}
+.cat-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(0,0,0,.08);
+  transform: translateY(-2px);
+}
+.cat-card--new { border-color: var(--accent-2); }
+.cat-card--new:hover { border-color: var(--accent-2); }
+.cat-card-badge {
+  position: absolute; top: 10px; right: 10px;
+  background: var(--accent-2); color: #fff;
+  font-size: 10px; font-weight: 700; letter-spacing: .4px;
+  padding: 2px 7px; border-radius: 999px;
+  text-transform: uppercase;
+}
+.cat-card-icon { font-size: 28px; line-height: 1; margin-bottom: 4px; }
+.cat-card-name { font-weight: 700; font-size: 15px; color: var(--ink); }
+.cat-card-desc { font-size: 12.5px; color: var(--ink-3); line-height: 1.4; }
