@@ -131,19 +131,152 @@ SAFE_IMAGE_DOMAINS = (
     'google.com/press',
 )
 
-# Curated copyright-free Unsplash fallbacks keyed by category slug
-# All URLs are Unsplash public-domain images (CC0-equivalent licence)
-CATEGORY_FALLBACK_IMAGES = {
-    'ai-news':             'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&auto=format&fit=crop',
-    'enterprise-tech':     'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format&fit=crop',
-    'cybersecurity-updates':'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop',
-    'mobile-gadgets':      'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop',
-    'consumer-tech':       'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800&auto=format&fit=crop',
-    'broadcast-tech':      'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&auto=format&fit=crop',
-    'gaming':              'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&auto=format&fit=crop',
-    'evs-automotive':      'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&auto=format&fit=crop',
-    'startups-business':   'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&auto=format&fit=crop',
-    'default':             'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop',
+# ── Per-category image POOLS ───────────────────────────────────────────────
+# Each pool contains 12 unique, visually distinct Unsplash photo IDs.
+# When an article has an unsafe image, we hash its URL to pick a pool entry —
+# giving every card a DIFFERENT image while staying copyright-clean.
+# All photos are free-to-use under the Unsplash Licence (unsplash.com/license).
+CATEGORY_IMAGE_POOLS = {
+    'ai-news': [
+        'photo-1677442135703-1787eea5ce01',  # AI abstract purple
+        'photo-1620712943543-bcc4688e7485',  # humanoid robot
+        'photo-1655635643532-fa9ba2648cbe',  # AI chips blue
+        'photo-1533228100845-08145b01de14',  # neural network nodes
+        'photo-1558494949-ef010cbdcc31',     # data streams
+        'photo-1635070041078-e363dbe005cb',  # AI brain digital
+        'photo-1501526029524-a8ea952b15be',  # server room lights
+        'photo-1531297484001-80022131f5a1',  # laptop code dark
+        'photo-1504639725590-34d0984388bd',  # code screen
+        'photo-1518770660439-4636190af475',  # circuit board macro
+        'photo-1526374965328-7f61d4dc18c5',  # matrix code
+        'photo-1510511459019-5dda7724fd87',  # data center blue
+    ],
+    'enterprise-tech': [
+        'photo-1486312338219-ce68d2c6f44d',  # person on laptop
+        'photo-1497366216548-37526070297c',  # modern office
+        'photo-1568952433726-3896e3881c65',  # team meeting
+        'photo-1553877522-43269d4ea984',     # office abstract
+        'photo-1542744094-3a31f272c490',     # business laptop
+        'photo-1521737711867-e3b97375f902',  # team working
+        'photo-1600880292203-757bb62b4baf',  # remote work setup
+        'photo-1454165804606-c3d57bc86b40',  # business graphs
+        'photo-1507679799987-c73779587ccf',  # business suit
+        'photo-1560472354-b33ff0c44a43',     # server infrastructure
+        'photo-1530099486328-e021101a494a',  # data analytics
+        'photo-1661956602116-aa6865609028',  # modern workspace
+    ],
+    'cybersecurity-updates': [
+        'photo-1550751827-4bd374c3f58b',     # security shield blue
+        'photo-1563986768609-322da13575f3',  # padlock digital
+        'photo-1614064641938-3bbee52942c7',  # hacker dark
+        'photo-1510511233900-1982d92bd835',  # code lock
+        'photo-1555949963-aa79dcee981c',     # server lock
+        'photo-1504384308090-c894fdcc538d',  # cyber abstract
+        'photo-1516321318423-f06f85e504b3',  # secure network
+        'photo-1544197150-b99a580bb7a8',     # privacy network
+        'photo-1573164713988-8665fc963095',  # dark hacker
+        'photo-1603808033192-082d6919d3e1',  # encrypted code
+        'photo-1569396116180-210c182bedb8',  # server room secure
+        'photo-1591696205602-2f950c417cb9',  # circuit security
+    ],
+    'mobile-gadgets': [
+        'photo-1511707171634-5f897ff02aa9',  # phone on desk
+        'photo-1592750475338-74b7b21085ab',  # iPhone white
+        'photo-1585060544812-6b45742d762f',  # gadgets flat lay
+        'photo-1523206489230-c012c64b2b48',  # phone in hand
+        'photo-1567581935884-3349723552ca',  # smartwatch
+        'photo-1542751371-adc38448a05e',     # various devices
+        'photo-1525547719571-a2d4ac8945e2',  # phones on table
+        'photo-1616348436168-de43ad0db179',  # phone close-up
+        'photo-1565849904461-04a58ad377e0',  # unboxing phone
+        'photo-1601784551446-20c9e07cdbdb',  # wireless earbuds
+        'photo-1583394838336-acd977736f90',  # headphones
+        'photo-1570891836654-d4590d13d073',  # tablet and phone
+    ],
+    'consumer-tech': [
+        'photo-1498049794561-7780e7231661',  # tech products
+        'photo-1517694712202-14dd9538aa97',  # MacBook open
+        'photo-1593642632559-0c6d3fc62b89',  # laptop Windows
+        'photo-1519389950473-47ba0277781c',  # tech workspace
+        'photo-1496181133206-80ce9b88a853',  # laptop closeup
+        'photo-1504707748692-419802cf939d',  # consumer electronics
+        'photo-1550009158-9ebf69173e03',     # keyboard setup
+        'photo-1587829741301-dc798b83add3',  # PC setup
+        'photo-1484788984921-03950022c9ef',  # home tech setup
+        'photo-1547658719-da2b51169166',     # smart home device
+        'photo-1560472355-536de3962603',     # tech lifestyle
+        'photo-1468495244123-6c6c332eeece',  # headphones music
+    ],
+    'broadcast-tech': [
+        'photo-1478737270239-2f02b77fc618',  # radio studio
+        'photo-1612420696760-0a0f34d3e7d0',  # broadcasting
+        'photo-1567095761054-7003afd47020',  # podcast mic
+        'photo-1598488035139-bdbb2231ce04',  # audio mixer
+        'photo-1478737270239-2f02b77fc618',  # radio desk
+        'photo-1516321497487-e288fb19713f',  # TV production
+        'photo-1574717024653-61fd2cf4d44d',  # video camera
+        'photo-1590602847861-f357a9332bbc',  # camera lens
+        'photo-1492619375914-88005aa9e8fb',  # broadcast camera
+        'photo-1611532736597-de2d4265fba3',  # live streaming
+        'photo-1623039405147-547794f92e9e',  # media production
+        'photo-1540575467063-178a50c2df87',  # event broadcast
+    ],
+    'gaming': [
+        'photo-1538481199705-c710c4e965fc',  # gaming monitor
+        'photo-1493711662062-fa541adb3fc8',  # gaming controller
+        'photo-1552820728-8b83bb6b773f',     # gaming setup RGB
+        'photo-1601887389937-0b02f7683064',  # PC gaming rig
+        'photo-1612287230202-1ff1d85d1bdf',  # Nintendo Switch
+        'photo-1511512578047-dfb367046420',  # FPS game screen
+        'photo-1574375927938-d5a98e8ffe85',  # PS5 controller
+        'photo-1580327344181-c1163234e5a0',  # gaming headset
+        'photo-1606144042614-b2417e99c4e3',  # arcade machine
+        'photo-1560419015-7c427e8ae5ba',     # gaming joystick
+        'photo-1586182987320-4f376d39d787',  # esports arena
+        'photo-1569429593410-b498b3fb3387',  # retro gaming
+    ],
+    'evs-automotive': [
+        'photo-1593941707882-a5bba14938c7',  # EV charging
+        'photo-1558618666-fcd25c85cd64',     # Tesla side
+        'photo-1616455579100-2ceaa4eb2d37',  # electric car interior
+        'photo-1549317661-bd32c8ce0db2',     # car dashboard
+        'photo-1502161254119-e1f02c5b5e4b',  # car at night
+        'photo-1568605117036-5fe5e7bab0b7',  # luxury car front
+        'photo-1580274455191-1c62238fa1f4',  # EV front
+        'photo-1617469767053-d3b523a0b982',  # charging station
+        'photo-1590362891991-f776e747a588',  # car highway
+        'photo-1606016159991-dfe4f2746ad5',  # automotive tech
+        'photo-1571987502227-9231b837d92a',  # electric motor
+        'photo-1583121274602-3e2820c69888',  # sports car
+    ],
+    'startups-business': [
+        'photo-1559136555-9303baea8ebd',     # startup office
+        'photo-1507003211169-0a1dd7228f2d',  # business person
+        'photo-1600880292203-757bb62b4baf',  # team meeting
+        'photo-1450101499163-c8848c66ca85',  # signing deal
+        'photo-1460925895917-afdab827c52f',  # laptop analytics
+        'photo-1553484771-371a605b060b',     # fintech
+        'photo-1579532537598-459ecdaf39cc',  # pitch meeting
+        'photo-1521737604893-d14cc237f11d',  # startup team
+        'photo-1537511446984-935f663eb1f4',  # co-working
+        'photo-1486406146926-c627a92ad1ab',  # corporate building
+        'photo-1573164713714-d95e436ab8d6',  # handshake deal
+        'photo-1444653389962-8149286c578a',  # planning strategy
+    ],
+    'default': [
+        'photo-1518770660439-4636190af475',  # circuit board
+        'photo-1531297484001-80022131f5a1',  # laptop code
+        'photo-1504639725590-34d0984388bd',  # code screen
+        'photo-1519389950473-47ba0277781c',  # tech workspace
+        'photo-1498049794561-7780e7231661',  # tech products
+        'photo-1550751827-4bd374c3f58b',     # security
+        'photo-1526374965328-7f61d4dc18c5',  # code matrix
+        'photo-1480944657103-7fed22359e1d',  # server room
+        'photo-1488229297570-58520851e868',  # laptop glowing
+        'photo-1451187580459-43490279c0fa',  # earth tech
+        'photo-1516321318423-f06f85e504b3',  # network
+        'photo-1558494949-ef010cbdcc31',     # data streams
+    ],
 }
 
 
@@ -156,12 +289,42 @@ def is_safe_image(url):
     return any(host == d or host.endswith('.' + d) for d in SAFE_IMAGE_DOMAINS)
 
 
-def copyright_safe_image(url, category_slug='default'):
-    """Return url unchanged if safe; otherwise return a curated Unsplash fallback."""
+def copyright_safe_image(url, category_slug='default', article_key=''):
+    """
+    Return url unchanged if safe.
+    Otherwise pick a unique fallback from the category pool using the article
+    URL/title as a hash seed — deterministic and different for every article.
+    """
     if is_safe_image(url):
         return url
-    return CATEGORY_FALLBACK_IMAGES.get(category_slug,
-                                        CATEGORY_FALLBACK_IMAGES['default'])
+    import hashlib
+    pool = CATEGORY_IMAGE_POOLS.get(category_slug, CATEGORY_IMAGE_POOLS['default'])
+    seed = (article_key or category_slug).encode('utf-8')
+    idx  = int(hashlib.md5(seed).hexdigest(), 16) % len(pool)
+    photo_id = pool[idx]
+    return f'https://images.unsplash.com/{photo_id}?w=800&auto=format&fit=crop'
+
+
+def assign_unique_images(items, category_slug):
+    """
+    Walk through a list of article dicts and assign copyright-safe images.
+    - Articles that already have a safe image keep their original.
+    - Articles needing a fallback get sequential pool images so that no two
+      consecutive unsafe-image cards ever show the same photo.
+    """
+    pool = CATEGORY_IMAGE_POOLS.get(category_slug, CATEGORY_IMAGE_POOLS['default'])
+    pool_len = len(pool)
+    pool_cursor = 0  # increments only when a fallback is needed
+
+    for item in items:
+        original_url = item.get('image')
+        if is_safe_image(original_url):
+            item['image'] = original_url  # safe — keep as-is
+        else:
+            photo_id = pool[pool_cursor % pool_len]
+            pool_cursor += 1
+            item['image'] = f'https://images.unsplash.com/{photo_id}?w=800&auto=format&fit=crop'
+    return items
 
 
 def parse_time(entry):
@@ -245,8 +408,7 @@ def build_category(category, urls):
         meta['slug'] = slugify(category)
 
     cat_slug = meta['slug']
-    for item in items:
-        item['image'] = copyright_safe_image(item.get('image'), cat_slug)
+    items = assign_unique_images(items, cat_slug)
 
     html = CATEGORY_TPL.render(meta=meta, cards=items)
     out  = os.path.join(SITE, f"{meta['slug']}.html")
