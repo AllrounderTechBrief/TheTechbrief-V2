@@ -538,56 +538,17 @@ button { cursor: pointer; font-family: inherit; }
   .site-nav a { padding: 10px 12px; }
   .nav-cta { margin-left: 0; }
   .nav-toggle { display: block; }
-
-  /* ── Hero / sections: tighter on mobile ── */
-  .hero { padding: 32px 16px 28px; }
-  .hero h1 { font-size: clamp(24px, 6vw, 36px); }
-  .hero-sub { font-size: 14px; }
-  .section { padding: 20px 14px; }
-  .cat-hero { padding: 22px 16px 18px; }
-  .cat-hero h1 { font-size: clamp(22px, 5.5vw, 32px); }
-  .cat-hero p { font-size: 13.5px; }
-  .quick-actions { padding: 14px 16px; margin: 12px 0 0; border-radius: 0; }
-
-  /* ── Category pill row → horizontal scroll, no wrap ── */
-  .cat-pill-row {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;          /* Firefox */
-    padding-bottom: 4px;
-    gap: 8px;
-    /* extend to screen edge for a premium feel */
-    margin-left: -14px;
-    margin-right: -14px;
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-  .cat-pill-row::-webkit-scrollbar { display: none; } /* Chrome/Safari */
-  .cat-pill { flex-shrink: 0; padding: 6px 14px; font-size: 12px; }
-
-  /* ── Grid & cards ── */
-  .grid { gap: 14px; }
-  /* First card: stack vertically (image top, text below) instead of side-by-side */
-  .grid .card:first-child { display: flex; flex-direction: column; }
-  .grid .card:first-child img { height: 185px; border-radius: var(--radius) var(--radius) 0 0; }
-
-  /* All card images: slightly shorter on mobile to show more cards */
-  .card img { height: 160px; }
-  .card .card-body { padding: 14px 16px 10px; gap: 6px; }
-  .card h3 { font-size: 16px; }
-  .card .card-summary { font-size: 13px; }
-  .card .card-footer { padding: 10px 16px; }
-
-  /* ── Page wrap (articles / static pages) ── */
-  .page-wrap { padding: 22px 14px 48px; }
-
+  .hero { padding: 48px 20px 44px; }
+  .section { padding: 28px 16px; }
+  .cat-hero { padding: 32px 20px 28px; }
+  .quick-actions { padding: 20px; margin: 20px 16px; }
   .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+  .grid .card:first-child { display: flex; }
+  .page-wrap { padding: 32px 16px 60px; }
 }
 
 @media (max-width: 480px) {
-  .grid { grid-template-columns: 1fr; gap: 12px; }
-  .section { padding: 16px 14px; }
+  .grid { grid-template-columns: 1fr; }
 }
 
 /* ---------- Utility ---------- */
