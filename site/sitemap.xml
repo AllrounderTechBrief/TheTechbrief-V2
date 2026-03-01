@@ -79,4 +79,76 @@
     <priority>0.4</priority>
   </url>
 
+  <!-- How-To Hub -->
+  <url>
+    <loc>https://allroundertechbrief.github.io/TheTechBrief/how-to.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- How-To Articles -->
+  <url>
+    <loc>https://allroundertechbrief.github.io/TheTechBrief/articles/how-to-factory-reset-android.html</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://allroundertechbrief.github.io/TheTechBrief/articles/how-to-factory-reset-iphone.html</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://allroundertechbrief.github.io/TheTechBrief/articles/how-to-upgrade-windows.html</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://allroundertechbrief.github.io/TheTechBrief/articles/how-to-upgrade-macos.html</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://allroundertechbrief.github.io/TheTechBrief/articles/how-to-clear-cache.html</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://allroundertechbrief.github.io/TheTechBrief/articles/how-to-set-up-new-android.html</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Original Long-form Articles -->
+  <url>
+    <loc>https://allroundertechbrief.github.io/TheTechBrief/articles/ai-agents-enterprise-2025.html</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://allroundertechbrief.github.io/TheTechBrief/articles/android-vs-iphone-2025.html</loc>
+    <lastmod>2025-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://allroundertechbrief.github.io/TheTechBrief/articles/ransomware-playbook-2025.html</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

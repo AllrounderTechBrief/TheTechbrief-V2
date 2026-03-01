@@ -119,6 +119,51 @@ def first_image(entry):
     return None
 
 
+# ── Copyright-safe image handling ─────────────────────────────────────────
+# Sources that are definitively safe to use
+SAFE_IMAGE_DOMAINS = (
+    'images.unsplash.com',
+    'images.pexels.com',
+    'cdn.pixabay.com',
+    'upload.wikimedia.org',
+    'apple.com/newsroom/images',
+    'samsung.com/press',
+    'google.com/press',
+)
+
+# Curated copyright-free Unsplash fallbacks keyed by category slug
+# All URLs are Unsplash public-domain images (CC0-equivalent licence)
+CATEGORY_FALLBACK_IMAGES = {
+    'ai-news':             'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&auto=format&fit=crop',
+    'enterprise-tech':     'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format&fit=crop',
+    'cybersecurity-updates':'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop',
+    'mobile-gadgets':      'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop',
+    'consumer-tech':       'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800&auto=format&fit=crop',
+    'broadcast-tech':      'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&auto=format&fit=crop',
+    'gaming':              'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&auto=format&fit=crop',
+    'evs-automotive':      'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&auto=format&fit=crop',
+    'startups-business':   'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&auto=format&fit=crop',
+    'default':             'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop',
+}
+
+
+def is_safe_image(url):
+    """Return True if the image URL comes from a copyright-safe source."""
+    if not url:
+        return False
+    from urllib.parse import urlparse
+    host = urlparse(url).netloc.lower().lstrip('www.')
+    return any(host == d or host.endswith('.' + d) for d in SAFE_IMAGE_DOMAINS)
+
+
+def copyright_safe_image(url, category_slug='default'):
+    """Return url unchanged if safe; otherwise return a curated Unsplash fallback."""
+    if is_safe_image(url):
+        return url
+    return CATEGORY_FALLBACK_IMAGES.get(category_slug,
+                                        CATEGORY_FALLBACK_IMAGES['default'])
+
+
 def parse_time(entry):
     t = entry.get('published_parsed') or entry.get('updated_parsed')
     return time.mktime(t) if t else 0
@@ -142,6 +187,7 @@ def sync_static_assets():
     static_files = [
         'about.html',
         'contact.html',
+        'how-to.html',
         'robots.txt',
         'sitemap.xml',
         'template_category.html',
@@ -197,6 +243,10 @@ def build_category(category, urls):
     }))
     if 'slug' not in meta:
         meta['slug'] = slugify(category)
+
+    cat_slug = meta['slug']
+    for item in items:
+        item['image'] = copyright_safe_image(item.get('image'), cat_slug)
 
     html = CATEGORY_TPL.render(meta=meta, cards=items)
     out  = os.path.join(SITE, f"{meta['slug']}.html")
