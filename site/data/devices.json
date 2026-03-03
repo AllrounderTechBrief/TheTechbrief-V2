@@ -1,0 +1,323 @@
+{
+  "devices": [
+    {
+      "device_name": "iPhone 17e",
+      "aliases": ["iPhone 17 e"],
+      "brand": "Apple",
+      "category": "smartphone",
+      "image_path": "assets/press/apple-iphone-17e.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "iPhone 17",
+      "aliases": ["iPhone 17 Pro", "iPhone 17 Pro Max"],
+      "brand": "Apple",
+      "category": "smartphone",
+      "image_path": "assets/press/apple-iphone-17.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "iPhone 16",
+      "aliases": ["iPhone 16 Pro", "iPhone 16 Pro Max", "iPhone 16 Plus"],
+      "brand": "Apple",
+      "category": "smartphone",
+      "image_path": "assets/press/apple-iphone-16.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy S26 Ultra",
+      "aliases": ["Samsung Galaxy S26", "Galaxy S26+", "Galaxy S26 Ultra", "S26 Ultra"],
+      "brand": "Samsung",
+      "category": "smartphone",
+      "image_path": "assets/press/samsung-galaxy-s26-ultra.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy S25",
+      "aliases": ["Samsung Galaxy S25", "Galaxy S25 Ultra", "Galaxy S25+", "Galaxy S25 Edge"],
+      "brand": "Samsung",
+      "category": "smartphone",
+      "image_path": "assets/press/samsung-galaxy-s25.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy Z Fold",
+      "aliases": ["Galaxy Z Fold 7", "Galaxy Z Fold 6", "Samsung Fold"],
+      "brand": "Samsung",
+      "category": "smartphone",
+      "image_path": "assets/press/samsung-galaxy-z-fold.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy Z Flip",
+      "aliases": ["Galaxy Z Flip 7", "Galaxy Z Flip 6", "Samsung Flip"],
+      "brand": "Samsung",
+      "category": "smartphone",
+      "image_path": "assets/press/samsung-galaxy-z-flip.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Pixel 10",
+      "aliases": ["Google Pixel 10", "Pixel 10 Pro", "Pixel 10 Pro XL"],
+      "brand": "Google",
+      "category": "smartphone",
+      "image_path": "assets/press/google-pixel-10.jpg",
+      "source_url": "https://store.google.com/press/",
+      "license": "Google press kit editorial use"
+    },
+    {
+      "device_name": "Pixel 9",
+      "aliases": ["Google Pixel 9", "Pixel 9 Pro", "Pixel 9 Pro Fold", "Pixel 9 Pro XL"],
+      "brand": "Google",
+      "category": "smartphone",
+      "image_path": "assets/press/google-pixel-9.jpg",
+      "source_url": "https://store.google.com/press/",
+      "license": "Google press kit editorial use"
+    },
+    {
+      "device_name": "OnePlus 13",
+      "aliases": ["OnePlus 13R"],
+      "brand": "OnePlus",
+      "category": "smartphone",
+      "image_path": "assets/press/oneplus-13.jpg",
+      "source_url": "https://www.oneplus.com/press",
+      "license": "OnePlus press kit editorial use"
+    },
+    {
+      "device_name": "Xperia 1",
+      "aliases": ["Sony Xperia 1 VII", "Sony Xperia 1 VI", "Xperia 5"],
+      "brand": "Sony",
+      "category": "smartphone",
+      "image_path": "assets/press/sony-xperia-1.jpg",
+      "source_url": "https://presscentre.sony.co.uk/",
+      "license": "Sony press kit editorial use"
+    },
+    {
+      "device_name": "MacBook Pro",
+      "aliases": ["MacBook Pro M4", "MacBook Pro M3", "M4 MacBook Pro", "M4 Max MacBook"],
+      "brand": "Apple",
+      "category": "laptop",
+      "image_path": "assets/press/apple-macbook-pro.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "MacBook Air",
+      "aliases": ["MacBook Air M4", "MacBook Air M3", "M4 MacBook Air"],
+      "brand": "Apple",
+      "category": "laptop",
+      "image_path": "assets/press/apple-macbook-air.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "Surface Pro",
+      "aliases": ["Surface Pro 11", "Surface Pro 10", "Microsoft Surface Pro"],
+      "brand": "Microsoft",
+      "category": "laptop",
+      "image_path": "assets/press/microsoft-surface-pro.jpg",
+      "source_url": "https://news.microsoft.com/press-kit/",
+      "license": "Microsoft press kit editorial use"
+    },
+    {
+      "device_name": "Surface Laptop",
+      "aliases": ["Surface Laptop 7", "Surface Laptop 6", "Surface Laptop Studio"],
+      "brand": "Microsoft",
+      "category": "laptop",
+      "image_path": "assets/press/microsoft-surface-laptop.jpg",
+      "source_url": "https://news.microsoft.com/press-kit/",
+      "license": "Microsoft press kit editorial use"
+    },
+    {
+      "device_name": "ThinkPad",
+      "aliases": ["Lenovo ThinkPad", "ThinkPad X1 Carbon", "ThinkPad E16", "ThinkPad T14"],
+      "brand": "Lenovo",
+      "category": "laptop",
+      "image_path": "assets/press/lenovo-thinkpad.jpg",
+      "source_url": "https://news.lenovo.com/press-kits/",
+      "license": "Lenovo press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy Book",
+      "aliases": ["Samsung Galaxy Book", "Galaxy Book 5", "Galaxy Book 4", "Galaxy Book Pro"],
+      "brand": "Samsung",
+      "category": "laptop",
+      "image_path": "assets/press/samsung-galaxy-book.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "iPad Air",
+      "aliases": ["iPad Air M4", "iPad Air M3", "M4 iPad Air", "Apple iPad Air"],
+      "brand": "Apple",
+      "category": "tablet",
+      "image_path": "assets/press/apple-ipad-air.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "iPad Pro",
+      "aliases": ["iPad Pro M4", "iPad Pro M2", "M4 iPad Pro", "Apple iPad Pro"],
+      "brand": "Apple",
+      "category": "tablet",
+      "image_path": "assets/press/apple-ipad-pro.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "iPad mini",
+      "aliases": ["iPad mini 7", "iPad mini 6", "Apple iPad mini"],
+      "brand": "Apple",
+      "category": "tablet",
+      "image_path": "assets/press/apple-ipad-mini.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy Tab S10",
+      "aliases": ["Samsung Galaxy Tab S10", "Galaxy Tab S10 Ultra", "Galaxy Tab S9"],
+      "brand": "Samsung",
+      "category": "tablet",
+      "image_path": "assets/press/samsung-galaxy-tab-s10.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Pixel Tablet",
+      "aliases": ["Google Pixel Tablet", "Pixel Tablet 2"],
+      "brand": "Google",
+      "category": "tablet",
+      "image_path": "assets/press/google-pixel-tablet.jpg",
+      "source_url": "https://store.google.com/press/",
+      "license": "Google press kit editorial use"
+    },
+    {
+      "device_name": "Apple Watch",
+      "aliases": ["Apple Watch Series 10", "Apple Watch Series 9", "Apple Watch SE"],
+      "brand": "Apple",
+      "category": "wearable",
+      "image_path": "assets/press/apple-watch.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "Apple Watch Ultra",
+      "aliases": ["Apple Watch Ultra 2", "Apple Watch Ultra 3"],
+      "brand": "Apple",
+      "category": "wearable",
+      "image_path": "assets/press/apple-watch-ultra.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "AirPods",
+      "aliases": ["AirPods 4", "AirPods Pro", "AirPods Max", "Apple AirPods"],
+      "brand": "Apple",
+      "category": "audio",
+      "image_path": "assets/press/apple-airpods.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy Watch",
+      "aliases": ["Samsung Galaxy Watch", "Galaxy Watch 7", "Galaxy Watch 6", "Galaxy Watch Ultra"],
+      "brand": "Samsung",
+      "category": "wearable",
+      "image_path": "assets/press/samsung-galaxy-watch.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Pixel Watch",
+      "aliases": ["Google Pixel Watch", "Pixel Watch 3", "Pixel Watch 4"],
+      "brand": "Google",
+      "category": "wearable",
+      "image_path": "assets/press/google-pixel-watch.jpg",
+      "source_url": "https://store.google.com/press/",
+      "license": "Google press kit editorial use"
+    },
+    {
+      "device_name": "Tesla Model Y",
+      "aliases": ["Model Y", "Tesla Model Y Juniper"],
+      "brand": "Tesla",
+      "category": "ev",
+      "image_path": "assets/press/tesla-model-y.jpg",
+      "source_url": "https://www.tesla.com/press",
+      "license": "Tesla press kit editorial use"
+    },
+    {
+      "device_name": "Tesla Model 3",
+      "aliases": ["Model 3", "Tesla Model 3 Highland"],
+      "brand": "Tesla",
+      "category": "ev",
+      "image_path": "assets/press/tesla-model-3.jpg",
+      "source_url": "https://www.tesla.com/press",
+      "license": "Tesla press kit editorial use"
+    },
+    {
+      "device_name": "Volkswagen ID.4",
+      "aliases": ["VW ID.4", "ID.4", "ID4"],
+      "brand": "Volkswagen",
+      "category": "ev",
+      "image_path": "assets/press/vw-id4.jpg",
+      "source_url": "https://media.vw.com/",
+      "license": "VW press kit editorial use"
+    },
+    {
+      "device_name": "RTX 5090",
+      "aliases": ["GeForce RTX 5090", "RTX 5080", "RTX 5070", "RTX 50 series"],
+      "brand": "NVIDIA",
+      "category": "gpu",
+      "image_path": "assets/press/nvidia-rtx-5090.jpg",
+      "source_url": "https://www.nvidia.com/en-us/about-nvidia/press-room/",
+      "license": "NVIDIA press kit editorial use"
+    },
+    {
+      "device_name": "PlayStation 5",
+      "aliases": ["PS5", "PS5 Pro", "PlayStation 5 Pro"],
+      "brand": "Sony",
+      "category": "console",
+      "image_path": "assets/press/sony-ps5.jpg",
+      "source_url": "https://www.playstation.com/en-us/corporate/press-center/",
+      "license": "Sony PlayStation press kit editorial use"
+    },
+    {
+      "device_name": "Xbox Series X",
+      "aliases": ["Xbox Series S", "Xbox Series X|S", "Microsoft Xbox"],
+      "brand": "Microsoft",
+      "category": "console",
+      "image_path": "assets/press/microsoft-xbox-series-x.jpg",
+      "source_url": "https://news.microsoft.com/press-kit/",
+      "license": "Microsoft press kit editorial use"
+    },
+    {
+      "device_name": "Nintendo Switch 2",
+      "aliases": ["Switch 2", "Nintendo Switch OLED", "Nintendo Switch"],
+      "brand": "Nintendo",
+      "category": "console",
+      "image_path": "assets/press/nintendo-switch-2.jpg",
+      "source_url": "https://www.nintendo.com/en-GB/Nintendo-Switch/Press/",
+      "license": "Nintendo press kit editorial use"
+    }
+  ],
+
+  "category_fallbacks": {
+    "smartphone":  "assets/press/defaults/default-smartphone.jpg",
+    "laptop":      "assets/press/defaults/default-laptop.jpg",
+    "tablet":      "assets/press/defaults/default-tablet.jpg",
+    "wearable":    "assets/press/defaults/default-tech.jpg",
+    "audio":       "assets/press/defaults/default-tech.jpg",
+    "ai-software": "assets/press/defaults/default-ai.jpg",
+    "ev":          "assets/press/defaults/default-ev.jpg",
+    "gpu":         "assets/press/defaults/default-tech.jpg",
+    "console":     "assets/press/defaults/default-tech.jpg",
+    "default":     "assets/press/defaults/default-tech.jpg"
+  }
+}
