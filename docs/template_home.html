@@ -28,7 +28,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "The Tech Brief",
-      "email": "prerakm76@gmail.com"
+      "email": "technodate3@gmail.com"
     },
     "potentialAction": {
       "@type": "SearchAction",
@@ -78,9 +78,9 @@
 <!-- ===== HERO ===== -->
 <section class="hero" aria-label="Site introduction">
   <div class="hero-inner">
-    <span class="hero-label">Updated Every 6 Hours — {{ meta.h1 }}</span>
+    <span class="hero-label">Updated Every 6 Hours &mdash; {{ meta.h1 }}</span>
     <h1>Your Daily Technology Intelligence Brief</h1>
-    <p class="hero-sub">Editorially reviewed summaries across AI, enterprise tech, cybersecurity, broadcast technology, and mobile — sourced from the world's most trusted publications.</p>
+    <p class="hero-sub">Editorially reviewed summaries across AI, enterprise tech, cybersecurity, broadcast technology, and mobile &mdash; sourced from the world's most trusted publications.</p>
     <nav class="cat-pill-row" aria-label="Browse by category">
       <a href="ai-news.html" class="cat-pill">&#x1F916; AI News</a>
       <a href="broadcast-tech.html" class="cat-pill">&#x1F4E1; Broadcast Tech</a>
@@ -95,37 +95,159 @@
   </div>
 </section>
 
-<!-- ===== QUICK ACTIONS ===== -->
-<div class="section" style="padding-bottom:0; padding-top:28px;">
-  <div class="quick-actions" role="complementary" aria-label="Quick actions">
-    <div class="qa-item">
-      <a href="about.html#editorial-process">
-        <span class="qa-icon" aria-hidden="true">📖</span>Read Our Editorial Approach
-      </a>
-      <p>How we select, summarise and contextualise every story we publish.</p>
+<!-- ===== TECH TRENDING NOW ===== -->
+<section class="trending-now" aria-label="Tech Trending Now">
+  <div class="trending-inner">
+    <div class="trending-meta">
+      <div class="trending-live">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span class="live-label">Live</span>
+      </div>
+      <h2 class="trending-title">Tech Trending Now</h2>
+      <time class="trending-date" datetime="2026-03-03">Tue, 3 March 2026</time>
     </div>
-    <div class="qa-item">
-      <a href="articles/ai-agents-enterprise-2025.html">
-        <span class="qa-icon" aria-hidden="true">✍️</span>Read Original Analysis
-      </a>
-      <p>In-depth original articles written by our editorial team on key trends.</p>
+    <ol class="trending-list">
+      <li class="trending-item">
+        <span class="trending-num" aria-hidden="true">01</span>
+        <div class="trending-content">
+          <div class="trending-tags">
+            <span class="trend-badge trend-badge--breaking">Breaking</span>
+            <a class="trend-source" href="https://www.apple.com/newsroom/" target="_blank" rel="noopener noreferrer">apple.com/newsroom</a>
+          </div>
+          <h3 class="trending-headline"><a href="mobile-gadgets.html">Apple Unveils iPhone 17e &amp; M4 iPad Air</a></h3>
+          <p class="trending-summary">The <strong>iPhone 17e</strong> ($599) debuts the A19 chip while the new <strong>M4 iPad Air</strong> targets AI-heavy workflows &mdash; claimed 30% faster than its predecessor.</p>
+        </div>
+      </li>
+      <li class="trending-item">
+        <span class="trending-num" aria-hidden="true">02</span>
+        <div class="trending-content">
+          <div class="trending-tags">
+            <span class="trend-badge trend-badge--mwc">MWC 2026</span>
+            <a class="trend-source" href="https://news.samsung.com/global/" target="_blank" rel="noopener noreferrer">Samsung Newsroom</a>
+          </div>
+          <h3 class="trending-headline"><a href="mobile-gadgets.html">Samsung Galaxy S26 Ultra: The Privacy Display King</a></h3>
+          <p class="trending-summary">Live from Barcelona &mdash; the <strong>Galaxy S26 Ultra</strong> debuts Agentic AI and a Privacy Display that physically blocks side-angle viewing. A first for a flagship.</p>
+        </div>
+      </li>
+      <li class="trending-item">
+        <span class="trending-num" aria-hidden="true">03</span>
+        <div class="trending-content">
+          <div class="trending-tags">
+            <span class="trend-badge trend-badge--innovation">Innovation</span>
+            <a class="trend-source" href="https://www.gsmarena.com/" target="_blank" rel="noopener noreferrer">GSMArena &middot; MWC</a>
+          </div>
+          <h3 class="trending-headline"><a href="consumer-tech.html">The Robot Phone Era Has Begun</a></h3>
+          <p class="trending-summary">Honor's <strong>AI Robot Phone</strong> uses micro-motors to physically track users mid-call. Its humanoid companion can moonwalk. ARRI collaborated on its cinema imaging.</p>
+        </div>
+      </li>
+      <li class="trending-item">
+        <span class="trending-num" aria-hidden="true">04</span>
+        <div class="trending-content">
+          <div class="trending-tags">
+            <span class="trend-badge trend-badge--ai">AI Alert</span>
+            <a class="trend-source" href="https://openai.com/news/" target="_blank" rel="noopener noreferrer">OpenAI News</a>
+          </div>
+          <h3 class="trending-headline"><a href="ai-news.html">ChatGPT Facing a Mass Uninstall Wave</a></h3>
+          <p class="trending-summary">A US military partnership announcement triggered a 295% surge in uninstalls. Rivals including Anthropic's <strong>Claude</strong> released major free-tier upgrades to capture displaced users.</p>
+        </div>
+      </li>
+    </ol>
+    <div class="trending-footer">
+      <a href="ai-news.html" class="trending-cta">Browse all tech news <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
-    <div class="qa-item">
-      <a href="contact.html">
-        <span class="qa-icon" aria-hidden="true">✉️</span>Submit a Tip or Story
-      </a>
-      <p>Spotted a story we should cover? Send us a link and a brief note.</p>
-    </div>
-    <p class="qa-trust">All summaries are independently reviewed by The Tech Brief editorial team. Original reporting © respective publishers; commentary and curation © The Tech Brief 2025.</p>
   </div>
-</div>
+</section>
 
-<!-- ===== BROWSE CATEGORIES ===== -->
+<!-- ===== MAIN CONTENT ===== -->
 <main id="main-content">
+
+  <!-- ===== LATEST STORIES GRID ===== -->
+  <div class="section">
+    <div class="section-head">
+      <h2>Latest Across All Categories</h2>
+      <span class="section-count">All topics &middot; Sorted by date</span>
+      <span class="section-sub">Summaries from trusted global tech publications</span>
+    </div>
+    <div class="grid">
+      {% for card in cards %}
+      <article class="card" aria-label="{{ card.title }}">
+        {% if card.image %}
+        <div class="card-img-wrap">
+          <img src="{{ card.image }}" alt="Illustration for: {{ card.title }}" loading="lazy" width="400" height="185">
+        </div>
+        {% endif %}
+        <div class="card-body">
+          <h3><a href="{{ card.link }}" target="_blank" rel="noopener noreferrer">{{ card.title }}</a></h3>
+          <p class="card-summary">{{ card.summary }}</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">{{ card.source }}</span>
+          <span class="tag">{{ card.category }}</span>
+          <a href="{{ card.link }}" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: {{ card.title }}">Read original</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Editorial transparency notice -->
+  <div class="section" style="padding-top:0;">
+    <div class="info-box">
+      <p><strong>About our coverage:</strong> The Tech Brief is an independent technology publication. Our editorial team reviews and summarises technology developments from across the industry. We do not reproduce full article text. All original content, images and trademarks remain the property of their respective publishers. <a href="about.html">Learn more about our editorial process &rarr;</a></p>
+    </div>
+  </div>
+
+  <!-- Original articles teaser -->
+  <div class="section" style="padding-top:0;">
+    <div class="section-head">
+      <h2>Original Analysis &amp; Deep Dives</h2>
+      <span class="section-count">Written by The Tech Brief editorial team</span>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-body">
+          <span class="tag" style="margin-bottom:8px; display:inline-block;">AI News</span>
+          <h3><a href="articles/ai-agents-enterprise-2025.html">AI Agents in the Enterprise: What 2025's Deployments Actually Look Like</a></h3>
+          <p class="card-summary">Beyond the hype &mdash; a practical look at how organisations are deploying AI agents in production, what infrastructure they require, and which use cases are delivering measurable ROI.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">The Tech Brief</span>
+          <span class="tag">Original</span>
+          <a href="articles/ai-agents-enterprise-2025.html" class="read-link">Read analysis</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <span class="tag" style="margin-bottom:8px; display:inline-block;">Cybersecurity</span>
+          <h3><a href="articles/ransomware-playbook-2025.html">The 2025 Ransomware Playbook: How Attacks Have Evolved and What Defences Work</a></h3>
+          <p class="card-summary">Ransomware groups have professionalised. This analysis covers how modern attacks unfold, the role of initial access brokers, and the defensive controls that consistently stop or limit damage.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">The Tech Brief</span>
+          <span class="tag">Original</span>
+          <a href="articles/ransomware-playbook-2025.html" class="read-link">Read analysis</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <span class="tag" style="margin-bottom:8px; display:inline-block;">Mobile &amp; Gadgets</span>
+          <h3><a href="articles/android-vs-iphone-2025.html">Android vs iPhone in 2025: The Real Differences That Actually Matter</a></h3>
+          <p class="card-summary">After a year of flagship launches, we cut through the spec-sheet wars to identify where each platform genuinely leads &mdash; and where the gap has closed to near-irrelevance.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">The Tech Brief</span>
+          <span class="tag">Original</span>
+          <a href="articles/android-vs-iphone-2025.html" class="read-link">Read analysis</a>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- ===== BROWSE BY CATEGORY (moved here, before footer) ===== -->
   <div class="section" style="padding-bottom:0;">
     <div class="section-head">
       <h2>Browse by Category</h2>
-      <span class="section-count">9 categories — updated every 6 hours</span>
+      <span class="section-count">9 categories &mdash; updated every 6 hours</span>
     </div>
     <nav class="category-grid" aria-label="Browse all categories">
       <a href="ai-news.html" class="cat-card">
@@ -180,89 +302,31 @@
     </nav>
   </div>
 
-  <!-- ===== FULL GRID ===== -->
-  <div class="section">
-    <div class="section-head">
-      <h2>Latest Across All Categories</h2>
-      <span class="section-count">All topics · Sorted by date</span>
-      <span class="section-sub">Summaries from trusted global tech publications</span>
-    </div>
-    <div class="grid">
-      {% for card in cards %}
-      <article class="card" aria-label="{{ card.title }}">
-        {% if card.image %}
-        <div class="card-img-wrap">
-          <img src="{{ card.image }}" alt="Illustration for: {{ card.title }}" loading="lazy" width="400" height="185">
-        </div>
-        {% endif %}
-        <div class="card-body">
-          <h3><a href="{{ card.link }}" target="_blank" rel="noopener noreferrer">{{ card.title }}</a></h3>
-          <p class="card-summary">{{ card.summary }}</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">{{ card.source }}</span>
-          <span class="tag">{{ card.category }}</span>
-          <a href="{{ card.link }}" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: {{ card.title }}">Read original</a>
-        </div>
-      </article>
-      {% endfor %}
+  <!-- ===== QUICK ACTIONS (moved here, before footer) ===== -->
+  <div class="section" style="padding-bottom:28px; padding-top:28px;">
+    <div class="quick-actions" role="complementary" aria-label="Quick actions">
+      <div class="qa-item">
+        <a href="about.html#editorial-process">
+          <span class="qa-icon" aria-hidden="true">&#x1F4D6;</span>Read Our Editorial Approach
+        </a>
+        <p>How we select, summarise and contextualise every story we publish.</p>
+      </div>
+      <div class="qa-item">
+        <a href="articles/ai-agents-enterprise-2025.html">
+          <span class="qa-icon" aria-hidden="true">&#x270D;&#xFE0F;</span>Read Original Analysis
+        </a>
+        <p>In-depth original articles written by our editorial team on key trends.</p>
+      </div>
+      <div class="qa-item">
+        <a href="contact.html">
+          <span class="qa-icon" aria-hidden="true">&#x2709;&#xFE0F;</span>Submit a Tip or Story
+        </a>
+        <p>Spotted a story we should cover? Send us a link and a brief note.</p>
+      </div>
+      <p class="qa-trust">Content on this site is AI-assisted and periodically reviewed by The Tech Brief editorial team. Original reporting &copy; respective publishers; commentary and curation &copy; The Tech Brief 2025&ndash;2026.</p>
     </div>
   </div>
 
-  <!-- Editorial transparency notice -->
-  <div class="section" style="padding-top:0;">
-    <div class="info-box">
-      <p><strong>About our coverage:</strong> The Tech Brief is an independent technology publication. Our editorial team reviews and summarises technology developments from across the industry. We do not reproduce full article text. All original content, images and trademarks remain the property of their respective publishers. <a href="about.html">Learn more about our editorial process →</a></p>
-    </div>
-  </div>
-
-  <!-- Original articles teaser -->
-  <div class="section" style="padding-top:0;">
-    <div class="section-head">
-      <h2>Original Analysis &amp; Deep Dives</h2>
-      <span class="section-count">Written by The Tech Brief editorial team</span>
-    </div>
-    <div class="grid">
-      <article class="card">
-        <div class="card-body">
-          <span class="tag" style="margin-bottom:8px; display:inline-block;">AI News</span>
-          <h3><a href="articles/ai-agents-enterprise-2025.html">AI Agents in the Enterprise: What 2025's Deployments Actually Look Like</a></h3>
-          <p class="card-summary">Beyond the hype — a practical look at how organisations are deploying AI agents in production, what infrastructure they require, and which use cases are delivering measurable ROI.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">The Tech Brief</span>
-          <span class="tag">Original</span>
-          <a href="articles/ai-agents-enterprise-2025.html" class="read-link">Read analysis</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-body">
-          <span class="tag" style="margin-bottom:8px; display:inline-block;">Cybersecurity</span>
-          <h3><a href="articles/ransomware-playbook-2025.html">The 2025 Ransomware Playbook: How Attacks Have Evolved and What Defences Work</a></h3>
-          <p class="card-summary">Ransomware groups have professionalised. This analysis covers how modern attacks unfold, the role of initial access brokers, and the defensive controls that consistently stop or limit damage.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">The Tech Brief</span>
-          <span class="tag">Original</span>
-          <a href="articles/ransomware-playbook-2025.html" class="read-link">Read analysis</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-body">
-          <span class="tag" style="margin-bottom:8px; display:inline-block;">Mobile &amp; Gadgets</span>
-          <h3><a href="articles/android-vs-iphone-2025.html">Android vs iPhone in 2025: The Real Differences That Actually Matter</a></h3>
-          <p class="card-summary">After a year of flagship launches, we cut through the spec-sheet wars to identify where each platform genuinely leads — and where the gap has closed to near-irrelevance.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">The Tech Brief</span>
-          <span class="tag">Original</span>
-          <a href="articles/android-vs-iphone-2025.html" class="read-link">Read analysis</a>
-        </div>
-      </article>
-    </div>
-  </div>
 </main>
 
 <!-- ===== FOOTER ===== -->
@@ -297,7 +361,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© <span id="footer-year"></span> The Tech Brief — thetechbrief.in. All rights reserved.</span>
+    <span>&copy; <span id="footer-year"></span> The Tech Brief &mdash; thetechbrief.in. All rights reserved.</span>
     <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
   </div>
 </footer>
