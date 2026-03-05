@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
   <title>Tech Brief — AI, Broadcast Tech, Enterprise IT, Cybersecurity & Mobile News</title>
   <meta name="description" content="Fast, editorially reviewed summaries of the latest technology news. AI, broadcast tech, enterprise IT, cybersecurity and mobile gadgets — updated every three hours from trusted global sources.">
   <meta name="robots" content="index, follow">
@@ -96,6 +97,7 @@
 </section>
 
 <!-- ===== TECH TRENDING NOW ===== -->
+<!-- Stories loaded from: site/assets/data/trending.txt — edit that file to update -->
 <section class="trending-now" aria-label="Tech Trending Now">
   <div class="trending-inner">
     <div class="trending-meta">
@@ -104,75 +106,10 @@
         <span class="live-label">Live</span>
       </div>
       <h2 class="trending-title">Tech Trending Now</h2>
-      <time class="trending-date" datetime="2026-03-03">Tue, 3 March 2026</time>
+      <time class="trending-date" datetime=""></time>
     </div>
-    <ol class="trending-list">
-      <li class="trending-item">
-        <span class="trending-num" aria-hidden="true">01</span>
-        <div class="trending-content">
-          <div class="trending-tags">
-            <span class="trend-badge trend-badge--breaking">Breaking</span>
-            <a class="trend-source" href="https://www.apple.com/newsroom/" target="_blank" rel="noopener noreferrer">apple.com/newsroom</a>
-          </div>
-          <h3 class="trending-headline"><a href="mobile-gadgets.html">Apple Unveils iPhone 17e &amp; M4 iPad Air</a></h3>
-          <p class="trending-summary">The <strong>iPhone 17e</strong> ($599) debuts the A19 chip while the new <strong>M4 iPad Air</strong> targets AI-heavy workflows &mdash; claimed 30% faster than its predecessor.</p>
-        </div>
-      </li>
-      <li class="trending-item">
-        <span class="trending-num" aria-hidden="true">02</span>
-        <div class="trending-content">
-          <div class="trending-tags">
-            <span class="trend-badge trend-badge--mwc">MWC 2026</span>
-            <a class="trend-source" href="https://news.samsung.com/global/" target="_blank" rel="noopener noreferrer">Samsung Newsroom</a>
-          </div>
-          <h3 class="trending-headline"><a href="mobile-gadgets.html">Samsung Galaxy S26 Ultra: The Privacy Display King</a></h3>
-          <p class="trending-summary">Live from Barcelona &mdash; the <strong>Galaxy S26 Ultra</strong> debuts Agentic AI and a Privacy Display that physically blocks side-angle viewing. A first for a flagship.</p>
-        </div>
-      </li>
-      <li class="trending-item">
-        <span class="trending-num" aria-hidden="true">03</span>
-        <div class="trending-content">
-          <div class="trending-tags">
-            <span class="trend-badge trend-badge--innovation">Innovation</span>
-            <a class="trend-source" href="https://www.gsmarena.com/" target="_blank" rel="noopener noreferrer">GSMArena &middot; MWC</a>
-          </div>
-          <h3 class="trending-headline"><a href="consumer-tech.html">The Robot Phone Era Has Begun</a></h3>
-          <p class="trending-summary">Honor's <strong>AI Robot Phone</strong> uses micro-motors to physically track users mid-call. Its humanoid companion can moonwalk. ARRI collaborated on its cinema imaging.</p>
-        </div>
-      </li>
-      <li class="trending-item">
-        <span class="trending-num" aria-hidden="true">04</span>
-        <div class="trending-content">
-          <div class="trending-tags">
-            <span class="trend-badge trend-badge--ai">AI Alert</span>
-            <a class="trend-source" href="https://openai.com/news/" target="_blank" rel="noopener noreferrer">OpenAI News</a>
-          </div>
-          <h3 class="trending-headline"><a href="ai-news.html">ChatGPT Facing a Mass Uninstall Wave</a></h3>
-          <p class="trending-summary">A US military partnership announcement triggered a 295% surge in uninstalls. Rivals including Anthropic's <strong>Claude</strong> released major free-tier upgrades to capture displaced users.</p>
-        </div>
-      </li>
-      <li class="trending-item">
-        <span class="trending-num" aria-hidden="true">05</span>
-        <div class="trending-content">
-          <div class="trending-tags">
-            <span class="trend-badge trend-badge--ev">EVs</span>
-            <a class="trend-source" href="https://insideevs.com/" target="_blank" rel="noopener noreferrer">InsideEVs</a>
-          </div>
-          <h3 class="trending-headline"><a href="evs-automotive.html">Volkswagen Hits 2 Million EVs Sold</a></h3>
-          <p class="trending-summary">VW quietly became Europe's top EV brand — delivering its <strong>2 millionth electric model</strong> ahead of schedule. CEO says 2026 will be its biggest EV year yet.</p>
-        </div>
-      </li>
-      <li class="trending-item">
-        <span class="trending-num" aria-hidden="true">06</span>
-        <div class="trending-content">
-          <div class="trending-tags">
-            <span class="trend-badge trend-badge--enterprise">Enterprise</span>
-            <a class="trend-source" href="https://www.darkreading.com/" target="_blank" rel="noopener noreferrer">Dark Reading</a>
-          </div>
-          <h3 class="trending-headline"><a href="cybersecurity-updates.html">Critical OpenClaw Vulnerability Targets AI Agents</a></h3>
-          <p class="trending-summary">A now-patched flaw in the widely-used <strong>OpenClaw framework</strong> exposed AI agents to remote takeover. Security teams urged to patch immediately — adoption has been rapid.</p>
-        </div>
-      </li>
+    <ol class="trending-list" aria-label="Trending stories">
+      <!-- Populated by trending-loader.js from assets/data/trending.txt -->
     </ol>
     <div class="trending-footer">
       <a href="ai-news.html" class="trending-cta">Browse all tech news <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -192,350 +129,401 @@
     </div>
     <div class="grid">
       
-      <article class="card" aria-label="Castlevania: Belmont's Curse won't be a roguelite despite Dead Cells developer's involvement, packs "elaborately crafted" maps instead">
+      <article class="card" aria-label="Overwatch's Jetpack Cat has a hidden weakness you can never counter">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&auto=format&fit=crop" alt="Illustration for: Castlevania: Belmont's Curse won't be a roguelite despite Dead Cells developer's involvement, packs "elaborately crafted" maps instead" loading="lazy" width="400" height="185">
+          <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&auto=format&fit=crop" alt="Illustration for: Overwatch's Jetpack Cat has a hidden weakness you can never counter" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="https://www.eurogamer.net/castlevania-belmonts-curse-is-not-a-roguelite" target="_blank" rel="noopener noreferrer">Castlevania: Belmont's Curse won't be a roguelite despite Dead Cells developer's involvement, packs "elaborately crafted" maps instead</a></h3>
-          <p class="card-summary">One of the coolest announcements in last month's State of Play was Castlevania: Belmont's Curse , a new 2D action-exploration game from Konami and Dead Cells co-developers Evil Empire and Motion Twin. As a reminder, Evil Empire also worked on the impressive Rogue Prince of Persia , which will continue to get content updates this year.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">Eurogamer.net Latest Articles Feed</span>
-          <span class="tag">Gaming</span>
-          <a href="https://www.eurogamer.net/castlevania-belmonts-curse-is-not-a-roguelite" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Castlevania: Belmont's Curse won't be a roguelite despite Dead Cells developer's involvement, packs "elaborately crafted" maps instead">Read original</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="AdGuard is the latest VPN to bring ad blocking and VPN protection to Meta Quest VR browsers – and here's how to get it">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800&auto=format&fit=crop" alt="Illustration for: AdGuard is the latest VPN to bring ad blocking and VPN protection to Meta Quest VR browsers – and here's how to get it" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="https://www.tomsguide.com/computing/vpns/adguard-is-the-latest-vpn-to-bring-ad-blocking-and-vpn-protection-to-meta-quest-vr-browsers-and-heres-how-to-get-it" target="_blank" rel="noopener noreferrer">AdGuard is the latest VPN to bring ad blocking and VPN protection to Meta Quest VR browsers – and here's how to get it</a></h3>
-          <p class="card-summary">AdGuard has launched new ad-blocking and VPN browser extensions for Meta Quest, bringing cleaner browsing and privacy protection to virtual reality headsets.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">Latest from Tom's Guide</span>
-          <span class="tag">Consumer Tech</span>
-          <a href="https://www.tomsguide.com/computing/vpns/adguard-is-the-latest-vpn-to-bring-ad-blocking-and-vpn-protection-to-meta-quest-vr-browsers-and-heres-how-to-get-it" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: AdGuard is the latest VPN to bring ad blocking and VPN protection to Meta Quest VR browsers – and here's how to get it">Read original</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="Forget iPhone 17e: Nothing's Phone 4a Pro costs less and looks a whole lot better">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format&fit=crop" alt="Illustration for: Forget iPhone 17e: Nothing's Phone 4a Pro costs less and looks a whole lot better" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="https://www.zdnet.com/article/nothing-phone-4a-pro-event-announcement-mwc-2026/" target="_blank" rel="noopener noreferrer">Forget iPhone 17e: Nothing's Phone 4a Pro costs less and looks a whole lot better</a></h3>
-          <p class="card-summary">The Phone 4a series brings fun and thoughtful design, plus camera upgrades and seriously useful features, to Nothing's lineup.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">Latest news</span>
-          <span class="tag">Enterprise Tech</span>
-          <a href="https://www.zdnet.com/article/nothing-phone-4a-pro-event-announcement-mwc-2026/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Forget iPhone 17e: Nothing's Phone 4a Pro costs less and looks a whole lot better">Read original</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="Uptycs and SAP team up to bring verifiable AI analysts to enterprise cybersecurity operations">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop" alt="Illustration for: Uptycs and SAP team up to bring verifiable AI analysts to enterprise cybersecurity operations" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="https://siliconangle.com/2026/03/05/uptycs-sap-team-bring-verifiable-ai-analysts-enterprise-cybersecurity-operations/" target="_blank" rel="noopener noreferrer">Uptycs and SAP team up to bring verifiable AI analysts to enterprise cybersecurity operations</a></h3>
-          <p class="card-summary">Cloud and endpoint cybersecurity startup Uptycs Inc. today announced a new strategic partnership with SAP SE to deploy verifiable artificial intelligence analysts that augment enterprise security teams.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">SiliconANGLE</span>
-          <span class="tag">Enterprise Tech</span>
-          <a href="https://siliconangle.com/2026/03/05/uptycs-sap-team-bring-verifiable-ai-analysts-enterprise-cybersecurity-operations/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Uptycs and SAP team up to bring verifiable AI analysts to enterprise cybersecurity operations">Read original</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="Remedy Explains What Defines A Control Game As Its Sequels Veer Off In Wild Directions">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800&auto=format&fit=crop" alt="Illustration for: Remedy Explains What Defines A Control Game As Its Sequels Veer Off In Wild Directions" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="https://kotaku.com/control-resonant-remedy-shooter-third-person-2000675970" target="_blank" rel="noopener noreferrer">Remedy Explains What Defines A Control Game As Its Sequels Veer Off In Wild Directions</a></h3>
-          <p class="card-summary">What connects Control , Control Resonant and FBC: Firebreak beyond the lore and visuals?</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">Kotaku</span>
-          <span class="tag">Gaming</span>
-          <a href="https://kotaku.com/control-resonant-remedy-shooter-third-person-2000675970" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Remedy Explains What Defines A Control Game As Its Sequels Veer Off In Wild Directions">Read original</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="Agentic e-commerce startup ZyG gets $58M to help solo inventors compete with the biggest global brands">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1568952433726-3896e3881c65?w=800&auto=format&fit=crop" alt="Illustration for: Agentic e-commerce startup ZyG gets $58M to help solo inventors compete with the biggest global brands" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="https://siliconangle.com/2026/03/05/agentic-e-commerce-startup-zyg-gets-58m-help-solo-inventors-compete-biggest-global-brands/" target="_blank" rel="noopener noreferrer">Agentic e-commerce startup ZyG gets $58M to help solo inventors compete with the biggest global brands</a></h3>
-          <p class="card-summary">When it comes to product innovation, global brands have an enormous advantage over smaller companies thanks to their massive scale, extensive resources, marketing expertise and robust supply chains, so the little guy can barely compete. But that may change with the arrival of artificial intelligence agents.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">SiliconANGLE</span>
-          <span class="tag">Enterprise Tech</span>
-          <a href="https://siliconangle.com/2026/03/05/agentic-e-commerce-startup-zyg-gets-58m-help-solo-inventors-compete-biggest-global-brands/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Agentic e-commerce startup ZyG gets $58M to help solo inventors compete with the biggest global brands">Read original</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="Mobile Suit Gundam: Char’s Counterattack remains endlessly rewatchable">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&auto=format&fit=crop" alt="Illustration for: Mobile Suit Gundam: Char’s Counterattack remains endlessly rewatchable" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="https://www.polygon.com/mobile-suit-gundam-chars-counterattack-1988-iconic-anime-film/" target="_blank" rel="noopener noreferrer">Mobile Suit Gundam: Char’s Counterattack remains endlessly rewatchable</a></h3>
-          <p class="card-summary">1988's Mobile Suit Gundam: Char's Counterattack offers more than mech combat in space.</p>
+          <h3><a href="https://www.polygon.com/overwatch-jetpack-cat-train-cars/" target="_blank" rel="noopener noreferrer">Overwatch's Jetpack Cat has a hidden weakness you can never counter</a></h3>
+          <p class="card-summary">Jetpack Cat counters are plentiful in Overwatch, but there's one you can't plan for and can't resist: traffic</p>
         </div>
         <div class="card-footer">
           <span class="source-tag">Polygon.com</span>
           <span class="tag">Gaming</span>
-          <a href="https://www.polygon.com/mobile-suit-gundam-chars-counterattack-1988-iconic-anime-film/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Mobile Suit Gundam: Char’s Counterattack remains endlessly rewatchable">Read original</a>
+          <a href="https://www.polygon.com/overwatch-jetpack-cat-train-cars/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Overwatch's Jetpack Cat has a hidden weakness you can never counter">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Wizards of the Coast Is Officially Calling It ‘Dungeons & Dragons’ 5.5E, Would Like You to Not Read Anything Into That">
+      <article class="card" aria-label="This vibe-coded operating system looks like a nightmarish version of our AI OS future, although some of the function keys change the wallpaper so that's fun">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop" alt="Illustration for: Wizards of the Coast Is Officially Calling It ‘Dungeons & Dragons’ 5.5E, Would Like You to Not Read Anything Into That" loading="lazy" width="400" height="185">
+          <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800&auto=format&fit=crop" alt="Illustration for: This vibe-coded operating system looks like a nightmarish version of our AI OS future, although some of the function keys change the wallpaper so that's fun" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="https://gizmodo.com/dungeons-and-dragons-55-edition-name-change-wizards-of-the-coast-2000729840" target="_blank" rel="noopener noreferrer">Wizards of the Coast Is Officially Calling It ‘Dungeons & Dragons’ 5.5E, Would Like You to Not Read Anything Into That</a></h3>
-          <p class="card-summary">After years of insisting otherwise, the TTRPG publisher has thrown its hands up and called the latest iteration of 'D&D' what people have been calling it since day one.</p>
+          <h3><a href="https://www.pcgamer.com/software/operating-systems/this-vibe-coded-operating-system-looks-like-a-nightmarish-version-of-our-ai-os-future-although-some-of-the-function-keys-change-the-wallpaper-so-thats-fun/" target="_blank" rel="noopener noreferrer">This vibe-coded operating system looks like a nightmarish version of our AI OS future, although some of the function keys change the wallpaper so that's fun</a></h3>
+          <p class="card-summary">I guess we should be impressed that it works at all.</p>
         </div>
         <div class="card-footer">
-          <span class="source-tag">Gizmodo</span>
+          <span class="source-tag">PCGamer latest</span>
+          <span class="tag">Gaming</span>
+          <a href="https://www.pcgamer.com/software/operating-systems/this-vibe-coded-operating-system-looks-like-a-nightmarish-version-of-our-ai-os-future-although-some-of-the-function-keys-change-the-wallpaper-so-thats-fun/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: This vibe-coded operating system looks like a nightmarish version of our AI OS future, although some of the function keys change the wallpaper so that's fun">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="How Roku's new button totally changes the way you watch free, live TV">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format&fit=crop" alt="Illustration for: How Roku's new button totally changes the way you watch free, live TV" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.zdnet.com/article/roku-free-tv-search-button/" target="_blank" rel="noopener noreferrer">How Roku's new button totally changes the way you watch free, live TV</a></h3>
+          <p class="card-summary">It's now easier than ever to find something specific on Roku's free TV channels.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">Latest news</span>
+          <span class="tag">Enterprise Tech</span>
+          <a href="https://www.zdnet.com/article/roku-free-tv-search-button/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: How Roku's new button totally changes the way you watch free, live TV">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Oura’s latest acquisition could mean gesture controls are coming to your smart ring">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop" alt="Illustration for: Oura’s latest acquisition could mean gesture controls are coming to your smart ring" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.androidauthority.com/oura-acquires-doublepoint-3646970/" target="_blank" rel="noopener noreferrer">Oura’s latest acquisition could mean gesture controls are coming to your smart ring</a></h3>
+          <p class="card-summary">TBD whether those controls will do more than on Samsung's Galaxy Ring.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">Android Authority</span>
           <span class="tag">Mobile & Gadgets</span>
-          <a href="https://gizmodo.com/dungeons-and-dragons-55-edition-name-change-wizards-of-the-coast-2000729840" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Wizards of the Coast Is Officially Calling It ‘Dungeons & Dragons’ 5.5E, Would Like You to Not Read Anything Into That">Read original</a>
+          <a href="https://www.androidauthority.com/oura-acquires-doublepoint-3646970/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Oura’s latest acquisition could mean gesture controls are coming to your smart ring">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Lio raises $30M from Andreessen Horowitz and others to automate enterprise procurement">
+      <article class="card" aria-label="Best Buy is already discounting Apple's brand-new devices — score discounts on the MacBook Neo, iPad Air, and MacBook Pro">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&auto=format&fit=crop" alt="Illustration for: Lio raises $30M from Andreessen Horowitz and others to automate enterprise procurement" loading="lazy" width="400" height="185">
+          <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800&auto=format&fit=crop" alt="Illustration for: Best Buy is already discounting Apple's brand-new devices — score discounts on the MacBook Neo, iPad Air, and MacBook Pro" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="https://techcrunch.com/2026/03/05/lio-ai-series-a-a16z-30m-raise-automate-enterprise-procurement/" target="_blank" rel="noopener noreferrer">Lio raises $30M from Andreessen Horowitz and others to automate enterprise procurement</a></h3>
-          <p class="card-summary">AI procurement startup Lio announced a $30 million Series A in a round led by Andreessen Horowitz.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">AI | TechCrunch</span>
-          <span class="tag">AI News</span>
-          <a href="https://techcrunch.com/2026/03/05/lio-ai-series-a-a16z-30m-raise-automate-enterprise-procurement/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Lio raises $30M from Andreessen Horowitz and others to automate enterprise procurement">Read original</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="Rivian is betting its future on one of the fastest EV launches in US history">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&auto=format&fit=crop" alt="Illustration for: Rivian is betting its future on one of the fastest EV launches in US history" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="https://techcrunch.com/2026/03/05/rivian-is-betting-its-future-one-of-the-fastest-ev-launches-in-us-history/" target="_blank" rel="noopener noreferrer">Rivian is betting its future on one of the fastest EV launches in US history</a></h3>
-          <p class="card-summary">If Rivian reaches its R2 sales target in 2026, it will be one of the fastest ramp-ups ever of a new EV in the United States.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">TechCrunch</span>
-          <span class="tag">Startups & Business</span>
-          <a href="https://techcrunch.com/2026/03/05/rivian-is-betting-its-future-one-of-the-fastest-ev-launches-in-us-history/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Rivian is betting its future on one of the fastest EV launches in US history">Read original</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="BMW’s i3 prototype conquers the ice with power and technology">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&auto=format&fit=crop" alt="Illustration for: BMW’s i3 prototype conquers the ice with power and technology" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="https://www.engadget.com/transportation/evs/bmws-i3-prototype-conquers-the-ice-with-power-and-technology-130000610.html?src=rss" target="_blank" rel="noopener noreferrer">BMW’s i3 prototype conquers the ice with power and technology</a></h3>
-          <p class="card-summary">For an electric car to survive in this incentive-free , tariff-laden , emissions-loving world, it has to be very, very good. It also helps if it's priced right, and looking great doesn't hurt either.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
-          <span class="tag">Mobile & Gadgets</span>
-          <a href="https://www.engadget.com/transportation/evs/bmws-i3-prototype-conquers-the-ice-with-power-and-technology-130000610.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: BMW’s i3 prototype conquers the ice with power and technology">Read original</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="Formula 1 2026 regulations explained: New power, aero and strategy era begins">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop" alt="Illustration for: Formula 1 2026 regulations explained: New power, aero and strategy era begins" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="https://www.techradar.com/how-to-watch/formula-1-2026-regulations-explained" target="_blank" rel="noopener noreferrer">Formula 1 2026 regulations explained: New power, aero and strategy era begins</a></h3>
-          <p class="card-summary">Formula 1’s 2026 regulations bring new power units, active aero, smaller cars, and sustainable fuels. Here’s how the rule changes will reshape racing.</p>
+          <h3><a href="https://www.techradar.com/computing/macbooks/best-buy-is-already-discounting-apples-brand-new-devices-score-discounts-on-the-macbook-neo-ipad-air-and-macbook-pro" target="_blank" rel="noopener noreferrer">Best Buy is already discounting Apple's brand-new devices — score discounts on the MacBook Neo, iPad Air, and MacBook Pro</a></h3>
+          <p class="card-summary">The MacBook Neo, iPad Air M4, and MacBook Pro M4 are available to preorder, and Best Buy is offering incredible discounts, up to $250 in savings.</p>
         </div>
         <div class="card-footer">
           <span class="source-tag">Latest from TechRadar</span>
           <span class="tag">Consumer Tech</span>
-          <a href="https://www.techradar.com/how-to-watch/formula-1-2026-regulations-explained" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Formula 1 2026 regulations explained: New power, aero and strategy era begins">Read original</a>
+          <a href="https://www.techradar.com/computing/macbooks/best-buy-is-already-discounting-apples-brand-new-devices-score-discounts-on-the-macbook-neo-ipad-air-and-macbook-pro" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Best Buy is already discounting Apple's brand-new devices — score discounts on the MacBook Neo, iPad Air, and MacBook Pro">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Avoiding errors and maintaining quality when adopting AI">
+      <article class="card" aria-label="BYD’s new 1500kW ‘flash charger’ is over 3x faster than anything US has">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&auto=format&fit=crop" alt="Illustration for: Avoiding errors and maintaining quality when adopting AI" loading="lazy" width="400" height="185">
+          <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&auto=format&fit=crop" alt="Illustration for: BYD’s new 1500kW ‘flash charger’ is over 3x faster than anything US has" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="https://www.newscaststudio.com/2026/03/05/avoiding-errors-and-maintaining-quality-when-adopting-ai/" target="_blank" rel="noopener noreferrer">Avoiding errors and maintaining quality when adopting AI</a></h3>
-          <p class="card-summary">AI is already delivering value across the media industry enabling media companies and broadcasters to ... Read More The post Avoiding errors and maintaining quality when adopting AI appeared first on NCS | NewscastStudio .</p>
+          <h3><a href="https://electrek.co/2026/03/05/byds-new-1500kw-flash-charger-is-over-3x-faster-than-anything-us-has/" target="_blank" rel="noopener noreferrer">BYD’s new 1500kW ‘flash charger’ is over 3x faster than anything US has</a></h3>
+          <p class="card-summary">BYD unveiled its rumored 1,500kW charging station today, with the capability of charging two cars simultaneously at a rate much faster than we’ve seen elsewhere in the world. But this time, the company is planning to expand installation of its ‘flash chargers’ outside of China, too.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">Electrek</span>
+          <span class="tag">EVs & Automotive</span>
+          <a href="https://electrek.co/2026/03/05/byds-new-1500kw-flash-charger-is-over-3x-faster-than-anything-us-has/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: BYD’s new 1500kW ‘flash charger’ is over 3x faster than anything US has">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Kensington SD7100T5 EQ Pro docking station review: Easier to buy than a laptop or PC that has the ports you need for the full Thunderbolt 5 experience">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop" alt="Illustration for: Kensington SD7100T5 EQ Pro docking station review: Easier to buy than a laptop or PC that has the ports you need for the full Thunderbolt 5 experience" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.techradar.com/pro/kensington-sd7100t5-eq-pro-docking-station-review" target="_blank" rel="noopener noreferrer">Kensington SD7100T5 EQ Pro docking station review: Easier to buy than a laptop or PC that has the ports you need for the full Thunderbolt 5 experience</a></h3>
+          <p class="card-summary">The Kensington SD7100T5 EQ Pro Thunderbolt 5 Dock doubles down on features, but you pay more for it.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">Latest from TechRadar</span>
+          <span class="tag">Consumer Tech</span>
+          <a href="https://www.techradar.com/pro/kensington-sd7100t5-eq-pro-docking-station-review" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Kensington SD7100T5 EQ Pro docking station review: Easier to buy than a laptop or PC that has the ports you need for the full Thunderbolt 5 experience">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="We Now Know The Answer To Whether Pokémon Pokopia Takes Place In A Post-Apocalypse">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&auto=format&fit=crop" alt="Illustration for: We Now Know The Answer To Whether Pokémon Pokopia Takes Place In A Post-Apocalypse" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://kotaku.com/pokemon-pokopia-post-apocalyptic-spoiler-kanto-reveal-2000676315" target="_blank" rel="noopener noreferrer">We Now Know The Answer To Whether Pokémon Pokopia Takes Place In A Post-Apocalypse</a></h3>
+          <p class="card-summary">If you want to know why things seem off in the cozy life sim, we’ve got the answer</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">Kotaku</span>
+          <span class="tag">Gaming</span>
+          <a href="https://kotaku.com/pokemon-pokopia-post-apocalyptic-spoiler-kanto-reveal-2000676315" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: We Now Know The Answer To Whether Pokémon Pokopia Takes Place In A Post-Apocalypse">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="AdGuard enters the metaverse: VPN and ad-blocker extensions launch on Meta Quest">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=800&auto=format&fit=crop" alt="Illustration for: AdGuard enters the metaverse: VPN and ad-blocker extensions launch on Meta Quest" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.techradar.com/vpn/vpn-services/adguard-enters-the-metaverse-vpn-and-ad-blocker-extensions-launch-on-meta-quest" target="_blank" rel="noopener noreferrer">AdGuard enters the metaverse: VPN and ad-blocker extensions launch on Meta Quest</a></h3>
+          <p class="card-summary">Browsing in VR just got cleaner and safer. AdGuard has launched two new extensions for the Meta Quest browser, bringing ad-blocking and VPN privacy to your headset.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">Latest from TechRadar</span>
+          <span class="tag">Consumer Tech</span>
+          <a href="https://www.techradar.com/vpn/vpn-services/adguard-enters-the-metaverse-vpn-and-ad-blocker-extensions-launch-on-meta-quest" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: AdGuard enters the metaverse: VPN and ad-blocker extensions launch on Meta Quest">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="2026 Nissan Sentra">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop" alt="Illustration for: 2026 Nissan Sentra" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.caranddriver.com/nissan/sentra" target="_blank" rel="noopener noreferrer">2026 Nissan Sentra</a></h3>
+          <p class="card-summary">Review, Pricing, and Specs</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">Latest Content - Car and Driver</span>
+          <span class="tag">EVs & Automotive</span>
+          <a href="https://www.caranddriver.com/nissan/sentra" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: 2026 Nissan Sentra">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Telemundo FIFA World Cup promos encourage fans to gather, watch together">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&auto=format&fit=crop" alt="Illustration for: Telemundo FIFA World Cup promos encourage fans to gather, watch together" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.newscaststudio.com/2026/03/05/telemundo-fifa-world-cup-2026-promos/" target="_blank" rel="noopener noreferrer">Telemundo FIFA World Cup promos encourage fans to gather, watch together</a></h3>
+          <p class="card-summary">Ahead of its extensive coverage of the 2026 FIFA World Cup, Telemundo has rolled out ... Read More The post Telemundo FIFA World Cup promos encourage fans to gather, watch together appeared first on NCS | NewscastStudio .</p>
         </div>
         <div class="card-footer">
           <span class="source-tag">NCS | NewscastStudio</span>
           <span class="tag">Broadcast Tech</span>
-          <a href="https://www.newscaststudio.com/2026/03/05/avoiding-errors-and-maintaining-quality-when-adopting-ai/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Avoiding errors and maintaining quality when adopting AI">Read original</a>
+          <a href="https://www.newscaststudio.com/2026/03/05/telemundo-fifa-world-cup-2026-promos/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Telemundo FIFA World Cup promos encourage fans to gather, watch together">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Anthropic is reportedly back in talks with the Defense Department">
+      <article class="card" aria-label="Telecom’s lofty AI ambitions hinge on breaking open proprietary radio networks">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=800&auto=format&fit=crop" alt="Illustration for: Anthropic is reportedly back in talks with the Defense Department" loading="lazy" width="400" height="185">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop" alt="Illustration for: Telecom’s lofty AI ambitions hinge on breaking open proprietary radio networks" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="https://www.engadget.com/ai/anthropic-is-reportedly-back-in-talks-with-the-defense-department-125045017.html?src=rss" target="_blank" rel="noopener noreferrer">Anthropic is reportedly back in talks with the Defense Department</a></h3>
-          <p class="card-summary">Anthropic is reportedly trying to reach a new deal with the US Defense Department, which could prevent the government from labeling it a supply chain risk. According to Financial Times and Bloomberg , Anthropic CEO Dario Amodei has resumed talks with the agency over the use of its AI models.</p>
+          <h3><a href="https://siliconangle.com/2026/03/05/open-ran-telecoms-next-innovation-frontier-mwc26/" target="_blank" rel="noopener noreferrer">Telecom’s lofty AI ambitions hinge on breaking open proprietary radio networks</a></h3>
+          <p class="card-summary">Artificial intelligence is driving an unprecedented surge in compute demand, but telecom operators face a structural barrier to capturing value from the shift: the proprietary technologies that control their own radio access networks. The industry’s push toward Open RAN is now intended to loosen that control and open the door to broader innovation.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">SiliconANGLE</span>
+          <span class="tag">Enterprise Tech</span>
+          <a href="https://siliconangle.com/2026/03/05/open-ran-telecoms-next-innovation-frontier-mwc26/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Telecom’s lofty AI ambitions hinge on breaking open proprietary radio networks">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Tech billionaire Shlomo Kramer: the cyber selloff proved that Wall Street can’t price tech anymore">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&auto=format&fit=crop" alt="Illustration for: Tech billionaire Shlomo Kramer: the cyber selloff proved that Wall Street can’t price tech anymore" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://fortune.com/2026/03/05/tech-billionaire-shlomo-kramer-why-wall-street-cant-price-tech-cyber-ai-claude/" target="_blank" rel="noopener noreferrer">Tech billionaire Shlomo Kramer: the cyber selloff proved that Wall Street can’t price tech anymore</a></h3>
+          <p class="card-summary">The market reaction to Claude Code Security only makes sense if you assume that "AI" and "cybersecurity" are interchangeable labels.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">Fortune | FORTUNE</span>
+          <span class="tag">Startups & Business</span>
+          <a href="https://fortune.com/2026/03/05/tech-billionaire-shlomo-kramer-why-wall-street-cant-price-tech-cyber-ai-claude/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Tech billionaire Shlomo Kramer: the cyber selloff proved that Wall Street can’t price tech anymore">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Google begins calling out battery-killing Android apps">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&auto=format&fit=crop" alt="Illustration for: Google begins calling out battery-killing Android apps" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.engadget.com/mobile/smartphones/google-begins-calling-out-battery-killing-android-apps-170650936.html?src=rss" target="_blank" rel="noopener noreferrer">Google begins calling out battery-killing Android apps</a></h3>
+          <p class="card-summary">Google is living up to its word and posting warning labels for battery-killing apps. 9to5Google spotted Google's rollout announcement, which the company previously said would arrive on March 1 .</p>
         </div>
         <div class="card-footer">
           <span class="source-tag">Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
           <span class="tag">Mobile & Gadgets</span>
-          <a href="https://www.engadget.com/ai/anthropic-is-reportedly-back-in-talks-with-the-defense-department-125045017.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Anthropic is reportedly back in talks with the Defense Department">Read original</a>
+          <a href="https://www.engadget.com/mobile/smartphones/google-begins-calling-out-battery-killing-android-apps-170650936.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Google begins calling out battery-killing Android apps">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Dutch MPs call for free government-backed VPN, ad-blocker, and password manager for all citizens">
+      <article class="card" aria-label="Apple Blocks US Users From Downloading ByteDance’s Chinese Apps">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=800&auto=format&fit=crop" alt="Illustration for: Dutch MPs call for free government-backed VPN, ad-blocker, and password manager for all citizens" loading="lazy" width="400" height="185">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop" alt="Illustration for: Apple Blocks US Users From Downloading ByteDance’s Chinese Apps" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="https://www.techradar.com/vpn/vpn-privacy-security/dutch-mps-call-for-free-government-backed-vpn-ad-blocker-and-password-manager-for-all-citizens" target="_blank" rel="noopener noreferrer">Dutch MPs call for free government-backed VPN, ad-blocker, and password manager for all citizens</a></h3>
-          <p class="card-summary">Following major data leaks at Odido and health services, a motion tabled by the Dutch opposition argues that online safety shouldn't depend on your income and calls on the government to hand every citizen a free "digital first-aid kit."</p>
+          <h3><a href="https://www.wired.com/story/bytedance-apps-are-no-longer-available-in-us-app-stores/" target="_blank" rel="noopener noreferrer">Apple Blocks US Users From Downloading ByteDance’s Chinese Apps</a></h3>
+          <p class="card-summary">In January, after TikTok announced a deal to transfer its US operations, Apple began blocking people in the US from downloading or updating ByteDance apps designed for the Chinese market.</p>
         </div>
         <div class="card-footer">
-          <span class="source-tag">Latest from TechRadar</span>
-          <span class="tag">Consumer Tech</span>
-          <a href="https://www.techradar.com/vpn/vpn-privacy-security/dutch-mps-call-for-free-government-backed-vpn-ad-blocker-and-password-manager-for-all-citizens" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Dutch MPs call for free government-backed VPN, ad-blocker, and password manager for all citizens">Read original</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="Beats Studio Pro headphones are under $200 right now at Amazon — save $150">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop" alt="Illustration for: Beats Studio Pro headphones are under $200 right now at Amazon — save $150" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="https://mashable.com/article/march-5-beats-studio-pro-deal" target="_blank" rel="noopener noreferrer">Beats Studio Pro headphones are under $200 right now at Amazon — save $150</a></h3>
-          <p class="card-summary">As of March 5, select Beats Studio Pro have dropped to $199.95 at Amazon, 43% off their list price of $349.99.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">Mashable</span>
+          <span class="source-tag">Business Latest</span>
           <span class="tag">Startups & Business</span>
-          <a href="https://mashable.com/article/march-5-beats-studio-pro-deal" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Beats Studio Pro headphones are under $200 right now at Amazon — save $150">Read original</a>
+          <a href="https://www.wired.com/story/bytedance-apps-are-no-longer-available-in-us-app-stores/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Apple Blocks US Users From Downloading ByteDance’s Chinese Apps">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="A Buick Plug-In Hybrid Minivan Just Set A New Range Record">
+      <article class="card" aria-label="The First Trailer for the Final Season of ‘The Boys’ Heralds the End of a Bloody Era">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop" alt="Illustration for: A Buick Plug-In Hybrid Minivan Just Set A New Range Record" loading="lazy" width="400" height="185">
+          <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=800&auto=format&fit=crop" alt="Illustration for: The First Trailer for the Final Season of ‘The Boys’ Heralds the End of a Bloody Era" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="https://insideevs.com/news/789066/buick-gl8-ls-phev-range-record-china/" target="_blank" rel="noopener noreferrer">A Buick Plug-In Hybrid Minivan Just Set A New Range Record</a></h3>
-          <p class="card-summary">To make matters even more interesting, the record run was done at a constant speed of 74.5 mph.</p>
+          <h3><a href="https://gizmodo.com/the-first-trailer-for-the-final-season-of-the-boys-heralds-the-end-of-a-bloody-era-2000729825" target="_blank" rel="noopener noreferrer">The First Trailer for the Final Season of ‘The Boys’ Heralds the End of a Bloody Era</a></h3>
+          <p class="card-summary">A diabolical farewell approaches when the series finale of 'The Boys' lands on Prime Video this April.</p>
         </div>
         <div class="card-footer">
-          <span class="source-tag">InsideEVs - Articles</span>
-          <span class="tag">EVs & Automotive</span>
-          <a href="https://insideevs.com/news/789066/buick-gl8-ls-phev-range-record-china/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: A Buick Plug-In Hybrid Minivan Just Set A New Range Record">Read original</a>
+          <span class="source-tag">Gizmodo</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://gizmodo.com/the-first-trailer-for-the-final-season-of-the-boys-heralds-the-end-of-a-bloody-era-2000729825" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: The First Trailer for the Final Season of ‘The Boys’ Heralds the End of a Bloody Era">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="2026 Lexus ES Price Surprise: The Cheapest Model Is Electric">
+      <article class="card" aria-label="Cursor is rolling out a new kind of agentic coding tool">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?w=800&auto=format&fit=crop" alt="Illustration for: 2026 Lexus ES Price Surprise: The Cheapest Model Is Electric" loading="lazy" width="400" height="185">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop" alt="Illustration for: Cursor is rolling out a new kind of agentic coding tool" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="https://insideevs.com/news/789062/lexus-es-ev-pricing-confirmed/" target="_blank" rel="noopener noreferrer">2026 Lexus ES Price Surprise: The Cheapest Model Is Electric</a></h3>
-          <p class="card-summary">The fully electric Lexus ES350e undercuts the cheapest hybrid by $2,200.</p>
+          <h3><a href="https://techcrunch.com/2026/03/05/cursor-is-rolling-out-a-new-system-for-agentic-coding/" target="_blank" rel="noopener noreferrer">Cursor is rolling out a new kind of agentic coding tool</a></h3>
+          <p class="card-summary">Called Automations, the new system gives users a way to automatically launch agents within their coding environment, triggered by a new addition to the codebase, a Slack message, or a simple timer.</p>
         </div>
         <div class="card-footer">
-          <span class="source-tag">InsideEVs - Articles</span>
-          <span class="tag">EVs & Automotive</span>
-          <a href="https://insideevs.com/news/789062/lexus-es-ev-pricing-confirmed/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: 2026 Lexus ES Price Surprise: The Cheapest Model Is Electric">Read original</a>
+          <span class="source-tag">TechCrunch</span>
+          <span class="tag">Startups & Business</span>
+          <a href="https://techcrunch.com/2026/03/05/cursor-is-rolling-out-a-new-system-for-agentic-coding/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Cursor is rolling out a new kind of agentic coding tool">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Sky Sports in pole position for new F1 season with new immersive sidebar">
+      <article class="card" aria-label="Watch MS NOW’s cold open for March 3 primaries coverage">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1612420696760-0a0f34d3e7d0?w=800&auto=format&fit=crop" alt="Illustration for: Sky Sports in pole position for new F1 season with new immersive sidebar" loading="lazy" width="400" height="185">
+          <img src="https://images.unsplash.com/photo-1612420696760-0a0f34d3e7d0?w=800&auto=format&fit=crop" alt="Illustration for: Watch MS NOW’s cold open for March 3 primaries coverage" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="https://www.tvbeurope.com/media-consumption/sky-sports-in-pole-position-for-new-f1-season-with-new-immersive-sidebar" target="_blank" rel="noopener noreferrer">Sky Sports in pole position for new F1 season with new immersive sidebar</a></h3>
-          <p class="card-summary">Viewers will be able to access a range of features, including Race Control, Recap and in-race standings The post Sky Sports in pole position for new F1 season with new immersive sidebar appeared first on TVBEurope .</p>
+          <h3><a href="https://www.newscaststudio.com/2026/03/05/ms-now-we-the-people-election-branding-33-cold-open/" target="_blank" rel="noopener noreferrer">Watch MS NOW’s cold open for March 3 primaries coverage</a></h3>
+          <p class="card-summary">The cold open MS NOW used starting at 7 p.m. eastern on March 3, 2026.</p>
         </div>
         <div class="card-footer">
-          <span class="source-tag">TVBEurope</span>
+          <span class="source-tag">NCS | NewscastStudio</span>
           <span class="tag">Broadcast Tech</span>
-          <a href="https://www.tvbeurope.com/media-consumption/sky-sports-in-pole-position-for-new-f1-season-with-new-immersive-sidebar" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Sky Sports in pole position for new F1 season with new immersive sidebar">Read original</a>
+          <a href="https://www.newscaststudio.com/2026/03/05/ms-now-we-the-people-election-branding-33-cold-open/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Watch MS NOW’s cold open for March 3 primaries coverage">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="MXL moves into stable production release">
+      <article class="card" aria-label="2027 GMC Sierra 1500 Spy Photos Reveal the Next-Gen Truck's Interior">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1567095761054-7003afd47020?w=800&auto=format&fit=crop" alt="Illustration for: MXL moves into stable production release" loading="lazy" width="400" height="185">
+          <img src="https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?w=800&auto=format&fit=crop" alt="Illustration for: 2027 GMC Sierra 1500 Spy Photos Reveal the Next-Gen Truck's Interior" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="https://www.tvbeurope.com/live-production/mxl-moves-into-stable-production-release" target="_blank" rel="noopener noreferrer">MXL moves into stable production release</a></h3>
-          <p class="card-summary">Work to update MXL's roadmap will continue, said the EBU The post MXL moves into stable production release appeared first on TVBEurope .</p>
+          <h3><a href="https://www.caranddriver.com/news/a70621895/2027-gmc-sierra-1500-interior-spy-photos/" target="_blank" rel="noopener noreferrer">2027 GMC Sierra 1500 Spy Photos Reveal the Next-Gen Truck's Interior</a></h3>
+          <p class="card-summary">GM's new full-size pickups should debut later this year, but here's an early access look at the GMC version's redesigned cabin.</p>
         </div>
         <div class="card-footer">
-          <span class="source-tag">TVBEurope</span>
+          <span class="source-tag">Latest Content - Car and Driver</span>
+          <span class="tag">EVs & Automotive</span>
+          <a href="https://www.caranddriver.com/news/a70621895/2027-gmc-sierra-1500-interior-spy-photos/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: 2027 GMC Sierra 1500 Spy Photos Reveal the Next-Gen Truck's Interior">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Edge AI puts real-time performance on a millisecond deadline">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1568952433726-3896e3881c65?w=800&auto=format&fit=crop" alt="Illustration for: Edge AI puts real-time performance on a millisecond deadline" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://siliconangle.com/2026/03/05/real-time-determinism-critical-edge-ai-mwc26/" target="_blank" rel="noopener noreferrer">Edge AI puts real-time performance on a millisecond deadline</a></h3>
+          <p class="card-summary">AI is moving beyond centralized data centers and into the physical world, where real-time determinism is emerging as a critical requirement for the next generation of edge computing. As AI expands into environments such as telecommunications networks, vehicles and industrial systems, machines must sense, reason and respond instantly rather than simply generate answers from static […] The post Edge AI puts real-time performance on a millisecond deadline appeared first on SiliconANGLE .</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">SiliconANGLE</span>
+          <span class="tag">Enterprise Tech</span>
+          <a href="https://siliconangle.com/2026/03/05/real-time-determinism-critical-edge-ai-mwc26/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Edge AI puts real-time performance on a millisecond deadline">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Software Development Practices Help Enterprises Tackle Real-Life Risks">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop" alt="Illustration for: Software Development Practices Help Enterprises Tackle Real-Life Risks" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.darkreading.com/cybersecurity-operations/software-development-practices-help-enterprises-tackle-real-life-risks" target="_blank" rel="noopener noreferrer">Software Development Practices Help Enterprises Tackle Real-Life Risks</a></h3>
+          <p class="card-summary">Organizations can borrow secure-by-design processes to manage non-technical challenges like governance or the inevitable human error.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">darkreading</span>
+          <span class="tag">Cybersecurity Updates</span>
+          <a href="https://www.darkreading.com/cybersecurity-operations/software-development-practices-help-enterprises-tackle-real-life-risks" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Software Development Practices Help Enterprises Tackle Real-Life Risks">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Securing the signal through hybrid delivery">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1567095761054-7003afd47020?w=800&auto=format&fit=crop" alt="Illustration for: Securing the signal through hybrid delivery" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.newscaststudio.com/2026/03/05/securing-the-signal-through-hybrid-delivery/" target="_blank" rel="noopener noreferrer">Securing the signal through hybrid delivery</a></h3>
+          <p class="card-summary">Delivering a rich bouquet of media services to large numbers of receivers, in all but ... Read More The post Securing the signal through hybrid delivery appeared first on NCS | NewscastStudio .</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">NCS | NewscastStudio</span>
           <span class="tag">Broadcast Tech</span>
-          <a href="https://www.tvbeurope.com/live-production/mxl-moves-into-stable-production-release" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: MXL moves into stable production release">Read original</a>
+          <a href="https://www.newscaststudio.com/2026/03/05/securing-the-signal-through-hybrid-delivery/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Securing the signal through hybrid delivery">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="LatAm Now Faces 2x More Cyberattacks Than US">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop" alt="Illustration for: LatAm Now Faces 2x More Cyberattacks Than US" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://www.darkreading.com/threat-intelligence/latam-2x-more-cyberattacks-us" target="_blank" rel="noopener noreferrer">LatAm Now Faces 2x More Cyberattacks Than US</a></h3>
+          <p class="card-summary">Much of Central and South America struggles with cybersecurity maturity, and hackers are taking advantage.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">darkreading</span>
+          <span class="tag">Cybersecurity Updates</span>
+          <a href="https://www.darkreading.com/threat-intelligence/latam-2x-more-cyberattacks-us" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: LatAm Now Faces 2x More Cyberattacks Than US">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="VMware Aria Operations Bug Exploited, Cloud Resources at Risk">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop" alt="Illustration for: VMware Aria Operations Bug Exploited, Cloud Resources at Risk" loading="lazy" width="400" height="185">
+          <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&auto=format&fit=crop" alt="Illustration for: VMware Aria Operations Bug Exploited, Cloud Resources at Risk" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
@@ -549,44 +537,10 @@
         </div>
       </article>
       
-      <article class="card" aria-label="Stranger Things Meets Cybersecurity: Lessons from the Hive Mind">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop" alt="Illustration for: Stranger Things Meets Cybersecurity: Lessons from the Hive Mind" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="https://www.darkreading.com/cybersecurity-operations/stranger-things-meets-cybersecurity-lessons-hive-mind" target="_blank" rel="noopener noreferrer">Stranger Things Meets Cybersecurity: Lessons from the Hive Mind</a></h3>
-          <p class="card-summary">Events and concepts from the Stranger Things television series illustrate how enterprises can defend their networks and stay "right side up."</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">darkreading</span>
-          <span class="tag">Cybersecurity Updates</span>
-          <a href="https://www.darkreading.com/cybersecurity-operations/stranger-things-meets-cybersecurity-lessons-hive-mind" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Stranger Things Meets Cybersecurity: Lessons from the Hive Mind">Read original</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="Dark Reading Confidential: This Threat Hunter Helped Cops Bust Up An African Cybercrime Syndicate">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&auto=format&fit=crop" alt="Illustration for: Dark Reading Confidential: This Threat Hunter Helped Cops Bust Up An African Cybercrime Syndicate" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="https://www.darkreading.com/threat-intelligence/threat-hunter-helped-cops-crack-african-cybercrime-syndicate" target="_blank" rel="noopener noreferrer">Dark Reading Confidential: This Threat Hunter Helped Cops Bust Up An African Cybercrime Syndicate</a></h3>
-          <p class="card-summary">Dark Reading Confidential Episode 15: Interpol relied on Will Thomas and team to help break up a sprawling cybercrime ring, leading to the arrest of 574 suspects, the recovery of more than $3 million, and the decryption of six malware variants. Here's his story.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">darkreading</span>
-          <span class="tag">Cybersecurity Updates</span>
-          <a href="https://www.darkreading.com/threat-intelligence/threat-hunter-helped-cops-crack-african-cybercrime-syndicate" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Dark Reading Confidential: This Threat Hunter Helped Cops Bust Up An African Cybercrime Syndicate">Read original</a>
-        </div>
-      </article>
-      
       <article class="card" aria-label="Wearable startup CUDIS launches a new health ring line with an AI-fueled ‘coach’">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop" alt="Illustration for: Wearable startup CUDIS launches a new health ring line with an AI-fueled ‘coach’" loading="lazy" width="400" height="185">
+          <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&auto=format&fit=crop" alt="Illustration for: Wearable startup CUDIS launches a new health ring line with an AI-fueled ‘coach’" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
@@ -603,7 +557,7 @@
       <article class="card" aria-label="Gemini can now automate some multi-step tasks on Android">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1655635643532-fa9ba2648cbe?w=800&auto=format&fit=crop" alt="Illustration for: Gemini can now automate some multi-step tasks on Android" loading="lazy" width="400" height="185">
+          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop" alt="Illustration for: Gemini can now automate some multi-step tasks on Android" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
@@ -614,6 +568,23 @@
           <span class="source-tag">AI | TechCrunch</span>
           <span class="tag">AI News</span>
           <a href="https://techcrunch.com/2026/02/25/gemini-can-now-automate-some-multi-step-tasks-on-android/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Gemini can now automate some multi-step tasks on Android">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Amazon’s AI-powered Alexa+ gets new personality options">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1655635643532-fa9ba2648cbe?w=800&auto=format&fit=crop" alt="Illustration for: Amazon’s AI-powered Alexa+ gets new personality options" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="https://techcrunch.com/2026/02/25/amazons-ai-powered-alexa-gets-new-personality-options/" target="_blank" rel="noopener noreferrer">Amazon’s AI-powered Alexa+ gets new personality options</a></h3>
+          <p class="card-summary">Users will be able to choose from Alexa styles like Brief, Chill, or Sweet, Amazon says.</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/2026/02/25/amazons-ai-powered-alexa-gets-new-personality-options/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original: Amazon’s AI-powered Alexa+ gets new personality options">Read original</a>
         </div>
       </article>
       
@@ -821,5 +792,7 @@
 </script>
 <!-- Device press-image matcher: swaps in local press images where a device is recognised in the article title -->
 <script src="assets/device-images.js" defer></script>
+<!-- Trending widget loader: reads assets/data/trending.txt — edit that file to update stories -->
+<script src="assets/trending-loader.js" defer></script>
 </body>
 </html>
