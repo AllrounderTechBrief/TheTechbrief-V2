@@ -1,108 +1,121 @@
 /**
  * device-images.js — The Tech Brief
  *
- * Client-side device image matcher.
- * Runs after page load, reads article card titles, and swaps in
- * a local press image when a known device name is found.
+ * Assigns correct featured images to article cards.
  *
- * Behaviour:
- *   MATCH found    → replaces card <img> with local press image
- *   NO match       → leaves existing Unsplash fallback untouched
- *   Image missing  → silently keeps existing image (onerror handler)
+ * Priority order per card:
+ *   1. Specific device press image  (e.g. samsung-galaxy-s26-ultra.jpg)
+ *   2. Device category fallback     (e.g. default-smartphone.jpg) if press file missing
+ *   3. Title-keyword category       (title says "phone" → smartphone fallback)
+ *   4. Tag-based category           (last resort)
+ *   5. Leave existing image alone
  *
- * Zero dependencies. Works on GitHub Pages static hosting.
- * Fetch is async so never blocks page render.
+ * Fixes:
+ *   - "Enterprise Tech" Motorola phone article no longer shows a laptop image
+ *   - Samsung article no longer shows an iPhone Unsplash photo when press file missing
  */
 
 (function () {
   'use strict';
 
-  // Path to the device database, relative to site root.
-  // sync_static_assets copies site/assets/ → docs/assets/ on every build.
   var DB_PATH = 'assets/data/devices.json';
 
-  // ── Utility: normalise a string for comparison ──────────────────────────
   function norm(str) {
     return (str || '').toLowerCase().replace(/\s+/g, ' ').trim();
   }
 
-  // ── Build a flat lookup: normalised term → device entry ─────────────────
-  // device_name and every alias all resolve to the same entry object.
   function buildLookup(devices) {
     var map = {};
     devices.forEach(function (dev) {
       var terms = [dev.device_name].concat(dev.aliases || []);
-      terms.forEach(function (t) {
-        map[norm(t)] = dev;
-      });
+      terms.forEach(function (t) { map[norm(t)] = dev; });
     });
     return map;
   }
 
-  // ── Find best device match inside a title string ─────────────────────────
-  // Checks every known term. Prefers the longest matching term to avoid
-  // "iPhone 16" matching inside "iPhone 16 Pro Max".
-  function findDevice(title, lookup) {
-    var lower = norm(title);
-    var best = null;
-    var bestLen = 0;
-
-    Object.keys(lookup).forEach(function (term) {
-      if (lower.indexOf(term) !== -1 && term.length > bestLen) {
-        best = lookup[term];
-        bestLen = term.length;
-      }
-    });
-
-    return best; // null if nothing found
+  // Returns true if title clearly describes a phone/mobile article
+  function titleIsPhone(t) {
+    return /phone|smartphone|grapheneos|calyxos|lineageos|android fork|foldable|flip phone|handset/.test(t);
   }
 
-  // ── Read the visible card category from the .tag span ───────────────────
-  function readCategory(card) {
+  // Find best matching device — longest term wins to avoid short-name collisions.
+  // Rejects laptop/desktop match when title clearly signals a phone.
+  function findDevice(title, lookup) {
+    var lower = norm(title);
+    var best = null, bestLen = 0;
+    Object.keys(lookup).forEach(function (term) {
+      if (lower.indexOf(term) !== -1 && term.length > bestLen) {
+        best = lookup[term]; bestLen = term.length;
+      }
+    });
+    // Guard: don't use a laptop/desktop press image for a phone article
+    if (best && (best.category === 'laptop' || best.category === 'desktop') && titleIsPhone(lower)) {
+      return null;
+    }
+    return best;
+  }
+
+  // Determine visual category from article title keywords.
+  // This is more accurate than using the editorial category tag,
+  // because "Enterprise Tech" often contains phone articles.
+  function titleCategory(title) {
+    var t = norm(title);
+    if (/phone|smartphone|grapheneos|calyxos|lineageos|android fork|foldable|flip phone|handset/.test(t)) return 'smartphone';
+    if (/\blaptop|notebook|macbook|thinkpad|chromebook|ultrabook|matebook/.test(t)) return 'laptop';
+    if (/\btablet|ipad|\bpad\b/.test(t)) return 'tablet';
+    if (/earbuds|headphones|airpods|\bbuds\b|tws/.test(t)) return 'audio';
+    if (/smartwatch|apple watch|galaxy watch|pixel watch/.test(t)) return 'wearable';
+    if (/electric car|electric vehicle|\bev\b|charging station|\btesla\b/.test(t)) return 'ev';
+    if (/\bgpu\b|graphics card|geforce|radeon/.test(t)) return 'gpu';
+    if (/playstation|\bps5\b|\bxbox\b|nintendo switch/.test(t)) return 'console';
+    if (/vr headset|ar glasses|vision pro|meta quest/.test(t)) return 'xr';
+    return null;
+  }
+
+  // Last-resort: map editorial category tag to visual type
+  function tagCategory(card) {
     var tag = card.querySelector('.tag');
     if (!tag) return 'default';
     var text = norm(tag.textContent);
-    // Map site category labels → devices.json category keys
     if (text.indexOf('mobile') !== -1 || text.indexOf('gadget') !== -1) return 'smartphone';
     if (text.indexOf('consumer') !== -1) return 'smartphone';
-    if (text.indexOf('enterprise') !== -1) return 'laptop';
     if (text.indexOf('gaming') !== -1) return 'console';
     if (text.indexOf('ev') !== -1 || text.indexOf('auto') !== -1) return 'ev';
     if (text.indexOf('ai') !== -1) return 'ai-software';
+    // "Enterprise Tech" / "Broadcast Tech" → 'default' (NOT 'laptop')
     return 'default';
   }
 
-  // ── Swap an image safely, with fallback to default-tech on load error ───
-  function swapImage(img, newSrc, altText, defaultFallback) {
-    // Verify the new image actually loads before committing the swap
+  // Try each src in order; first one that loads wins. If all fail, leave existing image.
+  function setImageFromList(img, srcList, altText) {
+    if (!srcList || srcList.length === 0) return;
+    var src = srcList[0];
     var probe = new Image();
     probe.onload = function () {
-      img.src = newSrc;
-      img.alt = altText || img.alt;
+      img.src = src;
+      if (altText) img.alt = altText;
     };
     probe.onerror = function () {
-      // Press image file missing from repo — fall back to default-tech
-      // This is expected during development before images are added.
-      if (defaultFallback && newSrc !== defaultFallback) {
-        var probe2 = new Image();
-        probe2.onload = function () {
-          img.src = defaultFallback;
-          img.alt = img.alt;
-        };
-        probe2.src = defaultFallback;
-      }
-      // If defaultFallback also fails, keep the existing Unsplash image — do nothing.
+      setImageFromList(img, srcList.slice(1), altText);
     };
-    probe.src = newSrc;
+    probe.src = src;
   }
 
-  // ── Main: fetch DB, then process all cards ───────────────────────────────
+  function ensureImg(card) {
+    var img = card.querySelector('.card-img-wrap img');
+    if (img) return { img: img, injected: false };
+    var wrap = document.createElement('div');
+    wrap.className = 'card-img-wrap';
+    img = document.createElement('img');
+    img.width = 400; img.height = 185; img.loading = 'lazy';
+    wrap.appendChild(img);
+    card.insertBefore(wrap, card.firstChild);
+    return { img: img, injected: true };
+  }
+
   function run() {
-    // Collect all cards on this page
-    var cards = Array.prototype.slice.call(
-      document.querySelectorAll('article.card')
-    );
-    if (cards.length === 0) return; // nothing to do
+    var cards = Array.prototype.slice.call(document.querySelectorAll('article.card'));
+    if (cards.length === 0) return;
 
     fetch(DB_PATH)
       .then(function (res) {
@@ -110,64 +123,54 @@
         return res.json();
       })
       .then(function (db) {
-        var lookup   = buildLookup(db.devices);
+        var lookup    = buildLookup(db.devices);
         var fallbacks = db.category_fallbacks || {};
-        var defaultImg = fallbacks['default'] || 'assets/press/defaults/default-tech.jpg';
+        var def       = fallbacks['default'] || 'assets/press/defaults/default-tech.jpg';
 
         cards.forEach(function (card) {
-          // Read article title from the h3 link
           var titleEl = card.querySelector('h3 a');
           if (!titleEl) return;
           var title = titleEl.textContent || titleEl.innerText || '';
 
-          // Get existing <img> (may not exist if no image was set by build)
-          var img = card.querySelector('.card-img-wrap img');
-
-          // Try device match
+          // ── 1. Try specific device match ──────────────────────────────
           var device = findDevice(title, lookup);
-
           if (device) {
-            // We have a specific device match
-            if (!img) {
-              // Card has no image at all — inject one
-              var wrap = document.createElement('div');
-              wrap.className = 'card-img-wrap';
-              img = document.createElement('img');
-              img.width  = 400;
-              img.height = 185;
-              img.loading = 'lazy';
-              wrap.appendChild(img);
-              card.insertBefore(wrap, card.firstChild);
-            }
-            var pressAlt = device.brand + ' ' + device.device_name + ' — editorial press image';
-            swapImage(img, device.image_path, pressAlt, defaultImg);
-
-          } else if (!img) {
-            // No device match AND no existing image — inject category fallback
-            var cat    = readCategory(card);
-            var fbSrc  = fallbacks[cat] || defaultImg;
-            var wrap2  = document.createElement('div');
-            wrap2.className = 'card-img-wrap';
-            var img2   = document.createElement('img');
-            img2.width  = 400;
-            img2.height = 185;
-            img2.loading = 'lazy';
-            img2.alt    = 'Technology illustration';
-            wrap2.appendChild(img2);
-            card.insertBefore(wrap2, card.firstChild);
-            swapImage(img2, fbSrc, null, defaultImg);
+            var catFb   = fallbacks[device.category] || def;
+            var titleCat = titleCategory(title);
+            var titleFb  = (titleCat && fallbacks[titleCat]) || def;
+            var r = ensureImg(card);
+            setImageFromList(r.img,
+              [device.image_path, catFb, titleFb, def],
+              device.brand + ' ' + device.device_name
+            );
+            return;
           }
-          // else: no match but card already has an Unsplash image — leave it alone
+
+          // ── 2. Title keyword category ──────────────────────────────────
+          var tCat = titleCategory(title);
+          if (tCat) {
+            var fbSrc = fallbacks[tCat] || def;
+            var r2 = ensureImg(card);
+            // Always apply title-based category, even if card already has
+            // a wrong-category Unsplash image (the main fix for Motorola case)
+            setImageFromList(r2.img, [fbSrc, def], 'Technology illustration');
+            return;
+          }
+
+          // ── 3. Tag-based category (only for cards with no image) ───────
+          var tagCat = tagCategory(card);
+          var r3 = ensureImg(card);
+          if (r3.injected) {
+            // Only fill empty cards from the tag — don't override existing
+            setImageFromList(r3.img, [fallbacks[tagCat] || def, def], 'Technology illustration');
+          }
         });
       })
-      .catch(function (err) {
-        // Network/parse errors: silent fail, site continues working normally
-        // Uncomment the line below while developing to debug:
-        // console.warn('[device-images] Failed to load devices.json:', err);
+      .catch(function () {
+        // Silent — Unsplash pool images stay visible if fetch fails
       });
   }
 
-  // Run after DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', run);
   } else {
