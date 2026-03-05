@@ -1,0 +1,1771 @@
+{
+  "devices": [
+    {
+      "device_name": "iPhone 17e",
+      "aliases": [
+        "iPhone 17 e"
+      ],
+      "brand": "Apple",
+      "category": "smartphone",
+      "image_path": "assets/press/apple-iphone-17e.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "iPhone 17",
+      "aliases": [
+        "iPhone 17 Pro",
+        "iPhone 17 Pro Max",
+        "iPhone 17 Air"
+      ],
+      "brand": "Apple",
+      "category": "smartphone",
+      "image_path": "assets/press/apple-iphone-17.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "iPhone 16",
+      "aliases": [
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max",
+        "iPhone 16 Plus"
+      ],
+      "brand": "Apple",
+      "category": "smartphone",
+      "image_path": "assets/press/apple-iphone-16.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "iPhone 15",
+      "aliases": [
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "iPhone 15 Plus"
+      ],
+      "brand": "Apple",
+      "category": "smartphone",
+      "image_path": "assets/press/apple-iphone-16.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "MacBook Pro",
+      "aliases": [
+        "MacBook Pro M4",
+        "MacBook Pro M3",
+        "M4 MacBook Pro",
+        "M4 Max MacBook"
+      ],
+      "brand": "Apple",
+      "category": "laptop",
+      "image_path": "assets/press/apple-macbook-pro.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "MacBook Air",
+      "aliases": [
+        "MacBook Air M4",
+        "MacBook Air M3",
+        "M4 MacBook Air"
+      ],
+      "brand": "Apple",
+      "category": "laptop",
+      "image_path": "assets/press/apple-macbook-air.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "iPad Air",
+      "aliases": [
+        "iPad Air M4",
+        "iPad Air M3",
+        "M4 iPad Air"
+      ],
+      "brand": "Apple",
+      "category": "tablet",
+      "image_path": "assets/press/apple-ipad-air.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "iPad Pro",
+      "aliases": [
+        "iPad Pro M4",
+        "iPad Pro M2",
+        "M4 iPad Pro"
+      ],
+      "brand": "Apple",
+      "category": "tablet",
+      "image_path": "assets/press/apple-ipad-pro.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "iPad mini",
+      "aliases": [
+        "iPad mini 7",
+        "iPad mini 6",
+        "Apple iPad mini"
+      ],
+      "brand": "Apple",
+      "category": "tablet",
+      "image_path": "assets/press/apple-ipad-mini.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "Apple Watch",
+      "aliases": [
+        "Apple Watch Series 10",
+        "Apple Watch Series 9",
+        "Apple Watch SE"
+      ],
+      "brand": "Apple",
+      "category": "wearable",
+      "image_path": "assets/press/apple-watch.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "Apple Watch Ultra",
+      "aliases": [
+        "Apple Watch Ultra 2",
+        "Apple Watch Ultra 3"
+      ],
+      "brand": "Apple",
+      "category": "wearable",
+      "image_path": "assets/press/apple-watch-ultra.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "AirPods",
+      "aliases": [
+        "AirPods 4",
+        "AirPods Pro",
+        "AirPods Pro 2",
+        "AirPods Max",
+        "Apple AirPods"
+      ],
+      "brand": "Apple",
+      "category": "audio",
+      "image_path": "assets/press/apple-airpods.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "Apple Vision Pro",
+      "aliases": [
+        "Vision Pro",
+        "visionOS"
+      ],
+      "brand": "Apple",
+      "category": "xr",
+      "image_path": "assets/press/apple-vision-pro.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "Mac mini",
+      "aliases": [
+        "Mac mini M4",
+        "M4 Mac mini",
+        "Apple Mac mini"
+      ],
+      "brand": "Apple",
+      "category": "desktop",
+      "image_path": "assets/press/apple-mac-mini.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "iMac",
+      "aliases": [
+        "iMac M4",
+        "M4 iMac",
+        "Apple iMac"
+      ],
+      "brand": "Apple",
+      "category": "desktop",
+      "image_path": "assets/press/apple-imac.jpg",
+      "source_url": "https://www.apple.com/newsroom/images/",
+      "license": "Apple press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy S26 Ultra",
+      "aliases": [
+        "Samsung Galaxy S26",
+        "Galaxy S26+",
+        "Galaxy S26 Ultra",
+        "S26 Ultra"
+      ],
+      "brand": "Samsung",
+      "category": "smartphone",
+      "image_path": "assets/press/samsung-galaxy-s26-ultra.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy S25",
+      "aliases": [
+        "Samsung Galaxy S25",
+        "Galaxy S25 Ultra",
+        "Galaxy S25+",
+        "Galaxy S25 Edge"
+      ],
+      "brand": "Samsung",
+      "category": "smartphone",
+      "image_path": "assets/press/samsung-galaxy-s25.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy S24",
+      "aliases": [
+        "Samsung Galaxy S24",
+        "Galaxy S24 Ultra",
+        "Galaxy S24+",
+        "Galaxy S24 FE"
+      ],
+      "brand": "Samsung",
+      "category": "smartphone",
+      "image_path": "assets/press/samsung-galaxy-s25.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy Z Fold",
+      "aliases": [
+        "Galaxy Z Fold 7",
+        "Galaxy Z Fold 6",
+        "Samsung Z Fold"
+      ],
+      "brand": "Samsung",
+      "category": "smartphone",
+      "image_path": "assets/press/samsung-galaxy-z-fold.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy Z Flip",
+      "aliases": [
+        "Galaxy Z Flip 7",
+        "Galaxy Z Flip 6",
+        "Samsung Z Flip"
+      ],
+      "brand": "Samsung",
+      "category": "smartphone",
+      "image_path": "assets/press/samsung-galaxy-z-flip.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy A55",
+      "aliases": [
+        "Samsung Galaxy A55",
+        "Galaxy A56",
+        "Galaxy A35",
+        "Galaxy A36",
+        "Galaxy A15",
+        "Galaxy A16"
+      ],
+      "brand": "Samsung",
+      "category": "smartphone",
+      "image_path": "assets/press/samsung-galaxy-a55.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy Book",
+      "aliases": [
+        "Samsung Galaxy Book",
+        "Galaxy Book 5",
+        "Galaxy Book 4",
+        "Galaxy Book Pro",
+        "Galaxy Book Ultra"
+      ],
+      "brand": "Samsung",
+      "category": "laptop",
+      "image_path": "assets/press/samsung-galaxy-book.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy Tab S10",
+      "aliases": [
+        "Samsung Galaxy Tab S10",
+        "Galaxy Tab S10 Ultra",
+        "Galaxy Tab S10 FE",
+        "Galaxy Tab S9"
+      ],
+      "brand": "Samsung",
+      "category": "tablet",
+      "image_path": "assets/press/samsung-galaxy-tab-s10.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy Watch",
+      "aliases": [
+        "Samsung Galaxy Watch",
+        "Galaxy Watch 7",
+        "Galaxy Watch 6",
+        "Galaxy Watch Ultra"
+      ],
+      "brand": "Samsung",
+      "category": "wearable",
+      "image_path": "assets/press/samsung-galaxy-watch.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Galaxy Buds",
+      "aliases": [
+        "Samsung Galaxy Buds",
+        "Galaxy Buds 3",
+        "Galaxy Buds 3 Pro",
+        "Galaxy Buds 2"
+      ],
+      "brand": "Samsung",
+      "category": "audio",
+      "image_path": "assets/press/samsung-galaxy-buds.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    },
+    {
+      "device_name": "Pixel 10",
+      "aliases": [
+        "Google Pixel 10",
+        "Pixel 10 Pro",
+        "Pixel 10 Pro XL"
+      ],
+      "brand": "Google",
+      "category": "smartphone",
+      "image_path": "assets/press/google-pixel-10.jpg",
+      "source_url": "https://store.google.com/press/",
+      "license": "Google press kit editorial use"
+    },
+    {
+      "device_name": "Pixel 9",
+      "aliases": [
+        "Google Pixel 9",
+        "Pixel 9 Pro",
+        "Pixel 9 Pro Fold",
+        "Pixel 9 Pro XL",
+        "Pixel 9a"
+      ],
+      "brand": "Google",
+      "category": "smartphone",
+      "image_path": "assets/press/google-pixel-9.jpg",
+      "source_url": "https://store.google.com/press/",
+      "license": "Google press kit editorial use"
+    },
+    {
+      "device_name": "Pixel 8",
+      "aliases": [
+        "Google Pixel 8",
+        "Pixel 8 Pro",
+        "Pixel 8a"
+      ],
+      "brand": "Google",
+      "category": "smartphone",
+      "image_path": "assets/press/google-pixel-9.jpg",
+      "source_url": "https://store.google.com/press/",
+      "license": "Google press kit editorial use"
+    },
+    {
+      "device_name": "Pixel Tablet",
+      "aliases": [
+        "Google Pixel Tablet",
+        "Pixel Tablet 2"
+      ],
+      "brand": "Google",
+      "category": "tablet",
+      "image_path": "assets/press/google-pixel-tablet.jpg",
+      "source_url": "https://store.google.com/press/",
+      "license": "Google press kit editorial use"
+    },
+    {
+      "device_name": "Pixel Watch",
+      "aliases": [
+        "Google Pixel Watch",
+        "Pixel Watch 3",
+        "Pixel Watch 4"
+      ],
+      "brand": "Google",
+      "category": "wearable",
+      "image_path": "assets/press/google-pixel-watch.jpg",
+      "source_url": "https://store.google.com/press/",
+      "license": "Google press kit editorial use"
+    },
+    {
+      "device_name": "Pixel Buds",
+      "aliases": [
+        "Google Pixel Buds",
+        "Pixel Buds Pro 2",
+        "Pixel Buds A-Series"
+      ],
+      "brand": "Google",
+      "category": "audio",
+      "image_path": "assets/press/google-pixel-buds.jpg",
+      "source_url": "https://store.google.com/press/",
+      "license": "Google press kit editorial use"
+    },
+    {
+      "device_name": "Xiaomi 15",
+      "aliases": [
+        "Xiaomi 15 Pro",
+        "Xiaomi 15 Ultra"
+      ],
+      "brand": "Xiaomi",
+      "category": "smartphone",
+      "image_path": "assets/press/xiaomi-15.jpg",
+      "source_url": "https://www.mi.com/global/newsroom/",
+      "license": "Xiaomi press kit editorial use"
+    },
+    {
+      "device_name": "Xiaomi 14",
+      "aliases": [
+        "Xiaomi 14 Pro",
+        "Xiaomi 14 Ultra",
+        "Xiaomi 14T",
+        "Xiaomi 14T Pro"
+      ],
+      "brand": "Xiaomi",
+      "category": "smartphone",
+      "image_path": "assets/press/xiaomi-14.jpg",
+      "source_url": "https://www.mi.com/global/newsroom/",
+      "license": "Xiaomi press kit editorial use"
+    },
+    {
+      "device_name": "Xiaomi 13",
+      "aliases": [
+        "Xiaomi 13 Pro",
+        "Xiaomi 13 Ultra",
+        "Xiaomi 13T",
+        "Xiaomi 13T Pro"
+      ],
+      "brand": "Xiaomi",
+      "category": "smartphone",
+      "image_path": "assets/press/xiaomi-14.jpg",
+      "source_url": "https://www.mi.com/global/newsroom/",
+      "license": "Xiaomi press kit editorial use"
+    },
+    {
+      "device_name": "Xiaomi Mix Fold",
+      "aliases": [
+        "Xiaomi Mix Fold 4",
+        "Mi Mix Fold",
+        "Xiaomi Mix Flip"
+      ],
+      "brand": "Xiaomi",
+      "category": "smartphone",
+      "image_path": "assets/press/xiaomi-mix-fold.jpg",
+      "source_url": "https://www.mi.com/global/newsroom/",
+      "license": "Xiaomi press kit editorial use"
+    },
+    {
+      "device_name": "Redmi Note",
+      "aliases": [
+        "Redmi Note 14",
+        "Redmi Note 13",
+        "Redmi Note 14 Pro",
+        "Redmi Note 13 Pro",
+        "Redmi 14C",
+        "Redmi 13C",
+        "Redmi 13"
+      ],
+      "brand": "Xiaomi",
+      "category": "smartphone",
+      "image_path": "assets/press/redmi-note-14.jpg",
+      "source_url": "https://www.mi.com/global/newsroom/",
+      "license": "Xiaomi press kit editorial use"
+    },
+    {
+      "device_name": "POCO X7",
+      "aliases": [
+        "POCO X7 Pro",
+        "POCO X6",
+        "POCO X6 Pro",
+        "POCO F6",
+        "POCO F6 Pro",
+        "POCO M7",
+        "POCO C75"
+      ],
+      "brand": "POCO",
+      "category": "smartphone",
+      "image_path": "assets/press/poco-x7.jpg",
+      "source_url": "https://www.mi.com/global/newsroom/",
+      "license": "POCO press kit editorial use"
+    },
+    {
+      "device_name": "Xiaomi Pad",
+      "aliases": [
+        "Xiaomi Pad 7",
+        "Xiaomi Pad 6",
+        "Mi Pad 6"
+      ],
+      "brand": "Xiaomi",
+      "category": "tablet",
+      "image_path": "assets/press/xiaomi-pad-7.jpg",
+      "source_url": "https://www.mi.com/global/newsroom/",
+      "license": "Xiaomi press kit editorial use"
+    },
+    {
+      "device_name": "Xiaomi Smart Band",
+      "aliases": [
+        "Mi Band 9",
+        "Mi Band 8",
+        "Xiaomi Band 9",
+        "Xiaomi Band 8"
+      ],
+      "brand": "Xiaomi",
+      "category": "wearable",
+      "image_path": "assets/press/xiaomi-band-9.jpg",
+      "source_url": "https://www.mi.com/global/newsroom/",
+      "license": "Xiaomi press kit editorial use"
+    },
+    {
+      "device_name": "Xiaomi Watch",
+      "aliases": [
+        "Xiaomi Watch S4",
+        "Xiaomi Watch S3",
+        "Mi Watch"
+      ],
+      "brand": "Xiaomi",
+      "category": "wearable",
+      "image_path": "assets/press/xiaomi-watch.jpg",
+      "source_url": "https://www.mi.com/global/newsroom/",
+      "license": "Xiaomi press kit editorial use"
+    },
+    {
+      "device_name": "Xiaomi Book",
+      "aliases": [
+        "Mi NoteBook",
+        "Xiaomi NoteBook Pro",
+        "RedmiBook 16"
+      ],
+      "brand": "Xiaomi",
+      "category": "laptop",
+      "image_path": "assets/press/xiaomi-book.jpg",
+      "source_url": "https://www.mi.com/global/newsroom/",
+      "license": "Xiaomi press kit editorial use"
+    },
+    {
+      "device_name": "OPPO Find X8",
+      "aliases": [
+        "Find X8 Pro",
+        "Find X8 Ultra",
+        "OPPO Find X7"
+      ],
+      "brand": "OPPO",
+      "category": "smartphone",
+      "image_path": "assets/press/oppo-find-x8.jpg",
+      "source_url": "https://www.oppo.com/en/press-center/",
+      "license": "OPPO press kit editorial use"
+    },
+    {
+      "device_name": "OPPO Reno 13",
+      "aliases": [
+        "Reno 13 Pro",
+        "Reno 13 F",
+        "OPPO Reno 12",
+        "Reno 12 Pro",
+        "Reno 12 F"
+      ],
+      "brand": "OPPO",
+      "category": "smartphone",
+      "image_path": "assets/press/oppo-reno-13.jpg",
+      "source_url": "https://www.oppo.com/en/press-center/",
+      "license": "OPPO press kit editorial use"
+    },
+    {
+      "device_name": "OPPO A3 Pro",
+      "aliases": [
+        "OPPO A3",
+        "OPPO A60",
+        "OPPO A80",
+        "OPPO A79",
+        "OPPO A78"
+      ],
+      "brand": "OPPO",
+      "category": "smartphone",
+      "image_path": "assets/press/oppo-a-series.jpg",
+      "source_url": "https://www.oppo.com/en/press-center/",
+      "license": "OPPO press kit editorial use"
+    },
+    {
+      "device_name": "OPPO Pad",
+      "aliases": [
+        "OPPO Pad 3",
+        "OPPO Pad 2",
+        "OnePlus Pad 2"
+      ],
+      "brand": "OPPO",
+      "category": "tablet",
+      "image_path": "assets/press/oppo-pad.jpg",
+      "source_url": "https://www.oppo.com/en/press-center/",
+      "license": "OPPO press kit editorial use"
+    },
+    {
+      "device_name": "vivo X200",
+      "aliases": [
+        "vivo X200 Pro",
+        "vivo X200 Ultra",
+        "vivo X200 Pro mini"
+      ],
+      "brand": "vivo",
+      "category": "smartphone",
+      "image_path": "assets/press/vivo-x200.jpg",
+      "source_url": "https://www.vivo.com/en/news/",
+      "license": "vivo press kit editorial use"
+    },
+    {
+      "device_name": "vivo V40",
+      "aliases": [
+        "vivo V40 Pro",
+        "vivo V40 Lite",
+        "vivo V40e",
+        "vivo V30",
+        "vivo V30 Pro"
+      ],
+      "brand": "vivo",
+      "category": "smartphone",
+      "image_path": "assets/press/vivo-v40.jpg",
+      "source_url": "https://www.vivo.com/en/news/",
+      "license": "vivo press kit editorial use"
+    },
+    {
+      "device_name": "vivo Y300",
+      "aliases": [
+        "vivo Y200",
+        "vivo Y100",
+        "vivo Y300+",
+        "vivo Y18"
+      ],
+      "brand": "vivo",
+      "category": "smartphone",
+      "image_path": "assets/press/vivo-y300.jpg",
+      "source_url": "https://www.vivo.com/en/news/",
+      "license": "vivo press kit editorial use"
+    },
+    {
+      "device_name": "iQOO 13",
+      "aliases": [
+        "iQOO 12",
+        "iQOO Neo 9",
+        "iQOO Neo 9 Pro",
+        "iQOO Z9",
+        "iQOO Z9x"
+      ],
+      "brand": "iQOO",
+      "category": "smartphone",
+      "image_path": "assets/press/iqoo-13.jpg",
+      "source_url": "https://www.iqoo.com/",
+      "license": "iQOO press kit editorial use"
+    },
+    {
+      "device_name": "realme GT 7 Pro",
+      "aliases": [
+        "realme GT 7",
+        "realme GT 6",
+        "realme GT 6T",
+        "realme GT 5 Pro"
+      ],
+      "brand": "realme",
+      "category": "smartphone",
+      "image_path": "assets/press/realme-gt7-pro.jpg",
+      "source_url": "https://www.realme.com/global/newsroom/",
+      "license": "realme press kit editorial use"
+    },
+    {
+      "device_name": "realme 14 Pro",
+      "aliases": [
+        "realme 14 Pro+",
+        "realme 14x",
+        "realme 13 Pro",
+        "realme 13 Pro+"
+      ],
+      "brand": "realme",
+      "category": "smartphone",
+      "image_path": "assets/press/realme-14-pro.jpg",
+      "source_url": "https://www.realme.com/global/newsroom/",
+      "license": "realme press kit editorial use"
+    },
+    {
+      "device_name": "realme C75",
+      "aliases": [
+        "realme C65",
+        "realme C63",
+        "realme C61",
+        "realme Narzo 70"
+      ],
+      "brand": "realme",
+      "category": "smartphone",
+      "image_path": "assets/press/realme-c75.jpg",
+      "source_url": "https://www.realme.com/global/newsroom/",
+      "license": "realme press kit editorial use"
+    },
+    {
+      "device_name": "Honor Magic7 Pro",
+      "aliases": [
+        "Honor Magic 7 Pro",
+        "Honor Magic7",
+        "Honor Magic 7 Lite"
+      ],
+      "brand": "Honor",
+      "category": "smartphone",
+      "image_path": "assets/press/honor-magic7-pro.jpg",
+      "source_url": "https://www.honor.com/global/newsroom/",
+      "license": "Honor press kit editorial use"
+    },
+    {
+      "device_name": "Honor 300",
+      "aliases": [
+        "Honor 300 Pro",
+        "Honor 200",
+        "Honor 200 Pro",
+        "Honor 200 Lite"
+      ],
+      "brand": "Honor",
+      "category": "smartphone",
+      "image_path": "assets/press/honor-300.jpg",
+      "source_url": "https://www.honor.com/global/newsroom/",
+      "license": "Honor press kit editorial use"
+    },
+    {
+      "device_name": "Honor X9b",
+      "aliases": [
+        "Honor X8b",
+        "Honor X7b",
+        "Honor X6b",
+        "Honor X9a"
+      ],
+      "brand": "Honor",
+      "category": "smartphone",
+      "image_path": "assets/press/honor-x9b.jpg",
+      "source_url": "https://www.honor.com/global/newsroom/",
+      "license": "Honor press kit editorial use"
+    },
+    {
+      "device_name": "Honor MagicBook",
+      "aliases": [
+        "Honor MagicBook X16",
+        "Honor MagicBook 16",
+        "Honor MagicBook Pro"
+      ],
+      "brand": "Honor",
+      "category": "laptop",
+      "image_path": "assets/press/honor-magicbook.jpg",
+      "source_url": "https://www.honor.com/global/newsroom/",
+      "license": "Honor press kit editorial use"
+    },
+    {
+      "device_name": "Honor MagicPad",
+      "aliases": [
+        "Honor Pad X9",
+        "Honor Pad 9",
+        "Honor Tab X9a"
+      ],
+      "brand": "Honor",
+      "category": "tablet",
+      "image_path": "assets/press/honor-magicpad.jpg",
+      "source_url": "https://www.honor.com/global/newsroom/",
+      "license": "Honor press kit editorial use"
+    },
+    {
+      "device_name": "Honor Robot Phone",
+      "aliases": [
+        "Honor AI Robot Phone",
+        "Honor AI Phone"
+      ],
+      "brand": "Honor",
+      "category": "smartphone",
+      "image_path": "assets/press/honor-robot-phone.jpg",
+      "source_url": "https://www.honor.com/global/newsroom/",
+      "license": "Honor press kit editorial use"
+    },
+    {
+      "device_name": "Huawei Mate 70",
+      "aliases": [
+        "Huawei Mate 70 Pro",
+        "Huawei Mate 70 Pro+",
+        "Huawei Mate 70 RS"
+      ],
+      "brand": "Huawei",
+      "category": "smartphone",
+      "image_path": "assets/press/huawei-mate70.jpg",
+      "source_url": "https://consumer.huawei.com/en/press/",
+      "license": "Huawei press kit editorial use"
+    },
+    {
+      "device_name": "Huawei Pura 70",
+      "aliases": [
+        "Huawei Pura 70 Pro",
+        "Huawei Pura 70 Ultra",
+        "Huawei P70"
+      ],
+      "brand": "Huawei",
+      "category": "smartphone",
+      "image_path": "assets/press/huawei-pura70.jpg",
+      "source_url": "https://consumer.huawei.com/en/press/",
+      "license": "Huawei press kit editorial use"
+    },
+    {
+      "device_name": "Huawei Nova 13",
+      "aliases": [
+        "Huawei Nova 13 Pro",
+        "Huawei Nova 12",
+        "Huawei Nova 12 Pro"
+      ],
+      "brand": "Huawei",
+      "category": "smartphone",
+      "image_path": "assets/press/huawei-nova13.jpg",
+      "source_url": "https://consumer.huawei.com/en/press/",
+      "license": "Huawei press kit editorial use"
+    },
+    {
+      "device_name": "Huawei MatePad",
+      "aliases": [
+        "Huawei MatePad Pro 13",
+        "Huawei MatePad 11",
+        "Huawei MatePad SE"
+      ],
+      "brand": "Huawei",
+      "category": "tablet",
+      "image_path": "assets/press/huawei-matepad.jpg",
+      "source_url": "https://consumer.huawei.com/en/press/",
+      "license": "Huawei press kit editorial use"
+    },
+    {
+      "device_name": "Huawei MateBook",
+      "aliases": [
+        "Huawei MateBook X Pro",
+        "Huawei MateBook 14",
+        "Huawei MateBook 16s"
+      ],
+      "brand": "Huawei",
+      "category": "laptop",
+      "image_path": "assets/press/huawei-matebook.jpg",
+      "source_url": "https://consumer.huawei.com/en/press/",
+      "license": "Huawei press kit editorial use"
+    },
+    {
+      "device_name": "Huawei Watch GT5",
+      "aliases": [
+        "Huawei Watch GT 5",
+        "Huawei Watch 4",
+        "Huawei Band 9"
+      ],
+      "brand": "Huawei",
+      "category": "wearable",
+      "image_path": "assets/press/huawei-watch-gt5.jpg",
+      "source_url": "https://consumer.huawei.com/en/press/",
+      "license": "Huawei press kit editorial use"
+    },
+    {
+      "device_name": "Huawei FreeBuds Pro",
+      "aliases": [
+        "Huawei FreeBuds Pro 3",
+        "Huawei FreeBuds 6i",
+        "Huawei FreeBuds 5i"
+      ],
+      "brand": "Huawei",
+      "category": "audio",
+      "image_path": "assets/press/huawei-freebuds-pro.jpg",
+      "source_url": "https://consumer.huawei.com/en/press/",
+      "license": "Huawei press kit editorial use"
+    },
+    {
+      "device_name": "OnePlus 13",
+      "aliases": [
+        "OnePlus 13R",
+        "OnePlus 13s"
+      ],
+      "brand": "OnePlus",
+      "category": "smartphone",
+      "image_path": "assets/press/oneplus-13.jpg",
+      "source_url": "https://www.oneplus.com/press",
+      "license": "OnePlus press kit editorial use"
+    },
+    {
+      "device_name": "OnePlus 12",
+      "aliases": [
+        "OnePlus 12R",
+        "OnePlus Ace 3 Pro"
+      ],
+      "brand": "OnePlus",
+      "category": "smartphone",
+      "image_path": "assets/press/oneplus-12.jpg",
+      "source_url": "https://www.oneplus.com/press",
+      "license": "OnePlus press kit editorial use"
+    },
+    {
+      "device_name": "OnePlus Open",
+      "aliases": [
+        "OnePlus Open 2",
+        "OnePlus Fold"
+      ],
+      "brand": "OnePlus",
+      "category": "smartphone",
+      "image_path": "assets/press/oneplus-open.jpg",
+      "source_url": "https://www.oneplus.com/press",
+      "license": "OnePlus press kit editorial use"
+    },
+    {
+      "device_name": "OnePlus Pad",
+      "aliases": [
+        "OnePlus Pad 2",
+        "OnePlus Pad Go"
+      ],
+      "brand": "OnePlus",
+      "category": "tablet",
+      "image_path": "assets/press/oneplus-pad.jpg",
+      "source_url": "https://www.oneplus.com/press",
+      "license": "OnePlus press kit editorial use"
+    },
+    {
+      "device_name": "OnePlus Watch",
+      "aliases": [
+        "OnePlus Watch 2",
+        "OnePlus Watch 3"
+      ],
+      "brand": "OnePlus",
+      "category": "wearable",
+      "image_path": "assets/press/oneplus-watch.jpg",
+      "source_url": "https://www.oneplus.com/press",
+      "license": "OnePlus press kit editorial use"
+    },
+    {
+      "device_name": "Nothing Phone 3",
+      "aliases": [
+        "Nothing Phone 3a",
+        "Nothing Phone 3a Pro",
+        "Nothing Phone (3)"
+      ],
+      "brand": "Nothing",
+      "category": "smartphone",
+      "image_path": "assets/press/nothing-phone-3.jpg",
+      "source_url": "https://nothing.tech/blogs/news/",
+      "license": "Nothing press kit editorial use"
+    },
+    {
+      "device_name": "Nothing Phone 2",
+      "aliases": [
+        "Nothing Phone 2a",
+        "Nothing Phone 2a Plus",
+        "Nothing Phone (2)"
+      ],
+      "brand": "Nothing",
+      "category": "smartphone",
+      "image_path": "assets/press/nothing-phone-2.jpg",
+      "source_url": "https://nothing.tech/blogs/news/",
+      "license": "Nothing press kit editorial use"
+    },
+    {
+      "device_name": "Nothing Ear",
+      "aliases": [
+        "Nothing Ear 2",
+        "Nothing Ear (2)",
+        "Nothing Ear Open",
+        "CMF Buds Pro 2"
+      ],
+      "brand": "Nothing",
+      "category": "audio",
+      "image_path": "assets/press/nothing-ear.jpg",
+      "source_url": "https://nothing.tech/blogs/news/",
+      "license": "Nothing press kit editorial use"
+    },
+    {
+      "device_name": "CMF Phone 1",
+      "aliases": [
+        "CMF by Nothing Phone 1",
+        "CMF Phone 2"
+      ],
+      "brand": "Nothing",
+      "category": "smartphone",
+      "image_path": "assets/press/cmf-phone-1.jpg",
+      "source_url": "https://nothing.tech/blogs/news/",
+      "license": "Nothing / CMF press kit editorial use"
+    },
+    {
+      "device_name": "Motorola Edge 50",
+      "aliases": [
+        "Moto Edge 50",
+        "Edge 50 Pro",
+        "Edge 50 Ultra",
+        "Edge 50 Fusion",
+        "Motorola Edge 40"
+      ],
+      "brand": "Motorola",
+      "category": "smartphone",
+      "image_path": "assets/press/motorola-edge-50.jpg",
+      "source_url": "https://newsroom.motorola.com/",
+      "license": "Motorola press kit editorial use"
+    },
+    {
+      "device_name": "Motorola Razr 2025",
+      "aliases": [
+        "Moto Razr 2025",
+        "Razr 60 Ultra",
+        "Razr 50 Ultra",
+        "Motorola Razr+",
+        "Moto Razr 40 Ultra"
+      ],
+      "brand": "Motorola",
+      "category": "smartphone",
+      "image_path": "assets/press/motorola-razr-2025.jpg",
+      "source_url": "https://newsroom.motorola.com/",
+      "license": "Motorola press kit editorial use"
+    },
+    {
+      "device_name": "Motorola G85",
+      "aliases": [
+        "Moto G85",
+        "Motorola G84",
+        "Moto G Power 2025",
+        "Moto G Stylus 2025",
+        "Moto G 5G 2025"
+      ],
+      "brand": "Motorola",
+      "category": "smartphone",
+      "image_path": "assets/press/motorola-g85.jpg",
+      "source_url": "https://newsroom.motorola.com/",
+      "license": "Motorola press kit editorial use"
+    },
+    {
+      "device_name": "Motorola ThinkPhone",
+      "aliases": [
+        "Moto ThinkPhone",
+        "ThinkPhone 25"
+      ],
+      "brand": "Motorola",
+      "category": "smartphone",
+      "image_path": "assets/press/motorola-thinkphone.jpg",
+      "source_url": "https://newsroom.motorola.com/",
+      "license": "Motorola press kit editorial use"
+    },
+    {
+      "device_name": "Xperia 1 VII",
+      "aliases": [
+        "Sony Xperia 1 VII",
+        "Xperia 1 VI",
+        "Sony Xperia 1 VI"
+      ],
+      "brand": "Sony",
+      "category": "smartphone",
+      "image_path": "assets/press/sony-xperia-1-vii.jpg",
+      "source_url": "https://presscentre.sony.co.uk/",
+      "license": "Sony press kit editorial use"
+    },
+    {
+      "device_name": "Xperia 5 VII",
+      "aliases": [
+        "Sony Xperia 5 VII",
+        "Xperia 5 VI",
+        "Sony Xperia 5 VI"
+      ],
+      "brand": "Sony",
+      "category": "smartphone",
+      "image_path": "assets/press/sony-xperia-5.jpg",
+      "source_url": "https://presscentre.sony.co.uk/",
+      "license": "Sony press kit editorial use"
+    },
+    {
+      "device_name": "Xperia 10 VII",
+      "aliases": [
+        "Sony Xperia 10 VII",
+        "Xperia 10 VI",
+        "Xperia 10 V"
+      ],
+      "brand": "Sony",
+      "category": "smartphone",
+      "image_path": "assets/press/sony-xperia-10.jpg",
+      "source_url": "https://presscentre.sony.co.uk/",
+      "license": "Sony press kit editorial use"
+    },
+    {
+      "device_name": "PlayStation 5",
+      "aliases": [
+        "PS5",
+        "PS5 Pro",
+        "PlayStation 5 Pro",
+        "Sony PS5"
+      ],
+      "brand": "Sony",
+      "category": "console",
+      "image_path": "assets/press/sony-ps5.jpg",
+      "source_url": "https://www.playstation.com/en-us/corporate/press-center/",
+      "license": "Sony PlayStation press kit editorial use"
+    },
+    {
+      "device_name": "PlayStation Portable",
+      "aliases": [
+        "PlayStation Portable 2",
+        "PS Portable",
+        "Sony portable console"
+      ],
+      "brand": "Sony",
+      "category": "console",
+      "image_path": "assets/press/sony-ps5.jpg",
+      "source_url": "https://www.playstation.com/en-us/corporate/press-center/",
+      "license": "Sony PlayStation press kit editorial use"
+    },
+    {
+      "device_name": "Nokia G42",
+      "aliases": [
+        "Nokia G42 5G",
+        "Nokia G22",
+        "Nokia C32",
+        "Nokia X30",
+        "Nokia XR21",
+        "HMD Pulse",
+        "HMD Fusion"
+      ],
+      "brand": "Nokia",
+      "category": "smartphone",
+      "image_path": "assets/press/nokia-g42.jpg",
+      "source_url": "https://www.hmdglobal.com/press",
+      "license": "HMD Global press kit editorial use"
+    },
+    {
+      "device_name": "ASUS ROG Phone 9",
+      "aliases": [
+        "ROG Phone 9",
+        "ROG Phone 9 Pro",
+        "Asus ROG Phone 8",
+        "ROG Phone 8 Pro"
+      ],
+      "brand": "ASUS",
+      "category": "smartphone",
+      "image_path": "assets/press/asus-rog-phone-9.jpg",
+      "source_url": "https://www.asus.com/content/asus-press-room/",
+      "license": "ASUS press kit editorial use"
+    },
+    {
+      "device_name": "ASUS Zenfone 11",
+      "aliases": [
+        "ASUS Zenfone 11 Ultra",
+        "Zenfone 10",
+        "Asus Zenfone 10"
+      ],
+      "brand": "ASUS",
+      "category": "smartphone",
+      "image_path": "assets/press/asus-zenfone-11.jpg",
+      "source_url": "https://www.asus.com/content/asus-press-room/",
+      "license": "ASUS press kit editorial use"
+    },
+    {
+      "device_name": "ASUS ROG Zephyrus",
+      "aliases": [
+        "ROG Zephyrus G14",
+        "ROG Zephyrus G16",
+        "ASUS ROG Zephyrus M16"
+      ],
+      "brand": "ASUS",
+      "category": "laptop",
+      "image_path": "assets/press/asus-rog-zephyrus.jpg",
+      "source_url": "https://www.asus.com/content/asus-press-room/",
+      "license": "ASUS press kit editorial use"
+    },
+    {
+      "device_name": "ASUS ProArt",
+      "aliases": [
+        "ASUS ProArt Studiobook",
+        "ProArt PX13",
+        "ProArt P16"
+      ],
+      "brand": "ASUS",
+      "category": "laptop",
+      "image_path": "assets/press/asus-proart.jpg",
+      "source_url": "https://www.asus.com/content/asus-press-room/",
+      "license": "ASUS press kit editorial use"
+    },
+    {
+      "device_name": "ASUS ZenBook",
+      "aliases": [
+        "ASUS ZenBook 14",
+        "ZenBook Pro",
+        "ASUS Vivobook 15",
+        "Vivobook 14"
+      ],
+      "brand": "ASUS",
+      "category": "laptop",
+      "image_path": "assets/press/asus-zenbook.jpg",
+      "source_url": "https://www.asus.com/content/asus-press-room/",
+      "license": "ASUS press kit editorial use"
+    },
+    {
+      "device_name": "ASUS ROG Ally",
+      "aliases": [
+        "ROG Ally X",
+        "ROG Ally 2",
+        "Asus ROG Ally"
+      ],
+      "brand": "ASUS",
+      "category": "handheld",
+      "image_path": "assets/press/asus-rog-ally.jpg",
+      "source_url": "https://www.asus.com/content/asus-press-room/",
+      "license": "ASUS press kit editorial use"
+    },
+    {
+      "device_name": "Lava Blaze 3",
+      "aliases": [
+        "Lava Blaze 3 5G",
+        "Lava Blaze 2",
+        "Lava Blaze Curve",
+        "Lava Blaze X"
+      ],
+      "brand": "Lava",
+      "category": "smartphone",
+      "image_path": "assets/press/lava-blaze-3.jpg",
+      "source_url": "https://www.lavamobiles.com/press",
+      "license": "Lava press kit editorial use"
+    },
+    {
+      "device_name": "Lava Yuva 5G",
+      "aliases": [
+        "Lava Yuva 3",
+        "Lava Yuva 3 Pro"
+      ],
+      "brand": "Lava",
+      "category": "smartphone",
+      "image_path": "assets/press/lava-yuva.jpg",
+      "source_url": "https://www.lavamobiles.com/press",
+      "license": "Lava press kit editorial use"
+    },
+    {
+      "device_name": "Lava Agni 3",
+      "aliases": [
+        "Lava Agni 2",
+        "Lava Agni 3 5G"
+      ],
+      "brand": "Lava",
+      "category": "smartphone",
+      "image_path": "assets/press/lava-agni-3.jpg",
+      "source_url": "https://www.lavamobiles.com/press",
+      "license": "Lava press kit editorial use"
+    },
+    {
+      "device_name": "Micromax IN Note",
+      "aliases": [
+        "Micromax IN Note 2",
+        "Micromax IN 2C",
+        "Micromax IN 2b"
+      ],
+      "brand": "Micromax",
+      "category": "smartphone",
+      "image_path": "assets/press/micromax-in-note.jpg",
+      "source_url": "https://www.micromaxinfo.com/press",
+      "license": "Micromax press kit editorial use"
+    },
+    {
+      "device_name": "Tecno Phantom V Fold",
+      "aliases": [
+        "Tecno Phantom V Fold 2",
+        "Tecno Phantom V Flip",
+        "Tecno Phantom V Flip 2",
+        "Tecno Camon 30 Pro",
+        "Tecno Camon 20 Pro"
+      ],
+      "brand": "Tecno",
+      "category": "smartphone",
+      "image_path": "assets/press/tecno-phantom-v-fold.jpg",
+      "source_url": "https://www.tecno-mobile.com/press/",
+      "license": "Tecno press kit editorial use"
+    },
+    {
+      "device_name": "Tecno Pova 6",
+      "aliases": [
+        "Tecno Pova 6 Pro",
+        "Tecno Pova 5",
+        "Tecno Spark 20 Pro",
+        "Tecno Pop 8"
+      ],
+      "brand": "Tecno",
+      "category": "smartphone",
+      "image_path": "assets/press/tecno-pova-6.jpg",
+      "source_url": "https://www.tecno-mobile.com/press/",
+      "license": "Tecno press kit editorial use"
+    },
+    {
+      "device_name": "Infinix Zero 40",
+      "aliases": [
+        "Infinix Zero 40 5G",
+        "Infinix Note 40 Pro",
+        "Infinix Hot 50 Pro",
+        "Infinix GT 20 Pro"
+      ],
+      "brand": "Infinix",
+      "category": "smartphone",
+      "image_path": "assets/press/infinix-zero-40.jpg",
+      "source_url": "https://www.infinixmobility.com/news/",
+      "license": "Infinix press kit editorial use"
+    },
+    {
+      "device_name": "Itel P55",
+      "aliases": [
+        "Itel P55 NFC",
+        "Itel A60s",
+        "Itel Vision 3 Plus",
+        "itel RS4"
+      ],
+      "brand": "itel",
+      "category": "smartphone",
+      "image_path": "assets/press/defaults/default-smartphone.jpg",
+      "source_url": "https://www.itel-mobile.com/",
+      "license": "itel press kit editorial use"
+    },
+    {
+      "device_name": "Surface Pro",
+      "aliases": [
+        "Surface Pro 11",
+        "Surface Pro 10",
+        "Microsoft Surface Pro"
+      ],
+      "brand": "Microsoft",
+      "category": "laptop",
+      "image_path": "assets/press/microsoft-surface-pro.jpg",
+      "source_url": "https://news.microsoft.com/press-kit/",
+      "license": "Microsoft press kit editorial use"
+    },
+    {
+      "device_name": "Surface Laptop",
+      "aliases": [
+        "Surface Laptop 7",
+        "Surface Laptop 6",
+        "Surface Laptop Studio 2"
+      ],
+      "brand": "Microsoft",
+      "category": "laptop",
+      "image_path": "assets/press/microsoft-surface-laptop.jpg",
+      "source_url": "https://news.microsoft.com/press-kit/",
+      "license": "Microsoft press kit editorial use"
+    },
+    {
+      "device_name": "Xbox Series X",
+      "aliases": [
+        "Xbox Series S",
+        "Xbox Series X|S",
+        "Microsoft Xbox"
+      ],
+      "brand": "Microsoft",
+      "category": "console",
+      "image_path": "assets/press/microsoft-xbox-series-x.jpg",
+      "source_url": "https://news.microsoft.com/press-kit/",
+      "license": "Microsoft press kit editorial use"
+    },
+    {
+      "device_name": "Xbox Handheld",
+      "aliases": [
+        "Xbox portable",
+        "Microsoft Xbox handheld"
+      ],
+      "brand": "Microsoft",
+      "category": "handheld",
+      "image_path": "assets/press/microsoft-xbox-series-x.jpg",
+      "source_url": "https://news.microsoft.com/press-kit/",
+      "license": "Microsoft press kit editorial use"
+    },
+    {
+      "device_name": "ThinkPad",
+      "aliases": [
+        "Lenovo ThinkPad",
+        "ThinkPad X1 Carbon",
+        "ThinkPad E16",
+        "ThinkPad T14",
+        "ThinkPad L16"
+      ],
+      "brand": "Lenovo",
+      "category": "laptop",
+      "image_path": "assets/press/lenovo-thinkpad.jpg",
+      "source_url": "https://news.lenovo.com/press-kits/",
+      "license": "Lenovo press kit editorial use"
+    },
+    {
+      "device_name": "Lenovo IdeaPad",
+      "aliases": [
+        "IdeaPad 5",
+        "IdeaPad 5 Pro",
+        "IdeaPad Slim 5",
+        "Lenovo Yoga 7",
+        "Lenovo Yoga 9i",
+        "Yoga Slim 7x"
+      ],
+      "brand": "Lenovo",
+      "category": "laptop",
+      "image_path": "assets/press/lenovo-ideapad.jpg",
+      "source_url": "https://news.lenovo.com/press-kits/",
+      "license": "Lenovo press kit editorial use"
+    },
+    {
+      "device_name": "Legion Phone Duel",
+      "aliases": [
+        "Lenovo Legion Phone",
+        "Legion Phone 3",
+        "Legion Phone Duel 3"
+      ],
+      "brand": "Lenovo",
+      "category": "smartphone",
+      "image_path": "assets/press/lenovo-legion-phone.jpg",
+      "source_url": "https://news.lenovo.com/press-kits/",
+      "license": "Lenovo press kit editorial use"
+    },
+    {
+      "device_name": "Lenovo Tab P12 Pro",
+      "aliases": [
+        "Lenovo Tab P12",
+        "Lenovo Tab P11 Pro",
+        "Lenovo Tab Plus",
+        "Lenovo Xiaoxin Pad Pro"
+      ],
+      "brand": "Lenovo",
+      "category": "tablet",
+      "image_path": "assets/press/lenovo-tab-p12.jpg",
+      "source_url": "https://news.lenovo.com/press-kits/",
+      "license": "Lenovo press kit editorial use"
+    },
+    {
+      "device_name": "Legion Go",
+      "aliases": [
+        "Lenovo Legion Go",
+        "Legion Go S"
+      ],
+      "brand": "Lenovo",
+      "category": "handheld",
+      "image_path": "assets/press/lenovo-legion-go.jpg",
+      "source_url": "https://news.lenovo.com/press-kits/",
+      "license": "Lenovo press kit editorial use"
+    },
+    {
+      "device_name": "HP Spectre x360",
+      "aliases": [
+        "HP Spectre",
+        "HP Envy x360",
+        "HP Envy 16",
+        "HP Pavilion Plus"
+      ],
+      "brand": "HP",
+      "category": "laptop",
+      "image_path": "assets/press/hp-spectre-x360.jpg",
+      "source_url": "https://press.hp.com/",
+      "license": "HP press kit editorial use"
+    },
+    {
+      "device_name": "HP OmniBook",
+      "aliases": [
+        "HP OmniBook Ultra",
+        "HP EliteBook",
+        "HP ZBook"
+      ],
+      "brand": "HP",
+      "category": "laptop",
+      "image_path": "assets/press/hp-omnibook.jpg",
+      "source_url": "https://press.hp.com/",
+      "license": "HP press kit editorial use"
+    },
+    {
+      "device_name": "Dell XPS",
+      "aliases": [
+        "Dell XPS 15",
+        "Dell XPS 16",
+        "Dell XPS 13",
+        "Dell XPS 14"
+      ],
+      "brand": "Dell",
+      "category": "laptop",
+      "image_path": "assets/press/dell-xps.jpg",
+      "source_url": "https://www.dell.com/en-us/dt/corporate/newsroom/",
+      "license": "Dell press kit editorial use"
+    },
+    {
+      "device_name": "Dell Inspiron",
+      "aliases": [
+        "Dell Inspiron 16",
+        "Dell Inspiron 14",
+        "Dell Latitude"
+      ],
+      "brand": "Dell",
+      "category": "laptop",
+      "image_path": "assets/press/dell-inspiron.jpg",
+      "source_url": "https://www.dell.com/en-us/dt/corporate/newsroom/",
+      "license": "Dell press kit editorial use"
+    },
+    {
+      "device_name": "Acer Swift",
+      "aliases": [
+        "Acer Swift 14 AI",
+        "Acer Swift 16 AI",
+        "Acer Aspire 5",
+        "Acer Nitro 5"
+      ],
+      "brand": "Acer",
+      "category": "laptop",
+      "image_path": "assets/press/acer-swift.jpg",
+      "source_url": "https://www.acer.com/en/press/",
+      "license": "Acer press kit editorial use"
+    },
+    {
+      "device_name": "MSI Raider",
+      "aliases": [
+        "MSI GT Raider",
+        "MSI Titan GT77",
+        "MSI Stealth 16",
+        "MSI Creator Z16"
+      ],
+      "brand": "MSI",
+      "category": "laptop",
+      "image_path": "assets/press/msi-raider.jpg",
+      "source_url": "https://www.msi.com/about/media-center.html",
+      "license": "MSI press kit editorial use"
+    },
+    {
+      "device_name": "RTX 5090",
+      "aliases": [
+        "GeForce RTX 5090",
+        "RTX 5080",
+        "RTX 5070 Ti",
+        "RTX 5070",
+        "RTX 50 series",
+        "Blackwell GPU"
+      ],
+      "brand": "NVIDIA",
+      "category": "gpu",
+      "image_path": "assets/press/nvidia-rtx-5090.jpg",
+      "source_url": "https://www.nvidia.com/en-us/about-nvidia/press-room/",
+      "license": "NVIDIA press kit editorial use"
+    },
+    {
+      "device_name": "RTX 4090",
+      "aliases": [
+        "GeForce RTX 4090",
+        "RTX 4080 Super",
+        "RTX 4070 Ti Super",
+        "RTX 40 series"
+      ],
+      "brand": "NVIDIA",
+      "category": "gpu",
+      "image_path": "assets/press/nvidia-rtx-4090.jpg",
+      "source_url": "https://www.nvidia.com/en-us/about-nvidia/press-room/",
+      "license": "NVIDIA press kit editorial use"
+    },
+    {
+      "device_name": "Radeon RX 9070",
+      "aliases": [
+        "AMD RX 9070 XT",
+        "RX 9060 XT",
+        "Radeon 9000 series",
+        "RDNA 4"
+      ],
+      "brand": "AMD",
+      "category": "gpu",
+      "image_path": "assets/press/amd-radeon-rx9070.jpg",
+      "source_url": "https://www.amd.com/en/corporate/media-library.html",
+      "license": "AMD press kit editorial use"
+    },
+    {
+      "device_name": "Snapdragon 8 Elite",
+      "aliases": [
+        "Snapdragon X Elite",
+        "Snapdragon 8s Gen 4",
+        "Snapdragon 7s Gen 3",
+        "Qualcomm Snapdragon"
+      ],
+      "brand": "Qualcomm",
+      "category": "chip",
+      "image_path": "assets/press/qualcomm-snapdragon-8-elite.jpg",
+      "source_url": "https://www.qualcomm.com/news/onq/",
+      "license": "Qualcomm press kit editorial use"
+    },
+    {
+      "device_name": "MediaTek Dimensity 9400",
+      "aliases": [
+        "Dimensity 9300+",
+        "Dimensity 8400",
+        "Dimensity 7300X",
+        "MediaTek Helio"
+      ],
+      "brand": "MediaTek",
+      "category": "chip",
+      "image_path": "assets/press/mediatek-dimensity-9400.jpg",
+      "source_url": "https://www.mediatek.com/news-events/press-releases/",
+      "license": "MediaTek press kit editorial use"
+    },
+    {
+      "device_name": "Steam Deck",
+      "aliases": [
+        "Valve Steam Deck",
+        "Steam Deck OLED",
+        "Steam Deck 2"
+      ],
+      "brand": "Valve",
+      "category": "handheld",
+      "image_path": "assets/press/valve-steam-deck.jpg",
+      "source_url": "https://store.steampowered.com/news/",
+      "license": "Valve press kit editorial use"
+    },
+    {
+      "device_name": "Nintendo Switch 2",
+      "aliases": [
+        "Switch 2",
+        "Nintendo Switch OLED",
+        "Nintendo Switch"
+      ],
+      "brand": "Nintendo",
+      "category": "console",
+      "image_path": "assets/press/nintendo-switch-2.jpg",
+      "source_url": "https://www.nintendo.com/en-GB/Nintendo-Switch/Press/",
+      "license": "Nintendo press kit editorial use"
+    },
+    {
+      "device_name": "Tesla Model Y",
+      "aliases": [
+        "Model Y",
+        "Tesla Model Y Juniper"
+      ],
+      "brand": "Tesla",
+      "category": "ev",
+      "image_path": "assets/press/tesla-model-y.jpg",
+      "source_url": "https://www.tesla.com/press",
+      "license": "Tesla press kit editorial use"
+    },
+    {
+      "device_name": "Tesla Model 3",
+      "aliases": [
+        "Model 3",
+        "Tesla Model 3 Highland"
+      ],
+      "brand": "Tesla",
+      "category": "ev",
+      "image_path": "assets/press/tesla-model-3.jpg",
+      "source_url": "https://www.tesla.com/press",
+      "license": "Tesla press kit editorial use"
+    },
+    {
+      "device_name": "Tesla Cybertruck",
+      "aliases": [
+        "Cybertruck"
+      ],
+      "brand": "Tesla",
+      "category": "ev",
+      "image_path": "assets/press/tesla-cybertruck.jpg",
+      "source_url": "https://www.tesla.com/press",
+      "license": "Tesla press kit editorial use"
+    },
+    {
+      "device_name": "BYD Atto 3",
+      "aliases": [
+        "BYD Seal",
+        "BYD Han",
+        "BYD Dolphin",
+        "BYD Seal U"
+      ],
+      "brand": "BYD",
+      "category": "ev",
+      "image_path": "assets/press/byd-atto-3.jpg",
+      "source_url": "https://www.byd.com/en/news.html",
+      "license": "BYD press kit editorial use"
+    },
+    {
+      "device_name": "Volkswagen ID.4",
+      "aliases": [
+        "VW ID.4",
+        "ID.4",
+        "VW ID.3",
+        "ID.3",
+        "VW ID.7",
+        "ID.7"
+      ],
+      "brand": "Volkswagen",
+      "category": "ev",
+      "image_path": "assets/press/vw-id4.jpg",
+      "source_url": "https://media.vw.com/",
+      "license": "VW press kit editorial use"
+    },
+    {
+      "device_name": "Nio ET5",
+      "aliases": [
+        "Nio ET7",
+        "Nio EL6",
+        "Nio ES6",
+        "Nio ES8"
+      ],
+      "brand": "Nio",
+      "category": "ev",
+      "image_path": "assets/press/nio-et5.jpg",
+      "source_url": "https://ir.nio.com/news-releases/",
+      "license": "Nio press kit editorial use"
+    },
+    {
+      "device_name": "Rivian R2",
+      "aliases": [
+        "Rivian R1T",
+        "Rivian R1S",
+        "Rivian R3"
+      ],
+      "brand": "Rivian",
+      "category": "ev",
+      "image_path": "assets/press/rivian-r2.jpg",
+      "source_url": "https://rivian.com/press",
+      "license": "Rivian press kit editorial use"
+    },
+    {
+      "device_name": "Meta Quest 3",
+      "aliases": [
+        "Quest 3",
+        "Meta Quest 3S",
+        "Oculus Quest 3"
+      ],
+      "brand": "Meta",
+      "category": "xr",
+      "image_path": "assets/press/meta-quest-3.jpg",
+      "source_url": "https://about.meta.com/brand/resources/",
+      "license": "Meta press kit editorial use"
+    },
+    {
+      "device_name": "Meta Ray-Ban",
+      "aliases": [
+        "Ray-Ban Meta",
+        "Meta glasses",
+        "Ray-Ban Meta Smart Glasses"
+      ],
+      "brand": "Meta",
+      "category": "xr",
+      "image_path": "assets/press/meta-ray-ban.jpg",
+      "source_url": "https://about.meta.com/brand/resources/",
+      "license": "Meta press kit editorial use"
+    },
+    {
+      "device_name": "Samsung XR headset",
+      "aliases": [
+        "Samsung Project Moohan",
+        "Samsung Moohan",
+        "Android XR headset"
+      ],
+      "brand": "Samsung",
+      "category": "xr",
+      "image_path": "assets/press/samsung-xr-moohan.jpg",
+      "source_url": "https://news.samsung.com/global/",
+      "license": "Samsung press kit editorial use"
+    }
+  ],
+  "category_fallbacks": {
+    "smartphone": "assets/press/defaults/default-smartphone.jpg",
+    "laptop": "assets/press/defaults/default-laptop.jpg",
+    "tablet": "assets/press/defaults/default-tablet.jpg",
+    "wearable": "assets/press/defaults/default-tech.jpg",
+    "audio": "assets/press/defaults/default-tech.jpg",
+    "ai-software": "assets/press/defaults/default-ai.jpg",
+    "ev": "assets/press/defaults/default-ev.jpg",
+    "gpu": "assets/press/defaults/default-tech.jpg",
+    "console": "assets/press/defaults/default-tech.jpg",
+    "handheld": "assets/press/defaults/default-tech.jpg",
+    "xr": "assets/press/defaults/default-tech.jpg",
+    "chip": "assets/press/defaults/default-tech.jpg",
+    "desktop": "assets/press/defaults/default-laptop.jpg",
+    "default": "assets/press/defaults/default-tech.jpg"
+  }
+}

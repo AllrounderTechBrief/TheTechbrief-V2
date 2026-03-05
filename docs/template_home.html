@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
   <title>{{ meta.title }}</title>
   <meta name="description" content="{{ meta.description }}">
   <meta name="robots" content="index, follow">
@@ -96,6 +97,7 @@
 </section>
 
 <!-- ===== TECH TRENDING NOW ===== -->
+<!-- Stories loaded from: site/assets/data/trending.txt — edit that file to update -->
 <section class="trending-now" aria-label="Tech Trending Now">
   <div class="trending-inner">
     <div class="trending-meta">
@@ -104,75 +106,10 @@
         <span class="live-label">Live</span>
       </div>
       <h2 class="trending-title">Tech Trending Now</h2>
-      <time class="trending-date" datetime="2026-03-03">Tue, 3 March 2026</time>
+      <time class="trending-date" datetime=""></time>
     </div>
-    <ol class="trending-list">
-      <li class="trending-item">
-        <span class="trending-num" aria-hidden="true">01</span>
-        <div class="trending-content">
-          <div class="trending-tags">
-            <span class="trend-badge trend-badge--breaking">Breaking</span>
-            <a class="trend-source" href="https://www.apple.com/newsroom/" target="_blank" rel="noopener noreferrer">apple.com/newsroom</a>
-          </div>
-          <h3 class="trending-headline"><a href="mobile-gadgets.html">Apple Unveils iPhone 17e &amp; M4 iPad Air</a></h3>
-          <p class="trending-summary">The <strong>iPhone 17e</strong> ($599) debuts the A19 chip while the new <strong>M4 iPad Air</strong> targets AI-heavy workflows &mdash; claimed 30% faster than its predecessor.</p>
-        </div>
-      </li>
-      <li class="trending-item">
-        <span class="trending-num" aria-hidden="true">02</span>
-        <div class="trending-content">
-          <div class="trending-tags">
-            <span class="trend-badge trend-badge--mwc">MWC 2026</span>
-            <a class="trend-source" href="https://news.samsung.com/global/" target="_blank" rel="noopener noreferrer">Samsung Newsroom</a>
-          </div>
-          <h3 class="trending-headline"><a href="mobile-gadgets.html">Samsung Galaxy S26 Ultra: The Privacy Display King</a></h3>
-          <p class="trending-summary">Live from Barcelona &mdash; the <strong>Galaxy S26 Ultra</strong> debuts Agentic AI and a Privacy Display that physically blocks side-angle viewing. A first for a flagship.</p>
-        </div>
-      </li>
-      <li class="trending-item">
-        <span class="trending-num" aria-hidden="true">03</span>
-        <div class="trending-content">
-          <div class="trending-tags">
-            <span class="trend-badge trend-badge--innovation">Innovation</span>
-            <a class="trend-source" href="https://www.gsmarena.com/" target="_blank" rel="noopener noreferrer">GSMArena &middot; MWC</a>
-          </div>
-          <h3 class="trending-headline"><a href="consumer-tech.html">The Robot Phone Era Has Begun</a></h3>
-          <p class="trending-summary">Honor's <strong>AI Robot Phone</strong> uses micro-motors to physically track users mid-call. Its humanoid companion can moonwalk. ARRI collaborated on its cinema imaging.</p>
-        </div>
-      </li>
-      <li class="trending-item">
-        <span class="trending-num" aria-hidden="true">04</span>
-        <div class="trending-content">
-          <div class="trending-tags">
-            <span class="trend-badge trend-badge--ai">AI Alert</span>
-            <a class="trend-source" href="https://openai.com/news/" target="_blank" rel="noopener noreferrer">OpenAI News</a>
-          </div>
-          <h3 class="trending-headline"><a href="ai-news.html">ChatGPT Facing a Mass Uninstall Wave</a></h3>
-          <p class="trending-summary">A US military partnership announcement triggered a 295% surge in uninstalls. Rivals including Anthropic's <strong>Claude</strong> released major free-tier upgrades to capture displaced users.</p>
-        </div>
-      </li>
-      <li class="trending-item">
-        <span class="trending-num" aria-hidden="true">05</span>
-        <div class="trending-content">
-          <div class="trending-tags">
-            <span class="trend-badge trend-badge--ev">EVs</span>
-            <a class="trend-source" href="https://insideevs.com/" target="_blank" rel="noopener noreferrer">InsideEVs</a>
-          </div>
-          <h3 class="trending-headline"><a href="evs-automotive.html">Volkswagen Hits 2 Million EVs Sold</a></h3>
-          <p class="trending-summary">VW quietly became Europe's top EV brand — delivering its <strong>2 millionth electric model</strong> ahead of schedule. CEO says 2026 will be its biggest EV year yet.</p>
-        </div>
-      </li>
-      <li class="trending-item">
-        <span class="trending-num" aria-hidden="true">06</span>
-        <div class="trending-content">
-          <div class="trending-tags">
-            <span class="trend-badge trend-badge--enterprise">Enterprise</span>
-            <a class="trend-source" href="https://www.darkreading.com/" target="_blank" rel="noopener noreferrer">Dark Reading</a>
-          </div>
-          <h3 class="trending-headline"><a href="cybersecurity-updates.html">Critical OpenClaw Vulnerability Targets AI Agents</a></h3>
-          <p class="trending-summary">A now-patched flaw in the widely-used <strong>OpenClaw framework</strong> exposed AI agents to remote takeover. Security teams urged to patch immediately — adoption has been rapid.</p>
-        </div>
-      </li>
+    <ol class="trending-list" aria-label="Trending stories">
+      <!-- Populated by trending-loader.js from assets/data/trending.txt -->
     </ol>
     <div class="trending-footer">
       <a href="ai-news.html" class="trending-cta">Browse all tech news <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -413,5 +350,7 @@
 </script>
 <!-- Device press-image matcher: swaps in local press images where a device is recognised in the article title -->
 <script src="assets/device-images.js" defer></script>
+<!-- Trending widget loader: reads assets/data/trending.txt — edit that file to update stories -->
+<script src="assets/trending-loader.js" defer></script>
 </body>
 </html>
