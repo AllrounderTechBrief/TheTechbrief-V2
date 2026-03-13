@@ -1,15 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJEGDPW7G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YCJEGDPW7G');
-</script>
   <meta charset="utf-8">
+  <!-- Google Consent Mode v2 (default denied – required for GDPR/EU) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJEGDPW7G"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-YCJEGDPW7G');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Consumer Tech & Hardware Reviews | Tech Brief</title>
   <meta name="description" content="Consumer technology reviews, hardware comparisons, and buying guides. From The Verge, CNET, Tom's Hardware, Wirecutter, and more.">
@@ -75,11 +85,10 @@
     <a href="broadcast-tech.html">Broadcast Tech</a>
     <a href="enterprise-tech.html">Enterprise Tech</a>
     <a href="cybersecurity-updates.html">Cybersecurity</a>
-    <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
-    <a href="consumer-tech.html">Consumer Tech</a>
+    <a href="mobile-gadgets.html" aria-current="page">Mobile &amp; Gadgets</a>
+    <a href="consumer-tech.html" aria-current="page">Consumer Tech</a>
     <a href="gaming.html">Gaming</a>
     <a href="evs-automotive.html">EVs &amp; Automotive</a>
-    <a href="startups-business.html">Startups &amp; Business</a>
     <a href="about.html" class="nav-cta">About</a>
   </nav>
 </header>
@@ -132,7 +141,7 @@
       <span class="section-count">Curated from 40+ sources</span>
     </div>
     <div class="info-box" style="margin-top:24px;">
-      <p><strong>&#x1F6D2; Consumer Tech — Coming soon:</strong> This category is newly launched. Curated summaries will appear here shortly as the editorial feed is configured. Browse our existing categories from the navigation above, or <a href="contact.html">get in touch</a> with a story tip.</p>
+      <p><strong>🛒 Coming soon:</strong> This category is newly launched. Curated summaries will appear here shortly. Browse our existing categories from the navigation above, or <a href="contact.html">get in touch</a> with a story tip.</p>
     </div>
     <nav class="category-grid" style="margin-top:32px;" aria-label="Other categories">
       <a href="ai-news.html" class="cat-card"><span class="cat-card-icon">&#x1F916;</span><span class="cat-card-name">AI News</span><span class="cat-card-desc">Machine learning, LLMs &amp; AI products</span></a>
@@ -142,13 +151,12 @@
     </nav>
   </div>
 </main>
-
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-about">
       <span class="brand-name">The Tech Brief</span>
-      <p>An independent technology publication delivering concise, editorially reviewed coverage from across the technology industry. Updated continuously, 24/7.</p>
+      <p>An independent technology news aggregator delivering concise, editorially reviewed summaries from the world's most trusted tech publications. Updated every three hours, 24/7.</p>
     </div>
     <div class="footer-col">
       <h4>Categories</h4>
@@ -157,10 +165,9 @@
       <a href="enterprise-tech.html">Enterprise Tech</a>
       <a href="cybersecurity-updates.html">Cybersecurity</a>
       <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
-      <a href="consumer-tech.html">Consumer Tech</a>
+      <a href="consumer-tech.html" aria-current="page">Consumer Tech</a>
       <a href="gaming.html">Gaming</a>
       <a href="evs-automotive.html">EVs &amp; Automotive</a>
-      <a href="startups-business.html">Startups &amp; Business</a>
     </div>
     <div class="footer-col">
       <h4>Site Info</h4>
@@ -175,7 +182,7 @@
   </div>
   <div class="footer-bottom">
     <span>© <span id="footer-year"></span> The Tech Brief — thetechbrief.in. All rights reserved.</span>
-    <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
+    <span>AI-assisted summaries based on public RSS feeds. Trademarks belong to their respective owners.</span>
   </div>
 </footer>
 
@@ -214,5 +221,6 @@
     });
   })();
 </script>
+  <script src="assets/cookie-consent.js"></script>
 </body>
 </html>
