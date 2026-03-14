@@ -25,13 +25,13 @@
   <title>{{ meta.title }}</title>
   <meta name="description" content="{{ meta.description }}">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://allroundertechbrief.github.io/TheTechBrief/">
+  <link rel="canonical" href="https://www.thetechbrief.net/">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Tech Brief">
   <meta property="og:title" content="{{ meta.title }}">
   <meta property="og:description" content="{{ meta.description }}">
-  <meta property="og:url" content="https://allroundertechbrief.github.io/TheTechBrief/">
+  <meta property="og:url" content="https://www.thetechbrief.net/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ meta.title }}">
@@ -42,7 +42,7 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "The Tech Brief",
-    "url": "https://allroundertechbrief.github.io/TheTechBrief/",
+    "url": "https://www.thetechbrief.net/",
     "description": "{{ meta.description }}",
     "publisher": {
       "@type": "Organization",
@@ -51,7 +51,7 @@
     },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://allroundertechbrief.github.io/TheTechBrief/?q={search_term_string}",
+      "target": "https://www.thetechbrief.net/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
@@ -174,49 +174,75 @@
     </div>
   </div>
 
-  <!-- Original articles teaser -->
+  <!-- ===== EDITORIAL HIGHLIGHTS — auto-populated from generated_articles.json ===== -->
   <div class="section" style="padding-top:0;">
     <div class="section-head">
       <h2>Original Analysis &amp; Deep Dives</h2>
-      <span class="section-count">Written by The Tech Brief editorial team</span>
+      <span class="section-count">Written by The Tech Brief editorial team &mdash; published daily</span>
+      <span class="section-sub">Original reporting and in-depth analysis across all technology categories</span>
     </div>
     <div class="grid">
-      <article class="card">
-        <div class="card-body">
-          <span class="tag" style="margin-bottom:8px; display:inline-block;">AI News</span>
-          <h3><a href="articles/ai-agents-enterprise-2025.html">AI Agents in the Enterprise: What 2025's Deployments Actually Look Like</a></h3>
-          <p class="card-summary">Beyond the hype &mdash; a practical look at how organisations are deploying AI agents in production, what infrastructure they require, and which use cases are delivering measurable ROI.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">The Tech Brief</span>
-          <span class="tag">Original</span>
-          <a href="articles/ai-agents-enterprise-2025.html" class="read-link">Read analysis</a>
-        </div>
-      </article>
-      <article class="card">
-        <div class="card-body">
-          <span class="tag" style="margin-bottom:8px; display:inline-block;">Cybersecurity</span>
-          <h3><a href="articles/ransomware-playbook-2025.html">The 2025 Ransomware Playbook: How Attacks Have Evolved and What Defences Work</a></h3>
-          <p class="card-summary">Ransomware groups have professionalised. This analysis covers how modern attacks unfold, the role of initial access brokers, and the defensive controls that consistently stop or limit damage.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">The Tech Brief</span>
-          <span class="tag">Original</span>
-          <a href="articles/ransomware-playbook-2025.html" class="read-link">Read analysis</a>
-        </div>
-      </article>
-      <article class="card">
-        <div class="card-body">
-          <span class="tag" style="margin-bottom:8px; display:inline-block;">Mobile &amp; Gadgets</span>
-          <h3><a href="articles/android-vs-iphone-2025.html">Android vs iPhone in 2025: The Real Differences That Actually Matter</a></h3>
-          <p class="card-summary">After a year of flagship launches, we cut through the spec-sheet wars to identify where each platform genuinely leads &mdash; and where the gap has closed to near-irrelevance.</p>
-        </div>
-        <div class="card-footer">
-          <span class="source-tag">The Tech Brief</span>
-          <span class="tag">Original</span>
-          <a href="articles/android-vs-iphone-2025.html" class="read-link">Read analysis</a>
-        </div>
-      </article>
+
+      {% if editorial_articles %}
+        {% for article in editorial_articles %}
+        <article class="card" aria-label="{{ article.title }}">
+          {% if article.image %}
+          <div class="card-img-wrap">
+            <img src="{{ article.image }}" alt="Editorial illustration: {{ article.title }}" loading="lazy" width="400" height="185">
+          </div>
+          {% endif %}
+          <div class="card-body">
+            <span class="tag" style="margin-bottom:8px; display:inline-block;">{{ article.cat_icon }} {{ article.cat_name }}</span>
+            <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+            <p class="card-summary">{{ article.description }}</p>
+          </div>
+          <div class="card-footer">
+            <span class="source-tag">The Tech Brief</span>
+            <span class="tag">Original &mdash; {{ article.date }}</span>
+            <a href="{{ article.url }}" class="read-link">Read analysis</a>
+          </div>
+        </article>
+        {% endfor %}
+      {% else %}
+        <!-- Fallback to static evergreen articles if generator hasn't run yet -->
+        <article class="card">
+          <div class="card-body">
+            <span class="tag" style="margin-bottom:8px; display:inline-block;">🤖 AI News</span>
+            <h3><a href="articles/ai-agents-enterprise-2025.html">AI Agents in the Enterprise: What 2025's Deployments Actually Look Like</a></h3>
+            <p class="card-summary">Beyond the hype — a practical look at how organisations are deploying AI agents in production, what infrastructure they require, and which use cases are delivering measurable ROI.</p>
+          </div>
+          <div class="card-footer">
+            <span class="source-tag">The Tech Brief</span>
+            <span class="tag">Original</span>
+            <a href="articles/ai-agents-enterprise-2025.html" class="read-link">Read analysis</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <span class="tag" style="margin-bottom:8px; display:inline-block;">🔐 Cybersecurity</span>
+            <h3><a href="articles/ransomware-playbook-2025.html">The 2025 Ransomware Playbook: How Attacks Have Evolved and What Defences Work</a></h3>
+            <p class="card-summary">Ransomware groups have professionalised. This analysis covers how modern attacks unfold, the role of initial access brokers, and the defensive controls that consistently stop or limit damage.</p>
+          </div>
+          <div class="card-footer">
+            <span class="source-tag">The Tech Brief</span>
+            <span class="tag">Original</span>
+            <a href="articles/ransomware-playbook-2025.html" class="read-link">Read analysis</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <span class="tag" style="margin-bottom:8px; display:inline-block;">📱 Mobile &amp; Gadgets</span>
+            <h3><a href="articles/android-vs-iphone-2025.html">Android vs iPhone in 2025: The Real Differences That Actually Matter</a></h3>
+            <p class="card-summary">After a year of flagship launches, we cut through the spec-sheet wars to identify where each platform genuinely leads — and where the gap has closed to near-irrelevance.</p>
+          </div>
+          <div class="card-footer">
+            <span class="source-tag">The Tech Brief</span>
+            <span class="tag">Original</span>
+            <a href="articles/android-vs-iphone-2025.html" class="read-link">Read analysis</a>
+          </div>
+        </article>
+      {% endif %}
+
     </div>
   </div>
 

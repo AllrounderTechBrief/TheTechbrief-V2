@@ -25,14 +25,14 @@
   <title>{{ meta.title }}</title>
   <meta name="description" content="{{ meta.description }}">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://allroundertechbrief.github.io/TheTechBrief/{{ meta.slug }}.html">
+  <link rel="canonical" href="https://www.thetechbrief.net/{{ meta.slug }}.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Tech Brief">
   <meta property="og:title" content="{{ meta.title }}">
   <meta property="og:description" content="{{ meta.description }}">
-  <meta property="og:url" content="https://allroundertechbrief.github.io/TheTechBrief/{{ meta.slug }}.html">
+  <meta property="og:url" content="https://www.thetechbrief.net/{{ meta.slug }}.html">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -46,23 +46,23 @@
     "@type": "CollectionPage",
     "name": "{{ meta.h1 }}",
     "description": "{{ meta.description }}",
-    "url": "https://allroundertechbrief.github.io/TheTechBrief/{{ meta.slug }}.html",
+    "url": "https://www.thetechbrief.net/{{ meta.slug }}.html",
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://allroundertechbrief.github.io/TheTechBrief/"},
-        {"@type":"ListItem","position":2,"name":"{{ meta.h1 }}","item":"https://allroundertechbrief.github.io/TheTechBrief/{{ meta.slug }}.html"}
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.thetechbrief.net/"},
+        {"@type":"ListItem","position":2,"name":"{{ meta.h1 }}","item":"https://www.thetechbrief.net/{{ meta.slug }}.html"}
       ]
     },
     "isPartOf": {
       "@type": "WebSite",
       "name": "The Tech Brief",
-      "url": "https://allroundertechbrief.github.io/TheTechBrief/"
+      "url": "https://www.thetechbrief.net/"
     },
     "publisher": {
       "@type": "Organization",
       "name": "The Tech Brief",
-      "url": "https://allroundertechbrief.github.io/TheTechBrief/",
+      "url": "https://www.thetechbrief.net/",
       "email": "prerakm76@gmail.com"
     }
   }
@@ -129,6 +129,39 @@
 
 <!-- ===== MAIN CONTENT ===== -->
 <main id="main-content">
+
+  <!-- ===== EDITORIAL DEEP DIVES — auto-populated from generate_articles.py ===== -->
+  {% if cat_editorial %}
+  <div class="section" style="padding-bottom:0;">
+    <div class="section-head">
+      <h2>&#x270D;&#xFE0F; Original Analysis &amp; Deep Dives</h2>
+      <span class="section-count">{{ cat_editorial | length }} original article{{ 's' if cat_editorial | length != 1 }} &mdash; written by The Tech Brief editorial team</span>
+      <span class="section-sub">In-depth original commentary on {{ meta.h1 }}, not reproduced from any external source</span>
+    </div>
+    <div class="grid">
+      {% for article in cat_editorial %}
+      <article class="card" aria-label="{{ article.title }}" style="border-top: 3px solid var(--accent-2);">
+        {% if article.image %}
+        <div class="card-img-wrap">
+          <img src="{{ article.image }}" alt="Editorial illustration: {{ article.title }}" loading="lazy" width="400" height="185">
+        </div>
+        {% endif %}
+        <div class="card-body">
+          <span class="tag" style="margin-bottom:8px; display:inline-block; background:var(--accent-2); color:#fff;">Original Analysis</span>
+          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          <p class="card-summary">{{ article.description }}</p>
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">The Tech Brief</span>
+          <span class="tag">{{ article.read_minutes }} min read &mdash; {{ article.date }}</span>
+          <a href="{{ article.url }}" class="read-link">Read full article</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
   <div class="section">
     <div class="section-head">
       <h2>Latest in {{ meta.h1 }}</h2>
