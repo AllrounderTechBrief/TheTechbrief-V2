@@ -1,0 +1,157 @@
+name: 🤖 Generate + Build The Tech Brief
+
+on:
+  schedule:
+    # Article generation (Groq deep-dives): daily 05:00 UTC
+    - cron: "0 5 * * *"
+    # RSS rebuild + new summary rewrites: every 6 hours
+    - cron: "0 */6 * * *"
+
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - "docs/**"
+      - "**.md"
+
+  workflow_dispatch:
+    inputs:
+      skip_generate:
+        description: "Skip deep-dive generation (rebuild + rewrite only)"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
+
+permissions:
+  contents: write
+
+# ════════════════════════════════════════════════════════════════════
+# JOB 1 — GENERATE ORIGINAL DEEP-DIVE ARTICLES (Groq Llama 3)
+# Runs only on: daily 05:00 cron OR manual dispatch
+# ════════════════════════════════════════════════════════════════════
+jobs:
+  generate:
+    name: Generate AI Deep-Dive Articles
+    runs-on: ubuntu-latest
+
+    if: |
+      (github.event_name == 'schedule' && github.event.schedule == '0 5 * * *') ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.skip_generate != 'true')
+
+    outputs:
+      ran: "true"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install requests feedparser python-slugify jinja2 beautifulsoup4 sumy nltk
+
+      - name: Download NLTK data
+        run: python -c "import nltk; nltk.download('punkt', quiet=True); nltk.download('punkt_tab', quiet=True)"
+
+      - name: Generate 9 original deep-dive articles (1 per category)
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          echo "=== The Tech Brief — Deep-Dive Generator ==="
+          echo "Date: $(date -u '+%Y-%m-%d %H:%M UTC')"
+          python scripts/generate_articles.py
+
+      - name: Commit generated articles + trending data
+        run: |
+          git config user.name  "Tech Brief Bot"
+          git config user.email "technodate3@gmail.com"
+          git add site/articles/ data/generated_articles.json site/assets/data/trending.txt
+          if git diff --cached --quiet; then
+            echo "No new deep-dive articles today."
+          else
+            git commit -m "🤖 Deep-dive articles — $(date -u '+%Y-%m-%d') [skip ci]"
+            git push origin main
+          fi
+
+  # ════════════════════════════════════════════════════════════════════
+  # JOB 2 — BUILD SITE (RSS rewrites + editorial injection → docs/)
+  # Always runs; pulls latest including any new deep-dives from Job 1
+  # ════════════════════════════════════════════════════════════════════
+  build:
+    name: Build & Deploy Site
+    runs-on: ubuntu-latest
+    needs: [generate]
+    if: always()
+
+    steps:
+      - name: Checkout repository (includes new articles from Job 1)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install requests feedparser beautifulsoup4 sumy python-slugify jinja2 nltk
+
+      - name: Download NLTK data
+        run: python -c "import nltk; nltk.download('punkt', quiet=True); nltk.download('punkt_tab', quiet=True)"
+
+      - name: Build site (RSS rewrites + editorial injection → docs/)
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}   # ← needed for RSS summary rewrites
+        run: |
+          echo "=== The Tech Brief — Site Builder ==="
+          echo "Date: $(date -u '+%Y-%m-%d %H:%M UTC')"
+          python scripts/build.py
+          echo ""
+          echo "--- Build output ---"
+          ls docs/*.html | wc -l && echo "category/static HTML pages"
+          ls docs/articles/*.html 2>/dev/null | wc -l && echo "article pages total"
+          grep -c '<loc>' docs/sitemap.xml && echo "sitemap URLs"
+          test -f docs/index.html  || (echo "ERROR: index.html missing"  && exit 1)
+          test -f docs/sitemap.xml || (echo "ERROR: sitemap.xml missing" && exit 1)
+
+      - name: Commit site output + article cache
+        run: |
+          git config user.name  "Tech Brief Bot"
+          git config user.email "technodate3@gmail.com"
+          # Commit docs/ AND the article cache (keeps rewrites across runs)
+          git add docs/ data/article_cache.json
+          if git diff --cached --quiet; then
+            echo "No site changes to commit."
+          else
+            TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M UTC')
+            git commit -m "chore: site build — ${TIMESTAMP} [skip ci]"
+            git push origin main
+          fi
+
+      - name: Print summary
+        if: always()
+        run: |
+          echo "╔══════════════════════════════════════════════╗"
+          echo "  The Tech Brief — Build Complete"
+          echo "  $(date -u '+%Y-%m-%d %H:%M UTC')"
+          echo "  HTML pages   : $(find docs -maxdepth 1 -name '*.html' | wc -l)"
+          echo "  Article pages: $(find docs/articles -name '*.html' 2>/dev/null | wc -l)"
+          echo "  Sitemap URLs : $(grep -c '<loc>' docs/sitemap.xml 2>/dev/null || echo 0)"
+          echo "  Cache entries: $(python3 -c \"import json; d=json.load(open('data/article_cache.json')); print(len(d))\" 2>/dev/null || echo 0)"
+          echo "╚══════════════════════════════════════════════╝"
