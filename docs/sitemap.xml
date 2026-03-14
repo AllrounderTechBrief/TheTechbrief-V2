@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Core pages -->
   <url>
     <loc>https://www.thetechbrief.net/</loc>
     <lastmod>2026-03-14</lastmod>
@@ -111,7 +110,6 @@
     <priority>0.4</priority>
   </url>
 
-  <!-- Evergreen long-form articles -->
   <url>
     <loc>https://www.thetechbrief.net/articles/ai-agents-enterprise-2025.html</loc>
     <lastmod>2025-02-01</lastmod>
