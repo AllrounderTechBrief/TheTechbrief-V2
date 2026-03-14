@@ -1,94 +1,78 @@
 {
   "Home": {
-    "title": "Tech Brief \u2014 AI, Broadcast Tech, Enterprise IT, Cybersecurity & Mobile News",
-    "description": "Fast, editorially reviewed summaries of the latest technology news. AI, broadcast tech, enterprise IT, cybersecurity and mobile gadgets \u2014 updated every three hours from trusted global sources.",
-    "h1": "Tech Brief \u2014 Modern Technology News",
-    "h2": "Editorially reviewed summaries from the world's most trusted tech publications, updated every three hours.",
+    "title": "The Tech Brief — AI, Broadcast Tech, Enterprise IT, Cybersecurity & Mobile News",
+    "description": "Original technology analysis and coverage across AI, enterprise tech, cybersecurity, broadcast technology and mobile. Written by The Tech Brief editorial team and updated daily.",
+    "h1": "The Tech Brief — Modern Technology News",
+    "h2": "Original editorial analysis and reporting across all areas of technology — updated daily.",
     "slug": "index"
   },
   "AI News": {
-    "title": "AI News & Machine Learning Updates | Tech Brief",
-    "description": "Stay current with the latest AI breakthroughs, machine learning research, automation trends, and large language model developments. Editorially reviewed summaries updated every three hours.",
+    "title": "AI News & Machine Learning Updates | The Tech Brief",
+    "description": "Original analysis of the latest AI breakthroughs, machine learning research, large language model developments and automation trends. Written by The Tech Brief editorial team.",
     "h1": "AI News",
-    "h2": "Breakthroughs in machine learning, automation, and AI industry developments",
+    "h2": "Original analysis of breakthroughs in artificial intelligence, machine learning and automation",
     "slug": "ai-news"
   },
   "Broadcast Tech": {
-    "title": "Broadcast Technology & Media Workflow News | Tech Brief",
-    "description": "Industry updates in broadcast engineering, cloud production, playout systems, and media workflows. Sourced from Avid, Harmonic, Vizrt, TVB Europe, NewscastStudio, and AWS for Media.",
-    "h1": "Broadcast Technology & Media Workflow Updates",
-    "h2": "Industry insights from Avid, Harmonic, Pebble, Vizrt, TVB Europe & AWS for Media",
+    "title": "Broadcast Technology & Media Workflow News | The Tech Brief",
+    "description": "Original coverage of broadcast engineering, cloud production, streaming technology, playout systems and media workflows. Written by The Tech Brief editorial team.",
+    "h1": "Broadcast Technology & Media Workflow",
+    "h2": "Original coverage of broadcast engineering, cloud production, streaming and media technology",
     "slug": "broadcast-tech"
   },
   "Enterprise Tech": {
-    "title": "Enterprise Technology & Cloud Infrastructure News | Tech Brief",
-    "description": "The latest enterprise IT trends: cloud infrastructure, servers, software platforms, and IT operations. Editorially reviewed summaries from ZDNet, InfoWorld, The Register, and SiliconAngle.",
-    "h1": "Enterprise Technology & Cloud Infrastructure News",
-    "h2": "Servers, cloud, and IT operations updates from ZDNet, InfoWorld, The Register & more",
+    "title": "Enterprise Technology & Cloud Infrastructure News | The Tech Brief",
+    "description": "Original analysis of enterprise IT trends: cloud infrastructure, servers, software platforms and IT operations. Written by The Tech Brief editorial team.",
+    "h1": "Enterprise Technology & Cloud Infrastructure",
+    "h2": "Original analysis of cloud infrastructure, servers, enterprise software and IT operations",
     "slug": "enterprise-tech"
   },
   "Cybersecurity Updates": {
-    "title": "Cybersecurity News & Threat Intelligence | Tech Brief",
-    "description": "Security threats, vulnerabilities, and defences covered daily. Editorially reviewed summaries from CSO Online and Dark Reading \u2014 two of the most trusted names in enterprise security.",
+    "title": "Cybersecurity News & Threat Intelligence | The Tech Brief",
+    "description": "Original coverage of security threats, vulnerabilities, data breaches and enterprise defences. Written by The Tech Brief editorial team.",
     "h1": "Cybersecurity News & Threat Intelligence",
-    "h2": "Security updates and threat intelligence from CSO Online & Dark Reading",
+    "h2": "Original editorial coverage of security threats, vulnerabilities and enterprise defences",
     "slug": "cybersecurity-updates"
   },
   "Mobile & Gadgets": {
-    "title": "Mobile & Gadget News \u2014 Smartphones, Wearables & Consumer Tech | Tech Brief",
-    "description": "Smartphone launches, wearables, tablets, and consumer gadget news. Editorially reviewed summaries from The Verge, Engadget, CNET, Android Authority, Gizmodo, and GSMArena.",
+    "title": "Mobile & Gadget News — Smartphones, Wearables & Consumer Tech | The Tech Brief",
+    "description": "Original coverage of smartphone launches, wearables, tablets and consumer gadget news. Written by The Tech Brief editorial team.",
     "h1": "Mobile & Gadget News",
-    "h2": "Smartphone launches, wearables and consumer tech highlights from The Verge, Engadget & more",
+    "h2": "Original coverage of smartphone launches, wearables, tablets and consumer gadget trends",
     "slug": "mobile-gadgets"
   },
   "Consumer Tech": {
-    "title": "Consumer Tech Reviews \u2014 Laptops, Wearables, Smart Home & Gadgets | Tech Brief",
-    "description": "Expert consumer tech reviews and buying guides. Laptops, wearables, smart home devices, headphones, and the best gadgets \u2014 curated from CNET, TechRadar, PCMag, Wirecutter and more.",
+    "title": "Consumer Tech — Laptops, Wearables, Smart Home & Gadgets | The Tech Brief",
+    "description": "Original consumer technology analysis covering laptops, wearables, smart home devices and the best gadgets. Written by The Tech Brief editorial team.",
     "h1": "Consumer Tech & Reviews",
-    "h2": "Laptops, wearables, smart home and gadget reviews from CNET, TechRadar, PCMag &amp; Wirecutter",
+    "h2": "Original analysis of laptops, wearables, smart home devices and consumer technology",
     "slug": "consumer-tech",
     "subcats": [
-      {
-        "label": "Mobile & Gadgets",
-        "href": "mobile-gadgets.html",
-        "icon": "&#x1F4F1;"
-      },
-      {
-        "label": "Laptops",
-        "href": "laptops.html",
-        "icon": "&#x1F4BB;"
-      },
-      {
-        "label": "Wearables",
-        "href": "wearables.html",
-        "icon": "&#x231A;"
-      },
-      {
-        "label": "Smart Home",
-        "href": "smart-home.html",
-        "icon": "&#x1F3E0;"
-      }
+      { "label": "Mobile & Gadgets", "href": "mobile-gadgets.html", "icon": "&#x1F4F1;" },
+      { "label": "Laptops",          "href": "laptops.html",        "icon": "&#x1F4BB;" },
+      { "label": "Wearables",        "href": "wearables.html",      "icon": "&#x231A;"  },
+      { "label": "Smart Home",       "href": "smart-home.html",     "icon": "&#x1F3E0;" }
     ]
   },
   "Gaming": {
-    "title": "Gaming News \u2014 Consoles, PC Games & Industry | Tech Brief",
-    "description": "Video game releases, console news, reviews and gaming industry updates. From IGN, Kotaku, Eurogamer, Polygon, PC Gamer and Rock Paper Shotgun.",
+    "title": "Gaming News — Consoles, PC Games & Industry | The Tech Brief",
+    "description": "Original coverage of video game releases, console news, reviews and gaming industry developments. Written by The Tech Brief editorial team.",
     "h1": "Gaming News",
-    "h2": "Consoles, PC gaming, reviews &amp; industry news from Kotaku, Eurogamer, Polygon &amp; more",
+    "h2": "Original coverage of console gaming, PC games, reviews and the gaming industry",
     "slug": "gaming"
   },
   "EVs & Automotive": {
-    "title": "EVs & Automotive Tech News | Tech Brief",
-    "description": "Electric vehicle launches, autonomous driving, charging infrastructure and automotive technology. From Electrek, InsideEVs, TechCrunch Transport, Car and Driver and MotorTrend.",
+    "title": "EVs & Automotive Tech News | The Tech Brief",
+    "description": "Original analysis of electric vehicle launches, autonomous driving, charging infrastructure and automotive technology trends. Written by The Tech Brief editorial team.",
     "h1": "EVs & Automotive Tech",
-    "h2": "Electric vehicles, autonomous driving &amp; car tech from Electrek, InsideEVs &amp; more",
+    "h2": "Original analysis of electric vehicles, autonomous driving and automotive technology",
     "slug": "evs-automotive"
   },
   "Startups & Business": {
-    "title": "Startups, Tech Business & Funding News | Tech Brief",
-    "description": "Startup launches, funding rounds, M&A, Big Tech business updates, layoffs, market trends and regulatory news. From TechCrunch, VentureBeat, Wired, Fortune and more.",
+    "title": "Startups, Tech Business & Funding News | The Tech Brief",
+    "description": "Original coverage of startup launches, funding rounds, mergers and acquisitions, and Big Tech business strategy. Written by The Tech Brief editorial team.",
     "h1": "Startups & Tech Business",
-    "h2": "Funding rounds, acquisitions, Big Tech strategy &amp; regulatory news from TechCrunch, VentureBeat &amp; more",
+    "h2": "Original coverage of startup funding, acquisitions, Big Tech strategy and regulatory developments",
     "slug": "startups-business"
   }
 }
