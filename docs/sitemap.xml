@@ -1180,12 +1180,6 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.thetechbrief.net/articles/rss-852aeb893d6239ef.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
     <loc>https://www.thetechbrief.net/articles/rss-85c9b1577721084e.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -1199,6 +1193,12 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-6ebb2658d1f0eeb3.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.thetechbrief.net/articles/rss-d3a5a6a5d9554be5.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -1295,12 +1295,6 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-2cd444724dcd5cc7.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.thetechbrief.net/articles/rss-2ef0ca5bdb24a041.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -1444,7 +1438,7 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.thetechbrief.net/articles/rss-28b307906d632c35.html</loc>
+    <loc>https://www.thetechbrief.net/articles/rss-5f0394402340da02.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -1835,6 +1829,12 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-203eb127eea388bc.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.thetechbrief.net/articles/rss-74d0e89c6b681ea7.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
