@@ -1,4 +1,4 @@
-name: 🤖 Generate + Build The Tech Brief
+name: 🎙️ Generate + Build The Streamic
 
 on:
   schedule:
@@ -29,7 +29,6 @@ permissions:
   contents: write
 
 env:
-  # Opt into Node.js 24 now (suppresses deprecation warnings)
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 # ════════════════════════════════════════════════════════════════════
@@ -57,7 +56,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          # No pip cache here — avoids the requirements.txt lookup error
 
       - name: Install dependencies
         run: |
@@ -73,7 +71,7 @@ jobs:
           print('NLTK ready')
           "
 
-      - name: Generate 9 deep-dive articles (1 per category)
+      - name: Generate 8 deep-dive articles (1 per category)
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
@@ -82,13 +80,13 @@ jobs:
 
       - name: Commit deep-dive articles
         run: |
-          git config user.name  "Tech Brief Bot"
-          git config user.email "technodate3@gmail.com"
+          git config user.name  "Streamic Bot"
+          git config user.email "prerakpatel49@gmail.com"
           git add site/articles/ data/generated_articles.json site/assets/data/trending.txt || true
           if git diff --cached --quiet; then
             echo "No new deep-dive articles today."
           else
-            git commit -m "🤖 Deep-dive articles — $(date -u '+%Y-%m-%d') [skip ci]"
+            git commit -m "🎙️ Deep-dive articles — $(date -u '+%Y-%m-%d') [skip ci]"
             git push origin main
           fi
 
@@ -131,13 +129,13 @@ jobs:
 
       - name: Commit trending JSON
         run: |
-          git config user.name  "Tech Brief Bot"
-          git config user.email "technodate3@gmail.com"
+          git config user.name  "Streamic Bot"
+          git config user.email "prerakpatel49@gmail.com"
           git add site/assets/data/trending.json data/trending_cache.json || true
           if git diff --cached --quiet; then
             echo "Trending unchanged."
           else
-            git commit -m "📰 Trending articles updated — $(date -u '+%Y-%m-%d') [skip ci]"
+            git commit -m "📡 Trending articles updated — $(date -u '+%Y-%m-%d') [skip ci]"
             git push origin main
           fi
 
@@ -187,10 +185,10 @@ jobs:
 
       - name: Verify build output
         run: |
-          test -f docs/index.html          || (echo "ERROR: docs/index.html missing"      && exit 1)
-          test -f docs/ai-news.html        || (echo "ERROR: docs/ai-news.html missing"    && exit 1)
-          test -f docs/enterprise-tech.html || (echo "ERROR: docs/enterprise-tech.html missing" && exit 1)
-          test -f docs/sitemap.xml         || (echo "ERROR: docs/sitemap.xml missing"     && exit 1)
+          test -f docs/featured.html        || (echo "ERROR: docs/featured.html missing"      && exit 1)
+          test -f docs/streaming.html       || (echo "ERROR: docs/streaming.html missing"     && exit 1)
+          test -f docs/cloud.html           || (echo "ERROR: docs/cloud.html missing"         && exit 1)
+          test -f docs/sitemap.xml          || (echo "ERROR: docs/sitemap.xml missing"        && exit 1)
           echo "✓ All required output files present"
           echo "Category pages : $(find docs -maxdepth 1 -name '*.html' | wc -l)"
           echo "Article pages  : $(find docs/articles -name '*.html' 2>/dev/null | wc -l)"
@@ -198,8 +196,8 @@ jobs:
 
       - name: Commit site output + cache
         run: |
-          git config user.name  "Tech Brief Bot"
-          git config user.email "technodate3@gmail.com"
+          git config user.name  "Streamic Bot"
+          git config user.email "prerakpatel49@gmail.com"
           git add docs/ data/article_cache.json || true
           if git diff --cached --quiet; then
             echo "No site changes to commit."
@@ -212,7 +210,7 @@ jobs:
         if: always()
         run: |
           echo "╔══════════════════════════════════════════════════╗"
-          echo "  ✅  The Tech Brief — Build Complete"
+          echo "  🎙️  The Streamic — Build Complete"
           echo "  $(date -u '+%Y-%m-%d %H:%M UTC')"
           HTML=$(find docs -maxdepth 1 -name '*.html' 2>/dev/null | wc -l)
           ARTS=$(find docs/articles -name '*.html' 2>/dev/null | wc -l)
