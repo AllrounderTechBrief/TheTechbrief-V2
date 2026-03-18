@@ -526,8 +526,15 @@ def load_editorial_spotlight():
 def clean_text(html):
     txt = BeautifulSoup(html or '', 'html.parser').get_text(' ')
     txt = re.sub(r'\s+', ' ', txt)
-    txt = re.sub(r'(appeared first on[\s\S]{0,80}|the post [\s\S]{0,100}|&nbsp;|read more\.?\s*$)',
+    # Strip syndicated boilerplate
+    txt = re.sub(r'(appeared first on[\s\S]{0,80}|the post [\s\S]{0,100}|&nbsp;)',
                  '', txt, flags=re.IGNORECASE)
+    # Strip truncation markers: [...] [&hellip;] ... Read more (more)
+    txt = re.sub(r'\s*(\[\s*[\.…]+\s*\]|\[\s*more\s*\]|\(\.\.\.\)|read more\.?|\(more\)|&hellip;)\s*$',
+                 '', txt, flags=re.IGNORECASE)
+    # Strip bare trailing ellipsis
+    txt = re.sub(r'\s*\.{2,}\s*$', '', txt)
+    txt = re.sub(r'\s*…\s*$', '', txt)
     txt = _JUNK_PREFIX.sub('', txt)
     return txt.strip()
 
@@ -728,38 +735,26 @@ def make_stub(key, title, raw_text, cat_slug, cat_name, ts):
     # ── Build body paragraphs from remaining sentences ───────────────────────
     remaining = all_sentences[2:]
 
-    if len(remaining) >= 6:
-        body_p1 = ' '.join(remaining[0:3])
-        body_p2 = ' '.join(remaining[3:6])
-        body_p3 = ' '.join(remaining[6:9]) if len(remaining) >= 9 else ' '.join(remaining[6:])
-        body_p3 = body_p3 if body_p3 else None
-    elif len(remaining) >= 3:
-        body_p1 = ' '.join(remaining[0:2])
-        body_p2 = ' '.join(remaining[2:])
-        body_p3 = None
-    elif len(remaining) >= 1:
-        body_p1 = ' '.join(remaining)
-        body_p2 = None
-        body_p3 = None
-    else:
-        body_p1 = None
-        body_p2 = None
-        body_p3 = None
+    # Group remaining sentences into body paragraphs — NEVER use generic filler
+    body_paras = []
+    if remaining:
+        # Group into chunks of ~3 sentences per paragraph
+        chunk_size = 3
+        for i in range(0, min(len(remaining), 9), chunk_size):
+            chunk = ' '.join(remaining[i:i+chunk_size]).strip()
+            if len(chunk) > 30:
+                body_paras.append(chunk)
 
-    body_paras = [p for p in [body_p1, body_p2, body_p3] if p and len(p) > 20]
-
-    # ── Conclusion: a forward-looking line tied to the title topic ───────────
-    # Extract a meaningful noun from the title for a specific (not generic) conclusion
-    title_words = [w for w in title.split() if len(w) > 4 and w[0].isupper()]
-    topic_hint  = title_words[0] if title_words else cat_name
-    conclusion  = (f'{topic_hint} developments like this signal continued momentum in the '
-                   f'{cat_name.lower()} space, with further updates expected as the '
-                   f'industry watches adoption progress.')
+    # ── Conclusion: only if we have real content to conclude ───────────────
+    # Don't add a generic conclusion — leave it blank if no real content
+    conclusion = None
 
     # ── Summary for card display ─────────────────────────────────────────────
     summary = first_sentences(raw_text, 1)[:200] if raw_text else title
 
-    html = _article_page(key, title, summary, lead, body_paras if body_paras else [lead],
+    # Use body_paras if we have them; otherwise just use lead as the article body
+    all_paras = body_paras if body_paras else []
+    html = _article_page(key, title, summary, lead, all_paras,
                          conclusion, cat_slug, cat_name, today, img_url)
     return html, title, summary, img_url, today
 
