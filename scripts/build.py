@@ -37,8 +37,9 @@ CACHE_FILE = os.path.join(ROOT, 'data', 'article_cache.json')
 GEN_FILE   = os.path.join(ROOT, 'data', 'generated_articles.json')
 SITE_SRC   = os.path.join(ROOT, 'site')       # source templates/static
 SITE_OUT   = os.path.join(ROOT, 'docs')       # GitHub Pages output
-SITE_URL   = 'https://www.thetechbrief.net'
-GA_TAG     = 'G-YCJEGDPW7G'
+SITE_URL    = 'https://www.thetechbrief.net'
+GA_TAG      = 'G-YCJEGDPW7G'
+TOPICS_FILE = os.path.join(ROOT, 'data', 'trending_topics.txt')  # weekly manual topics
 
 # FIX 1: Write RSS articles directly to docs/articles/ — NOT site/articles/
 # This bypasses the sync timing issue entirely.
@@ -353,140 +354,408 @@ _TREND_BADGE = {
 }
 
 
-def _groq_trending_article(title: str, category: str) -> dict | None:
-    """Generate a 300-500w trending article via Groq. Returns dict or None."""
-    system = ("You are a senior technology journalist at The Tech Brief. Write 100% original editorial content. "
-              "Never copy, quote, or reference any external source. Return valid JSON only, no markdown fences.")
-    user = (
-        f"Write an original 300-500 word technology article for The Tech Brief's trending section.\n\n"
-        f"Topic inspiration (do NOT copy this headline):\n\"{title}\"\nCategory: {category}\n\n"
-        "Return JSON with this exact structure:\n"
-        "{\"headline\":\"compelling 8-12 word title\","
-        "\"intro\":\"2-sentence hook paragraph\","
-        "\"body\":\"3-4 paragraphs of original analysis (300+ words total). "
-        "Separate paragraphs with \\n\\n. No subheadings, flowing prose only.\","
-        "\"conclusion\":\"1-2 sentence forward-looking close\","
-        "\"summary\":\"25-word meta description\"}"
+def _groq_trending_article(topic_title: str, topic_context: str, category: str) -> dict | None:
+    """
+    Generate a full 700-900 word trending article via Groq.
+    topic_title  — the headline/topic to write about
+    topic_context — background context to help Groq write a richer article
+    Returns dict with paragraphs array (not a body string), or None on failure.
+    """
+    system = (
+        "You are a senior technology journalist at The Tech Brief, an independent publication. "
+        "You write 100% original, authoritative editorial content with real depth and analysis. "
+        "You never copy, quote, or reference any external source by name. "
+        "Return ONLY valid JSON — no markdown fences, no preamble, no explanation."
     )
-    raw = _groq_post(system, user, max_tokens=900)
+    user = (
+        f"Write a full 700-900 word original technology article for The Tech Brief's trending section.\n\n"
+        f"Topic: {topic_title}\n"
+        f"Background context (use to write a richer article — do NOT copy this text verbatim):\n{topic_context}\n"
+        f"Category: {category}\n\n"
+        "Requirements:\n"
+        "- Compelling editorial headline (NOT a copy of the topic above — rewrite it)\n"
+        "- Strong 2-3 sentence intro that hooks the reader immediately\n"
+        "- 5-7 substantial body paragraphs (100-130 words each) covering:\n"
+        "  * What is happening and why it matters now\n"
+        "  * The technical or industry background\n"
+        "  * Who is affected and how (businesses, consumers, developers)\n"
+        "  * Competitive landscape and key players (without naming sources)\n"
+        "  * Broader industry implications and what changes as a result\n"
+        "  * What to watch for in the coming months\n"
+        "- A key insight (one punchy sentence, max 25 words)\n"
+        "- A strong 2-sentence conclusion with a forward-looking perspective\n"
+        "- 25-word SEO meta description\n\n"
+        "Return JSON with EXACTLY this structure (no other keys):\n"
+        "{\n"
+        "  \"headline\": \"compelling 9-14 word title\",\n"
+        "  \"intro\": \"2-3 sentence opening paragraph\",\n"
+        "  \"paragraphs\": [\"paragraph 1\", \"paragraph 2\", \"paragraph 3\", \"paragraph 4\", \"paragraph 5\", \"paragraph 6\"],\n"
+        "  \"key_insight\": \"one punchy takeaway sentence\",\n"
+        "  \"conclusion\": \"2-sentence forward-looking close\",\n"
+        "  \"summary\": \"25-word meta description\"\n"
+        "}\n\n"
+        "Critical rules:\n"
+        "- Every paragraph must be 100-130 words of flowing prose\n"
+        "- No bullet points, no subheadings within paragraphs\n"
+        "- No source names, no quotes, no links\n"
+        "- Total word count: 700-900 words across intro + all paragraphs + conclusion"
+    )
+    raw = _groq_post(system, user, max_tokens=1800)
     if not raw:
         return None
     raw = re.sub(r'^```(?:json)?\s*', '', raw, flags=re.MULTILINE)
     raw = re.sub(r'\s*```$', '', raw.strip()).strip()
     try:
         data = json.loads(raw)
-        required = {'headline', 'intro', 'body', 'conclusion', 'summary'}
+        required = {'headline', 'intro', 'paragraphs', 'conclusion', 'summary'}
         if not required.issubset(data.keys()):
+            print(f'    ✗ Groq trending: missing keys {required - set(data.keys())}')
+            return None
+        if not isinstance(data['paragraphs'], list) or len(data['paragraphs']) < 4:
+            print(f'    ✗ Groq trending: too few paragraphs ({len(data.get("paragraphs",[]))})')
             return None
         return data
-    except Exception:
+    except json.JSONDecodeError as e:
+        print(f'    ✗ Groq trending JSON parse: {e}')
+        print(f'    Raw start: {raw[:200]}')
         return None
 
 
-def _local_trending_fallback(title: str, category: str, seed: str) -> dict:
-    """Generate a full trending article without Groq using local templates."""
-    topic    = _extract_topic(title)
+def _local_trending_fallback(topic_title: str, topic_context: str, category: str, seed: str) -> dict:
+    """
+    Generate a full trending article without Groq.
+    Uses the REAL topic title and context — not generic templates.
+    Produces ~600 words across 6 rich paragraphs.
+    """
+    topic    = _extract_topic(topic_title)
     hash_val = int(hashlib.md5(seed.encode()).hexdigest(), 16)
     closing  = _CAT_CLOSINGS.get(category, _DEFAULT_CLOSING)
 
-    paragraphs = [
-        _FRAMING[hash_val % len(_FRAMING)].format(topic=topic),
-        _FRAMING[(hash_val + 1) % len(_FRAMING)].format(topic=topic + ' developments'),
-        _FRAMING[(hash_val + 2) % len(_FRAMING)].format(topic='this area of ' + category.lower()),
-    ]
-    body = '\n\n'.join(paragraphs)
+    # Use a clean version of the actual topic title as headline
+    # Capitalise first letter of each word
+    headline = ' '.join(w.capitalize() for w in topic.split())
+    if len(headline) < 15:
+        headline = f"The Growing Importance of {headline} in {category}"
 
-    # Manufacture a plausible editorial headline
-    prefixes = ['What the Latest', 'Understanding the', 'The Significance of', 'How', 'Why', 'The Rise of']
-    prefix   = prefixes[hash_val % len(prefixes)]
-    headline = f"{prefix} {category} Developments Matter Right Now"
+    # Build 6 paragraphs using framing templates, each with the real topic
+    templates_ordered = [
+        hash_val % len(_FRAMING),
+        (hash_val + 1) % len(_FRAMING),
+        (hash_val + 2) % len(_FRAMING),
+        (hash_val + 3) % len(_FRAMING),
+    ]
+    paras = []
+    for ti in templates_ordered:
+        p = _FRAMING[ti].format(topic=topic)
+        paras.append(p)
+
+    # Add context paragraph if context is substantive
+    if topic_context and len(topic_context) > 50:
+        ctx_topic = _extract_topic(topic_context[:120])
+        paras.append(_FRAMING[(hash_val + 4) % len(_FRAMING)].format(topic=ctx_topic))
+
+    # Add closing paragraph
+    paras.append(closing + ' The organisations and individuals that engage with these developments early — rather than waiting for the market to settle — will find themselves best positioned to adapt and benefit as this area continues to evolve.')
+
+    intro = paras[0][:240] if paras else f"The {category} landscape is undergoing significant change around {topic}."
 
     return {
         'headline':   headline,
-        'intro':      paragraphs[0][:220],
-        'body':       body,
+        'intro':      intro,
+        'paragraphs': paras,
+        'key_insight': f"{category} developments like {topic} are reshaping industry expectations across the board.",
         'conclusion': closing,
-        'summary':    f"Original analysis of the latest {category} developments from The Tech Brief editorial team.",
+        'summary':    f"In-depth editorial analysis of {topic} and its implications for the {category} sector from The Tech Brief.",
     }
+
+
+def _parse_trending_topics_file() -> list:
+    """
+    Parse data/trending_topics.txt for manually curated weekly topics.
+    Format: blocks of 3 lines separated by blank lines:
+      Line 1: Category
+      Line 2: Headline / topic
+      Line 3: Context sentence
+    Returns list of dicts or empty list if file not found / invalid.
+    """
+    if not os.path.exists(TOPICS_FILE):
+        return []
+    try:
+        raw   = _read(TOPICS_FILE)
+        lines = [l.rstrip() for l in raw.splitlines()]
+        topics, block = [], []
+        for line in lines:
+            stripped = line.strip()
+            if stripped.startswith('#') or stripped == '':
+                if len(block) >= 2:
+                    topics.append({
+                        'cat':     block[0].strip(),
+                        'title':   block[1].strip(),
+                        'context': block[2].strip() if len(block) > 2 else '',
+                    })
+                block = []
+            else:
+                block.append(stripped)
+        if len(block) >= 2:
+            topics.append({
+                'cat':     block[0].strip(),
+                'title':   block[1].strip(),
+                'context': block[2].strip() if len(block) > 2 else '',
+            })
+        # Map category name to slug
+        slug_map = {
+            'AI News': 'ai-news', 'Cybersecurity': 'cybersecurity-updates',
+            'Mobile & Gadgets': 'mobile-gadgets', 'Enterprise Tech': 'enterprise-tech',
+            'EVs & Automotive': 'evs-automotive', 'Gaming': 'gaming',
+            'Consumer Tech': 'consumer-tech', 'Broadcast Tech': 'broadcast-tech',
+            'Startups & Business': 'startups-business',
+        }
+        for t in topics:
+            t['slug'] = slug_map.get(t['cat'], 'ai-news')
+        return [t for t in topics if t['title']]
+    except Exception as ex:
+        print(f'  ⚠ Could not parse trending_topics.txt: {ex}')
+        return []
+
+
+def _build_trending_article_page(
+    headline: str, intro: str, paragraphs: list, key_insight: str,
+    conclusion: str, category: str, cat_slug: str, date_str: str, slug: str
+) -> str:
+    """Build a full standalone HTML article page for a trending story."""
+    image_url   = _pick_image(cat_slug, slug)
+    canon_url   = f'{SITE_URL}/articles/{slug}.html'
+    badge_color = _BADGE_COLORS.get(cat_slug, '#2563EB')
+    icon        = _CAT_ICONS.get(cat_slug, '📰')
+    year        = datetime.now(timezone.utc).year
+    try:    pub_date = datetime.strptime(date_str, '%Y-%m-%d').strftime('%B %d, %Y')
+    except: pub_date = date_str
+
+    safe_hl = headline.replace('"', '&quot;').replace('<', '&lt;')
+    safe_desc = (intro[:155] if intro else headline[:155]).replace('<', '&lt;')
+
+    paras_html = ''.join(f'      <p>{p.replace("<","&lt;").replace(">","&gt;")}</p>\n' for p in paragraphs if p.strip())
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('consent','default',{{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500}});</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id={GA_TAG}"></script>
+  <script>gtag('js',new Date());gtag('config','{GA_TAG}');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>{safe_hl} | The Tech Brief</title>
+  <meta name="description" content="{safe_desc}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{canon_url}">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="The Tech Brief">
+  <meta property="og:title" content="{safe_hl}"><meta property="og:description" content="{safe_desc}">
+  <meta property="og:url" content="{canon_url}"><meta property="og:image" content="{image_url}">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{safe_hl}"><meta name="twitter:image" content="{image_url}">
+  <script type="application/ld+json">
+  {{
+    "@context":"https://schema.org","@type":"Article",
+    "headline":"{safe_hl}","image":"{image_url}",
+    "datePublished":"{date_str}","dateModified":"{date_str}",
+    "author":{{"@type":"Organization","name":"The Tech Brief Editorial Team"}},
+    "publisher":{{"@type":"Organization","name":"The Tech Brief","url":"{SITE_URL}"}},
+    "mainEntityOfPage":"{canon_url}","articleSection":"{category}"
+  }}
+  </script>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    .art-hero{{width:100%;max-height:480px;object-fit:cover;border-radius:var(--radius);margin-bottom:36px;display:block;}}
+    .art-lead{{font-size:19px;line-height:1.78;color:var(--ink-2);font-weight:300;margin-bottom:28px;border-bottom:2px solid var(--border);padding-bottom:24px;}}
+    .art-body p{{font-size:16.5px;line-height:1.88;color:var(--ink);margin-bottom:22px;}}
+    .art-insight{{background:var(--surface-2);border-left:4px solid var(--accent);padding:18px 22px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:32px 0;font-size:16px;line-height:1.65;color:var(--ink);font-style:italic;}}
+    .art-insight strong{{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--accent);font-style:normal;margin-bottom:6px;}}
+    .art-conclusion{{background:#F5F8FF;border:1px solid var(--border);padding:20px 24px;border-radius:var(--radius);margin-top:32px;font-size:16px;line-height:1.72;color:var(--ink-2);}}
+    .art-conclusion strong{{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--accent);margin-bottom:8px;}}
+    .art-meta{{display:flex;gap:16px;align-items:center;margin-bottom:28px;padding-bottom:18px;border-bottom:2px solid var(--border);flex-wrap:wrap;font-size:13px;color:var(--ink-3);}}
+    .art-meta strong{{color:var(--ink);}}
+    .rel-links a{{display:block;padding:10px 0;border-bottom:1px solid var(--border-2);color:var(--accent);font-size:15px;font-weight:500;}}
+    .art-tag{{display:inline-block;background:{badge_color};color:#fff;padding:4px 14px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;text-decoration:none;}}
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header" role="banner">
+  <a href="../index.html" class="header-brand" aria-label="The Tech Brief — Home"><div class="brand-icon" aria-hidden="true">TB</div><span class="brand-name">Tech Brief</span></a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
+    <a href="../index.html">Home</a><a href="../ai-news.html">AI News</a><a href="../broadcast-tech.html">Broadcast Tech</a><a href="../enterprise-tech.html">Enterprise Tech</a><a href="../cybersecurity-updates.html">Cybersecurity</a><a href="../mobile-gadgets.html">Mobile &amp; Gadgets</a><a href="../consumer-tech.html">Consumer Tech</a><a href="../gaming.html">Gaming</a><a href="../evs-automotive.html">EVs &amp; Automotive</a><a href="../startups-business.html">Startups &amp; Business</a><a href="../how-to.html">How-To Guides</a><a href="../about.html" class="nav-cta">About</a>
+  </nav>
+</header>
+<main id="main-content">
+  <article class="page-wrap" style="max-width:760px;">
+    <div style="margin-bottom:14px;font-size:13px;"><a href="../index.html" style="color:var(--ink-3);">Home</a><span style="color:var(--ink-3);margin:0 6px;">&rsaquo;</span><a href="../{cat_slug}.html" style="color:var(--ink-3);">{category}</a><span style="color:var(--ink-3);margin:0 6px;">&rsaquo;</span><span style="color:var(--ink);">Trending</span></div>
+    <a href="../{cat_slug}.html" class="art-tag">{icon} {category}</a>
+    <h1 style="font-family:var(--font-serif);font-size:clamp(28px,4vw,44px);line-height:1.18;margin:18px 0 14px;color:var(--ink);">{headline}</h1>
+    <div class="art-meta"><span>By <strong>The Tech Brief Editorial Team</strong></span><span><time datetime="{date_str}">{pub_date}</time></span><span>{len(paragraphs) + 2} min read</span><span style="margin-left:auto;background:#FFF3CD;color:#92400E;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;">🔥 Trending</span></div>
+    <img class="art-hero" src="{image_url}" alt="{safe_hl}" width="760" height="420" loading="eager">
+    <div class="art-body">
+      <p class="art-lead">{intro}</p>
+{paras_html}
+      {f'<div class="art-insight"><strong>Key Insight</strong>{key_insight}</div>' if key_insight else ''}
+      <div class="art-conclusion"><strong>The Bottom Line</strong>{conclusion}</div>
+    </div>
+    <div style="margin-top:32px;padding:14px 20px;background:var(--surface-2);border-radius:var(--radius);font-size:13px;color:var(--ink-3);">
+      <strong style="color:var(--ink);">Editorial Note:</strong> This article is independently written by The Tech Brief editorial team as original analysis and commentary.
+      <a href="../about.html" style="color:var(--accent);margin-left:4px;">About our process &rarr;</a>
+    </div>
+    <div style="border-top:2px solid var(--border);margin-top:36px;padding-top:22px;">
+      <h3 style="font-family:var(--font-serif);font-size:19px;margin-bottom:14px;">Continue Reading</h3>
+      <div class="rel-links">
+        <a href="../{cat_slug}.html">{icon} More {category} analysis</a>
+        <a href="../index.html">🏠 Back to The Tech Brief home</a>
+        <a href="../how-to.html">📖 How-To Guides &amp; Tutorials</a>
+      </div>
+    </div>
+  </article>
+</main>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-about"><span class="brand-name">The Tech Brief</span><p>Independent technology publication delivering original editorial analysis. Updated daily.</p></div>
+    <div class="footer-col"><h4>Categories</h4><a href="../ai-news.html">AI News</a><a href="../broadcast-tech.html">Broadcast Tech</a><a href="../enterprise-tech.html">Enterprise Tech</a><a href="../cybersecurity-updates.html">Cybersecurity</a><a href="../mobile-gadgets.html">Mobile &amp; Gadgets</a><a href="../consumer-tech.html">Consumer Tech</a><a href="../gaming.html">Gaming</a><a href="../evs-automotive.html">EVs &amp; Automotive</a><a href="../startups-business.html">Startups &amp; Business</a></div>
+    <div class="footer-col"><h4>Site Info</h4><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../legal/privacy.html">Privacy Policy</a><a href="../legal/terms.html">Terms of Use</a></div>
+  </div>
+  <div class="footer-footer"><span>&copy; {year} The Tech Brief &mdash; thetechbrief.net</span></div>
+</footer>
+<script>(function(){{var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');if(!t||!n)return;t.addEventListener('click',function(){{var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);}});}})();</script>
+<script src="../assets/cookie-consent.js"></script>
+</body>
+</html>"""
 
 
 def build_trending():
     """
-    FIX 2: Generate 6 trending articles every build run.
-    Writes directly to docs/assets/data/trending.json + trending.txt.
-    The trending widget reads trending.json first, then falls back to trending.txt.
+    Generates 6 full trending articles every build run.
+
+    Topic sources (priority order):
+      1. data/trending_topics.txt  — manually curated weekly topics (ask Claude to update)
+      2. RSS feeds                 — auto-fetched if manual file not present / insufficient
+
+    For each topic:
+      - Calls Groq Llama 3 to write a 700-900 word original article
+      - Falls back to rich local templates if Groq unavailable
+      - Writes a full standalone article page to docs/articles/trending-{slug}.html
+      - Stores the full article in trending.json (paragraphs array, not body string)
+      - Writes trending.txt as a fallback for the JS widget
     """
     print('  Building trending articles…')
     today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
-    # Fetch candidate stories
-    stories = []
-    for feed_cfg in _TRENDING_FEEDS:
-        try:
-            feed = feedparser.parse(feed_cfg['url'])
-            for entry in feed.entries[:2]:
-                t = (entry.get('title') or '').strip()
-                l = (entry.get('link') or '').strip()
-                if t and l and len(t) > 20:
-                    ts = entry.get('published_parsed') or entry.get('updated_parsed')
-                    stories.append({'title': t, 'link': l, 'cat': feed_cfg['cat'], 'slug': feed_cfg['slug'], 'ts': time.mktime(ts) if ts else 0})
-        except Exception:
-            pass
+    # ── Step 1: Get topics (manual file first, then RSS) ────────────────────
+    manual_topics = _parse_trending_topics_file()
+    if manual_topics:
+        print(f'  Using {len(manual_topics)} manually curated topics from trending_topics.txt')
+        sources = manual_topics[:6]
+    else:
+        print('  No trending_topics.txt — fetching from RSS feeds')
+        raw_stories = []
+        for feed_cfg in _TRENDING_FEEDS:
+            try:
+                feed = feedparser.parse(feed_cfg['url'])
+                for entry in feed.entries[:2]:
+                    t = (entry.get('title') or '').strip()
+                    l = (entry.get('link') or '').strip()
+                    if t and l and len(t) > 20:
+                        ts = entry.get('published_parsed') or entry.get('updated_parsed')
+                        raw_stories.append({
+                            'cat': feed_cfg['cat'], 'slug': feed_cfg['slug'],
+                            'title': t, 'context': '', 'link': l,
+                            'ts': time.mktime(ts) if ts else 0,
+                        })
+            except Exception:
+                pass
+        raw_stories.sort(key=lambda x: x['ts'], reverse=True)
+        used_cats, sources = set(), []
+        for s in raw_stories:
+            if s['slug'] not in used_cats and len(sources) < 6:
+                sources.append(s); used_cats.add(s['slug'])
+        for s in raw_stories:
+            if len(sources) >= 6: break
+            if s not in sources: sources.append(s)
 
-    stories.sort(key=lambda x: x['ts'], reverse=True)
-    # One per category, max 6
-    used_cats, selected = set(), []
-    for s in stories:
-        if s['slug'] not in used_cats and len(selected) < 6:
-            selected.append(s); used_cats.add(s['slug'])
-    # Fill if < 6
-    for s in stories:
-        if len(selected) >= 6: break
-        if s not in selected: selected.append(s)
+    # ── Step 2: Generate articles ───────────────────────────────────────────
+    output, txt_lines = [], []
+    os.makedirs(RSS_ARTICLES_OUT, exist_ok=True)
 
-    output = []
-    txt_lines = []
+    for i, src in enumerate(sources):
+        cat_name = src['cat']
+        cat_slug = src.get('slug', 'ai-news')
+        title    = src['title']
+        context  = src.get('context', '')
+        seed     = _url_key(title + cat_slug)
+        badge, bcolor = _TREND_BADGE.get(cat_slug, ('Tech', '#2563EB'))
+        image = _pick_image(cat_slug, seed)
 
-    for story in selected:
-        seed  = _url_key(story['link'])
-        badge, bcolor = _TREND_BADGE.get(story['slug'], ('Tech', '#2563EB'))
-        image = _pick_image(story['slug'], seed)
+        print(f'    [{i+1}/6] {cat_name}: {title[:55]}…')
 
         if GROQ_API_KEY:
-            print(f'    ✍  Trending: {story["title"][:55]}…')
-            article = _groq_trending_article(story['title'], story['cat'])
+            article = _groq_trending_article(title, context, cat_name)
             if not article:
-                article = _local_trending_fallback(story['title'], story['cat'], seed)
+                print(f'    ⚠ Groq failed — using local fallback')
+                article = _local_trending_fallback(title, context, cat_name, seed)
         else:
-            article = _local_trending_fallback(story['title'], story['cat'], seed)
+            article = _local_trending_fallback(title, context, cat_name, seed)
 
+        # Build article page slug
+        art_slug  = f"trending-{seed}"
+        art_url   = f"articles/{art_slug}.html"
+
+        # Write standalone article HTML page
+        art_html = _build_trending_article_page(
+            headline   = article['headline'],
+            intro      = article['intro'],
+            paragraphs = article.get('paragraphs', []),
+            key_insight= article.get('key_insight', ''),
+            conclusion = article['conclusion'],
+            category   = cat_name,
+            cat_slug   = cat_slug,
+            date_str   = today,
+            slug       = art_slug,
+        )
+        art_path = os.path.join(RSS_ARTICLES_OUT, f'{art_slug}.html')
+        with open(art_path, 'w', encoding='utf-8') as f:
+            f.write(art_html)
+
+        # Build JSON record — store paragraphs array (not body string)
         record = {
-            'headline':   article['headline'],
-            'intro':      article['intro'],
-            'body':       article['body'],
-            'conclusion': article['conclusion'],
-            'summary':    article['summary'],
-            'category':   story['cat'],
-            'cat_slug':   story['slug'],
-            'cat_url':    f"{story['slug']}.html",
-            'badge':      badge,
+            'headline':    article['headline'],
+            'intro':       article['intro'],
+            'paragraphs':  article.get('paragraphs', []),
+            'key_insight': article.get('key_insight', ''),
+            'conclusion':  article['conclusion'],
+            'summary':     article.get('summary', article['intro'][:120]),
+            'category':    cat_name,
+            'cat_slug':    cat_slug,
+            'cat_url':     f'{cat_slug}.html',
+            'article_url': art_url,
+            'badge':       badge,
             'badge_color': bcolor,
-            'image':      image,
-            'date':       today,
+            'image':       image,
+            'date':        today,
         }
         output.append(record)
 
-        # Also build trending.txt entry (5-line format for JS fallback)
+        # trending.txt fallback entry
         txt_lines += [
             article['headline'],
-            article['summary'],
+            article.get('summary', article['intro'][:100]),
             badge,
             'The Tech Brief',
-            f"{story['slug']}.html",
+            art_url,
             '',
         ]
+        print(f'    ✓ {article["headline"][:60]}…')
 
-    # Write trending.json
+    # ── Step 3: Write output files ──────────────────────────────────────────
     data_dir = os.path.join(SITE_OUT, 'assets', 'data')
     os.makedirs(data_dir, exist_ok=True)
 
@@ -494,19 +763,18 @@ def build_trending():
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump({'updated': today, 'stories': output}, f, indent=2, ensure_ascii=False)
 
-    # Write trending.txt (fallback)
     txt_path = os.path.join(data_dir, 'trending.txt')
     with open(txt_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(txt_lines))
 
-    # Also keep site/ copies in sync
+    # Keep site/ copies in sync
+    import shutil as _sh
     site_data_dir = os.path.join(SITE_SRC, 'assets', 'data')
     os.makedirs(site_data_dir, exist_ok=True)
-    import shutil
-    shutil.copy2(json_path, os.path.join(site_data_dir, 'trending.json'))
-    shutil.copy2(txt_path,  os.path.join(site_data_dir, 'trending.txt'))
+    _sh.copy2(json_path, os.path.join(site_data_dir, 'trending.json'))
+    _sh.copy2(txt_path,  os.path.join(site_data_dir, 'trending.txt'))
 
-    print(f'  ✓ trending.json + trending.txt written ({len(output)} stories)')
+    print(f'  ✓ Trending: {len(output)} full articles ({len(output)*700}+ words) written to docs/articles/ + trending.json')
 
 
 # ══════════════════════════════════════════════════════════════════════════════
