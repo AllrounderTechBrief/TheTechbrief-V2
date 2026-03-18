@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied', 'ad_storage': 'denied',
+      'ad_user_data': 'denied', 'ad_personalization': 'denied', 'wait_for_update': 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0VSHDN3ZR6"></script>
+  <script>gtag('js', new Date()); gtag('config', 'G-0VSHDN3ZR6');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8033069131874524" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Newsroom Technology — The Streamic</title>
+  <meta name="description" content="Newsroom computer systems, production workflows, remote journalism technology, and broadcast news industry developments.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="The Streamic">
+  <link rel="canonical" href="https://www.thestreamic.in/newsroom.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Streamic">
+  <meta property="og:title" content="Newsroom Technology — The Streamic">
+  <meta property="og:description" content="Newsroom computer systems, production workflows, remote journalism technology, and broadcast news industry developments.">
+  <meta property="og:url" content="https://www.thestreamic.in/newsroom.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Newsroom Technology — The Streamic">
+  <meta name="twitter:description" content="Newsroom computer systems, production workflows, remote journalism technology, and broadcast news industry developments.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Newsroom Technology",
+    "description": "Newsroom computer systems, production workflows, remote journalism technology, and broadcast news industry developments.",
+    "url": "https://www.thestreamic.in/newsroom.html",
+    "isPartOf": {"@type": "WebSite", "name": "The Streamic", "url": "https://www.thestreamic.in/"}
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── Page hero ── */
+    .page-hero {
+      background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
+      color: #fff;
+      padding: 44px 24px 36px;
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-family: Montserrat, sans-serif;
+      font-size: clamp(26px, 5vw, 44px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .page-hero p { font-size: 15px; color: rgba(255,255,255,0.65); max-width: 560px; margin: 0 auto; }
+
+    /* ── Page wrap ── */
+    .page-wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .page-section { padding: 36px 0; }
+    .section-hdr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #d2d2d7;
+    }
+    .section-hdr h2 {
+      font-family: Montserrat, sans-serif;
+      font-size: 19px; font-weight: 700; color: #1d1d1f;
+    }
+
+    /* ── Editorial cards (AI-authored originals) ── */
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 16px;
+    }
+    .editorial-card {
+      background: #fff;
+      border: 1px solid #e8e8ed;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: box-shadow 0.2s, transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .editorial-card:hover {
+      box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
+    }
+    .editorial-card img { width:100%; height:165px; object-fit:cover; display:block; }
+    .editorial-card-body { padding: 16px; }
+    .editorial-badge {
+      display: inline-block;
+      background: #1d1d1f; color: #fff;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.8px; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 999px; margin-bottom: 8px;
+    }
+    .editorial-card-title {
+      font-family: Montserrat, sans-serif;
+      font-size: 15px; font-weight: 700;
+      color: #1d1d1f; line-height: 1.35; margin-bottom: 6px;
+    }
+    .editorial-card-desc { font-size: 13px; color: #86868b; line-height: 1.5; margin-bottom: 10px; }
+    .editorial-card-meta { font-size: 12px; color: #86868b; display: flex; justify-content: space-between; }
+
+    /* ── News grid (RSS-derived, Groq-rewritten) ── */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .news-card {
+      background: #fff;
+      border: 1px solid #e8e8ed;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+      transition: box-shadow 0.2s;
+    }
+    .news-card:hover { box-shadow: 0 6px 22px rgba(0,0,0,0.09); }
+    .news-card-img { width:100%; height:155px; object-fit:cover; display:block; }
+    .news-card-body { padding: 14px; }
+    .news-card-title {
+      font-family: Montserrat, sans-serif;
+      font-size: 14px; font-weight: 600;
+      color: #1d1d1f; line-height: 1.4; margin-bottom: 8px;
+    }
+    .news-card-title a { color: inherit; text-decoration: none; }
+    .news-card-title a:hover { color: #0071e3; }
+    .news-card-summary {
+      font-size: 12px; color: #86868b; line-height: 1.5; margin-bottom: 10px;
+      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .news-card-meta {
+      font-size: 11px; color: #86868b;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .news-card-meta a { color: #0071e3; font-weight: 600; font-size: 11px; text-decoration: none; }
+    .news-card-meta a:hover { text-decoration: underline; }
+
+    /* ── AdSense — no visible gap when not yet approved ── */
+    .adsense-unit { margin: 28px 0; line-height: 0; font-size: 0; }
+    .adsense-unit ins:empty { display: none; }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: #1d1d1f; color: #86868b;
+      padding: 44px 24px 30px; margin-top: 52px;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px; margin-bottom: 28px;
+    }
+    .footer-brand {
+      font-family: Montserrat, sans-serif;
+      font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 10px;
+    }
+    .footer-inner p { font-size: 13px; line-height: 1.6; }
+    .footer-col h4 {
+      font-family: Montserrat, sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.8px; text-transform: uppercase;
+      color: #fff; margin-bottom: 12px;
+    }
+    .footer-col a {
+      display: block; color: #86868b; text-decoration: none;
+      font-size: 13px; padding: 4px 0; transition: color 0.2s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      max-width: 1200px; margin: 0 auto;
+      padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex; justify-content: space-between; flex-wrap: wrap;
+      gap: 8px; font-size: 12px;
+    }
+    @media (max-width: 900px) {
+      .editorial-grid, .news-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .editorial-grid, .news-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 20px; }
+      .footer-bottom { flex-direction: column; }
+    }
+  </style>
+</head>
+<body data-category="newsroom">
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="featured.html" class="nav-logo-container">
+        <img src="assets/logo.png" alt="The Streamic Logo" class="nav-logo-image"
+             onload="this.closest('.nav-logo-container').classList.add('logo-loaded')">
+        <span class="nav-logo">THE STREAMIC</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="featured.html">FEATURED</a></li>
+        <li><a href="infrastructure.html">INFRASTRUCTURE</a></li>
+        <li><a href="graphics.html">GRAPHICS</a></li>
+        <li><a href="cloud.html">CLOUD PRODUCTION</a></li>
+        <li><a href="streaming.html">STREAMING</a></li>
+        <li><a href="ai-post-production.html">AI &amp; POST-PRODUCTION</a></li>
+        <li><a href="playout.html">PLAYOUT</a></li>
+        <li><a href="newsroom.html" class="active">NEWSROOM</a></li>
+      </ul>
+      <div class="header-subscribe">
+        <a href="vlog.html" class="editors-desk-link">Editor's Desk</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <h1>Newsroom Technology</h1>
+    <p>Newsroom systems, production workflows and remote journalism</p>
+  </section>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <div class="page-wrap">
+
+      <!-- ── AI-authored original articles (only when they exist) ── -->
+      
+
+      <!-- ── News grid (Groq-rewritten articles) ── -->
+      <div class="page-section">
+        <div class="section-hdr">
+          <h2>📡 Latest Newsroom Technology News</h2>
+        </div>
+        <div class="news-grid">
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2025/03/GettyImages-2189016670.jpg"
+                 alt="YouTube to stream first ten minutes of FIFA World Cup matches"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-dec5ad21e7d3fa80.html">YouTube to stream first ten minutes of FIFA World Cup matches</a>
+              </div>
+              
+              <div class="news-card-summary">The 'innovative agreement' aims to enhance viewer experiences and unlock monetisation opportunities with premium content across FIFA and its Media Partners’ res</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-dec5ad21e7d3fa80.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2024/07/s465_lisa-nandy.jpg"
+                 alt="Lisa Nandy suggests BBC could be given permanent charter"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-cfa8a595742dbc8c.html">Lisa Nandy suggests BBC could be given permanent charter</a>
+              </div>
+              
+              <div class="news-card-summary">Speaking at the Society of Editors conference, Nandy described the BBC as "one of the two most important institutions in our country", alongside the NHS</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-cfa8a595742dbc8c.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/03/DF-V-5G-6-2048x1365-1-726x484.jpg"
+                 alt="Vislink debuts DragonFly V 5G dual-modem video transmitter"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-b177955d39166fb5.html">Vislink debuts DragonFly V 5G dual-modem video transmitter</a>
+              </div>
+              
+              <div class="news-card-summary">DragonFly V 5G transforms compact or handheld cameras into portable live contribution units while additional cellular connectivity enables the maintenance of a </div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-b177955d39166fb5.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/03/convertip-Matrox-Video-726x452.jpg"
+                 alt="Matrox Video’s encoders/decoders built into Rai’s IP workflow"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-4506cfe26c01191f.html">Matrox Video’s encoders/decoders built into Rai’s IP workflow</a>
+              </div>
+              
+              <div class="news-card-summary">The ConvertIP DSS and DSH models support SDI- and HDMI-to-ST 2110 conversion, as well as providing monitoring capabilities</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-4506cfe26c01191f.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/03/larissa-gorner-meeus-726x726.png"
+                 alt="Larissa Görner-Meeus joins Net Insight"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-84de19ca50a6f95d.html">Larissa Görner-Meeus joins Net Insight</a>
+              </div>
+              
+              <div class="news-card-summary">She will rejoin the company on 4th May, having previously held product leadership roles at Net Insight from 2016 to 2019</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-84de19ca50a6f95d.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/HTGZKoGBr4pQ4RdzBD8ywh-1280-80.jpg"
+                 alt="NAB Show: Cobalt Digital to Unveil Additions Its IPMX and ST 2110 Ecosystem"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-bdd2663fce45d425.html">NAB Show: Cobalt Digital to Unveil Additions Its IPMX and ST 2110 Ecosystem</a>
+              </div>
+              
+              <div class="news-card-summary">Highlights include industry’s only IPMX certified audio monitor, plus multiviewers, gateways, converters and routers</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-bdd2663fce45d425.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/oq3Jos48KwLmXSvtdNkbB8-1280-80.png"
+                 alt="Sponsored: How Actus Digital is Engineering the Future of Broadcast Intelligence"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-31b4a120f4d39207.html">Sponsored: How Actus Digital is Engineering the Future of Broadcast Intelligence</a>
+              </div>
+              
+              <div class="news-card-summary">At the upcoming NAB Show 2026, Actus Digital is set to showcase major enhancements to its flagship Actus X platform</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-31b4a120f4d39207.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/6hvkXYfPZS7D4mfVhSs8Y6-1280-80.jpg"
+                 alt="2026 NAB Show Exhibitor Insight: Amazon Web Services (AWS)"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-ab28c512e89a4337.html">2026 NAB Show Exhibitor Insight: Amazon Web Services (AWS)</a>
+              </div>
+              
+              <div class="news-card-summary">Global Leader, Solutions Architecture, Media & Entertainment, Games and Sports Steph Lone will showcase AWS Elemental Inference, a vertical video solution</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-ab28c512e89a4337.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/5zo9Pmh7epXurQQ3hjNxj-1280-80.jpeg"
+                 alt="Survey: Voters Trust TV News Over AI, Social and Search"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-d697f9dd14a67ca1.html">Survey: Voters Trust TV News Over AI, Social and Search</a>
+              </div>
+              
+              <div class="news-card-summary">Potential voters are almost 9 times more likely to trust TV news than social media platforms; 50% of total respondents rank AI lowest for trust according to a V</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-d697f9dd14a67ca1.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/mHmn8hnJNLDERZGd7ewxsS-1280-80.png"
+                 alt="Peter Thordarson Joins ASG as Technical Account Executive"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-7bb06cf97e3d06dd.html">Peter Thordarson Joins ASG as Technical Account Executive</a>
+              </div>
+              
+              <div class="news-card-summary">Will bring extensive experience from Microsoft, Fox and DirecTV to new client-facing role</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-7bb06cf97e3d06dd.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/YZrVbhvLgD6wo8HqGdHs38-1280-80.jpg"
+                 alt="Ben Bradshaw Joins PSSI as Director, Product and Network Development"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-7c79f1aedf619a03.html">Ben Bradshaw Joins PSSI as Director, Product and Network Development</a>
+              </div>
+              
+              <div class="news-card-summary">Returns after five years at EA Sports to evaluate company’s content distribution, storage and protection strategies</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-7c79f1aedf619a03.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/YDWQU6QtHTbjRFw8vikxYQ-1280-80.jpg"
+                 alt="SMPTE Details 2026 NAB Show Educational Sessions"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-c067dc6f567a5fa2.html">SMPTE Details 2026 NAB Show Educational Sessions</a>
+              </div>
+              
+              <div class="news-card-summary">This year SMPTE will present the Visual Innovation and Brilliant Engineering Conference in place of the Future of Cinema Conference</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-c067dc6f567a5fa2.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/qQR5zS8EGbmXCGWYGryYP8-1280-80.jpg"
+                 alt="Neutrik To Showcase opticalCON ADVANCED Connectors At 2026 NAB Show"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-053fcc30fcd07a21.html">Neutrik To Showcase opticalCON ADVANCED Connectors At 2026 NAB Show</a>
+              </div>
+              
+              <div class="news-card-summary">The company will present its full line of opticalCON ADVANCED solutions</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-053fcc30fcd07a21.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/ZkmnMYuGcYDN44APWVNJTC-1280-80.jpg"
+                 alt="The New Calculus of Local Sports: Beyond the Linear Subsidy and Toward the ‘Twofer’ Economy"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-e9cd9ecdb19c044f.html">The New Calculus of Local Sports: Beyond the Linear Subsidy and Toward the ‘Twofer’ Economy</a>
+              </div>
+              
+              <div class="news-card-summary">Fans are now the primary, and often sole, underwriter of their favorite team’s media presence</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-e9cd9ecdb19c044f.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/PFdKhLCACXvonFoUCgSLib-1280-80.jpg"
+                 alt="Comcast, Charter Deploy AI Infrastructure at the Network Edge Using NVIDIA AI Technologies"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-856aa4c08c6c7d5c.html">Comcast, Charter Deploy AI Infrastructure at the Network Edge Using NVIDIA AI Technologies</a>
+              </div>
+              
+              <div class="news-card-summary">Tests by the two largest cable operators in the U.S.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-856aa4c08c6c7d5c.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/03/shot_5821_IUJRRMVf-copy-726x362.jpg"
+                 alt="Sam Tewunga moves into CEO role at UKTV"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-079b2cbcbc0eb9b6.html">Sam Tewunga moves into CEO role at UKTV</a>
+              </div>
+              
+              <div class="news-card-summary">Currently MD at the company, Tewunga takes on the CEO position having played a pivotal role in securing and strengthening partnerships and distribution agreemen</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-079b2cbcbc0eb9b6.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/03/Fred-Walls-726x726.jpg"
+                 alt="AI standardisation speeds up"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-bdbc5c208b4400ce.html">AI standardisation speeds up</a>
+              </div>
+              
+              <div class="news-card-summary">SMPTE’s AI Taskforce, EBU, and the ETC have updated the AI Engineering Report to keep pace with the rapid evolution of AI in broadcast, highlighting new standar</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-bdbc5c208b4400ce.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2025/05/VE-Day-Concert-2-726x450.jpeg"
+                 alt="WMSA Europe aims to tackle regulatory pressure on audio PMSE spectrum"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-e8d102948579baea.html">WMSA Europe aims to tackle regulatory pressure on audio PMSE spectrum</a>
+              </div>
+              
+              <div class="news-card-summary">As spectrum congestion intensifies, WMSA Europe aims to ensure access is maintained and provide a unified voice for professionals in the audio wireless arena</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-e8d102948579baea.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/03/Antonio-MainStreaming-726x726.jpeg"
+                 alt="Meet the… CEO and founder"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-0e7b78b4bd3a9337.html">Meet the… CEO and founder</a>
+              </div>
+              
+              <div class="news-card-summary">Antonio G Corrado, founder and CEO of MainStreaming tells TVBEurope why it's important to maintain curiosity and continue learning, even when you're leading a c</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-0e7b78b4bd3a9337.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/02/AVB_DigitalAssets_Jan26_v2_400x333.jpg"
+                 alt="AV and Broadcast Summit agenda unveiled"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-5a8c6852f912a78d.html">AV and Broadcast Summit agenda unveiled</a>
+              </div>
+              
+              <div class="news-card-summary">The in-person event, exploring the next steps in the convergence between AV and broadcast, will take place in London on 24th June</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-5a8c6852f912a78d.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.digitaltvnews.net/wp-content/uploads/logos/barbcouk.png"
+                 alt="Barb to start reporting TV-set viewing of YouTube channels"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-e63df1a0ec046622.html">Barb to start reporting TV-set viewing of YouTube channels</a>
+              </div>
+              
+              <div class="news-card-summary">February 26, 2025 — Barb, with Kantar Media, has expanded its measurement of the YouTube content that people watch on TV sets, selecting 200 YouTube channels th</div>
+              
+              <div class="news-card-meta">
+                <span>February 27, 2025</span>
+                <a href="articles/rss-e63df1a0ec046622.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.digitaltvnews.net/wp-content/uploads/logos/cryptoguardcom.png"
+                 alt="SAT FILM selects multi-DRM from CryptoGuard"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-3e38d2d4ed291814.html">SAT FILM selects multi-DRM from CryptoGuard</a>
+              </div>
+              
+              <div class="news-card-summary">February 26, 2025 — CryptoGuard has deployed its multi-DRM solution at SAT FILM for the Polish operator's streaming service, SAT FILM GO, providing security for</div>
+              
+              <div class="news-card-meta">
+                <span>February 27, 2025</span>
+                <a href="articles/rss-3e38d2d4ed291814.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.digitaltvnews.net/wp-content/uploads/logos/qvestcom.png"
+                 alt="Qvest and ARABSAT to launch OTT streaming platform"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-7ef9c3009727c4df.html">Qvest and ARABSAT to launch OTT streaming platform</a>
+              </div>
+              
+              <div class="news-card-summary">February 24, 2025 — Qvest and ARABSAT are to launch an OTT streaming platform, enabling ARABSAT to extend its direct-to-consumer services while providing white-</div>
+              
+              <div class="news-card-meta">
+                <span>February 27, 2025</span>
+                <a href="articles/rss-7ef9c3009727c4df.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.digitaltvnews.net/wp-content/uploads/logos/lgadstv.png"
+                 alt="ArabyAds & LG Ad Solutions partner with TVekstra in Turkey"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-7346bc2a1cd5bd7e.html">ArabyAds & LG Ad Solutions partner with TVekstra in Turkey</a>
+              </div>
+              
+              <div class="news-card-summary">February 21, 2025 — ArabyAds and LG Ad Solutions have joining forces with TVekstra to provide Turkish advertisers with access to TVekstra LG CTV inventory, back</div>
+              
+              <div class="news-card-meta">
+                <span>February 24, 2025</span>
+                <a href="articles/rss-7346bc2a1cd5bd7e.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.digitaltvnews.net/wp-content/uploads/logos/freeviewnztv.png"
+                 alt="Freeview NZ satellite TV service to move to Koreasat 6"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-98c10ff85e5762ea.html">Freeview NZ satellite TV service to move to Koreasat 6</a>
+              </div>
+              
+              <div class="news-card-summary">February 21, 2025 — Freeview New Zealand's satellite TV service is to move to Koreasat 6 in early April.</div>
+              
+              <div class="news-card-meta">
+                <span>February 24, 2025</span>
+                <a href="articles/rss-98c10ff85e5762ea.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.digitaltvnews.net/wp-content/uploads/logos/comscorecom.png"
+                 alt="Comscore expands YouTube CTV measurement internationally"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-9079f82e8bd2d9d8.html">Comscore expands YouTube CTV measurement internationally</a>
+              </div>
+              
+              <div class="news-card-summary">February 20, 2025 — YouTube CTV platform reach and volumetrics, covering video views and duration, will be included in Comscore's (NASDAQ: SCOR) Video Metrix Mu</div>
+              
+              <div class="news-card-meta">
+                <span>February 24, 2025</span>
+                <a href="articles/rss-9079f82e8bd2d9d8.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.digitaltvnews.net/wp-content/uploads/logos/atemecom.jpg"
+                 alt="Ateme powers Antenna Group’s ANT1+ OTT service"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-7cdf07b540bd4b2f.html">Ateme powers Antenna Group’s ANT1+ OTT service</a>
+              </div>
+              
+              <div class="news-card-summary">February 19, 2025 — Antenna Group has selected Ateme transcoding and packaging to power ANT1+, its OTT service in Greece, hosted on Google Cloud.</div>
+              
+              <div class="news-card-meta">
+                <span>February 24, 2025</span>
+                <a href="articles/rss-7cdf07b540bd4b2f.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.digitaltvnews.net/wp-content/uploads/logos/jiocom.png"
+                 alt="Reliance Jio introduces JioTele OS smart TV operating system"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-3b40c6eeac7bea3b.html">Reliance Jio introduces JioTele OS smart TV operating system</a>
+              </div>
+              
+              <div class="news-card-summary">February 18, 2025 — Reliance Jio has introduced JioTele OS, a smart TV operating system designed for the Indian market.</div>
+              
+              <div class="news-card-meta">
+                <span>February 19, 2025</span>
+                <a href="articles/rss-3b40c6eeac7bea3b.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.digitaltvnews.net/wp-content/uploads/logos/agiletvcom.png"
+                 alt="AgileTV, United Teleports and BNS launch fully managed TV service"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-14c42dc908bfb75f.html">AgileTV, United Teleports and BNS launch fully managed TV service</a>
+              </div>
+              
+              <div class="news-card-summary">February 18, 2025 — AgileTV, United Teleports and BNS have announced a fully managed TV service, combining traditional cable TV and OTT apps, that addresses the</div>
+              
+              <div class="news-card-meta">
+                <span>February 19, 2025</span>
+                <a href="articles/rss-14c42dc908bfb75f.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.digitaltvnews.net/wp-content/uploads/logos/samsungcom.jpg"
+                 alt="Samsung global TV market leader for 19th year"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-c6d4e931737dbf6f.html">Samsung global TV market leader for 19th year</a>
+              </div>
+              
+              <div class="news-card-summary">February 14, 2025 — According to Omdia, Samsung achieved a 28.3% market share in the global TV market in 2024, maintaining the number one ranking it has held si</div>
+              
+              <div class="news-card-meta">
+                <span>February 19, 2025</span>
+                <a href="articles/rss-c6d4e931737dbf6f.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+        </div>
+
+        <!-- AdSense after news grid — only renders when approved -->
+        <div class="adsense-unit">
+          <ins class="adsbygoogle" style="display:block"
+               data-ad-client="ca-pub-8033069131874524"
+               data-ad-slot="auto" data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+      </div>
+
+    </div><!-- /page-wrap -->
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">THE STREAMIC</div>
+        <p>An independent broadcast and streaming technology publication. Covering streaming, cloud production, AI post-production, graphics, playout, infrastructure, and newsroom technology. Updated every six hours.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="featured.html">Featured</a>
+        <a href="streaming.html">Streaming</a>
+        <a href="cloud.html">Cloud Production</a>
+        <a href="ai-post-production.html">AI &amp; Post-Production</a>
+        <a href="graphics.html">Graphics</a>
+        <a href="playout.html">Playout</a>
+        <a href="infrastructure.html">Infrastructure</a>
+        <a href="newsroom.html">Newsroom</a>
+      </div>
+      <div class="footer-col">
+        <h4>Site Info</h4>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="vlog.html">Editor's Desk</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 The Streamic &mdash; thestreamic.in. All rights reserved.</span>
+      <span>Independent broadcast technology journalism. Trademarks belong to their respective owners.</span>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var t = document.querySelector('.nav-toggle');
+      var n = document.querySelector('.nav-links');
+      if (!t || !n) return;
+      t.addEventListener('click', function() { n.classList.toggle('nav-open'); });
+    })();
+  </script>
+</body>
+</html>
