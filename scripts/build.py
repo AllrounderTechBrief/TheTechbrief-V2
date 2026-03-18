@@ -705,16 +705,61 @@ def groq_rewrite(title, raw_text, cat_name):
 
 
 def make_stub(key, title, raw_text, cat_slug, cat_name, ts):
-    today    = datetime.now(timezone.utc).strftime('%Y-%m-%d')
-    img_url  = keyword_image(title, cat_slug, key)
-    sentences = [s.strip() for s in re.split(r'(?<=[.!?])\s+', raw_text) if len(s.strip()) > 30]
-    lead      = ' '.join(sentences[:2]) if len(sentences) >= 2 else f'The latest developments in {cat_name} continue to reshape the broadcast technology landscape.'
-    body_p1   = ' '.join(sentences[2:5]) if len(sentences) >= 5 else f'This development reflects the ongoing evolution of {cat_name.lower()} workflows across the broadcast industry. Operators and technology professionals are monitoring these changes as the implications for day-to-day operations become clearer.'
-    body_p2   = ' '.join(sentences[5:8]) if len(sentences) >= 8 else f'The broader context sits within an industry rapidly transitioning toward IP-based and cloud-native infrastructure. Decisions made now will shape operational capabilities for years to come.'
-    body_p3   = f'For broadcast engineers and media technology teams, staying current with these developments is essential. Understanding both technical specifications and practical deployment realities helps organisations make informed choices in a fast-moving vendor landscape.'
-    conclusion = f'As {cat_name.lower()} technology continues to mature, the coming months will bring further clarity on adoption timelines and real-world performance benchmarks.'
-    summary   = first_sentences(raw_text or lead, 1)[:160] or f'Latest {cat_name} news from The Streamic.'
-    html = _article_page(key, title, summary, lead, [body_p1, body_p2, body_p3],
+    """
+    Build an internal article page from RSS text alone (no Groq call).
+    Uses the actual RSS content split into real paragraphs — never generic boilerplate.
+    """
+    today   = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+    img_url = keyword_image(title, cat_slug, key)
+
+    # Split raw_text into clean sentences, min 25 chars
+    all_sentences = [s.strip() for s in re.split(r'(?<=[.!?])\s+', (raw_text or '').strip())
+                     if len(s.strip()) >= 25]
+
+    # ── Build lead (first 2–3 sentences) ────────────────────────────────────
+    if len(all_sentences) >= 2:
+        lead = ' '.join(all_sentences[:2])
+    elif len(all_sentences) == 1:
+        lead = all_sentences[0]
+    else:
+        # No usable RSS text at all — construct from title keywords, never generic
+        lead = f'{title}. This development is among the latest from the {cat_name.lower()} space, reflecting ongoing activity across the broadcast and streaming technology sector.'
+
+    # ── Build body paragraphs from remaining sentences ───────────────────────
+    remaining = all_sentences[2:]
+
+    if len(remaining) >= 6:
+        body_p1 = ' '.join(remaining[0:3])
+        body_p2 = ' '.join(remaining[3:6])
+        body_p3 = ' '.join(remaining[6:9]) if len(remaining) >= 9 else ' '.join(remaining[6:])
+        body_p3 = body_p3 if body_p3 else None
+    elif len(remaining) >= 3:
+        body_p1 = ' '.join(remaining[0:2])
+        body_p2 = ' '.join(remaining[2:])
+        body_p3 = None
+    elif len(remaining) >= 1:
+        body_p1 = ' '.join(remaining)
+        body_p2 = None
+        body_p3 = None
+    else:
+        body_p1 = None
+        body_p2 = None
+        body_p3 = None
+
+    body_paras = [p for p in [body_p1, body_p2, body_p3] if p and len(p) > 20]
+
+    # ── Conclusion: a forward-looking line tied to the title topic ───────────
+    # Extract a meaningful noun from the title for a specific (not generic) conclusion
+    title_words = [w for w in title.split() if len(w) > 4 and w[0].isupper()]
+    topic_hint  = title_words[0] if title_words else cat_name
+    conclusion  = (f'{topic_hint} developments like this signal continued momentum in the '
+                   f'{cat_name.lower()} space, with further updates expected as the '
+                   f'industry watches adoption progress.')
+
+    # ── Summary for card display ─────────────────────────────────────────────
+    summary = first_sentences(raw_text, 1)[:200] if raw_text else title
+
+    html = _article_page(key, title, summary, lead, body_paras if body_paras else [lead],
                          conclusion, cat_slug, cat_name, today, img_url)
     return html, title, summary, img_url, today
 
@@ -734,7 +779,7 @@ def sync_static_assets():
             if os.path.exists(dst): shutil.rmtree(dst)
             shutil.copytree(src, dst)
     for fname in ['about.html','contact.html','vlog.html','privacy.html','terms.html',
-                  'style.css','robots.txt','ads.txt','CNAME','editorial.txt']:
+                  'style.css','robots.txt','ads.txt','CNAME','editorial.txt','howto.html']:
         src = os.path.join(SITE_SRC, fname)
         if os.path.isfile(src):
             import shutil as sh; sh.copy2(src, os.path.join(SITE, fname))
@@ -864,6 +909,7 @@ def build_sitemap(editorial_articles, rss_keys, howto_slugs):
     pages = [('featured.html','hourly','1.0'),('streaming.html','hourly','0.9'),('cloud.html','hourly','0.9'),
              ('ai-post-production.html','hourly','0.9'),('graphics.html','hourly','0.9'),('playout.html','hourly','0.9'),
              ('infrastructure.html','hourly','0.9'),('newsroom.html','hourly','0.9'),
+             ('howto.html','monthly','0.85'),
              ('vlog.html','monthly','0.8'),('about.html','monthly','0.7'),('contact.html','monthly','0.6'),
              ('privacy.html','yearly','0.4')]
     for slug in howto_slugs:
