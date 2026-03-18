@@ -1,0 +1,42 @@
+## THE STREAMIC — EDITORIAL SPOTLIGHT
+## Edit these two articles whenever you like. Rules:
+##   - Lines starting with ## are comments (ignored)
+##   - TITLE:, BADGE:, COLOR:, ICON:, READ: are field labels
+##   - Blank line between paragraphs
+##   - === separates the two articles
+##   - Keep paragraphs 60-100 words each; 4-5 paragraphs per article
+##   - Save as UTF-8 (default in most editors)
+
+TITLE: The Real Challenges Facing Cloud Production Adoption in Broadcast Today
+BADGE: Cloud Production
+COLOR: #5856d6
+ICON: ☁️
+READ: 5 min read
+
+Cloud production has been the dominant theme in broadcast technology conversations for the better part of a decade. The promise is compelling: elastic compute, geographic flexibility, reduced capital expenditure, and the ability to scale resources to match editorial demand rather than peak broadcast capacity. In practice, however, the transition from aspiration to operational reality has exposed persistent challenges that vendors and broadcasters are still working through.
+
+Latency remains the most stubborn technical barrier. Contribution feeds, live commentary workflows, and real-time graphics insertion all demand sub-frame synchronisation that cloud routing architectures struggle to guarantee consistently. Even with dedicated interconnects and managed network paths, the non-deterministic nature of internet routing introduces timing variability that would be unacceptable in a conventional on-premises master control environment. Workarounds exist — buffer-based compensation, smarter contribution protocols — but they add operational complexity that smaller broadcast teams are not always equipped to manage.
+
+Security and rights management present a second layer of difficulty. Moving live production through shared cloud infrastructure requires careful attention to content protection, particularly for sports and premium entertainment rights holders with contractual obligations around distribution windows and regional availability. Many broadcasters have found that existing rights agreements contain provisions that effectively prohibit certain cloud routing architectures, requiring legal review before technical architecture can be finalised.
+
+Cost predictability is a further concern. The capital expenditure savings promised by cloud migration can be undermined by unpredictable egress charges, compute costs that spike during major live events, and the ongoing need to maintain some on-premises infrastructure for resilience and regulatory compliance. Organisations that moved aggressively to cloud-first models have in some cases found themselves repatriating workloads where the economics did not justify the operational overhead.
+
+The honest industry assessment is that hybrid cloud — not pure cloud — will be the dominant operational model for most broadcasters through the remainder of this decade. Cloud production is a powerful tool, not a universal answer, and the broadcasters deriving the most value are those who have been precise about which workloads genuinely benefit from cloud architecture.
+
+===
+
+TITLE: AI in Broadcast Archive Workflows: Where It Delivers and Where It Falls Short
+BADGE: AI & Post-Production
+COLOR: #FF2D55
+ICON: 🎬
+READ: 5 min read
+
+Broadcast archives represent some of the most valuable and least accessible assets in the media industry. Decades of news footage, documentary material, sports events, and entertainment programming sit in storage systems that range from modern object storage to legacy tape libraries, often with inconsistent or incomplete metadata that makes systematic retrieval a manual and time-intensive process. Artificial intelligence, applied thoughtfully, is beginning to change this — though the reality of current deployments reveals both significant promise and meaningful limitations.
+
+The area of strongest AI performance is automated content recognition and metadata generation. Computer vision models trained on broadcast content can now reliably identify faces, on-screen text, scene types, and object categories at speeds impossible for human operators to match at scale. A collection that might take archivists years to fully catalogue can now receive AI-generated metadata within weeks. This dramatically improves discoverability and enables the rights-aware search that makes archived content commercially exploitable rather than merely stored.
+
+Speech-to-text transcription has also matured considerably. Broadcast-quality audio with a single speaker and minimal background noise now achieves accuracy that approaches human-level performance in many languages. This unlocks full-text search across spoken word content — a capability that fundamentally changes how researchers, journalists, and programme makers interact with archive material. Limitations emerge in challenging acoustic conditions: overlapping speakers, regional accents, technical terminology, and archival recordings with degraded audio quality all reduce accuracy in ways that require human review before transcripts can be trusted for editorial or legal purposes.
+
+Where current AI falls short most consistently is in contextual understanding and editorial judgement. Identifying that a clip contains a person in formal attire speaking at a podium is a task machines handle well. Understanding that this particular clip represents a pivotal moment in a geopolitical story, or carries unusual licensing restrictions because of the music playing in the background, still requires human expertise. The most successful implementations pair AI-generated metadata with structured human quality review, using the technology to eliminate routine labour while preserving expert judgement where it genuinely matters.
+
+The investment case for AI-assisted archive management is strong, particularly for organisations with large legacy collections and limited cataloguing resource. The key is choosing tools that integrate with existing MAM infrastructure and building workflows that treat AI output as a first draft requiring validation — not a finished product ready for publication or broadcast.

@@ -1,14 +1,23 @@
 #!/usr/bin/env python3
 """
-generate_articles.py — The Tech Brief
+generate_articles.py — The Streamic
 Daily AI-authored original article generator using Groq Llama 3.
 
-• Generates 1 long-form original article per category (9 articles/day)
+• Generates 1 long-form original article per category (8 articles/day)
 • Each article: 700–900 words, editorial structure with H2 subheadings
 • Saves full styled HTML → site/articles/YYYY-MM-DD-{catslug}.html
 • Syncs metadata → data/generated_articles.json (homepage + category injection)
 • Auto-updates site/assets/data/trending.txt with latest headlines
 • Skips categories that already have today's article (idempotent — safe to re-run)
+
+STRICT RULES FOR CONTENT:
+- Never copy or paraphrase text from RSS feeds or external websites.
+- Use RSS feeds ONLY to identify the topic, not the wording.
+- Every article must be 700–900 words minimum.
+- Write in a human, editorial, broadcast-industry tone.
+- Add background, context, implications, and industry impact.
+- Never mention the original source publication.
+- Output clean original prose only.
 
 Usage:
     GROQ_API_KEY=your_key python scripts/generate_articles.py
@@ -29,208 +38,204 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 # ─── Paths ────────────────────────────────────────────────────────────────────
-ROOT         = Path(__file__).resolve().parent.parent
-SITE_DIR     = ROOT / "site" / "articles"
-DATA_DIR     = ROOT / "data"
-TRENDING_TXT = ROOT / "site" / "assets" / "data" / "trending.txt"
+ROOT          = Path(__file__).resolve().parent.parent
+SITE_DIR      = ROOT / "site" / "articles"
+DATA_DIR      = ROOT / "data"
+TRENDING_TXT  = ROOT / "site" / "assets" / "data" / "trending.txt"
 ARTICLES_JSON = DATA_DIR / "generated_articles.json"
 
 # ─── Config ───────────────────────────────────────────────────────────────────
-GROQ_API_KEY  = os.environ.get("GROQ_API_KEY", "")
-GROQ_URL      = "https://api.groq.com/openai/v1/chat/completions"
-MODEL         = "llama3-70b-8192"
-SITE_URL      = "https://www.thetechbrief.net"
-GA_TAG        = "G-YCJEGDPW7G"
-AUTHOR        = "The Tech Brief Editorial Team"
-MAX_STORED    = 60  # Maximum articles to keep in generated_articles.json
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+GROQ_URL     = "https://api.groq.com/openai/v1/chat/completions"
+MODEL        = "llama3-70b-8192"
+SITE_URL     = "https://www.thestreamic.in"
+GA_TAG       = "G-0VSHDN3ZR6"
+ADSENSE_ID   = "ca-pub-8033069131874524"
+AUTHOR       = "The Streamic Editorial Team"
+MAX_STORED   = 60
 
 # ─── Category definitions ─────────────────────────────────────────────────────
 CATEGORIES = [
     {
-        "name": "AI News",
-        "slug": "ai-news",
-        "page": "ai-news.html",
-        "badge_color": "#7C3AED",
-        "icon": "🤖",
-        "feeds": [
-            "https://techcrunch.com/tag/ai/feed/",
-            "https://venturebeat.com/category/ai/feed/",
-            "https://www.theverge.com/rss/artificial-intelligence/index.xml",
-        ],
-        "topics_fallback": [
-            "The evolution of large language models in enterprise software",
-            "How AI coding assistants are changing software development",
-            "Autonomous AI agents and their impact on business workflows",
-            "The AI chip war: NVIDIA, AMD, and custom silicon",
-            "Open-source vs closed AI models: the 2025 landscape",
-        ],
-    },
-    {
-        "name": "Cybersecurity Updates",
-        "slug": "cybersecurity-updates",
-        "page": "cybersecurity-updates.html",
-        "badge_color": "#DC2626",
-        "icon": "🔐",
-        "feeds": [
-            "https://www.csoonline.com/index.rss",
-            "https://www.darkreading.com/rss.xml",
-            "https://feeds.feedburner.com/TheHackersNews",
-        ],
-        "topics_fallback": [
-            "Why phishing attacks are harder to detect than ever",
-            "Zero-trust architecture: what enterprises are actually doing",
-            "The rise of AI-powered cyberattacks",
-            "Cloud misconfigurations: the most common breach vector",
-            "Ransomware payments and the policy debate around them",
-        ],
-    },
-    {
-        "name": "Mobile & Gadgets",
-        "slug": "mobile-gadgets",
-        "page": "mobile-gadgets.html",
-        "badge_color": "#0891B2",
-        "icon": "📱",
-        "feeds": [
-            "https://www.theverge.com/rss/gadgets/index.xml",
-            "https://www.engadget.com/rss.xml",
-            "https://www.androidauthority.com/feed/",
-        ],
-        "topics_fallback": [
-            "On-device AI features that are actually useful in 2025",
-            "The battle for foldable phone dominance",
-            "Why flagship smartphone cameras have hit a plateau",
-            "Wearables beyond the wrist: AR glasses go mainstream",
-            "The death of the headphone jack and what replaced it",
-        ],
-    },
-    {
-        "name": "EVs & Automotive",
-        "slug": "evs-automotive",
-        "page": "evs-automotive.html",
-        "badge_color": "#059669",
-        "icon": "🚗",
-        "feeds": [
-            "https://electrek.co/feed/",
-            "https://insideevs.com/feed/",
-            "https://techcrunch.com/category/transportation/feed/",
-        ],
-        "topics_fallback": [
-            "Solid-state batteries: where the technology actually stands",
-            "The charging infrastructure gap slowing EV adoption",
-            "Software-defined vehicles and the OTA update revolution",
-            "How autonomous driving technology is reshaping car insurance",
-            "EV affordability: the race to the sub-$30,000 electric car",
-        ],
-    },
-    {
-        "name": "Startups & Business",
-        "slug": "startups-business",
-        "page": "startups-business.html",
-        "badge_color": "#D97706",
-        "icon": "💼",
-        "feeds": [
-            "https://techcrunch.com/feed/",
-            "https://venturebeat.com/feed/",
-            "https://news.crunchbase.com/feed/",
-        ],
-        "topics_fallback": [
-            "How AI startups are navigating a more selective funding environment",
-            "The second wave of B2B SaaS consolidation",
-            "Why founder-led sales is making a comeback in enterprise tech",
-            "Tech IPO market outlook and what investors are watching",
-            "The rise of vertical AI: industry-specific models and startups",
-        ],
-    },
-    {
-        "name": "Enterprise Tech",
-        "slug": "enterprise-tech",
-        "page": "enterprise-tech.html",
-        "badge_color": "#2563EB",
-        "icon": "🏢",
-        "feeds": [
-            "https://www.zdnet.com/topic/enterprise/rss.xml",
-            "https://www.infoworld.com/category/enterprise-it/index.rss",
-            "https://siliconangle.com/feed/",
-        ],
-        "topics_fallback": [
-            "Cloud cost optimization: what enterprises are actually doing",
-            "The hybrid cloud reality for large enterprises in 2025",
-            "How CIOs are managing AI governance and risk",
-            "Kubernetes at scale: lessons from five years of production use",
-            "The rise of the AI-native data warehouse",
-        ],
-    },
-    {
-        "name": "Gaming",
-        "slug": "gaming",
-        "page": "gaming.html",
-        "badge_color": "#7C3AED",
-        "icon": "🎮",
-        "feeds": [
-            "https://kotaku.com/rss",
-            "https://www.eurogamer.net/?format=rss",
-            "https://www.polygon.com/rss/index.xml",
-        ],
-        "topics_fallback": [
-            "The business model evolution of live-service games",
-            "How generative AI is changing game development pipelines",
-            "The handheld gaming PC renaissance and what it signals",
-            "Subscription gaming fatigue and what publishers are doing about it",
-            "The return of single-player narrative games",
-        ],
-    },
-    {
-        "name": "Consumer Tech",
-        "slug": "consumer-tech",
-        "page": "consumer-tech.html",
-        "badge_color": "#0891B2",
-        "icon": "🛒",
-        "feeds": [
-            "https://www.cnet.com/rss/all/",
-            "https://www.techradar.com/rss",
-            "https://www.tomsguide.com/feeds/all",
-        ],
-        "topics_fallback": [
-            "The smart home interoperability problem is finally being solved",
-            "Why laptop battery life has dramatically improved",
-            "Noise-cancelling headphones: the science and the marketing",
-            "The new generation of ultra-portable monitors",
-            "Budget flagship phones: the spec-gap is almost gone",
-        ],
-    },
-    {
-        "name": "Broadcast Tech",
-        "slug": "broadcast-tech",
-        "page": "broadcast-tech.html",
-        "badge_color": "#BE185D",
+        "name": "Streaming",
+        "slug": "streaming",
+        "page": "streaming.html",
+        "badge_color": "#0071e3",
         "icon": "📡",
         "feeds": [
-            "https://www.tvbeurope.com/feed",
-            "https://www.newscaststudio.com/feed/",
-            "https://aws.amazon.com/blogs/media/category/media-entertainment/feed/",
+            "https://www.streamingmediablog.com/feed",
+            "https://www.streaminglearningcenter.com/rss.xml",
+            "https://mux.com/blog/feed/",
+            "https://www.haivision.com/blog/feed/",
+            "https://bitmovin.com/blog/feed/",
         ],
         "topics_fallback": [
-            "IP migration in broadcast: the transition timeline realities",
-            "How streaming platforms are changing live sports production",
-            "AI-assisted editing and its impact on post-production workflows",
-            "The role of cloud rendering in modern broadcast operations",
-            "ATSC 3.0 rollout and what it means for broadcasters",
+            "The evolution of adaptive bitrate streaming in 2025",
+            "Why low-latency live streaming is still a hard problem",
+            "HEVC vs AV1: the codec battle reshaping streaming infrastructure",
+            "CDN architecture for global live events at scale",
+            "The rise of CMAF and its impact on multi-DRM workflows",
+        ],
+    },
+    {
+        "name": "Cloud Production",
+        "slug": "cloud",
+        "page": "cloud.html",
+        "badge_color": "#5856d6",
+        "icon": "☁️",
+        "feeds": [
+            "https://aws.amazon.com/blogs/media/feed/",
+            "https://blog.frame.io/feed/",
+            "https://blog.cloudflare.com/rss/",
+            "https://mux.com/blog/feed/",
+            "https://www.tvbeurope.com/feed/",
+        ],
+        "topics_fallback": [
+            "How IP-based production is replacing satellite and fibre contribution",
+            "Cloud-native playout: vendors and broadcasters assess the transition",
+            "The economics of cloud versus on-premises broadcast infrastructure",
+            "Remote production workflows after the pandemic acceleration",
+            "Multi-cloud redundancy strategies for live broadcast operations",
+        ],
+    },
+    {
+        "name": "AI & Post-Production",
+        "slug": "ai-post-production",
+        "page": "ai-post-production.html",
+        "badge_color": "#FF2D55",
+        "icon": "🎬",
+        "feeds": [
+            "https://www.provideocoalition.com/feed/",
+            "https://www.newsshooter.com/feed/",
+            "https://postperspective.com/feed/",
+            "https://www.studiodaily.com/feed/",
+            "https://blog.frame.io/feed/",
+        ],
+        "topics_fallback": [
+            "How AI is automating rough cuts in broadcast news editing",
+            "The ethics of AI-generated content in broadcast journalism",
+            "LLM-powered metadata tagging and media asset management",
+            "Real-time AI dubbing and localisation for streaming platforms",
+            "Generative AI tools entering the professional post-production suite",
+        ],
+    },
+    {
+        "name": "Graphics",
+        "slug": "graphics",
+        "page": "graphics.html",
+        "badge_color": "#FF9500",
+        "icon": "🎨",
+        "feeds": [
+            "https://motionographer.com/feed/",
+            "https://www.cgchannel.com/feed/",
+            "https://realtimevfx.com/latest.rss",
+            "https://www.newscaststudio.com/feed/",
+            "https://www.tvtechnology.com/news/rss.xml",
+        ],
+        "topics_fallback": [
+            "Unreal Engine in live broadcast: a practical assessment",
+            "The shift to IP-based graphics distribution in newsrooms",
+            "Real-time data visualisation for election night coverage",
+            "Virtual studios and extended reality in broadcast sports",
+            "The role of WebGL in next-generation broadcast graphics",
+        ],
+    },
+    {
+        "name": "Playout",
+        "slug": "playout",
+        "page": "playout.html",
+        "badge_color": "#34C759",
+        "icon": "▶️",
+        "feeds": [
+            "https://www.harmonicinc.com/insights/blog/rss.xml",
+            "https://www.pebble.tv/feed/",
+            "https://www.tvtechnology.com/news/rss.xml",
+            "https://www.tvbeurope.com/feed/",
+            "https://www.newscaststudio.com/feed/",
+        ],
+        "topics_fallback": [
+            "Channel-in-a-box evolution: what broadcasters are actually deploying",
+            "Software-defined playout and the virtualisation of master control",
+            "How OTT has changed the economics of traditional playout",
+            "Redundancy and failover architectures in modern playout systems",
+            "The business case for cloud playout in regional broadcasting",
+        ],
+    },
+    {
+        "name": "Infrastructure",
+        "slug": "infrastructure",
+        "page": "infrastructure.html",
+        "badge_color": "#8E8E93",
+        "icon": "🏗️",
+        "feeds": [
+            "https://cloudinary.com/blog/feed",
+            "https://blog.cloudflare.com/rss/",
+            "https://aws.amazon.com/blogs/media/feed/",
+            "https://www.tvtechnology.com/news/rss.xml",
+            "https://www.tvbeurope.com/feed/",
+        ],
+        "topics_fallback": [
+            "SMPTE ST 2110 adoption: where the industry actually stands",
+            "MAM systems in the age of AI-assisted metadata and search",
+            "NVMe storage and the future of high-resolution media workflows",
+            "Software-defined networking in broadcast facility design",
+            "The security challenges of IP-based broadcast infrastructure",
+        ],
+    },
+    {
+        "name": "Newsroom",
+        "slug": "newsroom",
+        "page": "newsroom.html",
+        "badge_color": "#D4AF37",
+        "icon": "📰",
+        "feeds": [
+            "https://www.newscaststudio.com/feed/",
+            "https://www.tvtechnology.com/news/rss.xml",
+            "https://www.broadcastbeat.com/feed/",
+            "https://www.svgeurope.org/feed/",
+            "https://www.tvbeurope.com/feed/",
+        ],
+        "topics_fallback": [
+            "How AI writing assistants are entering broadcast newsrooms",
+            "The remote newsroom: permanent change or pandemic relic?",
+            "Social media verification tools for broadcast journalists",
+            "Newsroom computer systems: the vendor landscape in 2025",
+            "Automation in news production: where it helps and where it fails",
+        ],
+    },
+    {
+        "name": "Featured",
+        "slug": "featured",
+        "page": "featured.html",
+        "badge_color": "#1d1d1f",
+        "icon": "⭐",
+        "feeds": [
+            "https://www.newscaststudio.com/feed/",
+            "https://www.tvbeurope.com/feed/",
+            "https://www.tvtechnology.com/news/rss.xml",
+            "https://www.broadcastbeat.com/feed/",
+        ],
+        "topics_fallback": [
+            "The broadcast technology story of the week",
+            "Major shifts in media infrastructure and production workflows",
+            "How streaming economics are reshaping broadcast strategy",
+            "The convergence of IT and broadcast: a five-year assessment",
+            "What the next generation of broadcast engineers needs to know",
         ],
     },
 ]
 
 
-# ─── Unsplash image pools (one per category for AdSense-safe visuals) ─────────
+# ─── Unsplash image pools ─────────────────────────────────────────────────────
 CATEGORY_IMAGE_POOLS = {
-    "ai-news":               ["photo-1677442135703-1787eea5ce01","photo-1620712943543-bcc4688e7485","photo-1655635643532-fa9ba2648cbe","photo-1533228100845-08145b01de14","photo-1558494949-ef010cbdcc31","photo-1635070041078-e363dbe005cb"],
-    "cybersecurity-updates": ["photo-1550751827-4bd374c3f58b","photo-1563986768609-322da13575f3","photo-1614064641938-3bbee52942c7","photo-1510511233900-1982d92bd835","photo-1555949963-aa79dcee981c","photo-1504384308090-c894fdcc538d"],
-    "mobile-gadgets":        ["photo-1511707171634-5f897ff02aa9","photo-1592750475338-74b7b21085ab","photo-1585060544812-6b45742d762f","photo-1523206489230-c012c64b2b48","photo-1567581935884-3349723552ca","photo-1542751371-adc38448a05e"],
-    "evs-automotive":        ["photo-1593941707882-a5bba14938c7","photo-1558618666-fcd25c85cd64","photo-1616455579100-2ceaa4eb2d37","photo-1549317661-bd32c8ce0db2","photo-1580274455191-1c62238fa1f4","photo-1617469767053-d3b523a0b982"],
-    "startups-business":     ["photo-1559136555-9303baea8ebd","photo-1507003211169-0a1dd7228f2d","photo-1450101499163-c8848c66ca85","photo-1460925895917-afdab827c52f","photo-1553484771-371a605b060b","photo-1579532537598-459ecdaf39cc"],
-    "enterprise-tech":       ["photo-1486312338219-ce68d2c6f44d","photo-1497366216548-37526070297c","photo-1568952433726-3896e3881c65","photo-1542744094-3a31f272c490","photo-1521737711867-e3b97375f902","photo-1454165804606-c3d57bc86b40"],
-    "gaming":                ["photo-1538481199705-c710c4e965fc","photo-1493711662062-fa541adb3fc8","photo-1552820728-8b83bb6b773f","photo-1601887389937-0b02f7683064","photo-1612287230202-1ff1d85d1bdf","photo-1574375927938-d5a98e8ffe85"],
-    "consumer-tech":         ["photo-1498049794561-7780e7231661","photo-1517694712202-14dd9538aa97","photo-1593642632559-0c6d3fc62b89","photo-1519389950473-47ba0277781c","photo-1496181133206-80ce9b88a853","photo-1550009158-9ebf69173e03"],
-    "broadcast-tech":        ["photo-1478737270239-2f02b77fc618","photo-1612420696760-0a0f34d3e7d0","photo-1567095761054-7003afd47020","photo-1598488035139-bdbb2231ce04","photo-1516321497487-e288fb19713f","photo-1574717024653-61fd2cf4d44d"],
+    "streaming":          ["photo-1598488035139-bdbb2231ce04","photo-1516321497487-e288fb19713f","photo-1574717024653-61fd2cf4d44d","photo-1567095761054-7003afd47020","photo-1540575467063-178a50c2df87","photo-1611532736597-de2d4265fba3"],
+    "cloud":              ["photo-1451187580459-43490279c0fa","photo-1544197150-b99a580bb7a8","photo-1560472355-536de3962603","photo-1504639725590-34d0984388bd","photo-1558494949-ef010cbdcc31","photo-1531297484001-80022131f5a1"],
+    "ai-post-production": ["photo-1677442135703-1787eea5ce01","photo-1620712943543-bcc4688e7485","photo-1655635643532-fa9ba2648cbe","photo-1533228100845-08145b01de14","photo-1635070041078-e363dbe005cb","photo-1501526029524-a8ea952b15be"],
+    "graphics":           ["photo-1593642632559-0c6d3fc62b89","photo-1518770660439-4636190af475","photo-1547658719-da2b51169166","photo-1541462608143-67571c6738dd","photo-1568952433726-3896e3881c65","photo-1497091071254-cc9b2ba7c48a"],
+    "playout":            ["photo-1612420696760-0a0f34d3e7d0","photo-1478737270239-2f02b77fc618","photo-1598488035139-bdbb2231ce04","photo-1574717024653-61fd2cf4d44d","photo-1492619375914-88005aa9e8fb","photo-1590602847861-f357a9332bbc"],
+    "infrastructure":     ["photo-1486312338219-ce68d2c6f44d","photo-1497366216548-37526070297c","photo-1560472354-b33ff0c44a43","photo-1553877522-43269d4ea984","photo-1542744094-3a31f272c490","photo-1504384308090-c894fdcc538d"],
+    "newsroom":           ["photo-1504711434969-e33886168f5c","photo-1493863641943-9b68992a8d07","photo-1585829365295-ab7cd400c167","photo-1432821596592-e2c18b78144f","photo-1503428593586-e225b39bddfe","photo-1495020689067-958852a7765e"],
+    "featured":           ["photo-1598488035139-bdbb2231ce04","photo-1478737270239-2f02b77fc618","photo-1567095761054-7003afd47020","photo-1486312338219-ce68d2c6f44d","photo-1451187580459-43490279c0fa","photo-1677442135703-1787eea5ce01"],
 }
 
 
@@ -240,7 +245,7 @@ def today_str() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 
-def slugify(text: str) -> str:
+def slugify_title(text: str) -> str:
     t = text.lower().strip()
     t = re.sub(r"[^\w\s-]", "", t)
     t = re.sub(r"[\s_]+", "-", t)
@@ -250,13 +255,12 @@ def slugify(text: str) -> str:
 
 def pick_image(cat_slug: str, seed: str) -> str:
     import hashlib
-    pool = CATEGORY_IMAGE_POOLS.get(cat_slug, list(CATEGORY_IMAGE_POOLS["ai-news"]))
+    pool = CATEGORY_IMAGE_POOLS.get(cat_slug, list(CATEGORY_IMAGE_POOLS["featured"]))
     idx  = int(hashlib.md5(seed.encode()).hexdigest(), 16) % len(pool)
     return f"https://images.unsplash.com/{pool[idx]}?w=900&auto=format&fit=crop&q=80"
 
 
 def fetch_rss_topics(feeds: list, fallbacks: list) -> str:
-    """Return a comma-separated headline list for Groq topic context."""
     headlines = []
     for url in feeds:
         try:
@@ -293,7 +297,7 @@ def save_articles_json(articles: list):
 
 
 def already_generated_today(cat_slug: str) -> bool:
-    today = today_str()
+    today    = today_str()
     articles = load_articles_json()
     return any(
         a["cat_slug"] == cat_slug and a["date"] == today
@@ -304,16 +308,22 @@ def already_generated_today(cat_slug: str) -> bool:
 # ─── Groq call ────────────────────────────────────────────────────────────────
 
 SYSTEM_PROMPT = textwrap.dedent("""
-    You are a senior technology journalist writing for an independent publication called
-    The Tech Brief. Your articles are original, authoritative, and deeply informative.
+    You are a senior broadcast technology journalist writing for The Streamic,
+    an independent publication covering the professional broadcast and streaming
+    technology industry.
 
-    Absolute rules:
+    Your readers are broadcast engineers, media technology directors, post-production
+    professionals, and streaming platform operators. Write at their level — technical
+    depth matters. Assume familiarity with industry terms like SMPTE ST 2110, HEVC,
+    CDN, MAM, playout automation, and cloud-native production.
+
+    ABSOLUTE RULES — no exceptions:
     - NEVER copy, quote, or paraphrase text from any source.
     - NEVER mention other publications, websites, brands, or their article titles.
     - NEVER include affiliate links, promotional language, or sponsored content.
     - NEVER produce misleading, harmful, or controversial content.
     - Write entirely in your own words, as a knowledgeable industry expert.
-    - Tone: confident, analytical, informative — like The Economist or MIT Technology Review.
+    - Tone: authoritative, analytical, technically precise — like TVBEurope or SVG editorial.
 
     Respond ONLY with a valid JSON object. No markdown fences, no preamble, no postamble.
 """).strip()
@@ -361,15 +371,16 @@ def call_groq(user_prompt: str, retries: int = 3) -> str | None:
 
 
 def generate_article_json(cat: dict, headlines: str) -> dict | None:
-    """Ask Groq to produce a structured article JSON."""
     prompt = textwrap.dedent(f"""
-        Write a 700–900 word in-depth technology article for the "{cat['name']}" section of The Tech Brief.
+        Write a 700–900 word in-depth broadcast technology article for the "{cat['name']}"
+        section of The Streamic.
 
-        Use these recent tech headlines ONLY as background context for the topic area.
+        Use these recent industry headlines ONLY as background context for the topic area.
         Do NOT reference, quote, or name any of these headlines in your article:
         {headlines}
 
-        Choose a compelling, specific angle within the {cat['name']} topic space that a tech-savvy reader would find genuinely valuable.
+        Choose a compelling, specific angle within the {cat['name']} topic space that a
+        broadcast engineer or media technology professional would find genuinely valuable.
 
         Return a JSON object with EXACTLY this structure (no other keys):
         {{
@@ -389,22 +400,20 @@ def generate_article_json(cat: dict, headlines: str) -> dict | None:
         Requirements:
         - Exactly 4-5 sections, each with 2-3 substantial paragraphs (3-5 sentences each)
         - Total word count: 700-900 words (excluding JSON keys)
-        - Include specific facts, metrics, examples where credible — but do not attribute them to any source
-        - No bullet points in paragraphs — flowing prose only
-        - The article must stand alone as original editorial content
+        - Include specific technical facts, standards, metrics, and real-world deployment context
+        - No bullet points in paragraphs — flowing technical prose only
+        - The article must stand alone as original editorial content for a broadcast professional audience
     """).strip()
 
     raw = call_groq(prompt)
     if not raw:
         return None
 
-    # Strip markdown fences if model adds them
     raw = re.sub(r"^```(?:json)?\s*", "", raw, flags=re.MULTILINE)
     raw = re.sub(r"\s*```$", "", raw.strip()).strip()
 
     try:
         data = json.loads(raw)
-        # Validate required keys
         required = {"title", "description", "lead", "sections", "conclusion", "read_minutes"}
         if not required.issubset(data.keys()):
             missing = required - set(data.keys())
@@ -420,7 +429,7 @@ def generate_article_json(cat: dict, headlines: str) -> dict | None:
         return None
 
 
-# ─── HTML generation (matches site's exact design system) ─────────────────────
+# ─── HTML generation ──────────────────────────────────────────────────────────
 
 def build_article_html(cat: dict, data: dict, date_str: str, slug: str) -> str:
     title       = data["title"].replace('"', '&quot;').replace("<", "&lt;")
@@ -431,9 +440,8 @@ def build_article_html(cat: dict, data: dict, date_str: str, slug: str) -> str:
     year        = datetime.now(timezone.utc).year
     pub_date    = datetime.strptime(date_str, "%Y-%m-%d").strftime("%B %d, %Y")
     read_min    = int(data.get("read_minutes", 6))
-    badge_color = cat.get("badge_color", "#2563EB")
+    badge_color = cat.get("badge_color", "#0071e3")
 
-    # Build article body HTML
     body_parts = [lead_html]
     for section in data.get("sections", []):
         h2 = str(section.get("h2", "")).replace("<", "&lt;")
@@ -448,7 +456,6 @@ def build_article_html(cat: dict, data: dict, date_str: str, slug: str) -> str:
 
     article_body = "\n".join(body_parts)
 
-    # Schema.org JSON-LD
     schema = json.dumps({
         "@context": "https://schema.org",
         "@type": "Article",
@@ -463,17 +470,17 @@ def build_article_html(cat: dict, data: dict, date_str: str, slug: str) -> str:
         },
         "publisher": {
             "@type": "Organization",
-            "name": "The Tech Brief",
+            "name": "The Streamic",
             "url": SITE_URL
         },
         "mainEntityOfPage": canon_url,
         "articleSection": cat["name"]
     }, indent=2)
 
-    return f"""<!doctype html>
+    return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <!-- Google Consent Mode v2 (default denied) -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -492,16 +499,18 @@ def build_article_html(cat: dict, data: dict, date_str: str, slug: str) -> str:
     gtag('js', new Date());
     gtag('config', '{GA_TAG}');
   </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_ID}" crossorigin="anonymous"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <title>{title} | The Tech Brief</title>
+  <title>{title} | The Streamic</title>
   <meta name="description" content="{description}">
   <meta name="robots" content="index, follow">
+  <meta name="author" content="{AUTHOR}">
   <link rel="canonical" href="{canon_url}">
 
   <meta property="og:type"        content="article">
-  <meta property="og:site_name"   content="The Tech Brief">
+  <meta property="og:site_name"   content="The Streamic">
   <meta property="og:title"       content="{title}">
   <meta property="og:description" content="{description}">
   <meta property="og:url"         content="{canon_url}">
@@ -515,204 +524,240 @@ def build_article_html(cat: dict, data: dict, date_str: str, slug: str) -> str:
 {schema}
   </script>
 
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
 
   <style>
-    /* Article-specific styles */
+    .article-wrap {{
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }}
     .article-hero-img {{
       width: 100%; max-height: 420px; object-fit: cover;
-      border-radius: var(--radius); margin-bottom: 36px;
+      border-radius: 12px; margin-bottom: 36px;
       display: block;
     }}
+    .article-breadcrumb {{
+      font-size: 13px;
+      color: #86868b;
+      margin-bottom: 16px;
+    }}
+    .article-breadcrumb a {{
+      color: #86868b;
+      text-decoration: none;
+    }}
+    .article-breadcrumb a:hover {{ color: #000; }}
+    .article-category-badge {{
+      display: inline-block;
+      background: {badge_color};
+      color: #fff;
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 18px;
+      text-decoration: none;
+    }}
+    .article-title {{
+      font-family: Montserrat, sans-serif;
+      font-size: clamp(26px, 4vw, 42px);
+      font-weight: 700;
+      line-height: 1.18;
+      margin-bottom: 14px;
+      color: #1d1d1f;
+    }}
+    .article-meta {{
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #d2d2d7;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #86868b;
+    }}
+    .article-meta strong {{ color: #1d1d1f; }}
+    .article-meta a {{
+      margin-left: auto;
+      font-size: 13px;
+      color: #0071e3;
+      font-weight: 600;
+      text-decoration: none;
+    }}
     .article-lead {{
-      font-size: 18px; line-height: 1.75;
-      color: var(--ink-2); font-weight: 300;
+      font-size: 18px;
+      line-height: 1.75;
+      color: #424245;
+      font-weight: 400;
       margin-bottom: 28px;
     }}
     .article-body h2 {{
-      font-family: var(--font-serif);
+      font-family: Montserrat, sans-serif;
       font-size: clamp(20px, 2.5vw, 26px);
-      color: var(--ink); margin: 36px 0 14px;
+      font-weight: 700;
+      color: #1d1d1f;
+      margin: 36px 0 14px;
       line-height: 1.25;
     }}
     .article-body p {{
-      font-size: 16.5px; line-height: 1.78;
-      color: var(--ink); margin-bottom: 20px;
+      font-size: 16.5px;
+      line-height: 1.78;
+      color: #1d1d1f;
+      margin-bottom: 20px;
     }}
     .article-conclusion {{
-      background: var(--surface-2);
-      border-left: 4px solid var(--accent);
-      padding: 18px 22px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      font-size: 16.5px; line-height: 1.75;
-      color: var(--ink-2); font-style: italic;
+      background: #f5f5f7;
+      border-left: 4px solid {badge_color};
+      padding: 18px 22px;
+      border-radius: 0 8px 8px 0;
+      font-size: 16.5px;
+      line-height: 1.75;
+      color: #424245;
+      font-style: italic;
       margin-top: 32px;
     }}
-    .article-meta-bar {{
-      display: flex; gap: 20px; align-items: center;
-      margin-bottom: 32px; padding-bottom: 20px;
-      border-bottom: 2px solid var(--border);
-      flex-wrap: wrap;
+    .article-editorial-note {{
+      margin-top: 40px;
+      padding: 16px 20px;
+      background: #f5f5f7;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #86868b;
     }}
-    .article-meta-bar span {{
-      font-size: 13px; color: var(--ink-3);
-    }}
-    .article-meta-bar strong {{ color: var(--ink); }}
+    .article-editorial-note strong {{ color: #1d1d1f; }}
     .related-section {{
-      border-top: 2px solid var(--border);
-      margin-top: 48px; padding-top: 28px;
+      border-top: 1px solid #d2d2d7;
+      margin-top: 48px;
+      padding-top: 28px;
     }}
     .related-section h3 {{
-      font-family: var(--font-serif);
-      font-size: 20px; margin-bottom: 16px;
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
     }}
     .related-links a {{
-      display: block; padding: 10px 0;
-      border-bottom: 1px solid var(--border-2);
-      color: var(--accent); font-size: 15px;
+      display: block;
+      padding: 10px 0;
+      border-bottom: 1px solid #f5f5f7;
+      color: #0071e3;
+      font-size: 15px;
       font-weight: 500;
+      text-decoration: none;
     }}
-    .related-links a:hover {{ color: var(--accent-h); }}
+    .related-links a:hover {{ color: #0077ed; }}
   </style>
 </head>
 <body>
-
-<a class="skip-link" href="#main-content">Skip to main content</a>
-
-<!-- ===== HEADER ===== -->
-<header class="site-header" role="banner">
-  <a href="../index.html" class="header-brand" aria-label="The Tech Brief — Home">
-    <div class="brand-icon" aria-hidden="true">TB</div>
-    <span class="brand-name">Tech Brief</span>
-  </a>
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
-  </button>
-  <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
-    <a href="../index.html">Home</a>
-    <a href="../ai-news.html">AI News</a>
-    <a href="../broadcast-tech.html">Broadcast Tech</a>
-    <a href="../enterprise-tech.html">Enterprise Tech</a>
-    <a href="../cybersecurity-updates.html">Cybersecurity</a>
-    <a href="../mobile-gadgets.html">Mobile &amp; Gadgets</a>
-    <a href="../consumer-tech.html">Consumer Tech</a>
-    <a href="../gaming.html">Gaming</a>
-    <a href="../evs-automotive.html">EVs &amp; Automotive</a>
-    <a href="../startups-business.html">Startups &amp; Business</a>
-    <a href="../how-to.html">How-To Guides</a>
-    <a href="../about.html" class="nav-cta">About</a>
-  </nav>
-</header>
-
-<!-- ===== MAIN ===== -->
-<main id="main-content">
-  <article class="page-wrap" style="max-width:740px;">
-
-    <!-- Breadcrumb -->
-    <div style="margin-bottom:12px; font-size:13px;">
-      <a href="../index.html" style="color:var(--ink-3);">Home</a>
-      <span style="color:var(--ink-3); margin:0 6px;">&rsaquo;</span>
-      <a href="../{cat['page']}" style="color:var(--accent); font-weight:700;">{cat['name']}</a>
-    </div>
-
-    <!-- Category badge -->
-    <a href="../{cat['page']}" style="display:inline-block; background:{badge_color}; color:#fff; padding:4px 14px; border-radius:999px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.8px; margin-bottom:18px; text-decoration:none;">{cat['icon']} {cat['name']}</a>
-
-    <!-- Headline -->
-    <h1 style="font-family:var(--font-serif); font-size:clamp(26px,4vw,42px); line-height:1.18; margin-bottom:14px; color:var(--ink);">
-      {data["title"]}
-    </h1>
-
-    <!-- Meta bar -->
-    <div class="article-meta-bar">
-      <span>By <strong>{AUTHOR}</strong></span>
-      <span><time datetime="{date_str}">{pub_date}</time></span>
-      <span>{read_min} min read</span>
-      <span style="margin-left:auto;">
-        <a href="../{cat['page']}" style="font-size:13px; color:var(--accent); font-weight:600;">More {cat['name']} &rarr;</a>
-      </span>
-    </div>
-
-    <!-- Hero image -->
-    <img class="article-hero-img"
-         src="{image_url}"
-         alt="Editorial illustration for: {data['title']}"
-         width="740" height="400" loading="eager">
-
-    <!-- Article body -->
-    <div class="article-body">
-{article_body}
-    </div>
-
-    <!-- Editorial trust notice -->
-    <div style="margin-top:40px; padding:16px 20px; background:var(--surface-2); border-radius:var(--radius); font-size:13px; color:var(--ink-3);">
-      <strong style="color:var(--ink);">Editorial Note:</strong> This article was produced by The Tech Brief editorial team as original analysis and commentary. It does not reproduce content from any third-party publication.
-      <a href="../about.html#editorial-process" style="color:var(--accent); margin-left:6px;">About our process &rarr;</a>
-    </div>
-
-    <!-- Related section -->
-    <div class="related-section">
-      <h3>Continue Reading</h3>
-      <div class="related-links">
-        <a href="../{cat['page']}">{cat['icon']} All {cat['name']} Coverage</a>
-        <a href="../how-to.html">📖 How-To Guides &amp; Tutorials</a>
-        <a href="../index.html">🏠 Back to The Tech Brief Homepage</a>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="../featured.html" class="nav-logo-container">
+        <img src="../assets/logo.png" alt="The Streamic" class="nav-logo-image" onload="this.closest('.nav-logo-container').classList.add('logo-loaded')">
+        <span class="nav-logo">THE STREAMIC</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="../featured.html">FEATURED</a></li>
+        <li><a href="../infrastructure.html">INFRASTRUCTURE</a></li>
+        <li><a href="../graphics.html">GRAPHICS</a></li>
+        <li><a href="../cloud.html">CLOUD PRODUCTION</a></li>
+        <li><a href="../streaming.html">STREAMING</a></li>
+        <li><a href="../ai-post-production.html">AI &amp; POST-PRODUCTION</a></li>
+        <li><a href="../playout.html">PLAYOUT</a></li>
+        <li><a href="../newsroom.html">NEWSROOM</a></li>
+      </ul>
+      <div class="header-subscribe">
+        <a href="../vlog.html" class="editors-desk-link">Editor's Desk</a>
       </div>
     </div>
+  </nav>
 
-  </article>
-</main>
+  <main>
+    <div class="article-wrap">
 
-<!-- ===== FOOTER ===== -->
-<footer class="site-footer" role="contentinfo">
-  <div class="footer-inner">
-    <div class="footer-about">
-      <span class="brand-name">The Tech Brief</span>
-      <p>An independent technology publication delivering concise, editorially reviewed coverage from across the technology industry. Updated every six hours, 24/7.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Categories</h4>
-      <a href="../ai-news.html">AI News</a>
-      <a href="../broadcast-tech.html">Broadcast Tech</a>
-      <a href="../enterprise-tech.html">Enterprise Tech</a>
-      <a href="../cybersecurity-updates.html">Cybersecurity</a>
-      <a href="../mobile-gadgets.html">Mobile &amp; Gadgets</a>
-      <a href="../consumer-tech.html">Consumer Tech</a>
-      <a href="../gaming.html">Gaming</a>
-      <a href="../evs-automotive.html">EVs &amp; Automotive</a>
-      <a href="../startups-business.html">Startups &amp; Business</a>
-      <a href="../how-to.html">How-To Guides</a>
-    </div>
-    <div class="footer-col">
-      <h4>Site Info</h4>
-      <a href="../about.html">About</a>
-      <a href="../contact.html">Contact</a>
-      <a href="../legal/privacy.html">Privacy Policy</a>
-      <a href="../legal/terms.html">Terms of Use</a>
-      <a href="../legal/disclaimer.html">Disclaimer</a>
-      <a href="../legal/copyright.html">Copyright</a>
-      <a href="../legal/affiliate.html">Affiliate Disclosure</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; {year} The Tech Brief &mdash; thetechbrief.net. All rights reserved.</span>
-    <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
-  </div>
-</footer>
+      <div class="article-breadcrumb">
+        <a href="../featured.html">Home</a>
+        &rsaquo;
+        <a href="../{cat['page']}" style="color:{badge_color}; font-weight:600;">{cat['name']}</a>
+      </div>
 
-<script>
-  (function(){{
-    var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
-    if(!t||!n)return;
-    t.addEventListener('click',function(){{var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);}});
-  }})();
-</script>
-<script src="../assets/cookie-consent.js"></script>
+      <a href="../{cat['page']}" class="article-category-badge">{cat['icon']} {cat['name']}</a>
+
+      <h1 class="article-title">{data["title"]}</h1>
+
+      <div class="article-meta">
+        <span>By <strong>{AUTHOR}</strong></span>
+        <span><time datetime="{date_str}">{pub_date}</time></span>
+        <span>{read_min} min read</span>
+        <a href="../{cat['page']}">More {cat['name']} &rarr;</a>
+      </div>
+
+      <img class="article-hero-img"
+           src="{image_url}"
+           alt="Editorial illustration for: {data['title']}"
+           width="760" height="420" loading="eager">
+
+      <div class="article-body">
+{article_body}
+      </div>
+
+      <div class="article-editorial-note">
+        <strong>Editorial Note:</strong> This article was produced by The Streamic editorial team
+        as original analysis and commentary on broadcast and streaming technology. It does not
+        reproduce content from any third-party publication.
+        <a href="../about.html" style="color:#0071e3; margin-left:6px;">About The Streamic &rarr;</a>
+      </div>
+
+      <div class="related-section">
+        <h3>Continue Reading</h3>
+        <div class="related-links">
+          <a href="../{cat['page']}">{cat['icon']} All {cat['name']} Coverage</a>
+          <a href="../featured.html">⭐ Featured Stories</a>
+          <a href="../vlog.html">🎙️ Editor's Desk</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer style="background:#1d1d1f; color:#86868b; padding:40px 24px; text-align:center; font-size:13px; margin-top:60px;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <p style="margin-bottom:12px;">
+        <a href="../featured.html" style="color:#fff; font-weight:700; text-decoration:none; font-size:16px;">THE STREAMIC</a>
+      </p>
+      <p style="margin-bottom:16px;">Independent broadcast and streaming technology publication. Updated daily.</p>
+      <p>
+        <a href="../featured.html" style="color:#86868b; margin:0 10px;">Home</a>
+        <a href="../streaming.html" style="color:#86868b; margin:0 10px;">Streaming</a>
+        <a href="../cloud.html" style="color:#86868b; margin:0 10px;">Cloud</a>
+        <a href="../ai-post-production.html" style="color:#86868b; margin:0 10px;">AI &amp; Post</a>
+        <a href="../graphics.html" style="color:#86868b; margin:0 10px;">Graphics</a>
+        <a href="../playout.html" style="color:#86868b; margin:0 10px;">Playout</a>
+        <a href="../about.html" style="color:#86868b; margin:0 10px;">About</a>
+        <a href="../contact.html" style="color:#86868b; margin:0 10px;">Contact</a>
+        <a href="../privacy.html" style="color:#86868b; margin:0 10px;">Privacy</a>
+        <a href="../terms.html" style="color:#86868b; margin:0 10px;">Terms</a>
+      </p>
+      <p style="margin-top:20px;">&copy; {year} The Streamic &mdash; thestreamic.in. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {{
+      var t = document.querySelector('.nav-toggle');
+      var n = document.querySelector('.nav-links');
+      if (!t || !n) return;
+      t.addEventListener('click', function() {{
+        n.style.display = n.style.display === 'flex' ? 'none' : 'flex';
+      }});
+    }})();
+  </script>
 </body>
 </html>
 """
@@ -721,23 +766,20 @@ def build_article_html(cat: dict, data: dict, date_str: str, slug: str) -> str:
 # ─── Trending.txt updater ──────────────────────────────────────────────────────
 
 def update_trending_txt(articles: list):
-    """Rebuild trending.txt from the 6 most recent generated articles."""
     recent = sorted(articles, key=lambda a: a["date"], reverse=True)[:6]
     lines  = []
+    icon_map = {
+        "streaming": "📡", "cloud": "☁️", "ai-post-production": "🎬",
+        "graphics": "🎨", "playout": "▶️", "infrastructure": "🏗️",
+        "newsroom": "📰", "featured": "⭐",
+    }
     for a in recent:
-        label = a.get("cat_name", "Tech")
-        icon_map = {
-            "ai-news": "🤖", "cybersecurity-updates": "🔐",
-            "mobile-gadgets": "📱", "evs-automotive": "🚗",
-            "startups-business": "💼", "enterprise-tech": "🏢",
-            "gaming": "🎮", "consumer-tech": "🛒", "broadcast-tech": "📡",
-        }
-        icon = icon_map.get(a["cat_slug"], "📰")
+        icon    = icon_map.get(a["cat_slug"], "📡")
         summary = a.get("description", "")[:120]
         lines.append(f'{a["title"]}')
         lines.append(f'{summary}')
         lines.append(f'{icon} Original')
-        lines.append(f'The Tech Brief')
+        lines.append(f'The Streamic')
         lines.append(f'articles/{a["slug"]}.html')
         lines.append("")
 
@@ -762,7 +804,7 @@ def main():
 
     print()
     print("═" * 60)
-    print(f"  The Tech Brief — Original Article Generator")
+    print(f"  The Streamic — Original Article Generator")
     print(f"  Date: {today}  |  Categories: {len(CATEGORIES)}")
     print("═" * 60)
 
@@ -775,54 +817,45 @@ def main():
             print(f"   ✓ Article already exists for today — skipping")
             continue
 
-        # Fetch topic inspiration
         print(f"   Fetching RSS headlines for context…")
         headlines = fetch_rss_topics(cat["feeds"], cat["topics_fallback"])
         print(f"   Topics context: {headlines[:80]}…")
 
-        # Generate via Groq
         print(f"   Calling Groq Llama 3 (70B)…")
         data = generate_article_json(cat, headlines)
         if not data:
             print(f"   ✗ Generation failed — skipping")
             continue
 
-        # Build file slug and path
-        title_slug = slugify(data["title"])
+        title_slug = slugify_title(data["title"])
         slug       = f"{today}-{cat['slug']}" if not title_slug else f"{today}-{title_slug}"
         html_path  = SITE_DIR / f"{slug}.html"
 
-        # Save HTML
         html = build_article_html(cat, data, today, slug)
         html_path.write_text(html, encoding="utf-8")
         print(f"   📄 Saved: site/articles/{slug}.html")
         print(f"   Title: {data['title']}")
 
-        # Record metadata
         record = {
-            "slug":        slug,
-            "title":       data["title"],
-            "description": data["description"],
-            "date":        today,
-            "cat_name":    cat["name"],
-            "cat_slug":    cat["slug"],
-            "cat_page":    cat["page"],
-            "cat_icon":    cat["icon"],
-            "image":       pick_image(cat["slug"], slug),
+            "slug":         slug,
+            "title":        data["title"],
+            "description":  data["description"],
+            "date":         today,
+            "cat_name":     cat["name"],
+            "cat_slug":     cat["slug"],
+            "cat_page":     cat["page"],
+            "cat_icon":     cat["icon"],
+            "image":        pick_image(cat["slug"], slug),
             "read_minutes": int(data.get("read_minutes", 6)),
-            "url":         f"articles/{slug}.html",
+            "url":          f"articles/{slug}.html",
         }
         articles.insert(0, record)
         generated += 1
 
-    # Trim to max stored
     articles = articles[:MAX_STORED]
-
-    # Persist JSON
     save_articles_json(articles)
     print(f"\n  ✓ generated_articles.json updated ({len(articles)} total entries)")
 
-    # Update trending widget
     update_trending_txt(articles)
 
     print()

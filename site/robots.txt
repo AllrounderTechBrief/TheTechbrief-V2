@@ -1,11 +1,4 @@
 User-agent: *
 Allow: /
 
-# Block GitHub Actions bot from being indexed
-User-agent: AhrefsBot
-Crawl-delay: 10
-
-User-agent: SemrushBot
-Crawl-delay: 10
-
-Sitemap: https://www.thetechbrief.net/sitemap.xml
+Sitemap: https://www.thestreamic.in/sitemap.xml
