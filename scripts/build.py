@@ -48,7 +48,10 @@ RSS_ARTICLES_OUT = os.path.join(SITE_OUT, 'articles')
 # ── Groq config ───────────────────────────────────────────────────────────────
 GROQ_API_KEY         = os.environ.get('GROQ_API_KEY', '')
 GROQ_URL             = 'https://api.groq.com/openai/v1/chat/completions'
-MODEL                = 'llama3-70b-8192'
+# 70B: best quality, still fast on Groq
+model = "llama-3.3-70b-versatile"
+# or, for cheaper/faster runs:
+# model = "llama-3.1-8b-instant"
 MAX_REWRITES_PER_RUN = 40
 CACHE_MAX_AGE_DAYS   = 60
 
