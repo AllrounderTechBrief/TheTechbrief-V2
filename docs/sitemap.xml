@@ -250,12 +250,6 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.thetechbrief.net/articles/rss-9c4f710b55e93db3.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
     <loc>https://www.thetechbrief.net/articles/rss-f99ea28e78cffd21.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -346,12 +340,6 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.thetechbrief.net/articles/rss-b9c171ccbdf9831e.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
     <loc>https://www.thetechbrief.net/articles/rss-339270217cef3c42.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -395,12 +383,6 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-35f75b1d8e6e9995.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.thetechbrief.net/articles/rss-84171eaaca56dd2b.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -454,6 +436,12 @@
     <priority>0.65</priority>
   </url>
   <url>
+    <loc>https://www.thetechbrief.net/articles/rss-8adcf3fb2c225f31.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
     <loc>https://www.thetechbrief.net/articles/rss-4e1545a33e4aae61.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -461,6 +449,12 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-f9309fcbda98b854.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.thetechbrief.net/articles/rss-191d3e82df207d22.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -568,12 +562,6 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.thetechbrief.net/articles/rss-82f6d1f9f0f5158e.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
     <loc>https://www.thetechbrief.net/articles/rss-4cdfdc132fa311f9.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -587,6 +575,18 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-2573a0a502e182fc.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.thetechbrief.net/articles/rss-5e1fa38a738c84e5.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.thetechbrief.net/articles/rss-eafe691ab055e9a3.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -647,6 +647,12 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-6d45da85fc969717.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.thetechbrief.net/articles/rss-722208a93375de78.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -737,12 +743,6 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-c70f256a888e5bd7.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.thetechbrief.net/articles/rss-429bc33ca5b5e910.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -880,6 +880,12 @@
     <priority>0.65</priority>
   </url>
   <url>
+    <loc>https://www.thetechbrief.net/articles/rss-13b917798bccdc1f.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
     <loc>https://www.thetechbrief.net/articles/rss-d65bb2231c955c33.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -905,6 +911,12 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-d45c4be09f7f09a6.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.thetechbrief.net/articles/rss-8c862061dc379e29.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -970,13 +982,13 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.thetechbrief.net/articles/rss-52056cb16b35a2fd.html</loc>
+    <loc>https://www.thetechbrief.net/articles/rss-90d88f3f63a73cc2.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.thetechbrief.net/articles/rss-d3423a8e25d46f9c.html</loc>
+    <loc>https://www.thetechbrief.net/articles/rss-52056cb16b35a2fd.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -989,12 +1001,6 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-dec5ad21e7d3fa80.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.thetechbrief.net/articles/rss-b7134baddaf759b3.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -1084,12 +1090,6 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.thetechbrief.net/articles/rss-7b86dc805c1b409b.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
     <loc>https://www.thetechbrief.net/articles/rss-85c9b1577721084e.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -1097,12 +1097,6 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-6ebb2658d1f0eeb3.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.thetechbrief.net/articles/rss-3ecaa594087f6ed1.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -1234,12 +1228,6 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.thetechbrief.net/articles/rss-6fb78e339c52d795.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
     <loc>https://www.thetechbrief.net/articles/rss-4b3b9bb81bb66b19.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -1259,6 +1247,12 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-8a389d771bcb46e7.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.thetechbrief.net/articles/rss-d3417833d54e6b2c.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -1300,7 +1294,7 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.thetechbrief.net/articles/rss-6563640c745718b2.html</loc>
+    <loc>https://www.thetechbrief.net/articles/rss-cf97c68cfeb26dbc.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -1384,6 +1378,12 @@
     <priority>0.65</priority>
   </url>
   <url>
+    <loc>https://www.thetechbrief.net/articles/rss-9521f5acbd214177.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
     <loc>https://www.thetechbrief.net/articles/rss-3a4e1714ed072b21.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -1397,12 +1397,6 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-e0fe06270fe3c957.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.thetechbrief.net/articles/rss-417fae30347445be.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -1510,6 +1504,12 @@
     <priority>0.65</priority>
   </url>
   <url>
+    <loc>https://www.thetechbrief.net/articles/rss-f133b253e8662f8b.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
     <loc>https://www.thetechbrief.net/articles/rss-93cbf6a9d7dc4fc1.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -1535,6 +1535,12 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-198565812d13ae2e.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.thetechbrief.net/articles/rss-8ca66332767f7efb.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -1660,6 +1666,12 @@
     <priority>0.65</priority>
   </url>
   <url>
+    <loc>https://www.thetechbrief.net/articles/rss-83f70ab1123a4f61.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
     <loc>https://www.thetechbrief.net/articles/rss-0669db86bbd30106.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -1708,12 +1720,6 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.thetechbrief.net/articles/rss-c9b0db2ccf63594e.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
     <loc>https://www.thetechbrief.net/articles/rss-f61f8a5955035500.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -1721,12 +1727,6 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-be9e116d903bb673.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.thetechbrief.net/articles/rss-e9c3daaf7778db81.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -1780,19 +1780,7 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.thetechbrief.net/articles/rss-e35eb01c53687b68.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
     <loc>https://www.thetechbrief.net/articles/rss-92c7e6bbb790da6b.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.thetechbrief.net/articles/rss-b690890c98ae8114.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -1811,6 +1799,12 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-c60464184340361d.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.thetechbrief.net/articles/rss-0a6eb0628d37b364.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -1859,6 +1853,12 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-4fd9c7847d2b093b.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.thetechbrief.net/articles/rss-3285d6425d554391.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -1948,6 +1948,12 @@
     <priority>0.65</priority>
   </url>
   <url>
+    <loc>https://www.thetechbrief.net/articles/rss-bfcc1fee7ff2545e.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
     <loc>https://www.thetechbrief.net/articles/rss-573e95ae90bf88a0.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -1967,12 +1973,6 @@
   </url>
   <url>
     <loc>https://www.thetechbrief.net/articles/rss-40c7157058478252.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.thetechbrief.net/articles/rss-cba6b98f534dbbb0.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
