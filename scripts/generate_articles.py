@@ -38,7 +38,10 @@ ARTICLES_JSON = DATA_DIR / "generated_articles.json"
 # ─── Config ───────────────────────────────────────────────────────────────────
 GROQ_API_KEY  = os.environ.get("GROQ_API_KEY", "")
 GROQ_URL      = "https://api.groq.com/openai/v1/chat/completions"
-MODEL         = "llama3-70b-8192"
+# 70B: best quality, still fast on Groq
+model = "llama-3.3-70b-versatile"
+# or, for cheaper/faster runs:
+# model = "llama-3.1-8b-instant"
 SITE_URL      = "https://www.thetechbrief.net"
 GA_TAG        = "G-YCJEGDPW7G"
 AUTHOR        = "The Tech Brief Editorial Team"
