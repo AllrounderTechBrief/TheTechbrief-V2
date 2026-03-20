@@ -1,78 +1,65 @@
 {
   "Home": {
-    "title": "The Tech Brief — AI, Broadcast Tech, Enterprise IT, Cybersecurity & Mobile News",
-    "description": "Original technology analysis and coverage across AI, enterprise tech, cybersecurity, broadcast technology and mobile. Written by The Tech Brief editorial team and updated daily.",
-    "h1": "The Tech Brief — Modern Technology News",
-    "h2": "Original editorial analysis and reporting across all areas of technology — updated daily.",
-    "slug": "index"
+    "title": "The Streamic — Broadcast & Streaming Technology News",
+    "description": "Independent broadcast and streaming technology publication. Expert coverage of ST 2110, cloud production, OTT, AI post-production, graphics, playout, and newsroom technology.",
+    "h1": "The Streamic",
+    "h2": "Independent Broadcast & Streaming Technology News",
+    "slug": "featured"
   },
-  "AI News": {
-    "title": "AI News & Machine Learning Updates | The Tech Brief",
-    "description": "Original analysis of the latest AI breakthroughs, machine learning research, large language model developments and automation trends. Written by The Tech Brief editorial team.",
-    "h1": "AI News",
-    "h2": "Original analysis of breakthroughs in artificial intelligence, machine learning and automation",
-    "slug": "ai-news"
+  "Featured": {
+    "title": "Featured — The Streamic",
+    "description": "Featured broadcast and streaming technology stories from The Streamic editorial team.",
+    "h1": "Featured Stories",
+    "h2": "Top broadcast and streaming technology coverage",
+    "slug": "featured"
   },
-  "Broadcast Tech": {
-    "title": "Broadcast Technology & Media Workflow News | The Tech Brief",
-    "description": "Original coverage of broadcast engineering, cloud production, streaming technology, playout systems and media workflows. Written by The Tech Brief editorial team.",
-    "h1": "Broadcast Technology & Media Workflow",
-    "h2": "Original coverage of broadcast engineering, cloud production, streaming and media technology",
-    "slug": "broadcast-tech"
+  "Streaming": {
+    "title": "Streaming Technology News — The Streamic",
+    "description": "OTT, IPTV, ABR, low-latency streaming, CDN delivery, and video platform news for broadcast professionals.",
+    "h1": "Streaming Technology",
+    "h2": "OTT, CDN, and low-latency delivery news",
+    "slug": "streaming"
   },
-  "Enterprise Tech": {
-    "title": "Enterprise Technology & Cloud Infrastructure News | The Tech Brief",
-    "description": "Original analysis of enterprise IT trends: cloud infrastructure, servers, software platforms and IT operations. Written by The Tech Brief editorial team.",
-    "h1": "Enterprise Technology & Cloud Infrastructure",
-    "h2": "Original analysis of cloud infrastructure, servers, enterprise software and IT operations",
-    "slug": "enterprise-tech"
+  "Cloud Production": {
+    "title": "Cloud Production News — The Streamic",
+    "description": "Cloud-native broadcast, remote production, REMI workflows, and cloud playout news for media professionals.",
+    "h1": "Cloud Production",
+    "h2": "Cloud-native and remote production workflows",
+    "slug": "cloud"
   },
-  "Cybersecurity Updates": {
-    "title": "Cybersecurity News & Threat Intelligence | The Tech Brief",
-    "description": "Original coverage of security threats, vulnerabilities, data breaches and enterprise defences. Written by The Tech Brief editorial team.",
-    "h1": "Cybersecurity News & Threat Intelligence",
-    "h2": "Original editorial coverage of security threats, vulnerabilities and enterprise defences",
-    "slug": "cybersecurity-updates"
+  "AI & Post-Production": {
+    "title": "AI & Post-Production — The Streamic",
+    "description": "AI-driven editing, automated workflows, MAM, colour grading, and post-production technology for broadcast.",
+    "h1": "AI & Post-Production",
+    "h2": "AI-driven editing and post-production workflows",
+    "slug": "ai-post-production"
   },
-  "Mobile & Gadgets": {
-    "title": "Mobile & Gadget News — Smartphones, Wearables & Consumer Tech | The Tech Brief",
-    "description": "Original coverage of smartphone launches, wearables, tablets and consumer gadget news. Written by The Tech Brief editorial team.",
-    "h1": "Mobile & Gadget News",
-    "h2": "Original coverage of smartphone launches, wearables, tablets and consumer gadget trends",
-    "slug": "mobile-gadgets"
+  "Graphics": {
+    "title": "Broadcast Graphics News — The Streamic",
+    "description": "Real-time graphics, virtual sets, motion design, and broadcast visual technology news.",
+    "h1": "Graphics Technology",
+    "h2": "Real-time graphics and broadcast visual technology",
+    "slug": "graphics"
   },
-  "Consumer Tech": {
-    "title": "Consumer Tech — Laptops, Wearables, Smart Home & Gadgets | The Tech Brief",
-    "description": "Original consumer technology analysis covering laptops, wearables, smart home devices and the best gadgets. Written by The Tech Brief editorial team.",
-    "h1": "Consumer Tech & Reviews",
-    "h2": "Original analysis of laptops, wearables, smart home devices and consumer technology",
-    "slug": "consumer-tech",
-    "subcats": [
-      { "label": "Mobile & Gadgets", "href": "mobile-gadgets.html", "icon": "&#x1F4F1;" },
-      { "label": "Laptops",          "href": "laptops.html",        "icon": "&#x1F4BB;" },
-      { "label": "Wearables",        "href": "wearables.html",      "icon": "&#x231A;"  },
-      { "label": "Smart Home",       "href": "smart-home.html",     "icon": "&#x1F3E0;" }
-    ]
+  "Playout": {
+    "title": "Playout & Master Control News — The Streamic",
+    "description": "Channel-in-a-box, master control, broadcast automation, and playout technology news.",
+    "h1": "Playout Technology",
+    "h2": "Channel playout and broadcast automation",
+    "slug": "playout"
   },
-  "Gaming": {
-    "title": "Gaming News — Consoles, PC Games & Industry | The Tech Brief",
-    "description": "Original coverage of video game releases, console news, reviews and gaming industry developments. Written by The Tech Brief editorial team.",
-    "h1": "Gaming News",
-    "h2": "Original coverage of console gaming, PC games, reviews and the gaming industry",
-    "slug": "gaming"
+  "Infrastructure": {
+    "title": "Broadcast Infrastructure News — The Streamic",
+    "description": "SMPTE ST 2110, IP routing, network infrastructure, storage, and broadcast facility technology.",
+    "h1": "Infrastructure",
+    "h2": "ST 2110, IP infrastructure, and broadcast networks",
+    "slug": "infrastructure"
   },
-  "EVs & Automotive": {
-    "title": "EVs & Automotive Tech News | The Tech Brief",
-    "description": "Original analysis of electric vehicle launches, autonomous driving, charging infrastructure and automotive technology trends. Written by The Tech Brief editorial team.",
-    "h1": "EVs & Automotive Tech",
-    "h2": "Original analysis of electric vehicles, autonomous driving and automotive technology",
-    "slug": "evs-automotive"
-  },
-  "Startups & Business": {
-    "title": "Startups, Tech Business & Funding News | The Tech Brief",
-    "description": "Original coverage of startup launches, funding rounds, mergers and acquisitions, and Big Tech business strategy. Written by The Tech Brief editorial team.",
-    "h1": "Startups & Tech Business",
-    "h2": "Original coverage of startup funding, acquisitions, Big Tech strategy and regulatory developments",
-    "slug": "startups-business"
+  "Newsroom": {
+    "title": "Newsroom Technology — The Streamic",
+    "description": "NRCS, news production, remote journalism, and newsroom technology for broadcast professionals.",
+    "h1": "Newsroom Technology",
+    "h2": "NRCS, news production, and newsroom workflows",
+    "slug": "newsroom"
   }
 }
