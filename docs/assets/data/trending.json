@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-19",
+  "updated": "2026-03-20",
   "stories": [
     {
       "headline": "The Race To Build Ai Agents That Can Actually Use A Computer",
@@ -22,7 +22,7 @@
       "badge": "AI",
       "badge_color": "#7C3AED",
       "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=900&auto=format&fit=crop&q=80",
-      "date": "2026-03-19"
+      "date": "2026-03-20"
     },
     {
       "headline": "Why Ransomware Groups Are Now Targeting Cloud Backups First",
@@ -45,7 +45,7 @@
       "badge": "Security",
       "badge_color": "#DC2626",
       "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=900&auto=format&fit=crop&q=80",
-      "date": "2026-03-19"
+      "date": "2026-03-20"
     },
     {
       "headline": "Foldable Phones In 2026: Are They Finally Ready For Everyone",
@@ -68,7 +68,7 @@
       "badge": "Gadgets",
       "badge_color": "#0891B2",
       "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=900&auto=format&fit=crop&q=80",
-      "date": "2026-03-19"
+      "date": "2026-03-20"
     },
     {
       "headline": "The Cio's Dilemma: Ai Costs Are Spiralling Faster Than Expected",
@@ -91,7 +91,7 @@
       "badge": "Enterprise",
       "badge_color": "#2563EB",
       "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=900&auto=format&fit=crop&q=80",
-      "date": "2026-03-19"
+      "date": "2026-03-20"
     },
     {
       "headline": "Solid-state Batteries: Which Automaker Will Ship First And When",
@@ -114,7 +114,7 @@
       "badge": "EVs",
       "badge_color": "#059669",
       "image": "https://images.unsplash.com/photo-1580274455191-1c62238fa1f4?w=900&auto=format&fit=crop&q=80",
-      "date": "2026-03-19"
+      "date": "2026-03-20"
     },
     {
       "headline": "How Game Streaming Finally Got Good — And What Changed",
@@ -137,7 +137,7 @@
       "badge": "Gaming",
       "badge_color": "#7C3AED",
       "image": "https://images.unsplash.com/photo-1569429593410-b498b3fb3387?w=900&auto=format&fit=crop&q=80",
-      "date": "2026-03-19"
+      "date": "2026-03-20"
     }
   ]
 }
