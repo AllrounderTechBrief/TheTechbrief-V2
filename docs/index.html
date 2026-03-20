@@ -1,529 +1,733 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <!-- Google Consent Mode v2 (default denied – required for GDPR/EU) -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      'analytics_storage': 'denied',
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'wait_for_update': 500
-    });
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});
   </script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJEGDPW7G"></script>
-  <script>
-    gtag('js', new Date());
-    gtag('config', 'G-YCJEGDPW7G');
-  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0VSHDN3ZR6"></script>
+  <script>gtag('js',new Date());gtag('config','G-0VSHDN3ZR6');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8033069131874524" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <title>The Tech Brief — AI, Broadcast Tech, Enterprise IT, Cybersecurity & Mobile News</title>
-  <meta name="description" content="Original technology analysis and coverage across AI, enterprise tech, cybersecurity, broadcast technology and mobile. Written by The Tech Brief editorial team and updated daily.">
+  <title>Featured — The Streamic | Broadcast &amp; Streaming Technology News</title>
+  <meta name="description" content="Featured broadcast and streaming technology coverage. Expert analysis, original editorial, and breaking news for media professionals.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.thetechbrief.net/">
-
-  <meta property="og:type"        content="website">
-  <meta property="og:site_name"   content="The Tech Brief">
-  <meta property="og:title"       content="The Tech Brief — AI, Broadcast Tech, Enterprise IT, Cybersecurity & Mobile News">
-  <meta property="og:description" content="Original technology analysis and coverage across AI, enterprise tech, cybersecurity, broadcast technology and mobile. Written by The Tech Brief editorial team and updated daily.">
-  <meta property="og:url"         content="https://www.thetechbrief.net/">
-
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="The Tech Brief — AI, Broadcast Tech, Enterprise IT, Cybersecurity & Mobile News">
-  <meta name="twitter:description" content="Original technology analysis and coverage across AI, enterprise tech, cybersecurity, broadcast technology and mobile. Written by The Tech Brief editorial team and updated daily.">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "The Tech Brief",
-    "url": "https://www.thetechbrief.net/",
-    "description": "Original technology analysis and coverage across AI, enterprise tech, cybersecurity, broadcast technology and mobile. Written by The Tech Brief editorial team and updated daily.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "The Tech Brief",
-      "email": "technodate3@gmail.com"
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.thetechbrief.net/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
-
-  <style>
-    /* ── Fix: remove featured first-card split layout (caused the NO GAP bug) ── */
-    .grid .card:first-child {
-      grid-column: auto !important;
-      display: flex !important;
-      flex-direction: column !important;
-      grid-template-columns: unset !important;
-    }
-    .grid .card:first-child img {
-      width: 100% !important;
-      height: 185px !important;
-      object-fit: cover !important;
-      border-radius: var(--radius) var(--radius) 0 0 !important;
-    }
-
-    /* ── Editorial card badge ── */
-    .card-badge-editorial {
-      display: inline-block;
-      background: var(--accent-2);
-      color: #fff;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .8px;
-      text-transform: uppercase;
-      padding: 3px 9px;
-      border-radius: 999px;
-      margin-bottom: 6px;
-      align-self: flex-start;
-    }
-
-    /* ── Clean card footer (no source attribution) ── */
-    .card-footer-clean {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 20px;
-      border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-
-    /* ── Editorial highlights strip on homepage ── */
-    .editorial-highlights {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 22px;
-    }
-    .editorial-highlights .ecard {
-      background: var(--white);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent-2);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .editorial-highlights .ecard:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow);
-    }
-    .ecard-img {
-      width: 100%; height: 185px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .ecard-body {
-      padding: 18px 20px 12px;
-      flex: 1; display: flex; flex-direction: column; gap: 8px;
-    }
-    .ecard-meta {
-      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-      font-size: 11px; color: var(--ink-3);
-    }
-    .ecard-cat {
-      display: inline-block;
-      background: var(--accent-2); color: #fff;
-      padding: 2px 8px; border-radius: 999px;
-      font-size: 10px; font-weight: 700; letter-spacing: .5px;
-    }
-    .ecard-body h3 {
-      font-family: var(--font-serif); font-size: 18px;
-      line-height: 1.3; color: var(--ink); flex: 1;
-    }
-    .ecard-body h3 a { color: inherit; }
-    .ecard-body h3 a:hover { color: var(--accent); }
-    .ecard-desc {
-      font-size: 13.5px; color: var(--ink-2); line-height: 1.55;
-    }
-    .ecard-footer {
-      padding: 12px 20px;
-      border-top: 1px solid var(--border);
-      background: #FAFAFA;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .ecard-read {
-      font-size: 12.5px; font-weight: 600; color: var(--accent);
-    }
-    .ecard-read:hover { color: var(--accent-h); }
-    .ecard-read::after { content: ' →'; }
-
-    /* ── Fallback evergreen cards (shown until AI articles exist) ── */
-    .evergreen-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 22px;
-    }
-    .evergreen-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      padding: 22px 24px 18px;
-      display: flex; flex-direction: column; gap: 10px;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .evergreen-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-    .evergreen-card h3 { font-family: var(--font-serif); font-size: 19px; line-height: 1.28; color: var(--ink); }
-    .evergreen-card h3 a { color: inherit; }
-    .evergreen-card h3 a:hover { color: var(--accent); }
-    .evergreen-card p { font-size: 13.5px; color: var(--ink-2); line-height: 1.6; flex: 1; }
-
-    /* ── Category tile grid ── */
-    .cat-tile-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
-    .cat-tile {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px 18px;
-      display: flex; flex-direction: column; gap: 6px;
-      text-decoration: none;
-      transition: transform .15s, box-shadow .15s, border-color .15s;
-      position: relative;
-    }
-    .cat-tile:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--accent); }
-    .cat-tile-icon { font-size: 26px; line-height: 1; }
-    .cat-tile-name { font-family: var(--font-serif); font-size: 15px; color: var(--ink); font-weight: 400; }
-    .cat-tile-desc { font-size: 12px; color: var(--ink-3); line-height: 1.4; }
-    .cat-tile-badge {
-      position: absolute; top: 10px; right: 12px;
-      background: var(--positive); color: #fff;
-      font-size: 9px; font-weight: 700; letter-spacing: .5px;
-      padding: 2px 6px; border-radius: 999px; text-transform: uppercase;
-    }
-  </style>
+  <meta name="author" content="The Streamic Editorial Team">
+  <link rel="canonical" href="https://www.thestreamic.in/featured.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The Streamic">
+  <meta property="og:title" content="Featured — The Streamic | Broadcast &amp; Streaming Technology News">
+  <meta property="og:description" content="Featured broadcast and streaming technology coverage. Expert analysis, original editorial, and breaking news for media professionals.">
+  <meta property="og:url" content="https://www.thestreamic.in/featured.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<a class="skip-link" href="#main-content">Skip to main content</a>
-
-<!-- ===== HEADER ===== -->
-<header class="site-header" role="banner">
-  <a href="index.html" class="header-brand" aria-label="The Tech Brief — Home">
-    <div class="brand-icon" aria-hidden="true">TB</div>
-    <span class="brand-name">Tech Brief</span>
-  </a>
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
-  </button>
-  <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
-    <a href="index.html" aria-current="page">Home</a>
-    <a href="ai-news.html">AI News</a>
-    <a href="broadcast-tech.html">Broadcast Tech</a>
-    <a href="enterprise-tech.html">Enterprise Tech</a>
-    <a href="cybersecurity-updates.html">Cybersecurity</a>
-    <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
-    <a href="consumer-tech.html">Consumer Tech</a>
-    <a href="gaming.html">Gaming</a>
-    <a href="evs-automotive.html">EVs &amp; Automotive</a>
-    <a href="startups-business.html">Startups &amp; Business</a>
-    <a href="how-to.html">How-To Guides</a>
-    <a href="about.html" class="nav-cta">About</a>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="featured.html" class="nav-logo-container">
+        <img src="assets/logo.png" alt="The Streamic Logo" class="nav-logo-image"
+             onload="this.closest('.nav-logo-container').classList.add('logo-loaded')">
+        <span class="nav-logo">THE STREAMIC</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="featured.html" class="active">FEATURED</a></li>
+        <li><a href="infrastructure.html">INFRASTRUCTURE</a></li>
+        <li><a href="graphics.html">GRAPHICS</a></li>
+        <li><a href="cloud.html">CLOUD PRODUCTION</a></li>
+        <li><a href="streaming.html">STREAMING</a></li>
+        <li><a href="ai-post-production.html">AI &amp; POST-PRODUCTION</a></li>
+        <li><a href="playout.html">PLAYOUT</a></li>
+        <li><a href="newsroom.html">NEWSROOM</a></li>
+        <li><a href="howto.html">HOW-TO</a></li>
+      </ul>
+      <div class="header-subscribe"><a href="vlog.html" class="editors-desk-link">Editor's Desk</a></div>
+    </div>
   </nav>
-</header>
-
-<!-- ===== HERO ===== -->
-<section class="hero" aria-label="Site introduction">
-  <div class="hero-inner">
-    <span class="hero-label">Original Editorial Coverage &mdash; The Tech Brief — Modern Technology News</span>
-    <h1>Your Daily Technology Intelligence Brief</h1>
-    <p class="hero-sub">In-depth original analysis and reporting across AI, enterprise tech, cybersecurity, broadcast technology, mobile and more &mdash; written by The Tech Brief editorial team.</p>
-    <nav class="cat-pill-row" aria-label="Browse by category">
-      <a href="ai-news.html" class="cat-pill">&#x1F916; AI News</a>
-      <a href="broadcast-tech.html" class="cat-pill">&#x1F4E1; Broadcast Tech</a>
-      <a href="enterprise-tech.html" class="cat-pill">&#x1F3E2; Enterprise Tech</a>
-      <a href="cybersecurity-updates.html" class="cat-pill">&#x1F510; Cybersecurity</a>
-      <a href="mobile-gadgets.html" class="cat-pill">&#x1F4F1; Mobile &amp; Gadgets</a>
-      <a href="consumer-tech.html" class="cat-pill">&#x1F6D2; Consumer Tech</a>
-      <a href="gaming.html" class="cat-pill">&#x1F3AE; Gaming</a>
-      <a href="evs-automotive.html" class="cat-pill">&#x1F697; EVs &amp; Automotive</a>
-      <a href="startups-business.html" class="cat-pill">&#x1F4BC; Startups &amp; Business</a>
-    </nav>
-  </div>
-</section>
-
-<!-- ===== TECH TRENDING NOW ===== -->
-<section class="trending-now" aria-label="Tech Trending Now">
-  <div class="trending-inner">
-    <div class="trending-meta">
-      <div class="trending-live">
-        <span class="live-dot" aria-hidden="true"></span>
-        <span class="live-label">Live</span>
+  <section class="ts-hero">
+    <div class="ts-hero-inner">
+      <div class="ts-hero-img-wrap">
+        <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Camera test chart company DSC Labs reborn" loading="eager"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="nc-pill" style="background:#1d1d1f;">⭐ Featured</span>
       </div>
-      <h2 class="trending-title">Tech Trending Now</h2>
-      <time class="trending-date" datetime=""></time>
+      <div class="ts-hero-body">
+        <p class="ts-hero-eyebrow">Editor's Pick &mdash; March 20, 2026</p>
+        <h2 class="ts-hero-title"><a href="articles/2026-03-20-featured-camera-test-chart-company-dsc-labs-reborn.html">Camera test chart company DSC Labs reborn</a></h2>
+        <p class="ts-hero-dek">Camera test chart company DSC Labs reborn Digital imaging technician and image workflow specialist Matt Conrad acquired DSC Labs last summer and has been appoin</p>
+        <div class="ts-hero-footer">
+          <span>&#128337; 1 min read</span>
+          <a href="articles/2026-03-20-featured-camera-test-chart-company-dsc-labs-reborn.html" class="ts-hero-cta">Read full article &#8594;</a>
+        </div>
+      </div>
     </div>
-    <ol class="trending-list" aria-label="Trending stories">
-      <!-- Populated by trending-loader.js from assets/data/trending.txt -->
-    </ol>
-    <div class="trending-footer">
-      <a href="ai-news.html" class="trending-cta">Browse all tech news <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </section>
+  <div class="ts-catbar">
+    <div class="ts-catbar-inner"><a href="streaming.html" class="ts-cat-pill">📡 Streaming</a><a href="cloud.html" class="ts-cat-pill">☁️ Cloud</a><a href="graphics.html" class="ts-cat-pill">🎨 Graphics</a><a href="playout.html" class="ts-cat-pill">▶️ Playout</a><a href="infrastructure.html" class="ts-cat-pill">🏗️ Infrastructure</a><a href="ai-post-production.html" class="ts-cat-pill">🎬 AI & Post</a><a href="newsroom.html" class="ts-cat-pill">📰 Newsroom</a>
+      <span class="ts-updated">Updated every 6 hours</span>
     </div>
   </div>
-</section>
-
-<!-- ===== MAIN CONTENT ===== -->
-<main id="main-content">
-
-  <!-- ===== ORIGINAL EDITORIAL ARTICLES ===== -->
-  <!-- This section is 100% original — written by the Groq-powered editorial generator  -->
-  <!-- No RSS content, no scraped summaries, no external source attribution             -->
-  <div class="section">
-    <div class="section-head">
-      <h2>Analysis &amp; Deep Dives</h2>
-    </div>
-
-    
-    <!-- Fallback: show hand-authored evergreen articles until generator has run -->
-    <div class="evergreen-grid">
-      <article class="evergreen-card">
-        <span class="ecard-cat" style="align-self:flex-start;">🤖 AI News</span>
-        <h3><a href="articles/ai-agents-enterprise-2025.html">AI Agents in the Enterprise: What 2025's Deployments Actually Look Like</a></h3>
-        <p>Beyond the hype — a practical look at how organisations are deploying AI agents in production, what infrastructure they require, and which use cases are delivering measurable ROI.</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border);">
-          <span style="font-size:11px;color:var(--ink-3);font-family:var(--font-mono);">THE TECH BRIEF</span>
-          <a href="articles/ai-agents-enterprise-2025.html" class="ecard-read">Read analysis</a>
+  <main>
+    <div class="page-wrap">
+      <div class="page-section">
+        <div class="section-hdr">
+          <h2>&#128240; Latest Broadcast &amp; Streaming News</h2>
+          <span class="ts-updated">Updated every 6 hours</span>
         </div>
-      </article>
-      <article class="evergreen-card">
-        <span class="ecard-cat" style="align-self:flex-start;">🔐 Cybersecurity</span>
-        <h3><a href="articles/ransomware-playbook-2025.html">The 2025 Ransomware Playbook: How Attacks Have Evolved and What Defences Work</a></h3>
-        <p>Ransomware groups have professionalised. This analysis covers how modern attacks unfold, the role of initial access brokers, and the controls that consistently limit damage.</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border);">
-          <span style="font-size:11px;color:var(--ink-3);font-family:var(--font-mono);">THE TECH BRIEF</span>
-          <a href="articles/ransomware-playbook-2025.html" class="ecard-read">Read analysis</a>
-        </div>
-      </article>
-      <article class="evergreen-card">
-        <span class="ecard-cat" style="align-self:flex-start;">📱 Mobile &amp; Gadgets</span>
-        <h3><a href="articles/android-vs-iphone-2025.html">Android vs iPhone in 2025: The Real Differences That Actually Matter</a></h3>
-        <p>After a year of flagship launches, we cut through the spec-sheet wars to identify where each platform genuinely leads — and where the gap has closed to near-irrelevance.</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border);">
-          <span style="font-size:11px;color:var(--ink-3);font-family:var(--font-mono);">THE TECH BRIEF</span>
-          <a href="articles/android-vs-iphone-2025.html" class="ecard-read">Read analysis</a>
-        </div>
-      </article>
-    </div>
-    
-  </div>
-
-  <!-- ===== EDITORIAL TRANSPARENCY ===== -->
-  <div class="section" style="padding-top:0;">
-    <div class="info-box">
-      <p><strong>About The Tech Brief:</strong> We are an independent technology publication. All articles on this page are written by our editorial team — original analysis and commentary on technology trends, products, and industry developments. We do not syndicate or reproduce content from external sources. <a href="about.html">Learn about our editorial process &rarr;</a></p>
-    </div>
-  </div>
-
-  <!-- ===== HOW-TO GUIDES TEASER ===== -->
-  <div class="section" style="padding-top:0;">
-    <div class="section-head">
-      <h2>&#x1F4D6; How-To Guides &amp; Tutorials</h2>
-      <span class="section-count">Step-by-step technology guides from The Tech Brief</span>
-    </div>
-    <div class="evergreen-grid">
-      <article class="evergreen-card">
-        <span class="ecard-cat" style="align-self:flex-start;">📱 Android</span>
-        <h3><a href="articles/how-to-factory-reset-android.html">How to Factory Reset Your Android Phone</a></h3>
-        <p>A complete walkthrough for safely resetting your Android device — including how to back up your data first and what to expect during the process.</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border);">
-          <span style="font-size:11px;color:var(--ink-3);font-family:var(--font-mono);">HOW-TO GUIDE</span>
-          <a href="articles/how-to-factory-reset-android.html" class="ecard-read">Read guide</a>
-        </div>
-      </article>
-      <article class="evergreen-card">
-        <span class="ecard-cat" style="align-self:flex-start;">🍎 iPhone</span>
-        <h3><a href="articles/how-to-factory-reset-iphone.html">How to Factory Reset Your iPhone or iPad</a></h3>
-        <p>Everything you need to know about erasing and resetting an Apple device — with iCloud backup, Find My, and activation lock explained.</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border);">
-          <span style="font-size:11px;color:var(--ink-3);font-family:var(--font-mono);">HOW-TO GUIDE</span>
-          <a href="articles/how-to-factory-reset-iphone.html" class="ecard-read">Read guide</a>
-        </div>
-      </article>
-      <article class="evergreen-card">
-        <span class="ecard-cat" style="align-self:flex-start;">💻 Windows</span>
-        <h3><a href="articles/how-to-upgrade-windows.html">How to Upgrade to Windows 11</a></h3>
-        <p>Check compatibility, back up your files, and upgrade cleanly — with troubleshooting tips for the most common issues people encounter.</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border);">
-          <span style="font-size:11px;color:var(--ink-3);font-family:var(--font-mono);">HOW-TO GUIDE</span>
-          <a href="articles/how-to-upgrade-windows.html" class="ecard-read">Read guide</a>
-        </div>
-      </article>
-    </div>
-    <p style="margin-top:20px; text-align:center;">
-      <a href="how-to.html" style="font-size:14px; font-weight:700; color:var(--accent);">View all How-To Guides &rarr;</a>
-    </p>
-  </div>
-
-  <!-- ===== BROWSE BY CATEGORY ===== -->
-  <div class="section" style="padding-bottom:0;">
-    <div class="section-head">
-      <h2>Browse by Category</h2>
-      <span class="section-count">9 categories &mdash; original analysis updated daily, coverage refreshed every 6 hours</span>
-    </div>
-    <nav class="cat-tile-grid" aria-label="Browse all categories">
-      <a href="ai-news.html" class="cat-tile">
-        <span class="cat-tile-icon">&#x1F916;</span>
-        <span class="cat-tile-name">AI News</span>
-        <span class="cat-tile-desc">Machine learning, LLMs &amp; AI products</span>
-      </a>
-      <a href="broadcast-tech.html" class="cat-tile">
-        <span class="cat-tile-icon">&#x1F4E1;</span>
-        <span class="cat-tile-name">Broadcast Tech</span>
-        <span class="cat-tile-desc">TV, streaming &amp; production technology</span>
-      </a>
-      <a href="enterprise-tech.html" class="cat-tile">
-        <span class="cat-tile-icon">&#x1F3E2;</span>
-        <span class="cat-tile-name">Enterprise Tech</span>
-        <span class="cat-tile-desc">Cloud, SaaS &amp; IT infrastructure</span>
-      </a>
-      <a href="cybersecurity-updates.html" class="cat-tile">
-        <span class="cat-tile-icon">&#x1F510;</span>
-        <span class="cat-tile-name">Cybersecurity</span>
-        <span class="cat-tile-desc">Threats, breaches &amp; defences</span>
-      </a>
-      <a href="mobile-gadgets.html" class="cat-tile">
-        <span class="cat-tile-icon">&#x1F4F1;</span>
-        <span class="cat-tile-name">Mobile &amp; Gadgets</span>
-        <span class="cat-tile-desc">Smartphones, wearables &amp; devices</span>
-      </a>
-      <a href="consumer-tech.html" class="cat-tile cat-card--new">
-        <span class="cat-tile-badge">New</span>
-        <span class="cat-tile-icon">&#x1F6D2;</span>
-        <span class="cat-tile-name">Consumer Tech</span>
-        <span class="cat-tile-desc">Reviews, hardware &amp; buying guides</span>
-      </a>
-      <a href="gaming.html" class="cat-tile cat-card--new">
-        <span class="cat-tile-badge">New</span>
-        <span class="cat-tile-icon">&#x1F3AE;</span>
-        <span class="cat-tile-name">Gaming</span>
-        <span class="cat-tile-desc">Games, consoles &amp; industry news</span>
-      </a>
-      <a href="evs-automotive.html" class="cat-tile cat-card--new">
-        <span class="cat-tile-badge">New</span>
-        <span class="cat-tile-icon">&#x1F697;</span>
-        <span class="cat-tile-name">EVs &amp; Automotive</span>
-        <span class="cat-tile-desc">Electric vehicles &amp; car tech</span>
-      </a>
-      <a href="startups-business.html" class="cat-tile cat-card--new">
-        <span class="cat-tile-badge">New</span>
-        <span class="cat-tile-icon">&#x1F4BC;</span>
-        <span class="cat-tile-name">Startups &amp; Business</span>
-        <span class="cat-tile-desc">Funding, M&amp;A &amp; Big Tech strategy</span>
-      </a>
-    </nav>
-  </div>
-
-  <!-- ===== QUICK ACTIONS ===== -->
-  <div class="section" style="padding-bottom:28px; padding-top:28px;">
-    <div class="quick-actions" role="complementary" aria-label="Quick actions">
-      <div class="qa-item">
-        <a href="about.html#editorial-process">
-          <span class="qa-icon" aria-hidden="true">&#x1F4D6;</span>Our Editorial Approach
+        <div class="news-grid">
+      <article class="ts-card">
+        <a href="articles/2026-03-20-featured-report-sports-rights-holders-need-to-diversif.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Report: Sports rights holders need to diversify beyond live content" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">01</span>
+      </div>
         </a>
-        <p>How we research, write, and publish every piece of technology analysis on this site.</p>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#1d1d1f;">⭐ Featured</span>
+            <span class="ts-card-cat-name">Featured</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/2026-03-20-featured-report-sports-rights-holders-need-to-diversif.html">Report: Sports rights holders need to diversify beyond live content</a></div>
+          <div class="ts-card-summary">Report: Sports rights holders need to diversify beyond live content Altman Solon's latest survey found sports streaming has overtaken linear in Spain and Italy and is approaching parity in the US The post Report: Sports rights holders need to diversify beyond live content appeared first on TVBEurope</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            Report: Sports rights holders need to diversify beyond live content Altman Solon's latest survey found sports streaming 
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/2026-03-20-featured-report-sports-rights-holders-need-to-diversif.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/2026-03-20-featured-changing-the-conversation-on-inclusive-produc.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Changing the conversation on inclusive production" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">02</span>
       </div>
-      <div class="qa-item">
-        <a href="articles/ai-agents-enterprise-2025.html">
-          <span class="qa-icon" aria-hidden="true">&#x270D;&#xFE0F;</span>Read Original Analysis
         </a>
-        <p>In-depth original articles written by our editorial team on key technology trends.</p>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#1d1d1f;">⭐ Featured</span>
+            <span class="ts-card-cat-name">Featured</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/2026-03-20-featured-changing-the-conversation-on-inclusive-produc.html">Changing the conversation on inclusive production</a></div>
+          <div class="ts-card-summary">Changing the conversation on inclusive production A recent RTS Technology Centre event brought together production innovators and industry specialists to examine how accessible design and inclusive production practices are reshaping the way content is made, and where the industry still needs to move</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            Changing the conversation on inclusive production A recent RTS Technology Centre event brought together production innov
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/2026-03-20-featured-changing-the-conversation-on-inclusive-produc.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/2026-03-20-featured-sir-roger-deakins-among-2026-nab-show-speaker.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Sir Roger Deakins among 2026 NAB Show speakers" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">03</span>
       </div>
-      <div class="qa-item">
-        <a href="contact.html">
-          <span class="qa-icon" aria-hidden="true">&#x2709;&#xFE0F;</span>Submit a Tip or Story
         </a>
-        <p>Spotted a technology story we should cover? Send us a brief and we'll review it.</p>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#1d1d1f;">⭐ Featured</span>
+            <span class="ts-card-cat-name">Featured</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/2026-03-20-featured-sir-roger-deakins-among-2026-nab-show-speaker.html">Sir Roger Deakins among 2026 NAB Show speakers</a></div>
+          <div class="ts-card-summary">Sir Roger Deakins among 2026 NAB Show speakers Organisers have announced a number of speakers and sessions spanning the creator economy, filmmaking, streaming platforms, artificial intelligence, broadcast technology and journalism Understanding what is changing helps teams plan ahead and avoid surpr</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            Sir Roger Deakins among 2026 NAB Show speakers Organisers have announced a number of speakers and sessions spanning the 
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/2026-03-20-featured-sir-roger-deakins-among-2026-nab-show-speaker.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/2026-03-20-cloud-celebrating-the-greatest-creators-one-battle-aft.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">04</span>
       </div>
-      <p class="qa-trust">All editorial content on The Tech Brief is original analysis written by our team. &copy; The Tech Brief 2025&ndash;2026. Independent technology journalism.</p>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#5856d6;">☁️ Cloud Production</span>
+            <span class="ts-card-cat-name">Cloud Production</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/2026-03-20-cloud-celebrating-the-greatest-creators-one-battle-aft.html">Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid</a></div>
+          <div class="ts-card-summary">Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid Avid® today celebrated the filmmakers, editors and sound teams that worked with Avid Media Composer® and Pro Tools® to create the vast majority of this year’s Academy Award®-winning pi</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid Avid
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/2026-03-20-cloud-celebrating-the-greatest-creators-one-battle-aft.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/2026-03-20-playout-celebrating-the-greatest-creators-one-battle-a.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">05</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
+            <span class="ts-card-cat-name">Playout</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/2026-03-20-playout-celebrating-the-greatest-creators-one-battle-a.html">Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid</a></div>
+          <div class="ts-card-summary">Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid Avid® today celebrated the filmmakers, editors and sound teams that worked with Avid Media Composer® and Pro Tools® to create the vast majority of this year’s Academy Award®-winning pi</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid Avid
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/2026-03-20-playout-celebrating-the-greatest-creators-one-battle-a.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/2026-03-20-infrastructu-celebrating-the-greatest-creators-one-bat.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">06</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#8E8E93;">🏗️ Infrastructure</span>
+            <span class="ts-card-cat-name">Infrastructure</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/2026-03-20-infrastructu-celebrating-the-greatest-creators-one-bat.html">Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid</a></div>
+          <div class="ts-card-summary">Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid Avid® today celebrated the filmmakers, editors and sound teams that worked with Avid Media Composer® and Pro Tools® to create the vast majority of this year’s Academy Award®-winning pi</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid Avid
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/2026-03-20-infrastructu-celebrating-the-greatest-creators-one-bat.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/2026-03-20-newsroom-celebrating-the-greatest-creators-one-battle-.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">07</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#D4AF37;">📰 Newsroom</span>
+            <span class="ts-card-cat-name">Newsroom</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/2026-03-20-newsroom-celebrating-the-greatest-creators-one-battle-.html">Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid</a></div>
+          <div class="ts-card-summary">Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid Avid® today celebrated the filmmakers, editors and sound teams that worked with Avid Media Composer® and Pro Tools® to create the vast majority of this year’s Academy Award®-winning pi</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid Avid
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/2026-03-20-newsroom-celebrating-the-greatest-creators-one-battle-.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/featured-technology-trends-broadcast-2026.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="How Featured Technology Is Evolving in 2026" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">08</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#1d1d1f;">⭐ Featured</span>
+            <span class="ts-card-cat-name">Featured</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/featured-technology-trends-broadcast-2026.html">How Featured Technology Is Evolving in 2026</a></div>
+          <div class="ts-card-summary">How Featured Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping featured for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracking this should review t</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            How Featured Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping feature
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/featured-technology-trends-broadcast-2026.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/featured-workflow-insights-broadcast-professionals.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="The State of Featured: What Broadcast Professionals Need to Know" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">09</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#1d1d1f;">⭐ Featured</span>
+            <span class="ts-card-cat-name">Featured</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/featured-workflow-insights-broadcast-professionals.html">The State of Featured: What Broadcast Professionals Need to Know</a></div>
+          <div class="ts-card-summary">The State of Featured: What Broadcast Professionals Need to Know An independent editorial overview of the technology forces reshaping featured for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracking</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            The State of Featured: What Broadcast Professionals Need to Know An independent editorial overview of the technology for
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/featured-workflow-insights-broadcast-professionals.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/featured-infrastructure-operations-guide-2026.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Inside Featured: Key Trends and Operational Priorities" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">10</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#1d1d1f;">⭐ Featured</span>
+            <span class="ts-card-cat-name">Featured</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/featured-infrastructure-operations-guide-2026.html">Inside Featured: Key Trends and Operational Priorities</a></div>
+          <div class="ts-card-summary">Inside Featured: Key Trends and Operational Priorities An independent editorial overview of the technology forces reshaping featured for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracking this shou</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            Inside Featured: Key Trends and Operational Priorities An independent editorial overview of the technology forces reshap
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/featured-infrastructure-operations-guide-2026.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/cloud-technology-trends-broadcast-2026.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="How Cloud Production Technology Is Evolving in 2026" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">11</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#5856d6;">☁️ Cloud Production</span>
+            <span class="ts-card-cat-name">Cloud Production</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/cloud-technology-trends-broadcast-2026.html">How Cloud Production Technology Is Evolving in 2026</a></div>
+          <div class="ts-card-summary">How Cloud Production Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping cloud production for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracking this</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            How Cloud Production Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/cloud-technology-trends-broadcast-2026.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/cloud-workflow-insights-broadcast-professionals.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="The State of Cloud Production: What Broadcast Professionals Need to Know" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">12</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#5856d6;">☁️ Cloud Production</span>
+            <span class="ts-card-cat-name">Cloud Production</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/cloud-workflow-insights-broadcast-professionals.html">The State of Cloud Production: What Broadcast Professionals Need to Know</a></div>
+          <div class="ts-card-summary">The State of Cloud Production: What Broadcast Professionals Need to Know An independent editorial overview of the technology forces reshaping cloud production for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organi</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            The State of Cloud Production: What Broadcast Professionals Need to Know An independent editorial overview of the techno
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/cloud-workflow-insights-broadcast-professionals.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/cloud-infrastructure-operations-guide-2026.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Inside Cloud Production: Key Trends and Operational Priorities" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">13</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#5856d6;">☁️ Cloud Production</span>
+            <span class="ts-card-cat-name">Cloud Production</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/cloud-infrastructure-operations-guide-2026.html">Inside Cloud Production: Key Trends and Operational Priorities</a></div>
+          <div class="ts-card-summary">Inside Cloud Production: Key Trends and Operational Priorities An independent editorial overview of the technology forces reshaping cloud production for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tr</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            Inside Cloud Production: Key Trends and Operational Priorities An independent editorial overview of the technology force
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/cloud-infrastructure-operations-guide-2026.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/streaming-technology-trends-broadcast-2026.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="How Streaming Technology Is Evolving in 2026" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">14</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#0071e3;">📡 Streaming</span>
+            <span class="ts-card-cat-name">Streaming</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/streaming-technology-trends-broadcast-2026.html">How Streaming Technology Is Evolving in 2026</a></div>
+          <div class="ts-card-summary">How Streaming Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping streaming for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracking this should review</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            How Streaming Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping stream
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/streaming-technology-trends-broadcast-2026.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/streaming-workflow-insights-broadcast-professionals.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="The State of Streaming: What Broadcast Professionals Need to Know" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">15</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#0071e3;">📡 Streaming</span>
+            <span class="ts-card-cat-name">Streaming</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/streaming-workflow-insights-broadcast-professionals.html">The State of Streaming: What Broadcast Professionals Need to Know</a></div>
+          <div class="ts-card-summary">The State of Streaming: What Broadcast Professionals Need to Know An independent editorial overview of the technology forces reshaping streaming for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracki</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            The State of Streaming: What Broadcast Professionals Need to Know An independent editorial overview of the technology fo
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/streaming-workflow-insights-broadcast-professionals.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/streaming-infrastructure-operations-guide-2026.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Inside Streaming: Key Trends and Operational Priorities" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">16</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#0071e3;">📡 Streaming</span>
+            <span class="ts-card-cat-name">Streaming</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/streaming-infrastructure-operations-guide-2026.html">Inside Streaming: Key Trends and Operational Priorities</a></div>
+          <div class="ts-card-summary">Inside Streaming: Key Trends and Operational Priorities An independent editorial overview of the technology forces reshaping streaming for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracking this sh</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            Inside Streaming: Key Trends and Operational Priorities An independent editorial overview of the technology forces resha
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/streaming-infrastructure-operations-guide-2026.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/playout-technology-trends-broadcast-2026.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="How Playout Technology Is Evolving in 2026" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">17</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
+            <span class="ts-card-cat-name">Playout</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/playout-technology-trends-broadcast-2026.html">How Playout Technology Is Evolving in 2026</a></div>
+          <div class="ts-card-summary">How Playout Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping playout for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracking this should review the</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            How Playout Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping playout 
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/playout-technology-trends-broadcast-2026.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/playout-workflow-insights-broadcast-professionals.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="The State of Playout: What Broadcast Professionals Need to Know" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">18</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
+            <span class="ts-card-cat-name">Playout</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/playout-workflow-insights-broadcast-professionals.html">The State of Playout: What Broadcast Professionals Need to Know</a></div>
+          <div class="ts-card-summary">The State of Playout: What Broadcast Professionals Need to Know An independent editorial overview of the technology forces reshaping playout for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracking t</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            The State of Playout: What Broadcast Professionals Need to Know An independent editorial overview of the technology forc
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/playout-workflow-insights-broadcast-professionals.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/playout-infrastructure-operations-guide-2026.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Inside Playout: Key Trends and Operational Priorities" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">19</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
+            <span class="ts-card-cat-name">Playout</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/playout-infrastructure-operations-guide-2026.html">Inside Playout: Key Trends and Operational Priorities</a></div>
+          <div class="ts-card-summary">Inside Playout: Key Trends and Operational Priorities An independent editorial overview of the technology forces reshaping playout for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracking this should</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            Inside Playout: Key Trends and Operational Priorities An independent editorial overview of the technology forces reshapi
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/playout-infrastructure-operations-guide-2026.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/infrastructure-technology-trends-broadcast-2026.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1545987796-200677ee1011?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="How Infrastructure Technology Is Evolving in 2026" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">20</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#8E8E93;">🏗️ Infrastructure</span>
+            <span class="ts-card-cat-name">Infrastructure</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/infrastructure-technology-trends-broadcast-2026.html">How Infrastructure Technology Is Evolving in 2026</a></div>
+          <div class="ts-card-summary">How Infrastructure Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping infrastructure for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracking this sho</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            How Infrastructure Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping i
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/infrastructure-technology-trends-broadcast-2026.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/infrastructure-workflow-insights-broadcast-professionals.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="The State of Infrastructure: What Broadcast Professionals Need to Know" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">21</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#8E8E93;">🏗️ Infrastructure</span>
+            <span class="ts-card-cat-name">Infrastructure</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/infrastructure-workflow-insights-broadcast-professionals.html">The State of Infrastructure: What Broadcast Professionals Need to Know</a></div>
+          <div class="ts-card-summary">The State of Infrastructure: What Broadcast Professionals Need to Know An independent editorial overview of the technology forces reshaping infrastructure for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisati</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            The State of Infrastructure: What Broadcast Professionals Need to Know An independent editorial overview of the technolo
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/infrastructure-workflow-insights-broadcast-professionals.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/infrastructure-infrastructure-operations-guide-2026.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Inside Infrastructure: Key Trends and Operational Priorities" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">22</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#8E8E93;">🏗️ Infrastructure</span>
+            <span class="ts-card-cat-name">Infrastructure</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/infrastructure-infrastructure-operations-guide-2026.html">Inside Infrastructure: Key Trends and Operational Priorities</a></div>
+          <div class="ts-card-summary">Inside Infrastructure: Key Trends and Operational Priorities An independent editorial overview of the technology forces reshaping infrastructure for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracki</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            Inside Infrastructure: Key Trends and Operational Priorities An independent editorial overview of the technology forces 
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/infrastructure-infrastructure-operations-guide-2026.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+      <article class="ts-card">
+        <a href="articles/ai-post-production-technology-trends-broadcast-2026.html" style="text-decoration:none;color:inherit;">
+          <div class="ts-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="How AI &amp; Post-Production Technology Is Evolving in 2026" loading="lazy"
+             onerror="this.src='assets/fallback.jpg'">
+        <span class="ts-card-num">23</span>
+      </div>
+        </a>
+        <div class="ts-card-body">
+          <div class="ts-card-meta">
+            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
+            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
+          </div>
+          <div class="ts-card-title"><a href="articles/ai-post-production-technology-trends-broadcast-2026.html">How AI &amp; Post-Production Technology Is Evolving in 2026</a></div>
+          <div class="ts-card-summary">How AI &amp; Post-Production Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping ai &amp; post-production for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations track</div>
+          <div class="ts-card-insight">
+            <span class="ts-card-insight-label">Key Insight</span>
+            How AI &amp; Post-Production Technology Is Evolving in 2026 An independent editorial overview of the technology forces resha
+          </div>
+          <div class="ts-card-footer">
+            <a href="articles/ai-post-production-technology-trends-broadcast-2026.html" class="ts-card-read">Read full article
+              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
+            </a>
+            <span class="ts-card-date">March 20, 2026</span>
+          </div>
+        </div>
+      </article>
+        </div>
+      </div>
     </div>
-  </div>
-
-</main>
-
-<!-- ===== FOOTER ===== -->
-<footer class="site-footer" role="contentinfo">
-  <div class="footer-inner">
-    <div class="footer-about">
-      <span class="brand-name">The Tech Brief</span>
-      <p>An independent technology publication delivering original editorial analysis across AI, cybersecurity, mobile, enterprise tech, and more. Updated daily.</p>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">THE STREAMIC</div>
+        <p>An independent broadcast and streaming technology publication. Covering streaming, cloud production, AI post-production, graphics, playout, infrastructure, and newsroom technology.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="featured.html">Featured</a><a href="streaming.html">Streaming</a>
+        <a href="cloud.html">Cloud Production</a><a href="ai-post-production.html">AI &amp; Post-Production</a>
+        <a href="graphics.html">Graphics</a><a href="playout.html">Playout</a>
+        <a href="infrastructure.html">Infrastructure</a><a href="newsroom.html">Newsroom</a>
+      </div>
+      <div class="footer-col">
+        <h4>Site Info</h4>
+        <a href="about.html">About</a><a href="contact.html">Contact</a>
+        <a href="vlog.html">Editor's Desk</a><a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Categories</h4>
-      <a href="ai-news.html">AI News</a>
-      <a href="broadcast-tech.html">Broadcast Tech</a>
-      <a href="enterprise-tech.html">Enterprise Tech</a>
-      <a href="cybersecurity-updates.html">Cybersecurity</a>
-      <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
-      <a href="consumer-tech.html">Consumer Tech</a>
-      <a href="gaming.html">Gaming</a>
-      <a href="evs-automotive.html">EVs &amp; Automotive</a>
-      <a href="startups-business.html">Startups &amp; Business</a>
-      <a href="how-to.html">How-To Guides</a>
+    <div class="footer-bottom">
+      <span>&copy; 2026 The Streamic &mdash; thestreamic.in. All rights reserved.</span>
+      <span>Independent broadcast technology journalism. Trademarks belong to their respective owners.</span>
     </div>
-    <div class="footer-col">
-      <h4>Site Info</h4>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="legal/privacy.html">Privacy Policy</a>
-      <a href="legal/terms.html">Terms of Use</a>
-      <a href="legal/disclaimer.html">Disclaimer</a>
-      <a href="legal/copyright.html">Copyright</a>
-      <a href="legal/affiliate.html">Affiliate Disclosure</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; <span id="footer-year"></span> The Tech Brief &mdash; thetechbrief.net. All rights reserved.</span>
-    <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
-  </div>
-</footer>
-
-<!-- ===== COOKIE BANNER ===== -->
-<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-  <p>We use cookies to improve your experience and analyse traffic. See our <a href="legal/privacy.html">Privacy Policy</a> for details.</p>
-  <div class="cookie-actions">
-    <button class="btn primary" id="cookieAccept">Accept All</button>
-    <button class="btn secondary" id="cookieReject">Reject</button>
-  </div>
-</div>
-
-<script>
-  document.getElementById('footer-year').textContent = new Date().getFullYear();
-  (function(){
-    var c=localStorage.getItem('cookieConsent');
-    if(c){document.getElementById('cookieBanner').remove();return;}
-    document.getElementById('cookieAccept').onclick=function(){localStorage.setItem('cookieConsent','yes');document.getElementById('cookieBanner').remove();};
-    document.getElementById('cookieReject').onclick=function(){localStorage.setItem('cookieConsent','no');document.getElementById('cookieBanner').remove();};
-  })();
-  (function(){
-    var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
-    if(!t||!n)return;
-    t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
-  })();
-</script>
-<script src="assets/trending-loader.js" defer></script>
-<script src="assets/cookie-consent.js"></script>
+  </footer>
+  <script>(function(){var t=document.querySelector('.nav-toggle'),n=document.querySelector('.nav-links');if(!t||!n)return;t.addEventListener('click',function(){n.classList.toggle('nav-open');});})();</script>
 </body>
 </html>
