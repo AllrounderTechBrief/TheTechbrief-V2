@@ -1,0 +1,944 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Google Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied', 'ad_storage': 'denied',
+      'ad_user_data': 'denied', 'ad_personalization': 'denied', 'wait_for_update': 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJEGDPW7G"></script>
+  <script>gtag('js', new Date()); gtag('config', 'G-YCJEGDPW7G');</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>EVs & Automotive Tech News | The Tech Brief</title>
+  <meta name="description" content="Original analysis of electric vehicle launches, autonomous driving, charging infrastructure and automotive technology trends. Written by The Tech Brief editorial team.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.thetechbrief.net/evs-automotive.html">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="The Tech Brief">
+  <meta property="og:title"       content="EVs & Automotive Tech News | The Tech Brief">
+  <meta property="og:description" content="Original analysis of electric vehicle launches, autonomous driving, charging infrastructure and automotive technology trends. Written by The Tech Brief editorial team.">
+  <meta property="og:url"         content="https://www.thetechbrief.net/evs-automotive.html">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="EVs & Automotive Tech News | The Tech Brief">
+  <meta name="twitter:description" content="Original analysis of electric vehicle launches, autonomous driving, charging infrastructure and automotive technology trends. Written by The Tech Brief editorial team.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "EVs & Automotive Tech",
+    "description": "Original analysis of electric vehicle launches, autonomous driving, charging infrastructure and automotive technology trends. Written by The Tech Brief editorial team.",
+    "url": "https://www.thetechbrief.net/evs-automotive.html",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.thetechbrief.net/"},
+        {"@type":"ListItem","position":2,"name":"EVs & Automotive Tech","item":"https://www.thetechbrief.net/evs-automotive.html"}
+      ]
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "The Tech Brief",
+      "url": "https://www.thetechbrief.net/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Tech Brief",
+      "url": "https://www.thetechbrief.net/",
+      "email": "technodate3@gmail.com"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <style>
+    /* ── Fix: uniform cards — remove the broken first-card split layout ── */
+    .grid .card:first-child {
+      grid-column: auto !important;
+      display: flex !important;
+      flex-direction: column !important;
+      grid-template-columns: unset !important;
+    }
+    .grid .card:first-child img {
+      width: 100% !important;
+      height: 185px !important;
+      object-fit: cover !important;
+      border-radius: var(--radius) var(--radius) 0 0 !important;
+    }
+
+    /* ── Editorial article cards (deep-dives from generate_articles.py) ── */
+    .editorial-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent-2);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .editorial-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .editorial-card img {
+      width: 100%; height: 185px; object-fit: cover;
+      background: var(--surface-2); display: block;
+    }
+    .editorial-card .ec-body {
+      padding: 18px 20px 12px; flex: 1;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .editorial-card .ec-badge {
+      display: inline-block; background: var(--accent-2); color: #fff;
+      font-size: 10px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; padding: 3px 9px; border-radius: 999px;
+      align-self: flex-start;
+    }
+    .editorial-card h3 {
+      font-family: var(--font-serif); font-size: 18px;
+      line-height: 1.3; color: var(--ink); flex: 1;
+    }
+    .editorial-card h3 a { color: inherit; }
+    .editorial-card h3 a:hover { color: var(--accent); }
+    .editorial-card .ec-desc { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
+    .editorial-card .ec-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 20px; border-top: 1px solid var(--border);
+      background: #FAFAFA;
+    }
+    .editorial-card .ec-meta { font-size: 11px; color: var(--ink-3); font-family: var(--font-mono); }
+    .ec-read {
+      font-size: 12.5px; font-weight: 600; color: var(--accent);
+    }
+    .ec-read:hover { color: var(--accent-h); }
+    .ec-read::after { content: ' →'; }
+
+    /* ── Standard editorial news cards ── */
+    /* Same .card class but with cleaned footer — no source attribution */
+    .card .card-footer-clean {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 20px; border-top: 1px solid var(--border);
+      background: #FAFAFA;
+    }
+    .card .card-date-tag {
+      font-size: 11px; color: var(--ink-3); font-family: var(--font-mono);
+    }
+
+    /* ── "In focus" featured card for latest item in category ── */
+    .in-focus-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      margin-bottom: 28px;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) {
+      .in-focus-card { grid-template-columns: 340px 1fr; }
+      .in-focus-card img { height: 100%; min-height: 220px; border-radius: var(--radius) 0 0 var(--radius); }
+    }
+    .in-focus-card img {
+      width: 100%; height: 220px; object-fit: cover;
+      background: var(--surface-2); display: block;
+    }
+    .in-focus-body {
+      padding: 24px 28px;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .in-focus-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--accent);
+      font-family: var(--font-mono);
+    }
+    .in-focus-body h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 2.5vw, 28px);
+      line-height: 1.25; color: var(--ink);
+    }
+    .in-focus-body h2 a { color: inherit; }
+    .in-focus-body h2 a:hover { color: var(--accent); }
+    .in-focus-body p {
+      font-size: 15px; color: var(--ink-2); line-height: 1.65; flex: 1;
+    }
+    .in-focus-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; margin-top: auto; padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+    .in-focus-date { font-size: 12px; color: var(--ink-3); font-family: var(--font-mono); }
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" role="banner">
+  <a href="index.html" class="header-brand" aria-label="The Tech Brief — Home">
+    <div class="brand-icon" aria-hidden="true">TB</div>
+    <span class="brand-name">Tech Brief</span>
+  </a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+  <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="ai-news.html">AI News</a>
+    <a href="broadcast-tech.html">Broadcast Tech</a>
+    <a href="enterprise-tech.html">Enterprise Tech</a>
+    <a href="cybersecurity-updates.html">Cybersecurity</a>
+    <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
+    <a href="consumer-tech.html">Consumer Tech</a>
+    <a href="gaming.html">Gaming</a>
+    <a href="evs-automotive.html">EVs &amp; Automotive</a>
+    <a href="startups-business.html">Startups &amp; Business</a>
+    <a href="how-to.html">How-To Guides</a>
+    <a href="about.html" class="nav-cta">About</a>
+  </nav>
+</header>
+
+<!-- ===== CATEGORY HERO ===== -->
+<section class="cat-hero" aria-label="Category overview">
+  <div class="cat-hero-inner">
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span aria-hidden="true">&rsaquo;</span>
+      <span aria-current="page">EVs & Automotive Tech</span>
+    </nav>
+    <h1 class="cat-hero-title">EVs & Automotive Tech</h1>
+    <p class="cat-hero-desc">Original analysis of electric vehicles, autonomous driving and automotive technology</p>
+  </div>
+</section>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main id="main-content">
+
+  <!-- ===== EDITORIAL DEEP DIVES ===== -->
+  
+
+  <!-- ===== EDITORIAL NEWS COVERAGE ===== -->
+  
+  <div class="section" >
+    <div class="section-head">
+      <h2>EVs & Automotive Tech Coverage</h2>
+      <span class="section-count">40 editorially-written pieces &mdash; refreshed every 6 hours</span>
+      <span class="section-sub">Original editorial commentary and analysis on the latest developments in EVs & Automotive Tech</span>
+    </div>
+    <div class="grid">
+      
+      <article class="card" aria-label="This mine put 100 autonomous electric haul trucks to work – here’s how it went">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?w=900&auto=format&fit=crop&q=80" alt="This mine put 100 autonomous electric haul trucks to work – here’s how it went" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-c62ab83924e2d195.html">This mine put 100 autonomous electric haul trucks to work – here’s how it went</a></h3>
+          <p class="card-summary">Few technology developments have drawn as much attention recently as this mine put 100 autonomous electric haul trucks to work – here’s how it went. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 17, 2026</span>
+          <a href="articles/rss-c62ab83924e2d195.html" class="read-link" aria-label="Read: This mine put 100 autonomous electric haul trucks to work – here’s how it went">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Affordable EV deals, Volvo EX30 update, and Tesla’s latest Robotaxi crash">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa1f4?w=900&auto=format&fit=crop&q=80" alt="Affordable EV deals, Volvo EX30 update, and Tesla’s latest Robotaxi crash" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-8cd639420bfa3638.html">Affordable EV deals, Volvo EX30 update, and Tesla’s latest Robotaxi crash</a></h3>
+          <p class="card-summary">The technology sector is witnessing significant movement around affordable ev deals, volvo ex30 update, and tesla’s latest robotaxi crash. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 17, 2026</span>
+          <a href="articles/rss-8cd639420bfa3638.html" class="read-link" aria-label="Read: Affordable EV deals, Volvo EX30 update, and Tesla’s latest Robotaxi crash">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Watch Donut Lab's Mysterious Solid-State Battery Charge In An Actual EV">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="Watch Donut Lab's Mysterious Solid-State Battery Charge In An Actual EV" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-92c057ac8b302745.html">Watch Donut Lab's Mysterious Solid-State Battery Charge In An Actual EV</a></h3>
+          <p class="card-summary">Technology rarely moves in isolation, and donut lab's mysterious solid-state battery charge in an actual ev is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-92c057ac8b302745.html" class="read-link" aria-label="Read: Watch Donut Lab's Mysterious Solid-State Battery Charge In An Actual EV">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Alpine Seems Serious About Selling the A110 Sports Car in the U.S.">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1502161254119-e1f02c5b5e4b?w=900&auto=format&fit=crop&q=80" alt="Alpine Seems Serious About Selling the A110 Sports Car in the U.S." loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-1ed130c63d5a392f.html">Alpine Seems Serious About Selling the A110 Sports Car in the U.S.</a></h3>
+          <p class="card-summary">The technology sector is witnessing significant movement around alpine seems serious about selling the a110 sports car in the u.s. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-1ed130c63d5a392f.html" class="read-link" aria-label="Read: Alpine Seems Serious About Selling the A110 Sports Car in the U.S.">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="BMW accidentally leaks new i3 EV days before its debut [Images]">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=900&auto=format&fit=crop&q=80" alt="BMW accidentally leaks new i3 EV days before its debut [Images]" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-2b206fb94bcbd2d3.html">BMW accidentally leaks new i3 EV days before its debut [Images]</a></h3>
+          <p class="card-summary">Few technology developments have drawn as much attention recently as bmw accidentally leaks new i3 ev days before its debut [images]. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-2b206fb94bcbd2d3.html" class="read-link" aria-label="Read: BMW accidentally leaks new i3 EV days before its debut [Images]">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="A US battery recycler lands a massive $1.1B metals refining deal">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=900&auto=format&fit=crop&q=80" alt="A US battery recycler lands a massive $1.1B metals refining deal" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-9be2091d130b3226.html">A US battery recycler lands a massive $1.1B metals refining deal</a></h3>
+          <p class="card-summary">A clearer picture is emerging around a us battery recycler lands a massive $1.1b metals refining deal, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-9be2091d130b3226.html" class="read-link" aria-label="Read: A US battery recycler lands a massive $1.1B metals refining deal">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="This Camouflaged Volkswagen EV Is Way More Important Than It Looks">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="This Camouflaged Volkswagen EV Is Way More Important Than It Looks" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-a39b532ead368e0d.html">This Camouflaged Volkswagen EV Is Way More Important Than It Looks</a></h3>
+          <p class="card-summary">A clearer picture is emerging around this camouflaged volkswagen ev is way more important than it looks, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-a39b532ead368e0d.html" class="read-link" aria-label="Read: This Camouflaged Volkswagen EV Is Way More Important Than It Looks">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="2027 Buick Enclave">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa1f4?w=900&auto=format&fit=crop&q=80" alt="2027 Buick Enclave" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-a58b4c09d42e07eb.html">2027 Buick Enclave</a></h3>
+          <p class="card-summary">Few technology developments have drawn as much attention recently as 2027 buick enclave. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-a58b4c09d42e07eb.html" class="read-link" aria-label="Read: 2027 Buick Enclave">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Future Electric Vehicles: The EVs You'll Soon Be Able to Buy">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?w=900&auto=format&fit=crop&q=80" alt="Future Electric Vehicles: The EVs You'll Soon Be Able to Buy" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-ee30ab0e3007333a.html">Future Electric Vehicles: The EVs You'll Soon Be Able to Buy</a></h3>
+          <p class="card-summary">The story of future electric vehicles: the evs you'll soon be able to buy reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-ee30ab0e3007333a.html" class="read-link" aria-label="Read: Future Electric Vehicles: The EVs You'll Soon Be Able to Buy">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Vineyard Wind 1 is finally fully built">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=900&auto=format&fit=crop&q=80" alt="Vineyard Wind 1 is finally fully built" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-54333916a125aa38.html">Vineyard Wind 1 is finally fully built</a></h3>
+          <p class="card-summary">The story of vineyard wind 1 is finally fully built reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-54333916a125aa38.html" class="read-link" aria-label="Read: Vineyard Wind 1 is finally fully built">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Kia reveals EV2 prices are cheaper than expected">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=900&auto=format&fit=crop&q=80" alt="Kia reveals EV2 prices are cheaper than expected" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-11c8e422e1bc6c68.html">Kia reveals EV2 prices are cheaper than expected</a></h3>
+          <p class="card-summary">The story of kia reveals ev2 prices are cheaper than expected reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-11c8e422e1bc6c68.html" class="read-link" aria-label="Read: Kia reveals EV2 prices are cheaper than expected">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="2026 Mercedes-Benz CLA Review: Software-Defined But Not Soulless">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&auto=format&fit=crop&q=80" alt="2026 Mercedes-Benz CLA Review: Software-Defined But Not Soulless" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-cf622ee320a9fade.html">2026 Mercedes-Benz CLA Review: Software-Defined But Not Soulless</a></h3>
+          <p class="card-summary">The technology sector is witnessing significant movement around 2026 mercedes-benz cla review: software-defined but not soulless. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-cf622ee320a9fade.html" class="read-link" aria-label="Read: 2026 Mercedes-Benz CLA Review: Software-Defined But Not Soulless">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Jackery 3,072Wh HomePower 3000 station down at $1,099 in flash sale, Husqvarna iQ series robotic mowers from new $1,550 low, more">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1502161254119-e1f02c5b5e4b?w=900&auto=format&fit=crop&q=80" alt="Jackery 3,072Wh HomePower 3000 station down at $1,099 in flash sale, Husqvarna iQ series robotic mowers from new $1,550 low, more" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-8ee95b1c74e9e20f.html">Jackery 3,072Wh HomePower 3000 station down at $1,099 in flash sale, Husqvarna iQ series robotic mowers from new $1,550 low, more</a></h3>
+          <p class="card-summary">The story of jackery 3,072wh homepower 3000 station down at $1,099 in flash sale, husqvarna iq… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-8ee95b1c74e9e20f.html" class="read-link" aria-label="Read: Jackery 3,072Wh HomePower 3000 station down at $1,099 in flash sale, Husqvarna iQ series robotic mowers from new $1,550 low, more">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Volkswagen’s affordable electric SUV is almost here [Images]">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=900&auto=format&fit=crop&q=80" alt="Volkswagen’s affordable electric SUV is almost here [Images]" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-4717de3295728385.html">Volkswagen’s affordable electric SUV is almost here [Images]</a></h3>
+          <p class="card-summary">Technology rarely moves in isolation, and volkswagen’s affordable electric suv is almost here [images] is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-4717de3295728385.html" class="read-link" aria-label="Read: Volkswagen’s affordable electric SUV is almost here [Images]">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Aventon launches high-end full-suspension electric mountain bike at half the cost of the big names">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?w=900&auto=format&fit=crop&q=80" alt="Aventon launches high-end full-suspension electric mountain bike at half the cost of the big names" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-db2868a4ce9e0aa1.html">Aventon launches high-end full-suspension electric mountain bike at half the cost of the big names</a></h3>
+          <p class="card-summary">Technology rarely moves in isolation, and aventon launches high-end full-suspension electric mountain bike at half the cost… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-db2868a4ce9e0aa1.html" class="read-link" aria-label="Read: Aventon launches high-end full-suspension electric mountain bike at half the cost of the big names">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Volvo is killing its smallest EV in the US, but the rest of the world can still get it">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="Volvo is killing its smallest EV in the US, but the rest of the world can still get it" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-b749b18d7930ca4c.html">Volvo is killing its smallest EV in the US, but the rest of the world can still get it</a></h3>
+          <p class="card-summary">Few technology developments have drawn as much attention recently as volvo is killing its smallest ev in the us, but the rest of the world can still…. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-b749b18d7930ca4c.html" class="read-link" aria-label="Read: Volvo is killing its smallest EV in the US, but the rest of the world can still get it">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="The Electric Volvo EX30 Is Dead in the U.S. After Just Two Years">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="The Electric Volvo EX30 Is Dead in the U.S. After Just Two Years" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-884b5d1aa2b00c8f.html">The Electric Volvo EX30 Is Dead in the U.S. After Just Two Years</a></h3>
+          <p class="card-summary">The story of the electric volvo ex30 is dead in the u.s. after just two years reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-884b5d1aa2b00c8f.html" class="read-link" aria-label="Read: The Electric Volvo EX30 Is Dead in the U.S. After Just Two Years">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Best New Car Finance Deals for March 2026">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?w=900&auto=format&fit=crop&q=80" alt="Best New Car Finance Deals for March 2026" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-6d3edf8191dc7d1b.html">Best New Car Finance Deals for March 2026</a></h3>
+          <p class="card-summary">A clearer picture is emerging around best new car finance deals for march 2026, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-6d3edf8191dc7d1b.html" class="read-link" aria-label="Read: Best New Car Finance Deals for March 2026">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="The Volvo EX30 Joins America's Growing EV Graveyard">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&auto=format&fit=crop&q=80" alt="The Volvo EX30 Joins America's Growing EV Graveyard" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-0a5abb49aa833c9e.html">The Volvo EX30 Joins America's Growing EV Graveyard</a></h3>
+          <p class="card-summary">Few technology developments have drawn as much attention recently as the volvo ex30 joins america's growing ev graveyard. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-0a5abb49aa833c9e.html" class="read-link" aria-label="Read: The Volvo EX30 Joins America's Growing EV Graveyard">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="2024 BMW i4 xDrive40 Long-Term Wrap: Does Electricity Make a Better Bimmer?">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=900&auto=format&fit=crop&q=80" alt="2024 BMW i4 xDrive40 Long-Term Wrap: Does Electricity Make a Better Bimmer?" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-1b86119af132e2c9.html">2024 BMW i4 xDrive40 Long-Term Wrap: Does Electricity Make a Better Bimmer?</a></h3>
+          <p class="card-summary">Few technology developments have drawn as much attention recently as 2024 bmw i4 xdrive40 long-term wrap: does electricity make a better bimmer. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-1b86119af132e2c9.html" class="read-link" aria-label="Read: 2024 BMW i4 xDrive40 Long-Term Wrap: Does Electricity Make a Better Bimmer?">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="The Mercedes VLE Fixed The Biggest Problem With 'Luxury' Vans">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1571987502227-9231b837d92a?w=900&auto=format&fit=crop&q=80" alt="The Mercedes VLE Fixed The Biggest Problem With 'Luxury' Vans" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-8a9f707d3eb399a0.html">The Mercedes VLE Fixed The Biggest Problem With 'Luxury' Vans</a></h3>
+          <p class="card-summary">Technology rarely moves in isolation, and the mercedes vle fixed the biggest problem with 'luxury' vans is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-8a9f707d3eb399a0.html" class="read-link" aria-label="Read: The Mercedes VLE Fixed The Biggest Problem With 'Luxury' Vans">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Report: Trump's Tariffs Have Cost Automakers $35 Billion So Far">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="Report: Trump's Tariffs Have Cost Automakers $35 Billion So Far" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-99e59601bb0b3524.html">Report: Trump's Tariffs Have Cost Automakers $35 Billion So Far</a></h3>
+          <p class="card-summary">Few technology developments have drawn as much attention recently as report: trump's tariffs have cost automakers $35 billion so far. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-99e59601bb0b3524.html" class="read-link" aria-label="Read: Report: Trump's Tariffs Have Cost Automakers $35 Billion So Far">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Hyundai Issues Stop-Sale for Some New Palisades After Fatal Accident">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?w=900&auto=format&fit=crop&q=80" alt="Hyundai Issues Stop-Sale for Some New Palisades After Fatal Accident" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-7b3d6e26633369b1.html">Hyundai Issues Stop-Sale for Some New Palisades After Fatal Accident</a></h3>
+          <p class="card-summary">Few technology developments have drawn as much attention recently as hyundai issues stop-sale for some new palisades after fatal accident. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-7b3d6e26633369b1.html" class="read-link" aria-label="Read: Hyundai Issues Stop-Sale for Some New Palisades After Fatal Accident">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="View Photos of the 2001 Exotic Roadster Comparison Test">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa1f4?w=900&auto=format&fit=crop&q=80" alt="View Photos of the 2001 Exotic Roadster Comparison Test" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-1fcc3c6daf203a5b.html">View Photos of the 2001 Exotic Roadster Comparison Test</a></h3>
+          <p class="card-summary">A clearer picture is emerging around view photos of the 2001 exotic roadster comparison test, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-1fcc3c6daf203a5b.html" class="read-link" aria-label="Read: View Photos of the 2001 Exotic Roadster Comparison Test">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="2026 Ram 1500 BackCountry Is the Truck's Latest Off-Road Model">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=900&auto=format&fit=crop&q=80" alt="2026 Ram 1500 BackCountry Is the Truck's Latest Off-Road Model" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-2ae07c677aa401b2.html">2026 Ram 1500 BackCountry Is the Truck's Latest Off-Road Model</a></h3>
+          <p class="card-summary">The technology sector is witnessing significant movement around 2026 ram 1500 backcountry is the truck's latest off-road model. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-2ae07c677aa401b2.html" class="read-link" aria-label="Read: 2026 Ram 1500 BackCountry Is the Truck's Latest Off-Road Model">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="BYD’s Five-Minute EV Chargers Are Going To Europe To Take On Ionity">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=900&auto=format&fit=crop&q=80" alt="BYD’s Five-Minute EV Chargers Are Going To Europe To Take On Ionity" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-2171cac94e0af245.html">BYD’s Five-Minute EV Chargers Are Going To Europe To Take On Ionity</a></h3>
+          <p class="card-summary">Technology rarely moves in isolation, and byd’s five-minute ev chargers are going to europe to take on ionity is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-2171cac94e0af245.html" class="read-link" aria-label="Read: BYD’s Five-Minute EV Chargers Are Going To Europe To Take On Ionity">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="EV Sales Crashed 41% In January—But These Brands Still Grew">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=900&auto=format&fit=crop&q=80" alt="EV Sales Crashed 41% In January—But These Brands Still Grew" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-d1a9a8d258b6f7b9.html">EV Sales Crashed 41% In January—But These Brands Still Grew</a></h3>
+          <p class="card-summary">A clearer picture is emerging around ev sales crashed 41% in january–but these brands still grew, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-d1a9a8d258b6f7b9.html" class="read-link" aria-label="Read: EV Sales Crashed 41% In January—But These Brands Still Grew">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="BMW’s iX3 Defies Expectations, Racks Up 50,000 Orders Without Test Drives">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa1f4?w=900&auto=format&fit=crop&q=80" alt="BMW’s iX3 Defies Expectations, Racks Up 50,000 Orders Without Test Drives" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-81e9ec98b9383fe6.html">BMW’s iX3 Defies Expectations, Racks Up 50,000 Orders Without Test Drives</a></h3>
+          <p class="card-summary">A clearer picture is emerging around bmw’s ix3 defies expectations, racks up 50,000 orders without test drives, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 16, 2026</span>
+          <a href="articles/rss-81e9ec98b9383fe6.html" class="read-link" aria-label="Read: BMW’s iX3 Defies Expectations, Racks Up 50,000 Orders Without Test Drives">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="TechCrunch Mobility: Travis Kalanick’s return proves it really is 2016 again">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=900&auto=format&fit=crop&q=80" alt="TechCrunch Mobility: Travis Kalanick’s return proves it really is 2016 again" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-31afbcf1aaafa37d.html">TechCrunch Mobility: Travis Kalanick’s return proves it really is 2016 again</a></h3>
+          <p class="card-summary">The story of techcrunch mobility: travis kalanick’s return proves it really is 2016 again reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 15, 2026</span>
+          <a href="articles/rss-31afbcf1aaafa37d.html" class="read-link" aria-label="Read: TechCrunch Mobility: Travis Kalanick’s return proves it really is 2016 again">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Rivian’s RJ Scaringe thinks we’re doing robots all wrong">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1571987502227-9231b837d92a?w=900&auto=format&fit=crop&q=80" alt="Rivian’s RJ Scaringe thinks we’re doing robots all wrong" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-f459dad82ea4d544.html">Rivian’s RJ Scaringe thinks we’re doing robots all wrong</a></h3>
+          <p class="card-summary">Few technology developments have drawn as much attention recently as rivian’s rj scaringe thinks we’re doing robots all wrong. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 15, 2026</span>
+          <a href="articles/rss-f459dad82ea4d544.html" class="read-link" aria-label="Read: Rivian’s RJ Scaringe thinks we’re doing robots all wrong">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Honda is killing its EVs — and any chance of competing in the future">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?w=900&auto=format&fit=crop&q=80" alt="Honda is killing its EVs — and any chance of competing in the future" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-8d3fdf1046004acb.html">Honda is killing its EVs — and any chance of competing in the future</a></h3>
+          <p class="card-summary">Technology rarely moves in isolation, and honda is killing its evs — and any chance of competing in the future is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response to this development will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the infrastructure, policy, and technology decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 14, 2026</span>
+          <a href="articles/rss-8d3fdf1046004acb.html" class="read-link" aria-label="Read: Honda is killing its EVs — and any chance of competing in the future">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="The New Chevy Bolt Charges Quicker Than GM’s Pricier EVs. It’s More Proof That Voltage Matters">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa1f4?w=900&auto=format&fit=crop&q=80" alt="The New Chevy Bolt Charges Quicker Than GM’s Pricier EVs. It’s More Proof That Voltage Matters" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-5daa63c8753a6379.html">The New Chevy Bolt Charges Quicker Than GM’s Pricier EVs. It’s More Proof That Voltage Matters</a></h3>
+          <p class="card-summary">The technology sector is witnessing significant movement around the new chevy bolt charges quicker than gm’s pricier evs. it’s more proof that…. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the infrastructure, policy, and technology decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 14, 2026</span>
+          <a href="articles/rss-5daa63c8753a6379.html" class="read-link" aria-label="Read: The New Chevy Bolt Charges Quicker Than GM’s Pricier EVs. It’s More Proof That Voltage Matters">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="The Volkswagen ID.3 Gets A New Name, But Don't Call It A Golf Yet">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&auto=format&fit=crop&q=80" alt="The Volkswagen ID.3 Gets A New Name, But Don't Call It A Golf Yet" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-9499a9ece309be73.html">The Volkswagen ID.3 Gets A New Name, But Don't Call It A Golf Yet</a></h3>
+          <p class="card-summary">A clearer picture is emerging around the volkswagen id.3 gets a new name, but don't call it a golf yet, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how the key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The technology landscape has a way of rewarding those who recognise inflection points early — and this may well be one of them. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the infrastructure, policy, and technology decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 14, 2026</span>
+          <a href="articles/rss-9499a9ece309be73.html" class="read-link" aria-label="Read: The Volkswagen ID.3 Gets A New Name, But Don't Call It A Golf Yet">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Travis Kalanick launches a new company called Atoms focused on robotics">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa1f4?w=900&auto=format&fit=crop&q=80" alt="Travis Kalanick launches a new company called Atoms focused on robotics" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-f9ff790f8e417964.html">Travis Kalanick launches a new company called Atoms focused on robotics</a></h3>
+          <p class="card-summary">Few technology developments have drawn as much attention recently as travis kalanick launches a new company called atoms focused on robotics. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. As the landscape clarifies, organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the infrastructure, policy, and technology decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 13, 2026</span>
+          <a href="articles/rss-f9ff790f8e417964.html" class="read-link" aria-label="Read: Travis Kalanick launches a new company called Atoms focused on robotics">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Motional robotaxis join the Uber app in Vegas two years after major reset">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1502161254119-e1f02c5b5e4b?w=900&auto=format&fit=crop&q=80" alt="Motional robotaxis join the Uber app in Vegas two years after major reset" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-36231c3b8527a228.html">Motional robotaxis join the Uber app in Vegas two years after major reset</a></h3>
+          <p class="card-summary">Technology rarely moves in isolation, and motional robotaxis join the uber app in vegas two years after major reset is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response to this development will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the infrastructure, policy, and technology decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 13, 2026</span>
+          <a href="articles/rss-36231c3b8527a228.html" class="read-link" aria-label="Read: Motional robotaxis join the Uber app in Vegas two years after major reset">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Why Rivian is holding the $45,000 base model R2 until ‘late 2027’">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="Why Rivian is holding the $45,000 base model R2 until ‘late 2027’" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-e8667601fbe9a9e7.html">Why Rivian is holding the $45,000 base model R2 until ‘late 2027’</a></h3>
+          <p class="card-summary">The story of why rivian is holding the $45,000 base model r2 until ‘late 2027’ reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Staying ahead of these shifts requires both technical awareness and a clear-eyed view of the business forces at play. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the infrastructure, policy, and technology decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 12, 2026</span>
+          <a href="articles/rss-e8667601fbe9a9e7.html" class="read-link" aria-label="Read: Why Rivian is holding the $45,000 base model R2 until ‘late 2027’">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Lucid Motors shows off robotaxi concept called ‘Lunar’">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1571987502227-9231b837d92a?w=900&auto=format&fit=crop&q=80" alt="Lucid Motors shows off robotaxi concept called ‘Lunar’" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-568fbdca619b9d4d.html">Lucid Motors shows off robotaxi concept called ‘Lunar’</a></h3>
+          <p class="card-summary">The story of lucid motors shows off robotaxi concept called ‘lunar’ reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Staying ahead of these shifts requires both technical awareness and a clear-eyed view of the business forces at play. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the infrastructure, policy, and technology decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 12, 2026</span>
+          <a href="articles/rss-568fbdca619b9d4d.html" class="read-link" aria-label="Read: Lucid Motors shows off robotaxi concept called ‘Lunar’">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Tesla becomes a utility in the UK, setting up showdown with Octopus Energy">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa1f4?w=900&auto=format&fit=crop&q=80" alt="Tesla becomes a utility in the UK, setting up showdown with Octopus Energy" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-0650faa2a4067636.html">Tesla becomes a utility in the UK, setting up showdown with Octopus Energy</a></h3>
+          <p class="card-summary">Few technology developments have drawn as much attention recently as tesla becomes a utility in the uk, setting up showdown with octopus energy. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. As the landscape clarifies, organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the infrastructure, policy, and technology decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 12, 2026</span>
+          <a href="articles/rss-0650faa2a4067636.html" class="read-link" aria-label="Read: Tesla becomes a utility in the UK, setting up showdown with Octopus Energy">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Rivian R2 launch: Here’s what $57,990 gets you">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?w=900&auto=format&fit=crop&q=80" alt="Rivian R2 launch: Here’s what $57,990 gets you" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-c17504e6ab2827b0.html">Rivian R2 launch: Here’s what $57,990 gets you</a></h3>
+          <p class="card-summary">Technology rarely moves in isolation, and rivian r2 launch: here’s what $57,990 gets you is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response to this development will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the infrastructure, policy, and technology decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 12, 2026</span>
+          <a href="articles/rss-c17504e6ab2827b0.html" class="read-link" aria-label="Read: Rivian R2 launch: Here’s what $57,990 gets you">Read more</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Uber, Wayve, and Nissan plan to launch a robotaxi service in Tokyo this year">
+        
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?w=900&auto=format&fit=crop&q=80" alt="Uber, Wayve, and Nissan plan to launch a robotaxi service in Tokyo this year" loading="lazy" width="400" height="185">
+        </div>
+        
+        <div class="card-body">
+          <h3><a href="articles/rss-7c2bfa6ecc44d9ec.html">Uber, Wayve, and Nissan plan to launch a robotaxi service in Tokyo this year</a></h3>
+          <p class="card-summary">Technology rarely moves in isolation, and uber, wayve, and nissan plan to launch a robotaxi service in tokyo this year is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response to this development will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the infrastructure, policy, and technology decisions being made today will shape mobility for the next decade.</p>
+        </div>
+        <div class="card-footer-clean card-footer">
+          <span class="card-date-tag source-tag">March 12, 2026</span>
+          <a href="articles/rss-7c2bfa6ecc44d9ec.html" class="read-link" aria-label="Read: Uber, Wayve, and Nissan plan to launch a robotaxi service in Tokyo this year">Read more</a>
+        </div>
+      </article>
+      
+    </div>
+  </div>
+  
+
+
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-about">
+      <span class="brand-name">The Tech Brief</span>
+      <p>An independent technology publication delivering original editorial analysis across the technology industry. Updated every six hours, 24/7.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <a href="ai-news.html">AI News</a>
+      <a href="broadcast-tech.html">Broadcast Tech</a>
+      <a href="enterprise-tech.html">Enterprise Tech</a>
+      <a href="cybersecurity-updates.html">Cybersecurity</a>
+      <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
+      <a href="consumer-tech.html">Consumer Tech</a>
+      <a href="gaming.html">Gaming</a>
+      <a href="evs-automotive.html">EVs &amp; Automotive</a>
+      <a href="startups-business.html">Startups &amp; Business</a>
+      <a href="how-to.html">How-To Guides</a>
+    </div>
+    <div class="footer-col">
+      <h4>Site Info</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="legal/privacy.html">Privacy Policy</a>
+      <a href="legal/terms.html">Terms of Use</a>
+      <a href="legal/disclaimer.html">Disclaimer</a>
+      <a href="legal/copyright.html">Copyright</a>
+      <a href="legal/affiliate.html">Affiliate Disclosure</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; <span id="footer-year"></span> The Tech Brief &mdash; thetechbrief.net. All rights reserved.</span>
+    <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+  (function(){
+    var c=localStorage.getItem('cookieConsent');
+    if(c){document.getElementById('cookieBanner') && document.getElementById('cookieBanner').remove();return;}
+  })();
+  (function(){
+    var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
+    if(!t||!n)return;
+    t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
+  })();
+</script>
+<script src="assets/cookie-consent.js"></script>
+</body>
+</html>
