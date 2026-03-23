@@ -1,0 +1,40 @@
+# ══════════════════════════════════════════════════════════════
+#  The Tech Brief — Weekly Trending Topics
+#  HOW TO UPDATE: Ask Claude each week with your 6 chosen topics,
+#  and Claude will rewrite this file with new headlines + summaries.
+#  The next GitHub Actions build will auto-generate full articles.
+# ══════════════════════════════════════════════════════════════
+#
+# FORMAT: Each story = 3 lines + blank line separator
+#   Line 1: CATEGORY (must match exactly one of: AI News / Cybersecurity /
+#            Mobile & Gadgets / Enterprise Tech / EVs & Automotive /
+#            Gaming / Consumer Tech / Broadcast Tech / Startups & Business)
+#   Line 2: Headline — the topic you want covered (can be a real news headline
+#            for inspiration — Groq will rewrite it as original content)
+#   Line 3: One-line context — background info to help Groq write a better article
+#
+# ══════════════════════════════════════════════════════════════
+
+AI News
+The Race to Build AI Agents That Can Actually Use a Computer
+Major tech companies are competing to develop autonomous AI systems capable of operating software, browsing the web, and completing multi-step tasks without human intervention.
+
+Cybersecurity
+Why Ransomware Groups Are Now Targeting Cloud Backups First
+Ransomware operators have shifted tactics to encrypt or delete cloud backup systems before attacking primary infrastructure, making recovery dramatically harder for organisations.
+
+Mobile & Gadgets
+Foldable Phones in 2026: Are They Finally Ready for Everyone?
+After years of high prices and fragility concerns, the latest generation of foldable smartphones offers improved durability and more competitive pricing that could push mainstream adoption.
+
+Enterprise Tech
+The CIO's Dilemma: AI Costs Are Spiralling Faster Than Expected
+Enterprise AI deployments are generating significant ROI in some areas but proving far more expensive than projected in others, forcing IT leaders to prioritise ruthlessly.
+
+EVs & Automotive
+Solid-State Batteries: Which Automaker Will Ship First and When
+Multiple car manufacturers have announced production timelines for solid-state battery vehicles, promising longer range and faster charging but facing persistent manufacturing challenges.
+
+Gaming
+How Game Streaming Finally Got Good — And What Changed
+Cloud gaming services have dramatically improved latency and visual quality, leading to a notable uptick in adoption and prompting a strategic rethink from major console makers.
