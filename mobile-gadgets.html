@@ -2,59 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Google Consent Mode v2 -->
+  <!-- Google Consent Mode v2 (default denied – required for GDPR/EU) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
-      'analytics_storage': 'denied', 'ad_storage': 'denied',
-      'ad_user_data': 'denied', 'ad_personalization': 'denied', 'wait_for_update': 500
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
     });
   </script>
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJEGDPW7G"></script>
-  <script>gtag('js', new Date()); gtag('config', 'G-YCJEGDPW7G');</script>
-
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-YCJEGDPW7G');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <title>Mobile & Gadget News — Smartphones, Wearables & Consumer Tech | The Tech Brief</title>
-  <meta name="description" content="Original coverage of smartphone launches, wearables, tablets and consumer gadget news. Written by The Tech Brief editorial team.">
+  <title>Mobile & Gadget News — Smartphones, Wearables & Consumer Tech | Tech Brief</title>
+  <meta name="description" content="Smartphone launches, wearables, tablets, and consumer gadget news. Editorially reviewed summaries from The Verge, Engadget, CNET, Android Authority, Gizmodo, and GSMArena.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.thetechbrief.net/mobile-gadgets.html">
+  <link rel="canonical" href="https://allroundertechbrief.github.io/TheTechBrief/mobile-gadgets.html">
 
-  <meta property="og:type"        content="website">
-  <meta property="og:site_name"   content="The Tech Brief">
-  <meta property="og:title"       content="Mobile & Gadget News — Smartphones, Wearables & Consumer Tech | The Tech Brief">
-  <meta property="og:description" content="Original coverage of smartphone launches, wearables, tablets and consumer gadget news. Written by The Tech Brief editorial team.">
-  <meta property="og:url"         content="https://www.thetechbrief.net/mobile-gadgets.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Tech Brief">
+  <meta property="og:title" content="Mobile & Gadget News — Smartphones, Wearables & Consumer Tech | Tech Brief">
+  <meta property="og:description" content="Smartphone launches, wearables, tablets, and consumer gadget news. Editorially reviewed summaries from The Verge, Engadget, CNET, Android Authority, Gizmodo, and GSMArena.">
+  <meta property="og:url" content="https://allroundertechbrief.github.io/TheTechBrief/mobile-gadgets.html">
 
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Mobile & Gadget News — Smartphones, Wearables & Consumer Tech | The Tech Brief">
-  <meta name="twitter:description" content="Original coverage of smartphone launches, wearables, tablets and consumer gadget news. Written by The Tech Brief editorial team.">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mobile & Gadget News — Smartphones, Wearables & Consumer Tech | Tech Brief">
+  <meta name="twitter:description" content="Smartphone launches, wearables, tablets, and consumer gadget news. Editorially reviewed summaries from The Verge, Engadget, CNET, Android Authority, Gizmodo, and GSMArena.">
 
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Mobile & Gadget News",
-    "description": "Original coverage of smartphone launches, wearables, tablets and consumer gadget news. Written by The Tech Brief editorial team.",
-    "url": "https://www.thetechbrief.net/mobile-gadgets.html",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.thetechbrief.net/"},
-        {"@type":"ListItem","position":2,"name":"Mobile & Gadget News","item":"https://www.thetechbrief.net/mobile-gadgets.html"}
-      ]
-    },
+    "description": "Smartphone launches, wearables, tablets, and consumer gadget news. Editorially reviewed summaries from The Verge, Engadget, CNET, Android Authority, Gizmodo, and GSMArena.",
+    "url": "https://allroundertechbrief.github.io/TheTechBrief/mobile-gadgets.html",
     "isPartOf": {
       "@type": "WebSite",
       "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/"
+      "url": "https://allroundertechbrief.github.io/TheTechBrief/"
     },
     "publisher": {
       "@type": "Organization",
       "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/",
-      "email": "technodate3@gmail.com"
+      "url": "https://allroundertechbrief.github.io/TheTechBrief/"
     }
   }
   </script>
@@ -64,126 +64,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
-
-  <style>
-    /* ── Fix: uniform cards — remove the broken first-card split layout ── */
-    .grid .card:first-child {
-      grid-column: auto !important;
-      display: flex !important;
-      flex-direction: column !important;
-      grid-template-columns: unset !important;
-    }
-    .grid .card:first-child img {
-      width: 100% !important;
-      height: 185px !important;
-      object-fit: cover !important;
-      border-radius: var(--radius) var(--radius) 0 0 !important;
-    }
-
-    /* ── Editorial article cards (deep-dives from generate_articles.py) ── */
-    .editorial-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent-2);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      display: flex; flex-direction: column;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .editorial-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .editorial-card img {
-      width: 100%; height: 185px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .editorial-card .ec-body {
-      padding: 18px 20px 12px; flex: 1;
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    .editorial-card .ec-badge {
-      display: inline-block; background: var(--accent-2); color: #fff;
-      font-size: 10px; font-weight: 700; letter-spacing: .8px;
-      text-transform: uppercase; padding: 3px 9px; border-radius: 999px;
-      align-self: flex-start;
-    }
-    .editorial-card h3 {
-      font-family: var(--font-serif); font-size: 18px;
-      line-height: 1.3; color: var(--ink); flex: 1;
-    }
-    .editorial-card h3 a { color: inherit; }
-    .editorial-card h3 a:hover { color: var(--accent); }
-    .editorial-card .ec-desc { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
-    .editorial-card .ec-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .editorial-card .ec-meta { font-size: 11px; color: var(--ink-3); font-family: var(--font-mono); }
-    .ec-read {
-      font-size: 12.5px; font-weight: 600; color: var(--accent);
-    }
-    .ec-read:hover { color: var(--accent-h); }
-    .ec-read::after { content: ' →'; }
-
-    /* ── Standard editorial news cards ── */
-    /* Same .card class but with cleaned footer — no source attribution */
-    .card .card-footer-clean {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .card .card-date-tag {
-      font-size: 11px; color: var(--ink-3); font-family: var(--font-mono);
-    }
-
-    /* ── "In focus" featured card for latest item in category ── */
-    .in-focus-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      margin-bottom: 28px;
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 768px) {
-      .in-focus-card { grid-template-columns: 340px 1fr; }
-      .in-focus-card img { height: 100%; min-height: 220px; border-radius: var(--radius) 0 0 var(--radius); }
-    }
-    .in-focus-card img {
-      width: 100%; height: 220px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .in-focus-body {
-      padding: 24px 28px;
-      display: flex; flex-direction: column; gap: 12px;
-    }
-    .in-focus-label {
-      font-size: 10px; font-weight: 700; letter-spacing: 1.2px;
-      text-transform: uppercase; color: var(--accent);
-      font-family: var(--font-mono);
-    }
-    .in-focus-body h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(20px, 2.5vw, 28px);
-      line-height: 1.25; color: var(--ink);
-    }
-    .in-focus-body h2 a { color: inherit; }
-    .in-focus-body h2 a:hover { color: var(--accent); }
-    .in-focus-body p {
-      font-size: 15px; color: var(--ink-2); line-height: 1.65; flex: 1;
-    }
-    .in-focus-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 12px; margin-top: auto; padding-top: 14px;
-      border-top: 1px solid var(--border);
-    }
-    .in-focus-date { font-size: 12px; color: var(--ink-3); font-family: var(--font-mono); }
-  </style>
 </head>
 <body>
 
+<!-- Skip to content (accessibility) -->
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- ===== HEADER ===== -->
@@ -193,9 +77,7 @@
     <span class="brand-name">Tech Brief</span>
   </a>
   <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </button>
   <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
     <a href="index.html">Home</a>
@@ -203,12 +85,10 @@
     <a href="broadcast-tech.html">Broadcast Tech</a>
     <a href="enterprise-tech.html">Enterprise Tech</a>
     <a href="cybersecurity-updates.html">Cybersecurity</a>
-    <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
+    <a href="mobile-gadgets.html" aria-current="page">Mobile &amp; Gadgets</a>
     <a href="consumer-tech.html">Consumer Tech</a>
     <a href="gaming.html">Gaming</a>
     <a href="evs-automotive.html">EVs &amp; Automotive</a>
-    <a href="startups-business.html">Startups &amp; Business</a>
-    <a href="how-to.html">How-To Guides</a>
     <a href="about.html" class="nav-cta">About</a>
   </nav>
 </header>
@@ -216,838 +96,925 @@
 <!-- ===== CATEGORY HERO ===== -->
 <section class="cat-hero" aria-label="Category overview">
   <div class="cat-hero-inner">
-    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-      <a href="index.html">Home</a>
-      <span aria-hidden="true">&rsaquo;</span>
-      <span aria-current="page">Mobile & Gadget News</span>
-    </nav>
-    <h1 class="cat-hero-title">Mobile & Gadget News</h1>
-    <p class="cat-hero-desc">Original coverage of smartphone launches, wearables, tablets and consumer gadget trends</p>
+    <span class="cat-label">Tech Brief / Mobile & Gadget News</span>
+    <h1>Mobile & Gadget News</h1>
+    <p>Smartphone launches, wearables and consumer tech highlights from The Verge, Engadget & more</p>
+    <div class="editorial-badge" aria-label="Editorial quality indicator">
+      ✓ Editorially reviewed summaries — updated every 3 hours
+    </div>
   </div>
 </section>
 
+<!-- ===== QUICK ACTIONS ===== -->
+<div style="background: var(--surface); padding: 0 24px;">
+  <div class="quick-actions" style="max-width: 1280px; margin: 0 auto;" role="complementary" aria-label="Quick actions">
+    <div class="qa-item">
+      <a href="about.html#editorial-process">
+        <span class="qa-icon" aria-hidden="true">📖</span>
+        Read Original Analysis
+      </a>
+      <p>Understand how we add editorial context to every story we publish.</p>
+    </div>
+    <div class="qa-item">
+      <a href="index.html">
+        <span class="qa-icon" aria-hidden="true">🗞️</span>
+        Browse All Categories
+      </a>
+      <p>Explore AI, enterprise, cybersecurity and mobile news in one feed.</p>
+    </div>
+    <div class="qa-item">
+      <a href="contact.html">
+        <span class="qa-icon" aria-hidden="true">✉️</span>
+        Submit a Tip
+      </a>
+      <p>Spotted something we missed? Send us the link and a note.</p>
+    </div>
+    <p class="qa-trust">All summaries are editorially reviewed by The Tech Brief team. Original reporting © respective publishers; commentary © The Tech Brief 2025.</p>
+  </div>
+</div>
+
 <!-- ===== MAIN CONTENT ===== -->
 <main id="main-content">
-
-  <!-- ===== EDITORIAL DEEP DIVES ===== -->
-  
-
-  <!-- ===== EDITORIAL NEWS COVERAGE ===== -->
-  
-  <div class="section" >
+  <div class="section">
     <div class="section-head">
-      <h2>Mobile & Gadget News Coverage</h2>
-      <span class="section-count">50 editorially-written pieces &mdash; refreshed every 6 hours</span>
-      <span class="section-sub">Original editorial commentary and analysis on the latest developments in Mobile & Gadget News</span>
+      <h2>Latest in Mobile & Gadget News</h2>
+      <span class="section-count">Curated from 50 sources</span>
     </div>
     <div class="grid">
       
-      <article class="card" aria-label="Polymarket Bettors Allegedly Send Israeli Reporter Death Threats Demanding Changes to Article">
+      <article class="card" aria-label="Shokz OpenFit Pro Review: Open Earbuds With the One Thing You’ve Always Wanted">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=900&auto=format&fit=crop&q=80" alt="Polymarket Bettors Allegedly Send Israeli Reporter Death Threats Demanding Changes to Article" loading="lazy" width="400" height="185">
+          <img src="https://gizmodo.com/app/uploads/2026/02/shokz-openfit-pro-review-02-1280x853.jpg" alt="Illustration for: Shokz OpenFit Pro Review: Open Earbuds With the One Thing You’ve Always Wanted" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-153135f510ee241b.html">Polymarket Bettors Allegedly Send Israeli Reporter Death Threats Demanding Changes to Article</a></h3>
-          <p class="card-summary">The story of polymarket bettors allegedly send israeli reporter death threats demanding… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://gizmodo.com/shokz-openfit-pro-review-open-earbuds-with-the-one-thing-youve-always-wanted-2000727232" target="_blank" rel="noopener noreferrer">Shokz OpenFit Pro Review: Open Earbuds With the One Thing You’ve Always Wanted</a></h3>
+          <p class="card-summary">Shokz OpenFit Pro envision a world where open-style earbuds have their own version of noise cancellation—and it actually feels possible.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-153135f510ee241b.html" class="read-link" aria-label="Read: Polymarket Bettors Allegedly Send Israeli Reporter Death Threats Demanding Changes to Article">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gizmodo</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://gizmodo.com/shokz-openfit-pro-review-open-earbuds-with-the-one-thing-youve-always-wanted-2000727232" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Shokz OpenFit Pro Review: Open Earbuds With the One Thing You’ve Always Wanted">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Judge rules that Krafton must rehire fired Subnautica director">
+      <article class="card" aria-label="A legendary weather app makes a comeback">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=900&auto=format&fit=crop&q=80" alt="Judge rules that Krafton must rehire fired Subnautica director" loading="lazy" width="400" height="185">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/Installer-117.png?quality=90&strip=all&crop=0,0,100,100" alt="Illustration for: A legendary weather app makes a comeback" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-20a2f09a04765a52.html">Judge rules that Krafton must rehire fired Subnautica director</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around judge rules that krafton must rehire fired subnautica director. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.theverge.com/tech/886462/acme-weather-samsung-s26-installer" target="_blank" rel="noopener noreferrer">A legendary weather app makes a comeback</a></h3>
+          <p class="card-summary">Hi, friends! Welcome to Installer No.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-20a2f09a04765a52.html" class="read-link" aria-label="Read: Judge rules that Krafton must rehire fired Subnautica director">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gadgets | The Verge</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.theverge.com/tech/886462/acme-weather-samsung-s26-installer" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: A legendary weather app makes a comeback">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="FCC Chairman Threatens to Revoke TV Licenses Over Iran Coverage">
+      <article class="card" aria-label="The Best Gadgets of February 2026">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=900&auto=format&fit=crop&q=80" alt="FCC Chairman Threatens to Revoke TV Licenses Over Iran Coverage" loading="lazy" width="400" height="185">
+          <img src="https://gizmodo.com/app/uploads/2026/02/Best-Gadgets-Feb-2026-from-Keleops-USA-1280x853.jpg" alt="Illustration for: The Best Gadgets of February 2026" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-98919e4026af0e46.html">FCC Chairman Threatens to Revoke TV Licenses Over Iran Coverage</a></h3>
-          <p class="card-summary">A clearer picture is emerging around fcc chairman threatens to revoke tv licenses over iran coverage, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://gizmodo.com/best-gadgets-february-2026-2000727661" target="_blank" rel="noopener noreferrer">The Best Gadgets of February 2026</a></h3>
+          <p class="card-summary">Sure, Valve delayed the Steam Machine, but Samsung, Nintendo, Sony, and more had surprises in store.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-98919e4026af0e46.html" class="read-link" aria-label="Read: FCC Chairman Threatens to Revoke TV Licenses Over Iran Coverage">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gizmodo</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://gizmodo.com/best-gadgets-february-2026-2000727661" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: The Best Gadgets of February 2026">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Samsung Galaxy Z Fold 8 could get an overdue battery upgrade">
+      <article class="card" aria-label="Kindle’s newest feature has completely changed how I read books">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=900&auto=format&fit=crop&q=80" alt="Samsung Galaxy Z Fold 8 could get an overdue battery upgrade" loading="lazy" width="400" height="185">
+          <img src="https://www.androidauthority.com/wp-content/uploads/2026/02/Kindle-App-Immersive-Reading-scaled.jpg" alt="Illustration for: Kindle’s newest feature has completely changed how I read books" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-ec0bf5dae3643595.html">Samsung Galaxy Z Fold 8 could get an overdue battery upgrade</a></h3>
-          <p class="card-summary">A clearer picture is emerging around samsung galaxy z fold 8 could get an overdue battery upgrade, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.androidauthority.com/kindle-app-immersive-reading-3643858/" target="_blank" rel="noopener noreferrer">Kindle’s newest feature has completely changed how I read books</a></h3>
+          <p class="card-summary">But it comes with a pricing hurdle.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-ec0bf5dae3643595.html" class="read-link" aria-label="Read: Samsung Galaxy Z Fold 8 could get an overdue battery upgrade">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Android Authority</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.androidauthority.com/kindle-app-immersive-reading-3643858/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Kindle’s newest feature has completely changed how I read books">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Samsung ends Galaxy Z TriFold sales three months after launch">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&auto=format&fit=crop&q=80" alt="Samsung ends Galaxy Z TriFold sales three months after launch" loading="lazy" width="400" height="185">
-        </div>
+      <article class="card" aria-label="Steam Next Fest, a different flavor of The Witcher and other new indie games worth checking out">
         
         <div class="card-body">
-          <h3><a href="articles/rss-fa638b1de5cf144e.html">Samsung ends Galaxy Z TriFold sales three months after launch</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around samsung ends galaxy z trifold sales three months after launch. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.engadget.com/gaming/steam-next-fest-a-different-flavor-of-the-witcher-and-other-new-indie-games-worth-checking-out-120000900.html?src=rss" target="_blank" rel="noopener noreferrer">Steam Next Fest, a different flavor of The Witcher and other new indie games worth checking out</a></h3>
+          <p class="card-summary">Welcome to our latest roundup of what's going on in the indie game space. It's Steam Next Fest week, with literally thousands of demos for upcoming games for us to dive into.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-fa638b1de5cf144e.html" class="read-link" aria-label="Read: Samsung ends Galaxy Z TriFold sales three months after launch">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.engadget.com/gaming/steam-next-fest-a-different-flavor-of-the-witcher-and-other-new-indie-games-worth-checking-out-120000900.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Steam Next Fest, a different flavor of The Witcher and other new indie games worth checking out">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Chloé Zhao Is ‘Not Surprised’ Her ‘Buffy’ Reboot Got Staked at Hulu">
+      <article class="card" aria-label="This affordable running watch is an awesome Garmin alternative">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900&auto=format&fit=crop&q=80" alt="Chloé Zhao Is ‘Not Surprised’ Her ‘Buffy’ Reboot Got Staked at Hulu" loading="lazy" width="400" height="185">
+          <img src="https://www.androidauthority.com/wp-content/uploads/2026/02/Huawei-Watch-GT-Runner-2-on-wrist.jpg" alt="Illustration for: This affordable running watch is an awesome Garmin alternative" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-da75d6a6ebdb8c75.html">Chloé Zhao Is ‘Not Surprised’ Her ‘Buffy’ Reboot Got Staked at Hulu</a></h3>
-          <p class="card-summary">The story of chloé zhao is ‘not surprised’ her ‘buffy’ reboot got staked at hulu reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.androidauthority.com/huawei-watch-gt-runner-2-review-3644729/" target="_blank" rel="noopener noreferrer">This affordable running watch is an awesome Garmin alternative</a></h3>
+          <p class="card-summary">Better in every way, but still requires some patience to get going.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-da75d6a6ebdb8c75.html" class="read-link" aria-label="Read: Chloé Zhao Is ‘Not Surprised’ Her ‘Buffy’ Reboot Got Staked at Hulu">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Android Authority</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.androidauthority.com/huawei-watch-gt-runner-2-review-3644729/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: This affordable running watch is an awesome Garmin alternative">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="First One UI 9 test build for the Samsung Galaxy S26 Ultra leaks, here's what it looks like">
+      <article class="card" aria-label="5 Android phones you should buy instead of the Samsung Galaxy S26">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=900&auto=format&fit=crop&q=80" alt="First One UI 9 test build for the Samsung Galaxy S26 Ultra leaks, here's what it looks like" loading="lazy" width="400" height="185">
+          <img src="https://www.androidauthority.com/wp-content/uploads/2026/02/samsung-galaxy-s26-official-render-purple-pink-background-hero-scaled.jpg" alt="Illustration for: 5 Android phones you should buy instead of the Samsung Galaxy S26" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-50e09eb9d3ec2a83.html">First One UI 9 test build for the Samsung Galaxy S26 Ultra leaks, here's what it looks like</a></h3>
-          <p class="card-summary">The story of first one ui 9 test build for the samsung galaxy s26 ultra leaks, here's what it… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.androidauthority.com/samsung-galaxy-s26-alternatives-3644622/" target="_blank" rel="noopener noreferrer">5 Android phones you should buy instead of the Samsung Galaxy S26</a></h3>
+          <p class="card-summary">$900 for the Galaxy S26? I don't think so.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-50e09eb9d3ec2a83.html" class="read-link" aria-label="Read: First One UI 9 test build for the Samsung Galaxy S26 Ultra leaks, here's what it looks like">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Android Authority</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.androidauthority.com/samsung-galaxy-s26-alternatives-3644622/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: 5 Android phones you should buy instead of the Samsung Galaxy S26">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Spotify is getting ready for its debut on smart glasses">
+      <article class="card" aria-label="The War on Poaching Has Gone Full Tech Dystopia—and It May Not Be Working">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&auto=format&fit=crop&q=80" alt="Spotify is getting ready for its debut on smart glasses" loading="lazy" width="400" height="185">
+          <img src="https://gizmodo.com/app/uploads/2026/02/03Murchision03-1280x853.jpg" alt="Illustration for: The War on Poaching Has Gone Full Tech Dystopia—and It May Not Be Working" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-4966163620a3d1cb.html">Spotify is getting ready for its debut on smart glasses</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as spotify is getting ready for its debut on smart glasses. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://gizmodo.com/the-war-on-poaching-has-gone-full-tech-dystopia-and-it-may-not-be-working-2000727598" target="_blank" rel="noopener noreferrer">The War on Poaching Has Gone Full Tech Dystopia—and It May Not Be Working</a></h3>
+          <p class="card-summary">Surveillance technology intended to protect endangered species is weaponized against locals, with repercussions that range from harassment to physical violence.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-4966163620a3d1cb.html" class="read-link" aria-label="Read: Spotify is getting ready for its debut on smart glasses">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gizmodo</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://gizmodo.com/the-war-on-poaching-has-gone-full-tech-dystopia-and-it-may-not-be-working-2000727598" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: The War on Poaching Has Gone Full Tech Dystopia—and It May Not Be Working">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Apple acquires popular video editing software company MotionVFX">
+      <article class="card" aria-label="Samsung confirms satellite communication support for the Galaxy S26 series">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&auto=format&fit=crop&q=80" alt="Apple acquires popular video editing software company MotionVFX" loading="lazy" width="400" height="185">
+          <img src="https://fdn.gsmarena.com/imgroot/news/26/02/samsung-galaxy-s26-series-satellite-communication-support/-184x111/gsmarena_001.jpg" alt="Illustration for: Samsung confirms satellite communication support for the Galaxy S26 series" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-26441340db9c8fc0.html">Apple acquires popular video editing software company MotionVFX</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and apple acquires popular video editing software company motionvfx is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.gsmarena.com/samsung_galaxy_s26_series_satellite_communication_support-news-71761.php" target="_blank" rel="noopener noreferrer">Samsung confirms satellite communication support for the Galaxy S26 series</a></h3>
+          <p class="card-summary">Samsung already has smartphones with satellite communication support, but there was no explicit mention of the same for the recently unveiled Galaxy S26 series. Well, Samsung has finally confirmed that the Galaxy S26 series - which includes the Galaxy S26, Galaxy S26+, and Galaxy S26 Ultra - supports satellite communication.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-26441340db9c8fc0.html" class="read-link" aria-label="Read: Apple acquires popular video editing software company MotionVFX">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">GSMArena.com - Latest articles</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.gsmarena.com/samsung_galaxy_s26_series_satellite_communication_support-news-71761.php" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Samsung confirms satellite communication support for the Galaxy S26 series">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Deal: The Baseus 140W USB-C Charger competes with much more expensive bricks">
+      <article class="card" aria-label="These 6 Google apps are irreplaceable on my Android phone">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=900&auto=format&fit=crop&q=80" alt="Deal: The Baseus 140W USB-C Charger competes with much more expensive bricks" loading="lazy" width="400" height="185">
+          <img src="https://www.androidauthority.com/wp-content/uploads/2025/10/android-auto-home-screen-widgets-shortcuts-1.jpg" alt="Illustration for: These 6 Google apps are irreplaceable on my Android phone" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-5d48e6e907f97166.html">Deal: The Baseus 140W USB-C Charger competes with much more expensive bricks</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and deal: the baseus 140w usb-c charger competes with much more expensive bricks is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.androidauthority.com/irreplaceable-best-google-apps-3644097/" target="_blank" rel="noopener noreferrer">These 6 Google apps are irreplaceable on my Android phone</a></h3>
+          <p class="card-summary">I couldn't imagine using Android without these Google apps.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-5d48e6e907f97166.html" class="read-link" aria-label="Read: Deal: The Baseus 140W USB-C Charger competes with much more expensive bricks">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Android Authority</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.androidauthority.com/irreplaceable-best-google-apps-3644097/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: These 6 Google apps are irreplaceable on my Android phone">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Washington Post’s Surveillance Pricing Under Fire From Dems Who Want to Ban the Practice">
+      <article class="card" aria-label="These are the first 5 apps I’d download on the Galaxy S26 Ultra">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=900&auto=format&fit=crop&q=80" alt="Washington Post’s Surveillance Pricing Under Fire From Dems Who Want to Ban the Practice" loading="lazy" width="400" height="185">
+          <img src="https://www.androidauthority.com/wp-content/uploads/2026/02/Samsung-Galaxy-S26-Ultra-White-stood-up.jpg" alt="Illustration for: These are the first 5 apps I’d download on the Galaxy S26 Ultra" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-8c2bb2eb3d72c1bf.html">Washington Post’s Surveillance Pricing Under Fire From Dems Who Want to Ban the Practice</a></h3>
-          <p class="card-summary">The story of washington post’s surveillance pricing under fire from dems who want to ban the… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.androidauthority.com/first-apps-download-galaxy-s26-ultra-3644004/" target="_blank" rel="noopener noreferrer">These are the first 5 apps I’d download on the Galaxy S26 Ultra</a></h3>
+          <p class="card-summary">They make use of that big screen and the S Pen.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-8c2bb2eb3d72c1bf.html" class="read-link" aria-label="Read: Washington Post’s Surveillance Pricing Under Fire From Dems Who Want to Ban the Practice">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Android Authority</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.androidauthority.com/first-apps-download-galaxy-s26-ultra-3644004/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: These are the first 5 apps I’d download on the Galaxy S26 Ultra">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Lego Batman: Legacy of the Dark Knight's release date moves up a week">
+      <article class="card" aria-label="Samsung is reportedly killing some key power-user tools on Galaxy phones">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=900&auto=format&fit=crop&q=80" alt="Lego Batman: Legacy of the Dark Knight's release date moves up a week" loading="lazy" width="400" height="185">
+          <img src="https://www.androidauthority.com/wp-content/uploads/2024/09/Android_15_factory_reset_from_recovery.jpg" alt="Illustration for: Samsung is reportedly killing some key power-user tools on Galaxy phones" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-98d683bb777bf088.html">Lego Batman: Legacy of the Dark Knight's release date moves up a week</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and lego batman: legacy of the dark knight's release date moves up a week is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.androidauthority.com/samsung-february-update-android-recovery-menu-3645323/" target="_blank" rel="noopener noreferrer">Samsung is reportedly killing some key power-user tools on Galaxy phones</a></h3>
+          <p class="card-summary">A bunch of useful Android Recovery menu tools have apparently been gutted in Samsung's latest update.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-98d683bb777bf088.html" class="read-link" aria-label="Read: Lego Batman: Legacy of the Dark Knight's release date moves up a week">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Android Authority</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.androidauthority.com/samsung-february-update-android-recovery-menu-3645323/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Samsung is reportedly killing some key power-user tools on Galaxy phones">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="A Google TV update may have broken one of the best ways to avoid home screen ads">
+      <article class="card" aria-label="Motorola Edge 70 Fusion+'s key specs and renders surface">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&auto=format&fit=crop&q=80" alt="A Google TV update may have broken one of the best ways to avoid home screen ads" loading="lazy" width="400" height="185">
+          <img src="https://fdn.gsmarena.com/imgroot/news/26/02/motorola-edge-70-fusion-plus-leaked-specs-renders/-184x111/gsmarena_001.jpg" alt="Illustration for: Motorola Edge 70 Fusion+'s key specs and renders surface" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-ba88148e0e4885d9.html">A Google TV update may have broken one of the best ways to avoid home screen ads</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around a google tv update may have broken one of the best ways to avoid home screen ads. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.gsmarena.com/motorola_edge_70_fusion_plus_leaked_specs_renders-news-71760.php" target="_blank" rel="noopener noreferrer">Motorola Edge 70 Fusion+'s key specs and renders surface</a></h3>
+          <p class="card-summary">Motorola is set to unveil the Edge 70 Fusion next week, and we recently saw leaked renders of its FIFA-themed version, which should also go official soon. Now, a new leak reveals that the Lenovo-owned brand is planning to launch a Plus model as well, whose key specs and renders have surfaced online.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-ba88148e0e4885d9.html" class="read-link" aria-label="Read: A Google TV update may have broken one of the best ways to avoid home screen ads">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">GSMArena.com - Latest articles</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.gsmarena.com/motorola_edge_70_fusion_plus_leaked_specs_renders-news-71760.php" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Motorola Edge 70 Fusion+'s key specs and renders surface">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Amy Madigan’s ‘Weapons’ Oscar Win Was a Big Win for Horror">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=900&auto=format&fit=crop&q=80" alt="Amy Madigan’s ‘Weapons’ Oscar Win Was a Big Win for Horror" loading="lazy" width="400" height="185">
-        </div>
+      <article class="card" aria-label="OpenAI strikes a deal with the Defense Department to deploy its AI models">
         
         <div class="card-body">
-          <h3><a href="articles/rss-a1bbcc7ad6e892c8.html">Amy Madigan’s ‘Weapons’ Oscar Win Was a Big Win for Horror</a></h3>
-          <p class="card-summary">A clearer picture is emerging around amy madigan’s ‘weapons’ oscar win was a big win for horror, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.engadget.com/ai/openai-strikes-a-deal-with-the-defense-department-to-deploy-its-ai-models-054441785.html?src=rss" target="_blank" rel="noopener noreferrer">OpenAI strikes a deal with the Defense Department to deploy its AI models</a></h3>
+          <p class="card-summary">OpenAI has reached an agreement with the Defense Department to deploy its models in the agency’s network, company chief Sam Altman has revealed on X. In his post, he said two of OpenAI’s most important safety principles are “prohibitions on domestic mass surveillance and human responsibility for the use of force, including for autonomous weapon systems.” Altman claimed the company put those principles in its agreement with the agency, which he called by the government’s preferred name of Department of War (DoW), and that it had agreed to honor them.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-a1bbcc7ad6e892c8.html" class="read-link" aria-label="Read: Amy Madigan’s ‘Weapons’ Oscar Win Was a Big Win for Horror">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.engadget.com/ai/openai-strikes-a-deal-with-the-defense-department-to-deploy-its-ai-models-054441785.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: OpenAI strikes a deal with the Defense Department to deploy its AI models">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="RedMagic 11 Air Trace Edition launches, here are the details">
+      <article class="card" aria-label="Clicks reveals SoC, software support for its BlackBerry-like Android phone (Updated: Statement)">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=900&auto=format&fit=crop&q=80" alt="RedMagic 11 Air Trace Edition launches, here are the details" loading="lazy" width="400" height="185">
+          <img src="https://www.androidauthority.com/wp-content/uploads/2026/01/clicks-communicator-hands-on-ces-10-scaled.jpg" alt="Illustration for: Clicks reveals SoC, software support for its BlackBerry-like Android phone (Updated: Statement)" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-27fb5f4a313e4468.html">RedMagic 11 Air Trace Edition launches, here are the details</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around redmagic 11 air trace edition launches, here are the details. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.androidauthority.com/clicks-communicator-soc-android-updates-3645026/" target="_blank" rel="noopener noreferrer">Clicks reveals SoC, software support for its BlackBerry-like Android phone (Updated: Statement)</a></h3>
+          <p class="card-summary">The startup confirms a 4nm Dimensity 8300 chip and a commitment to provide updates through Android 20.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-27fb5f4a313e4468.html" class="read-link" aria-label="Read: RedMagic 11 Air Trace Edition launches, here are the details">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Android Authority</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.androidauthority.com/clicks-communicator-soc-android-updates-3645026/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Clicks reveals SoC, software support for its BlackBerry-like Android phone (Updated: Statement)">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Amazon’s Fire TV Stick 4K Max and 4K Plus sticks are up to 50 percent off">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1567581935884-3349723552ca?w=900&auto=format&fit=crop&q=80" alt="Amazon’s Fire TV Stick 4K Max and 4K Plus sticks are up to 50 percent off" loading="lazy" width="400" height="185">
-        </div>
+      <article class="card" aria-label="Trump orders federal agencies to drop Anthropic services amid Pentagon feud">
         
         <div class="card-body">
-          <h3><a href="articles/rss-325d3e50a3cb9a8b.html">Amazon’s Fire TV Stick 4K Max and 4K Plus sticks are up to 50 percent off</a></h3>
-          <p class="card-summary">The story of amazon’s fire tv stick 4k max and 4k plus sticks are up to 50 percent off reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.engadget.com/ai/trump-orders-federal-agencies-to-drop-anthropic-services-amid-pentagon-feud-222029306.html?src=rss" target="_blank" rel="noopener noreferrer">Trump orders federal agencies to drop Anthropic services amid Pentagon feud</a></h3>
+          <p class="card-summary">President Donald Trump has ordered all US government agencies to stop using Claude and other Anthropic services, escalating an already volatile feud between the Department of Defense and company over AI safeguards. Taking to Truth Social on Friday afternoon, the president said there would be a six-month phase out period for federal agencies, including the Defense Department, to migrate off of Anthropic's products.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-325d3e50a3cb9a8b.html" class="read-link" aria-label="Read: Amazon’s Fire TV Stick 4K Max and 4K Plus sticks are up to 50 percent off">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.engadget.com/ai/trump-orders-federal-agencies-to-drop-anthropic-services-amid-pentagon-feud-222029306.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Trump orders federal agencies to drop Anthropic services amid Pentagon feud">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Encyclopedia Britannica sues OpenAI for copyright and trademark infringement">
+      <article class="card" aria-label="The best instant cameras you can buy right now">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=900&auto=format&fit=crop&q=80" alt="Encyclopedia Britannica sues OpenAI for copyright and trademark infringement" loading="lazy" width="400" height="185">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24859242/236751_Instant_Camera_Buying_Guide.jpg?quality=90&strip=all&crop=0,0,100,100" alt="Illustration for: The best instant cameras you can buy right now" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-37f0e74e1274783d.html">Encyclopedia Britannica sues OpenAI for copyright and trademark infringement</a></h3>
-          <p class="card-summary">The story of encyclopedia britannica sues openai for copyright and trademark infringement reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.theverge.com/23133103/best-instant-cameras-fujifilm-polaroid-kodak" target="_blank" rel="noopener noreferrer">The best instant cameras you can buy right now</a></h3>
+          <p class="card-summary">Even with the ability to take excellent photos with our phones and instantly share them across the world, there’s something magical about the old-school instant camera. With just a click of a button, you can capture a moment in a photo that you can see and touch almost immediately.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-37f0e74e1274783d.html" class="read-link" aria-label="Read: Encyclopedia Britannica sues OpenAI for copyright and trademark infringement">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gadgets | The Verge</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.theverge.com/23133103/best-instant-cameras-fujifilm-polaroid-kodak" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: The best instant cameras you can buy right now">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="This Fungus Can Make Water Freeze">
+      <article class="card" aria-label="If You Love ‘Chainsaw Man,’ You Should Read ‘Dorohedoro’ and ‘Dai Dark’ Immediately">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=900&auto=format&fit=crop&q=80" alt="This Fungus Can Make Water Freeze" loading="lazy" width="400" height="185">
+          <img src="https://gizmodo.com/app/uploads/2026/02/Dai-Dark-Dorohedoro-Q-Hayashida-io9-template-circle-2-1280x853.jpg" alt="Illustration for: If You Love ‘Chainsaw Man,’ You Should Read ‘Dorohedoro’ and ‘Dai Dark’ Immediately" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-22ae2acc8695ed4e.html">This Fungus Can Make Water Freeze</a></h3>
-          <p class="card-summary">A clearer picture is emerging around this fungus can make water freeze, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://gizmodo.com/if-you-love-chainsaw-man-you-should-read-dorohedoro-and-dai-dark-immediately-2000727701" target="_blank" rel="noopener noreferrer">If You Love ‘Chainsaw Man,’ You Should Read ‘Dorohedoro’ and ‘Dai Dark’ Immediately</a></h3>
+          <p class="card-summary">Q Hayashida’s blend of fantasy, sci‑fi, and dark humor deserves far more recognition.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-22ae2acc8695ed4e.html" class="read-link" aria-label="Read: This Fungus Can Make Water Freeze">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gizmodo</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://gizmodo.com/if-you-love-chainsaw-man-you-should-read-dorohedoro-and-dai-dark-immediately-2000727701" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: If You Love ‘Chainsaw Man,’ You Should Read ‘Dorohedoro’ and ‘Dai Dark’ Immediately">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Workers Most at Risk of Being Hit by AI Layoffs Are Well-Positioned to Adapt, Study Finds">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=900&auto=format&fit=crop&q=80" alt="Workers Most at Risk of Being Hit by AI Layoffs Are Well-Positioned to Adapt, Study Finds" loading="lazy" width="400" height="185">
-        </div>
+      <article class="card" aria-label="FCC approves the merger of cable giants Cox and Charter">
         
         <div class="card-body">
-          <h3><a href="articles/rss-89a269d0a2ceecd7.html">Workers Most at Risk of Being Hit by AI Layoffs Are Well-Positioned to Adapt, Study Finds</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and workers most at risk of being hit by ai layoffs are well-positioned to adapt,… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.engadget.com/big-tech/fcc-approves-the-merger-of-cable-giants-cox-and-charter-230258865.html?src=rss" target="_blank" rel="noopener noreferrer">FCC approves the merger of cable giants Cox and Charter</a></h3>
+          <p class="card-summary">The Federal Communications Commission has given the go ahead for two of the US' biggest cable providers, Charter Communications and Cox Communications, to merge. Charter announced its intention to acquire Cox for $34.5 billion in May 2025, with specific plans to inherit Cox's managed IT, commercial fiber and cloud businesses, while folding the company's residential cable service into a subsidiary.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-89a269d0a2ceecd7.html" class="read-link" aria-label="Read: Workers Most at Risk of Being Hit by AI Layoffs Are Well-Positioned to Adapt, Study Finds">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.engadget.com/big-tech/fcc-approves-the-merger-of-cable-giants-cox-and-charter-230258865.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: FCC approves the merger of cable giants Cox and Charter">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Google Translate picks up 6 new widgets, ready for your home screen">
+      <article class="card" aria-label="A Dish of Neurons Playing DOOM Is the Wildest Thing I’ve Seen in Ages">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=900&auto=format&fit=crop&q=80" alt="Google Translate picks up 6 new widgets, ready for your home screen" loading="lazy" width="400" height="185">
+          <img src="https://gizmodo.com/app/uploads/2026/02/cl-1-playing-doom-1280x853.png" alt="Illustration for: A Dish of Neurons Playing DOOM Is the Wildest Thing I’ve Seen in Ages" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-469b81ab33a30c69.html">Google Translate picks up 6 new widgets, ready for your home screen</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as google translate picks up 6 new widgets, ready for your home screen. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://gizmodo.com/a-dish-of-neurons-playing-doom-is-the-wildest-thing-ive-seen-in-ages-2000727674" target="_blank" rel="noopener noreferrer">A Dish of Neurons Playing DOOM Is the Wildest Thing I’ve Seen in Ages</a></h3>
+          <p class="card-summary">Coming soon to a LAN party near you: a Petri dish.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-469b81ab33a30c69.html" class="read-link" aria-label="Read: Google Translate picks up 6 new widgets, ready for your home screen">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gizmodo</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://gizmodo.com/a-dish-of-neurons-playing-doom-is-the-wildest-thing-ive-seen-in-ages-2000727674" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: A Dish of Neurons Playing DOOM Is the Wildest Thing I’ve Seen in Ages">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="There’s a Good Reason the MacBook Neo Is Apple’s Most Repairable Laptop">
+      <article class="card" aria-label="‘Mars Express’ Is Phenomenal Because It Remembers What Cyberpunk Actually Means">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1567581935884-3349723552ca?w=900&auto=format&fit=crop&q=80" alt="There’s a Good Reason the MacBook Neo Is Apple’s Most Repairable Laptop" loading="lazy" width="400" height="185">
+          <img src="https://gizmodo.com/app/uploads/2026/02/Mars-Express-GKids-io9-2025-retro-review-1280x853.jpg" alt="Illustration for: ‘Mars Express’ Is Phenomenal Because It Remembers What Cyberpunk Actually Means" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-168d88bd66d8e661.html">There’s a Good Reason the MacBook Neo Is Apple’s Most Repairable Laptop</a></h3>
-          <p class="card-summary">The story of there’s a good reason the macbook neo is apple’s most repairable laptop reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://gizmodo.com/mars-express-is-phenomenal-because-it-remembers-what-cyberpunk-actually-means-2000727011" target="_blank" rel="noopener noreferrer">‘Mars Express’ Is Phenomenal Because It Remembers What Cyberpunk Actually Means</a></h3>
+          <p class="card-summary">The criminally slept-on sci-fi noir animated film understands that its genre is a warning, not an aspiration.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-168d88bd66d8e661.html" class="read-link" aria-label="Read: There’s a Good Reason the MacBook Neo Is Apple’s Most Repairable Laptop">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gizmodo</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://gizmodo.com/mars-express-is-phenomenal-because-it-remembers-what-cyberpunk-actually-means-2000727011" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: ‘Mars Express’ Is Phenomenal Because It Remembers What Cyberpunk Actually Means">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="OnePlus leak suggests two tablets are on the way, and one is massive">
+      <article class="card" aria-label="The Great Insider Trading Reckoning Reportedly Hits OpenAI">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1567581935884-3349723552ca?w=900&auto=format&fit=crop&q=80" alt="OnePlus leak suggests two tablets are on the way, and one is massive" loading="lazy" width="400" height="185">
+          <img src="https://gizmodo.com/app/uploads/2026/02/openai-logo-1280x852.jpg" alt="Illustration for: The Great Insider Trading Reckoning Reportedly Hits OpenAI" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-252f686e8bff2564.html">OnePlus leak suggests two tablets are on the way, and one is massive</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and oneplus leak suggests two tablets are on the way, and one is massive is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://gizmodo.com/the-great-insider-trading-reckoning-reportedly-hits-openai-2000727838" target="_blank" rel="noopener noreferrer">The Great Insider Trading Reckoning Reportedly Hits OpenAI</a></h3>
+          <p class="card-summary">Apparently the paycheck isn't enough.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-252f686e8bff2564.html" class="read-link" aria-label="Read: OnePlus leak suggests two tablets are on the way, and one is massive">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gizmodo</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://gizmodo.com/the-great-insider-trading-reckoning-reportedly-hits-openai-2000727838" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: The Great Insider Trading Reckoning Reportedly Hits OpenAI">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="OnePlus teases new Nord: OnePlus Nord 6 could be here in a few weeks">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900&auto=format&fit=crop&q=80" alt="OnePlus teases new Nord: OnePlus Nord 6 could be here in a few weeks" loading="lazy" width="400" height="185">
-        </div>
+      <article class="card" aria-label="Paramount agrees to buy Warner Bros. Discovery, pays Netflix $2.8 billion for breakup">
         
         <div class="card-body">
-          <h3><a href="articles/rss-dc3c03da5659ef75.html">OnePlus teases new Nord: OnePlus Nord 6 could be here in a few weeks</a></h3>
-          <p class="card-summary">A clearer picture is emerging around oneplus teases new nord: oneplus nord 6 could be here in a few weeks, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.engadget.com/entertainment/paramount-agrees-to-buy-warner-bros-discovery-pays-netflix-28-billion-for-breakup-215936514.html?src=rss" target="_blank" rel="noopener noreferrer">Paramount agrees to buy Warner Bros. Discovery, pays Netflix $2.8 billion for breakup</a></h3>
+          <p class="card-summary">Paramount Skydance and Warner Bros. Discovery are officially merging .</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-dc3c03da5659ef75.html" class="read-link" aria-label="Read: OnePlus teases new Nord: OnePlus Nord 6 could be here in a few weeks">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.engadget.com/entertainment/paramount-agrees-to-buy-warner-bros-discovery-pays-netflix-28-billion-for-breakup-215936514.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Paramount agrees to buy Warner Bros. Discovery, pays Netflix $2.8 billion for breakup">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Apple AirPods Max 2 debut with H2 chip and improved ANC">
+      <article class="card" aria-label="Chocolate ‘Boner’ Syrup Recalled for Actually Containing Viagra Ingredient">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=900&auto=format&fit=crop&q=80" alt="Apple AirPods Max 2 debut with H2 chip and improved ANC" loading="lazy" width="400" height="185">
+          <img src="https://gizmodo.com/app/uploads/2026/02/bonersyrup-1280x853.jpg" alt="Illustration for: Chocolate ‘Boner’ Syrup Recalled for Actually Containing Viagra Ingredient" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-6451281d8809bc73.html">Apple AirPods Max 2 debut with H2 chip and improved ANC</a></h3>
-          <p class="card-summary">The story of apple airpods max 2 debut with h2 chip and improved anc reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://gizmodo.com/chocolate-boner-syrup-recalled-for-actually-containing-viagra-ingredient-2000727848" target="_blank" rel="noopener noreferrer">Chocolate ‘Boner’ Syrup Recalled for Actually Containing Viagra Ingredient</a></h3>
+          <p class="card-summary">This week, Lockout Supplements issued a voluntary recall of its "Boner Bears Chocolate Syrup" for having unlabeled amounts of sildenafil.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-6451281d8809bc73.html" class="read-link" aria-label="Read: Apple AirPods Max 2 debut with H2 chip and improved ANC">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gizmodo</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://gizmodo.com/chocolate-boner-syrup-recalled-for-actually-containing-viagra-ingredient-2000727848" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Chocolate ‘Boner’ Syrup Recalled for Actually Containing Viagra Ingredient">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Maul Wants the Revenge of a Sith in the New ‘Shadow Lord’ Trailer">
+      <article class="card" aria-label="Deal: UGREEN Nexode Power Bank 20,000mAh 130W hits record-low price">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=900&auto=format&fit=crop&q=80" alt="Maul Wants the Revenge of a Sith in the New ‘Shadow Lord’ Trailer" loading="lazy" width="400" height="185">
+          <img src="https://www.androidauthority.com/wp-content/uploads/2026/02/UGREEN-Nexode-Power-Bank-20000mAh-130W-next-to-devices.jpg" alt="Illustration for: Deal: UGREEN Nexode Power Bank 20,000mAh 130W hits record-low price" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-e5af77c28b88d836.html">Maul Wants the Revenge of a Sith in the New ‘Shadow Lord’ Trailer</a></h3>
-          <p class="card-summary">A clearer picture is emerging around maul wants the revenge of a sith in the new ‘shadow lord’ trailer, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.androidauthority.com/ugreen-nexode-power-bank-20000mah-130w-deal-3644744/" target="_blank" rel="noopener noreferrer">Deal: UGREEN Nexode Power Bank 20,000mAh 130W hits record-low price</a></h3>
+          <p class="card-summary">Does your phone keep dying? Here's the solution!</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-e5af77c28b88d836.html" class="read-link" aria-label="Read: Maul Wants the Revenge of a Sith in the New ‘Shadow Lord’ Trailer">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Android Authority</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.androidauthority.com/ugreen-nexode-power-bank-20000mah-130w-deal-3644744/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Deal: UGREEN Nexode Power Bank 20,000mAh 130W hits record-low price">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="With Midterms Looming, Trump’s Pick for Surgeon General Suddenly Thinks Measles Vaccines Are a Good Idea">
+      <article class="card" aria-label="Trump Says US Is Cutting Off Anthropic for Refusing to Drop AI Safeguards">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=900&auto=format&fit=crop&q=80" alt="With Midterms Looming, Trump’s Pick for Surgeon General Suddenly Thinks Measles Vaccines Are a Good Idea" loading="lazy" width="400" height="185">
+          <img src="https://gizmodo.com/app/uploads/2026/02/trump-yelling-1280x854.jpg" alt="Illustration for: Trump Says US Is Cutting Off Anthropic for Refusing to Drop AI Safeguards" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-eac7e3c4b1b79016.html">With Midterms Looming, Trump’s Pick for Surgeon General Suddenly Thinks Measles Vaccines Are a Good Idea</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and with midterms looming, trump’s pick for surgeon general suddenly thinks measles… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://gizmodo.com/trump-threatens-criminal-consequences-for-anthropic-over-ai-safety-guard-fight-2000727947" target="_blank" rel="noopener noreferrer">Trump Says US Is Cutting Off Anthropic for Refusing to Drop AI Safeguards</a></h3>
+          <p class="card-summary">The President said the AI startup is filled with "leftwing nut jobs."</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-eac7e3c4b1b79016.html" class="read-link" aria-label="Read: With Midterms Looming, Trump’s Pick for Surgeon General Suddenly Thinks Measles Vaccines Are a Good Idea">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gizmodo</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://gizmodo.com/trump-threatens-criminal-consequences-for-anthropic-over-ai-safety-guard-fight-2000727947" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Trump Says US Is Cutting Off Anthropic for Refusing to Drop AI Safeguards">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Google News could soon give you a convenient new way to consume its audio briefings">
+      <article class="card" aria-label="Let’s Talk About the Ending of ‘Scream 7’">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1570891836654-d4590d13d073?w=900&auto=format&fit=crop&q=80" alt="Google News could soon give you a convenient new way to consume its audio briefings" loading="lazy" width="400" height="185">
+          <img src="https://gizmodo.com/app/uploads/2026/02/Scream-7-Ghostface-1-1280x853.jpg" alt="Illustration for: Let’s Talk About the Ending of ‘Scream 7’" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-c32b2b9df6e98228.html">Google News could soon give you a convenient new way to consume its audio briefings</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as google news could soon give you a convenient new way to consume its audio briefings. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://gizmodo.com/lets-talk-about-the-ending-of-scream-7-2000727690" target="_blank" rel="noopener noreferrer">Let’s Talk About the Ending of ‘Scream 7’</a></h3>
+          <p class="card-summary">Who is Ghostface? What was their objective?</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-c32b2b9df6e98228.html" class="read-link" aria-label="Read: Google News could soon give you a convenient new way to consume its audio briefings">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gizmodo</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://gizmodo.com/lets-talk-about-the-ending-of-scream-7-2000727690" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Let’s Talk About the Ending of ‘Scream 7’">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Amazon’s best Echo speakers and screens just got their biggest discounts">
+      <article class="card" aria-label="This smart ring is coming for Oura with two-week battery life">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&auto=format&fit=crop&q=80" alt="Amazon’s best Echo speakers and screens just got their biggest discounts" loading="lazy" width="400" height="185">
+          <img src="https://www.androidauthority.com/wp-content/uploads/2026/02/Ultrahuman-Ring-Pro.jpg" alt="Illustration for: This smart ring is coming for Oura with two-week battery life" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-049afa5599de7395.html">Amazon’s best Echo speakers and screens just got their biggest discounts</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as amazon’s best echo speakers and screens just got their biggest discounts. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.androidauthority.com/ultrahuman-ring-pro-launch-3645252/" target="_blank" rel="noopener noreferrer">This smart ring is coming for Oura with two-week battery life</a></h3>
+          <p class="card-summary">Ultrahuman wants you to think about charging much less often.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-049afa5599de7395.html" class="read-link" aria-label="Read: Amazon’s best Echo speakers and screens just got their biggest discounts">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Android Authority</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.androidauthority.com/ultrahuman-ring-pro-launch-3645252/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: This smart ring is coming for Oura with two-week battery life">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="OpenAI's adult mode reportedly won't generate pornographic audio, images or video">
+      <article class="card" aria-label="Google Photos on Android finally catches up with tool iOS has had since last year">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=900&auto=format&fit=crop&q=80" alt="OpenAI's adult mode reportedly won't generate pornographic audio, images or video" loading="lazy" width="400" height="185">
+          <img src="https://www.androidauthority.com/wp-content/uploads/2026/02/Google-Photos-App-Pixel-phone-scaled.jpg" alt="Illustration for: Google Photos on Android finally catches up with tool iOS has had since last year" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-4225a0a621bb3897.html">OpenAI's adult mode reportedly won't generate pornographic audio, images or video</a></h3>
-          <p class="card-summary">A clearer picture is emerging around openai's adult mode reportedly won't generate pornographic audio, images or video, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.androidauthority.com/google-photos-stickers-android-3645265/" target="_blank" rel="noopener noreferrer">Google Photos on Android finally catches up with tool iOS has had since last year</a></h3>
+          <p class="card-summary">Get ready to make some stickers.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-4225a0a621bb3897.html" class="read-link" aria-label="Read: OpenAI's adult mode reportedly won't generate pornographic audio, images or video">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Android Authority</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.androidauthority.com/google-photos-stickers-android-3645265/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Google Photos on Android finally catches up with tool iOS has had since last year">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Watch the Poco X8 Pro series launch event here">
+      <article class="card" aria-label="The PS5 Pro is getting upgraded upscaling tech in March">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=900&auto=format&fit=crop&q=80" alt="Watch the Poco X8 Pro series launch event here" loading="lazy" width="400" height="185">
+          <img src="https://d29szjachogqwa.cloudfront.net/images/user-uploaded/972bb427abf83263cbd620377e02a6284602da82.jpg" alt="Illustration for: The PS5 Pro is getting upgraded upscaling tech in March" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-19ec5ade474999a9.html">Watch the Poco X8 Pro series launch event here</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and the poco x8 pro series launch event here is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.engadget.com/gaming/playstation/the-ps5-pro-is-getting-upgraded-upscaling-tech-in-march-200105816.html?src=rss" target="_blank" rel="noopener noreferrer">The PS5 Pro is getting upgraded upscaling tech in March</a></h3>
+          <p class="card-summary">After suggesting a version of AMD's FSR 4 could be ported to the PS5 Pro last year, it looks like Sony is finally rolling out an update with the upscaling tech in March. Mark Cerny, the lead architect of the PS4, PS5 and PS5 Pro, shared via a blog post that the PS5 Pro will be updated with a new version of the company's PSSR (PlayStation Spectral Super Resolution) upscaling tech next month, and Resident Evil Requiem is one of the first games to use it.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-19ec5ade474999a9.html" class="read-link" aria-label="Read: Watch the Poco X8 Pro series launch event here">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.engadget.com/gaming/playstation/the-ps5-pro-is-getting-upgraded-upscaling-tech-in-march-200105816.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: The PS5 Pro is getting upgraded upscaling tech in March">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="How to find and cancel your unused subscriptions">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=900&auto=format&fit=crop&q=80" alt="How to find and cancel your unused subscriptions" loading="lazy" width="400" height="185">
-        </div>
+      <article class="card" aria-label="Google and OpenAI employees sign open letter in ‘solidarity’ with Anthropic">
         
         <div class="card-body">
-          <h3><a href="articles/rss-4d529a5fa75bc63a.html">How to find and cancel your unused subscriptions</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as how to find and cancel your unused subscriptions. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.engadget.com/ai/google-and-openai-employees-sign-open-letter-in-solidarity-with-anthropic-194957274.html?src=rss" target="_blank" rel="noopener noreferrer">Google and OpenAI employees sign open letter in ‘solidarity’ with Anthropic</a></h3>
+          <p class="card-summary">Hundreds of employees at Google and OpenAI have signed an open letter urging their companies to stand with Anthropic in its standoff with the Pentagon over military applications for AI tools like Claude. The letter, titled “We Will Not Be Divided,” calls on the leadership of both companies to “put aside their differences and stand together to continue to refuse the Department of War’s current demands for permission to use our models for domestic mass surveillance and autonomously killing people without human oversight.” These are two lines that Anthropic CEO Dario Amodei has said should not be crossed by his or any other AI company.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-4d529a5fa75bc63a.html" class="read-link" aria-label="Read: How to find and cancel your unused subscriptions">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.engadget.com/ai/google-and-openai-employees-sign-open-letter-in-solidarity-with-anthropic-194957274.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Google and OpenAI employees sign open letter in ‘solidarity’ with Anthropic">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="This chair gives half-worn clothes a home">
+      <article class="card" aria-label="The Trump phone sure looks a lot like this HTC handset">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=900&auto=format&fit=crop&q=80" alt="This chair gives half-worn clothes a home" loading="lazy" width="400" height="185">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/htc-u24-pro.avif?quality=90&strip=all&crop=0,0,100,100" alt="Illustration for: The Trump phone sure looks a lot like this HTC handset" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-d30d7817aaba04e4.html">This chair gives half-worn clothes a home</a></h3>
-          <p class="card-summary">A clearer picture is emerging around this chair gives half-worn clothes a home, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.theverge.com/tech/886135/trump-mobile-t1-phone-htc-u24-pro" target="_blank" rel="noopener noreferrer">The Trump phone sure looks a lot like this HTC handset</a></h3>
+          <p class="card-summary">Where's the Trump phone? We're going to keep talking about it every week.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-d30d7817aaba04e4.html" class="read-link" aria-label="Read: This chair gives half-worn clothes a home">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gadgets | The Verge</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.theverge.com/tech/886135/trump-mobile-t1-phone-htc-u24-pro" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: The Trump phone sure looks a lot like this HTC handset">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Tech companies are teaming up to combat scammers">
+      <article class="card" aria-label="Amazon’s Fire TV Stick 4K Plus gets a better interface and a 40 percent discount">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1570891836654-d4590d13d073?w=900&auto=format&fit=crop&q=80" alt="Tech companies are teaming up to combat scammers" loading="lazy" width="400" height="185">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/Amazon-Fire-TV-Stick-4K-Lifestyle-Press-Image.jpg?quality=90&strip=all&crop=0,0,100,100" alt="Illustration for: Amazon’s Fire TV Stick 4K Plus gets a better interface and a 40 percent discount" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-84e59958d8e145a5.html">Tech companies are teaming up to combat scammers</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as tech companies are teaming up to combat scammers. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.theverge.com/gadgets/886153/amazon-fire-tv-stick-4k-plus-deal-sale" target="_blank" rel="noopener noreferrer">Amazon’s Fire TV Stick 4K Plus gets a better interface and a 40 percent discount</a></h3>
+          <p class="card-summary">When Amazon first showed off its redesigned Fire TV OS at CES, we were impressed. It’s faster, better organized, and feels similar to Google’s top-notch TV interface.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-84e59958d8e145a5.html" class="read-link" aria-label="Read: Tech companies are teaming up to combat scammers">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gadgets | The Verge</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.theverge.com/gadgets/886153/amazon-fire-tv-stick-4k-plus-deal-sale" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Amazon’s Fire TV Stick 4K Plus gets a better interface and a 40 percent discount">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The new AirPods Max 2 are here, but can they take on the Sony XM6?">
+      <article class="card" aria-label="Watch Xiaomi’s global launch event live here">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=900&auto=format&fit=crop&q=80" alt="The new AirPods Max 2 are here, but can they take on the Sony XM6?" loading="lazy" width="400" height="185">
+          <img src="https://fdn.gsmarena.com/imgroot/news/26/02/watch-xiaomi-global-launch-event-live/-184x111/gsmarena_00.jpg" alt="Illustration for: Watch Xiaomi’s global launch event live here" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-4c257bb4f41ca7b2.html">The new AirPods Max 2 are here, but can they take on the Sony XM6?</a></h3>
-          <p class="card-summary">A clearer picture is emerging around the new airpods max 2 are here, but can they take on the sony xm6, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.gsmarena.com/watch_xiaomis_global_launch_event_live_here-news-71752.php" target="_blank" rel="noopener noreferrer">Watch Xiaomi’s global launch event live here</a></h3>
+          <p class="card-summary">It’s almost time for Xiaomi’s big launch event, where we’ll see the global debut of the Xiaomi 17 series alongside new additions to its tablets and wearables. The keynote is set to start at 2PM Barcelona time (1PM UTC) tomorrow and will be livestreamed on YouTube through the linked video below.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-4c257bb4f41ca7b2.html" class="read-link" aria-label="Read: The new AirPods Max 2 are here, but can they take on the Sony XM6?">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">GSMArena.com - Latest articles</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.gsmarena.com/watch_xiaomis_global_launch_event_live_here-news-71752.php" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Watch Xiaomi’s global launch event live here">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="vivo X300 Ultra, X300s launch date, configurations, and colors leaked">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=900&auto=format&fit=crop&q=80" alt="vivo X300 Ultra, X300s launch date, configurations, and colors leaked" loading="lazy" width="400" height="185">
-        </div>
+      <article class="card" aria-label="Here’s your first look at Kratos and Atreus in Amazon’s upcoming God of War TV adaptation">
         
         <div class="card-body">
-          <h3><a href="articles/rss-b22a6d674de4034a.html">vivo X300 Ultra, X300s launch date, configurations, and colors leaked</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as vivo x300 ultra, x300s launch date, configurations, and colors leaked. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.engadget.com/entertainment/streaming/heres-your-first-look-at-kratos-and-atreus-in-amazons-upcoming-god-of-war-tv-adaptation-172251366.html?src=rss" target="_blank" rel="noopener noreferrer">Here’s your first look at Kratos and Atreus in Amazon’s upcoming God of War TV adaptation</a></h3>
+          <p class="card-summary">With the likes of The Last of Us and Fallout out of the way for a bit, Amazon has seized its opportunity to put the spotlight on the next big video game adaptation, its currently-in-production God of War show. Today we got our first look at Ryan Hurst and Callum Vinson as Kratos and Atreus.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-b22a6d674de4034a.html" class="read-link" aria-label="Read: vivo X300 Ultra, X300s launch date, configurations, and colors leaked">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.engadget.com/entertainment/streaming/heres-your-first-look-at-kratos-and-atreus-in-amazons-upcoming-god-of-war-tv-adaptation-172251366.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Here’s your first look at Kratos and Atreus in Amazon’s upcoming God of War TV adaptation">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="T-Mobile will reportedly offer an upcoming promo that pairs perfectly with its MLB offer">
+      <article class="card" aria-label="Woot’s ‘Video Games for All’ sale features some of our favorite games">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&auto=format&fit=crop&q=80" alt="T-Mobile will reportedly offer an upcoming promo that pairs perfectly with its MLB offer" loading="lazy" width="400" height="185">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/silenthillfMarioGalaxy.png?quality=90&strip=all&crop=0,0,100,100" alt="Illustration for: Woot’s ‘Video Games for All’ sale features some of our favorite games" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-073db27c715d0e96.html">T-Mobile will reportedly offer an upcoming promo that pairs perfectly with its MLB offer</a></h3>
-          <p class="card-summary">A clearer picture is emerging around t-mobile will reportedly offer an upcoming promo that pairs perfectly with its…, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.theverge.com/gadgets/885334/woot-ps5-nintendo-switch-video-game-sale-lg-c5-oled-tv-deal" target="_blank" rel="noopener noreferrer">Woot’s ‘Video Games for All’ sale features some of our favorite games</a></h3>
+          <p class="card-summary">There’s a sale happening at Woot that’s delivering Black Friday-esque deals on video games through March 5th. The “Video Games for All” sale includes discounts on physical games for most modern consoles, making it a great time to treat yourself (or a pal) to some titles that you’ve been waiting to see big price drops […]</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-073db27c715d0e96.html" class="read-link" aria-label="Read: T-Mobile will reportedly offer an upcoming promo that pairs perfectly with its MLB offer">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gadgets | The Verge</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.theverge.com/gadgets/885334/woot-ps5-nintendo-switch-video-game-sale-lg-c5-oled-tv-deal" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Woot’s ‘Video Games for All’ sale features some of our favorite games">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Apple announces the AirPods Max 2 with improved noise cancelation and H2 chip">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=900&auto=format&fit=crop&q=80" alt="Apple announces the AirPods Max 2 with improved noise cancelation and H2 chip" loading="lazy" width="400" height="185">
-        </div>
+      <article class="card" aria-label="OpenAI secures another $110 billion in funding from Amazon, NVIDIA and SoftBank">
         
         <div class="card-body">
-          <h3><a href="articles/rss-1cda5d974df68db4.html">Apple announces the AirPods Max 2 with improved noise cancelation and H2 chip</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as apple announces the airpods max 2 with improved noise cancelation and h2 chip. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.engadget.com/ai/openai-secures-another-110-billion-in-funding-from-amazon-nvidia-and-softbank-171006356.html?src=rss" target="_blank" rel="noopener noreferrer">OpenAI secures another $110 billion in funding from Amazon, NVIDIA and SoftBank</a></h3>
+          <p class="card-summary">OpenAI just announced a massive funding round of $110 billion , which is one of the biggest investment rounds in Silicon Valley history. The investors feature many of the usual suspects, including Amazon with $50 billion, NVIDIA with $30 billion and SoftBank with $30 billion.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-1cda5d974df68db4.html" class="read-link" aria-label="Read: Apple announces the AirPods Max 2 with improved noise cancelation and H2 chip">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.engadget.com/ai/openai-secures-another-110-billion-in-funding-from-amazon-nvidia-and-softbank-171006356.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: OpenAI secures another $110 billion in funding from Amazon, NVIDIA and SoftBank">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Apple&#8217;s $549 AirPods Max 2 add better ANC and live translation">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=900&auto=format&fit=crop&q=80" alt="Apple&#8217;s $549 AirPods Max 2 add better ANC and live translation" loading="lazy" width="400" height="185">
-        </div>
+      <article class="card" aria-label="NASA overhauls Artemis program, delaying Moon landing to 2028">
         
         <div class="card-body">
-          <h3><a href="articles/rss-58ad12cca048fb94.html">Apple&#8217;s $549 AirPods Max 2 add better ANC and live translation</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as apple&#8217;s $549 airpods max 2 add better anc and live translation. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.engadget.com/science/nasa-overhauls-artemis-program-delaying-moon-landing-to-2028-164255318.html?src=rss" target="_blank" rel="noopener noreferrer">NASA overhauls Artemis program, delaying Moon landing to 2028</a></h3>
+          <p class="card-summary">NASA is making major changes to its Artemis Moon program. On Friday, Administrator Jared Isaacman announced the space agency would carry out an additional flight in 2027 to test commercial lunar landers from SpaceX and/or Blue Origin .</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-58ad12cca048fb94.html" class="read-link" aria-label="Read: Apple&#8217;s $549 AirPods Max 2 add better ANC and live translation">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.engadget.com/science/nasa-overhauls-artemis-program-delaying-moon-landing-to-2028-164255318.html?src=rss" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: NASA overhauls Artemis program, delaying Moon landing to 2028">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Huawei Mate 80 Pro begins its international rollout in Malaysia">
+      <article class="card" aria-label="Ultrahuman Ring Pro unveiled with 15-day battery life, improved sensors and processing">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=900&auto=format&fit=crop&q=80" alt="Huawei Mate 80 Pro begins its international rollout in Malaysia" loading="lazy" width="400" height="185">
+          <img src="https://fdn.gsmarena.com/imgroot/news/26/02/ultrahuman-ring-pro-announcement/-184x111/gsmarena_000.jpg" alt="Illustration for: Ultrahuman Ring Pro unveiled with 15-day battery life, improved sensors and processing" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-71ac2938869c02d4.html">Huawei Mate 80 Pro begins its international rollout in Malaysia</a></h3>
-          <p class="card-summary">The story of huawei mate 80 pro begins its international rollout in malaysia reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.gsmarena.com/ultrahuman_ring_pro_unveiled_with_15day_battery_life_improved_sensors_and_processing-news-71759.php" target="_blank" rel="noopener noreferrer">Ultrahuman Ring Pro unveiled with 15-day battery life, improved sensors and processing</a></h3>
+          <p class="card-summary">Ultrahuman has come out with a new smart ring – the new model lasts longer on a single charge, collects more accurate data and has an important safety feature. And there is a new AI too, of course.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-71ac2938869c02d4.html" class="read-link" aria-label="Read: Huawei Mate 80 Pro begins its international rollout in Malaysia">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">GSMArena.com - Latest articles</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.gsmarena.com/ultrahuman_ring_pro_unveiled_with_15day_battery_life_improved_sensors_and_processing-news-71759.php" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Ultrahuman Ring Pro unveiled with 15-day battery life, improved sensors and processing">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Firefly is getting rebooted as an animated series">
+      <article class="card" aria-label="The new HMD Luma is a 4G phone with a 50MP camera, 3.5mm jack and a microSD slot">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900&auto=format&fit=crop&q=80" alt="Firefly is getting rebooted as an animated series" loading="lazy" width="400" height="185">
+          <img src="https://fdn.gsmarena.com/imgroot/news/26/02/hmd-luma-announcement/-184x111/gsmarena_000.jpg" alt="Illustration for: The new HMD Luma is a 4G phone with a 50MP camera, 3.5mm jack and a microSD slot" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-76844ea9942a8077.html">Firefly is getting rebooted as an animated series</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and firefly is getting rebooted as an animated series is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.gsmarena.com/the_new_hmd_luma_is_a_4g_phone_with_a_50mp_camera_35mm_jack_and_a_microsd_slot-news-71755.php" target="_blank" rel="noopener noreferrer">The new HMD Luma is a 4G phone with a 50MP camera, 3.5mm jack and a microSD slot</a></h3>
+          <p class="card-summary">HMD launched a new model called Luma – no, not “Lumia”, though that might have been cool. This appears to be similar to the HMD Vibe, though with a lower-end chipset.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-76844ea9942a8077.html" class="read-link" aria-label="Read: Firefly is getting rebooted as an animated series">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">GSMArena.com - Latest articles</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.gsmarena.com/the_new_hmd_luma_is_a_4g_phone_with_a_50mp_camera_35mm_jack_and_a_microsd_slot-news-71755.php" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: The new HMD Luma is a 4G phone with a 50MP camera, 3.5mm jack and a microSD slot">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="vivo and iQOO are raising the prices of select smartphones on Wednesday">
+      <article class="card" aria-label="TCL&#8217;s $7,000+ flagship TV is ready to fight">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1570891836654-d4590d13d073?w=900&auto=format&fit=crop&q=80" alt="vivo and iQOO are raising the prices of select smartphones on Wednesday" loading="lazy" width="400" height="185">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/268335_TCL_X11L_TV_JHiggins_0014.jpg?quality=90&strip=all&crop=0,0,100,100" alt="Illustration for: TCL&#8217;s $7,000+ flagship TV is ready to fight" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-297271aed040fff1.html">vivo and iQOO are raising the prices of select smartphones on Wednesday</a></h3>
-          <p class="card-summary">The story of vivo and iqoo are raising the prices of select smartphones on wednesday reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.theverge.com/tech/884981/tcl-x11l-sqd-mini-led-tv-review" target="_blank" rel="noopener noreferrer">TCL&#8217;s $7,000+ flagship TV is ready to fight</a></h3>
+          <p class="card-summary">Since I saw the TCL X11L SQD-Mini LED TV at a pre-CES event in December, I've been eager to get a close look at it in my living room. At first glance, the TV impressed me enough that I named it the best TV of CES 2026.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-297271aed040fff1.html" class="read-link" aria-label="Read: vivo and iQOO are raising the prices of select smartphones on Wednesday">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gadgets | The Verge</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.theverge.com/tech/884981/tcl-x11l-sqd-mini-led-tv-review" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: TCL&#8217;s $7,000+ flagship TV is ready to fight">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The classic Apple Macintosh mouse inspired Spigen’s retro AirPods case">
+      <article class="card" aria-label="Samsung Galaxy S26 Ultra in for review">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=900&auto=format&fit=crop&q=80" alt="The classic Apple Macintosh mouse inspired Spigen’s retro AirPods case" loading="lazy" width="400" height="185">
+          <img src="https://fdn.gsmarena.com/imgroot/news/26/02/samsung-galaxy-s26-ultra-ifr/-184x111/gsmarena_000.jpg" alt="Illustration for: Samsung Galaxy S26 Ultra in for review" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-a517fa65538c49ab.html">The classic Apple Macintosh mouse inspired Spigen’s retro AirPods case</a></h3>
-          <p class="card-summary">The story of the classic apple macintosh mouse inspired spigen’s retro airpods case reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.gsmarena.com/samsung_galaxy_s26_ultra_in_for_review-news-71753.php" target="_blank" rel="noopener noreferrer">Samsung Galaxy S26 Ultra in for review</a></h3>
+          <p class="card-summary">Thanks to the magic of modern air travel (and sleeping while traveling), the Samsung Galaxy S26 Ultra has arrived at GSMArena HQ and is straight in for review! The unboxing isn't amazingly interesting - you get a USB-C cable and the phone, that's it.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-a517fa65538c49ab.html" class="read-link" aria-label="Read: The classic Apple Macintosh mouse inspired Spigen’s retro AirPods case">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">GSMArena.com - Latest articles</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.gsmarena.com/samsung_galaxy_s26_ultra_in_for_review-news-71753.php" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Samsung Galaxy S26 Ultra in for review">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Samsung Galaxy A37 and A57 star in hands-on videos ahead of launch">
+      <article class="card" aria-label="Honor exec showcases Magic V6’s crease-less display">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1570891836654-d4590d13d073?w=900&auto=format&fit=crop&q=80" alt="Samsung Galaxy A37 and A57 star in hands-on videos ahead of launch" loading="lazy" width="400" height="185">
+          <img src="https://fdn.gsmarena.com/imgroot/news/26/02/honor-magic-exec-v6-creaseless-display/-184x111/gsmarena_00.jpg" alt="Illustration for: Honor exec showcases Magic V6’s crease-less display" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-eaf4a8ff162b15ef.html">Samsung Galaxy A37 and A57 star in hands-on videos ahead of launch</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and samsung galaxy a37 and a57 star in hands-on videos ahead of launch is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.gsmarena.com/honor_exec_showcases_magic_v6s_creaseless_display_-news-71750.php" target="_blank" rel="noopener noreferrer">Honor exec showcases Magic V6’s crease-less display</a></h3>
+          <p class="card-summary">The teasers for the upcoming Honor Magic V6 keep on coming and the latest one gives us our best look at the foldable’s inner display. Honor executive Wang Fei shared the images on Weibo, which show no visible crease along the middle.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-eaf4a8ff162b15ef.html" class="read-link" aria-label="Read: Samsung Galaxy A37 and A57 star in hands-on videos ahead of launch">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">GSMArena.com - Latest articles</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.gsmarena.com/honor_exec_showcases_magic_v6s_creaseless_display_-news-71750.php" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Honor exec showcases Magic V6’s crease-less display">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="My fitness tracker is a secret weapon against my chronic illness">
+      <article class="card" aria-label="Ultrahuman’s new flagship smart ring has a 15-day battery">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1567581935884-3349723552ca?w=900&auto=format&fit=crop&q=80" alt="My fitness tracker is a secret weapon against my chronic illness" loading="lazy" width="400" height="185">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/Ultrahuman-Ring-Pro-hed-.jpg?quality=90&strip=all&crop=0,0,100,100" alt="Illustration for: Ultrahuman’s new flagship smart ring has a 15-day battery" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-91917c7148f980f4.html">My fitness tracker is a secret weapon against my chronic illness</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and my fitness tracker is a secret weapon against my chronic illness is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.theverge.com/tech/885866/ultrahuman-ring-pro-jade-ai-launch-price-availability" target="_blank" rel="noopener noreferrer">Ultrahuman’s new flagship smart ring has a 15-day battery</a></h3>
+          <p class="card-summary">Ultrahuman is expanding its health monitoring ecosystem with the launch of a new flagship smart ring and a "biointelligence AI" platform upgrade. The Ring Pro is Ultrahuman's third-generation smart ring, and promises up to 15 days of battery life before needing to recharge, alongside 250 days of on-device health history storage.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-91917c7148f980f4.html" class="read-link" aria-label="Read: My fitness tracker is a secret weapon against my chronic illness">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gadgets | The Verge</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.theverge.com/tech/885866/ultrahuman-ring-pro-jade-ai-launch-price-availability" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Ultrahuman’s new flagship smart ring has a 15-day battery">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Realme P4 Lite 5G with 7,000mAh battery set to debut later this week">
+      <article class="card" aria-label="Phones are going to get weird next week">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&auto=format&fit=crop&q=80" alt="Realme P4 Lite 5G with 7,000mAh battery set to debut later this week" loading="lazy" width="400" height="185">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/honor-robot-phone.jpg?quality=90&strip=all&crop=0,0,100,100" alt="Illustration for: Phones are going to get weird next week" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-ff3a8dba28e32002.html">Realme P4 Lite 5G with 7,000mAh battery set to debut later this week</a></h3>
-          <p class="card-summary">The story of realme p4 lite 5g with 7,000mah battery set to debut later this week reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.theverge.com/tech/885287/mwc-2026-what-to-expect-phones-mobile-weird" target="_blank" rel="noopener noreferrer">Phones are going to get weird next week</a></h3>
+          <p class="card-summary">With rare exceptions, phones are pretty boring these days. The good news is, a boatload of those rare exceptions is about to show up at once, courtesy of Mobile World Congress.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-ff3a8dba28e32002.html" class="read-link" aria-label="Read: Realme P4 Lite 5G with 7,000mAh battery set to debut later this week">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gadgets | The Verge</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.theverge.com/tech/885287/mwc-2026-what-to-expect-phones-mobile-weird" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Phones are going to get weird next week">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Oppo Find X9 Ultra's 10x periscope telephoto camera specs tipped">
+      <article class="card" aria-label="MWC 2026: all the phones, gadgets, and announcements from Barcelona">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=900&auto=format&fit=crop&q=80" alt="Oppo Find X9 Ultra's 10x periscope telephoto camera specs tipped" loading="lazy" width="400" height="185">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/mwc.jpg?quality=90&strip=all&crop=0,0,100,100" alt="Illustration for: MWC 2026: all the phones, gadgets, and announcements from Barcelona" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-18e621c26c7f13d0.html">Oppo Find X9 Ultra's 10x periscope telephoto camera specs tipped</a></h3>
-          <p class="card-summary">The story of oppo find x9 ultra's 10x periscope telephoto camera specs tipped reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.theverge.com/tech/882980/mwc-2026-news-phones-gadgets-announcements" target="_blank" rel="noopener noreferrer">MWC 2026: all the phones, gadgets, and announcements from Barcelona</a></h3>
+          <p class="card-summary">The Verge is heading to Barcelona, Spain, for Mobile World Congress, the biggest phone show of the year. CES may dominate the headlines when it comes to TVs, computer components, and AI inanity, but for all things mobile, MWC has it beat.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 16, 2026</span>
-          <a href="articles/rss-18e621c26c7f13d0.html" class="read-link" aria-label="Read: Oppo Find X9 Ultra's 10x periscope telephoto camera specs tipped">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gadgets | The Verge</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.theverge.com/tech/882980/mwc-2026-news-phones-gadgets-announcements" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: MWC 2026: all the phones, gadgets, and announcements from Barcelona">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Samsung’s Galaxy Buds 4 Pro are the choice — if you have a Galaxy phone">
+      <article class="card" aria-label="Infinix's first global brand ambassador is Itzy's Yuna">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=900&auto=format&fit=crop&q=80" alt="Samsung’s Galaxy Buds 4 Pro are the choice — if you have a Galaxy phone" loading="lazy" width="400" height="185">
+          <img src="https://fdn.gsmarena.com/imgroot/news/26/02/infinix-yuna-brand-ambassador/-184x111/gsmarena_000.jpg" alt="Illustration for: Infinix's first global brand ambassador is Itzy's Yuna" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-0804ce02f1d939fa.html">Samsung’s Galaxy Buds 4 Pro are the choice — if you have a Galaxy phone</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as samsung’s galaxy buds 4 pro are the choice — if you have a galaxy phone. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Consumer technology choices increasingly involve complex trade-offs between capability, value, and ecosystem compatibility — and the market is responding with more options than ever before.</p>
+          <h3><a href="https://www.gsmarena.com/infinixs_first_global_brand_ambassador_is_itzys_yuna_-news-71725.php" target="_blank" rel="noopener noreferrer">Infinix's first global brand ambassador is Itzy's Yuna</a></h3>
+          <p class="card-summary">Today, Infinix has announced its first global brand ambassador: K-pop girl group Itzy's member Yuna. Itzy was formed in 2019 and she's been a member ever since, while this year she's also made her acting debut, and is planning to release her first solo record in March.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 15, 2026</span>
-          <a href="articles/rss-0804ce02f1d939fa.html" class="read-link" aria-label="Read: Samsung’s Galaxy Buds 4 Pro are the choice — if you have a Galaxy phone">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">GSMArena.com - Latest articles</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.gsmarena.com/infinixs_first_global_brand_ambassador_is_itzys_yuna_-news-71725.php" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Infinix's first global brand ambassador is Itzy's Yuna">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Hulu, Disney Plus, and the Pixel Watch 4 are among this week’s best deals">
+      <article class="card" aria-label="These are Motorola’s FIFA World Cup 26-branded Razr Fold and Edge 70">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=900&auto=format&fit=crop&q=80" alt="Hulu, Disney Plus, and the Pixel Watch 4 are among this week’s best deals" loading="lazy" width="400" height="185">
+          <img src="https://fdn.gsmarena.com/imgroot/news/26/02/these-are-motoralas-fifa-branded-fold-edge-70/-184x111/gsmarena_000.jpg" alt="Illustration for: These are Motorola’s FIFA World Cup 26-branded Razr Fold and Edge 70" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-e16526519c83f2b5.html">Hulu, Disney Plus, and the Pixel Watch 4 are among this week’s best deals</a></h3>
-          <p class="card-summary">The story of hulu, disney plus, and the pixel watch 4 are among this week’s best deals reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Staying ahead of these shifts requires both technical awareness and a clear-eyed view of the business forces at play. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.gsmarena.com/these_are_motorolas_fifa_world_cup_26branded_razr_fold_and_edge_70_-news-71748.php" target="_blank" rel="noopener noreferrer">These are Motorola’s FIFA World Cup 26-branded Razr Fold and Edge 70</a></h3>
+          <p class="card-summary">Motorola is the official smartphone partner of the upcoming FIFA World Cup, and it already launched its first themed device earlier this year with the Razr 60 FIFA World Cup 26 Edition. That won’t be the only device as Evan Blass (@evleaks) shared official renders of the upcoming Moto Razr Fold and Edge 70 FIFA World Cup 26 smartphones.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 14, 2026</span>
-          <a href="articles/rss-e16526519c83f2b5.html" class="read-link" aria-label="Read: Hulu, Disney Plus, and the Pixel Watch 4 are among this week’s best deals">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">GSMArena.com - Latest articles</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.gsmarena.com/these_are_motorolas_fifa_world_cup_26branded_razr_fold_and_edge_70_-news-71748.php" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: These are Motorola’s FIFA World Cup 26-branded Razr Fold and Edge 70">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="MacBook Air M5 review: a small update for the ‘just right’ Mac">
+      <article class="card" aria-label="Samsung confirms the S Pen is here to stay">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=900&auto=format&fit=crop&q=80" alt="MacBook Air M5 review: a small update for the ‘just right’ Mac" loading="lazy" width="400" height="185">
+          <img src="https://fdn.gsmarena.com/imgroot/news/26/02/samsung-s-pen-advanced-tech-development/-184x111/gsmarena_001.jpg" alt="Illustration for: Samsung confirms the S Pen is here to stay" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-355ffead9f538c80.html">MacBook Air M5 review: a small update for the ‘just right’ Mac</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around macbook air m5 review: a small update for the ‘just right’ mac. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.gsmarena.com/samsung_s_pen_next_generation_development-news-71747.php" target="_blank" rel="noopener noreferrer">Samsung confirms the S Pen is here to stay</a></h3>
+          <p class="card-summary">Samsung removed the S Pen's Bluetooth functionality with last year's Galaxy S25 Ultra, leading some to believe the Korean brand would ditch the S Pen with the recently announced Galaxy S26 Ultra. Fortunately, that didn't happen.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 14, 2026</span>
-          <a href="articles/rss-355ffead9f538c80.html" class="read-link" aria-label="Read: MacBook Air M5 review: a small update for the ‘just right’ Mac">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">GSMArena.com - Latest articles</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.gsmarena.com/samsung_s_pen_next_generation_development-news-71747.php" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Samsung confirms the S Pen is here to stay">Read original</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Asus’ new open earbuds are a wonderful companion for handheld gaming">
+      <article class="card" aria-label="Lenovo leak reveals a foldable gaming handheld that&#8217;s also a Windows laptop">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=900&auto=format&fit=crop&q=80" alt="Asus’ new open earbuds are a wonderful companion for handheld gaming" loading="lazy" width="400" height="185">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/lenovo-legion-go-fold-handheld-mode-windows-latest.jpg?quality=90&strip=all&crop=0,0,100,100" alt="Illustration for: Lenovo leak reveals a foldable gaming handheld that&#8217;s also a Windows laptop" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-f482e0a9f4915c8a.html">Asus’ new open earbuds are a wonderful companion for handheld gaming</a></h3>
-          <p class="card-summary">The story of asus’ new open earbuds are a wonderful companion for handheld gaming reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Staying ahead of these shifts requires both technical awareness and a clear-eyed view of the business forces at play. Consumer expectations for mobile and personal technology continue to rise, and the industry is responding with products and experiences of increasing sophistication.</p>
+          <h3><a href="https://www.theverge.com/tech/885656/lenovo-legion-go-fold-concept-leak" target="_blank" rel="noopener noreferrer">Lenovo leak reveals a foldable gaming handheld that&#8217;s also a Windows laptop</a></h3>
+          <p class="card-summary">Lenovo's next gaming laptop could be a shapeshifting foldable called the Legion Go Fold, which can be used as a laptop or a handheld gaming PC with two different display sizes, as Windows Latest reports. Leaked images of the device show it attached to both a keyboard and controllers, with a hinge in the middle […]</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 14, 2026</span>
-          <a href="articles/rss-f482e0a9f4915c8a.html" class="read-link" aria-label="Read: Asus’ new open earbuds are a wonderful companion for handheld gaming">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">Gadgets | The Verge</span>
+          <span class="tag">Mobile & Gadgets</span>
+          <a href="https://www.theverge.com/tech/885656/lenovo-legion-go-fold-concept-leak" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Lenovo leak reveals a foldable gaming handheld that&#8217;s also a Windows laptop">Read original</a>
         </div>
       </article>
       
     </div>
   </div>
-  
 
-
-
+  <!-- Editorial notice -->
+  <div class="section" style="padding-top: 0;">
+    <div class="info-box">
+      <p><strong>Editorial notice:</strong> Summaries on this page are derived from publicly available RSS feeds published by the named sources. The Tech Brief does not reproduce full article text. All original content, images and trademarks remain the property of their respective publishers. <a href="about.html">Read our editorial policy →</a></p>
+    </div>
+  </div>
 </main>
 
 <!-- ===== FOOTER ===== -->
@@ -1055,7 +1022,7 @@
   <div class="footer-inner">
     <div class="footer-about">
       <span class="brand-name">The Tech Brief</span>
-      <p>An independent technology publication delivering original editorial analysis across the technology industry. Updated every six hours, 24/7.</p>
+      <p>An independent technology news aggregator delivering concise, editorially reviewed summaries from the world's most trusted tech publications. Updated every three hours, 24/7.</p>
     </div>
     <div class="footer-col">
       <h4>Categories</h4>
@@ -1067,8 +1034,6 @@
       <a href="consumer-tech.html">Consumer Tech</a>
       <a href="gaming.html">Gaming</a>
       <a href="evs-automotive.html">EVs &amp; Automotive</a>
-      <a href="startups-business.html">Startups &amp; Business</a>
-      <a href="how-to.html">How-To Guides</a>
     </div>
     <div class="footer-col">
       <h4>Site Info</h4>
@@ -1082,23 +1047,46 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; <span id="footer-year"></span> The Tech Brief &mdash; thetechbrief.net. All rights reserved.</span>
-    <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
+    <span>© <span id="footer-year"></span> The Tech Brief — thetechbrief.in. All rights reserved.</span>
+    <span>AI-assisted summaries based on public RSS feeds. Trademarks belong to their respective owners.</span>
   </div>
 </footer>
 
+<!-- ===== COOKIE BANNER ===== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <p>We use cookies to improve your experience, analyse traffic, and support affiliate partnerships. See our <a href="legal/privacy.html">Privacy Policy</a> for details.</p>
+  <div class="cookie-actions">
+    <button class="btn primary" id="cookieAccept">Accept All</button>
+    <button class="btn secondary" id="cookieReject">Reject</button>
+  </div>
+</div>
+
 <script>
   document.getElementById('footer-year').textContent = new Date().getFullYear();
-  (function(){
-    var c=localStorage.getItem('cookieConsent');
-    if(c){document.getElementById('cookieBanner') && document.getElementById('cookieBanner').remove();return;}
+
+  (function() {
+    var consent = localStorage.getItem('cookieConsent');
+    if (consent) { document.getElementById('cookieBanner').remove(); return; }
+    document.getElementById('cookieAccept').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'yes');
+      document.getElementById('cookieBanner').remove();
+    });
+    document.getElementById('cookieReject').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'no');
+      document.getElementById('cookieBanner').remove();
+    });
   })();
-  (function(){
-    var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
-    if(!t||!n)return;
-    t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
+
+  (function() {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+    toggle.addEventListener('click', function() {
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
   })();
 </script>
-<script src="assets/cookie-consent.js"></script>
+  <script src="assets/cookie-consent.js"></script>
 </body>
 </html>

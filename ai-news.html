@@ -2,59 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Google Consent Mode v2 -->
+  <!-- Google Consent Mode v2 (default denied – required for GDPR/EU) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
-      'analytics_storage': 'denied', 'ad_storage': 'denied',
-      'ad_user_data': 'denied', 'ad_personalization': 'denied', 'wait_for_update': 500
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
     });
   </script>
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJEGDPW7G"></script>
-  <script>gtag('js', new Date()); gtag('config', 'G-YCJEGDPW7G');</script>
-
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-YCJEGDPW7G');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <title>AI News & Machine Learning Updates | The Tech Brief</title>
-  <meta name="description" content="Original analysis of the latest AI breakthroughs, machine learning research, large language model developments and automation trends. Written by The Tech Brief editorial team.">
+  <title>AI News & Machine Learning Updates | Tech Brief</title>
+  <meta name="description" content="Stay current with the latest AI breakthroughs, machine learning research, automation trends, and large language model developments. Editorially reviewed summaries updated every three hours.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.thetechbrief.net/ai-news.html">
+  <link rel="canonical" href="https://allroundertechbrief.github.io/TheTechBrief/ai-news.html">
 
-  <meta property="og:type"        content="website">
-  <meta property="og:site_name"   content="The Tech Brief">
-  <meta property="og:title"       content="AI News & Machine Learning Updates | The Tech Brief">
-  <meta property="og:description" content="Original analysis of the latest AI breakthroughs, machine learning research, large language model developments and automation trends. Written by The Tech Brief editorial team.">
-  <meta property="og:url"         content="https://www.thetechbrief.net/ai-news.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Tech Brief">
+  <meta property="og:title" content="AI News & Machine Learning Updates | Tech Brief">
+  <meta property="og:description" content="Stay current with the latest AI breakthroughs, machine learning research, automation trends, and large language model developments. Editorially reviewed summaries updated every three hours.">
+  <meta property="og:url" content="https://allroundertechbrief.github.io/TheTechBrief/ai-news.html">
 
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="AI News & Machine Learning Updates | The Tech Brief">
-  <meta name="twitter:description" content="Original analysis of the latest AI breakthroughs, machine learning research, large language model developments and automation trends. Written by The Tech Brief editorial team.">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI News & Machine Learning Updates | Tech Brief">
+  <meta name="twitter:description" content="Stay current with the latest AI breakthroughs, machine learning research, automation trends, and large language model developments. Editorially reviewed summaries updated every three hours.">
 
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "AI News",
-    "description": "Original analysis of the latest AI breakthroughs, machine learning research, large language model developments and automation trends. Written by The Tech Brief editorial team.",
-    "url": "https://www.thetechbrief.net/ai-news.html",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.thetechbrief.net/"},
-        {"@type":"ListItem","position":2,"name":"AI News","item":"https://www.thetechbrief.net/ai-news.html"}
-      ]
-    },
+    "description": "Stay current with the latest AI breakthroughs, machine learning research, automation trends, and large language model developments. Editorially reviewed summaries updated every three hours.",
+    "url": "https://allroundertechbrief.github.io/TheTechBrief/ai-news.html",
     "isPartOf": {
       "@type": "WebSite",
       "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/"
+      "url": "https://allroundertechbrief.github.io/TheTechBrief/"
     },
     "publisher": {
       "@type": "Organization",
       "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/",
-      "email": "technodate3@gmail.com"
+      "url": "https://allroundertechbrief.github.io/TheTechBrief/"
     }
   }
   </script>
@@ -64,126 +64,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
-
-  <style>
-    /* ── Fix: uniform cards — remove the broken first-card split layout ── */
-    .grid .card:first-child {
-      grid-column: auto !important;
-      display: flex !important;
-      flex-direction: column !important;
-      grid-template-columns: unset !important;
-    }
-    .grid .card:first-child img {
-      width: 100% !important;
-      height: 185px !important;
-      object-fit: cover !important;
-      border-radius: var(--radius) var(--radius) 0 0 !important;
-    }
-
-    /* ── Editorial article cards (deep-dives from generate_articles.py) ── */
-    .editorial-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent-2);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      display: flex; flex-direction: column;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .editorial-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .editorial-card img {
-      width: 100%; height: 185px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .editorial-card .ec-body {
-      padding: 18px 20px 12px; flex: 1;
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    .editorial-card .ec-badge {
-      display: inline-block; background: var(--accent-2); color: #fff;
-      font-size: 10px; font-weight: 700; letter-spacing: .8px;
-      text-transform: uppercase; padding: 3px 9px; border-radius: 999px;
-      align-self: flex-start;
-    }
-    .editorial-card h3 {
-      font-family: var(--font-serif); font-size: 18px;
-      line-height: 1.3; color: var(--ink); flex: 1;
-    }
-    .editorial-card h3 a { color: inherit; }
-    .editorial-card h3 a:hover { color: var(--accent); }
-    .editorial-card .ec-desc { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
-    .editorial-card .ec-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .editorial-card .ec-meta { font-size: 11px; color: var(--ink-3); font-family: var(--font-mono); }
-    .ec-read {
-      font-size: 12.5px; font-weight: 600; color: var(--accent);
-    }
-    .ec-read:hover { color: var(--accent-h); }
-    .ec-read::after { content: ' →'; }
-
-    /* ── Standard editorial news cards ── */
-    /* Same .card class but with cleaned footer — no source attribution */
-    .card .card-footer-clean {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .card .card-date-tag {
-      font-size: 11px; color: var(--ink-3); font-family: var(--font-mono);
-    }
-
-    /* ── "In focus" featured card for latest item in category ── */
-    .in-focus-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      margin-bottom: 28px;
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 768px) {
-      .in-focus-card { grid-template-columns: 340px 1fr; }
-      .in-focus-card img { height: 100%; min-height: 220px; border-radius: var(--radius) 0 0 var(--radius); }
-    }
-    .in-focus-card img {
-      width: 100%; height: 220px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .in-focus-body {
-      padding: 24px 28px;
-      display: flex; flex-direction: column; gap: 12px;
-    }
-    .in-focus-label {
-      font-size: 10px; font-weight: 700; letter-spacing: 1.2px;
-      text-transform: uppercase; color: var(--accent);
-      font-family: var(--font-mono);
-    }
-    .in-focus-body h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(20px, 2.5vw, 28px);
-      line-height: 1.25; color: var(--ink);
-    }
-    .in-focus-body h2 a { color: inherit; }
-    .in-focus-body h2 a:hover { color: var(--accent); }
-    .in-focus-body p {
-      font-size: 15px; color: var(--ink-2); line-height: 1.65; flex: 1;
-    }
-    .in-focus-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 12px; margin-top: auto; padding-top: 14px;
-      border-top: 1px solid var(--border);
-    }
-    .in-focus-date { font-size: 12px; color: var(--ink-3); font-family: var(--font-mono); }
-  </style>
 </head>
 <body>
 
+<!-- Skip to content (accessibility) -->
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- ===== HEADER ===== -->
@@ -193,13 +77,11 @@
     <span class="brand-name">Tech Brief</span>
   </a>
   <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </button>
   <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
     <a href="index.html">Home</a>
-    <a href="ai-news.html">AI News</a>
+    <a href="ai-news.html" aria-current="page">AI News</a>
     <a href="broadcast-tech.html">Broadcast Tech</a>
     <a href="enterprise-tech.html">Enterprise Tech</a>
     <a href="cybersecurity-updates.html">Cybersecurity</a>
@@ -207,8 +89,6 @@
     <a href="consumer-tech.html">Consumer Tech</a>
     <a href="gaming.html">Gaming</a>
     <a href="evs-automotive.html">EVs &amp; Automotive</a>
-    <a href="startups-business.html">Startups &amp; Business</a>
-    <a href="how-to.html">How-To Guides</a>
     <a href="about.html" class="nav-cta">About</a>
   </nav>
 </header>
@@ -216,310 +96,327 @@
 <!-- ===== CATEGORY HERO ===== -->
 <section class="cat-hero" aria-label="Category overview">
   <div class="cat-hero-inner">
-    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-      <a href="index.html">Home</a>
-      <span aria-hidden="true">&rsaquo;</span>
-      <span aria-current="page">AI News</span>
-    </nav>
-    <h1 class="cat-hero-title">AI News</h1>
-    <p class="cat-hero-desc">Original analysis of breakthroughs in artificial intelligence, machine learning and automation</p>
+    <span class="cat-label">Tech Brief / AI News</span>
+    <h1>AI News</h1>
+    <p>Breakthroughs in machine learning, automation, and AI industry developments</p>
+    <div class="editorial-badge" aria-label="Editorial quality indicator">
+      ✓ Editorially reviewed summaries — updated every 3 hours
+    </div>
   </div>
 </section>
 
+<!-- ===== QUICK ACTIONS ===== -->
+<div style="background: var(--surface); padding: 0 24px;">
+  <div class="quick-actions" style="max-width: 1280px; margin: 0 auto;" role="complementary" aria-label="Quick actions">
+    <div class="qa-item">
+      <a href="about.html#editorial-process">
+        <span class="qa-icon" aria-hidden="true">📖</span>
+        Read Original Analysis
+      </a>
+      <p>Understand how we add editorial context to every story we publish.</p>
+    </div>
+    <div class="qa-item">
+      <a href="index.html">
+        <span class="qa-icon" aria-hidden="true">🗞️</span>
+        Browse All Categories
+      </a>
+      <p>Explore AI, enterprise, cybersecurity and mobile news in one feed.</p>
+    </div>
+    <div class="qa-item">
+      <a href="contact.html">
+        <span class="qa-icon" aria-hidden="true">✉️</span>
+        Submit a Tip
+      </a>
+      <p>Spotted something we missed? Send us the link and a note.</p>
+    </div>
+    <p class="qa-trust">All summaries are editorially reviewed by The Tech Brief team. Original reporting © respective publishers; commentary © The Tech Brief 2025.</p>
+  </div>
+</div>
+
 <!-- ===== MAIN CONTENT ===== -->
 <main id="main-content">
-
-  <!-- ===== EDITORIAL DEEP DIVES ===== -->
-  
-
-  <!-- ===== EDITORIAL NEWS COVERAGE ===== -->
-  
-  <div class="section" >
+  <div class="section">
     <div class="section-head">
-      <h2>AI News Coverage</h2>
-      <span class="section-count">17 editorially-written pieces &mdash; refreshed every 6 hours</span>
-      <span class="section-sub">Original editorial commentary and analysis on the latest developments in AI News</span>
+      <h2>Latest in AI News</h2>
+      <span class="section-count">Curated from 17 sources</span>
     </div>
     <div class="grid">
       
-      <article class="card" aria-label="Breakout Ventures raises $114M fund to back AI science startups">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=900&auto=format&fit=crop&q=80" alt="Breakout Ventures raises $114M fund to back AI science startups" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="articles/rss-bc04f410b9955784.html">Breakout Ventures raises $114M fund to back AI science startups</a></h3>
-          <p class="card-summary">The story of breakout ventures raises $114m fund to back ai science startups reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Staying ahead of these shifts requires both technical awareness and a clear-eyed view of the business forces at play. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
-        </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 11, 2026</span>
-          <a href="articles/rss-bc04f410b9955784.html" class="read-link" aria-label="Read: Breakout Ventures raises $114M fund to back AI science startups">Read more</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="Amazon expands a program that lets customers shop from other retailers’ sites">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=900&auto=format&fit=crop&q=80" alt="Amazon expands a program that lets customers shop from other retailers’ sites" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="articles/rss-cefa16f1427e322f.html">Amazon expands a program that lets customers shop from other retailers’ sites</a></h3>
-          <p class="card-summary">The story of amazon expands a program that lets customers shop from other retailers’ sites reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Staying ahead of these shifts requires both technical awareness and a clear-eyed view of the business forces at play. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
-        </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 11, 2026</span>
-          <a href="articles/rss-cefa16f1427e322f.html" class="read-link" aria-label="Read: Amazon expands a program that lets customers shop from other retailers’ sites">Read more</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="AI network startup Eridu emerges from stealth with hefty $200M Series A">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&auto=format&fit=crop&q=80" alt="AI network startup Eridu emerges from stealth with hefty $200M Series A" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="articles/rss-1442fa85e4d0a6ac.html">AI network startup Eridu emerges from stealth with hefty $200M Series A</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as ai network startup eridu emerges from stealth with hefty $200m series a. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. As the landscape clarifies, organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
-        </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 10, 2026</span>
-          <a href="articles/rss-1442fa85e4d0a6ac.html" class="read-link" aria-label="Read: AI network startup Eridu emerges from stealth with hefty $200M Series A">Read more</a>
-        </div>
-      </article>
-      
       <article class="card" aria-label="Wearable startup CUDIS launches a new health ring line with an AI-fueled ‘coach’">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=900&auto=format&fit=crop&q=80" alt="Wearable startup CUDIS launches a new health ring line with an AI-fueled ‘coach’" loading="lazy" width="400" height="185">
-        </div>
-        
         <div class="card-body">
-          <h3><a href="articles/rss-1de55ca1d48805d0.html">Wearable startup CUDIS launches a new health ring line with an AI-fueled ‘coach’</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and wearable startup cudis launches a new health ring line with an ai-fueled ‘coach’ is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response to this development will have lasting effects on the organisations and markets involved. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://techcrunch.com/2026/02/25/wearable-startup-cudis-launches-a-new-health-ring-line-with-an-ai-fueled-coach/" target="_blank" rel="noopener noreferrer">Wearable startup CUDIS launches a new health ring line with an AI-fueled ‘coach’</a></h3>
+          <p class="card-summary">The wearable incentivizes healthy behavior with points that can be redeemed for health products.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">February 25, 2026</span>
-          <a href="articles/rss-1de55ca1d48805d0.html" class="read-link" aria-label="Read: Wearable startup CUDIS launches a new health ring line with an AI-fueled ‘coach’">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/2026/02/25/wearable-startup-cudis-launches-a-new-health-ring-line-with-an-ai-fueled-coach/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Wearable startup CUDIS launches a new health ring line with an AI-fueled ‘coach’">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="Gemini can now automate some multi-step tasks on Android">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=900&auto=format&fit=crop&q=80" alt="Gemini can now automate some multi-step tasks on Android" loading="lazy" width="400" height="185">
-        </div>
-        
         <div class="card-body">
-          <h3><a href="articles/rss-56cd01fafc2ddf8b.html">Gemini can now automate some multi-step tasks on Android</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and gemini can now automate some multi-step tasks on android is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response to this development will have lasting effects on the organisations and markets involved. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://techcrunch.com/2026/02/25/gemini-can-now-automate-some-multi-step-tasks-on-android/" target="_blank" rel="noopener noreferrer">Gemini can now automate some multi-step tasks on Android</a></h3>
+          <p class="card-summary">Gemini on Android will be able to automate tasks involving rideshare requests, or grocery or food delivery, says Google.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">February 25, 2026</span>
-          <a href="articles/rss-56cd01fafc2ddf8b.html" class="read-link" aria-label="Read: Gemini can now automate some multi-step tasks on Android">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/2026/02/25/gemini-can-now-automate-some-multi-step-tasks-on-android/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Gemini can now automate some multi-step tasks on Android">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="Amazon’s AI-powered Alexa+ gets new personality options">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&auto=format&fit=crop&q=80" alt="Amazon’s AI-powered Alexa+ gets new personality options" loading="lazy" width="400" height="185">
-        </div>
-        
         <div class="card-body">
-          <h3><a href="articles/rss-902eea402452cf15.html">Amazon’s AI-powered Alexa+ gets new personality options</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as amazon’s ai-powered alexa+ gets new personality options. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. As the landscape clarifies, organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://techcrunch.com/2026/02/25/amazons-ai-powered-alexa-gets-new-personality-options/" target="_blank" rel="noopener noreferrer">Amazon’s AI-powered Alexa+ gets new personality options</a></h3>
+          <p class="card-summary">Users will be able to choose from Alexa styles like Brief, Chill, or Sweet, Amazon says.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">February 25, 2026</span>
-          <a href="articles/rss-902eea402452cf15.html" class="read-link" aria-label="Read: Amazon’s AI-powered Alexa+ gets new personality options">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/2026/02/25/amazons-ai-powered-alexa-gets-new-personality-options/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Amazon’s AI-powered Alexa+ gets new personality options">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="Uber engineers built an AI version of their boss">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=900&auto=format&fit=crop&q=80" alt="Uber engineers built an AI version of their boss" loading="lazy" width="400" height="185">
-        </div>
-        
         <div class="card-body">
-          <h3><a href="articles/rss-c8fc01aab394938b.html">Uber engineers built an AI version of their boss</a></h3>
-          <p class="card-summary">A clearer picture is emerging around uber engineers built an ai version of their boss, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how the key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The technology landscape has a way of rewarding those who recognise inflection points early — and this may well be one of them. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://techcrunch.com/2026/02/24/uber-engineers-built-ai-version-of-boss-dara-khosrowshahi/" target="_blank" rel="noopener noreferrer">Uber engineers built an AI version of their boss</a></h3>
+          <p class="card-summary">Uber CEO Dara Khosrowshahi said the company’s employees have gone all in on AI, going so far as to build a chatbot of him that they use to practice their pitches.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">February 24, 2026</span>
-          <a href="articles/rss-c8fc01aab394938b.html" class="read-link" aria-label="Read: Uber engineers built an AI version of their boss">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/2026/02/24/uber-engineers-built-ai-version-of-boss-dara-khosrowshahi/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Uber engineers built an AI version of their boss">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="Particle’s AI news app listens to podcasts for interesting clips so you you don’t have to">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&auto=format&fit=crop&q=80" alt="Particle’s AI news app listens to podcasts for interesting clips so you you don’t have to" loading="lazy" width="400" height="185">
-        </div>
-        
         <div class="card-body">
-          <h3><a href="articles/rss-32b05bcf13cf4986.html">Particle’s AI news app listens to podcasts for interesting clips so you you don’t have to</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around particle’s ai news app listens to podcasts for interesting clips so you you don’t…. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://techcrunch.com/2026/02/23/particles-ai-news-app-listens-to-podcasts-for-interesting-clips-so-you-you-dont-have-to/" target="_blank" rel="noopener noreferrer">Particle’s AI news app listens to podcasts for interesting clips so you you don’t have to</a></h3>
+          <p class="card-summary">AI news app Particle can now pull in key moments from podcasts, letting readers instantly play short, relevant clips alongside related stories.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">February 23, 2026</span>
-          <a href="articles/rss-32b05bcf13cf4986.html" class="read-link" aria-label="Read: Particle’s AI news app listens to podcasts for interesting clips so you you don’t have to">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/2026/02/23/particles-ai-news-app-listens-to-podcasts-for-interesting-clips-so-you-you-dont-have-to/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Particle’s AI news app listens to podcasts for interesting clips so you you don’t have to">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="Google’s new Gemini Pro model has record benchmark scores — again">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&auto=format&fit=crop&q=80" alt="Google’s new Gemini Pro model has record benchmark scores — again" loading="lazy" width="400" height="185">
-        </div>
-        
         <div class="card-body">
-          <h3><a href="articles/rss-6c0721ccf93397f3.html">Google’s new Gemini Pro model has record benchmark scores — again</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around google’s new gemini pro model has record benchmark scores — again. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://techcrunch.com/2026/02/19/googles-new-gemini-pro-model-has-record-benchmark-scores-again/" target="_blank" rel="noopener noreferrer">Google’s new Gemini Pro model has record benchmark scores — again</a></h3>
+          <p class="card-summary">Gemini 3.1 Pro promises a Google LLM capable of handling more complex forms of work.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">February 20, 2026</span>
-          <a href="articles/rss-6c0721ccf93397f3.html" class="read-link" aria-label="Read: Google’s new Gemini Pro model has record benchmark scores — again">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/2026/02/19/googles-new-gemini-pro-model-has-record-benchmark-scores-again/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Google’s new Gemini Pro model has record benchmark scores — again">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="An AI data center boom is fueling Redwood’s energy storage business">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&auto=format&fit=crop&q=80" alt="An AI data center boom is fueling Redwood’s energy storage business" loading="lazy" width="400" height="185">
+        <div class="card-body">
+          <h3><a href="https://techcrunch.com/2026/02/19/an-ai-data-center-boom-is-fueling-redwoods-energy-storage-business/" target="_blank" rel="noopener noreferrer">An AI data center boom is fueling Redwood’s energy storage business</a></h3>
+          <p class="card-summary">Redwood Materials says its new energy storage business is the fastest growing unit within the company.</p>
+          
         </div>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/2026/02/19/an-ai-data-center-boom-is-fueling-redwoods-energy-storage-business/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: An AI data center boom is fueling Redwood’s energy storage business">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Microsoft says Office bug exposed customers’ confidential emails to Copilot AI">
         
         <div class="card-body">
-          <h3><a href="articles/rss-da492c440480c59e.html">An AI data center boom is fueling Redwood’s energy storage business</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around an ai data center boom is fueling redwood’s energy storage business. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://techcrunch.com/2026/02/18/microsoft-says-office-bug-exposed-customers-confidential-emails-to-copilot-ai/" target="_blank" rel="noopener noreferrer">Microsoft says Office bug exposed customers’ confidential emails to Copilot AI</a></h3>
+          <p class="card-summary">Microsoft said the bug meant that its Copilot AI chatbot was reading and summarizing paying customers' confidential emails, bypassing data-protection policies.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">February 19, 2026</span>
-          <a href="articles/rss-da492c440480c59e.html" class="read-link" aria-label="Read: An AI data center boom is fueling Redwood’s energy storage business">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/2026/02/18/microsoft-says-office-bug-exposed-customers-confidential-emails-to-copilot-ai/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Microsoft says Office bug exposed customers’ confidential emails to Copilot AI">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Designer Kate Barton teams up with IBM and Fiducia AI for an NYFW presentation">
+        
+        <div class="card-body">
+          <h3><a href="https://techcrunch.com/2026/02/14/designer-kate-barton-teams-up-with-ibm-and-fiducia-ai-for-a-nyfw-presentation/" target="_blank" rel="noopener noreferrer">Designer Kate Barton teams up with IBM and Fiducia AI for an NYFW presentation</a></h3>
+          <p class="card-summary">Designer Kate Barton teams up with Fiducia AI and IBM for a NYFW presentation.</p>
+          
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/2026/02/14/designer-kate-barton-teams-up-with-ibm-and-fiducia-ai-for-a-nyfw-presentation/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Designer Kate Barton teams up with IBM and Fiducia AI for an NYFW presentation">Read original</a>
+        </div>
+      </article>
+      
+      <article class="card" aria-label="Glean’s fight to own the AI layer inside every company">
+        
+        <div class="card-body">
+          <h3><a href="https://techcrunch.com/podcast/glean-arvind-jain-equity-podcast-own-the-ai-layer-inside-every-company/" target="_blank" rel="noopener noreferrer">Glean’s fight to own the AI layer inside every company</a></h3>
+          <p class="card-summary">Enterprise AI is shifting fast from chatbots that answer questions to systems that actually do the work across an organization. But who will own the AI layer that powers all of it?</p>
+          
+        </div>
+        <div class="card-footer">
+          <span class="source-tag">AI | TechCrunch</span>
+          <span class="tag">AI News</span>
+          <a href="https://techcrunch.com/podcast/glean-arvind-jain-equity-podcast-own-the-ai-layer-inside-every-company/" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Glean’s fight to own the AI layer inside every company">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="Railway secures $100 million to challenge AWS with AI-native cloud infrastructure">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=900&auto=format&fit=crop&q=80" alt="Railway secures $100 million to challenge AWS with AI-native cloud infrastructure" loading="lazy" width="400" height="185">
+          <img src="https://images.ctfassets.net/jdtwqhzvc2n1/5RLyQIpBeVXxv0RpcXZxWQ/fd9680c6d82acd8208ac341fc575f5fb/nuneybits_Vector_art_of_a_sleek_bullet_train_bursting_from_a_cl_32a805aa-272c-4b34-ac16-cf20508b7ff4.webp?w=300&q=30" alt="Illustration for: Railway secures $100 million to challenge AWS with AI-native cloud infrastructure" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-e670024b9a32e878.html">Railway secures $100 million to challenge AWS with AI-native cloud infrastructure</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and railway secures $100 million to challenge aws with ai-native cloud infrastructure is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response to this development will have lasting effects on the organisations and markets involved. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud" target="_blank" rel="noopener noreferrer">Railway secures $100 million to challenge AWS with AI-native cloud infrastructure</a></h3>
+          <p class="card-summary">Railway , a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar on marketing, announced Thursday that it raised $100 million in a Series B funding round, as surging demand for artificial intelligence applications exposes the limitations of legacy cloud infrastructure. TQ Ventures led the round, with participation from FPV Ventures , Redpoint , and Unusual Ventures .</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">January 22, 2026</span>
-          <a href="articles/rss-e670024b9a32e878.html" class="read-link" aria-label="Read: Railway secures $100 million to challenge AWS with AI-native cloud infrastructure">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | VentureBeat</span>
+          <span class="tag">AI News</span>
+          <a href="https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Railway secures $100 million to challenge AWS with AI-native cloud infrastructure">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="Claude Code costs up to $200 a month. Goose does the same thing for free.">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&auto=format&fit=crop&q=80" alt="Claude Code costs up to $200 a month. Goose does the same thing for free." loading="lazy" width="400" height="185">
+          <img src="https://images.ctfassets.net/jdtwqhzvc2n1/1U9H8GLIqoGqKpitVfgw3T/ba56292f99409eca709dac0b176ec245/nuneybits_Vector_art_of_white_goose_silhouette_flying_through_c_8100d5a7-9e36-4ed6-a188-016470e1d0e1.webp?w=300&q=30" alt="Illustration for: Claude Code costs up to $200 a month. Goose does the same thing for free." loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-1bd5d5f60cc30b30.html">Claude Code costs up to $200 a month. Goose does the same thing for free.</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and claude code costs up to $200 a month. goose does the same thing for free is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response to this development will have lasting effects on the organisations and markets involved. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free" target="_blank" rel="noopener noreferrer">Claude Code costs up to $200 a month. Goose does the same thing for free.</a></h3>
+          <p class="card-summary">The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code , Anthropic's terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">January 19, 2026</span>
-          <a href="articles/rss-1bd5d5f60cc30b30.html" class="read-link" aria-label="Read: Claude Code costs up to $200 a month. Goose does the same thing for free.">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | VentureBeat</span>
+          <span class="tag">AI News</span>
+          <a href="https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Claude Code costs up to $200 a month. Goose does the same thing for free.">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&auto=format&fit=crop&q=80" alt="Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews" loading="lazy" width="400" height="185">
+          <img src="https://images.ctfassets.net/jdtwqhzvc2n1/4gD12ThOmNHZuosqC4xCTz/277b1e8968da602108a29fae2eaca440/nuneybits_Vector_art_of_billboard_with_cryptic_code_dbe5b0ff-7644-45e6-a1ca-4a5dceeff986.webp?w=300&q=30" alt="Illustration for: Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-ca731494b19489d1.html">Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as listen labs raises $69m after viral billboard hiring stunt to scale ai customer…. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. As the landscape clarifies, organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://venturebeat.com/technology/listen-labs-raises-usd69m-after-viral-billboard-hiring-stunt-to-scale-ai" target="_blank" rel="noopener noreferrer">Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews</a></h3>
+          <p class="card-summary">Alfred Wahlforss was running out of options. His startup, Listen Labs , needed to hire over 100 engineers, but competing against Mark Zuckerberg's $100 million offers seemed impossible.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">January 16, 2026</span>
-          <a href="articles/rss-ca731494b19489d1.html" class="read-link" aria-label="Read: Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | VentureBeat</span>
+          <span class="tag">AI News</span>
+          <a href="https://venturebeat.com/technology/listen-labs-raises-usd69m-after-viral-billboard-hiring-stunt-to-scale-ai" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=900&auto=format&fit=crop&q=80" alt="Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI" loading="lazy" width="400" height="185">
+          <img src="https://images.ctfassets.net/jdtwqhzvc2n1/4Xrcg14GLKFlwSEnuEzxyS/21c85d29d03c4c974076475c009e3b38/nuneybits_Vector_art_of_chat_bubbles_on_a_computer_screen_in_th_5018a7ea-3496-4103-8453-7ba1b129189a.webp?w=300&q=30" alt="Illustration for: Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-db7ff708ed2fd3ff.html">Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and salesforce rolls out new slackbot ai agent as it battles microsoft and google in… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response to this development will have lasting effects on the organisations and markets involved. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and" target="_blank" rel="noopener noreferrer">Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI</a></h3>
+          <p class="card-summary">Salesforce on Tuesday launched an entirely rebuilt version of Slackbot , the company's workplace assistant, transforming it from a simple notification tool into what executives describe as a fully powered AI agent capable of searching enterprise data, drafting documents, and taking action on behalf of employees. The new Slackbot, now generally available to Business+ and Enterprise+ customers, is Salesforce's most aggressive move yet to position Slack at the center of the emerging "agentic AI" movement — where software agents work alongside humans to complete complex tasks.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">January 13, 2026</span>
-          <a href="articles/rss-db7ff708ed2fd3ff.html" class="read-link" aria-label="Read: Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | VentureBeat</span>
+          <span class="tag">AI News</span>
+          <a href="https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=900&auto=format&fit=crop&q=80" alt="Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required" loading="lazy" width="400" height="185">
+          <img src="https://images.ctfassets.net/jdtwqhzvc2n1/wHv1Wez7Ps9wYVYAo9fwT/14b41f606dbf1f5b17994be510407449/nuneybits_Hyper-realistic_image_of_a_retro_computer_with_a_glos_61ffb6e2-7c33-4d45-85f7-69c28693b3ec.webp?w=300&q=30" alt="Illustration for: Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-a102a18a5efc0832.html">Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required</a></h3>
-          <p class="card-summary">The story of anthropic launches cowork, a claude desktop agent that works in your files — no… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Staying ahead of these shifts requires both technical awareness and a clear-eyed view of the business forces at play. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no" target="_blank" rel="noopener noreferrer">Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required</a></h3>
+          <p class="card-summary">Anthropic released Cowork on Monday, a new AI agent capability that extends the power of its wildly successful Claude Code tool to non-technical users — and according to company insiders, the team built the entire feature in approximately a week and a half, largely using Claude Code itself. The launch marks a major inflection point in the race to deliver practical AI agents to mainstream users, positioning Anthropic to compete not just with OpenAI and Google in conversational AI, but with Microsoft's Copilot in the burgeoning market for AI-powered productivity tools.</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">January 12, 2026</span>
-          <a href="articles/rss-a102a18a5efc0832.html" class="read-link" aria-label="Read: Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | VentureBeat</span>
+          <span class="tag">AI News</span>
+          <a href="https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&auto=format&fit=crop&q=80" alt="Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment" loading="lazy" width="400" height="185">
+          <img src="https://images.ctfassets.net/jdtwqhzvc2n1/66Tw6dMGGoSZZOK6XB6gm6/0fafc7520898e26c88edf1de9e74e863/nuneybits_Vector_art_of_radiant_skull_emitting_code_beams_deep__17d19acc-0af7-41ad-ac28-16f09ef5234b.webp?w=300&q=30" alt="Illustration for: Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-b37d936464575171.html">Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment</a></h3>
-          <p class="card-summary">The story of nous research's nouscoder-14b is an open-source coding model landing right in the… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Staying ahead of these shifts requires both technical awareness and a clear-eyed view of the business forces at play. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in" target="_blank" rel="noopener noreferrer">Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment</a></h3>
+          <p class="card-summary">Nous Research , the open-source artificial intelligence startup backed by crypto venture firm Paradigm , released a new competitive programming model on Monday that it says matches or exceeds several larger proprietary systems — trained in just four days using 48 of Nvidia's latest B200 graphics processors . The model, called NousCoder-14B , is another entry in a crowded field of AI coding assistants, but arrives at a particularly charged moment: Claude Code , the agentic programming tool from rival Anthropic, has dominated social media discussion since New Year's Day, with developers posting breathless testimonials about its capabilities .</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">January 07, 2026</span>
-          <a href="articles/rss-b37d936464575171.html" class="read-link" aria-label="Read: Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | VentureBeat</span>
+          <span class="tag">AI News</span>
+          <a href="https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment">Read original</a>
         </div>
       </article>
       
       <article class="card" aria-label="The creator of Claude Code just revealed his workflow, and developers are losing their minds">
         
         <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=900&auto=format&fit=crop&q=80" alt="The creator of Claude Code just revealed his workflow, and developers are losing their minds" loading="lazy" width="400" height="185">
+          <img src="https://images.ctfassets.net/jdtwqhzvc2n1/6VsJWNsStTR57q9vFd5L08/a0d88b4dcbd1e9ba77fd72a9c55988d9/nuneybits_Vector_art_of_programmer_conducting_robot_orchestra_i_908157a9-d44f-4bce-b390-5913b88dad27.webp?w=300&q=30" alt="Illustration for: The creator of Claude Code just revealed his workflow, and developers are losing their minds" loading="lazy" width="400" height="185">
         </div>
         
         <div class="card-body">
-          <h3><a href="articles/rss-c2e433d6dc006013.html">The creator of Claude Code just revealed his workflow, and developers are losing their minds</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and the creator of claude code just revealed his workflow, and developers are losing… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response to this development will have lasting effects on the organisations and markets involved. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <h3><a href="https://venturebeat.com/technology/the-creator-of-claude-code-just-revealed-his-workflow-and-developers-are" target="_blank" rel="noopener noreferrer">The creator of Claude Code just revealed his workflow, and developers are losing their minds</a></h3>
+          <p class="card-summary">When the creator of the world's most advanced coding agent speaks, Silicon Valley doesn't just listen — it takes notes. For the past week, the engineering community has been dissecting a thread on X from Boris Cherny , the creator and head of Claude Code at Anthropic .</p>
+          
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">January 05, 2026</span>
-          <a href="articles/rss-c2e433d6dc006013.html" class="read-link" aria-label="Read: The creator of Claude Code just revealed his workflow, and developers are losing their minds">Read more</a>
+        <div class="card-footer">
+          <span class="source-tag">AI | VentureBeat</span>
+          <span class="tag">AI News</span>
+          <a href="https://venturebeat.com/technology/the-creator-of-claude-code-just-revealed-his-workflow-and-developers-are" target="_blank" rel="noopener noreferrer" class="read-link" aria-label="Read original article: The creator of Claude Code just revealed his workflow, and developers are losing their minds">Read original</a>
         </div>
       </article>
       
     </div>
   </div>
-  
 
-
-
+  <!-- Editorial notice -->
+  <div class="section" style="padding-top: 0;">
+    <div class="info-box">
+      <p><strong>Editorial notice:</strong> Summaries on this page are derived from publicly available RSS feeds published by the named sources. The Tech Brief does not reproduce full article text. All original content, images and trademarks remain the property of their respective publishers. <a href="about.html">Read our editorial policy →</a></p>
+    </div>
+  </div>
 </main>
 
 <!-- ===== FOOTER ===== -->
@@ -527,7 +424,7 @@
   <div class="footer-inner">
     <div class="footer-about">
       <span class="brand-name">The Tech Brief</span>
-      <p>An independent technology publication delivering original editorial analysis across the technology industry. Updated every six hours, 24/7.</p>
+      <p>An independent technology news aggregator delivering concise, editorially reviewed summaries from the world's most trusted tech publications. Updated every three hours, 24/7.</p>
     </div>
     <div class="footer-col">
       <h4>Categories</h4>
@@ -539,8 +436,6 @@
       <a href="consumer-tech.html">Consumer Tech</a>
       <a href="gaming.html">Gaming</a>
       <a href="evs-automotive.html">EVs &amp; Automotive</a>
-      <a href="startups-business.html">Startups &amp; Business</a>
-      <a href="how-to.html">How-To Guides</a>
     </div>
     <div class="footer-col">
       <h4>Site Info</h4>
@@ -554,23 +449,46 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; <span id="footer-year"></span> The Tech Brief &mdash; thetechbrief.net. All rights reserved.</span>
-    <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
+    <span>© <span id="footer-year"></span> The Tech Brief — thetechbrief.in. All rights reserved.</span>
+    <span>AI-assisted summaries based on public RSS feeds. Trademarks belong to their respective owners.</span>
   </div>
 </footer>
 
+<!-- ===== COOKIE BANNER ===== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <p>We use cookies to improve your experience, analyse traffic, and support affiliate partnerships. See our <a href="legal/privacy.html">Privacy Policy</a> for details.</p>
+  <div class="cookie-actions">
+    <button class="btn primary" id="cookieAccept">Accept All</button>
+    <button class="btn secondary" id="cookieReject">Reject</button>
+  </div>
+</div>
+
 <script>
   document.getElementById('footer-year').textContent = new Date().getFullYear();
-  (function(){
-    var c=localStorage.getItem('cookieConsent');
-    if(c){document.getElementById('cookieBanner') && document.getElementById('cookieBanner').remove();return;}
+
+  (function() {
+    var consent = localStorage.getItem('cookieConsent');
+    if (consent) { document.getElementById('cookieBanner').remove(); return; }
+    document.getElementById('cookieAccept').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'yes');
+      document.getElementById('cookieBanner').remove();
+    });
+    document.getElementById('cookieReject').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'no');
+      document.getElementById('cookieBanner').remove();
+    });
   })();
-  (function(){
-    var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
-    if(!t||!n)return;
-    t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
+
+  (function() {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+    toggle.addEventListener('click', function() {
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
   })();
 </script>
-<script src="assets/cookie-consent.js"></script>
+  <script src="assets/cookie-consent.js"></script>
 </body>
 </html>

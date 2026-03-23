@@ -1,49 +1,65 @@
 {
-  "featured": [
+  "AI News": [
+    "https://techcrunch.com/tag/ai/feed/",
+    "https://www.wired.com/feed/tag/artificial-intelligence/latest/rss",
+    "https://www.technologyreview.com/feed/tag/artificial-intelligence/",
+    "https://venturebeat.com/category/ai/feed/",
+    "https://www.theverge.com/rss/artificial-intelligence/index.xml"
+  ],
+  "Broadcast Tech": [
     "https://www.tvbeurope.com/feed",
     "https://www.newscaststudio.com/feed/",
-    "https://www.svgeurope.org/feed/",
-    "https://www.ibc.org/rss"
+    "https://aws.amazon.com/blogs/media/category/media-entertainment/feed/"
   ],
-  "graphics": [
-    "https://www.newscaststudio.com/category/graphics/feed/",
-    "https://www.svgeurope.org/blog/headlines/feed/",
-    "https://www.tvtechnology.com/rss/all"
+  "Enterprise Tech": [
+    "https://www.zdnet.com/topic/enterprise/rss.xml",
+    "https://www.infoworld.com/category/enterprise-it/index.rss",
+    "https://www.theregister.com/headlines.atom",
+    "https://siliconangle.com/feed/",
+    "https://www.crn.com/rss.xml"
   ],
-  "cloud": [
-    "https://www.tvbeurope.com/production/feed",
-    "https://www.newscaststudio.com/category/cloud/feed/",
-    "https://www.broadcastbeat.com/feed/",
-    "https://www.svgeurope.org/blog/headlines/feed/"
+  "Cybersecurity Updates": [
+    "https://www.csoonline.com/index.rss",
+    "https://www.darkreading.com/rss.xml"
   ],
-  "streaming": [
-    "https://www.tvbeurope.com/streaming/feed",
-    "https://www.streamingmedia.com/rss/news.aspx",
-    "https://www.streaminglearningcenter.com/feed/",
-    "https://www.tvtechnology.com/rss/all"
+  "Mobile & Gadgets": [
+    "https://www.theverge.com/rss/gadgets/index.xml",
+    "https://www.engadget.com/rss.xml",
+    "https://gizmodo.com/rss",
+    "https://www.androidauthority.com/feed/",
+    "https://www.gsmarena.com/rss-news-reviews.php3"
   ],
-  "playout": [
-    "https://www.tvbeurope.com/playout/feed",
-    "https://www.tvtechnology.com/rss/all",
-    "https://www.broadcastbeat.com/feed/",
-    "https://www.newscaststudio.com/feed/"
+  "Consumer Tech": [
+    "https://www.cnet.com/rss/all/",
+    "https://www.techradar.com/rss",
+    "https://www.tomsguide.com/feeds/all",
+    "https://feeds.pcmag.com/rss/pcmag/all",
+    "https://www.theverge.com/rss/reviews/index.xml",
+    "https://tools.wirecutter.com/feeds/wirecutter"
   ],
-  "infrastructure": [
-    "https://www.tvbeurope.com/infrastructure/feed",
-    "https://www.svgeurope.org/feed/",
-    "https://www.newscaststudio.com/category/infrastructure/feed/",
-    "https://www.broadcastbeat.com/feed/"
+  "Gaming": [
+    "https://kotaku.com/rss",
+    "https://www.eurogamer.net/?format=rss",
+    "https://www.pcgamer.com/rss/",
+    "https://www.polygon.com/rss/index.xml",
+    "https://www.rockpapershotgun.com/feed",
+    "https://www.ign.com/articles/rss"
   ],
-  "ai-post-production": [
-    "https://www.provideocoalition.com/feed/",
-    "https://www.newscaststudio.com/category/ai/feed/",
-    "https://www.tvbeurope.com/ai-tech/feed",
-    "https://www.postperspective.com/feed/"
+  "EVs & Automotive": [
+    "https://electrek.co/feed/",
+    "https://insideevs.com/feed/",
+    "https://techcrunch.com/category/transportation/feed/",
+    "https://www.caranddriver.com/rss/all.xml",
+    "https://www.motortrend.com/feeds/"
   ],
-  "newsroom": [
-    "https://www.newscaststudio.com/category/newsroom/feed/",
-    "https://www.tvbeurope.com/news-production/feed",
-    "https://www.ibc.org/newsroom/rss",
-    "https://www.broadcastbeat.com/feed/"
+  "Startups & Business": [
+    "https://techcrunch.com/feed/",
+    "https://venturebeat.com/feed/",
+    "https://www.wired.com/feed/category/business/latest/rss",
+    "https://mashable.com/feed/",
+    "https://fortune.com/feed/",
+    "https://www.businessinsider.com/sai/rss",
+    "https://feeds.feedburner.com/crunchbase-news",
+    "https://news.crunchbase.com/feed/"
   ]
 }
