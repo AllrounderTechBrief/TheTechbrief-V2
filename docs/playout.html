@@ -2,29 +2,204 @@
 <html lang="en">
 <head>
   <script>
-    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-    gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied', 'ad_storage': 'denied',
+      'ad_user_data': 'denied', 'ad_personalization': 'denied', 'wait_for_update': 500
+    });
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0VSHDN3ZR6"></script>
-  <script>gtag('js',new Date());gtag('config','G-0VSHDN3ZR6');</script>
+  <script>gtag('js', new Date()); gtag('config', 'G-0VSHDN3ZR6');</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8033069131874524" crossorigin="anonymous"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Playout — The Streamic</title>
-  <meta name="description" content="Channel playout, master control, broadcast automation, channel-in-a-box, and transmission technology for broadcast operations.">
+  <title>Playout Technology — The Streamic</title>
+  <meta name="description" content="Broadcast playout systems, automation, master control, channel-in-a-box, and playout infrastructure news and analysis.">
   <meta name="robots" content="index, follow">
-  <meta name="author" content="The Streamic Editorial Team">
+  <meta name="author" content="The Streamic">
   <link rel="canonical" href="https://www.thestreamic.in/playout.html">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Streamic">
-  <meta property="og:title" content="Playout — The Streamic">
-  <meta property="og:description" content="Channel playout, master control, broadcast automation, channel-in-a-box, and transmission technology for broadcast operations.">
+  <meta property="og:title" content="Playout Technology — The Streamic">
+  <meta property="og:description" content="Broadcast playout systems, automation, master control, channel-in-a-box, and playout infrastructure news and analysis.">
   <meta property="og:url" content="https://www.thestreamic.in/playout.html">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="twitter:title" content="Playout Technology — The Streamic">
+  <meta name="twitter:description" content="Broadcast playout systems, automation, master control, channel-in-a-box, and playout infrastructure news and analysis.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Playout Technology",
+    "description": "Broadcast playout systems, automation, master control, channel-in-a-box, and playout infrastructure news and analysis.",
+    "url": "https://www.thestreamic.in/playout.html",
+    "isPartOf": {"@type": "WebSite", "name": "The Streamic", "url": "https://www.thestreamic.in/"}
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── Page hero ── */
+    .page-hero {
+      background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
+      color: #fff;
+      padding: 44px 24px 36px;
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-family: Montserrat, sans-serif;
+      font-size: clamp(26px, 5vw, 44px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .page-hero p { font-size: 15px; color: rgba(255,255,255,0.65); max-width: 560px; margin: 0 auto; }
+
+    /* ── Page wrap ── */
+    .page-wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .page-section { padding: 36px 0; }
+    .section-hdr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #d2d2d7;
+    }
+    .section-hdr h2 {
+      font-family: Montserrat, sans-serif;
+      font-size: 19px; font-weight: 700; color: #1d1d1f;
+    }
+
+    /* ── Editorial cards (AI-authored originals) ── */
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 16px;
+    }
+    .editorial-card {
+      background: #fff;
+      border: 1px solid #e8e8ed;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: box-shadow 0.2s, transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .editorial-card:hover {
+      box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
+    }
+    .editorial-card img { width:100%; height:165px; object-fit:cover; display:block; }
+    .editorial-card-body { padding: 16px; }
+    .editorial-badge {
+      display: inline-block;
+      background: #1d1d1f; color: #fff;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.8px; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 999px; margin-bottom: 8px;
+    }
+    .editorial-card-title {
+      font-family: Montserrat, sans-serif;
+      font-size: 15px; font-weight: 700;
+      color: #1d1d1f; line-height: 1.35; margin-bottom: 6px;
+    }
+    .editorial-card-desc { font-size: 13px; color: #86868b; line-height: 1.5; margin-bottom: 10px; }
+    .editorial-card-meta { font-size: 12px; color: #86868b; display: flex; justify-content: space-between; }
+
+    /* ── News grid (RSS-derived, Groq-rewritten) ── */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .news-card {
+      background: #fff;
+      border: 1px solid #e8e8ed;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+      transition: box-shadow 0.2s;
+    }
+    .news-card:hover { box-shadow: 0 6px 22px rgba(0,0,0,0.09); }
+    .news-card-img { width:100%; height:155px; object-fit:cover; display:block; }
+    .news-card-body { padding: 14px; }
+    .news-card-title {
+      font-family: Montserrat, sans-serif;
+      font-size: 14px; font-weight: 600;
+      color: #1d1d1f; line-height: 1.4; margin-bottom: 8px;
+    }
+    .news-card-title a { color: inherit; text-decoration: none; }
+    .news-card-title a:hover { color: #0071e3; }
+    .news-card-summary {
+      font-size: 12px; color: #86868b; line-height: 1.5; margin-bottom: 10px;
+      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .news-card-meta {
+      font-size: 11px; color: #86868b;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .news-card-meta a { color: #0071e3; font-weight: 600; font-size: 11px; text-decoration: none; }
+    .news-card-meta a:hover { text-decoration: underline; }
+
+    /* ── AdSense — no visible gap when not yet approved ── */
+    .adsense-unit { margin: 28px 0; line-height: 0; font-size: 0; }
+    .adsense-unit ins:empty { display: none; }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: #1d1d1f; color: #86868b;
+      padding: 44px 24px 30px; margin-top: 52px;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px; margin-bottom: 28px;
+    }
+    .footer-brand {
+      font-family: Montserrat, sans-serif;
+      font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 10px;
+    }
+    .footer-inner p { font-size: 13px; line-height: 1.6; }
+    .footer-col h4 {
+      font-family: Montserrat, sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.8px; text-transform: uppercase;
+      color: #fff; margin-bottom: 12px;
+    }
+    .footer-col a {
+      display: block; color: #86868b; text-decoration: none;
+      font-size: 13px; padding: 4px 0; transition: color 0.2s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      max-width: 1200px; margin: 0 auto;
+      padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex; justify-content: space-between; flex-wrap: wrap;
+      gap: 8px; font-size: 12px;
+    }
+    @media (max-width: 900px) {
+      .editorial-grid, .news-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .editorial-grid, .news-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 20px; }
+      .footer-bottom { flex-direction: column; }
+    }
+  </style>
 </head>
-<body>
+<body data-category="playout">
+
+  <!-- ===== NAVIGATION ===== -->
   <nav class="site-nav">
     <div class="nav-inner">
       <a href="featured.html" class="nav-logo-container">
@@ -32,7 +207,7 @@
              onload="this.closest('.nav-logo-container').classList.add('logo-loaded')">
         <span class="nav-logo">THE STREAMIC</span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
       <ul class="nav-links">
         <li><a href="featured.html">FEATURED</a></li>
         <li><a href="infrastructure.html">INFRASTRUCTURE</a></li>
@@ -44,638 +219,947 @@
         <li><a href="newsroom.html">NEWSROOM</a></li>
         <li><a href="howto.html">HOW-TO</a></li>
       </ul>
-      <div class="header-subscribe"><a href="vlog.html" class="editors-desk-link">Editor's Desk</a></div>
+      <div class="header-subscribe">
+        <a href="vlog.html" class="editors-desk-link">Editor's Desk</a>
+      </div>
     </div>
   </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <h1>Playout Technology</h1>
+    <p>Playout automation, master control and channel-in-a-box</p>
+  </section>
+
+  <!-- ===== MAIN ===== -->
   <main>
     <div class="page-wrap">
+
+      <!-- ── AI-authored original articles (only when they exist) ── -->
+      
+
+      <!-- ── News grid (Groq-rewritten articles) ── -->
       <div class="page-section">
-        <div class="section-hdr"><h2>&#9654;&#65039; Playout &amp; Automation</h2></div>
+        <div class="section-hdr">
+          <h2>📡 Latest Playout Technology News</h2>
+        </div>
         <div class="news-grid">
-      <article class="ts-card">
-        <a href="articles/2026-03-20-playout-celebrating-the-greatest-creators-one-battle-a.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">01</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-20-playout-celebrating-the-greatest-creators-one-battle-a.html">Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid</a></div>
-          <div class="ts-card-summary">Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid Avid® today celebrated the filmmakers, editors and sound teams that worked with Avid Media Composer® and Pro Tools® to create the vast majority of this year’s Academy Award®-winning pi</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Celebrating the greatest creators: One Battle After Another and F1 among majority of Oscar® wins created using Avid Avid
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-20-playout-celebrating-the-greatest-creators-one-battle-a.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 20, 2026</span>
-          </div>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&auto=format&fit=crop"
+                 alt="Calrec Craft Interview with Senior Broadcast Audio A1 Engineer and Music Director Rick Bernier"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-b8f3edfb9360ff1e.html">Calrec Craft Interview with Senior Broadcast Audio A1 Engineer and Music Director Rick Bernier</a>
+              </div>
+              
+              <div class="news-card-summary">In this craft interview, Rick Bernier reflects on a career that has taken him to the very top of live broadcast audio.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-b8f3edfb9360ff1e.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2025/03/GettyImages-2189016670.jpg"
+                 alt="YouTube to stream first ten minutes of FIFA World Cup matches"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-dec5ad21e7d3fa80.html">YouTube to stream first ten minutes of FIFA World Cup matches</a>
+              </div>
+              
+              <div class="news-card-summary">The 'innovative agreement' aims to enhance viewer experiences and unlock monetisation opportunities with premium content across FIFA and its Media Partners’ respective official YouTube channels</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-dec5ad21e7d3fa80.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1471295253337-3ceaaedca402?w=800&auto=format&fit=crop"
+                 alt="Accedo One and Magine Pro Officially Launch Leyra,  Delivering a Unified SaaS Platform for OTT Growth"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-9efa62e65531d641.html">Accedo One and Magine Pro Officially Launch Leyra,  Delivering a Unified SaaS Platform for OTT Growth</a>
+              </div>
+              
+              <div class="news-card-summary">Stockholm, Sweden, 18th March 2026 – The recently announced joint venture between Accedo One and Magine Pro has been officially launched as Leyra.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-9efa62e65531d641.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/03/DF-V-5G-6-2048x1365-1-726x484.jpg"
+                 alt="Vislink debuts DragonFly V 5G dual-modem video transmitter"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-b177955d39166fb5.html">Vislink debuts DragonFly V 5G dual-modem video transmitter</a>
+              </div>
+              
+              <div class="news-card-summary">DragonFly V 5G transforms compact or handheld cameras into portable live contribution units while additional cellular connectivity enables the maintenance of a stable live feed from the field</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-b177955d39166fb5.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/03/convertip-Matrox-Video-726x452.jpg"
+                 alt="Matrox Video’s encoders/decoders built into Rai’s IP workflow"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-4506cfe26c01191f.html">Matrox Video’s encoders/decoders built into Rai’s IP workflow</a>
+              </div>
+              
+              <div class="news-card-summary">The ConvertIP DSS and DSH models support SDI- and HDMI-to-ST 2110 conversion, as well as providing monitoring capabilities</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-4506cfe26c01191f.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/HTGZKoGBr4pQ4RdzBD8ywh-1280-80.jpg"
+                 alt="NAB Show: Cobalt Digital to Unveil Additions to Its IPMX and ST 2110 Ecosystems"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-bdd2663fce45d425.html">NAB Show: Cobalt Digital to Unveil Additions to Its IPMX and ST 2110 Ecosystems</a>
+              </div>
+              
+              <div class="news-card-summary">Highlights include industry’s only IPMX certified audio monitor, plus multiviewers, gateways, converters and routers</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-bdd2663fce45d425.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/oq3Jos48KwLmXSvtdNkbB8-1280-80.png"
+                 alt="How Actus Digital is Engineering the Future of Broadcast Intelligence"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-31b4a120f4d39207.html">How Actus Digital is Engineering the Future of Broadcast Intelligence</a>
+              </div>
+              
+              <div class="news-card-summary">At the upcoming NAB Show 2026, Actus Digital is set to showcase major enhancements to its flagship Actus X platform</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-31b4a120f4d39207.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/6hvkXYfPZS7D4mfVhSs8Y6-1280-80.jpg"
+                 alt="2026 NAB Show Exhibitor Insight: Amazon Web Services (AWS)"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-ab28c512e89a4337.html">2026 NAB Show Exhibitor Insight: Amazon Web Services (AWS)</a>
+              </div>
+              
+              <div class="news-card-summary">Global Leader, Solutions Architecture, Media & Entertainment, Games and Sports Steph Lone will showcase AWS Elemental Inference, a vertical video solution</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-ab28c512e89a4337.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&auto=format&fit=crop"
+                 alt="SMPTE Unveils 2026 NAB Show Educational Presentations"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-a50279dad1eeb2b2.html">SMPTE Unveils 2026 NAB Show Educational Presentations</a>
+              </div>
+              
+              <div class="news-card-summary">SMPTE®, the home of media professionals, technologists, and engineers, today unveiled its educational presentations for the 2026 NAB Show.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-a50279dad1eeb2b2.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/5zo9Pmh7epXurQQ3hjNxj-1280-80.jpeg"
+                 alt="Survey: Voters Trust TV News Over AI, Social and Search"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-d697f9dd14a67ca1.html">Survey: Voters Trust TV News Over AI, Social and Search</a>
+              </div>
+              
+              <div class="news-card-summary">Potential voters are almost 9 times more likely to trust TV news than social media platforms; 50% of total respondents rank AI lowest for trust according to a VAB study</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-d697f9dd14a67ca1.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/YZrVbhvLgD6wo8HqGdHs38-1280-80.jpg"
+                 alt="Ben Bradshaw Joins PSSI as Director, Product and Network Development"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-7c79f1aedf619a03.html">Ben Bradshaw Joins PSSI as Director, Product and Network Development</a>
+              </div>
+              
+              <div class="news-card-summary">Returns after five years at EA Sports to evaluate company’s content distribution, storage and protection strategies</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-7c79f1aedf619a03.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/YDWQU6QtHTbjRFw8vikxYQ-1280-80.jpg"
+                 alt="SMPTE Details 2026 NAB Show Educational Sessions"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-c067dc6f567a5fa2.html">SMPTE Details 2026 NAB Show Educational Sessions</a>
+              </div>
+              
+              <div class="news-card-summary">This year SMPTE will present the Visual Innovation and Brilliant Engineering Conference in place of the Future of Cinema Conference</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-c067dc6f567a5fa2.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/qQR5zS8EGbmXCGWYGryYP8-1280-80.jpg"
+                 alt="Neutrik To Showcase opticalCON ADVANCED Connectors At 2026 NAB Show"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-053fcc30fcd07a21.html">Neutrik To Showcase opticalCON ADVANCED Connectors At 2026 NAB Show</a>
+              </div>
+              
+              <div class="news-card-summary">The company will present its full line of opticalCON ADVANCED solutions</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-053fcc30fcd07a21.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/PFdKhLCACXvonFoUCgSLib-1280-80.jpg"
+                 alt="Comcast, Charter Deploy AI Infrastructure at the Network Edge Using NVIDIA AI Technologies"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-856aa4c08c6c7d5c.html">Comcast, Charter Deploy AI Infrastructure at the Network Edge Using NVIDIA AI Technologies</a>
+              </div>
+              
+              <div class="news-card-summary">Tests by the two largest cable operators in the U.S.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-856aa4c08c6c7d5c.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1605106702734-205df224ecce?w=800&auto=format&fit=crop"
+                 alt="Maxon Marks Its Official Entry Into the AEC Market With Its Real-Time Archviz Solution"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-c562d5e4e668d577.html">Maxon Marks Its Official Entry Into the AEC Market With Its Real-Time Archviz Solution</a>
+              </div>
+              
+              <div class="news-card-summary">Redshift for Vectorworks now available, Autodesk Revit® beta open for sign-ups, and Graphisoft Archicad releasing later in 2026.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-c562d5e4e668d577.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1558618047-f3dc8e28c5b1?w=800&auto=format&fit=crop"
+                 alt="Digital Alert Systems NAB Preview 2026"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-7d2a062ab0bf3c59.html">Digital Alert Systems NAB Preview 2026</a>
+              </div>
+              
+              <div class="news-card-summary">Digital Alert Systems Preview 2026 NAB Show April 19 – 22 Booth C3452 At the 2026 NAB Show, Digital Alert Systems will showcase Version 6.0 of its DASDEC™ emergency messaging software and highlight ne</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-7d2a062ab0bf3c59.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop"
+                 alt="Setplex Transforms Video Streaming with AI and Super Aggregation Innovations at the 2026 NAB Show"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-41978d3e5b483c83.html">Setplex Transforms Video Streaming with AI and Super Aggregation Innovations at the 2026 NAB Show</a>
+              </div>
+              
+              <div class="news-card-summary">Setplex’s Fully Integrated Zapflex Platform Empowers Operators and Media Owners to Manage, Distribute, and Monetize Video WHITE PLAINS, New York — March 17, 2026 — Setplex today announced that it will</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-41978d3e5b483c83.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/03/Fred-Walls-726x726.jpg"
+                 alt="AI standardisation speeds up"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-bdbc5c208b4400ce.html">AI standardisation speeds up</a>
+              </div>
+              
+              <div class="news-card-summary">SMPTE’s AI Taskforce, EBU, and the ETC have updated the AI Engineering Report to keep pace with the rapid evolution of AI in broadcast, highlighting new standards for interoperability and advanced app</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-bdbc5c208b4400ce.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2025/05/VE-Day-Concert-2-726x450.jpeg"
+                 alt="WMSA Europe aims to tackle regulatory pressure on audio PMSE spectrum"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-e8d102948579baea.html">WMSA Europe aims to tackle regulatory pressure on audio PMSE spectrum</a>
+              </div>
+              
+              <div class="news-card-summary">As spectrum congestion intensifies, WMSA Europe aims to ensure access is maintained and provide a unified voice for professionals in the audio wireless arena</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-e8d102948579baea.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/02/AVB_DigitalAssets_Jan26_v2_400x333.jpg"
+                 alt="AV and Broadcast Summit agenda unveiled"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-5a8c6852f912a78d.html">AV and Broadcast Summit agenda unveiled</a>
+              </div>
+              
+              <div class="news-card-summary">The in-person event, exploring the next steps in the convergence between AV and broadcast, will take place in London on 24th June</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-5a8c6852f912a78d.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&auto=format&fit=crop"
+                 alt="Meet us at NAB 2026"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-a2875bd4a30bede8.html">Meet us at NAB 2026</a>
+              </div>
+              
+              <div class="news-card-summary">This year, you’ll find us at West Hall, Booth W2725 – we’d love to see you there!</div>
+              
+              <div class="news-card-meta">
+                <span>March 16, 2026</span>
+                <a href="articles/rss-a2875bd4a30bede8.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1605106702734-205df224ecce?w=800&auto=format&fit=crop"
+                 alt="Cloud-Native Revolution: Harmonic VOS and Red Hat OpenShift Mastering Video Delivery, Cost, and Scale"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-56de454dbce6609d.html">Cloud-Native Revolution: Harmonic VOS and Red Hat OpenShift Mastering Video Delivery, Cost, and Scale</a>
+              </div>
+              
+              <div class="news-card-summary">The telecommunications industry stands at a critical inflection point.</div>
+              
+              <div class="news-card-meta">
+                <span>March 12, 2026</span>
+                <a href="articles/rss-56de454dbce6609d.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1602992708529-c9fdb12905c9?w=800&auto=format&fit=crop"
+                 alt="The Art of the Possible with XR: How PlayBox Technology Brings Immersive Broadcasts to Life"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-4cb84fc279cd47b4.html">The Art of the Possible with XR: How PlayBox Technology Brings Immersive Broadcasts to Life</a>
+              </div>
+              
+              <div class="news-card-summary">Extended Reality (XR) is no longer a futuristic concept in broadcasting — it’s becoming a core part of how modern media organizations design immersive, visually rich experiences.</div>
+              
+              <div class="news-card-meta">
+                <span>February 24, 2026</span>
+                <a href="articles/rss-4cb84fc279cd47b4.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&auto=format&fit=crop"
+                 alt="NAB 2026"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-df2b573405c452aa.html">NAB 2026</a>
+              </div>
+              
+              <div class="news-card-summary">Las Vegas, USA 18-22 April 2026 NAB Show is a global event for the broadcast, media, and entertainment industry, combining technology, content, and business.</div>
+              
+              <div class="news-card-meta">
+                <span>January 27, 2026</span>
+                <a href="articles/rss-df2b573405c452aa.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1558618047-f3dc8e28c5b1?w=800&auto=format&fit=crop"
+                 alt="BroadcastAsia 2026"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-2888715ad3e47904.html">BroadcastAsia 2026</a>
+              </div>
+              
+              <div class="news-card-summary">Singapore 20–22 May 2026 BroadcastAsia is a leading event for broadcast and media professionals in the Asia-Pacific region.</div>
+              
+              <div class="news-card-meta">
+                <span>January 27, 2026</span>
+                <a href="articles/rss-2888715ad3e47904.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1474654819140-b1f1f9af45c0?w=800&auto=format&fit=crop"
+                 alt="CABSAT 2026"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-3cab6ea22e42de48.html">CABSAT 2026</a>
+              </div>
+              
+              <div class="news-card-summary">Dubai, UAE 2–4 June 2026 CABSAT is a key trade show for the broadcast, media, and content industries across the Middle East, Africa, and South Asia.</div>
+              
+              <div class="news-card-meta">
+                <span>January 27, 2026</span>
+                <a href="articles/rss-3cab6ea22e42de48.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&auto=format&fit=crop"
+                 alt="The Future of AI and Human Intelligence in Broadcasting: A Symphony, Not a Replacement"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-959629d870b06357.html">The Future of AI and Human Intelligence in Broadcasting: A Symphony, Not a Replacement</a>
+              </div>
+              
+              <div class="news-card-summary">The broadcast industry stands at a fascinating crossroads.</div>
+              
+              <div class="news-card-meta">
+                <span>January 18, 2026</span>
+                <a href="articles/rss-959629d870b06357.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&auto=format&fit=crop"
+                 alt="The Broadcast Revolution? Does 2026 Change Everything?"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-86e6be43b46162e2.html">The Broadcast Revolution? Does 2026 Change Everything?</a>
+              </div>
+              
+              <div class="news-card-summary">We’ve seen format wars, the digital transition, the rise of streaming, and countless “next big things” come and go.</div>
+              
+              <div class="news-card-meta">
+                <span>December 14, 2025</span>
+                <a href="articles/rss-86e6be43b46162e2.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&auto=format&fit=crop"
+                 alt="The AI-Powered Transformation of Broadcast Technology: A New Era for Media Operations"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-bb5700559fc4ebd2.html">The AI-Powered Transformation of Broadcast Technology: A New Era for Media Operations</a>
+              </div>
+              
+              <div class="news-card-summary">At Playbox Technology, we’ve witnessed firsthand how artificial intelligence is revolutionizing the broadcast industry.</div>
+              
+              <div class="news-card-meta">
+                <span>November 04, 2025</span>
+                <a href="articles/rss-bb5700559fc4ebd2.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1525704911916-c4cc7e4c79f3?w=800&auto=format&fit=crop"
+                 alt="Pushing the Boundaries of Video Innovation Through the Power of Collaboration"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-e95a89a0cfa6d17c.html">Pushing the Boundaries of Video Innovation Through the Power of Collaboration</a>
+              </div>
+              
+              <div class="news-card-summary">At Harmonic, we believe that innovation in video delivery starts with deep collaboration.</div>
+              
+              <div class="news-card-meta">
+                <span>October 28, 2025</span>
+                <a href="articles/rss-e95a89a0cfa6d17c.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1558618047-f3dc8e28c5b1?w=800&auto=format&fit=crop"
+                 alt="The Changing State of Traditional TV"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-7ec916a5921a0d3a.html">The Changing State of Traditional TV</a>
+              </div>
+              
+              <div class="news-card-summary">The living room experience has been redefined.</div>
+              
+              <div class="news-card-meta">
+                <span>October 05, 2025</span>
+                <a href="articles/rss-7ec916a5921a0d3a.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&auto=format&fit=crop"
+                 alt="Brownfield MDU Broadband: Unlocking Revenue with Existing Infrastructure"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-be8ac4ad06081975.html">Brownfield MDU Broadband: Unlocking Revenue with Existing Infrastructure</a>
+              </div>
+              
+              <div class="news-card-summary">From Burden to Breakthrough Brownfield multi-dwelling unit ( MDUs) are often viewed as complex and costly to upgrade.</div>
+              
+              <div class="news-card-meta">
+                <span>September 22, 2025</span>
+                <a href="articles/rss-be8ac4ad06081975.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1612420696760-0a0f34d3e7d0?w=800&auto=format&fit=crop"
+                 alt="Leading Successful Transformations in MediaTech: Insights from IABM’s Industry Impact Briefing"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-2438dcd961903d64.html">Leading Successful Transformations in MediaTech: Insights from IABM’s Industry Impact Briefing</a>
+              </div>
+              
+              <div class="news-card-summary">The media and entertainment industry is undergoing one of its most profound shifts in decades.</div>
+              
+              <div class="news-card-meta">
+                <span>September 17, 2025</span>
+                <a href="articles/rss-2438dcd961903d64.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1612420696760-0a0f34d3e7d0?w=800&auto=format&fit=crop"
+                 alt="The Economics of Hybrid Streaming Architectures"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-f22dc6b97e300726.html">The Economics of Hybrid Streaming Architectures</a>
+              </div>
+              
+              <div class="news-card-summary">Streaming viewership continues to grow — not only in the U.S.</div>
+              
+              <div class="news-card-meta">
+                <span>September 02, 2025</span>
+                <a href="articles/rss-f22dc6b97e300726.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=800&auto=format&fit=crop"
+                 alt="The Future of Streaming Platforms: Trends, Challenges & Innovations"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-d459e21b63f5d469.html">The Future of Streaming Platforms: Trends, Challenges & Innovations</a>
+              </div>
+              
+              <div class="news-card-summary">Streaming has rapidly overtaken traditional media.</div>
+              
+              <div class="news-card-meta">
+                <span>August 24, 2025</span>
+                <a href="articles/rss-d459e21b63f5d469.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&auto=format&fit=crop"
+                 alt="Beyond Automation: How AI is Transforming Broadcast Playout"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-ff9509fecdb97d21.html">Beyond Automation: How AI is Transforming Broadcast Playout</a>
+              </div>
+              
+              <div class="news-card-summary">For more than two decades, broadcast playout has been defined by automation.</div>
+              
+              <div class="news-card-meta">
+                <span>August 20, 2025</span>
+                <a href="articles/rss-ff9509fecdb97d21.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&auto=format&fit=crop"
+                 alt="How PlayBox Technology Empowers Rightsholders to Launch Streaming Apps and FAST Channels with OTT Stream"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-b387729c123ed10e.html">How PlayBox Technology Empowers Rightsholders to Launch Streaming Apps and FAST Channels with OTT Stream</a>
+              </div>
+              
+              <div class="news-card-summary">The streaming landscape has fundamentally transformed how content reaches audiences, creating unprecedented opportunities for rightsholders to monetize their libraries directly.</div>
+              
+              <div class="news-card-meta">
+                <span>July 05, 2025</span>
+                <a href="articles/rss-b387729c123ed10e.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1474654819140-b1f1f9af45c0?w=800&auto=format&fit=crop"
+                 alt="Break Free from the Algorithm"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-0cc4d7505aeb1e86.html">Break Free from the Algorithm</a>
+              </div>
+              
+              <div class="news-card-summary">Why It’s Time for Content Creators to Launch Their Own OTT Platform The creator economy has reached a turning point.</div>
+              
+              <div class="news-card-meta">
+                <span>June 19, 2025</span>
+                <a href="articles/rss-0cc4d7505aeb1e86.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop"
+                 alt="The Everything Era: What NAB 2025 Really Told Us About Streaming’s Future"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-6511c568ee739db6.html">The Everything Era: What NAB 2025 Really Told Us About Streaming’s Future</a>
+              </div>
+              
+              <div class="news-card-summary">This year’s NAB wasn’t defined by spectacle.</div>
+              
+              <div class="news-card-meta">
+                <span>June 09, 2025</span>
+                <a href="articles/rss-6511c568ee739db6.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1602992708529-c9fdb12905c9?w=800&auto=format&fit=crop"
+                 alt="Unified DOCSIS 4.0"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-e06026066490e57e.html">Unified DOCSIS 4.0</a>
+              </div>
+              
+              <div class="news-card-summary">Improving quality of experience for each subscriber is the next frontier in subscriber satisfaction and retention.</div>
+              
+              <div class="news-card-meta">
+                <span>April 08, 2025</span>
+                <a href="articles/rss-e06026066490e57e.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop"
+                 alt="OLT and ONT Interoperability: A New Path Forward"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-3760fb8a45af7ca3.html">OLT and ONT Interoperability: A New Path Forward</a>
+              </div>
+              
+              <div class="news-card-summary">The Evolution of Fiber Broadband Networks As fixed-line fiber optic networks continue their rapid expansion, operators face a persistent challenge: achieving true interoperability between optical netw</div>
+              
+              <div class="news-card-meta">
+                <span>March 12, 2025</span>
+                <a href="articles/rss-3760fb8a45af7ca3.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1474654819140-b1f1f9af45c0?w=800&auto=format&fit=crop"
+                 alt="Harmonic Leads Broadband Industry Transformation"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-0fa50e8e4ff378dd.html">Harmonic Leads Broadband Industry Transformation</a>
+              </div>
+              
+              <div class="news-card-summary">The broadband industry is in a period of critical transformation driven by the rise of DOCSIS 4.0, deeper fiber deployments and the increasing demand for higher bandwidth.</div>
+              
+              <div class="news-card-meta">
+                <span>February 21, 2025</span>
+                <a href="articles/rss-0fa50e8e4ff378dd.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1471295253337-3ceaaedca402?w=800&auto=format&fit=crop"
+                 alt="How Cloud-Based Playout-to-Delivery Drives Cost Efficiency"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-6236242050f09c1f.html">How Cloud-Based Playout-to-Delivery Drives Cost Efficiency</a>
+              </div>
+              
+              <div class="news-card-summary">More and more broadcasters and content owners are moving their playout workflows to the public cloud.</div>
+              
+              <div class="news-card-meta">
+                <span>February 13, 2025</span>
+                <a href="articles/rss-6236242050f09c1f.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
         </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/playout-technology-trends-broadcast-2026.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="How Playout Technology Is Evolving in 2026" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">02</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/playout-technology-trends-broadcast-2026.html">How Playout Technology Is Evolving in 2026</a></div>
-          <div class="ts-card-summary">How Playout Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping playout for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracking this should review the</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            How Playout Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping playout 
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/playout-technology-trends-broadcast-2026.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 20, 2026</span>
-          </div>
+
+        <!-- AdSense after news grid — only renders when approved -->
+        <div class="adsense-unit">
+          <ins class="adsbygoogle" style="display:block"
+               data-ad-client="ca-pub-8033069131874524"
+               data-ad-slot="auto" data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/playout-workflow-insights-broadcast-professionals.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="The State of Playout: What Broadcast Professionals Need to Know" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">03</span>
       </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/playout-workflow-insights-broadcast-professionals.html">The State of Playout: What Broadcast Professionals Need to Know</a></div>
-          <div class="ts-card-summary">The State of Playout: What Broadcast Professionals Need to Know An independent editorial overview of the technology forces reshaping playout for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracking t</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            The State of Playout: What Broadcast Professionals Need to Know An independent editorial overview of the technology forc
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/playout-workflow-insights-broadcast-professionals.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 20, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/playout-infrastructure-operations-guide-2026.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Inside Playout: Key Trends and Operational Priorities" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">04</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/playout-infrastructure-operations-guide-2026.html">Inside Playout: Key Trends and Operational Priorities</a></div>
-          <div class="ts-card-summary">Inside Playout: Key Trends and Operational Priorities An independent editorial overview of the technology forces reshaping playout for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations tracking this should</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Inside Playout: Key Trends and Operational Priorities An independent editorial overview of the technology forces reshapi
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/playout-infrastructure-operations-guide-2026.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 20, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-net-insight-unveils-market-leading-jpeg-xs-at-.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Net Insight unveils Market-Leading JPEG XS at Scale for Live IP Media Production" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">05</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-net-insight-unveils-market-leading-jpeg-xs-at-.html">Net Insight unveils Market-Leading JPEG XS at Scale for Live IP Media Production</a></div>
-          <div class="ts-card-summary">Net Insight unveils Market-Leading JPEG XS at Scale for Live IP Media Production Stockholm, Sweden March 19, 2026– As live production scales to higher UHD and full HD volumes, efficiency and density have become critical requirements. At NAB Show 2026, Net Insight introduces its full IP JPEG XS solut</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Net Insight unveils Market-Leading JPEG XS at Scale for Live IP Media Production Stockholm, Sweden March 19, 2026– As li
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-net-insight-unveils-market-leading-jpeg-xs-at-.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-dpa-elevates-4097-micro-shotgun-with-core-tech.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="DPA Elevates 4097 Micro Shotgun With CORE+ Technology" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">06</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-dpa-elevates-4097-micro-shotgun-with-core-tech.html">DPA Elevates 4097 Micro Shotgun With CORE+ Technology</a></div>
-          <div class="ts-card-summary">DPA Elevates 4097 Micro Shotgun With CORE+ Technology KOKKEDAL, DENMARK, MARCH 19, 2026 ― DPA Microphones adds to its CORE+ microphone selection with the 4097 CORE+ Micro Shotgun, which delivers a new level of clarity, headroom and sonic transparency for speech, choir, film and broadcast application</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            DPA Elevates 4097 Micro Shotgun With CORE+ Technology KOKKEDAL, DENMARK, MARCH 19, 2026 ― DPA Microphones adds to its CO
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-dpa-elevates-4097-micro-shotgun-with-core-tech.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-starfish-highlights-flexible-ts-splicer-releas.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Starfish highlights flexible TS Splicer releases and new Monitoring Dashboard at NAB Show" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">07</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-starfish-highlights-flexible-ts-splicer-releas.html">Starfish highlights flexible TS Splicer releases and new Monitoring Dashboard at NAB Show</a></div>
-          <div class="ts-card-summary">Starfish highlights flexible TS Splicer releases and new Monitoring Dashboard at NAB Show Starfish Technologies will present the latest releases of its TS Splicer (Win) and TS Splicer (K8) at NAB Show 2026, together with a new Monitoring Dashboard designed to give operators greater operational overs</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Starfish highlights flexible TS Splicer releases and new Monitoring Dashboard at NAB Show Starfish Technologies will pre
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-starfish-highlights-flexible-ts-splicer-releas.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-truevisions-now-chooses-bitmovins-observabilit.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="TrueVisions NOW Chooses Bitmovin’s Observability to Enhance its Video Streaming Capabilities with Real-time Insights into Video Playback" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">08</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-truevisions-now-chooses-bitmovins-observabilit.html">TrueVisions NOW Chooses Bitmovin’s Observability to Enhance its Video Streaming Capabilities with Real-time Insights into Video Playback</a></div>
-          <div class="ts-card-summary">TrueVisions NOW Chooses Bitmovin’s Observability to Enhance its Video Streaming Capabilities with Real-time Insights into Video Playback Bitmovin, a video streaming solutions, has announced that TrueVisions NOW, a leading streaming platform in Thailand, and part of the TrueVisions Group, has selecte</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            TrueVisions NOW Chooses Bitmovin’s Observability to Enhance its Video Streaming Capabilities with Real-time Insights int
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-truevisions-now-chooses-bitmovins-observabilit.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-cobalt-digital-to-unveil-additions-to-end-to-e.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Cobalt Digital to Unveil Additions to End-to-End IPMX and ST 2110 Ecosystem at NAB, Including Fully Featured Standalone Signal Processors" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">09</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-cobalt-digital-to-unveil-additions-to-end-to-e.html">Cobalt Digital to Unveil Additions to End-to-End IPMX and ST 2110 Ecosystem at NAB, Including Fully Featured Standalone Signal Processors</a></div>
-          <div class="ts-card-summary">Cobalt Digital to Unveil Additions to End-to-End IPMX and ST 2110 Ecosystem at NAB, Including Fully Featured Standalone Signal Processors Highlights include industry’s only IPMX certified audio monitor, plus multiviewers, gateways, converters and routers Champaign, IL – March 16, 2026 — Cobalt Digit</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Cobalt Digital to Unveil Additions to End-to-End IPMX and ST 2110 Ecosystem at NAB, Including Fully Featured Standalone 
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-cobalt-digital-to-unveil-additions-to-end-to-e.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-harmonic-enhances-xos-advanced-media-processor.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Harmonic Enhances XOS Advanced Media Processor to Streamline Next-Generation Broadcast Distribution" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">10</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-harmonic-enhances-xos-advanced-media-processor.html">Harmonic Enhances XOS Advanced Media Processor to Streamline Next-Generation Broadcast Distribution</a></div>
-          <div class="ts-card-summary">Harmonic Enhances XOS Advanced Media Processor to Streamline Next-Generation Broadcast Distribution New Playout-to-Delivery Capabilities Elevate ATSC 3.0 Experiences, Lower DTV+ Investments and Simplify Primary Distribution SAN JOSE, Calif. — March 18, 2026 — Harmonic (NASDAQ: HLIT) significant enha</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Harmonic Enhances XOS Advanced Media Processor to Streamline Next-Generation Broadcast Distribution New Playout-to-Deliv
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-harmonic-enhances-xos-advanced-media-processor.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-projective-revolutionizes-post-production-agai.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Projective revolutionizes Post-Production again with advanced media intelligence at the 2026 NAB show" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">11</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-projective-revolutionizes-post-production-agai.html">Projective revolutionizes Post-Production again with advanced media intelligence at the 2026 NAB show</a></div>
-          <div class="ts-card-summary">Projective revolutionizes Post-Production again with advanced media intelligence at the 2026 NAB show Production Asset Management Platform Strawberry 7 Unveils Innovative Media Intelligence and Seamless Hybrid Workflows. BERLIN, March 17, 2026 — Projective, a post-production collaboration technology</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Projective revolutionizes Post-Production again with advanced media intelligence at the 2026 NAB show Production Asset M
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-projective-revolutionizes-post-production-agai.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-triveni-digital-expands-nextgen-tv-innovations.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Triveni Digital Expands NextGen TV Innovations and Support for Brazil’s TV 3.0 at 2026 NAB Show" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">12</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-triveni-digital-expands-nextgen-tv-innovations.html">Triveni Digital Expands NextGen TV Innovations and Support for Brazil’s TV 3.0 at 2026 NAB Show</a></div>
-          <div class="ts-card-summary">Triveni Digital Expands NextGen TV Innovations and Support for Brazil’s TV 3.0 at 2026 NAB Show Triveni Digital Offers the Most Comprehensive Solution for Delivering ATSC 1.0, ATSC 3.0, ISDB-Tb and TV 3.0 Broadcast Services PRINCETON, N.J. — March 18, 2026 — Triveni Digital, a trusted leader in ATSC</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Triveni Digital Expands NextGen TV Innovations and Support for Brazil’s TV 3.0 at 2026 NAB Show Triveni Digital Offers t
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-triveni-digital-expands-nextgen-tv-innovations.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-imagine-communications-to-showcase-purposeled-.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Imagine Communications to Showcase Purpose–Led Innovation Across Make and Monetize Portfolio at 2026 NAB Show" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">13</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-imagine-communications-to-showcase-purposeled-.html">Imagine Communications to Showcase Purpose–Led Innovation Across Make and Monetize Portfolio at 2026 NAB Show</a></div>
-          <div class="ts-card-summary">Imagine Communications to Showcase Purpose–Led Innovation Across Make and Monetize Portfolio at 2026 NAB Show 2026 NAB Show Exhibitor Preview April 19–22 Las Vegas Booth N.1328 Summary: At the 2026 NAB Show in Las Vegas, Imagine Communications will showcase the latest advances across its Make and Mo</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Imagine Communications to Showcase Purpose–Led Innovation Across Make and Monetize Portfolio at 2026 NAB Show 2026 NAB S
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-imagine-communications-to-showcase-purposeled-.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-intinor-introduces-enhanced-srt-monitoring-hdr.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Intinor introduces enhanced SRT monitoring, HDR transport and NDI® Advanced support at NAB Show 2026" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">14</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-intinor-introduces-enhanced-srt-monitoring-hdr.html">Intinor introduces enhanced SRT monitoring, HDR transport and NDI® Advanced support at NAB Show 2026</a></div>
-          <div class="ts-card-summary">Intinor introduces enhanced SRT monitoring, HDR transport and NDI® Advanced support at NAB Show 2026 Intinor will showcase several new developments to the Direkt platform at NAB 2026, including enhanced SRT monitoring, expanded HDR transport capabilities and support for NDI® Advanced. The latest sof</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Intinor introduces enhanced SRT monitoring, HDR transport and NDI® Advanced support at NAB Show 2026 Intinor will showca
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-intinor-introduces-enhanced-srt-monitoring-hdr.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-ltn-and-harmonic-expand-partnership-to-support.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="LTN and Harmonic Expand Partnership to Support FAST Growth and C-Band Migration" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">15</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-ltn-and-harmonic-expand-partnership-to-support.html">LTN and Harmonic Expand Partnership to Support FAST Growth and C-Band Migration</a></div>
-          <div class="ts-card-summary">LTN and Harmonic Expand Partnership to Support FAST Growth and C-Band Migration Expanded partnership to power satellite-to-IP migration at scale LTN has expanded its technology partnership with Harmonic to support the anticipated volume of broadcast and cable networks preparing to navigate the reali</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            LTN and Harmonic Expand Partnership to Support FAST Growth and C-Band Migration Expanded partnership to power satellite-
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-ltn-and-harmonic-expand-partnership-to-support.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-pebble-demonstrates-partnerships-performance-a.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Pebble demonstrates partnerships, performance and future-ready playout at NAB Show" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">16</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-pebble-demonstrates-partnerships-performance-a.html">Pebble demonstrates partnerships, performance and future-ready playout at NAB Show</a></div>
-          <div class="ts-card-summary">Pebble demonstrates partnerships, performance and future-ready playout at NAB Show Broadcast playout leader highlights innovation and industry collaboration Pebble, the leading automation, content management and integrated channel specialist, is bringing its feature-rich solutions to NAB Show (booth</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Pebble demonstrates partnerships, performance and future-ready playout at NAB Show Broadcast playout leader highlights i
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-pebble-demonstrates-partnerships-performance-a.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-tuxera-showcases-stunning-performance-with-fus.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Tuxera showcases stunning performance with Fusion SMB and introduces Fusion NFS at NAB Show" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">17</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-tuxera-showcases-stunning-performance-with-fus.html">Tuxera showcases stunning performance with Fusion SMB and introduces Fusion NFS at NAB Show</a></div>
-          <div class="ts-card-summary">Tuxera showcases stunning performance with Fusion SMB and introduces Fusion NFS at NAB Show Tuxera, a quality-assured file systems and networking technologies, is highlighting remarkable advances in performance at NAB Show (booth N1660, Las Vegas Convention Centre, 19 – 22 April, 2026). Alongside th</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Tuxera showcases stunning performance with Fusion SMB and introduces Fusion NFS at NAB Show Tuxera, a quality-assured fi
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-tuxera-showcases-stunning-performance-with-fus.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-playout-magewell-connecting-any-source-anywhere-in-any.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Magewell Connecting Any Source, Anywhere, in Any Form Factor at 2026 NAB Show in Stand C6113" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">18</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-playout-magewell-connecting-any-source-anywhere-in-any.html">Magewell Connecting Any Source, Anywhere, in Any Form Factor at 2026 NAB Show in Stand C6113</a></div>
-          <div class="ts-card-summary">Magewell Connecting Any Source, Anywhere, in Any Form Factor at 2026 NAB Show in Stand C6113 NANJING, China — March 19th, 2026: Magewell – a developer of innovative, high-performance video I/O and IP workflow solutions – will be at the 2026 NAB Show in stand C6113. In addition to several new product</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Magewell Connecting Any Source, Anywhere, in Any Form Factor at 2026 NAB Show in Stand C6113 NANJING, China — March 19th
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-playout-magewell-connecting-any-source-anywhere-in-any.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/rss-0cc4d7505aeb1e86.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1474654819140-b1f1f9af45c0?w=800&amp;auto=format&amp;fit=crop" alt="Break Free from the Algorithm" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">19</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/rss-0cc4d7505aeb1e86.html">Break Free from the Algorithm</a></div>
-          <div class="ts-card-summary">Why It’s Time for Content Creators to Launch Their Own OTT Platform The creator economy has reached a turning point.</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Why It’s Time for Content Creators to Launch Their Own OTT Platform The creator economy has reached a turning point.
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/rss-0cc4d7505aeb1e86.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 01, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/rss-0fa50e8e4ff378dd.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1474654819140-b1f1f9af45c0?w=800&amp;auto=format&amp;fit=crop" alt="Harmonic Leads Broadband Industry Transformation" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">20</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/rss-0fa50e8e4ff378dd.html">Harmonic Leads Broadband Industry Transformation</a></div>
-          <div class="ts-card-summary">The broadband industry is in a period of critical transformation driven by the rise of DOCSIS 4.0, deeper fiber deployments and the increasing demand for higher bandwidth.</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            The broadband industry is in a period of critical transformation driven by the rise of DOCSIS 4.0, deeper fiber deployme
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/rss-0fa50e8e4ff378dd.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 01, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/rss-3cab6ea22e42de48.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1474654819140-b1f1f9af45c0?w=800&amp;auto=format&amp;fit=crop" alt="CABSAT 2026" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">21</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/rss-3cab6ea22e42de48.html">CABSAT 2026</a></div>
-          <div class="ts-card-summary">Dubai, UAE 2–4 June 2026 CABSAT is a key trade show for the broadcast, media, and content industries across the Middle East, Africa, and South Asia.</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Dubai, UAE 2–4 June 2026 CABSAT is a key trade show for the broadcast, media, and content industries across the Middle E
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/rss-3cab6ea22e42de48.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 01, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/rss-86e6be43b46162e2.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?w=800&amp;auto=format&amp;fit=crop" alt="The Broadcast Revolution? Does 2026 Change Everything?" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">22</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#34C759;">▶️ Playout</span>
-            <span class="ts-card-cat-name">Playout</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/rss-86e6be43b46162e2.html">The Broadcast Revolution? Does 2026 Change Everything?</a></div>
-          <div class="ts-card-summary">We’ve seen format wars, the digital transition, the rise of streaming, and countless “next big things” come and go.</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            We’ve seen format wars, the digital transition, the rise of streaming, and countless “next big things” come and go.
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/rss-86e6be43b46162e2.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 01, 2026</span>
-          </div>
-        </div>
-      </article>
-        </div>
-        
-      </div>
-    </div>
+
+    </div><!-- /page-wrap -->
   </main>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div>
         <div class="footer-brand">THE STREAMIC</div>
-        <p>An independent broadcast and streaming technology publication. Covering streaming, cloud production, AI post-production, graphics, playout, infrastructure, and newsroom technology.</p>
+        <p>An independent broadcast and streaming technology publication. Covering streaming, cloud production, AI post-production, graphics, playout, infrastructure, and newsroom technology. Updated every six hours.</p>
       </div>
       <div class="footer-col">
         <h4>Categories</h4>
-        <a href="featured.html">Featured</a><a href="streaming.html">Streaming</a>
-        <a href="cloud.html">Cloud Production</a><a href="ai-post-production.html">AI &amp; Post-Production</a>
-        <a href="graphics.html">Graphics</a><a href="playout.html">Playout</a>
-        <a href="infrastructure.html">Infrastructure</a><a href="newsroom.html">Newsroom</a>
+        <a href="featured.html">Featured</a>
+        <a href="streaming.html">Streaming</a>
+        <a href="cloud.html">Cloud Production</a>
+        <a href="ai-post-production.html">AI &amp; Post-Production</a>
+        <a href="graphics.html">Graphics</a>
+        <a href="playout.html">Playout</a>
+        <a href="infrastructure.html">Infrastructure</a>
+        <a href="newsroom.html">Newsroom</a>
       </div>
       <div class="footer-col">
         <h4>Site Info</h4>
-        <a href="about.html">About</a><a href="contact.html">Contact</a>
-        <a href="vlog.html">Editor's Desk</a><a href="privacy.html">Privacy Policy</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="vlog.html">Editor's Desk</a>
+        <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Use</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 The Streamic &mdash; thestreamic.in. All rights reserved.</span>
+      <span>&copy; 2025 The Streamic &mdash; thestreamic.in. All rights reserved.</span>
       <span>Independent broadcast technology journalism. Trademarks belong to their respective owners.</span>
     </div>
   </footer>
-  <script>(function(){var t=document.querySelector('.nav-toggle'),n=document.querySelector('.nav-links');if(!t||!n)return;t.addEventListener('click',function(){n.classList.toggle('nav-open');});})();</script>
+
+  <script>
+    (function() {
+      var t = document.querySelector('.nav-toggle');
+      var n = document.querySelector('.nav-links');
+      if (!t || !n) return;
+      t.addEventListener('click', function() { n.classList.toggle('nav-open'); });
+    })();
+  </script>
 </body>
 </html>

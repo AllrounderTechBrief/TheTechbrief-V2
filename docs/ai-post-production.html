@@ -2,29 +2,204 @@
 <html lang="en">
 <head>
   <script>
-    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-    gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied', 'ad_storage': 'denied',
+      'ad_user_data': 'denied', 'ad_personalization': 'denied', 'wait_for_update': 500
+    });
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0VSHDN3ZR6"></script>
-  <script>gtag('js',new Date());gtag('config','G-0VSHDN3ZR6');</script>
+  <script>gtag('js', new Date()); gtag('config', 'G-0VSHDN3ZR6');</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8033069131874524" crossorigin="anonymous"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI &amp; Post-Production — The Streamic</title>
-  <meta name="description" content="AI-driven editing tools, automated QC, intelligent MAM, colour grading, and post-production technology advances.">
+  <title>AI & Post-Production — The Streamic</title>
+  <meta name="description" content="Artificial intelligence in post-production, automated editing, AI-assisted workflows, and emerging production technology.">
   <meta name="robots" content="index, follow">
-  <meta name="author" content="The Streamic Editorial Team">
+  <meta name="author" content="The Streamic">
   <link rel="canonical" href="https://www.thestreamic.in/ai-post-production.html">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Streamic">
-  <meta property="og:title" content="AI &amp; Post-Production — The Streamic">
-  <meta property="og:description" content="AI-driven editing tools, automated QC, intelligent MAM, colour grading, and post-production technology advances.">
+  <meta property="og:title" content="AI & Post-Production — The Streamic">
+  <meta property="og:description" content="Artificial intelligence in post-production, automated editing, AI-assisted workflows, and emerging production technology.">
   <meta property="og:url" content="https://www.thestreamic.in/ai-post-production.html">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="twitter:title" content="AI & Post-Production — The Streamic">
+  <meta name="twitter:description" content="Artificial intelligence in post-production, automated editing, AI-assisted workflows, and emerging production technology.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "AI & Post-Production",
+    "description": "Artificial intelligence in post-production, automated editing, AI-assisted workflows, and emerging production technology.",
+    "url": "https://www.thestreamic.in/ai-post-production.html",
+    "isPartOf": {"@type": "WebSite", "name": "The Streamic", "url": "https://www.thestreamic.in/"}
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── Page hero ── */
+    .page-hero {
+      background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
+      color: #fff;
+      padding: 44px 24px 36px;
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-family: Montserrat, sans-serif;
+      font-size: clamp(26px, 5vw, 44px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .page-hero p { font-size: 15px; color: rgba(255,255,255,0.65); max-width: 560px; margin: 0 auto; }
+
+    /* ── Page wrap ── */
+    .page-wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .page-section { padding: 36px 0; }
+    .section-hdr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #d2d2d7;
+    }
+    .section-hdr h2 {
+      font-family: Montserrat, sans-serif;
+      font-size: 19px; font-weight: 700; color: #1d1d1f;
+    }
+
+    /* ── Editorial cards (AI-authored originals) ── */
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 16px;
+    }
+    .editorial-card {
+      background: #fff;
+      border: 1px solid #e8e8ed;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: box-shadow 0.2s, transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .editorial-card:hover {
+      box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
+    }
+    .editorial-card img { width:100%; height:165px; object-fit:cover; display:block; }
+    .editorial-card-body { padding: 16px; }
+    .editorial-badge {
+      display: inline-block;
+      background: #1d1d1f; color: #fff;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.8px; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 999px; margin-bottom: 8px;
+    }
+    .editorial-card-title {
+      font-family: Montserrat, sans-serif;
+      font-size: 15px; font-weight: 700;
+      color: #1d1d1f; line-height: 1.35; margin-bottom: 6px;
+    }
+    .editorial-card-desc { font-size: 13px; color: #86868b; line-height: 1.5; margin-bottom: 10px; }
+    .editorial-card-meta { font-size: 12px; color: #86868b; display: flex; justify-content: space-between; }
+
+    /* ── News grid (RSS-derived, Groq-rewritten) ── */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .news-card {
+      background: #fff;
+      border: 1px solid #e8e8ed;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+      transition: box-shadow 0.2s;
+    }
+    .news-card:hover { box-shadow: 0 6px 22px rgba(0,0,0,0.09); }
+    .news-card-img { width:100%; height:155px; object-fit:cover; display:block; }
+    .news-card-body { padding: 14px; }
+    .news-card-title {
+      font-family: Montserrat, sans-serif;
+      font-size: 14px; font-weight: 600;
+      color: #1d1d1f; line-height: 1.4; margin-bottom: 8px;
+    }
+    .news-card-title a { color: inherit; text-decoration: none; }
+    .news-card-title a:hover { color: #0071e3; }
+    .news-card-summary {
+      font-size: 12px; color: #86868b; line-height: 1.5; margin-bottom: 10px;
+      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .news-card-meta {
+      font-size: 11px; color: #86868b;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .news-card-meta a { color: #0071e3; font-weight: 600; font-size: 11px; text-decoration: none; }
+    .news-card-meta a:hover { text-decoration: underline; }
+
+    /* ── AdSense — no visible gap when not yet approved ── */
+    .adsense-unit { margin: 28px 0; line-height: 0; font-size: 0; }
+    .adsense-unit ins:empty { display: none; }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: #1d1d1f; color: #86868b;
+      padding: 44px 24px 30px; margin-top: 52px;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px; margin-bottom: 28px;
+    }
+    .footer-brand {
+      font-family: Montserrat, sans-serif;
+      font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 10px;
+    }
+    .footer-inner p { font-size: 13px; line-height: 1.6; }
+    .footer-col h4 {
+      font-family: Montserrat, sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.8px; text-transform: uppercase;
+      color: #fff; margin-bottom: 12px;
+    }
+    .footer-col a {
+      display: block; color: #86868b; text-decoration: none;
+      font-size: 13px; padding: 4px 0; transition: color 0.2s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      max-width: 1200px; margin: 0 auto;
+      padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex; justify-content: space-between; flex-wrap: wrap;
+      gap: 8px; font-size: 12px;
+    }
+    @media (max-width: 900px) {
+      .editorial-grid, .news-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .editorial-grid, .news-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 20px; }
+      .footer-bottom { flex-direction: column; }
+    }
+  </style>
 </head>
-<body>
+<body data-category="ai-post-production">
+
+  <!-- ===== NAVIGATION ===== -->
   <nav class="site-nav">
     <div class="nav-inner">
       <a href="featured.html" class="nav-logo-container">
@@ -32,7 +207,7 @@
              onload="this.closest('.nav-logo-container').classList.add('logo-loaded')">
         <span class="nav-logo">THE STREAMIC</span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
       <ul class="nav-links">
         <li><a href="featured.html">FEATURED</a></li>
         <li><a href="infrastructure.html">INFRASTRUCTURE</a></li>
@@ -44,692 +219,1787 @@
         <li><a href="newsroom.html">NEWSROOM</a></li>
         <li><a href="howto.html">HOW-TO</a></li>
       </ul>
-      <div class="header-subscribe"><a href="vlog.html" class="editors-desk-link">Editor's Desk</a></div>
+      <div class="header-subscribe">
+        <a href="vlog.html" class="editors-desk-link">Editor's Desk</a>
+      </div>
     </div>
   </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <h1>AI & Post-Production</h1>
+    <p>AI-driven workflows transforming post-production</p>
+  </section>
+
+  <!-- ===== MAIN ===== -->
   <main>
     <div class="page-wrap">
+
+      <!-- ── AI-authored original articles (only when they exist) ── -->
+      
+
+      <!-- ── News grid (Groq-rewritten articles) ── -->
       <div class="page-section">
-        <div class="section-hdr"><h2>&#127916; AI &amp; Post-Production</h2></div>
+        <div class="section-hdr">
+          <h2>📡 Latest AI & Post-Production News</h2>
+        </div>
         <div class="news-grid">
-      <article class="ts-card">
-        <a href="articles/ai-post-production-technology-trends-broadcast-2026.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="How AI &amp; Post-Production Technology Is Evolving in 2026" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">01</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/ai-post-production-technology-trends-broadcast-2026.html">How AI &amp; Post-Production Technology Is Evolving in 2026</a></div>
-          <div class="ts-card-summary">How AI &amp; Post-Production Technology Is Evolving in 2026 An independent editorial overview of the technology forces reshaping ai &amp; post-production for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisations track</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            How AI &amp; Post-Production Technology Is Evolving in 2026 An independent editorial overview of the technology forces resha
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/ai-post-production-technology-trends-broadcast-2026.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 20, 2026</span>
-          </div>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1488229297570-58520851e868?w=800&auto=format&fit=crop"
+                 alt="Sony FX6 Firmware Version 6.00 Released – BIG6 Interface, External Blackmagic RAW, AF Improvements, and More"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-afcf5d33dca83f71.html">Sony FX6 Firmware Version 6.00 Released – BIG6 Interface, External Blackmagic RAW, AF Improvements, and More</a>
+              </div>
+              
+              <div class="news-card-summary">Sony has released firmware version 6.00 for the FX6, a free update that delivers one of the most substantial feature additions the camera has received since launch.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-afcf5d33dca83f71.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop"
+                 alt="Nikon Hosts Experiential Pop-Up During SXSW"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-901d965bec12543d.html">Nikon Hosts Experiential Pop-Up During SXSW</a>
+              </div>
+              
+              <div class="news-card-summary">Camera brand Nikon hosts free camera workshops during the South by Southwest festival to spur shoppers to try cameras and post pictures.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-901d965bec12543d.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1480944657103-7fed22359e1d?w=800&auto=format&fit=crop"
+                 alt="Lightroom's Most Underused Panel Can Help Fix Your Wide Angle Compositions in Post"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-01b88d4ddba750fa.html">Lightroom's Most Underused Panel Can Help Fix Your Wide Angle Compositions in Post</a>
+              </div>
+              
+              <div class="news-card-summary">Lightroom's Transform panel has a reputation for being a one-click fix, but it can do far more than straighten a crooked horizon.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-01b88d4ddba750fa.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop"
+                 alt="AnamorphicTool Launched – Two OFX Plugins for DaVinci Resolve Fixing Optical Issues and Adding Anamorphic Lens Characteristics"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-2c656a0eeb929c0d.html">AnamorphicTool Launched – Two OFX Plugins for DaVinci Resolve Fixing Optical Issues and Adding Anamorphic Lens Characteristics</a>
+              </div>
+              
+              <div class="news-card-summary">Bruce, an independent developer, has released AnamorphicTool, a suite of two OFX plugins for DaVinci Resolve designed specifically around the optical physics of anamorphic lenses.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-2c656a0eeb929c0d.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop"
+                 alt="DxO launches new DxO PhotoLab 9.6"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-8309ab5b7d99556c.html">DxO launches new DxO PhotoLab 9.6</a>
+              </div>
+              
+              <div class="news-card-summary">The latest update extends DeepPRIME XD3 — now for both Bayer and X-Trans sensors — adds diffusion to its AI Masks and introduces High-Fidelity Compression to create DNG files up to four times smaller.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-8309ab5b7d99556c.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop"
+                 alt="How to Master the 35mm Lens"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-b4a196c244cf5f8d.html">How to Master the 35mm Lens</a>
+              </div>
+              
+              <div class="news-card-summary">The 35mm focal length sits in a unique position: wide enough to show a scene, tight enough to keep it clean.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-b4a196c244cf5f8d.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&auto=format&fit=crop"
+                 alt="Cobalt Digital to show IPMX certified audio monitor at NAB 2026"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-9301561b9a6391db.html">Cobalt Digital to show IPMX certified audio monitor at NAB 2026</a>
+              </div>
+              
+              <div class="news-card-summary">Cobalt Digital will debut at NAB Show 2026 industry’s only IPMX certified audio monitor, plus multiviewers, gateways, converters and routers.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-9301561b9a6391db.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&auto=format&fit=crop"
+                 alt="Calrec Craft Interview with Senior Broadcast Audio A1 Engineer and Music Director Rick Bernier"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-b8f3edfb9360ff1e.html">Calrec Craft Interview with Senior Broadcast Audio A1 Engineer and Music Director Rick Bernier</a>
+              </div>
+              
+              <div class="news-card-summary">In this craft interview, Rick Bernier reflects on a career that has taken him to the very top of live broadcast audio.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-b8f3edfb9360ff1e.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1509822929063-6b6cfc9b42f2?w=800&auto=format&fit=crop"
+                 alt="DxO PhotoLab 9 Might Be the Reason to Finally Quit Adobe"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-099d7c2980d2854d.html">DxO PhotoLab 9 Might Be the Reason to Finally Quit Adobe</a>
+              </div>
+              
+              <div class="news-card-summary">If you've been paying for a Lightroom Classic subscription while quietly wondering whether it's still worth it, DxO PhotoLab 9 is a direct answer to that question.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-099d7c2980d2854d.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2025/03/GettyImages-2189016670.jpg"
+                 alt="YouTube to stream first ten minutes of FIFA World Cup matches"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-dec5ad21e7d3fa80.html">YouTube to stream first ten minutes of FIFA World Cup matches</a>
+              </div>
+              
+              <div class="news-card-summary">The 'innovative agreement' aims to enhance viewer experiences and unlock monetisation opportunities with premium content across FIFA and its Media Partners’ respective official YouTube channels</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-dec5ad21e7d3fa80.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1488229297570-58520851e868?w=800&auto=format&fit=crop"
+                 alt="Audio Technica ATV-SG1 & SG1LE on-camera shotgun mics"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-dcb66a6aa7c2f41e.html">Audio Technica ATV-SG1 & SG1LE on-camera shotgun mics</a>
+              </div>
+              
+              <div class="news-card-summary">Audio Technica has announced its new ATV-SG1 and SG1LE on-camera shotgun mics.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-dcb66a6aa7c2f41e.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1501526029524-a8ea952b15be?w=800&auto=format&fit=crop"
+                 alt="Accedo One and Magine Pro Officially Launch Leyra,  Delivering a Unified SaaS Platform for OTT Growth"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-9efa62e65531d641.html">Accedo One and Magine Pro Officially Launch Leyra,  Delivering a Unified SaaS Platform for OTT Growth</a>
+              </div>
+              
+              <div class="news-card-summary">Stockholm, Sweden, 18th March 2026 – The recently announced joint venture between Accedo One and Magine Pro has been officially launched as Leyra.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-9efa62e65531d641.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/03/DF-V-5G-6-2048x1365-1-726x484.jpg"
+                 alt="Vislink debuts DragonFly V 5G dual-modem video transmitter"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-b177955d39166fb5.html">Vislink debuts DragonFly V 5G dual-modem video transmitter</a>
+              </div>
+              
+              <div class="news-card-summary">DragonFly V 5G transforms compact or handheld cameras into portable live contribution units while additional cellular connectivity enables the maintenance of a stable live feed from the field</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-b177955d39166fb5.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/03/convertip-Matrox-Video-726x452.jpg"
+                 alt="Matrox Video’s encoders/decoders built into Rai’s IP workflow"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-4506cfe26c01191f.html">Matrox Video’s encoders/decoders built into Rai’s IP workflow</a>
+              </div>
+              
+              <div class="news-card-summary">The ConvertIP DSS and DSH models support SDI- and HDMI-to-ST 2110 conversion, as well as providing monitoring capabilities</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-4506cfe26c01191f.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop"
+                 alt="Kondor Blue Nikon ZR Cage Released – Modularity with an Ergonomic Grip"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-4cbeb298eb940c5c.html">Kondor Blue Nikon ZR Cage Released – Modularity with an Ergonomic Grip</a>
+              </div>
+              
+              <div class="news-card-summary">Kondor Blue recently released their modular, lightweight cage for the Nikon ZR, featuring four removable sides to fit most shooting styles.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-4cbeb298eb940c5c.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop"
+                 alt="Blackmagic Design Cloud Pricing Increase"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-50e99a283da3d64d.html">Blackmagic Design Cloud Pricing Increase</a>
+              </div>
+              
+              <div class="news-card-summary">Due to further price increases in flash and RAM memory, Blackmagic Design has reluctantly had to again increase the price of Blackmagic Cloud Stores and some other products that use these parts.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-50e99a283da3d64d.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&auto=format&fit=crop"
+                 alt="Hollyland Mars M1 Enhanced 5.5″ Wireless Transceiver Monitor Kit (Set of 2) on sale for $549 USD"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-7f590265f1517ebd.html">Hollyland Mars M1 Enhanced 5.5″ Wireless Transceiver Monitor Kit (Set of 2) on sale for $549 USD</a>
+              </div>
+              
+              <div class="news-card-summary">The Hollyland Mars M1 Enhanced 5.5″ Wireless Transceiver Monitor Kit (Set of 2) is on sale for $549 USD, which is a discount of $250 USD.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-7f590265f1517ebd.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&auto=format&fit=crop"
+                 alt="Fujifilm announces availability of FUJINON UA22x4.8 plus development of 3 more broadcast zooms"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-c5ede186077c4a68.html">Fujifilm announces availability of FUJINON UA22x4.8 plus development of 3 more broadcast zooms</a>
+              </div>
+              
+              <div class="news-card-summary">Fujifilm has announced the availability of the FUJINON UA22x4.8, as well as the development of 3 more 4K broadcast zooms.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-c5ede186077c4a68.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop"
+                 alt="RØDE made its RØDECaster Video Core a leaner and cheaper RØDECaster"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-f4d0e579f9657d8d.html">RØDE made its RØDECaster Video Core a leaner and cheaper RØDECaster</a>
+              </div>
+              
+              <div class="news-card-summary">With the RØDECaster Video Core you can switch between up to four video sources and five fully customizable scenes.</div>
+              
+              <div class="news-card-meta">
+                <span>March 18, 2026</span>
+                <a href="articles/rss-f4d0e579f9657d8d.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/HTGZKoGBr4pQ4RdzBD8ywh-1280-80.jpg"
+                 alt="NAB Show: Cobalt Digital to Unveil Additions to Its IPMX and ST 2110 Ecosystems"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-bdd2663fce45d425.html">NAB Show: Cobalt Digital to Unveil Additions to Its IPMX and ST 2110 Ecosystems</a>
+              </div>
+              
+              <div class="news-card-summary">Highlights include industry’s only IPMX certified audio monitor, plus multiviewers, gateways, converters and routers</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-bdd2663fce45d425.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/oq3Jos48KwLmXSvtdNkbB8-1280-80.png"
+                 alt="How Actus Digital is Engineering the Future of Broadcast Intelligence"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-31b4a120f4d39207.html">How Actus Digital is Engineering the Future of Broadcast Intelligence</a>
+              </div>
+              
+              <div class="news-card-summary">At the upcoming NAB Show 2026, Actus Digital is set to showcase major enhancements to its flagship Actus X platform</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-31b4a120f4d39207.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/6hvkXYfPZS7D4mfVhSs8Y6-1280-80.jpg"
+                 alt="2026 NAB Show Exhibitor Insight: Amazon Web Services (AWS)"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-ab28c512e89a4337.html">2026 NAB Show Exhibitor Insight: Amazon Web Services (AWS)</a>
+              </div>
+              
+              <div class="news-card-summary">Global Leader, Solutions Architecture, Media & Entertainment, Games and Sports Steph Lone will showcase AWS Elemental Inference, a vertical video solution</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-ab28c512e89a4337.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop"
+                 alt="SMPTE Unveils 2026 NAB Show Educational Presentations"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-a50279dad1eeb2b2.html">SMPTE Unveils 2026 NAB Show Educational Presentations</a>
+              </div>
+              
+              <div class="news-card-summary">SMPTE®, the home of media professionals, technologists, and engineers, today unveiled its educational presentations for the 2026 NAB Show.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-a50279dad1eeb2b2.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1480944657103-7fed22359e1d?w=800&auto=format&fit=crop"
+                 alt="When Aflac Integrates AI into Customer Service — And When It Doesn’t"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-6e7fc5ede2dfc7a8.html">When Aflac Integrates AI into Customer Service — And When It Doesn’t</a>
+              </div>
+              
+              <div class="news-card-summary">Insurance brand Aflac is piloting generative AI company-wide, including integrating it into its call center.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-6e7fc5ede2dfc7a8.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop"
+                 alt="How AI Deep Research Is Transforming PR: From Media Landscape Analysis to Campaign Planning"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-a9a1a0d2f894190e.html">How AI Deep Research Is Transforming PR: From Media Landscape Analysis to Campaign Planning</a>
+              </div>
+              
+              <div class="news-card-summary">Discover practical PR strategies with deep research.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-a9a1a0d2f894190e.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/5zo9Pmh7epXurQQ3hjNxj-1280-80.jpeg"
+                 alt="Survey: Voters Trust TV News Over AI, Social and Search"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-d697f9dd14a67ca1.html">Survey: Voters Trust TV News Over AI, Social and Search</a>
+              </div>
+              
+              <div class="news-card-summary">Potential voters are almost 9 times more likely to trust TV news than social media platforms; 50% of total respondents rank AI lowest for trust according to a VAB study</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-d697f9dd14a67ca1.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1488229297570-58520851e868?w=800&auto=format&fit=crop"
+                 alt="MyFitnessPal Wants To Start The Health And Wellness Subsector Of Retail Media"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-5dd8622bdee2a7eb.html">MyFitnessPal Wants To Start The Health And Wellness Subsector Of Retail Media</a>
+              </div>
+              
+              <div class="news-card-summary">Amit Patel had been a longtime user of MyFitnessPal, a health and nutrition tracking app, before joining a year ago as CRO.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-5dd8622bdee2a7eb.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/YZrVbhvLgD6wo8HqGdHs38-1280-80.jpg"
+                 alt="Ben Bradshaw Joins PSSI as Director, Product and Network Development"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-7c79f1aedf619a03.html">Ben Bradshaw Joins PSSI as Director, Product and Network Development</a>
+              </div>
+              
+              <div class="news-card-summary">Returns after five years at EA Sports to evaluate company’s content distribution, storage and protection strategies</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-7c79f1aedf619a03.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/YDWQU6QtHTbjRFw8vikxYQ-1280-80.jpg"
+                 alt="SMPTE Details 2026 NAB Show Educational Sessions"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-c067dc6f567a5fa2.html">SMPTE Details 2026 NAB Show Educational Sessions</a>
+              </div>
+              
+              <div class="news-card-summary">This year SMPTE will present the Visual Innovation and Brilliant Engineering Conference in place of the Future of Cinema Conference</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-c067dc6f567a5fa2.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/qQR5zS8EGbmXCGWYGryYP8-1280-80.jpg"
+                 alt="Neutrik To Showcase opticalCON ADVANCED Connectors At 2026 NAB Show"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-053fcc30fcd07a21.html">Neutrik To Showcase opticalCON ADVANCED Connectors At 2026 NAB Show</a>
+              </div>
+              
+              <div class="news-card-summary">The company will present its full line of opticalCON ADVANCED solutions</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-053fcc30fcd07a21.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://cdn.mos.cms.futurecdn.net/PFdKhLCACXvonFoUCgSLib-1280-80.jpg"
+                 alt="Comcast, Charter Deploy AI Infrastructure at the Network Edge Using NVIDIA AI Technologies"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-856aa4c08c6c7d5c.html">Comcast, Charter Deploy AI Infrastructure at the Network Edge Using NVIDIA AI Technologies</a>
+              </div>
+              
+              <div class="news-card-summary">Tests by the two largest cable operators in the U.S.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-856aa4c08c6c7d5c.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&auto=format&fit=crop"
+                 alt="7Artisans Thor PL Mount Adapter Kit for E, L, RF, and Z Mount Cameras Launched"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-3cd0baa6076c1b76.html">7Artisans Thor PL Mount Adapter Kit for E, L, RF, and Z Mount Cameras Launched</a>
+              </div>
+              
+              <div class="news-card-summary">7Artisans has just introduced a new, affordable PL mount adapter that allows you to use cinema glass on your mirrorless camera.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-3cd0baa6076c1b76.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop"
+                 alt="The Pocket-Friendly Headshot Setup: Studio Results With One Speedlite"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-2c8d436367e3bee3.html">The Pocket-Friendly Headshot Setup: Studio Results With One Speedlite</a>
+              </div>
+              
+              <div class="news-card-summary">You can build a high-end headshot portfolio with nothing more than a speedlite, trigger, softbox, and stand, if you understand how to control light.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-2c8d436367e3bee3.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1501526029524-a8ea952b15be?w=800&auto=format&fit=crop"
+                 alt="This Affordable Pancake Lens Surprisingly Sharp on a Canon EOS R5"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-5107d2b906536a10.html">This Affordable Pancake Lens Surprisingly Sharp on a Canon EOS R5</a>
+              </div>
+              
+              <div class="news-card-summary">The Canon EF 40mm f/2.8 STM pancake lens has been around long enough that most people have stopped thinking about it.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-5107d2b906536a10.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop"
+                 alt="Do You Really Need a Photo Studio to Make Great Photos?"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-1e2ffc38ba7b2e44.html">Do You Really Need a Photo Studio to Make Great Photos?</a>
+              </div>
+              
+              <div class="news-card-summary">One of the most common comments we get online is, "One day I'll create when I have a studio." So David and I decided to challenge that idea.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-1e2ffc38ba7b2e44.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1605106702734-205df224ecce?w=800&auto=format&fit=crop"
+                 alt="Maxon Marks Its Official Entry Into the AEC Market With Its Real-Time Archviz Solution"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-c562d5e4e668d577.html">Maxon Marks Its Official Entry Into the AEC Market With Its Real-Time Archviz Solution</a>
+              </div>
+              
+              <div class="news-card-summary">Redshift for Vectorworks now available, Autodesk Revit® beta open for sign-ups, and Graphisoft Archicad releasing later in 2026.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-c562d5e4e668d577.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&auto=format&fit=crop"
+                 alt="Digital Alert Systems NAB Preview 2026"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-7d2a062ab0bf3c59.html">Digital Alert Systems NAB Preview 2026</a>
+              </div>
+              
+              <div class="news-card-summary">Digital Alert Systems Preview 2026 NAB Show April 19 – 22 Booth C3452 At the 2026 NAB Show, Digital Alert Systems will showcase Version 6.0 of its DASDEC™ emergency messaging software and highlight ne</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-7d2a062ab0bf3c59.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&auto=format&fit=crop"
+                 alt="Setplex Transforms Video Streaming with AI and Super Aggregation Innovations at the 2026 NAB Show"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-41978d3e5b483c83.html">Setplex Transforms Video Streaming with AI and Super Aggregation Innovations at the 2026 NAB Show</a>
+              </div>
+              
+              <div class="news-card-summary">Setplex’s Fully Integrated Zapflex Platform Empowers Operators and Media Owners to Manage, Distribute, and Monetize Video WHITE PLAINS, New York — March 17, 2026 — Setplex today announced that it will</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-41978d3e5b483c83.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&auto=format&fit=crop"
+                 alt="Tool Tip Tuesday for Adobe Premiere Pro: Fix your Cross Dissolves 2026 – You have the LEGACY as your default."
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-5631e4ec0916775b.html">Tool Tip Tuesday for Adobe Premiere Pro: Fix your Cross Dissolves 2026 – You have the LEGACY as your default.</a>
+              </div>
+              
+              <div class="news-card-summary">Welcome to Tool Tip Tuesday for Adobe Premiere Pro on ProVideo Coalition When I moved to Premiere 2026, I didn’t notice my cross-dissolve had become the legacy cross-dissolve.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-5631e4ec0916775b.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1480944657103-7fed22359e1d?w=800&auto=format&fit=crop"
+                 alt="Nikon Issues Technical Service Advisory for Z6III, Z5II, and ZR Cameras"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-a5f61d5484028b47.html">Nikon Issues Technical Service Advisory for Z6III, Z5II, and ZR Cameras</a>
+              </div>
+              
+              <div class="news-card-summary">Nikon has announced a Technical Service Advisory for the Nikon Z6III and Z5II mirrorless cameras and the Nikon ZR cinema camera.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-a5f61d5484028b47.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&auto=format&fit=crop"
+                 alt="Marshall to launch first all-IP all-weather 4K POV camera at NAB 2026"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-9275ea20469b44df.html">Marshall to launch first all-IP all-weather 4K POV camera at NAB 2026</a>
+              </div>
+              
+              <div class="news-card-summary">The original miniature UHD camera CV574 gets a new version that supports NDI|HX and adds IP67-rated weatherproof design for reliable outdoor operations.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-9275ea20469b44df.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/03/Fred-Walls-726x726.jpg"
+                 alt="AI standardisation speeds up"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-bdbc5c208b4400ce.html">AI standardisation speeds up</a>
+              </div>
+              
+              <div class="news-card-summary">SMPTE’s AI Taskforce, EBU, and the ETC have updated the AI Engineering Report to keep pace with the rapid evolution of AI in broadcast, highlighting new standards for interoperability and advanced app</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-bdbc5c208b4400ce.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop"
+                 alt="Apple Acquires MotionVFX – What This Could Mean for Final Cut Pro, Creator Studio, and Competing NLEs"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-4e105a06919a1061.html">Apple Acquires MotionVFX – What This Could Mean for Final Cut Pro, Creator Studio, and Competing NLEs</a>
+              </div>
+              
+              <div class="news-card-summary">Apple has acquired MotionVFX, one of the most prominent plugin and visual effects developers in the video editing space.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-4e105a06919a1061.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2025/05/VE-Day-Concert-2-726x450.jpeg"
+                 alt="WMSA Europe aims to tackle regulatory pressure on audio PMSE spectrum"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-e8d102948579baea.html">WMSA Europe aims to tackle regulatory pressure on audio PMSE spectrum</a>
+              </div>
+              
+              <div class="news-card-summary">As spectrum congestion intensifies, WMSA Europe aims to ensure access is maintained and provide a unified voice for professionals in the audio wireless arena</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-e8d102948579baea.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1509822929063-6b6cfc9b42f2?w=800&auto=format&fit=crop"
+                 alt="Perion Is So Over The AI Hype Cycle"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-df8e370caf6bc13a.html">Perion Is So Over The AI Hype Cycle</a>
+              </div>
+              
+              <div class="news-card-summary">Perion CEO Tal Jacobson is more than a little sick of talking about AI as if it’s some brand-new innovation.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-df8e370caf6bc13a.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1509822929063-6b6cfc9b42f2?w=800&auto=format&fit=crop"
+                 alt="YouTube Is Now the World’s Largest Media Company – And Soon the Home of the Oscars"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-a859c07a984a2aa7.html">YouTube Is Now the World’s Largest Media Company – And Soon the Home of the Oscars</a>
+              </div>
+              
+              <div class="news-card-summary">According to a new analysis by financial research firm MoffettNathanson, YouTube has overtaken The Walt Disney Company to become the world’s largest media company by annual revenue, hitting an estimat</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-a859c07a984a2aa7.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://www.tvbeurope.com/wp-content/uploads/2026/02/AVB_DigitalAssets_Jan26_v2_400x333.jpg"
+                 alt="AV and Broadcast Summit agenda unveiled"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-5a8c6852f912a78d.html">AV and Broadcast Summit agenda unveiled</a>
+              </div>
+              
+              <div class="news-card-summary">The in-person event, exploring the next steps in the convergence between AV and broadcast, will take place in London on 24th June</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-5a8c6852f912a78d.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1501526029524-a8ea952b15be?w=800&auto=format&fit=crop"
+                 alt="After Effects Guru Meditation: Adding effects for an overall look"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-a12f0371966c4462.html">After Effects Guru Meditation: Adding effects for an overall look</a>
+              </div>
+              
+              <div class="news-card-summary">When I first started working in the industry, the concept of color grading video was relatively new.</div>
+              
+              <div class="news-card-meta">
+                <span>March 17, 2026</span>
+                <a href="articles/rss-a12f0371966c4462.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1501526029524-a8ea952b15be?w=800&auto=format&fit=crop"
+                 alt="AI May Speed Up PR Teams, but Does it Make Them More Productive?"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-b6ed611168d07900.html">AI May Speed Up PR Teams, but Does it Make Them More Productive?</a>
+              </div>
+              
+              <div class="news-card-summary">More than 80% of companies saw no noticeable productivity gains despite widespread AI adoption, per a recent National Bureau of Economic Research survey.</div>
+              
+              <div class="news-card-meta">
+                <span>March 16, 2026</span>
+                <a href="articles/rss-b6ed611168d07900.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop"
+                 alt="EditShare to Demo AI-Powered Storage and Media Operations at NAB"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-02d4888d73527742.html">EditShare to Demo AI-Powered Storage and Media Operations at NAB</a>
+              </div>
+              
+              <div class="news-card-summary">EditShare , makers of collaborative media workflow solutions, will demonstrate its latest advancements in AI-powered media operations and high-performance NVMe storage at the 2026 NAB Show.</div>
+              
+              <div class="news-card-meta">
+                <span>March 16, 2026</span>
+                <a href="articles/rss-02d4888d73527742.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop"
+                 alt="NiSi Athena Rewind Released – Two Personalities in One Lens Set"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-dfdc785244555295.html">NiSi Athena Rewind Released – Two Personalities in One Lens Set</a>
+              </div>
+              
+              <div class="news-card-summary">NiSi has just released a new full-frame cinema lens set, the Athena Rewind, which inherits features from their well-known Athena primes.</div>
+              
+              <div class="news-card-meta">
+                <span>March 16, 2026</span>
+                <a href="articles/rss-dfdc785244555295.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop"
+                 alt="NAB 2026: world premiere of Shotoku’s Aura TR-XPTZ control system"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-b8fd89d25edc5290.html">NAB 2026: world premiere of Shotoku’s Aura TR-XPTZ control system</a>
+              </div>
+              
+              <div class="news-card-summary">Topping the list of Shotoku news is the world premiere of Aura, a suite of advanced PTZ solutions that brings the company’s high-end robotic camera control expertise into the rapidly evolving PTZ prod</div>
+              
+              <div class="news-card-meta">
+                <span>March 16, 2026</span>
+                <a href="articles/rss-b8fd89d25edc5290.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop"
+                 alt="Harman Switch Azure 125: now London buses are blue!"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-8105ca8946bb4f34.html">Harman Switch Azure 125: now London buses are blue!</a>
+              </div>
+              
+              <div class="news-card-summary">Available in both 35mm and 120, Switch Azure 125 “switches” colour couplers around to create a differing contrast response to the individual channels, for creative adventures.</div>
+              
+              <div class="news-card-meta">
+                <span>March 16, 2026</span>
+                <a href="articles/rss-8105ca8946bb4f34.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop"
+                 alt="Deal: Sigma BF Full‑Frame Camera Now $200 Off at B&H"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-ab063a2e30f8dc2e.html">Deal: Sigma BF Full‑Frame Camera Now $200 Off at B&H</a>
+              </div>
+              
+              <div class="news-card-summary">The Sigma BF Mirrorless Camera (Silver) is currently on sale at B&H for $1,999, down from its regular price of $2,199.</div>
+              
+              <div class="news-card-meta">
+                <span>March 16, 2026</span>
+                <a href="articles/rss-ab063a2e30f8dc2e.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1501526029524-a8ea952b15be?w=800&auto=format&fit=crop"
+                 alt="The $150 Million Price of “Cancel”: Adobe Settles DOJ Lawsuit Over Subscription Practices Every Filmmaker Knows Too Well"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-ca888aedb2d9e0d7.html">The $150 Million Price of “Cancel”: Adobe Settles DOJ Lawsuit Over Subscription Practices Every Filmmaker Knows Too Well</a>
+              </div>
+              
+              <div class="news-card-summary">Adobe has reached a $150 million settlement with the U.S.</div>
+              
+              <div class="news-card-meta">
+                <span>March 16, 2026</span>
+                <a href="articles/rss-ca888aedb2d9e0d7.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop"
+                 alt="One Battle After Another Wins Big, Sinners Makes History at the 2026 Oscars"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-66d9619fa6a3bdf1.html">One Battle After Another Wins Big, Sinners Makes History at the 2026 Oscars</a>
+              </div>
+              
+              <div class="news-card-summary">It only took 10 movies, but Paul Thomas Anderson is now, finally, an Oscar winner—a three-time winner in one night no less, with One Battle After Another picking up a total of six Academy Awards inclu</div>
+              
+              <div class="news-card-meta">
+                <span>March 16, 2026</span>
+                <a href="articles/rss-66d9619fa6a3bdf1.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&auto=format&fit=crop"
+                 alt="Gunnar Pro Lens Line With New Mineral Glass Tech Targets Post Pros"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-11c973a59d7e7a75.html">Gunnar Pro Lens Line With New Mineral Glass Tech Targets Post Pros</a>
+              </div>
+              
+              <div class="news-card-summary">If you work in this industry, you are on the computer all the time and dealing with eye strain.</div>
+              
+              <div class="news-card-meta">
+                <span>March 13, 2026</span>
+                <a href="articles/rss-11c973a59d7e7a75.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&auto=format&fit=crop"
+                 alt="“Billy Could Have Been My Own Brother”: Rachel Mason on Her SXSW Doc My Brother’s Killer"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-da4920f1453305df.html">“Billy Could Have Been My Own Brother”: Rachel Mason on Her SXSW Doc My Brother’s Killer</a>
+              </div>
+              
+              <div class="news-card-summary">Rachel Mason’s gripping true crime doc My Brother’s Killer is, first and foremost, a love letter.</div>
+              
+              <div class="news-card-meta">
+                <span>March 13, 2026</span>
+                <a href="articles/rss-da4920f1453305df.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=800&auto=format&fit=crop"
+                 alt="Union Provides VFX for 28 Years Later: The Bone Temple"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-596acbca1d5836d2.html">Union Provides VFX for 28 Years Later: The Bone Temple</a>
+              </div>
+              
+              <div class="news-card-summary">London’s Union was the sole visual effects vendor on 28 Years Later: The Bone Temple , directed by Nia DaCosta, written by Alex Garland and starring Ralph Fiennes and Jack O’Connell.</div>
+              
+              <div class="news-card-meta">
+                <span>March 12, 2026</span>
+                <a href="articles/rss-596acbca1d5836d2.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop"
+                 alt="What is Visual Reasoning AI and how is it reinventing live broadcast?"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-7863c4a3556b5ec4.html">What is Visual Reasoning AI and how is it reinventing live broadcast?</a>
+              </div>
+              
+              <div class="news-card-summary">Visual Reasoning AI is transforming video broadcasting workflows, but what is it exactly, and how does it work?</div>
+              
+              <div class="news-card-meta">
+                <span>March 12, 2026</span>
+                <a href="articles/rss-7863c4a3556b5ec4.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1501526029524-a8ea952b15be?w=800&auto=format&fit=crop"
+                 alt="Samyang is working on four new lens concepts including a full-frame F1.8 200 mm prime"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-e893092b2470c8e9.html">Samyang is working on four new lens concepts including a full-frame F1.8 200 mm prime</a>
+              </div>
+              
+              <div class="news-card-summary">The French website Phototrend has recently reported some exciting brand-new lenses being developed by Samyang.</div>
+              
+              <div class="news-card-meta">
+                <span>March 11, 2026</span>
+                <a href="articles/rss-e893092b2470c8e9.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop"
+                 alt="DP and Colorist on HBO’s DTF St. Louis Talk Look and Workflow"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-6bec23efaffeef1b.html">DP and Colorist on HBO’s DTF St. Louis Talk Look and Workflow</a>
+              </div>
+              
+              <div class="news-card-summary">The HBO miniseries DTF St.</div>
+              
+              <div class="news-card-meta">
+                <span>March 10, 2026</span>
+                <a href="articles/rss-6bec23efaffeef1b.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1488229297570-58520851e868?w=800&auto=format&fit=crop"
+                 alt="CAS Award Winners Include F1, The Pitt, The Studio and More"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-ffeab54acd34da08.html">CAS Award Winners Include F1, The Pitt, The Studio and More</a>
+              </div>
+              
+              <div class="news-card-summary">The Cinema Audio Society ( CAS ) has revealed the winners of the 62nd Annual CAS Awards, which honor excellence in sound mixing across motion pictures, television and non-fiction programming.</div>
+              
+              <div class="news-card-meta">
+                <span>March 09, 2026</span>
+                <a href="articles/rss-ffeab54acd34da08.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1480944657103-7fed22359e1d?w=800&auto=format&fit=crop"
+                 alt="Colorist Chat: The Refinery’s Liam Traynor"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-95d2f1694ab91948.html">Colorist Chat: The Refinery’s Liam Traynor</a>
+              </div>
+              
+              <div class="news-card-summary">Liam Traynor is a colorist at The Refinery , a full-service post and VFX studio for digital media, including film and television.</div>
+              
+              <div class="news-card-meta">
+                <span>March 09, 2026</span>
+                <a href="articles/rss-95d2f1694ab91948.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1509822929063-6b6cfc9b42f2?w=800&auto=format&fit=crop"
+                 alt="EdMon Adds Minority Language Production Accessibility for Editors"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-c316f166ab66fb10.html">EdMon Adds Minority Language Production Accessibility for Editors</a>
+              </div>
+              
+              <div class="news-card-summary">EdMon has developed a workflow designed to help editors work with content even if they don’t speak the language.</div>
+              
+              <div class="news-card-meta">
+                <span>March 09, 2026</span>
+                <a href="articles/rss-c316f166ab66fb10.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&auto=format&fit=crop"
+                 alt="Black Math Reveals Art-First Playbook for Generative AI Era"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-c23cf68435c41c0d.html">Black Math Reveals Art-First Playbook for Generative AI Era</a>
+              </div>
+              
+              <div class="news-card-summary">Black Math debuts a brand relaunch that formalizes "Start with Art" framework as major tech collaborates & high-growth brands continue to engage the studio.</div>
+              
+              <div class="news-card-meta">
+                <span>March 09, 2026</span>
+                <a href="articles/rss-c23cf68435c41c0d.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format&fit=crop"
+                 alt="MOUVO 2026: Exploring Space in Motion Design"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-21d809e9c57f0782.html">MOUVO 2026: Exploring Space in Motion Design</a>
+              </div>
+              
+              <div class="news-card-summary">As MOUVO returns for its 11th edition, the Prague conference invites the Motion Design community to explore the idea of Space, not just as a physical environment, but as the creative territory where d</div>
+              
+              <div class="news-card-meta">
+                <span>March 09, 2026</span>
+                <a href="articles/rss-21d809e9c57f0782.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop"
+                 alt="Apple announces new MacBook Pro with M5 Pro and M5 Max"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-421674b01988e9f3.html">Apple announces new MacBook Pro with M5 Pro and M5 Max</a>
+              </div>
+              
+              <div class="news-card-summary">They are powered by the all-new M5 Pro and M5 Max which promise “game-changing” performance and AI capabilities.</div>
+              
+              <div class="news-card-meta">
+                <span>March 07, 2026</span>
+                <a href="articles/rss-421674b01988e9f3.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop"
+                 alt="Apple announces new MacBook Air with M5"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-90f0d6942bfe6325.html">Apple announces new MacBook Air with M5</a>
+              </div>
+              
+              <div class="news-card-summary">Apple has announced the new 13-inch and 15-inch MacBook Air with M5.</div>
+              
+              <div class="news-card-meta">
+                <span>March 07, 2026</span>
+                <a href="articles/rss-90f0d6942bfe6325.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop"
+                 alt="Kino Pro Video Camera for iPhone app now supports Apple Log 2"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-eff7f63408c2e1f7.html">Kino Pro Video Camera for iPhone app now supports Apple Log 2</a>
+              </div>
+              
+              <div class="news-card-summary">Now Lux, the company behind the app has given it another boost by adding support for Apple Log 2.</div>
+              
+              <div class="news-card-meta">
+                <span>March 07, 2026</span>
+                <a href="articles/rss-eff7f63408c2e1f7.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format&fit=crop"
+                 alt="Palmieri Favola | Dadomani Animation Studio – Leonardo Ponzano"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-81a9b691ac25c923.html">Palmieri Favola | Dadomani Animation Studio – Leonardo Ponzano</a>
+              </div>
+              
+              <div class="news-card-summary">Palmieri Favola | Dadomani Animation Studio – Leonardo Ponzano</div>
+              
+              <div class="news-card-meta">
+                <span>March 06, 2026</span>
+                <a href="articles/rss-81a9b691ac25c923.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop"
+                 alt="“A Trippy, Psychedelic Musical Odyssey”: Josef Gatti on Phenomena"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-1de2d521c35acdd7.html">“A Trippy, Psychedelic Musical Odyssey”: Josef Gatti on Phenomena</a>
+              </div>
+              
+              <div class="news-card-summary">“I found a way to look into the universe,” says non-fiction Australian filmmaker Josef Gatti in his feature debut Phenomena.</div>
+              
+              <div class="news-card-meta">
+                <span>March 05, 2026</span>
+                <a href="articles/rss-1de2d521c35acdd7.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1509822929063-6b6cfc9b42f2?w=800&auto=format&fit=crop"
+                 alt="For Once, the Oscars Are Unpredictable"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-d01738edae784b22.html">For Once, the Oscars Are Unpredictable</a>
+              </div>
+              
+              <div class="news-card-summary">As we come to the end of a long awards season—the Oscars are, miraculously, less than two weeks away, and final voting closes this Thursday—it’s remarkable that the race feels as up-in-the-air as it d</div>
+              
+              <div class="news-card-meta">
+                <span>March 03, 2026</span>
+                <a href="articles/rss-d01738edae784b22.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop"
+                 alt="New in Frame.io: Deeper Automation, Stronger Security, and Smarter Mobile Search"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-6f857f617f8c1c6a.html">New in Frame.io: Deeper Automation, Stronger Security, and Smarter Mobile Search</a>
+              </div>
+              
+              <div class="news-card-summary">January brought a set of Frame.io product updates focused on scale—helping teams automate more of their workflows, protect work with greater confidence, and find the right media faster, even when they</div>
+              
+              <div class="news-card-meta">
+                <span>February 10, 2026</span>
+                <a href="articles/rss-6f857f617f8c1c6a.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop"
+                 alt="The Ultimate Guide to the New Frame.io Search Experience"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-a0ea1c0194b214d7.html">The Ultimate Guide to the New Frame.io Search Experience</a>
+              </div>
+              
+              <div class="news-card-summary">The most significant evolution in Frame.io search—ever.</div>
+              
+              <div class="news-card-meta">
+                <span>December 01, 2025</span>
+                <a href="articles/rss-a0ea1c0194b214d7.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1488229297570-58520851e868?w=800&auto=format&fit=crop"
+                 alt="Frame.io at Adobe MAX 2025: Connected Creativity for Modern Content Production"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-fa99e361fdddc825.html">Frame.io at Adobe MAX 2025: Connected Creativity for Modern Content Production</a>
+              </div>
+              
+              <div class="news-card-summary">One year.</div>
+              
+              <div class="news-card-meta">
+                <span>October 28, 2025</span>
+                <a href="articles/rss-fa99e361fdddc825.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop"
+                 alt="August + September Product Releases: Welcome to the Fall of Features"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-f4eae9b210f797cc.html">August + September Product Releases: Welcome to the Fall of Features</a>
+              </div>
+              
+              <div class="news-card-summary">With IBC behind us, we’re closing out the Summer of Shipping and kicking off the Fall of Features—our most jam-packed release window yet.</div>
+              
+              <div class="news-card-meta">
+                <span>October 02, 2025</span>
+                <a href="articles/rss-f4eae9b210f797cc.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&auto=format&fit=crop"
+                 alt="Own Your Creative Workflow: See What’s New at IBC 2025"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-98c97ee33698b966.html">Own Your Creative Workflow: See What’s New at IBC 2025</a>
+              </div>
+              
+              <div class="news-card-summary">Powerful, connected workflows purpose-built for creative teams.</div>
+              
+              <div class="news-card-meta">
+                <span>September 09, 2025</span>
+                <a href="articles/rss-98c97ee33698b966.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1560472355-536de3962603?w=800&auto=format&fit=crop"
+                 alt="Which PremiumBeat Subscription Plan is Right For You?"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-cae03a4381f2e29e.html">Which PremiumBeat Subscription Plan is Right For You?</a>
+              </div>
+              
+              <div class="news-card-summary">Finding the perfect music for your video or creative project can be a heavy load for artists, creators, and agencies.</div>
+              
+              <div class="news-card-meta">
+                <span>August 09, 2024</span>
+                <a href="articles/rss-cae03a4381f2e29e.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1501526029524-a8ea952b15be?w=800&auto=format&fit=crop"
+                 alt="Quick Tip: Best Way to Reduce Sharpness on Action Cameras in Post"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-9cdd8f73978eeb89.html">Quick Tip: Best Way to Reduce Sharpness on Action Cameras in Post</a>
+              </div>
+              
+              <div class="news-card-summary">In this video tutorial, learn tips and tricks for reducing aliasing that is common on action camera footage!</div>
+              
+              <div class="news-card-meta">
+                <span>March 21, 2024</span>
+                <a href="articles/rss-9cdd8f73978eeb89.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1488229297570-58520851e868?w=800&auto=format&fit=crop"
+                 alt="Quick Tip: Remove Yellow from Footage for Cleaner Whites"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-4978c78dc1570a1f.html">Quick Tip: Remove Yellow from Footage for Cleaner Whites</a>
+              </div>
+              
+              <div class="news-card-summary">In this video tutorial, learn how to remove yellow color cast from your footage for cleaner looking whites!</div>
+              
+              <div class="news-card-meta">
+                <span>March 08, 2024</span>
+                <a href="articles/rss-4978c78dc1570a1f.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&auto=format&fit=crop"
+                 alt="The Basics of Working with Sound in After Effects"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-8be4615f13537291.html">The Basics of Working with Sound in After Effects</a>
+              </div>
+              
+              <div class="news-card-summary">In this video tutorial, you’ll learn the basics for working with audio and sound effects in After Effects.</div>
+              
+              <div class="news-card-meta">
+                <span>March 01, 2024</span>
+                <a href="articles/rss-8be4615f13537291.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&auto=format&fit=crop"
+                 alt="How to Make Still Images Look More Dynamic in After Effects"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-6fb48f3103a8c05b.html">How to Make Still Images Look More Dynamic in After Effects</a>
+              </div>
+              
+              <div class="news-card-summary">In this tutorial, learn four ways to make images look more dynamic for your next video using After Effects.</div>
+              
+              <div class="news-card-meta">
+                <span>February 08, 2024</span>
+                <a href="articles/rss-6fb48f3103a8c05b.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop"
+                 alt="Mix Automation: How to Make a Better Sound Using Automation"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-cb722297ffb87376.html">Mix Automation: How to Make a Better Sound Using Automation</a>
+              </div>
+              
+              <div class="news-card-summary">Automation is a powerful audio tool that gives shape and space to sound.</div>
+              
+              <div class="news-card-meta">
+                <span>January 18, 2024</span>
+                <a href="articles/rss-cb722297ffb87376.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="news-card">
+            <img class="news-card-img"
+                 src="https://images.unsplash.com/photo-1580584126903-c17d41830450?w=800&auto=format&fit=crop"
+                 alt="XLR vs. Jack: Which Connector Is Right for You?"
+                 loading="lazy"
+                 onerror="this.src='assets/fallback.jpg'">
+            <div class="news-card-body">
+              <div class="news-card-title">
+                <a href="articles/rss-135f6731a9979fc8.html">XLR vs. Jack: Which Connector Is Right for You?</a>
+              </div>
+              
+              <div class="news-card-summary">Learn all about XLR and Jack cables, two of the most commonly used—and completely vital—pieces of gear in film, video, and audio production.</div>
+              
+              <div class="news-card-meta">
+                <span>January 16, 2024</span>
+                <a href="articles/rss-135f6731a9979fc8.html">Read →</a>
+              </div>
+            </div>
+          </article>
+          
         </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/ai-post-production-workflow-insights-broadcast-professionals.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="The State of AI &amp; Post-Production: What Broadcast Professionals Need to Know" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">02</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/ai-post-production-workflow-insights-broadcast-professionals.html">The State of AI &amp; Post-Production: What Broadcast Professionals Need to Know</a></div>
-          <div class="ts-card-summary">The State of AI &amp; Post-Production: What Broadcast Professionals Need to Know An independent editorial overview of the technology forces reshaping ai &amp; post-production for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            The State of AI &amp; Post-Production: What Broadcast Professionals Need to Know An independent editorial overview of the te
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/ai-post-production-workflow-insights-broadcast-professionals.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 20, 2026</span>
-          </div>
+
+        <!-- AdSense after news grid — only renders when approved -->
+        <div class="adsense-unit">
+          <ins class="adsbygoogle" style="display:block"
+               data-ad-client="ca-pub-8033069131874524"
+               data-ad-slot="auto" data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/ai-post-production-infrastructure-operations-guide-2026.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Inside AI &amp; Post-Production: Key Trends and Operational Priorities" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">03</span>
       </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/ai-post-production-infrastructure-operations-guide-2026.html">Inside AI &amp; Post-Production: Key Trends and Operational Priorities</a></div>
-          <div class="ts-card-summary">Inside AI &amp; Post-Production: Key Trends and Operational Priorities An independent editorial overview of the technology forces reshaping ai &amp; post-production for broadcast engineers and media operations professionals. Understanding what is changing helps teams plan ahead and avoid surprises. Organisa</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Inside AI &amp; Post-Production: Key Trends and Operational Priorities An independent editorial overview of the technology f
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/ai-post-production-infrastructure-operations-guide-2026.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 20, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-ai-post-prod-review-isteady-mt3-pro-gimbal.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Review: iSteady MT3 Pro gimbal" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">04</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-ai-post-prod-review-isteady-mt3-pro-gimbal.html">Review: iSteady MT3 Pro gimbal</a></div>
-          <div class="ts-card-summary">Review: iSteady MT3 Pro gimbal After reviewing many, many phone gimbals over the last couple of years, it’s nice to even up the scales with a review of a gimbal designed for heavier cameras. While most Hohem gimbals have been targeted at lighter cameras, the iSteady MT3 Pro can handle cameras up to </div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Review: iSteady MT3 Pro gimbal After reviewing many, many phone gimbals over the last couple of years, it’s nice to even
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-ai-post-prod-review-isteady-mt3-pro-gimbal.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-ai-post-prod-aputure-releases-sidus-link-pro-22-with-l.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Aputure releases Sidus Link Pro 2.2 with Layout View" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">05</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-ai-post-prod-aputure-releases-sidus-link-pro-22-with-l.html">Aputure releases Sidus Link Pro 2.2 with Layout View</a></div>
-          <div class="ts-card-summary">Aputure releases Sidus Link Pro 2.2 with Layout View This update introduces Layout View, a powerful new visual control mode that allows users to organize lighting fixtures within a spatial grid that mirrors their real-world set, with real-time visual feedback. According to Aputure, Layout View repre</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Aputure releases Sidus Link Pro 2.2 with Layout View This update introduces Layout View, a powerful new visual control m
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-ai-post-prod-aputure-releases-sidus-link-pro-22-with-l.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-ai-post-prod-viltrox-vintage-z2-ttl-a-radical-on-camer.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Viltrox Vintage Z2 TTL: a radical on-camera flash" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">06</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-ai-post-prod-viltrox-vintage-z2-ttl-a-radical-on-camer.html">Viltrox Vintage Z2 TTL: a radical on-camera flash</a></div>
-          <div class="ts-card-summary">Viltrox Vintage Z2 TTL: a radical on-camera flash Engineered for photographers who demand high-quality illumination without the inconvenient bulk and weight of traditional flash units, the new Vintage Z2 TTL comes with a slogan: Barely There. Boldly Lit. Weighing merely 52g, the Viltrox Vintage Z2 T</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Viltrox Vintage Z2 TTL: a radical on-camera flash Engineered for photographers who demand high-quality illumination with
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-ai-post-prod-viltrox-vintage-z2-ttl-a-radical-on-camer.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-ai-post-prod-behind-the-title-heavy-dutys-ecppartner-z.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1574717025058-97e3af4ef9b5?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Behind the Title: Heavy Duty’s ECP/Partner Zach Pollakoff" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">07</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-ai-post-prod-behind-the-title-heavy-dutys-ecppartner-z.html">Behind the Title: Heavy Duty’s ECP/Partner Zach Pollakoff</a></div>
-          <div class="ts-card-summary">Behind the Title: Heavy Duty’s ECP/Partner Zach Pollakoff Zach Pollakoff is an executive creative producer and partner at Heavy Duty Projects , which composes, produces, records, discovers, negotiates, licenses, edits and mixes music for advertising, TV, film and video games. The company has offices</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Behind the Title: Heavy Duty’s ECP/Partner Zach Pollakoff Zach Pollakoff is an executive creative producer and partner a
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-ai-post-prod-behind-the-title-heavy-dutys-ecppartner-z.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-19-ai-post-prod-imaginary-forces-creates-young-sherlock-t.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Imaginary Forces Creates Young Sherlock Title Sequence" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">08</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-19-ai-post-prod-imaginary-forces-creates-young-sherlock-t.html">Imaginary Forces Creates Young Sherlock Title Sequence</a></div>
-          <div class="ts-card-summary">Imaginary Forces Creates Young Sherlock Title Sequence Director Ronnie Koff of Imaginary Forces created the opening title sequence for the Prime Video series Young Sherlock , from Guy Ritchie and showrunner Matthew Parkhill. The sequence is designed to introduce the show’s themes of clues, mystery a</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Imaginary Forces Creates Young Sherlock Title Sequence Director Ronnie Koff of Imaginary Forces created the opening titl
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-19-ai-post-prod-imaginary-forces-creates-young-sherlock-t.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 19, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-18-ai-post-prod-dxo-launches-new-dxo-photolab-96.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="DxO launches new DxO PhotoLab 9.6" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">09</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-18-ai-post-prod-dxo-launches-new-dxo-photolab-96.html">DxO launches new DxO PhotoLab 9.6</a></div>
-          <div class="ts-card-summary">DxO launches new DxO PhotoLab 9.6 The latest update extends DeepPRIME XD3 — now for both Bayer and X-Trans sensors — adds diffusion to its AI Masks and introduces High-Fidelity Compression to create DNG files up to four times smaller. The updated version of DxO PhotoLab delivers, the company says, “</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            DxO launches new DxO PhotoLab 9.6 The latest update extends DeepPRIME XD3 — now for both Bayer and X-Trans sensors — add
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-18-ai-post-prod-dxo-launches-new-dxo-photolab-96.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 18, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-18-ai-post-prod-cobalt-digital-to-show-ipmx-certified-aud.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Cobalt Digital to show IPMX certified audio monitor at NAB 2026" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">10</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-18-ai-post-prod-cobalt-digital-to-show-ipmx-certified-aud.html">Cobalt Digital to show IPMX certified audio monitor at NAB 2026</a></div>
-          <div class="ts-card-summary">Cobalt Digital to show IPMX certified audio monitor at NAB 2026 Cobalt Digital will debut at NAB Show 2026 industry’s only IPMX certified audio monitor, plus multiviewers, gateways, converters and routers. Cobalt Digital designs and manufactures award-winning IP and 12G/6G/3G/HD/SD conversion, throw</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Cobalt Digital to show IPMX certified audio monitor at NAB 2026 Cobalt Digital will debut at NAB Show 2026 industry’s on
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-18-ai-post-prod-cobalt-digital-to-show-ipmx-certified-aud.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 18, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-17-ai-post-prod-lontv-atsc-30-update-broadcasters-submit-.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Lon.TV ATSC 3.0 update: «Broadcasters submit more nonsense to the FCC»" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">11</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-17-ai-post-prod-lontv-atsc-30-update-broadcasters-submit-.html">Lon.TV ATSC 3.0 update: «Broadcasters submit more nonsense to the FCC»</a></div>
-          <div class="ts-card-summary">Lon.TV ATSC 3.0 update: «Broadcasters submit more nonsense to the FCC» For several years now, Lon Seidman of Lon.TV has been fighting the broadcasters regarding their desire to encrypt the public airwaves. Lon has even gone to the extreme of traveling to the FCC offices to discuss the issue personal</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Lon.TV ATSC 3.0 update: «Broadcasters submit more nonsense to the FCC» For several years now, Lon Seidman of Lon.TV has 
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-17-ai-post-prod-lontv-atsc-30-update-broadcasters-submit-.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 17, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-17-ai-post-prod-aputure-releases-the-spotlight-mount-ii-a.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Aputure releases the Spotlight Mount II and accessories" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">12</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-17-ai-post-prod-aputure-releases-the-spotlight-mount-ii-a.html">Aputure releases the Spotlight Mount II and accessories</a></div>
-          <div class="ts-card-summary">Aputure releases the Spotlight Mount II and accessories Optimized for use with the STORM 400x and STORM 700x, the new Spotlight Mount II offers higher brightness and an advanced new optical design. The new Spotlight Mount II ellipsoidal projector as four lenses available: 19°, 26°, 36°, and the ultr</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Aputure releases the Spotlight Mount II and accessories Optimized for use with the STORM 400x and STORM 700x, the new Sp
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-17-ai-post-prod-aputure-releases-the-spotlight-mount-ii-a.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 17, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-17-ai-post-prod-tool-tip-tuesday-for-adobe-premiere-pro-f.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Tool Tip Tuesday for Adobe Premiere Pro: Fix your Cross Dissolves 2026 – You have the LEGACY as your default." loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">13</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-17-ai-post-prod-tool-tip-tuesday-for-adobe-premiere-pro-f.html">Tool Tip Tuesday for Adobe Premiere Pro: Fix your Cross Dissolves 2026 – You have the LEGACY as your default.</a></div>
-          <div class="ts-card-summary">Tool Tip Tuesday for Adobe Premiere Pro: Fix your Cross Dissolves 2026 – You have the LEGACY as your default. Welcome to Tool Tip Tuesday for Adobe Premiere Pro on ProVideo Coalition When I moved to Premiere 2026, I didn’t notice my cross-dissolve had become the legacy cross-dissolve. Didn’t catch i</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Tool Tip Tuesday for Adobe Premiere Pro: Fix your Cross Dissolves 2026 – You have the LEGACY as your default. Welcome to
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-17-ai-post-prod-tool-tip-tuesday-for-adobe-premiere-pro-f.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 17, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-17-ai-post-prod-marshall-to-launch-first-all-ip-all-weath.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Marshall to launch first all-IP all-weather 4K POV camera at NAB 2026" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">14</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-17-ai-post-prod-marshall-to-launch-first-all-ip-all-weath.html">Marshall to launch first all-IP all-weather 4K POV camera at NAB 2026</a></div>
-          <div class="ts-card-summary">Marshall to launch first all-IP all-weather 4K POV camera at NAB 2026 The original miniature UHD camera CV574 gets a new version that supports NDI|HX and adds IP67-rated weatherproof design for reliable outdoor operations. Discover the CV574-WP at NAB Show 2026. Chiseled from a block of aluminum all</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Marshall to launch first all-IP all-weather 4K POV camera at NAB 2026 The original miniature UHD camera CV574 gets a new
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-17-ai-post-prod-marshall-to-launch-first-all-ip-all-weath.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 17, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-17-ai-post-prod-after-effects-guru-meditation-adding-effe.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="After Effects Guru Meditation: Adding effects for an overall look" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">15</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-17-ai-post-prod-after-effects-guru-meditation-adding-effe.html">After Effects Guru Meditation: Adding effects for an overall look</a></div>
-          <div class="ts-card-summary">After Effects Guru Meditation: Adding effects for an overall look When I first started working in the industry, the concept of color grading video was relatively new. I loved going into grading suites and watching the colorist work through each shot and tweak them into life – it seemed like magic. P</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            After Effects Guru Meditation: Adding effects for an overall look When I first started working in the industry, the conc
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-17-ai-post-prod-after-effects-guru-meditation-adding-effe.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 17, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-16-ai-post-prod-editshare-to-demo-ai-powered-storage-and-.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="EditShare to Demo AI-Powered Storage and Media Operations at NAB" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">16</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-16-ai-post-prod-editshare-to-demo-ai-powered-storage-and-.html">EditShare to Demo AI-Powered Storage and Media Operations at NAB</a></div>
-          <div class="ts-card-summary">EditShare to Demo AI-Powered Storage and Media Operations at NAB EditShare , makers of collaborative media workflow solutions, will demonstrate its latest advancements in AI-powered media operations and high-performance NVMe storage at the 2026 NAB Show. The company will focus on how broadcasters, p</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            EditShare to Demo AI-Powered Storage and Media Operations at NAB EditShare , makers of collaborative media workflow solu
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-16-ai-post-prod-editshare-to-demo-ai-powered-storage-and-.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 16, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-13-ai-post-prod-gunnar-pro-lens-line-with-new-mineral-gla.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Gunnar Pro Lens Line With New Mineral Glass Tech Targets Post Pros" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">17</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-13-ai-post-prod-gunnar-pro-lens-line-with-new-mineral-gla.html">Gunnar Pro Lens Line With New Mineral Glass Tech Targets Post Pros</a></div>
-          <div class="ts-card-summary">Gunnar Pro Lens Line With New Mineral Glass Tech Targets Post Pros If you work in this industry, you are on the computer all the time and dealing with eye strain. Gunnar Optiks (aka Gunnar), which makes computer eyewear designed to reduce this strain, has launched its new plastic-free mineral glass </div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Gunnar Pro Lens Line With New Mineral Glass Tech Targets Post Pros If you work in this industry, you are on the computer
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-13-ai-post-prod-gunnar-pro-lens-line-with-new-mineral-gla.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 13, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-12-ai-post-prod-union-provides-vfx-for-28-years-later-the.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1574717025058-97e3af4ef9b5?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Union Provides VFX for 28 Years Later: The Bone Temple" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">18</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-12-ai-post-prod-union-provides-vfx-for-28-years-later-the.html">Union Provides VFX for 28 Years Later: The Bone Temple</a></div>
-          <div class="ts-card-summary">Union Provides VFX for 28 Years Later: The Bone Temple London’s Union was the sole visual effects vendor on 28 Years Later: The Bone Temple , directed by Nia DaCosta, written by Alex Garland and starring Ralph Fiennes and Jack O’Connell. The film is the follow-up to 28 Years Later , for which Union </div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Union Provides VFX for 28 Years Later: The Bone Temple London’s Union was the sole visual effects vendor on 28 Years Lat
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-12-ai-post-prod-union-provides-vfx-for-28-years-later-the.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 12, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-10-ai-post-prod-dp-and-colorist-on-hbos-dtf-st-louis-talk.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="DP and Colorist on HBO’s DTF St. Louis Talk Look and Workflow" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">19</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-10-ai-post-prod-dp-and-colorist-on-hbos-dtf-st-louis-talk.html">DP and Colorist on HBO’s DTF St. Louis Talk Look and Workflow</a></div>
-          <div class="ts-card-summary">DP and Colorist on HBO’s DTF St. Louis Talk Look and Workflow The HBO miniseries DTF St. Louis , loosely based on a true story, examines the strange case of local St. Louis TV weatherman Clark (Jason Bateman); his on-air ASL translator, Floyd (David Harbour); Floyd’s wife, Carol (Linda Cardellini); </div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            DP and Colorist on HBO’s DTF St. Louis Talk Look and Workflow The HBO miniseries DTF St. Louis , loosely based on a true
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-10-ai-post-prod-dp-and-colorist-on-hbos-dtf-st-louis-talk.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 10, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-10-ai-post-prod-music-house-little-beast-opens-in-la-for-.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Music House Little Beast Opens in LA for Film, TV and Advertising" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">20</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-10-ai-post-prod-music-house-little-beast-opens-in-la-for-.html">Music House Little Beast Opens in LA for Film, TV and Advertising</a></div>
-          <div class="ts-card-summary">Music House Little Beast Opens in LA for Film, TV and Advertising Founders Matt Drenik and Johanna Cranitch, along with partner and executive producer Christina Tortorelli Carlo, have come together to launch Little Beast . Born from the long-standing friendship of musicians at competing music houses</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Music House Little Beast Opens in LA for Film, TV and Advertising Founders Matt Drenik and Johanna Cranitch, along with 
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-10-ai-post-prod-music-house-little-beast-opens-in-la-for-.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 10, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-09-ai-post-prod-cas-award-winners-include-f1-the-pitt-the.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="CAS Award Winners Include F1, The Pitt, The Studio and More" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">21</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-09-ai-post-prod-cas-award-winners-include-f1-the-pitt-the.html">CAS Award Winners Include F1, The Pitt, The Studio and More</a></div>
-          <div class="ts-card-summary">CAS Award Winners Include F1, The Pitt, The Studio and More The Cinema Audio Society ( CAS ) has revealed the winners of the 62nd Annual CAS Awards, which honor excellence in sound mixing across motion pictures, television and non-fiction programming. The awards recognize outstanding achievements ac</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            CAS Award Winners Include F1, The Pitt, The Studio and More The Cinema Audio Society ( CAS ) has revealed the winners of
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-09-ai-post-prod-cas-award-winners-include-f1-the-pitt-the.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 09, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-09-ai-post-prod-colorist-chat-the-refinerys-liam-traynor.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="Colorist Chat: The Refinery’s Liam Traynor" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">22</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-09-ai-post-prod-colorist-chat-the-refinerys-liam-traynor.html">Colorist Chat: The Refinery’s Liam Traynor</a></div>
-          <div class="ts-card-summary">Colorist Chat: The Refinery’s Liam Traynor Liam Traynor is a colorist at The Refinery , a full-service post and VFX studio for digital media, including film and television. With offices in Johannesburg and Cape Town, South Africa, The Refinery offers a range of services, from set solutions to final </div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            Colorist Chat: The Refinery’s Liam Traynor Liam Traynor is a colorist at The Refinery , a full-service post and VFX stud
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-09-ai-post-prod-colorist-chat-the-refinerys-liam-traynor.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 09, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/2026-03-09-ai-post-prod-edmon-adds-minority-language-production-a.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&amp;auto=format&amp;fit=crop&amp;q=80" alt="EdMon Adds Minority Language Production Accessibility for Editors" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">23</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 AI &amp; Post-Production</span>
-            <span class="ts-card-cat-name">AI &amp; Post-Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/2026-03-09-ai-post-prod-edmon-adds-minority-language-production-a.html">EdMon Adds Minority Language Production Accessibility for Editors</a></div>
-          <div class="ts-card-summary">EdMon Adds Minority Language Production Accessibility for Editors EdMon has developed a workflow designed to help editors work with content even if they don’t speak the language. The approach addresses a long-standing challenge in producing content in minority languages, in which relatively few edit</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            EdMon Adds Minority Language Production Accessibility for Editors EdMon has developed a workflow designed to help editor
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/2026-03-09-ai-post-prod-edmon-adds-minority-language-production-a.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 09, 2026</span>
-          </div>
-        </div>
-      </article>
-      <article class="ts-card">
-        <a href="articles/rss-099d7c2980d2854d.html" style="text-decoration:none;color:inherit;">
-          <div class="ts-card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1480944657103-7fed22359e1d?w=800&amp;auto=format&amp;fit=crop" alt="DxO PhotoLab 9 Might Be the Reason to Finally Quit Adobe" loading="lazy"
-             onerror="this.src='assets/fallback.jpg'">
-        <span class="ts-card-num">24</span>
-      </div>
-        </a>
-        <div class="ts-card-body">
-          <div class="ts-card-meta">
-            <span class="ts-card-badge" style="background:#FF2D55;">🎬 Ai Post Production</span>
-            <span class="ts-card-cat-name">Ai Post Production</span>
-          </div>
-          <div class="ts-card-title"><a href="articles/rss-099d7c2980d2854d.html">DxO PhotoLab 9 Might Be the Reason to Finally Quit Adobe</a></div>
-          <div class="ts-card-summary">If you've been paying for a Lightroom Classic subscription while quietly wondering whether it's still worth it, DxO PhotoLab 9 is a direct answer to that question.</div>
-          <div class="ts-card-insight">
-            <span class="ts-card-insight-label">Key Insight</span>
-            If you've been paying for a Lightroom Classic subscription while quietly wondering whether it's still worth it, DxO Phot
-          </div>
-          <div class="ts-card-footer">
-            <a href="articles/rss-099d7c2980d2854d.html" class="ts-card-read">Read full article
-              <svg viewBox="0 0 12 12"><path d="M1 6h10M6 1l5 5-5 5"/></svg>
-            </a>
-            <span class="ts-card-date">March 01, 2026</span>
-          </div>
-        </div>
-      </article>
-        </div>
-        <div class="pag-bar"><span class="pag-link pag-disabled">&larr; Newer</span>&nbsp;<span class="pag-info">Page 1 of 2</span>&nbsp;<a href="ai-post-production-p2.html" class="pag-link">Older &rarr;</a></div>
-      </div>
-    </div>
+
+    </div><!-- /page-wrap -->
   </main>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div>
         <div class="footer-brand">THE STREAMIC</div>
-        <p>An independent broadcast and streaming technology publication. Covering streaming, cloud production, AI post-production, graphics, playout, infrastructure, and newsroom technology.</p>
+        <p>An independent broadcast and streaming technology publication. Covering streaming, cloud production, AI post-production, graphics, playout, infrastructure, and newsroom technology. Updated every six hours.</p>
       </div>
       <div class="footer-col">
         <h4>Categories</h4>
-        <a href="featured.html">Featured</a><a href="streaming.html">Streaming</a>
-        <a href="cloud.html">Cloud Production</a><a href="ai-post-production.html">AI &amp; Post-Production</a>
-        <a href="graphics.html">Graphics</a><a href="playout.html">Playout</a>
-        <a href="infrastructure.html">Infrastructure</a><a href="newsroom.html">Newsroom</a>
+        <a href="featured.html">Featured</a>
+        <a href="streaming.html">Streaming</a>
+        <a href="cloud.html">Cloud Production</a>
+        <a href="ai-post-production.html">AI &amp; Post-Production</a>
+        <a href="graphics.html">Graphics</a>
+        <a href="playout.html">Playout</a>
+        <a href="infrastructure.html">Infrastructure</a>
+        <a href="newsroom.html">Newsroom</a>
       </div>
       <div class="footer-col">
         <h4>Site Info</h4>
-        <a href="about.html">About</a><a href="contact.html">Contact</a>
-        <a href="vlog.html">Editor's Desk</a><a href="privacy.html">Privacy Policy</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="vlog.html">Editor's Desk</a>
+        <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Use</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 The Streamic &mdash; thestreamic.in. All rights reserved.</span>
+      <span>&copy; 2025 The Streamic &mdash; thestreamic.in. All rights reserved.</span>
       <span>Independent broadcast technology journalism. Trademarks belong to their respective owners.</span>
     </div>
   </footer>
-  <script>(function(){var t=document.querySelector('.nav-toggle'),n=document.querySelector('.nav-links');if(!t||!n)return;t.addEventListener('click',function(){n.classList.toggle('nav-open');});})();</script>
+
+  <script>
+    (function() {
+      var t = document.querySelector('.nav-toggle');
+      var n = document.querySelector('.nav-links');
+      if (!t || !n) return;
+      t.addEventListener('click', function() { n.classList.toggle('nav-open'); });
+    })();
+  </script>
 </body>
 </html>
