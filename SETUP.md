@@ -1,130 +1,104 @@
-# TheTechBrief-V2 — Setup & Fix Guide
+# TheTechBrief-V3 — Setup Guide
 
-## Why You Were Getting 404
+## What Changed from V2 → V3
 
-Two separate issues were causing the 404:
+### Files Replaced
+| File | Change |
+|------|--------|
+| `site/assets/styles.css` | Full redesign — Playfair Display, IBM Plex Sans, ticker bar, intel-cards |
+| `site/template_home.html` | V3 hero, live ticker, per-category sections, skeleton loaders |
+| `site/template_category.html` | Category hero, breadcrumb, featured-first layout |
+| `scripts/build.py` | V3 Intelligence Pipeline — 8-task Groq analysis system |
+| `.github/workflows/build.yml` | Updated job names + V3 comments |
+| `site/assets/trending-loader.js` | Improved V3 card renderer with CAT_DATA_MAP |
 
-1. **Missing `data/` folder** — `feeds.json` and `meta.json` were not in the repo.
-   The build script crashed silently because it couldn't find these files.
-
-2. **Wrong Pages source** — GitHub Pages was serving `site/index.html` directly
-   from the `main` branch placeholder file (which just says "building…").
-   Your custom `Build Tech Brief` workflow output was never being served.
-
----
-
-## How This Repo Now Works
-
-```
-main branch
-├── .github/workflows/build.yml   ← runs every 6 hrs + on push
-├── data/
-│   ├── feeds.json                ← RSS feed URLs
-│   └── meta.json                 ← page titles & descriptions
-├── scripts/
-│   ├── build.py                  ← main generator
-│   └── summarize.py              ← text summariser
-└── site/                         ← GitHub Pages serves this folder
-    ├── index.html                ← OVERWRITTEN by build on each run
-    ├── ai-news.html              ← OVERWRITTEN by build on each run
-    ├── [other category pages]    ← OVERWRITTEN by build on each run
-    ├── about.html                ← static — stays as-is
-    ├── contact.html              ← static — stays as-is
-    ├── assets/                   ← static CSS + SVG
-    ├── legal/                    ← static legal pages
-    └── articles/                 ← static original articles
-```
-
-The build workflow:
-1. Checks out `main`
-2. Runs `scripts/build.py` which fetches RSS feeds and writes HTML into `site/`
-3. Commits and pushes the updated `site/` files back to `main`
-4. GitHub Pages' own `pages-build-deployment` picks up the commit and deploys
+### Files Unchanged (kept from V2)
+- `scripts/generate_articles.py`
+- `scripts/summarize.py`
+- `data/feeds.json`
+- `data/meta.json`
+- All `docs/legal/*.html` pages
+- `docs/about.html`, `docs/contact.html`, `docs/how-to.html`
+- All `docs/articles/*.html` (evergreen articles)
 
 ---
 
-## Step-by-Step Setup (Do This Once)
+## Step 1 — Upload to GitHub
 
-### Step 1 — Upload all files from this zip to your repo
+Upload the entire V3 folder to your repo maintaining the structure.
 
-Upload everything maintaining the folder structure shown above.
-In GitHub UI: go to each folder and use "Add file → Upload files".
-
-**Critical folders that must exist:**
-- `data/feeds.json` ✓
-- `data/meta.json` ✓
-- `scripts/build.py` ✓
-- `scripts/summarize.py` ✓
-- `site/template_home.html` ✓
-- `site/template_category.html` ✓
-
-### Step 2 — Verify GitHub Pages settings
-
-1. Go to your repo → **Settings** → **Pages**
-2. Under **Source**: select **"Deploy from a branch"**
-3. Branch: **`main`**   Folder: **`/ (root)`** → **No — use `/site`**
-
-   ⚠️ GitHub Pages can serve a subfolder:
-   - Branch: `main`
-   - Folder: `/site`   ← set this
-
-   If `/site` subfolder option is not available in the UI, use the root and
-   move all `site/` contents up one level, OR keep using the gh-pages approach
-   from the previous build.yml (both work — see note below).
-
-### Step 3 — Trigger the build manually
-
-1. Go to **Actions** tab in your repo
-2. Click **"Build Tech Brief"** in the left sidebar
-3. Click **"Run workflow"** → **"Run workflow"** (green button)
-4. Watch the logs — should complete in ~60–90 seconds
-
-### Step 4 — Verify
-
-After the workflow succeeds, visit:
-`https://allroundertechbrief.github.io/TheTechBrief/`
-
-Or for the V2 repo:
-`https://allroundertechbrief.github.io/TheTechbrief-V2/`
+**Critical files that must be uploaded:**
+- `scripts/build.py` ✓ (V3 Intelligence Pipeline)
+- `site/template_home.html` ✓ (V3 design)
+- `site/template_category.html` ✓ (V3 design)
+- `site/assets/styles.css` ✓ (V3 stylesheet)
+- `site/assets/trending-loader.js` ✓
+- `.github/workflows/build.yml` ✓ (V3 workflow)
 
 ---
 
-## If Pages Can't Serve `/site` Subfolder
+## Step 2 — Add GROQ_API_KEY Secret
 
-Some GitHub accounts can only serve from root or `docs/` folder.
-In that case, use this alternative workflow approach:
-
-Change the last step in `build.yml` from the git commit approach to:
-
-```yaml
-      - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: site
-          publish_branch: gh-pages
-          force_orphan: true
-```
-
-Then set Pages source to: Branch `gh-pages` / folder `/ (root)`.
+1. Go to your repo → **Settings** → **Secrets and variables** → **Actions**
+2. Click **New repository secret**
+3. Name: `GROQ_API_KEY`
+4. Value: your Groq API key from https://console.groq.com
+5. Click **Add secret**
 
 ---
 
-## Build Schedule
+## Step 3 — Verify GitHub Pages Settings
 
-The workflow runs automatically:
-- Every **6 hours** (cron: `0 */6 * * *`)
-- On every push to `main`
-- Manually via Actions → Run workflow
+1. Settings → **Pages**
+2. Source: **Deploy from a branch**
+3. Branch: **main** / Folder: **`/docs`**
+
+---
+
+## Step 4 — Trigger First Build
+
+1. Actions tab → **🤖 The Tech Brief V3 — Intelligence Build**
+2. Click **Run workflow** → **Run workflow**
+3. Watch the logs — should complete in 90–120 seconds
+
+---
+
+## V3 Intelligence Pipeline Explained
+
+When Groq is enabled, each RSS article is processed through:
+
+1. **Category mapping** — identifies relevant tech categories
+2. **Tech term extraction** — names specific technologies, frameworks, protocols
+3. **Executive summary** — 3-4 line dense insight (not news recap)
+4. **Why it matters** — business impact, industry disruption, security implications
+5. **Trend analysis** — 2025–2027 outlook (accelerating/declining/hype vs real)
+6. **Strategic insights** — actionable recommendations for organisations
+7. **SEO title + meta** — high-CPC keyword optimised
+8. **Editorial body** — 140-180 word analytical paragraph
+
+This means every article page on the site reads like expert analyst output, not an automated summary.
 
 ---
 
 ## Contact Form Activation
 
-The contact form at `/contact.html` uses Formspree.
-To activate it:
-1. Sign up free at https://formspree.io
-2. Create a new form — copy your form ID (e.g. `xabc1234`)
-3. In `site/contact.html`, replace `YOUR_FORMSPREE_ID` with your ID:
-   `action="https://formspree.io/f/xabc1234"`
-4. Commit the change — form will now send emails to your address
+In `docs/contact.html`, replace `YOUR_FORMSPREE_ID`:
+```
+action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+```
+Sign up at https://formspree.io (free tier available).
+
+---
+
+## AdSense Application Checklist
+
+Before applying:
+- [ ] At least 15-20 original articles published
+- [ ] About page with editorial team description
+- [ ] Privacy Policy present (docs/legal/privacy.html ✓)
+- [ ] Terms of Use present (docs/legal/terms.html ✓)
+- [ ] Disclaimer present (docs/legal/disclaimer.html ✓)
+- [ ] Contact page functional
+- [ ] No scraped/copied content (V3 intelligence rewrites handle this)
+- [ ] Custom domain active (thetechbrief.net)
+- [ ] Site indexed in Google Search Console

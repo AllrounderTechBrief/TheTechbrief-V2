@@ -2,319 +2,234 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Google Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
       'analytics_storage': 'denied', 'ad_storage': 'denied',
-      'ad_user_data': 'denied', 'ad_personalization': 'denied', 'wait_for_update': 500
+      'ad_user_data': 'denied', 'ad_personalization': 'denied',
+      'wait_for_update': 500
     });
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJEGDPW7G"></script>
   <script>gtag('js', new Date()); gtag('config', 'G-YCJEGDPW7G');</script>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>{{ meta.title }}</title>
   <meta name="description" content="{{ meta.description }}">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.thetechbrief.net/{{ meta.slug }}.html">
-
-  <meta property="og:type"        content="website">
-  <meta property="og:site_name"   content="The Tech Brief">
-  <meta property="og:title"       content="{{ meta.title }}">
+  <link rel="canonical" href="https://www.thetechbrief.net/{{ page_slug }}.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Tech Brief">
+  <meta property="og:title" content="{{ meta.title }}">
   <meta property="og:description" content="{{ meta.description }}">
-  <meta property="og:url"         content="https://www.thetechbrief.net/{{ meta.slug }}.html">
-
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="{{ meta.title }}">
+  <meta property="og:url" content="https://www.thetechbrief.net/{{ page_slug }}.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ meta.title }}">
   <meta name="twitter:description" content="{{ meta.description }}">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "{{ meta.h1 }}",
+    "name": "{{ category }} — The Tech Brief",
+    "url": "https://www.thetechbrief.net/{{ page_slug }}.html",
     "description": "{{ meta.description }}",
-    "url": "https://www.thetechbrief.net/{{ meta.slug }}.html",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.thetechbrief.net/"},
-        {"@type":"ListItem","position":2,"name":"{{ meta.h1 }}","item":"https://www.thetechbrief.net/{{ meta.slug }}.html"}
-      ]
-    },
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/"
-    },
     "publisher": {
       "@type": "Organization",
       "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/",
-      "email": "technodate3@gmail.com"
+      "url": "https://www.thetechbrief.net"
     }
   }
   </script>
-
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
-
-  <style>
-    /* ── Fix: uniform cards — remove the broken first-card split layout ── */
-    .grid .card:first-child {
-      grid-column: auto !important;
-      display: flex !important;
-      flex-direction: column !important;
-      grid-template-columns: unset !important;
-    }
-    .grid .card:first-child img {
-      width: 100% !important;
-      height: 185px !important;
-      object-fit: cover !important;
-      border-radius: var(--radius) var(--radius) 0 0 !important;
-    }
-
-    /* ── Editorial article cards (deep-dives from generate_articles.py) ── */
-    .editorial-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent-2);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      display: flex; flex-direction: column;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .editorial-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .editorial-card img {
-      width: 100%; height: 185px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .editorial-card .ec-body {
-      padding: 18px 20px 12px; flex: 1;
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    .editorial-card .ec-badge {
-      display: inline-block; background: var(--accent-2); color: #fff;
-      font-size: 10px; font-weight: 700; letter-spacing: .8px;
-      text-transform: uppercase; padding: 3px 9px; border-radius: 999px;
-      align-self: flex-start;
-    }
-    .editorial-card h3 {
-      font-family: var(--font-serif); font-size: 18px;
-      line-height: 1.3; color: var(--ink); flex: 1;
-    }
-    .editorial-card h3 a { color: inherit; }
-    .editorial-card h3 a:hover { color: var(--accent); }
-    .editorial-card .ec-desc { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
-    .editorial-card .ec-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .editorial-card .ec-meta { font-size: 11px; color: var(--ink-3); font-family: var(--font-mono); }
-    .ec-read {
-      font-size: 12.5px; font-weight: 600; color: var(--accent);
-    }
-    .ec-read:hover { color: var(--accent-h); }
-    .ec-read::after { content: ' →'; }
-
-    /* ── Standard editorial news cards ── */
-    /* Same .card class but with cleaned footer — no source attribution */
-    .card .card-footer-clean {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .card .card-date-tag {
-      font-size: 11px; color: var(--ink-3); font-family: var(--font-mono);
-    }
-
-    /* ── "In focus" featured card for latest item in category ── */
-    .in-focus-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      margin-bottom: 28px;
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 768px) {
-      .in-focus-card { grid-template-columns: 340px 1fr; }
-      .in-focus-card img { height: 100%; min-height: 220px; border-radius: var(--radius) 0 0 var(--radius); }
-    }
-    .in-focus-card img {
-      width: 100%; height: 220px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .in-focus-body {
-      padding: 24px 28px;
-      display: flex; flex-direction: column; gap: 12px;
-    }
-    .in-focus-label {
-      font-size: 10px; font-weight: 700; letter-spacing: 1.2px;
-      text-transform: uppercase; color: var(--accent);
-      font-family: var(--font-mono);
-    }
-    .in-focus-body h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(20px, 2.5vw, 28px);
-      line-height: 1.25; color: var(--ink);
-    }
-    .in-focus-body h2 a { color: inherit; }
-    .in-focus-body h2 a:hover { color: var(--accent); }
-    .in-focus-body p {
-      font-size: 15px; color: var(--ink-2); line-height: 1.65; flex: 1;
-    }
-    .in-focus-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 12px; margin-top: auto; padding-top: 14px;
-      border-top: 1px solid var(--border);
-    }
-    .in-focus-date { font-size: 12px; color: var(--ink-3); font-family: var(--font-mono); }
-  </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<!-- ===== TICKER ===== -->
+<div class="ticker-bar" aria-hidden="true">
+  <span class="ticker-label">LIVE</span>
+  <div class="ticker-track-wrap">
+    <div class="ticker-track">
+      <span class="ticker-item"><span>AI</span>LLM inference costs down 80% year-on-year across major cloud providers</span>
+      <span class="ticker-item"><span>CYBER</span>State-sponsored APT groups increasingly targeting critical infrastructure OT networks</span>
+      <span class="ticker-item"><span>ENTERPRISE</span>Gartner: 65% of enterprises to deploy AI agents in production by end of 2026</span>
+      <span class="ticker-item"><span>EVs</span>Global EV penetration hits 28% of new car sales in Q1 2026</span>
+      <span class="ticker-item"><span>MOBILE</span>Qualcomm Snapdragon X2 benchmarks leak ahead of MWC announcement</span>
+      <span class="ticker-item"><span>AI</span>LLM inference costs down 80% year-on-year across major cloud providers</span>
+      <span class="ticker-item"><span>CYBER</span>State-sponsored APT groups increasingly targeting critical infrastructure OT networks</span>
+      <span class="ticker-item"><span>ENTERPRISE</span>Gartner: 65% of enterprises to deploy AI agents in production by end of 2026</span>
+      <span class="ticker-item"><span>EVs</span>Global EV penetration hits 28% of new car sales in Q1 2026</span>
+      <span class="ticker-item"><span>MOBILE</span>Qualcomm Snapdragon X2 benchmarks leak ahead of MWC announcement</span>
+    </div>
+  </div>
+</div>
 
 <!-- ===== HEADER ===== -->
 <header class="site-header" role="banner">
-  <a href="index.html" class="header-brand" aria-label="The Tech Brief — Home">
-    <div class="brand-icon" aria-hidden="true">TB</div>
-    <span class="brand-name">Tech Brief</span>
+  <a href="index.html" class="header-brand" aria-label="The Tech Brief home">
+    <div class="brand-icon">TB</div>
+    <div>
+      <span class="brand-name">The Tech Brief</span>
+      <span class="brand-tagline">Technology Intelligence</span>
+    </div>
   </a>
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="currentColor"/><rect y="10" width="22" height="2" rx="1" fill="currentColor"/><rect y="16" width="22" height="2" rx="1" fill="currentColor"/></svg>
   </button>
-  <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
-    <a href="index.html">Home</a>
-    <a href="ai-news.html">AI News</a>
-    <a href="broadcast-tech.html">Broadcast Tech</a>
-    <a href="enterprise-tech.html">Enterprise Tech</a>
-    <a href="cybersecurity-updates.html">Cybersecurity</a>
-    <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
-    <a href="consumer-tech.html">Consumer Tech</a>
-    <a href="gaming.html">Gaming</a>
-    <a href="evs-automotive.html">EVs &amp; Automotive</a>
-    <a href="startups-business.html">Startups &amp; Business</a>
-    <a href="how-to.html">How-To Guides</a>
+  <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
+    <a href="ai-news.html" {% if page_slug == 'ai-news' %}aria-current="page"{% endif %}>AI</a>
+    <a href="cybersecurity-updates.html" {% if page_slug == 'cybersecurity-updates' %}aria-current="page"{% endif %}>Cybersecurity</a>
+    <a href="enterprise-tech.html" {% if page_slug == 'enterprise-tech' %}aria-current="page"{% endif %}>Enterprise</a>
+    <a href="mobile-gadgets.html" {% if page_slug == 'mobile-gadgets' %}aria-current="page"{% endif %}>Mobile</a>
+    <a href="evs-automotive.html" {% if page_slug == 'evs-automotive' %}aria-current="page"{% endif %}>EVs</a>
+    <a href="gaming.html" {% if page_slug == 'gaming' %}aria-current="page"{% endif %}>Gaming</a>
+    <a href="startups-business.html" {% if page_slug == 'startups-business' %}aria-current="page"{% endif %}>Startups</a>
+    <a href="how-to.html" {% if page_slug == 'how-to' %}aria-current="page"{% endif %}>How-To</a>
     <a href="about.html" class="nav-cta">About</a>
   </nav>
 </header>
 
 <!-- ===== CATEGORY HERO ===== -->
-<section class="cat-hero" aria-label="Category overview">
+<div class="cat-hero">
   <div class="cat-hero-inner">
-    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-      <a href="index.html">Home</a>
-      <span aria-hidden="true">&rsaquo;</span>
-      <span aria-current="page">{{ meta.h1 }}</span>
-    </nav>
-    <h1 class="cat-hero-title">{{ meta.h1 }}</h1>
-    <p class="cat-hero-desc">{{ meta.h2 }}</p>
+    <div>
+      <p class="cat-crumb"><a href="index.html">Home</a> &rsaquo; {{ category }}</p>
+      <h1 class="cat-hero-title">
+        <span>{{ cat_icon | default('📰') }}</span>{{ category }}
+      </h1>
+      <p class="cat-hero-meta">{{ article_count }} articles &middot; Updated every 6 hours &middot; {{ build_ts }}</p>
+    </div>
   </div>
-</section>
+</div>
 
-<!-- ===== MAIN CONTENT ===== -->
-<main id="main-content">
+<!-- ===== MAIN ===== -->
+<main id="main">
 
-  <!-- ===== EDITORIAL DEEP DIVES ===== -->
-  {% if cat_editorial %}
+  <!-- ===== FEATURED ARTICLES ===== -->
+  {% if articles %}
   <div class="section">
     <div class="section-head">
-      <h2>&#x270D;&#xFE0F; Original Analysis &amp; Deep Dives</h2>
-      <span class="section-count">{{ cat_editorial | length }} original article{{ 's' if cat_editorial | length != 1 else '' }} written by The Tech Brief editorial team</span>
-      <span class="section-sub">In-depth original reporting on {{ meta.h1 }} — not reproduced from any external source</span>
+      <h2>Latest <span class="accent">{{ category }}</span></h2>
+      <span class="section-sub">{{ article_count }} articles · refreshed every 6 hrs</span>
     </div>
 
-    {% if cat_editorial | length == 1 and cat_editorial[0].image %}
-    <!-- Single editorial article — show as featured in-focus card -->
-    <div class="in-focus-card">
-      <img src="{{ cat_editorial[0].image }}" alt="Editorial illustration: {{ cat_editorial[0].title }}" loading="lazy" width="340" height="220">
-      <div class="in-focus-body">
-        <span class="in-focus-label">✍ Original Analysis &mdash; The Tech Brief</span>
-        <h2><a href="{{ cat_editorial[0].url }}">{{ cat_editorial[0].title }}</a></h2>
-        <p>{{ cat_editorial[0].description }}</p>
-        <div class="in-focus-footer">
-          <span class="in-focus-date">{{ cat_editorial[0].date }} &middot; {{ cat_editorial[0].read_minutes }} min read</span>
-          <a href="{{ cat_editorial[0].url }}" class="ec-read">Read full analysis</a>
+    <!-- First article featured -->
+    {% if articles[0] %}
+    <div style="margin-bottom: 22px;">
+      <article class="card" style="max-width: 100%; flex-direction: row; min-height: 200px;" itemscope itemtype="https://schema.org/Article">
+        {% if articles[0].image_url %}
+        <img src="{{ articles[0].image_url }}" alt="{{ articles[0].title }}" loading="eager"
+          style="width: 340px; min-width: 240px; height: auto; object-fit: cover; flex-shrink: 0; border-radius: var(--radius) 0 0 var(--radius);"
+          itemprop="image">
+        {% endif %}
+        <div style="display: flex; flex-direction: column; flex: 1;">
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-cat card-cat-{{ page_slug | replace('-','') }}">{{ category }}</span>
+              <time datetime="{{ articles[0].pub_date }}">{{ articles[0].pub_date_fmt }}</time>
+            </div>
+            <h2 itemprop="headline" style="font-family: var(--font-serif); font-size: clamp(18px, 2.5vw, 24px); line-height: 1.25; color: var(--ink); font-weight: 700;">
+              <a href="{{ articles[0].url }}" style="color: inherit;">{{ articles[0].title }}</a>
+            </h2>
+            <p class="card-desc">{{ articles[0].summary[:220] }}{% if articles[0].summary|length > 220 %}…{% endif %}</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-date">{{ articles[0].read_time | default('5 min read') }}</span>
+            <a href="{{ articles[0].url }}" class="card-read">Read analysis</a>
+          </div>
         </div>
-      </div>
+      </article>
+    </div>
+
+    <style>
+      @media (max-width: 600px) {
+        .feat-article { flex-direction: column !important; }
+        .feat-article img { width: 100% !important; border-radius: var(--radius) var(--radius) 0 0 !important; height: 200px !important; }
+      }
+    </style>
+    {% endif %}
+
+    <!-- Remaining articles grid -->
+    <div class="grid">
+      {% for article in articles[1:] %}
+      <article class="card" itemscope itemtype="https://schema.org/Article">
+        {% if article.image_url %}
+        <img src="{{ article.image_url }}" alt="{{ article.title }}" class="card-img" loading="lazy" itemprop="image">
+        {% endif %}
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat card-cat-{{ page_slug | replace('-','') }}">{{ category }}</span>
+            <time datetime="{{ article.pub_date }}">{{ article.pub_date_fmt }}</time>
+          </div>
+          <h3 itemprop="headline"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          <p class="card-desc">{{ article.summary[:140] }}{% if article.summary|length > 140 %}…{% endif %}</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">{{ article.read_time | default('4 min read') }}</span>
+          <a href="{{ article.url }}" class="card-read">Read brief</a>
+        </div>
+      </article>
+      {% endfor %}
     </div>
 
     {% else %}
-    <!-- Multiple editorial articles — grid -->
-    <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(290px,1fr));">
-      {% for article in cat_editorial %}
-      <article class="editorial-card" aria-label="{{ article.title }}">
-        {% if article.image %}
-        <img src="{{ article.image }}" alt="Editorial illustration: {{ article.title }}" loading="lazy" width="400" height="185">
-        {% endif %}
-        <div class="ec-body">
-          <span class="ec-badge">✍ Original Analysis</span>
-          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-          <p class="ec-desc">{{ article.description }}</p>
-        </div>
-        <div class="ec-footer">
-          <span class="ec-meta">{{ article.date }} &middot; {{ article.read_minutes }} min</span>
-          <a href="{{ article.url }}" class="ec-read">Read analysis</a>
-        </div>
-      </article>
-      {% endfor %}
+    <!-- Empty state -->
+    <div class="info-box" style="text-align: center; padding: 40px;">
+      <p><strong>Content updating…</strong> Our build system is fetching the latest {{ category }} coverage. Check back shortly or <a href="index.html">return to the homepage</a>.</p>
     </div>
     {% endif %}
   </div>
-  {% endif %}
 
-  <!-- ===== EDITORIAL NEWS COVERAGE ===== -->
-  {% if cards %}
-  <div class="section" {% if cat_editorial %}style="padding-top:0;"{% endif %}>
+  <!-- ===== AD SLOT ===== -->
+  <div class="section" style="padding-top: 0; padding-bottom: 0;">
+    <!-- AdSense slot -->
+  </div>
+
+  <!-- ===== EDITORIAL ARTICLES ===== -->
+  {% if editorial_articles %}
+  <div class="section">
     <div class="section-head">
-      <h2>{{ meta.h1 }} Coverage</h2>
-      <span class="section-count">{{ cards | length }} editorially-written pieces &mdash; refreshed every 6 hours</span>
-      <span class="section-sub">Original editorial commentary and analysis on the latest developments in {{ meta.h1 }}</span>
+      <h2>📝 Original Analysis</h2>
+      <span class="section-sub">Written by The Tech Brief team</span>
     </div>
-    <div class="grid">
-      {% for card in cards %}
-      <article class="card" aria-label="{{ card.title }}">
-        {% if card.image %}
-        <div class="card-img-wrap">
-          <img src="{{ card.image }}" alt="{{ card.title }}" loading="lazy" width="400" height="185">
-        </div>
-        {% endif %}
-        <div class="card-body">
-          <h3><a href="{{ card.internal_url }}">{{ card.title }}</a></h3>
-          <p class="card-summary">{{ card.summary }}</p>
-        </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">{% if card.date %}{{ card.date }}{% else %}The Tech Brief{% endif %}</span>
-          <a href="{{ card.internal_url }}" class="read-link" aria-label="Read: {{ card.title }}">Read more</a>
+    <div class="intel-grid">
+      {% for art in editorial_articles %}
+      <article class="intel-card" data-cat="{{ page_slug | replace('-updates','') | replace('-tech','') | replace('-gadgets','') | replace('mobile-','mobile') }}">
+        <span class="intel-badge">Editorial</span>
+        <h3><a href="{{ art.url }}">{{ art.title }}</a></h3>
+        <p>{{ art.summary[:120] }}{% if art.summary|length > 120 %}…{% endif %}</p>
+        <div class="intel-footer">
+          <time>{{ art.pub_date_fmt }}</time>
+          <a href="{{ art.url }}" class="intel-read">Read analysis</a>
         </div>
       </article>
       {% endfor %}
     </div>
   </div>
-  {% else %}
-  <!-- No cards yet — generator hasn't run or cache is empty -->
-  <div class="section">
-    <div class="info-box">
-      <p><strong>Coverage is building.</strong> The Tech Brief editorial team is preparing in-depth analysis and commentary for this category. Check back soon, or <a href="index.html">return to the homepage</a> to explore our other coverage.</p>
-    </div>
-  </div>
   {% endif %}
 
-
+  <!-- ===== BROWSE OTHER CATEGORIES ===== -->
+  <div class="section">
+    <div class="section-head">
+      <h2>More Coverage</h2>
+    </div>
+    <nav class="cat-tile-grid" aria-label="Browse other categories">
+      {% if page_slug != 'ai-news' %}<a href="ai-news.html" class="cat-tile"><span class="cat-tile-icon">🤖</span><span class="cat-tile-name">AI News</span></a>{% endif %}
+      {% if page_slug != 'cybersecurity-updates' %}<a href="cybersecurity-updates.html" class="cat-tile"><span class="cat-tile-icon">🔐</span><span class="cat-tile-name">Cybersecurity</span></a>{% endif %}
+      {% if page_slug != 'enterprise-tech' %}<a href="enterprise-tech.html" class="cat-tile"><span class="cat-tile-icon">🏢</span><span class="cat-tile-name">Enterprise Tech</span></a>{% endif %}
+      {% if page_slug != 'mobile-gadgets' %}<a href="mobile-gadgets.html" class="cat-tile"><span class="cat-tile-icon">📱</span><span class="cat-tile-name">Mobile &amp; Gadgets</span></a>{% endif %}
+      {% if page_slug != 'evs-automotive' %}<a href="evs-automotive.html" class="cat-tile"><span class="cat-tile-icon">🚗</span><span class="cat-tile-name">EVs &amp; Automotive</span></a>{% endif %}
+      {% if page_slug != 'gaming' %}<a href="gaming.html" class="cat-tile"><span class="cat-tile-icon">🎮</span><span class="cat-tile-name">Gaming</span></a>{% endif %}
+      {% if page_slug != 'startups-business' %}<a href="startups-business.html" class="cat-tile"><span class="cat-tile-icon">💼</span><span class="cat-tile-name">Startups &amp; Business</span></a>{% endif %}
+      {% if page_slug != 'broadcast-tech' %}<a href="broadcast-tech.html" class="cat-tile"><span class="cat-tile-icon">📡</span><span class="cat-tile-name">Broadcast Tech</span></a>{% endif %}
+      {% if page_slug != 'consumer-tech' %}<a href="consumer-tech.html" class="cat-tile"><span class="cat-tile-icon">🛒</span><span class="cat-tile-name">Consumer Tech</span></a>{% endif %}
+    </nav>
+  </div>
 
 </main>
 
@@ -323,7 +238,7 @@
   <div class="footer-inner">
     <div class="footer-about">
       <span class="brand-name">The Tech Brief</span>
-      <p>An independent technology publication delivering original editorial analysis across the technology industry. Updated every six hours, 24/7.</p>
+      <p>An independent technology publication delivering original editorial analysis across AI, cybersecurity, mobile, enterprise tech, EVs, gaming, and more.</p>
     </div>
     <div class="footer-col">
       <h4>Categories</h4>
@@ -336,7 +251,6 @@
       <a href="gaming.html">Gaming</a>
       <a href="evs-automotive.html">EVs &amp; Automotive</a>
       <a href="startups-business.html">Startups &amp; Business</a>
-      <a href="how-to.html">How-To Guides</a>
     </div>
     <div class="footer-col">
       <h4>Site Info</h4>
@@ -350,23 +264,40 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; <span id="footer-year"></span> The Tech Brief &mdash; thetechbrief.net. All rights reserved.</span>
-    <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
+    <span>&copy; <span id="footer-year"></span> The Tech Brief — thetechbrief.net. All rights reserved.</span>
+    <span>Independent technology journalism.</span>
   </div>
 </footer>
 
+<!-- ===== COOKIE BANNER ===== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <p>We use cookies to improve experience and analyse traffic. See our <a href="legal/privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn primary" id="cookieAccept">Accept</button>
+    <button class="btn secondary" id="cookieReject">Decline</button>
+  </div>
+</div>
+
 <script>
-  document.getElementById('footer-year').textContent = new Date().getFullYear();
-  (function(){
-    var c=localStorage.getItem('cookieConsent');
-    if(c){document.getElementById('cookieBanner') && document.getElementById('cookieBanner').remove();return;}
-  })();
-  (function(){
-    var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
-    if(!t||!n)return;
-    t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
-  })();
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+(function(){
+  var t=document.querySelector('.nav-toggle'), n=document.getElementById('siteNav');
+  if(!t||!n) return;
+  t.addEventListener('click', function(){ var o=n.classList.toggle('open'); t.setAttribute('aria-expanded',o); });
+})();
+(function(){
+  var c=localStorage.getItem('cookieConsent');
+  if(c){ document.getElementById('cookieBanner').remove(); return; }
+  document.getElementById('cookieAccept').onclick=function(){
+    localStorage.setItem('cookieConsent','yes');
+    document.getElementById('cookieBanner').remove();
+    gtag('consent','update',{'analytics_storage':'granted','ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+  };
+  document.getElementById('cookieReject').onclick=function(){
+    localStorage.setItem('cookieConsent','no');
+    document.getElementById('cookieBanner').remove();
+  };
+})();
 </script>
-<script src="assets/cookie-consent.js"></script>
 </body>
 </html>
