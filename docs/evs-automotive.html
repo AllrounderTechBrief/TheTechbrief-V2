@@ -2,779 +2,893 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Google Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
       'analytics_storage': 'denied', 'ad_storage': 'denied',
-      'ad_user_data': 'denied', 'ad_personalization': 'denied', 'wait_for_update': 500
+      'ad_user_data': 'denied', 'ad_personalization': 'denied',
+      'wait_for_update': 500
     });
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJEGDPW7G"></script>
   <script>gtag('js', new Date()); gtag('config', 'G-YCJEGDPW7G');</script>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>EVs & Automotive Tech News | The Tech Brief</title>
   <meta name="description" content="Original analysis of electric vehicle launches, autonomous driving, charging infrastructure and automotive technology trends. Written by The Tech Brief editorial team.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.thetechbrief.net/evs-automotive.html">
-
-  <meta property="og:type"        content="website">
-  <meta property="og:site_name"   content="The Tech Brief">
-  <meta property="og:title"       content="EVs & Automotive Tech News | The Tech Brief">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Tech Brief">
+  <meta property="og:title" content="EVs & Automotive Tech News | The Tech Brief">
   <meta property="og:description" content="Original analysis of electric vehicle launches, autonomous driving, charging infrastructure and automotive technology trends. Written by The Tech Brief editorial team.">
-  <meta property="og:url"         content="https://www.thetechbrief.net/evs-automotive.html">
-
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="EVs & Automotive Tech News | The Tech Brief">
+  <meta property="og:url" content="https://www.thetechbrief.net/evs-automotive.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EVs & Automotive Tech News | The Tech Brief">
   <meta name="twitter:description" content="Original analysis of electric vehicle launches, autonomous driving, charging infrastructure and automotive technology trends. Written by The Tech Brief editorial team.">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "EVs & Automotive Tech",
-    "description": "Original analysis of electric vehicle launches, autonomous driving, charging infrastructure and automotive technology trends. Written by The Tech Brief editorial team.",
+    "name": "EVs & Automotive — The Tech Brief",
     "url": "https://www.thetechbrief.net/evs-automotive.html",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.thetechbrief.net/"},
-        {"@type":"ListItem","position":2,"name":"EVs & Automotive Tech","item":"https://www.thetechbrief.net/evs-automotive.html"}
-      ]
-    },
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/"
-    },
+    "description": "Original analysis of electric vehicle launches, autonomous driving, charging infrastructure and automotive technology trends. Written by The Tech Brief editorial team.",
     "publisher": {
       "@type": "Organization",
       "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/",
-      "email": "technodate3@gmail.com"
+      "url": "https://www.thetechbrief.net"
     }
   }
   </script>
-
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
-
-  <style>
-    /* ── Fix: uniform cards — remove the broken first-card split layout ── */
-    .grid .card:first-child {
-      grid-column: auto !important;
-      display: flex !important;
-      flex-direction: column !important;
-      grid-template-columns: unset !important;
-    }
-    .grid .card:first-child img {
-      width: 100% !important;
-      height: 185px !important;
-      object-fit: cover !important;
-      border-radius: var(--radius) var(--radius) 0 0 !important;
-    }
-
-    /* ── Editorial article cards (deep-dives from generate_articles.py) ── */
-    .editorial-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent-2);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      display: flex; flex-direction: column;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .editorial-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .editorial-card img {
-      width: 100%; height: 185px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .editorial-card .ec-body {
-      padding: 18px 20px 12px; flex: 1;
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    .editorial-card .ec-badge {
-      display: inline-block; background: var(--accent-2); color: #fff;
-      font-size: 10px; font-weight: 700; letter-spacing: .8px;
-      text-transform: uppercase; padding: 3px 9px; border-radius: 999px;
-      align-self: flex-start;
-    }
-    .editorial-card h3 {
-      font-family: var(--font-serif); font-size: 18px;
-      line-height: 1.3; color: var(--ink); flex: 1;
-    }
-    .editorial-card h3 a { color: inherit; }
-    .editorial-card h3 a:hover { color: var(--accent); }
-    .editorial-card .ec-desc { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
-    .editorial-card .ec-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .editorial-card .ec-meta { font-size: 11px; color: var(--ink-3); font-family: var(--font-mono); }
-    .ec-read {
-      font-size: 12.5px; font-weight: 600; color: var(--accent);
-    }
-    .ec-read:hover { color: var(--accent-h); }
-    .ec-read::after { content: ' →'; }
-
-    /* ── Standard editorial news cards ── */
-    /* Same .card class but with cleaned footer — no source attribution */
-    .card .card-footer-clean {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .card .card-date-tag {
-      font-size: 11px; color: var(--ink-3); font-family: var(--font-mono);
-    }
-
-    /* ── "In focus" featured card for latest item in category ── */
-    .in-focus-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      margin-bottom: 28px;
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 768px) {
-      .in-focus-card { grid-template-columns: 340px 1fr; }
-      .in-focus-card img { height: 100%; min-height: 220px; border-radius: var(--radius) 0 0 var(--radius); }
-    }
-    .in-focus-card img {
-      width: 100%; height: 220px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .in-focus-body {
-      padding: 24px 28px;
-      display: flex; flex-direction: column; gap: 12px;
-    }
-    .in-focus-label {
-      font-size: 10px; font-weight: 700; letter-spacing: 1.2px;
-      text-transform: uppercase; color: var(--accent);
-      font-family: var(--font-mono);
-    }
-    .in-focus-body h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(20px, 2.5vw, 28px);
-      line-height: 1.25; color: var(--ink);
-    }
-    .in-focus-body h2 a { color: inherit; }
-    .in-focus-body h2 a:hover { color: var(--accent); }
-    .in-focus-body p {
-      font-size: 15px; color: var(--ink-2); line-height: 1.65; flex: 1;
-    }
-    .in-focus-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 12px; margin-top: auto; padding-top: 14px;
-      border-top: 1px solid var(--border);
-    }
-    .in-focus-date { font-size: 12px; color: var(--ink-3); font-family: var(--font-mono); }
-  </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<!-- ===== TICKER ===== -->
+<div class="ticker-bar" aria-hidden="true">
+  <span class="ticker-label">LIVE</span>
+  <div class="ticker-track-wrap">
+    <div class="ticker-track">
+      <span class="ticker-item"><span>AI</span>LLM inference costs down 80% year-on-year across major cloud providers</span>
+      <span class="ticker-item"><span>CYBER</span>State-sponsored APT groups increasingly targeting critical infrastructure OT networks</span>
+      <span class="ticker-item"><span>ENTERPRISE</span>Gartner: 65% of enterprises to deploy AI agents in production by end of 2026</span>
+      <span class="ticker-item"><span>EVs</span>Global EV penetration hits 28% of new car sales in Q1 2026</span>
+      <span class="ticker-item"><span>MOBILE</span>Qualcomm Snapdragon X2 benchmarks leak ahead of MWC announcement</span>
+      <span class="ticker-item"><span>AI</span>LLM inference costs down 80% year-on-year across major cloud providers</span>
+      <span class="ticker-item"><span>CYBER</span>State-sponsored APT groups increasingly targeting critical infrastructure OT networks</span>
+      <span class="ticker-item"><span>ENTERPRISE</span>Gartner: 65% of enterprises to deploy AI agents in production by end of 2026</span>
+      <span class="ticker-item"><span>EVs</span>Global EV penetration hits 28% of new car sales in Q1 2026</span>
+      <span class="ticker-item"><span>MOBILE</span>Qualcomm Snapdragon X2 benchmarks leak ahead of MWC announcement</span>
+    </div>
+  </div>
+</div>
 
 <!-- ===== HEADER ===== -->
 <header class="site-header" role="banner">
-  <a href="index.html" class="header-brand" aria-label="The Tech Brief — Home">
-    <div class="brand-icon" aria-hidden="true">TB</div>
-    <span class="brand-name">Tech Brief</span>
+  <a href="index.html" class="header-brand" aria-label="The Tech Brief home">
+    <div class="brand-icon">TB</div>
+    <div>
+      <span class="brand-name">The Tech Brief</span>
+      <span class="brand-tagline">Technology Intelligence</span>
+    </div>
   </a>
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="currentColor"/><rect y="10" width="22" height="2" rx="1" fill="currentColor"/><rect y="16" width="22" height="2" rx="1" fill="currentColor"/></svg>
   </button>
-  <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
-    <a href="index.html">Home</a>
-    <a href="ai-news.html">AI News</a>
-    <a href="broadcast-tech.html">Broadcast Tech</a>
-    <a href="enterprise-tech.html">Enterprise Tech</a>
-    <a href="cybersecurity-updates.html">Cybersecurity</a>
-    <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
-    <a href="consumer-tech.html">Consumer Tech</a>
-    <a href="gaming.html">Gaming</a>
-    <a href="evs-automotive.html">EVs &amp; Automotive</a>
-    <a href="startups-business.html">Startups &amp; Business</a>
-    <a href="how-to.html">How-To Guides</a>
+  <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
+    <a href="ai-news.html" >AI</a>
+    <a href="cybersecurity-updates.html" >Cybersecurity</a>
+    <a href="enterprise-tech.html" >Enterprise</a>
+    <a href="mobile-gadgets.html" >Mobile</a>
+    <a href="evs-automotive.html" aria-current="page">EVs</a>
+    <a href="gaming.html" >Gaming</a>
+    <a href="startups-business.html" >Startups</a>
+    <a href="how-to.html" >How-To</a>
     <a href="about.html" class="nav-cta">About</a>
   </nav>
 </header>
 
 <!-- ===== CATEGORY HERO ===== -->
-<section class="cat-hero" aria-label="Category overview">
+<div class="cat-hero">
   <div class="cat-hero-inner">
-    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-      <a href="index.html">Home</a>
-      <span aria-hidden="true">&rsaquo;</span>
-      <span aria-current="page">EVs & Automotive Tech</span>
-    </nav>
-    <h1 class="cat-hero-title">EVs & Automotive Tech</h1>
-    <p class="cat-hero-desc">Original analysis of electric vehicles, autonomous driving and automotive technology</p>
-  </div>
-</section>
-
-<!-- ===== MAIN CONTENT ===== -->
-<main id="main-content">
-
-  <!-- ===== EDITORIAL DEEP DIVES ===== -->
-  
-
-  <!-- ===== EDITORIAL NEWS COVERAGE ===== -->
-  
-  <div class="section" >
-    <div class="section-head">
-      <h2>EVs & Automotive Tech Coverage</h2>
-      <span class="section-count">33 editorially-written pieces &mdash; refreshed every 6 hours</span>
-      <span class="section-sub">Original editorial commentary and analysis on the latest developments in EVs & Automotive Tech</span>
+    <div>
+      <p class="cat-crumb"><a href="index.html">Home</a> &rsaquo; EVs & Automotive</p>
+      <h1 class="cat-hero-title">
+        <span>🚗</span>EVs & Automotive
+      </h1>
+      <p class="cat-hero-meta">40 articles &middot; Updated every 6 hours &middot; 24 Mar 2026, 16:22 UTC</p>
     </div>
+  </div>
+</div>
+
+<!-- ===== MAIN ===== -->
+<main id="main">
+
+  <!-- ===== FEATURED ARTICLES ===== -->
+  
+  <div class="section">
+    <div class="section-head">
+      <h2>Latest <span class="accent">EVs & Automotive</span></h2>
+      <span class="section-sub">40 articles · refreshed every 6 hrs</span>
+    </div>
+
+    <!-- First article featured -->
+    
+    <div style="margin-bottom: 22px;">
+      <article class="card" style="max-width: 100%; flex-direction: row; min-height: 200px;" itemscope itemtype="https://schema.org/Article">
+        
+        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80" alt="Zoox expands current service area and is bringing its purpose-built robotaxi to two new cities" loading="eager"
+          style="width: 340px; min-width: 240px; height: auto; object-fit: cover; flex-shrink: 0; border-radius: var(--radius) 0 0 var(--radius);"
+          itemprop="image">
+        
+        <div style="display: flex; flex-direction: column; flex: 1;">
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+              <time datetime="2026-03-24">March 24, 2026</time>
+            </div>
+            <h2 itemprop="headline" style="font-family: var(--font-serif); font-size: clamp(18px, 2.5vw, 24px); line-height: 1.25; color: var(--ink); font-weight: 700;">
+              <a href="articles/rss-1ee8534250f97a7c.html" style="color: inherit;">Zoox expands current service area and is bringing its purpose-built robotaxi to two new cities</a>
+            </h2>
+            <p class="card-desc">Recent signals from the Zoox expands current service ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultane…</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-date">4 min read</span>
+            <a href="articles/rss-1ee8534250f97a7c.html" class="card-read">Read analysis</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <style>
+      @media (max-width: 600px) {
+        .feat-article { flex-direction: column !important; }
+        .feat-article img { width: 100% !important; border-radius: var(--radius) var(--radius) 0 0 !important; height: 200px !important; }
+      }
+    </style>
+    
+
+    <!-- Remaining articles grid -->
     <div class="grid">
       
-      <article class="card" aria-label="BYD outsells Tesla in Europe for second straight month as gap widens">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="BYD outsells Tesla in Europe for second straight month as gap widens" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1571319914392-0ba44b05e96b?w=800&q=80" alt="2027 Mercedes-Maybach S-Class" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-f0041a830fc7c1d2.html">BYD outsells Tesla in Europe for second straight month as gap widens</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as byd outsells tesla in europe for second straight month as gap widens. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-80aa5c4fe616f8f0.html">2027 Mercedes-Maybach S-Class</a></h3>
+          <p class="card-desc">Recent signals from the 2027 MercedesMaybach SClass ecosystem point to accelerating maturity. The transition from experimental deployments t…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-f0041a830fc7c1d2.html" class="read-link" aria-label="Read: BYD outsells Tesla in Europe for second straight month as gap widens">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-80aa5c4fe616f8f0.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Zoox brings its robotaxis to Austin and Miami">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa1f4?w=900&auto=format&fit=crop&q=80" alt="Zoox brings its robotaxis to Austin and Miami" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1571319914392-0ba44b05e96b?w=800&q=80" alt="BYD plans 20 Canadian dealerships within a year as 6.1% tariff deal opens the floodgates" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-e5a96587709ff69b.html">Zoox brings its robotaxis to Austin and Miami</a></h3>
-          <p class="card-summary">A clearer picture is emerging around zoox brings its robotaxis to austin and miami, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-df879123cb13ff0b.html">BYD plans 20 Canadian dealerships within a year as 6.1% tariff deal opens the floodgates</a></h3>
+          <p class="card-desc">Recent signals from the plans Canadian dealerships within ecosystem point to accelerating maturity. The transition from experimental deploym…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-e5a96587709ff69b.html" class="read-link" aria-label="Read: Zoox brings its robotaxis to Austin and Miami">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-df879123cb13ff0b.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="View Exterior Photos of the 2027 Mercedes-Maybach S-Class">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=900&auto=format&fit=crop&q=80" alt="View Exterior Photos of the 2027 Mercedes-Maybach S-Class" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=800&q=80" alt="Mercedes-AMG Confirms New GT Black Series That Will Spawn GT3 Race Car" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-b4fd51db559b84c8.html">View Exterior Photos of the 2027 Mercedes-Maybach S-Class</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and view exterior photos of the 2027 mercedes-maybach s-class is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-64c68b8e28ef5d3e.html">Mercedes-AMG Confirms New GT Black Series That Will Spawn GT3 Race Car</a></h3>
+          <p class="card-desc">The MercedesAMG Confirms Black Series space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-b4fd51db559b84c8.html" class="read-link" aria-label="Read: View Exterior Photos of the 2027 Mercedes-Maybach S-Class">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-64c68b8e28ef5d3e.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="2027 Mercedes-Maybach S-Class Dials up the Glitz and Glamor">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=900&auto=format&fit=crop&q=80" alt="2027 Mercedes-Maybach S-Class Dials up the Glitz and Glamor" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80" alt="Volkswagen is recalling nearly 100,000 EVs over potential faulty battery modules" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-1f29acd3d79d8061.html">2027 Mercedes-Maybach S-Class Dials up the Glitz and Glamor</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as 2027 mercedes-maybach s-class dials up the glitz and glamor. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-a616cb4e38e3e4d2.html">Volkswagen is recalling nearly 100,000 EVs over potential faulty battery modules</a></h3>
+          <p class="card-desc">What is unfolding in Volkswagen recalling nearly 100000 represents a convergence of technical capability, regulatory clarity, and market rea…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-1f29acd3d79d8061.html" class="read-link" aria-label="Read: 2027 Mercedes-Maybach S-Class Dials up the Glitz and Glamor">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-a616cb4e38e3e4d2.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="View Interior Photos of the 2027 Mercedes-Maybach S-Class">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1502161254119-e1f02c5b5e4b?w=900&auto=format&fit=crop&q=80" alt="View Interior Photos of the 2027 Mercedes-Maybach S-Class" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80" alt="Flighty’s new update gives you real-time alerts about airport disturbances" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-c39d5d6b875de4ab.html">View Interior Photos of the 2027 Mercedes-Maybach S-Class</a></h3>
-          <p class="card-summary">A clearer picture is emerging around view interior photos of the 2027 mercedes-maybach s-class, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-6e6cae7bdbef599a.html">Flighty’s new update gives you real-time alerts about airport disturbances</a></h3>
+          <p class="card-desc">What is unfolding in Flightys update gives realtime represents a convergence of technical capability, regulatory clarity, and market readine…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-c39d5d6b875de4ab.html" class="read-link" aria-label="Read: View Interior Photos of the 2027 Mercedes-Maybach S-Class">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-6e6cae7bdbef599a.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Why one tiny detail is breaking US e-bike laws (and it’s not speed)">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&auto=format&fit=crop&q=80" alt="Why one tiny detail is breaking US e-bike laws (and it’s not speed)" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1600712242805-5f78671b24da?w=800&q=80" alt="Toyota Will Invest $800 Million To Build A Second EV In The U.S. What Could It Be?" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-471e8890c880d9af.html">Why one tiny detail is breaking US e-bike laws (and it’s not speed)</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as why one tiny detail is breaking us e-bike laws (and it’s not speed). Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-82a9ceeab2171090.html">Toyota Will Invest $800 Million To Build A Second EV In The U.S. What Could It Be?</a></h3>
+          <p class="card-desc">As Toyota Invest Million Build continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strat…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-471e8890c880d9af.html" class="read-link" aria-label="Read: Why one tiny detail is breaking US e-bike laws (and it’s not speed)">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-82a9ceeab2171090.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="300 Miles Of EV Range Is The New Normal. Is 400 Next?">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=900&auto=format&fit=crop&q=80" alt="300 Miles Of EV Range Is The New Normal. Is 400 Next?" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80" alt="Kia Recalls Some Tellurides Following Fatal Hyundai Palisade Accident" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-478ef5597482e53e.html">300 Miles Of EV Range Is The New Normal. Is 400 Next?</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as 300 miles of ev range is the new normal. is 400 next. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-7b3d6e26633369b1.html">Kia Recalls Some Tellurides Following Fatal Hyundai Palisade Accident</a></h3>
+          <p class="card-desc">Few technology developments have drawn as much attention recently as hyundai issues stop-sale for some new palisades after fatal accident. A…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-478ef5597482e53e.html" class="read-link" aria-label="Read: 300 Miles Of EV Range Is The New Normal. Is 400 Next?">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-7b3d6e26633369b1.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The Tesla Semi Might Get Automated And Wireless Charging">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1571987502227-9231b837d92a?w=900&auto=format&fit=crop&q=80" alt="The Tesla Semi Might Get Automated And Wireless Charging" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&q=80" alt="GM is now testing eyes-off self-driving tech in its biggest EV" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-214486f37d4b01d6.html">The Tesla Semi Might Get Automated And Wireless Charging</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and the tesla semi might get automated and wireless charging is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-2ff5f5b3d12eb8d2.html">GM is now testing eyes-off self-driving tech in its biggest EV</a></h3>
+          <p class="card-desc">The testing eyesoff selfdriving tech space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption m…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-214486f37d4b01d6.html" class="read-link" aria-label="Read: The Tesla Semi Might Get Automated And Wireless Charging">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-2ff5f5b3d12eb8d2.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Tesla Finally Breaks Its 13-Month Sales Losing Streak in Europe">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=900&auto=format&fit=crop&q=80" alt="Tesla Finally Breaks Its 13-Month Sales Losing Streak in Europe" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1536700503279-b837f40f7d49?w=800&q=80" alt="BYD outsells Tesla in Europe for second straight month as gap widens" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-888bec272fe91f62.html">Tesla Finally Breaks Its 13-Month Sales Losing Streak in Europe</a></h3>
-          <p class="card-summary">A clearer picture is emerging around tesla finally breaks its 13-month sales losing streak in europe, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-f0041a830fc7c1d2.html">BYD outsells Tesla in Europe for second straight month as gap widens</a></h3>
+          <p class="card-desc">As outsells Tesla Europe second continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and stra…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-888bec272fe91f62.html" class="read-link" aria-label="Read: Tesla Finally Breaks Its 13-Month Sales Losing Streak in Europe">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-f0041a830fc7c1d2.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Harbinger CEO John Harris stops by to talk trucks, batteries, and more">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&auto=format&fit=crop&q=80" alt="Harbinger CEO John Harris stops by to talk trucks, batteries, and more" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=800&q=80" alt="Zoox brings its robotaxis to Austin and Miami" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-56745253ab42b70c.html">Harbinger CEO John Harris stops by to talk trucks, batteries, and more</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and harbinger ceo john harris stops by to talk trucks, batteries, and more is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-e5a96587709ff69b.html">Zoox brings its robotaxis to Austin and Miami</a></h3>
+          <p class="card-desc">What is unfolding in Zoox brings robotaxis Austin represents a convergence of technical capability, regulatory clarity, and market readiness…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-56745253ab42b70c.html" class="read-link" aria-label="Read: Harbinger CEO John Harris stops by to talk trucks, batteries, and more">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-e5a96587709ff69b.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Zipline snaps up another $200M to fuel its drone delivery expansion">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=900&auto=format&fit=crop&q=80" alt="Zipline snaps up another $200M to fuel its drone delivery expansion" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80" alt="View Exterior Photos of the 2027 Mercedes-Maybach S-Class" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-05008df3aa2be94c.html">Zipline snaps up another $200M to fuel its drone delivery expansion</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and zipline snaps up another $200m to fuel its drone delivery expansion is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-b4fd51db559b84c8.html">View Exterior Photos of the 2027 Mercedes-Maybach S-Class</a></h3>
+          <p class="card-desc">Recent signals from the View Exterior Photos 2027 ecosystem point to accelerating maturity. The transition from experimental deployments to …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-05008df3aa2be94c.html" class="read-link" aria-label="Read: Zipline snaps up another $200M to fuel its drone delivery expansion">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-b4fd51db559b84c8.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Subaru's Next Electric SUV Will Be Revealed Next Week. Here's A Teaser.">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1571987502227-9231b837d92a?w=900&auto=format&fit=crop&q=80" alt="Subaru's Next Electric SUV Will Be Revealed Next Week. Here's A Teaser." loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80" alt="2027 Mercedes-Maybach S-Class Dials up the Glitz and Glamor" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-bd9617560f7d53cb.html">Subaru's Next Electric SUV Will Be Revealed Next Week. Here's A Teaser.</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around subaru's next electric suv will be revealed next week. here's a teaser. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-1f29acd3d79d8061.html">2027 Mercedes-Maybach S-Class Dials up the Glitz and Glamor</a></h3>
+          <p class="card-desc">As 2027 MercedesMaybach SClass Dials continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-bd9617560f7d53cb.html" class="read-link" aria-label="Read: Subaru's Next Electric SUV Will Be Revealed Next Week. Here's A Teaser.">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-1f29acd3d79d8061.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Tesla Semi has a million-mile battery, claims Tesla">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=900&auto=format&fit=crop&q=80" alt="Tesla Semi has a million-mile battery, claims Tesla" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&q=80" alt="View Interior Photos of the 2027 Mercedes-Maybach S-Class" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-1039c76967beb7ee.html">Tesla Semi has a million-mile battery, claims Tesla</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around tesla semi has a million-mile battery, claims tesla. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-c39d5d6b875de4ab.html">View Interior Photos of the 2027 Mercedes-Maybach S-Class</a></h3>
+          <p class="card-desc">What is unfolding in View Interior Photos 2027 represents a convergence of technical capability, regulatory clarity, and market readiness th…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-1039c76967beb7ee.html" class="read-link" aria-label="Read: Tesla Semi has a million-mile battery, claims Tesla">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-c39d5d6b875de4ab.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="BYD’s big EV bet is paying off as drivers ditch gas with surging oil prices">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=900&auto=format&fit=crop&q=80" alt="BYD’s big EV bet is paying off as drivers ditch gas with surging oil prices" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=800&q=80" alt="Why one tiny detail is breaking US e-bike laws (and it’s not speed)" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-62d9c117ad3754ab.html">BYD’s big EV bet is paying off as drivers ditch gas with surging oil prices</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and byd’s big ev bet is paying off as drivers ditch gas with surging oil prices is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-471e8890c880d9af.html">Why one tiny detail is breaking US e-bike laws (and it’s not speed)</a></h3>
+          <p class="card-desc">As tiny detail breaking ebike continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strate…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-62d9c117ad3754ab.html" class="read-link" aria-label="Read: BYD’s big EV bet is paying off as drivers ditch gas with surging oil prices">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-471e8890c880d9af.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Amazon beats Jackery’s spring sale on Explorer 2000 v2, Segway GT3 superscooter back to low, more in today’s Green Deals">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&auto=format&fit=crop&q=80" alt="Amazon beats Jackery’s spring sale on Explorer 2000 v2, Segway GT3 superscooter back to low, more in today’s Green Deals" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80" alt="300 Miles Of EV Range Is The New Normal. Is 400 Next?" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-a490030efc79fdda.html">Amazon beats Jackery’s spring sale on Explorer 2000 v2, Segway GT3 superscooter back to low, more in today’s Green Deals</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and amazon beats jackery’s spring sale on explorer 2000 v2, segway gt3 superscooter… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-478ef5597482e53e.html">300 Miles Of EV Range Is The New Normal. Is 400 Next?</a></h3>
+          <p class="card-desc">As Miles Range Normal Next continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-a490030efc79fdda.html" class="read-link" aria-label="Read: Amazon beats Jackery’s spring sale on Explorer 2000 v2, Segway GT3 superscooter back to low, more in today’s Green Deals">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-478ef5597482e53e.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Jay Leno Says The Tesla Semi’s Biggest Advantage Isn’t Its Range">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="Jay Leno Says The Tesla Semi’s Biggest Advantage Isn’t Its Range" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1600712242805-5f78671b24da?w=800&q=80" alt="The Tesla Semi Might Get Automated And Wireless Charging" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-d108589cb02a6ec3.html">Jay Leno Says The Tesla Semi’s Biggest Advantage Isn’t Its Range</a></h3>
-          <p class="card-summary">A clearer picture is emerging around jay leno says the tesla semi’s biggest advantage isn’t its range, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-214486f37d4b01d6.html">The Tesla Semi Might Get Automated And Wireless Charging</a></h3>
+          <p class="card-desc">Recent signals from the Tesla Semi Might Automated ecosystem point to accelerating maturity. The transition from experimental deployments to…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-d108589cb02a6ec3.html" class="read-link" aria-label="Read: Jay Leno Says The Tesla Semi’s Biggest Advantage Isn’t Its Range">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-214486f37d4b01d6.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="DoorDash introduces relief payments for drivers as the Iran-US war drives up gas prices">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=900&auto=format&fit=crop&q=80" alt="DoorDash introduces relief payments for drivers as the Iran-US war drives up gas prices" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80" alt="Tesla Finally Breaks Its 13-Month Sales Losing Streak in Europe" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-54646be6abe2909b.html">DoorDash introduces relief payments for drivers as the Iran-US war drives up gas prices</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as doordash introduces relief payments for drivers as the iran-us war drives up gas…. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-888bec272fe91f62.html">Tesla Finally Breaks Its 13-Month Sales Losing Streak in Europe</a></h3>
+          <p class="card-desc">What is unfolding in Tesla Finally Breaks 13Month represents a convergence of technical capability, regulatory clarity, and market readiness…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-54646be6abe2909b.html" class="read-link" aria-label="Read: DoorDash introduces relief payments for drivers as the Iran-US war drives up gas prices">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-888bec272fe91f62.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Dept. of Interior bribes oil company $1B from taxpayer coffers to stop wind power">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&auto=format&fit=crop&q=80" alt="Dept. of Interior bribes oil company $1B from taxpayer coffers to stop wind power" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=800&q=80" alt="Harbinger CEO John Harris stops by to talk trucks, batteries, and more" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-eb1a44e4915b0da8.html">Dept. of Interior bribes oil company $1B from taxpayer coffers to stop wind power</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as dept. of interior bribes oil company $1b from taxpayer coffers to stop wind power. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-56745253ab42b70c.html">Harbinger CEO John Harris stops by to talk trucks, batteries, and more</a></h3>
+          <p class="card-desc">Recent signals from the Harbinger John Harris stops ecosystem point to accelerating maturity. The transition from experimental deployments t…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-eb1a44e4915b0da8.html" class="read-link" aria-label="Read: Dept. of Interior bribes oil company $1B from taxpayer coffers to stop wind power">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-56745253ab42b70c.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Tesla patent reveals dual-battery system for trailer-mounted range extender">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=900&auto=format&fit=crop&q=80" alt="Tesla patent reveals dual-battery system for trailer-mounted range extender" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1571319914392-0ba44b05e96b?w=800&q=80" alt="Zipline snaps up another $200M to fuel its drone delivery expansion" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-50e79eade5a80959.html">Tesla patent reveals dual-battery system for trailer-mounted range extender</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as tesla patent reveals dual-battery system for trailer-mounted range extender. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-05008df3aa2be94c.html">Zipline snaps up another $200M to fuel its drone delivery expansion</a></h3>
+          <p class="card-desc">Recent signals from the Zipline snaps another 200M ecosystem point to accelerating maturity. The transition from experimental deployments to…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-50e79eade5a80959.html" class="read-link" aria-label="Read: Tesla patent reveals dual-battery system for trailer-mounted range extender">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-05008df3aa2be94c.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Another major brand joins the race for the affordable luxury EV">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1571987502227-9231b837d92a?w=900&auto=format&fit=crop&q=80" alt="Another major brand joins the race for the affordable luxury EV" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1600712242805-5f78671b24da?w=800&q=80" alt="Subaru's Next Electric SUV Will Be Revealed Next Week. Here's A Teaser." class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-ee481d4157cb0ad8.html">Another major brand joins the race for the affordable luxury EV</a></h3>
-          <p class="card-summary">A clearer picture is emerging around another major brand joins the race for the affordable luxury ev, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-bd9617560f7d53cb.html">Subaru's Next Electric SUV Will Be Revealed Next Week. Here's A Teaser.</a></h3>
+          <p class="card-desc">The latest developments in Subarus Next Electric Revealed signal a meaningful inflection point for the industry. Organisations that move qui…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-ee481d4157cb0ad8.html" class="read-link" aria-label="Read: Another major brand joins the race for the affordable luxury EV">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-bd9617560f7d53cb.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The Mercedes GLC EV Isn’t Just A Great Electric Car. It’s A Great Mercedes">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?w=900&auto=format&fit=crop&q=80" alt="The Mercedes GLC EV Isn’t Just A Great Electric Car. It’s A Great Mercedes" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80" alt="Tesla Semi has a million-mile battery, claims Tesla" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-9995d13ccd9bf4b1.html">The Mercedes GLC EV Isn’t Just A Great Electric Car. It’s A Great Mercedes</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around the mercedes glc ev isn’t just a great electric car. it’s a great mercedes. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-1039c76967beb7ee.html">Tesla Semi has a million-mile battery, claims Tesla</a></h3>
+          <p class="card-desc">The latest developments in Tesla Semi millionmile battery signal a meaningful inflection point for the industry. Organisations that move qui…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-9995d13ccd9bf4b1.html" class="read-link" aria-label="Read: The Mercedes GLC EV Isn’t Just A Great Electric Car. It’s A Great Mercedes">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-1039c76967beb7ee.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Faraday Future Cleared By SEC After Years-Long Investigation">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="Faraday Future Cleared By SEC After Years-Long Investigation" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1571319914392-0ba44b05e96b?w=800&q=80" alt="BYD’s big EV bet is paying off as drivers ditch gas with surging oil prices" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-0cd140d5de6dcce5.html">Faraday Future Cleared By SEC After Years-Long Investigation</a></h3>
-          <p class="card-summary">The story of faraday future cleared by sec after years-long investigation reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-62d9c117ad3754ab.html">BYD’s big EV bet is paying off as drivers ditch gas with surging oil prices</a></h3>
+          <p class="card-desc">Recent signals from the BYDs paying drivers ditch ecosystem point to accelerating maturity. The transition from experimental deployments to …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-0cd140d5de6dcce5.html" class="read-link" aria-label="Read: Faraday Future Cleared By SEC After Years-Long Investigation">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-62d9c117ad3754ab.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Federal immigration agents filmed making airport arrests as Trump calls in ICE to ease security line delays">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="Federal immigration agents filmed making airport arrests as Trump calls in ICE to ease security line delays" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=800&q=80" alt="Amazon beats Jackery’s spring sale on Explorer 2000 v2, Segway GT3 superscooter back to low, more in today’s Green Deals" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-89fdd0748a3df8ab.html">Federal immigration agents filmed making airport arrests as Trump calls in ICE to ease security line delays</a></h3>
-          <p class="card-summary">A clearer picture is emerging around federal immigration agents filmed making airport arrests as trump calls in ice to…, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-a490030efc79fdda.html">Amazon beats Jackery’s spring sale on Explorer 2000 v2, Segway GT3 superscooter back to low, more in today’s Green Deals</a></h3>
+          <p class="card-desc">Recent signals from the Amazon beats Jackerys spring ecosystem point to accelerating maturity. The transition from experimental deployments …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-89fdd0748a3df8ab.html" class="read-link" aria-label="Read: Federal immigration agents filmed making airport arrests as Trump calls in ICE to ease security line delays">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-a490030efc79fdda.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Donut Lab solid-state battery: 5 independent tests in, still no energy density or cycle life data">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="Donut Lab solid-state battery: 5 independent tests in, still no energy density or cycle life data" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1536700503279-b837f40f7d49?w=800&q=80" alt="Jay Leno Says The Tesla Semi’s Biggest Advantage Isn’t Its Range" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-45ff036a949f1939.html">Donut Lab solid-state battery: 5 independent tests in, still no energy density or cycle life data</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as donut lab solid-state battery: 5 independent tests in, still no energy density or…. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-d108589cb02a6ec3.html">Jay Leno Says The Tesla Semi’s Biggest Advantage Isn’t Its Range</a></h3>
+          <p class="card-desc">What is unfolding in Leno Says Tesla Semis represents a convergence of technical capability, regulatory clarity, and market readiness that r…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-45ff036a949f1939.html" class="read-link" aria-label="Read: Donut Lab solid-state battery: 5 independent tests in, still no energy density or cycle life data">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-d108589cb02a6ec3.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The SEC drops its four-year-old investigation into EV startup Faraday Future">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&auto=format&fit=crop&q=80" alt="The SEC drops its four-year-old investigation into EV startup Faraday Future" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1571319914392-0ba44b05e96b?w=800&q=80" alt="DoorDash introduces relief payments for drivers as the Iran-US war drives up gas prices" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-9935d26d8c5231d3.html">The SEC drops its four-year-old investigation into EV startup Faraday Future</a></h3>
-          <p class="card-summary">The story of the sec drops its four-year-old investigation into ev startup faraday future reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-54646be6abe2909b.html">DoorDash introduces relief payments for drivers as the Iran-US war drives up gas prices</a></h3>
+          <p class="card-desc">As DoorDash introduces relief payments continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical a…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 22, 2026</span>
-          <a href="articles/rss-9935d26d8c5231d3.html" class="read-link" aria-label="Read: The SEC drops its four-year-old investigation into EV startup Faraday Future">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-54646be6abe2909b.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="TechCrunch Mobility: Uber everywhere, all at once">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=900&auto=format&fit=crop&q=80" alt="TechCrunch Mobility: Uber everywhere, all at once" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&q=80" alt="The Mercedes GLC EV Isn’t Just A Great Electric Car. It’s A Great Mercedes" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-37230b8f8f64af19.html">TechCrunch Mobility: Uber everywhere, all at once</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around techcrunch mobility: uber everywhere, all at once. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-9995d13ccd9bf4b1.html">The Mercedes GLC EV Isn’t Just A Great Electric Car. It’s A Great Mercedes</a></h3>
+          <p class="card-desc">The latest developments in Mercedes Isnt Just Great signal a meaningful inflection point for the industry. Organisations that move quickly t…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 22, 2026</span>
-          <a href="articles/rss-37230b8f8f64af19.html" class="read-link" aria-label="Read: TechCrunch Mobility: Uber everywhere, all at once">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-9995d13ccd9bf4b1.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Cyberattack on vehicle breathalyzer company leaves drivers stranded across the US">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1571987502227-9231b837d92a?w=900&auto=format&fit=crop&q=80" alt="Cyberattack on vehicle breathalyzer company leaves drivers stranded across the US" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1536700503279-b837f40f7d49?w=800&q=80" alt="Federal immigration agents filmed making airport arrests as Trump calls in ICE to ease security line delays" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-400f9e2302854c32.html">Cyberattack on vehicle breathalyzer company leaves drivers stranded across the US</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around cyberattack on vehicle breathalyzer company leaves drivers stranded across the us. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-89fdd0748a3df8ab.html">Federal immigration agents filmed making airport arrests as Trump calls in ICE to ease security line delays</a></h3>
+          <p class="card-desc">What is unfolding in Federal immigration agents filmed represents a convergence of technical capability, regulatory clarity, and market read…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 20, 2026</span>
-          <a href="articles/rss-400f9e2302854c32.html" class="read-link" aria-label="Read: Cyberattack on vehicle breathalyzer company leaves drivers stranded across the US">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-89fdd0748a3df8ab.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Amazon acquires Rivr, maker of a stair-climbing delivery robot">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1502161254119-e1f02c5b5e4b?w=900&auto=format&fit=crop&q=80" alt="Amazon acquires Rivr, maker of a stair-climbing delivery robot" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=800&q=80" alt="The SEC drops its four-year-old investigation into EV startup Faraday Future" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-235f00ea264fc0db.html">Amazon acquires Rivr, maker of a stair-climbing delivery robot</a></h3>
-          <p class="card-summary">The story of amazon acquires rivr, maker of a stair-climbing delivery robot reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-22">March 22, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-9935d26d8c5231d3.html">The SEC drops its four-year-old investigation into EV startup Faraday Future</a></h3>
+          <p class="card-desc">The drops fouryearold investigation startup space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying ado…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 19, 2026</span>
-          <a href="articles/rss-235f00ea264fc0db.html" class="read-link" aria-label="Read: Amazon acquires Rivr, maker of a stair-climbing delivery robot">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-9935d26d8c5231d3.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Rivian sacrifices 2027 profit goal to push deeper into autonomy">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=900&auto=format&fit=crop&q=80" alt="Rivian sacrifices 2027 profit goal to push deeper into autonomy" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80" alt="TechCrunch Mobility: Uber everywhere, all at once" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-cf137846d54e4440.html">Rivian sacrifices 2027 profit goal to push deeper into autonomy</a></h3>
-          <p class="card-summary">A clearer picture is emerging around rivian sacrifices 2027 profit goal to push deeper into autonomy, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-22">March 22, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-37230b8f8f64af19.html">TechCrunch Mobility: Uber everywhere, all at once</a></h3>
+          <p class="card-desc">The latest developments in TechCrunch Mobility Uber everywhere signal a meaningful inflection point for the industry. Organisations that mov…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 19, 2026</span>
-          <a href="articles/rss-cf137846d54e4440.html" class="read-link" aria-label="Read: Rivian sacrifices 2027 profit goal to push deeper into autonomy">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-37230b8f8f64af19.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="K2 to launch its first high-powered satellite for space compute">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=900&auto=format&fit=crop&q=80" alt="K2 to launch its first high-powered satellite for space compute" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1600712242805-5f78671b24da?w=800&q=80" alt="Cyberattack on vehicle breathalyzer company leaves drivers stranded across the US" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-d0945f653f545d54.html">K2 to launch its first high-powered satellite for space compute</a></h3>
-          <p class="card-summary">A clearer picture is emerging around k2 to launch its first high-powered satellite for space compute, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-20">March 20, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-400f9e2302854c32.html">Cyberattack on vehicle breathalyzer company leaves drivers stranded across the US</a></h3>
+          <p class="card-desc">The latest developments in Cyberattack vehicle breathalyzer company signal a meaningful inflection point for the industry. Organisations tha…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 19, 2026</span>
-          <a href="articles/rss-d0945f653f545d54.html" class="read-link" aria-label="Read: K2 to launch its first high-powered satellite for space compute">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-400f9e2302854c32.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Uber Wants To Win The Autonomous Vehicle Race. So It's Betting On All Of The Horses [Update]">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=900&auto=format&fit=crop&q=80" alt="Uber Wants To Win The Autonomous Vehicle Race. So It's Betting On All Of The Horses [Update]" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&q=80" alt="Amazon acquires Rivr, maker of a stair-climbing delivery robot" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-45de5597e523ff9f.html">Uber Wants To Win The Autonomous Vehicle Race. So It's Betting On All Of The Horses [Update]</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and uber wants to win the autonomous vehicle race. so it's betting on all of the… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-19">March 19, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-235f00ea264fc0db.html">Amazon acquires Rivr, maker of a stair-climbing delivery robot</a></h3>
+          <p class="card-desc">The Amazon acquires Rivr maker space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">February 24, 2026</span>
-          <a href="articles/rss-45de5597e523ff9f.html" class="read-link" aria-label="Read: Uber Wants To Win The Autonomous Vehicle Race. So It's Betting On All Of The Horses [Update]">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-235f00ea264fc0db.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Honda 0 Series SUV: Everything We Know (Updated)">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=900&auto=format&fit=crop&q=80" alt="Honda 0 Series SUV: Everything We Know (Updated)" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80" alt="Rivian sacrifices 2027 profit goal to push deeper into autonomy" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-d36694b500f0ea88.html">Honda 0 Series SUV: Everything We Know (Updated)</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and honda 0 series suv: everything we know (updated) is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-03-19">March 19, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-cf137846d54e4440.html">Rivian sacrifices 2027 profit goal to push deeper into autonomy</a></h3>
+          <p class="card-desc">What is unfolding in Rivian sacrifices 2027 profit represents a convergence of technical capability, regulatory clarity, and market readines…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">January 25, 2026</span>
-          <a href="articles/rss-d36694b500f0ea88.html" class="read-link" aria-label="Read: Honda 0 Series SUV: Everything We Know (Updated)">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-cf137846d54e4440.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Honda 0 Series Saloon EV: Everything We Know (Updated)">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1502161254119-e1f02c5b5e4b?w=900&auto=format&fit=crop&q=80" alt="Honda 0 Series Saloon EV: Everything We Know (Updated)" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1571319914392-0ba44b05e96b?w=800&q=80" alt="2027 Acura RSX: Everything We Know (Updated)" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-aa8e3692809cf516.html">Honda 0 Series Saloon EV: Everything We Know (Updated)</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as honda 0 series saloon ev: everything we know (updated). Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-01-29">January 29, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-092444b838b80026.html">2027 Acura RSX: Everything We Know (Updated)</a></h3>
+          <p class="card-desc">What is unfolding in 2027 Acura Everything Know represents a convergence of technical capability, regulatory clarity, and market readiness t…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">January 20, 2026</span>
-          <a href="articles/rss-aa8e3692809cf516.html" class="read-link" aria-label="Read: Honda 0 Series Saloon EV: Everything We Know (Updated)">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-092444b838b80026.html" class="card-read">Read brief</a>
+        </div>
+      </article>
+      
+      <article class="card" itemscope itemtype="https://schema.org/Article">
+        
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80" alt="Honda 0 Series SUV: Everything We Know (Updated)" class="card-img" loading="lazy" itemprop="image">
+        
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-01-25">January 25, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-d36694b500f0ea88.html">Honda 0 Series SUV: Everything We Know (Updated)</a></h3>
+          <p class="card-desc">Recent signals from the Honda Series Everything Know ecosystem point to accelerating maturity. The transition from experimental deployments …</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-d36694b500f0ea88.html" class="card-read">Read brief</a>
+        </div>
+      </article>
+      
+      <article class="card" itemscope itemtype="https://schema.org/Article">
+        
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&q=80" alt="Honda 0 Series Saloon EV: Everything We Know (Updated)" class="card-img" loading="lazy" itemprop="image">
+        
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2026-01-20">January 20, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-aa8e3692809cf516.html">Honda 0 Series Saloon EV: Everything We Know (Updated)</a></h3>
+          <p class="card-desc">As Honda Series Saloon Everything continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and st…</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-aa8e3692809cf516.html" class="card-read">Read brief</a>
+        </div>
+      </article>
+      
+      <article class="card" itemscope itemtype="https://schema.org/Article">
+        
+        <img src="https://images.unsplash.com/photo-1571319914392-0ba44b05e96b?w=800&q=80" alt="Tested and Trusted: Products and Gear Recommended by Car and Driver" class="card-img" loading="lazy" itemprop="image">
+        
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2025-04-22">April 22, 2025</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-04e5f6ad36e566d1.html">Tested and Trusted: Products and Gear Recommended by Car and Driver</a></h3>
+          <p class="card-desc">Recent signals from the Tested Trusted Products Gear ecosystem point to accelerating maturity. The transition from experimental deployments …</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-04e5f6ad36e566d1.html" class="card-read">Read brief</a>
+        </div>
+      </article>
+      
+      <article class="card" itemscope itemtype="https://schema.org/Article">
+        
+        <img src="https://images.unsplash.com/photo-1536700503279-b837f40f7d49?w=800&q=80" alt="Tested: 1987 Audi 5000S Quattro Spreads the AWD Gospel" class="card-img" loading="lazy" itemprop="image">
+        
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2025-02-22">February 22, 2025</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-92f7a5dab0f4ebab.html">Tested: 1987 Audi 5000S Quattro Spreads the AWD Gospel</a></h3>
+          <p class="card-desc">Recent signals from the Tested 1987 Audi 5000S ecosystem point to accelerating maturity. The transition from experimental deployments to pro…</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-92f7a5dab0f4ebab.html" class="card-read">Read brief</a>
+        </div>
+      </article>
+      
+      <article class="card" itemscope itemtype="https://schema.org/Article">
+        
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&q=80" alt="1984 Audi 5000S Turbo Is a Top-Speed Star" class="card-img" loading="lazy" itemprop="image">
+        
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2024-09-16">September 16, 2024</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-71b4bb5ea75dfe0e.html">1984 Audi 5000S Turbo Is a Top-Speed Star</a></h3>
+          <p class="card-desc">Recent signals from the 1984 Audi 5000S Turbo ecosystem point to accelerating maturity. The transition from experimental deployments to prod…</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-71b4bb5ea75dfe0e.html" class="card-read">Read brief</a>
+        </div>
+      </article>
+      
+      <article class="card" itemscope itemtype="https://schema.org/Article">
+        
+        <img src="https://images.unsplash.com/photo-1571319914392-0ba44b05e96b?w=800&q=80" alt="2018 Mercedes-Benz GLC-Class Coupe" class="card-img" loading="lazy" itemprop="image">
+        
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat card-cat-evsautomotive">EVs & Automotive</span>
+            <time datetime="2018-12-12">December 12, 2018</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-9fd0545f8f422177.html">2018 Mercedes-Benz GLC-Class Coupe</a></h3>
+          <p class="card-desc">The latest developments in 2018 MercedesBenz GLCClass Coupe signal a meaningful inflection point for the industry. Organisations that move q…</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-9fd0545f8f422177.html" class="card-read">Read brief</a>
         </div>
       </article>
       
     </div>
+
+    
   </div>
+
+  <!-- ===== AD SLOT ===== -->
+  <div class="section" style="padding-top: 0; padding-bottom: 0;">
+    <!-- AdSense slot -->
+  </div>
+
+  <!-- ===== EDITORIAL ARTICLES ===== -->
   
 
-
+  <!-- ===== BROWSE OTHER CATEGORIES ===== -->
+  <div class="section">
+    <div class="section-head">
+      <h2>More Coverage</h2>
+    </div>
+    <nav class="cat-tile-grid" aria-label="Browse other categories">
+      <a href="ai-news.html" class="cat-tile"><span class="cat-tile-icon">🤖</span><span class="cat-tile-name">AI News</span></a>
+      <a href="cybersecurity-updates.html" class="cat-tile"><span class="cat-tile-icon">🔐</span><span class="cat-tile-name">Cybersecurity</span></a>
+      <a href="enterprise-tech.html" class="cat-tile"><span class="cat-tile-icon">🏢</span><span class="cat-tile-name">Enterprise Tech</span></a>
+      <a href="mobile-gadgets.html" class="cat-tile"><span class="cat-tile-icon">📱</span><span class="cat-tile-name">Mobile &amp; Gadgets</span></a>
+      
+      <a href="gaming.html" class="cat-tile"><span class="cat-tile-icon">🎮</span><span class="cat-tile-name">Gaming</span></a>
+      <a href="startups-business.html" class="cat-tile"><span class="cat-tile-icon">💼</span><span class="cat-tile-name">Startups &amp; Business</span></a>
+      <a href="broadcast-tech.html" class="cat-tile"><span class="cat-tile-icon">📡</span><span class="cat-tile-name">Broadcast Tech</span></a>
+      <a href="consumer-tech.html" class="cat-tile"><span class="cat-tile-icon">🛒</span><span class="cat-tile-name">Consumer Tech</span></a>
+    </nav>
+  </div>
 
 </main>
 
@@ -783,7 +897,7 @@
   <div class="footer-inner">
     <div class="footer-about">
       <span class="brand-name">The Tech Brief</span>
-      <p>An independent technology publication delivering original editorial analysis across the technology industry. Updated every six hours, 24/7.</p>
+      <p>An independent technology publication delivering original editorial analysis across AI, cybersecurity, mobile, enterprise tech, EVs, gaming, and more.</p>
     </div>
     <div class="footer-col">
       <h4>Categories</h4>
@@ -796,7 +910,6 @@
       <a href="gaming.html">Gaming</a>
       <a href="evs-automotive.html">EVs &amp; Automotive</a>
       <a href="startups-business.html">Startups &amp; Business</a>
-      <a href="how-to.html">How-To Guides</a>
     </div>
     <div class="footer-col">
       <h4>Site Info</h4>
@@ -810,23 +923,40 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; <span id="footer-year"></span> The Tech Brief &mdash; thetechbrief.net. All rights reserved.</span>
-    <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
+    <span>&copy; <span id="footer-year"></span> The Tech Brief — thetechbrief.net. All rights reserved.</span>
+    <span>Independent technology journalism.</span>
   </div>
 </footer>
 
+<!-- ===== COOKIE BANNER ===== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <p>We use cookies to improve experience and analyse traffic. See our <a href="legal/privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn primary" id="cookieAccept">Accept</button>
+    <button class="btn secondary" id="cookieReject">Decline</button>
+  </div>
+</div>
+
 <script>
-  document.getElementById('footer-year').textContent = new Date().getFullYear();
-  (function(){
-    var c=localStorage.getItem('cookieConsent');
-    if(c){document.getElementById('cookieBanner') && document.getElementById('cookieBanner').remove();return;}
-  })();
-  (function(){
-    var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
-    if(!t||!n)return;
-    t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
-  })();
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+(function(){
+  var t=document.querySelector('.nav-toggle'), n=document.getElementById('siteNav');
+  if(!t||!n) return;
+  t.addEventListener('click', function(){ var o=n.classList.toggle('open'); t.setAttribute('aria-expanded',o); });
+})();
+(function(){
+  var c=localStorage.getItem('cookieConsent');
+  if(c){ document.getElementById('cookieBanner').remove(); return; }
+  document.getElementById('cookieAccept').onclick=function(){
+    localStorage.setItem('cookieConsent','yes');
+    document.getElementById('cookieBanner').remove();
+    gtag('consent','update',{'analytics_storage':'granted','ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+  };
+  document.getElementById('cookieReject').onclick=function(){
+    localStorage.setItem('cookieConsent','no');
+    document.getElementById('cookieBanner').remove();
+  };
+})();
 </script>
-<script src="assets/cookie-consent.js"></script>
 </body>
 </html>

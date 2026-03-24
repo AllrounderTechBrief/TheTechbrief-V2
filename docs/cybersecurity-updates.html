@@ -2,411 +2,353 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Google Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
       'analytics_storage': 'denied', 'ad_storage': 'denied',
-      'ad_user_data': 'denied', 'ad_personalization': 'denied', 'wait_for_update': 500
+      'ad_user_data': 'denied', 'ad_personalization': 'denied',
+      'wait_for_update': 500
     });
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJEGDPW7G"></script>
   <script>gtag('js', new Date()); gtag('config', 'G-YCJEGDPW7G');</script>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>Cybersecurity News & Threat Intelligence | The Tech Brief</title>
   <meta name="description" content="Original coverage of security threats, vulnerabilities, data breaches and enterprise defences. Written by The Tech Brief editorial team.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.thetechbrief.net/cybersecurity-updates.html">
-
-  <meta property="og:type"        content="website">
-  <meta property="og:site_name"   content="The Tech Brief">
-  <meta property="og:title"       content="Cybersecurity News & Threat Intelligence | The Tech Brief">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Tech Brief">
+  <meta property="og:title" content="Cybersecurity News & Threat Intelligence | The Tech Brief">
   <meta property="og:description" content="Original coverage of security threats, vulnerabilities, data breaches and enterprise defences. Written by The Tech Brief editorial team.">
-  <meta property="og:url"         content="https://www.thetechbrief.net/cybersecurity-updates.html">
-
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Cybersecurity News & Threat Intelligence | The Tech Brief">
+  <meta property="og:url" content="https://www.thetechbrief.net/cybersecurity-updates.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cybersecurity News & Threat Intelligence | The Tech Brief">
   <meta name="twitter:description" content="Original coverage of security threats, vulnerabilities, data breaches and enterprise defences. Written by The Tech Brief editorial team.">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Cybersecurity News & Threat Intelligence",
-    "description": "Original coverage of security threats, vulnerabilities, data breaches and enterprise defences. Written by The Tech Brief editorial team.",
+    "name": "Cybersecurity Updates — The Tech Brief",
     "url": "https://www.thetechbrief.net/cybersecurity-updates.html",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.thetechbrief.net/"},
-        {"@type":"ListItem","position":2,"name":"Cybersecurity News & Threat Intelligence","item":"https://www.thetechbrief.net/cybersecurity-updates.html"}
-      ]
-    },
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/"
-    },
+    "description": "Original coverage of security threats, vulnerabilities, data breaches and enterprise defences. Written by The Tech Brief editorial team.",
     "publisher": {
       "@type": "Organization",
       "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/",
-      "email": "technodate3@gmail.com"
+      "url": "https://www.thetechbrief.net"
     }
   }
   </script>
-
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
-
-  <style>
-    /* ── Fix: uniform cards — remove the broken first-card split layout ── */
-    .grid .card:first-child {
-      grid-column: auto !important;
-      display: flex !important;
-      flex-direction: column !important;
-      grid-template-columns: unset !important;
-    }
-    .grid .card:first-child img {
-      width: 100% !important;
-      height: 185px !important;
-      object-fit: cover !important;
-      border-radius: var(--radius) var(--radius) 0 0 !important;
-    }
-
-    /* ── Editorial article cards (deep-dives from generate_articles.py) ── */
-    .editorial-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent-2);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      display: flex; flex-direction: column;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .editorial-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .editorial-card img {
-      width: 100%; height: 185px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .editorial-card .ec-body {
-      padding: 18px 20px 12px; flex: 1;
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    .editorial-card .ec-badge {
-      display: inline-block; background: var(--accent-2); color: #fff;
-      font-size: 10px; font-weight: 700; letter-spacing: .8px;
-      text-transform: uppercase; padding: 3px 9px; border-radius: 999px;
-      align-self: flex-start;
-    }
-    .editorial-card h3 {
-      font-family: var(--font-serif); font-size: 18px;
-      line-height: 1.3; color: var(--ink); flex: 1;
-    }
-    .editorial-card h3 a { color: inherit; }
-    .editorial-card h3 a:hover { color: var(--accent); }
-    .editorial-card .ec-desc { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
-    .editorial-card .ec-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .editorial-card .ec-meta { font-size: 11px; color: var(--ink-3); font-family: var(--font-mono); }
-    .ec-read {
-      font-size: 12.5px; font-weight: 600; color: var(--accent);
-    }
-    .ec-read:hover { color: var(--accent-h); }
-    .ec-read::after { content: ' →'; }
-
-    /* ── Standard editorial news cards ── */
-    /* Same .card class but with cleaned footer — no source attribution */
-    .card .card-footer-clean {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .card .card-date-tag {
-      font-size: 11px; color: var(--ink-3); font-family: var(--font-mono);
-    }
-
-    /* ── "In focus" featured card for latest item in category ── */
-    .in-focus-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      margin-bottom: 28px;
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 768px) {
-      .in-focus-card { grid-template-columns: 340px 1fr; }
-      .in-focus-card img { height: 100%; min-height: 220px; border-radius: var(--radius) 0 0 var(--radius); }
-    }
-    .in-focus-card img {
-      width: 100%; height: 220px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .in-focus-body {
-      padding: 24px 28px;
-      display: flex; flex-direction: column; gap: 12px;
-    }
-    .in-focus-label {
-      font-size: 10px; font-weight: 700; letter-spacing: 1.2px;
-      text-transform: uppercase; color: var(--accent);
-      font-family: var(--font-mono);
-    }
-    .in-focus-body h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(20px, 2.5vw, 28px);
-      line-height: 1.25; color: var(--ink);
-    }
-    .in-focus-body h2 a { color: inherit; }
-    .in-focus-body h2 a:hover { color: var(--accent); }
-    .in-focus-body p {
-      font-size: 15px; color: var(--ink-2); line-height: 1.65; flex: 1;
-    }
-    .in-focus-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 12px; margin-top: auto; padding-top: 14px;
-      border-top: 1px solid var(--border);
-    }
-    .in-focus-date { font-size: 12px; color: var(--ink-3); font-family: var(--font-mono); }
-  </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<!-- ===== TICKER ===== -->
+<div class="ticker-bar" aria-hidden="true">
+  <span class="ticker-label">LIVE</span>
+  <div class="ticker-track-wrap">
+    <div class="ticker-track">
+      <span class="ticker-item"><span>AI</span>LLM inference costs down 80% year-on-year across major cloud providers</span>
+      <span class="ticker-item"><span>CYBER</span>State-sponsored APT groups increasingly targeting critical infrastructure OT networks</span>
+      <span class="ticker-item"><span>ENTERPRISE</span>Gartner: 65% of enterprises to deploy AI agents in production by end of 2026</span>
+      <span class="ticker-item"><span>EVs</span>Global EV penetration hits 28% of new car sales in Q1 2026</span>
+      <span class="ticker-item"><span>MOBILE</span>Qualcomm Snapdragon X2 benchmarks leak ahead of MWC announcement</span>
+      <span class="ticker-item"><span>AI</span>LLM inference costs down 80% year-on-year across major cloud providers</span>
+      <span class="ticker-item"><span>CYBER</span>State-sponsored APT groups increasingly targeting critical infrastructure OT networks</span>
+      <span class="ticker-item"><span>ENTERPRISE</span>Gartner: 65% of enterprises to deploy AI agents in production by end of 2026</span>
+      <span class="ticker-item"><span>EVs</span>Global EV penetration hits 28% of new car sales in Q1 2026</span>
+      <span class="ticker-item"><span>MOBILE</span>Qualcomm Snapdragon X2 benchmarks leak ahead of MWC announcement</span>
+    </div>
+  </div>
+</div>
 
 <!-- ===== HEADER ===== -->
 <header class="site-header" role="banner">
-  <a href="index.html" class="header-brand" aria-label="The Tech Brief — Home">
-    <div class="brand-icon" aria-hidden="true">TB</div>
-    <span class="brand-name">Tech Brief</span>
+  <a href="index.html" class="header-brand" aria-label="The Tech Brief home">
+    <div class="brand-icon">TB</div>
+    <div>
+      <span class="brand-name">The Tech Brief</span>
+      <span class="brand-tagline">Technology Intelligence</span>
+    </div>
   </a>
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="currentColor"/><rect y="10" width="22" height="2" rx="1" fill="currentColor"/><rect y="16" width="22" height="2" rx="1" fill="currentColor"/></svg>
   </button>
-  <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
-    <a href="index.html">Home</a>
-    <a href="ai-news.html">AI News</a>
-    <a href="broadcast-tech.html">Broadcast Tech</a>
-    <a href="enterprise-tech.html">Enterprise Tech</a>
-    <a href="cybersecurity-updates.html">Cybersecurity</a>
-    <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
-    <a href="consumer-tech.html">Consumer Tech</a>
-    <a href="gaming.html">Gaming</a>
-    <a href="evs-automotive.html">EVs &amp; Automotive</a>
-    <a href="startups-business.html">Startups &amp; Business</a>
-    <a href="how-to.html">How-To Guides</a>
+  <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
+    <a href="ai-news.html" >AI</a>
+    <a href="cybersecurity-updates.html" aria-current="page">Cybersecurity</a>
+    <a href="enterprise-tech.html" >Enterprise</a>
+    <a href="mobile-gadgets.html" >Mobile</a>
+    <a href="evs-automotive.html" >EVs</a>
+    <a href="gaming.html" >Gaming</a>
+    <a href="startups-business.html" >Startups</a>
+    <a href="how-to.html" >How-To</a>
     <a href="about.html" class="nav-cta">About</a>
   </nav>
 </header>
 
 <!-- ===== CATEGORY HERO ===== -->
-<section class="cat-hero" aria-label="Category overview">
+<div class="cat-hero">
   <div class="cat-hero-inner">
-    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-      <a href="index.html">Home</a>
-      <span aria-hidden="true">&rsaquo;</span>
-      <span aria-current="page">Cybersecurity News & Threat Intelligence</span>
-    </nav>
-    <h1 class="cat-hero-title">Cybersecurity News & Threat Intelligence</h1>
-    <p class="cat-hero-desc">Original editorial coverage of security threats, vulnerabilities and enterprise defences</p>
-  </div>
-</section>
-
-<!-- ===== MAIN CONTENT ===== -->
-<main id="main-content">
-
-  <!-- ===== EDITORIAL DEEP DIVES ===== -->
-  
-
-  <!-- ===== EDITORIAL NEWS COVERAGE ===== -->
-  
-  <div class="section" >
-    <div class="section-head">
-      <h2>Cybersecurity News & Threat Intelligence Coverage</h2>
-      <span class="section-count">10 editorially-written pieces &mdash; refreshed every 6 hours</span>
-      <span class="section-sub">Original editorial commentary and analysis on the latest developments in Cybersecurity News & Threat Intelligence</span>
+    <div>
+      <p class="cat-crumb"><a href="index.html">Home</a> &rsaquo; Cybersecurity Updates</p>
+      <h1 class="cat-hero-title">
+        <span>🔐</span>Cybersecurity Updates
+      </h1>
+      <p class="cat-hero-meta">10 articles &middot; Updated every 6 hours &middot; 24 Mar 2026, 16:22 UTC</p>
     </div>
+  </div>
+</div>
+
+<!-- ===== MAIN ===== -->
+<main id="main">
+
+  <!-- ===== FEATURED ARTICLES ===== -->
+  
+  <div class="section">
+    <div class="section-head">
+      <h2>Latest <span class="accent">Cybersecurity Updates</span></h2>
+      <span class="section-sub">10 articles · refreshed every 6 hrs</span>
+    </div>
+
+    <!-- First article featured -->
+    
+    <div style="margin-bottom: 22px;">
+      <article class="card" style="max-width: 100%; flex-direction: row; min-height: 200px;" itemscope itemtype="https://schema.org/Article">
+        
+        <img src="https://images.unsplash.com/photo-1544890225-2f3faec4cd60?w=800&q=80" alt="GitHub 'OpenClaw Deployer' Repo Delivers Trojan Instead" loading="eager"
+          style="width: 340px; min-width: 240px; height: auto; object-fit: cover; flex-shrink: 0; border-radius: var(--radius) 0 0 var(--radius);"
+          itemprop="image">
+        
+        <div style="display: flex; flex-direction: column; flex: 1;">
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-cat card-cat-cybersecurityupdates">Cybersecurity Updates</span>
+              <time datetime="2026-03-24">March 24, 2026</time>
+            </div>
+            <h2 itemprop="headline" style="font-family: var(--font-serif); font-size: clamp(18px, 2.5vw, 24px); line-height: 1.25; color: var(--ink); font-weight: 700;">
+              <a href="articles/rss-ec9b77319ef38b65.html" style="color: inherit;">GitHub 'OpenClaw Deployer' Repo Delivers Trojan Instead</a>
+            </h2>
+            <p class="card-desc">What is unfolding in GitHub OpenClaw Deployer Repo represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowin…</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-date">4 min read</span>
+            <a href="articles/rss-ec9b77319ef38b65.html" class="card-read">Read analysis</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <style>
+      @media (max-width: 600px) {
+        .feat-article { flex-direction: column !important; }
+        .feat-article img { width: 100% !important; border-radius: var(--radius) var(--radius) 0 0 !important; height: 200px !important; }
+      }
+    </style>
+    
+
+    <!-- Remaining articles grid -->
     <div class="grid">
       
-      <article class="card" aria-label="Microsoft Proposes Better Identity, Guardrails for AI Agents">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1662026911591-335639b11db6?w=900&auto=format&fit=crop&q=80" alt="Microsoft Proposes Better Identity, Guardrails for AI Agents" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=800&q=80" alt="How a Large Bank Uses AI Digital Twins for Threat Hunting" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-d900efda0589f12d.html">Microsoft Proposes Better Identity, Guardrails for AI Agents</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around microsoft proposes better identity, guardrails for ai agents. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. Maintaining awareness of developments in cybersecurity is essential for any organisation operating in today's threat environment, where the cost of being caught unprepared continues to rise.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-cybersecurityupdates">Cybersecurity Updates</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-4050f1ca8eaf82ab.html">How a Large Bank Uses AI Digital Twins for Threat Hunting</a></h3>
+          <p class="card-desc">The Large Bank Uses Digital space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics an…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-d900efda0589f12d.html" class="read-link" aria-label="Read: Microsoft Proposes Better Identity, Guardrails for AI Agents">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-4050f1ca8eaf82ab.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="AI in the SOC: What Could Go Wrong?">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1569396116180-210c182bedb8?w=900&auto=format&fit=crop&q=80" alt="AI in the SOC: What Could Go Wrong?" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be55?w=800&q=80" alt="Microsoft Proposes Better Identity, Guardrails for AI Agents" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-b3ce63093797410e.html">AI in the SOC: What Could Go Wrong?</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around ai in the soc: what could go wrong. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. Maintaining awareness of developments in cybersecurity is essential for any organisation operating in today's threat environment, where the cost of being caught unprepared continues to rise.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-cybersecurityupdates">Cybersecurity Updates</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-d900efda0589f12d.html">Microsoft Proposes Better Identity, Guardrails for AI Agents</a></h3>
+          <p class="card-desc">The latest developments in Microsoft Proposes Better Identity signal a meaningful inflection point for the industry. Organisations that move…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-b3ce63093797410e.html" class="read-link" aria-label="Read: AI in the SOC: What Could Go Wrong?">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-d900efda0589f12d.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Trivy Supply Chain Attack Targets CI/CD Secrets">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=900&auto=format&fit=crop&q=80" alt="Trivy Supply Chain Attack Targets CI/CD Secrets" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1571786256017-aee7a0c009b6?w=800&q=80" alt="AI in the SOC: What Could Go Wrong?" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-32be283f6fb7420e.html">Trivy Supply Chain Attack Targets CI/CD Secrets</a></h3>
-          <p class="card-summary">The story of trivy supply chain attack targets ci/cd secrets reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Maintaining awareness of developments in cybersecurity is essential for any organisation operating in today's threat environment, where the cost of being caught unprepared continues to rise.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-cybersecurityupdates">Cybersecurity Updates</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-b3ce63093797410e.html">AI in the SOC: What Could Go Wrong?</a></h3>
+          <p class="card-desc">The latest developments in What Wrong signal a meaningful inflection point for the industry. Organisations that move quickly to understand t…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-32be283f6fb7420e.html" class="read-link" aria-label="Read: Trivy Supply Chain Attack Targets CI/CD Secrets">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-b3ce63093797410e.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Ransomware's New Era: Moving at AI Speed">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=900&auto=format&fit=crop&q=80" alt="Ransomware's New Era: Moving at AI Speed" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374173b4e?w=800&q=80" alt="Trivy Supply Chain Attack Targets CI/CD Secrets" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-a6534dee51d36fdf.html">Ransomware's New Era: Moving at AI Speed</a></h3>
-          <p class="card-summary">The story of ransomware's new era: moving at ai speed reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Maintaining awareness of developments in cybersecurity is essential for any organisation operating in today's threat environment, where the cost of being caught unprepared continues to rise.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-cybersecurityupdates">Cybersecurity Updates</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-32be283f6fb7420e.html">Trivy Supply Chain Attack Targets CI/CD Secrets</a></h3>
+          <p class="card-desc">The Trivy Supply Chain Attack space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-a6534dee51d36fdf.html" class="read-link" aria-label="Read: Ransomware's New Era: Moving at AI Speed">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-32be283f6fb7420e.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="CISOs Debate Human Role in AI-Powered Security">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1662026911591-335639b11db6?w=900&auto=format&fit=crop&q=80" alt="CISOs Debate Human Role in AI-Powered Security" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80" alt="Ransomware's New Era: Moving at AI Speed" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-47f25cc162a38403.html">CISOs Debate Human Role in AI-Powered Security</a></h3>
-          <p class="card-summary">A clearer picture is emerging around cisos debate human role in ai-powered security, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. Maintaining awareness of developments in cybersecurity is essential for any organisation operating in today's threat environment, where the cost of being caught unprepared continues to rise.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-cybersecurityupdates">Cybersecurity Updates</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-a6534dee51d36fdf.html">Ransomware's New Era: Moving at AI Speed</a></h3>
+          <p class="card-desc">The Ransomwares Moving Speed space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics a…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-47f25cc162a38403.html" class="read-link" aria-label="Read: CISOs Debate Human Role in AI-Powered Security">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-a6534dee51d36fdf.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Attackers Hide Infostealer in Copyright Infringement Notices">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=900&auto=format&fit=crop&q=80" alt="Attackers Hide Infostealer in Copyright Infringement Notices" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be55?w=800&q=80" alt="CISOs Debate Human Role in AI-Powered Security" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-9e7abd234524b355.html">Attackers Hide Infostealer in Copyright Infringement Notices</a></h3>
-          <p class="card-summary">The story of attackers hide infostealer in copyright infringement notices reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Maintaining awareness of developments in cybersecurity is essential for any organisation operating in today's threat environment, where the cost of being caught unprepared continues to rise.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-cybersecurityupdates">Cybersecurity Updates</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-47f25cc162a38403.html">CISOs Debate Human Role in AI-Powered Security</a></h3>
+          <p class="card-desc">What is unfolding in CISOs Debate Human Role represents a convergence of technical capability, regulatory clarity, and market readiness that…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-9e7abd234524b355.html" class="read-link" aria-label="Read: Attackers Hide Infostealer in Copyright Infringement Notices">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-47f25cc162a38403.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="AI Dominates RSAC Innovation Sandbox">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=900&auto=format&fit=crop&q=80" alt="AI Dominates RSAC Innovation Sandbox" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80" alt="Attackers Hide Infostealer in Copyright Infringement Notices" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-ea15908ada66ae7b.html">AI Dominates RSAC Innovation Sandbox</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around ai dominates rsac innovation sandbox. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. Maintaining awareness of developments in cybersecurity is essential for any organisation operating in today's threat environment, where the cost of being caught unprepared continues to rise.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-cybersecurityupdates">Cybersecurity Updates</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-9e7abd234524b355.html">Attackers Hide Infostealer in Copyright Infringement Notices</a></h3>
+          <p class="card-desc">The Attackers Hide Infostealer Copyright space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adopti…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 22, 2026</span>
-          <a href="articles/rss-ea15908ada66ae7b.html" class="read-link" aria-label="Read: AI Dominates RSAC Innovation Sandbox">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-9e7abd234524b355.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Patch Now: Oracle's Fusion Middleware Has Critical RCE Flaw">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&auto=format&fit=crop&q=80" alt="Patch Now: Oracle's Fusion Middleware Has Critical RCE Flaw" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80" alt="AI Dominates RSAC Innovation Sandbox" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-1ad9ee0f0c577e4b.html">Patch Now: Oracle's Fusion Middleware Has Critical RCE Flaw</a></h3>
-          <p class="card-summary">The story of patch now: oracle's fusion middleware has critical rce flaw reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Maintaining awareness of developments in cybersecurity is essential for any organisation operating in today's threat environment, where the cost of being caught unprepared continues to rise.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-cybersecurityupdates">Cybersecurity Updates</span>
+            <time datetime="2026-03-22">March 22, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-ea15908ada66ae7b.html">AI Dominates RSAC Innovation Sandbox</a></h3>
+          <p class="card-desc">The latest developments in Dominates RSAC Innovation Sandbox signal a meaningful inflection point for the industry. Organisations that move …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 20, 2026</span>
-          <a href="articles/rss-1ad9ee0f0c577e4b.html" class="read-link" aria-label="Read: Patch Now: Oracle's Fusion Middleware Has Critical RCE Flaw">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-ea15908ada66ae7b.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Cyber OpSec Fail: Beast Gang Exposes Ransomware Server">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&auto=format&fit=crop&q=80" alt="Cyber OpSec Fail: Beast Gang Exposes Ransomware Server" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1544890225-2f3faec4cd60?w=800&q=80" alt="Patch Now: Oracle's Fusion Middleware Has Critical RCE Flaw" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-e58b4ea404a4ea0b.html">Cyber OpSec Fail: Beast Gang Exposes Ransomware Server</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as cyber opsec fail: beast gang exposes ransomware server. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. Maintaining awareness of developments in cybersecurity is essential for any organisation operating in today's threat environment, where the cost of being caught unprepared continues to rise.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-cybersecurityupdates">Cybersecurity Updates</span>
+            <time datetime="2026-03-20">March 20, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-1ad9ee0f0c577e4b.html">Patch Now: Oracle's Fusion Middleware Has Critical RCE Flaw</a></h3>
+          <p class="card-desc">The Patch Oracles Fusion Middleware space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption me…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 20, 2026</span>
-          <a href="articles/rss-e58b4ea404a4ea0b.html" class="read-link" aria-label="Read: Cyber OpSec Fail: Beast Gang Exposes Ransomware Server">Read more</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="Interlock Ransomware Targets Cisco Enterprise Firewalls">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1569396116180-210c182bedb8?w=900&auto=format&fit=crop&q=80" alt="Interlock Ransomware Targets Cisco Enterprise Firewalls" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="articles/rss-8c08b92bb21501ce.html">Interlock Ransomware Targets Cisco Enterprise Firewalls</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and interlock ransomware targets cisco enterprise firewalls is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. Maintaining awareness of developments in cybersecurity is essential for any organisation operating in today's threat environment, where the cost of being caught unprepared continues to rise.</p>
-        </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 20, 2026</span>
-          <a href="articles/rss-8c08b92bb21501ce.html" class="read-link" aria-label="Read: Interlock Ransomware Targets Cisco Enterprise Firewalls">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-1ad9ee0f0c577e4b.html" class="card-read">Read brief</a>
         </div>
       </article>
       
     </div>
+
+    
   </div>
+
+  <!-- ===== AD SLOT ===== -->
+  <div class="section" style="padding-top: 0; padding-bottom: 0;">
+    <!-- AdSense slot -->
+  </div>
+
+  <!-- ===== EDITORIAL ARTICLES ===== -->
   
 
-
+  <!-- ===== BROWSE OTHER CATEGORIES ===== -->
+  <div class="section">
+    <div class="section-head">
+      <h2>More Coverage</h2>
+    </div>
+    <nav class="cat-tile-grid" aria-label="Browse other categories">
+      <a href="ai-news.html" class="cat-tile"><span class="cat-tile-icon">🤖</span><span class="cat-tile-name">AI News</span></a>
+      
+      <a href="enterprise-tech.html" class="cat-tile"><span class="cat-tile-icon">🏢</span><span class="cat-tile-name">Enterprise Tech</span></a>
+      <a href="mobile-gadgets.html" class="cat-tile"><span class="cat-tile-icon">📱</span><span class="cat-tile-name">Mobile &amp; Gadgets</span></a>
+      <a href="evs-automotive.html" class="cat-tile"><span class="cat-tile-icon">🚗</span><span class="cat-tile-name">EVs &amp; Automotive</span></a>
+      <a href="gaming.html" class="cat-tile"><span class="cat-tile-icon">🎮</span><span class="cat-tile-name">Gaming</span></a>
+      <a href="startups-business.html" class="cat-tile"><span class="cat-tile-icon">💼</span><span class="cat-tile-name">Startups &amp; Business</span></a>
+      <a href="broadcast-tech.html" class="cat-tile"><span class="cat-tile-icon">📡</span><span class="cat-tile-name">Broadcast Tech</span></a>
+      <a href="consumer-tech.html" class="cat-tile"><span class="cat-tile-icon">🛒</span><span class="cat-tile-name">Consumer Tech</span></a>
+    </nav>
+  </div>
 
 </main>
 
@@ -415,7 +357,7 @@
   <div class="footer-inner">
     <div class="footer-about">
       <span class="brand-name">The Tech Brief</span>
-      <p>An independent technology publication delivering original editorial analysis across the technology industry. Updated every six hours, 24/7.</p>
+      <p>An independent technology publication delivering original editorial analysis across AI, cybersecurity, mobile, enterprise tech, EVs, gaming, and more.</p>
     </div>
     <div class="footer-col">
       <h4>Categories</h4>
@@ -428,7 +370,6 @@
       <a href="gaming.html">Gaming</a>
       <a href="evs-automotive.html">EVs &amp; Automotive</a>
       <a href="startups-business.html">Startups &amp; Business</a>
-      <a href="how-to.html">How-To Guides</a>
     </div>
     <div class="footer-col">
       <h4>Site Info</h4>
@@ -442,23 +383,40 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; <span id="footer-year"></span> The Tech Brief &mdash; thetechbrief.net. All rights reserved.</span>
-    <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
+    <span>&copy; <span id="footer-year"></span> The Tech Brief — thetechbrief.net. All rights reserved.</span>
+    <span>Independent technology journalism.</span>
   </div>
 </footer>
 
+<!-- ===== COOKIE BANNER ===== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <p>We use cookies to improve experience and analyse traffic. See our <a href="legal/privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn primary" id="cookieAccept">Accept</button>
+    <button class="btn secondary" id="cookieReject">Decline</button>
+  </div>
+</div>
+
 <script>
-  document.getElementById('footer-year').textContent = new Date().getFullYear();
-  (function(){
-    var c=localStorage.getItem('cookieConsent');
-    if(c){document.getElementById('cookieBanner') && document.getElementById('cookieBanner').remove();return;}
-  })();
-  (function(){
-    var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
-    if(!t||!n)return;
-    t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
-  })();
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+(function(){
+  var t=document.querySelector('.nav-toggle'), n=document.getElementById('siteNav');
+  if(!t||!n) return;
+  t.addEventListener('click', function(){ var o=n.classList.toggle('open'); t.setAttribute('aria-expanded',o); });
+})();
+(function(){
+  var c=localStorage.getItem('cookieConsent');
+  if(c){ document.getElementById('cookieBanner').remove(); return; }
+  document.getElementById('cookieAccept').onclick=function(){
+    localStorage.setItem('cookieConsent','yes');
+    document.getElementById('cookieBanner').remove();
+    gtag('consent','update',{'analytics_storage':'granted','ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+  };
+  document.getElementById('cookieReject').onclick=function(){
+    localStorage.setItem('cookieConsent','no');
+    document.getElementById('cookieBanner').remove();
+  };
+})();
 </script>
-<script src="assets/cookie-consent.js"></script>
 </body>
 </html>

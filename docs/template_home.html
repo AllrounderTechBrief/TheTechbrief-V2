@@ -2,41 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Google Consent Mode v2 (default denied – required for GDPR/EU) -->
+  <!-- Google Consent Mode v2 (GDPR) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
-      'analytics_storage': 'denied',
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
+      'analytics_storage': 'denied', 'ad_storage': 'denied',
+      'ad_user_data': 'denied', 'ad_personalization': 'denied',
       'wait_for_update': 500
     });
   </script>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJEGDPW7G"></script>
-  <script>
-    gtag('js', new Date());
-    gtag('config', 'G-YCJEGDPW7G');
-  </script>
+  <script>gtag('js', new Date()); gtag('config', 'G-YCJEGDPW7G');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>{{ meta.title }}</title>
   <meta name="description" content="{{ meta.description }}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.thetechbrief.net/">
-
-  <meta property="og:type"        content="website">
-  <meta property="og:site_name"   content="The Tech Brief">
-  <meta property="og:title"       content="{{ meta.title }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Tech Brief">
+  <meta property="og:title" content="{{ meta.title }}">
   <meta property="og:description" content="{{ meta.description }}">
-  <meta property="og:url"         content="https://www.thetechbrief.net/">
-
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="{{ meta.title }}">
+  <meta property="og:url" content="https://www.thetechbrief.net/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ meta.title }}">
   <meta name="twitter:description" content="{{ meta.description }}">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,191 +47,62 @@
     }
   }
   </script>
-
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
-
-  <style>
-    /* ── Fix: remove featured first-card split layout (caused the NO GAP bug) ── */
-    .grid .card:first-child {
-      grid-column: auto !important;
-      display: flex !important;
-      flex-direction: column !important;
-      grid-template-columns: unset !important;
-    }
-    .grid .card:first-child img {
-      width: 100% !important;
-      height: 185px !important;
-      object-fit: cover !important;
-      border-radius: var(--radius) var(--radius) 0 0 !important;
-    }
-
-    /* ── Editorial card badge ── */
-    .card-badge-editorial {
-      display: inline-block;
-      background: var(--accent-2);
-      color: #fff;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .8px;
-      text-transform: uppercase;
-      padding: 3px 9px;
-      border-radius: 999px;
-      margin-bottom: 6px;
-      align-self: flex-start;
-    }
-
-    /* ── Clean card footer (no source attribution) ── */
-    .card-footer-clean {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 20px;
-      border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-
-    /* ── Editorial highlights strip on homepage ── */
-    .editorial-highlights {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 22px;
-    }
-    .editorial-highlights .ecard {
-      background: var(--white);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent-2);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .editorial-highlights .ecard:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow);
-    }
-    .ecard-img {
-      width: 100%; height: 185px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .ecard-body {
-      padding: 18px 20px 12px;
-      flex: 1; display: flex; flex-direction: column; gap: 8px;
-    }
-    .ecard-meta {
-      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-      font-size: 11px; color: var(--ink-3);
-    }
-    .ecard-cat {
-      display: inline-block;
-      background: var(--accent-2); color: #fff;
-      padding: 2px 8px; border-radius: 999px;
-      font-size: 10px; font-weight: 700; letter-spacing: .5px;
-    }
-    .ecard-body h3 {
-      font-family: var(--font-serif); font-size: 18px;
-      line-height: 1.3; color: var(--ink); flex: 1;
-    }
-    .ecard-body h3 a { color: inherit; }
-    .ecard-body h3 a:hover { color: var(--accent); }
-    .ecard-desc {
-      font-size: 13.5px; color: var(--ink-2); line-height: 1.55;
-    }
-    .ecard-footer {
-      padding: 12px 20px;
-      border-top: 1px solid var(--border);
-      background: #FAFAFA;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .ecard-read {
-      font-size: 12.5px; font-weight: 600; color: var(--accent);
-    }
-    .ecard-read:hover { color: var(--accent-h); }
-    .ecard-read::after { content: ' →'; }
-
-    /* ── Fallback evergreen cards (shown until AI articles exist) ── */
-    .evergreen-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 22px;
-    }
-    .evergreen-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      padding: 22px 24px 18px;
-      display: flex; flex-direction: column; gap: 10px;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .evergreen-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-    .evergreen-card h3 { font-family: var(--font-serif); font-size: 19px; line-height: 1.28; color: var(--ink); }
-    .evergreen-card h3 a { color: inherit; }
-    .evergreen-card h3 a:hover { color: var(--accent); }
-    .evergreen-card p { font-size: 13.5px; color: var(--ink-2); line-height: 1.6; flex: 1; }
-
-    /* ── Category tile grid ── */
-    .cat-tile-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
-    .cat-tile {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px 18px;
-      display: flex; flex-direction: column; gap: 6px;
-      text-decoration: none;
-      transition: transform .15s, box-shadow .15s, border-color .15s;
-      position: relative;
-    }
-    .cat-tile:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--accent); }
-    .cat-tile-icon { font-size: 26px; line-height: 1; }
-    .cat-tile-name { font-family: var(--font-serif); font-size: 15px; color: var(--ink); font-weight: 400; }
-    .cat-tile-desc { font-size: 12px; color: var(--ink-3); line-height: 1.4; }
-    .cat-tile-badge {
-      position: absolute; top: 10px; right: 12px;
-      background: var(--positive); color: #fff;
-      font-size: 9px; font-weight: 700; letter-spacing: .5px;
-      padding: 2px 6px; border-radius: 999px; text-transform: uppercase;
-    }
-  </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<!-- ===== TICKER ===== -->
+<div class="ticker-bar" aria-hidden="true">
+  <span class="ticker-label">LIVE</span>
+  <div class="ticker-track-wrap">
+    <div class="ticker-track" id="tickerTrack">
+      <span class="ticker-item"><span>AI</span>OpenAI releases GPT-5 with multimodal reasoning improvements</span>
+      <span class="ticker-item"><span>CYBER</span>Critical CVE patched in enterprise VPN products — update recommended</span>
+      <span class="ticker-item"><span>EVs</span>Tesla Cybertruck range update pushes EPA estimate to 380 miles</span>
+      <span class="ticker-item"><span>ENTERPRISE</span>Microsoft Azure announces 40% price reduction on GPU compute</span>
+      <span class="ticker-item"><span>MOBILE</span>Samsung Galaxy S26 leaks: under-display camera confirmed</span>
+      <span class="ticker-item"><span>STARTUP</span>AI infrastructure funding hits $18B in Q1 2026</span>
+      <span class="ticker-item"><span>GAMING</span>Nintendo Switch 2 pre-orders exceed 4M units globally</span>
+      <span class="ticker-item"><span>BROADCAST</span>8K HDR live streaming achieves commercial viability in Asia-Pacific</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="ticker-item"><span>AI</span>OpenAI releases GPT-5 with multimodal reasoning improvements</span>
+      <span class="ticker-item"><span>CYBER</span>Critical CVE patched in enterprise VPN products — update recommended</span>
+      <span class="ticker-item"><span>EVs</span>Tesla Cybertruck range update pushes EPA estimate to 380 miles</span>
+      <span class="ticker-item"><span>ENTERPRISE</span>Microsoft Azure announces 40% price reduction on GPU compute</span>
+      <span class="ticker-item"><span>MOBILE</span>Samsung Galaxy S26 leaks: under-display camera confirmed</span>
+      <span class="ticker-item"><span>STARTUP</span>AI infrastructure funding hits $18B in Q1 2026</span>
+      <span class="ticker-item"><span>GAMING</span>Nintendo Switch 2 pre-orders exceed 4M units globally</span>
+      <span class="ticker-item"><span>BROADCAST</span>8K HDR live streaming achieves commercial viability in Asia-Pacific</span>
+    </div>
+  </div>
+</div>
 
 <!-- ===== HEADER ===== -->
 <header class="site-header" role="banner">
-  <a href="index.html" class="header-brand" aria-label="The Tech Brief — Home">
-    <div class="brand-icon" aria-hidden="true">TB</div>
-    <span class="brand-name">Tech Brief</span>
+  <a href="index.html" class="header-brand" aria-label="The Tech Brief home">
+    <div class="brand-icon">TB</div>
+    <div>
+      <span class="brand-name">The Tech Brief</span>
+      <span class="brand-tagline">Technology Intelligence</span>
+    </div>
   </a>
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="currentColor"/><rect y="10" width="22" height="2" rx="1" fill="currentColor"/><rect y="16" width="22" height="2" rx="1" fill="currentColor"/></svg>
   </button>
-  <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
-    <a href="index.html" aria-current="page">Home</a>
-    <a href="ai-news.html">AI News</a>
-    <a href="broadcast-tech.html">Broadcast Tech</a>
-    <a href="enterprise-tech.html">Enterprise Tech</a>
+  <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
+    <a href="ai-news.html">AI</a>
     <a href="cybersecurity-updates.html">Cybersecurity</a>
-    <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
-    <a href="consumer-tech.html">Consumer Tech</a>
+    <a href="enterprise-tech.html">Enterprise</a>
+    <a href="mobile-gadgets.html">Mobile</a>
+    <a href="evs-automotive.html">EVs</a>
     <a href="gaming.html">Gaming</a>
-    <a href="evs-automotive.html">EVs &amp; Automotive</a>
-    <a href="startups-business.html">Startups &amp; Business</a>
-    <a href="how-to.html">How-To Guides</a>
+    <a href="startups-business.html">Startups</a>
+    <a href="how-to.html">How-To</a>
     <a href="about.html" class="nav-cta">About</a>
   </nav>
 </header>
@@ -248,240 +110,368 @@
 <!-- ===== HERO ===== -->
 <section class="hero" aria-label="Site introduction">
   <div class="hero-inner">
-    <span class="hero-label">Original Editorial Coverage &mdash; {{ meta.h1 }}</span>
-    <h1>Your Daily Technology Intelligence Brief</h1>
-    <p class="hero-sub">In-depth original analysis and reporting across AI, enterprise tech, cybersecurity, broadcast technology, mobile and more &mdash; written by The Tech Brief editorial team.</p>
-    <nav class="cat-pill-row" aria-label="Browse by category">
-      <a href="ai-news.html" class="cat-pill">&#x1F916; AI News</a>
-      <a href="broadcast-tech.html" class="cat-pill">&#x1F4E1; Broadcast Tech</a>
-      <a href="enterprise-tech.html" class="cat-pill">&#x1F3E2; Enterprise Tech</a>
-      <a href="cybersecurity-updates.html" class="cat-pill">&#x1F510; Cybersecurity</a>
-      <a href="mobile-gadgets.html" class="cat-pill">&#x1F4F1; Mobile &amp; Gadgets</a>
-      <a href="consumer-tech.html" class="cat-pill">&#x1F6D2; Consumer Tech</a>
-      <a href="gaming.html" class="cat-pill">&#x1F3AE; Gaming</a>
-      <a href="evs-automotive.html" class="cat-pill">&#x1F697; EVs &amp; Automotive</a>
-      <a href="startups-business.html" class="cat-pill">&#x1F4BC; Startups &amp; Business</a>
-    </nav>
-  </div>
-</section>
-
-<!-- ===== TECH TRENDING NOW ===== -->
-<section class="trending-now" aria-label="Tech Trending Now">
-  <div class="trending-inner">
-    <div class="trending-meta">
-      <div class="trending-live">
-        <span class="live-dot" aria-hidden="true"></span>
-        <span class="live-label">Live</span>
+    <div class="hero-eyebrow">Technology Intelligence Platform</div>
+    <h1>The <em>Briefing</em> Every Technology Professional Needs</h1>
+    <p class="hero-sub">Original analysis and expert commentary across AI, cybersecurity, enterprise tech, mobile, EVs, and more. Updated daily — no noise, just signal.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <strong>9</strong>
+        <span>Categories</span>
       </div>
-      <h2 class="trending-title">Tech Trending Now</h2>
-      <time class="trending-date" datetime=""></time>
+      <div class="hero-stat">
+        <strong>Daily</strong>
+        <span>Updates</span>
+      </div>
+      <div class="hero-stat">
+        <strong>Original</strong>
+        <span>Analysis</span>
+      </div>
+      <div class="hero-stat">
+        <strong>Free</strong>
+        <span>Always</span>
+      </div>
     </div>
-    <ol class="trending-list" aria-label="Trending stories">
-      <!-- Populated by trending-loader.js from assets/data/trending.txt -->
-    </ol>
-    <div class="trending-footer">
-      <a href="ai-news.html" class="trending-cta">Browse all tech news <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <div class="hero-actions">
+      <a href="ai-news.html" class="btn btn-primary">Explore AI Coverage</a>
+      <a href="about.html#editorial-process" class="btn btn-outline">Our Editorial Process</a>
     </div>
   </div>
 </section>
 
-<!-- ===== MAIN CONTENT ===== -->
-<main id="main-content">
+<!-- ===== MAIN ===== -->
+<main id="main">
 
-  <!-- ===== ORIGINAL EDITORIAL ARTICLES ===== -->
-  <!-- This section is 100% original — written by the Groq-powered editorial generator  -->
-  <!-- No RSS content, no scraped summaries, no external source attribution             -->
+  <!-- AD SLOT — Leaderboard -->
+  <div class="section" style="padding-bottom: 0; padding-top: 28px;">
+    <!-- Google AdSense will inject here -->
+    <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="YYYYYYYY" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+  </div>
+
+  <!-- ===== LATEST INTELLIGENCE ===== -->
   <div class="section">
     <div class="section-head">
-      <h2>Analysis &amp; Deep Dives</h2>
+      <h2>Latest <span class="accent">Intelligence</span></h2>
+      <span class="section-sub">Updated every 6 hours · {{ build_ts }}</span>
     </div>
-
-    {% if editorial_articles %}
-    <div class="editorial-highlights">
-      {% for article in editorial_articles %}
-      <article class="ecard" aria-label="{{ article.title }}">
-        {% if article.image %}
-        <img class="ecard-img" src="{{ article.image }}" alt="Editorial illustration: {{ article.title }}" loading="lazy" width="400" height="185">
+    <div class="featured-grid" id="featured-grid">
+      {% for article in articles[:3] %}
+      <article class="card" itemscope itemtype="https://schema.org/Article">
+        {% if article.image_url %}
+        <img src="{{ article.image_url }}" alt="{{ article.title }}" class="card-img" loading="{% if loop.index == 1 %}eager{% else %}lazy{% endif %}" itemprop="image">
         {% endif %}
-        <div class="ecard-body">
-          <div class="ecard-meta">
-            <span class="ecard-cat">{{ article.cat_icon }} {{ article.cat_name }}</span>
-            <span>{{ article.date }}</span>
-            <span>&middot; {{ article.read_minutes }} min read</span>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat card-cat-{{ article.cat_slug | replace('-','') | default('default') }}">{{ article.category }}</span>
+            <time datetime="{{ article.pub_date }}">{{ article.pub_date_fmt }}</time>
           </div>
-          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-          <p class="ecard-desc">{{ article.description }}</p>
+          <h3 itemprop="headline"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          <p class="card-desc">{{ article.summary[:160] }}{% if article.summary|length > 160 %}…{% endif %}</p>
         </div>
-        <div class="ecard-footer">
-          <span style="font-size:11px; font-weight:600; color:var(--ink-3); font-family:var(--font-mono);">THE TECH BRIEF</span>
-          <a href="{{ article.url }}" class="ecard-read">Read analysis</a>
+        <div class="card-footer">
+          <span class="card-date">{{ article.read_time | default('4 min read') }}</span>
+          <a href="{{ article.url }}" class="card-read">Read brief</a>
         </div>
       </article>
       {% endfor %}
     </div>
+  </div>
 
-    {% else %}
-    <!-- Fallback: show hand-authored evergreen articles until generator has run -->
-    <div class="evergreen-grid">
-      <article class="evergreen-card">
-        <span class="ecard-cat" style="align-self:flex-start;">🤖 AI News</span>
-        <h3><a href="articles/ai-agents-enterprise-2025.html">AI Agents in the Enterprise: What 2025's Deployments Actually Look Like</a></h3>
-        <p>Beyond the hype — a practical look at how organisations are deploying AI agents in production, what infrastructure they require, and which use cases are delivering measurable ROI.</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border);">
-          <span style="font-size:11px;color:var(--ink-3);font-family:var(--font-mono);">THE TECH BRIEF</span>
-          <a href="articles/ai-agents-enterprise-2025.html" class="ecard-read">Read analysis</a>
+  <!-- ===== TRENDING INTELLIGENCE ===== -->
+  <div class="section">
+    <div class="section-head">
+      <div class="trending-header">
+        <h2>Trending <span class="accent">Now</span></h2>
+        <span class="trending-badge">Live</span>
+      </div>
+      <a href="ai-news.html" class="view-all">View all</a>
+    </div>
+
+    <!-- Skeleton placeholders while loading -->
+    <div class="trending-placeholder" id="trending-placeholder">
+      {% for i in range(6) %}
+      <div class="trending-skeleton">
+        <div class="skel-line w-60" style="margin-bottom:14px;height:10px;"></div>
+        <div class="skel-line w-100" style="height:16px;margin-bottom:8px;"></div>
+        <div class="skel-line w-80" style="height:16px;margin-bottom:8px;"></div>
+        <div class="skel-line w-100" style="height:12px;margin-bottom:6px;"></div>
+        <div class="skel-line w-80" style="height:12px;"></div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="intel-grid" id="trending-grid"></div>
+  </div>
+
+  <!-- AD SLOT — Rectangle -->
+  <div class="section" style="padding-top: 0;">
+    <!-- <ins class="adsbygoogle" style="display:block;text-align:center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="ZZZZZZZZ"></ins> -->
+  </div>
+
+  <!-- ===== AI DEEP DIVES ===== -->
+  {% if ai_articles %}
+  <div class="section">
+    <div class="section-head">
+      <h2>🤖 AI <span class="accent">Deep Dives</span></h2>
+      <a href="ai-news.html" class="view-all">All AI coverage</a>
+    </div>
+    <div class="grid">
+      {% for article in ai_articles[:3] %}
+      <article class="card">
+        {% if article.image_url %}
+        <img src="{{ article.image_url }}" alt="{{ article.title }}" class="card-img" loading="lazy">
+        {% endif %}
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat card-cat-ai">AI News</span>
+            <time datetime="{{ article.pub_date }}">{{ article.pub_date_fmt }}</time>
+          </div>
+          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          <p class="card-desc">{{ article.summary[:140] }}{% if article.summary|length > 140 %}…{% endif %}</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">{{ article.read_time | default('5 min read') }}</span>
+          <a href="{{ article.url }}" class="card-read">Read analysis</a>
         </div>
       </article>
-      <article class="evergreen-card">
-        <span class="ecard-cat" style="align-self:flex-start;">🔐 Cybersecurity</span>
-        <h3><a href="articles/ransomware-playbook-2025.html">The 2025 Ransomware Playbook: How Attacks Have Evolved and What Defences Work</a></h3>
-        <p>Ransomware groups have professionalised. This analysis covers how modern attacks unfold, the role of initial access brokers, and the controls that consistently limit damage.</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border);">
-          <span style="font-size:11px;color:var(--ink-3);font-family:var(--font-mono);">THE TECH BRIEF</span>
-          <a href="articles/ransomware-playbook-2025.html" class="ecard-read">Read analysis</a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- ===== CYBERSECURITY ===== -->
+  {% if cyber_articles %}
+  <div class="section">
+    <div class="section-head">
+      <h2>🔐 Cybersecurity <span class="accent">Alerts</span></h2>
+      <a href="cybersecurity-updates.html" class="view-all">All security coverage</a>
+    </div>
+    <div class="intel-grid">
+      {% for article in cyber_articles[:4] %}
+      <article class="intel-card" data-cat="cyber">
+        <span class="intel-badge">Security</span>
+        <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+        <p>{{ article.summary[:120] }}{% if article.summary|length > 120 %}…{% endif %}</p>
+        <div class="intel-footer">
+          <time datetime="{{ article.pub_date }}">{{ article.pub_date_fmt }}</time>
+          <a href="{{ article.url }}" class="intel-read">Read brief</a>
         </div>
       </article>
-      <article class="evergreen-card">
-        <span class="ecard-cat" style="align-self:flex-start;">📱 Mobile &amp; Gadgets</span>
-        <h3><a href="articles/android-vs-iphone-2025.html">Android vs iPhone in 2025: The Real Differences That Actually Matter</a></h3>
-        <p>After a year of flagship launches, we cut through the spec-sheet wars to identify where each platform genuinely leads — and where the gap has closed to near-irrelevance.</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border);">
-          <span style="font-size:11px;color:var(--ink-3);font-family:var(--font-mono);">THE TECH BRIEF</span>
-          <a href="articles/android-vs-iphone-2025.html" class="ecard-read">Read analysis</a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- ===== EDITORIAL HIGHLIGHTS ===== -->
+  <div class="section">
+    <div class="section-head">
+      <h2>📝 Original <span class="accent">Analysis</span></h2>
+      <span class="section-sub">Written by The Tech Brief editorial team</span>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80" alt="AI agents transforming enterprise workflows" class="card-img" loading="lazy">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat card-cat-enterprise">Enterprise</span>
+            <time>Mar 2025</time>
+          </div>
+          <h3><a href="articles/ai-agents-enterprise-2025.html">AI Agents Are Reshaping Enterprise Workflows — Here's the Strategic Playbook</a></h3>
+          <p class="card-desc">Autonomous AI agents are moving from pilot programmes into production deployment across Fortune 500 firms. This is what the operational shift looks like in practice.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">8 min read</span>
+          <a href="articles/ai-agents-enterprise-2025.html" class="card-read">Read analysis</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80" alt="Ransomware defence playbook" class="card-img" loading="lazy">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat card-cat-cyber">Cybersecurity</span>
+            <time>Feb 2025</time>
+          </div>
+          <h3><a href="articles/ransomware-playbook-2025.html">The 2025 Ransomware Playbook: What Attackers Exploit and How to Stop Them</a></h3>
+          <p class="card-desc">Double-extortion, supply-chain pivots, and AI-powered reconnaissance define the current threat landscape. Here is the technical breakdown organisations need to act on.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">10 min read</span>
+          <a href="articles/ransomware-playbook-2025.html" class="card-read">Read analysis</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80" alt="Android vs iPhone 2025" class="card-img" loading="lazy">
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat card-cat-mobile">Mobile</span>
+            <time>Jan 2025</time>
+          </div>
+          <h3><a href="articles/android-vs-iphone-2025.html">Android vs iPhone in 2025: A Technical Comparison Beyond the Marketing</a></h3>
+          <p class="card-desc">Beyond benchmarks and camera samples, what do the architectural differences between Android and iOS mean for developers, businesses, and power users in 2025?</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">7 min read</span>
+          <a href="articles/android-vs-iphone-2025.html" class="card-read">Read analysis</a>
         </div>
       </article>
     </div>
-    {% endif %}
   </div>
+
+  <!-- ===== MORE CATEGORIES ===== -->
+  {% if enterprise_articles or ev_articles or startup_articles %}
+  <div class="section">
+    <div class="section-head">
+      <h2>More Coverage</h2>
+    </div>
+    <div class="grid">
+      {% set more_articles = (enterprise_articles[:1] + ev_articles[:1] + startup_articles[:1] + mobile_articles[:1] + gaming_articles[:1] + consumer_articles[:1]) %}
+      {% for article in more_articles[:6] %}
+      <article class="card">
+        {% if article.image_url %}
+        <img src="{{ article.image_url }}" alt="{{ article.title }}" class="card-img" loading="lazy">
+        {% endif %}
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat card-cat-{{ article.cat_slug | replace('-','') | default('default') }}">{{ article.category }}</span>
+            <time datetime="{{ article.pub_date }}">{{ article.pub_date_fmt }}</time>
+          </div>
+          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          <p class="card-desc">{{ article.summary[:120] }}{% if article.summary|length > 120 %}…{% endif %}</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-date">{{ article.read_time | default('4 min read') }}</span>
+          <a href="{{ article.url }}" class="card-read">Read brief</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
 
   <!-- ===== EDITORIAL TRANSPARENCY ===== -->
-  <div class="section" style="padding-top:0;">
+  <div class="section" style="padding-top: 0;">
     <div class="info-box">
-      <p><strong>About The Tech Brief:</strong> We are an independent technology publication. All articles on this page are written by our editorial team — original analysis and commentary on technology trends, products, and industry developments. We do not syndicate or reproduce content from external sources. <a href="about.html">Learn about our editorial process &rarr;</a></p>
+      <p><strong>About The Tech Brief:</strong> We are an independent technology publication. All editorial content is written by our team — original analysis, not aggregated feeds. We cover AI, cybersecurity, enterprise technology, mobile, EVs, gaming, startups, broadcast tech, and consumer technology with expert-level depth. <a href="about.html">Learn about our editorial process →</a></p>
     </div>
   </div>
 
-  <!-- ===== HOW-TO GUIDES TEASER ===== -->
-  <div class="section" style="padding-top:0;">
+  <!-- ===== HOW-TO GUIDES ===== -->
+  <div class="section" style="padding-top: 0;">
     <div class="section-head">
-      <h2>&#x1F4D6; How-To Guides &amp; Tutorials</h2>
-      <span class="section-count">Step-by-step technology guides from The Tech Brief</span>
+      <h2>📖 How-To <span class="accent">Guides</span></h2>
+      <a href="how-to.html" class="view-all">All guides</a>
     </div>
-    <div class="evergreen-grid">
-      <article class="evergreen-card">
-        <span class="ecard-cat" style="align-self:flex-start;">📱 Android</span>
+    <div class="intel-grid">
+      <article class="intel-card" data-cat="mobile">
+        <span class="intel-badge">Android</span>
         <h3><a href="articles/how-to-factory-reset-android.html">How to Factory Reset Your Android Phone</a></h3>
-        <p>A complete walkthrough for safely resetting your Android device — including how to back up your data first and what to expect during the process.</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border);">
-          <span style="font-size:11px;color:var(--ink-3);font-family:var(--font-mono);">HOW-TO GUIDE</span>
-          <a href="articles/how-to-factory-reset-android.html" class="ecard-read">Read guide</a>
+        <p>Complete walkthrough: back up your data, perform a safe reset, and what to expect during recovery.</p>
+        <div class="intel-footer">
+          <span>How-To Guide</span>
+          <a href="articles/how-to-factory-reset-android.html" class="intel-read">Read guide</a>
         </div>
       </article>
-      <article class="evergreen-card">
-        <span class="ecard-cat" style="align-self:flex-start;">🍎 iPhone</span>
+      <article class="intel-card" data-cat="mobile">
+        <span class="intel-badge">iPhone</span>
         <h3><a href="articles/how-to-factory-reset-iphone.html">How to Factory Reset Your iPhone or iPad</a></h3>
-        <p>Everything you need to know about erasing and resetting an Apple device — with iCloud backup, Find My, and activation lock explained.</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border);">
-          <span style="font-size:11px;color:var(--ink-3);font-family:var(--font-mono);">HOW-TO GUIDE</span>
-          <a href="articles/how-to-factory-reset-iphone.html" class="ecard-read">Read guide</a>
+        <p>Everything about erasing and resetting Apple devices — iCloud backup, Find My, and activation lock explained.</p>
+        <div class="intel-footer">
+          <span>How-To Guide</span>
+          <a href="articles/how-to-factory-reset-iphone.html" class="intel-read">Read guide</a>
         </div>
       </article>
-      <article class="evergreen-card">
-        <span class="ecard-cat" style="align-self:flex-start;">💻 Windows</span>
+      <article class="intel-card" data-cat="enterprise">
+        <span class="intel-badge">Windows</span>
         <h3><a href="articles/how-to-upgrade-windows.html">How to Upgrade to Windows 11</a></h3>
-        <p>Check compatibility, back up your files, and upgrade cleanly — with troubleshooting tips for the most common issues people encounter.</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border);">
-          <span style="font-size:11px;color:var(--ink-3);font-family:var(--font-mono);">HOW-TO GUIDE</span>
-          <a href="articles/how-to-upgrade-windows.html" class="ecard-read">Read guide</a>
+        <p>Check compatibility, back up files, and upgrade cleanly — with fixes for the most common upgrade blockers.</p>
+        <div class="intel-footer">
+          <span>How-To Guide</span>
+          <a href="articles/how-to-upgrade-windows.html" class="intel-read">Read guide</a>
         </div>
       </article>
     </div>
-    <p style="margin-top:20px; text-align:center;">
-      <a href="how-to.html" style="font-size:14px; font-weight:700; color:var(--accent);">View all How-To Guides &rarr;</a>
-    </p>
   </div>
 
   <!-- ===== BROWSE BY CATEGORY ===== -->
-  <div class="section" style="padding-bottom:0;">
+  <div class="section">
     <div class="section-head">
-      <h2>Browse by Category</h2>
-      <span class="section-count">9 categories &mdash; original analysis updated daily, coverage refreshed every 6 hours</span>
+      <h2>Browse by <span class="accent">Category</span></h2>
+      <span class="section-sub">9 categories · updated daily</span>
     </div>
     <nav class="cat-tile-grid" aria-label="Browse all categories">
       <a href="ai-news.html" class="cat-tile">
-        <span class="cat-tile-icon">&#x1F916;</span>
+        <span class="cat-tile-icon">🤖</span>
         <span class="cat-tile-name">AI News</span>
-        <span class="cat-tile-desc">Machine learning, LLMs &amp; AI products</span>
+        <span class="cat-tile-desc">LLMs, machine learning & AI products</span>
       </a>
       <a href="broadcast-tech.html" class="cat-tile">
-        <span class="cat-tile-icon">&#x1F4E1;</span>
+        <span class="cat-tile-icon">📡</span>
         <span class="cat-tile-name">Broadcast Tech</span>
-        <span class="cat-tile-desc">TV, streaming &amp; production technology</span>
+        <span class="cat-tile-desc">TV, streaming & production technology</span>
       </a>
       <a href="enterprise-tech.html" class="cat-tile">
-        <span class="cat-tile-icon">&#x1F3E2;</span>
+        <span class="cat-tile-icon">🏢</span>
         <span class="cat-tile-name">Enterprise Tech</span>
-        <span class="cat-tile-desc">Cloud, SaaS &amp; IT infrastructure</span>
+        <span class="cat-tile-desc">Cloud, SaaS & IT infrastructure</span>
       </a>
       <a href="cybersecurity-updates.html" class="cat-tile">
-        <span class="cat-tile-icon">&#x1F510;</span>
+        <span class="cat-tile-icon">🔐</span>
         <span class="cat-tile-name">Cybersecurity</span>
-        <span class="cat-tile-desc">Threats, breaches &amp; defences</span>
+        <span class="cat-tile-desc">Threats, breaches & defences</span>
       </a>
       <a href="mobile-gadgets.html" class="cat-tile">
-        <span class="cat-tile-icon">&#x1F4F1;</span>
-        <span class="cat-tile-name">Mobile &amp; Gadgets</span>
-        <span class="cat-tile-desc">Smartphones, wearables &amp; devices</span>
+        <span class="cat-tile-icon">📱</span>
+        <span class="cat-tile-name">Mobile & Gadgets</span>
+        <span class="cat-tile-desc">Smartphones, wearables & devices</span>
       </a>
-      <a href="consumer-tech.html" class="cat-tile cat-card--new">
-        <span class="cat-tile-badge">New</span>
-        <span class="cat-tile-icon">&#x1F6D2;</span>
+      <a href="consumer-tech.html" class="cat-tile">
+        <span class="cat-tile-icon">🛒</span>
         <span class="cat-tile-name">Consumer Tech</span>
-        <span class="cat-tile-desc">Reviews, hardware &amp; buying guides</span>
-      </a>
-      <a href="gaming.html" class="cat-tile cat-card--new">
+        <span class="cat-tile-desc">Reviews, hardware & buying guides</span>
         <span class="cat-tile-badge">New</span>
-        <span class="cat-tile-icon">&#x1F3AE;</span>
+      </a>
+      <a href="gaming.html" class="cat-tile">
+        <span class="cat-tile-icon">🎮</span>
         <span class="cat-tile-name">Gaming</span>
-        <span class="cat-tile-desc">Games, consoles &amp; industry news</span>
-      </a>
-      <a href="evs-automotive.html" class="cat-tile cat-card--new">
+        <span class="cat-tile-desc">Games, consoles & industry news</span>
         <span class="cat-tile-badge">New</span>
-        <span class="cat-tile-icon">&#x1F697;</span>
-        <span class="cat-tile-name">EVs &amp; Automotive</span>
-        <span class="cat-tile-desc">Electric vehicles &amp; car tech</span>
       </a>
-      <a href="startups-business.html" class="cat-tile cat-card--new">
+      <a href="evs-automotive.html" class="cat-tile">
+        <span class="cat-tile-icon">🚗</span>
+        <span class="cat-tile-name">EVs & Automotive</span>
+        <span class="cat-tile-desc">Electric vehicles & car tech</span>
         <span class="cat-tile-badge">New</span>
-        <span class="cat-tile-icon">&#x1F4BC;</span>
-        <span class="cat-tile-name">Startups &amp; Business</span>
-        <span class="cat-tile-desc">Funding, M&amp;A &amp; Big Tech strategy</span>
+      </a>
+      <a href="startups-business.html" class="cat-tile">
+        <span class="cat-tile-icon">💼</span>
+        <span class="cat-tile-name">Startups & Business</span>
+        <span class="cat-tile-desc">Funding, M&A & Big Tech strategy</span>
+        <span class="cat-tile-badge">New</span>
       </a>
     </nav>
   </div>
 
   <!-- ===== QUICK ACTIONS ===== -->
-  <div class="section" style="padding-bottom:28px; padding-top:28px;">
-    <div class="quick-actions" role="complementary" aria-label="Quick actions">
+  <div class="section" style="padding-bottom: 32px;">
+    <div class="quick-actions" role="complementary">
       <div class="qa-item">
         <a href="about.html#editorial-process">
-          <span class="qa-icon" aria-hidden="true">&#x1F4D6;</span>Our Editorial Approach
+          <span class="qa-icon">📖</span>Our Editorial Approach
         </a>
         <p>How we research, write, and publish every piece of technology analysis on this site.</p>
       </div>
       <div class="qa-item">
         <a href="articles/ai-agents-enterprise-2025.html">
-          <span class="qa-icon" aria-hidden="true">&#x270D;&#xFE0F;</span>Read Original Analysis
+          <span class="qa-icon">✍️</span>Read Original Analysis
         </a>
-        <p>In-depth original articles written by our editorial team on key technology trends.</p>
+        <p>In-depth articles written by our editorial team on key technology trends shaping 2025 and beyond.</p>
       </div>
       <div class="qa-item">
         <a href="contact.html">
-          <span class="qa-icon" aria-hidden="true">&#x2709;&#xFE0F;</span>Submit a Tip or Story
+          <span class="qa-icon">✉️</span>Submit a Tip or Story
         </a>
         <p>Spotted a technology story we should cover? Send us a brief and we'll review it.</p>
       </div>
-      <p class="qa-trust">All editorial content on The Tech Brief is original analysis written by our team. &copy; The Tech Brief 2025&ndash;2026. Independent technology journalism.</p>
+      <p class="qa-trust">All editorial content on The Tech Brief is original analysis written by our team. &copy; The Tech Brief 2025–2026. Independent technology journalism.</p>
     </div>
   </div>
 
@@ -492,7 +482,7 @@
   <div class="footer-inner">
     <div class="footer-about">
       <span class="brand-name">The Tech Brief</span>
-      <p>An independent technology publication delivering original editorial analysis across AI, cybersecurity, mobile, enterprise tech, and more. Updated daily.</p>
+      <p>An independent technology publication delivering original editorial analysis across AI, cybersecurity, mobile, enterprise tech, EVs, gaming, and more. Updated daily.</p>
     </div>
     <div class="footer-col">
       <h4>Categories</h4>
@@ -519,35 +509,49 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; <span id="footer-year"></span> The Tech Brief &mdash; thetechbrief.net. All rights reserved.</span>
+    <span>&copy; <span id="footer-year"></span> The Tech Brief — thetechbrief.net. All rights reserved.</span>
     <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
   </div>
 </footer>
 
 <!-- ===== COOKIE BANNER ===== -->
-<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-  <p>We use cookies to improve your experience and analyse traffic. See our <a href="legal/privacy.html">Privacy Policy</a> for details.</p>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <p>We use cookies to improve your experience and analyse traffic. See our <a href="legal/privacy.html">Privacy Policy</a>.</p>
   <div class="cookie-actions">
-    <button class="btn primary" id="cookieAccept">Accept All</button>
-    <button class="btn secondary" id="cookieReject">Reject</button>
+    <button class="btn primary" id="cookieAccept">Accept</button>
+    <button class="btn secondary" id="cookieReject">Decline</button>
   </div>
 </div>
 
 <script>
-  document.getElementById('footer-year').textContent = new Date().getFullYear();
-  (function(){
-    var c=localStorage.getItem('cookieConsent');
-    if(c){document.getElementById('cookieBanner').remove();return;}
-    document.getElementById('cookieAccept').onclick=function(){localStorage.setItem('cookieConsent','yes');document.getElementById('cookieBanner').remove();};
-    document.getElementById('cookieReject').onclick=function(){localStorage.setItem('cookieConsent','no');document.getElementById('cookieBanner').remove();};
-  })();
-  (function(){
-    var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
-    if(!t||!n)return;
-    t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
-  })();
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+// Nav toggle
+(function(){
+  var t = document.querySelector('.nav-toggle'),
+      n = document.getElementById('siteNav');
+  if(!t || !n) return;
+  t.addEventListener('click', function(){
+    var o = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', o);
+  });
+})();
+
+// Cookie banner
+(function(){
+  var c = localStorage.getItem('cookieConsent');
+  if(c){ document.getElementById('cookieBanner').remove(); return; }
+  document.getElementById('cookieAccept').onclick = function(){
+    localStorage.setItem('cookieConsent','yes');
+    document.getElementById('cookieBanner').remove();
+    gtag('consent','update',{'analytics_storage':'granted','ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+  };
+  document.getElementById('cookieReject').onclick = function(){
+    localStorage.setItem('cookieConsent','no');
+    document.getElementById('cookieBanner').remove();
+  };
+})();
 </script>
 <script src="assets/trending-loader.js" defer></script>
-<script src="assets/cookie-consent.js"></script>
 </body>
 </html>

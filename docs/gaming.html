@@ -2,1051 +2,1073 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Google Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
       'analytics_storage': 'denied', 'ad_storage': 'denied',
-      'ad_user_data': 'denied', 'ad_personalization': 'denied', 'wait_for_update': 500
+      'ad_user_data': 'denied', 'ad_personalization': 'denied',
+      'wait_for_update': 500
     });
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJEGDPW7G"></script>
   <script>gtag('js', new Date()); gtag('config', 'G-YCJEGDPW7G');</script>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>Gaming News — Consoles, PC Games & Industry | The Tech Brief</title>
   <meta name="description" content="Original coverage of video game releases, console news, reviews and gaming industry developments. Written by The Tech Brief editorial team.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.thetechbrief.net/gaming.html">
-
-  <meta property="og:type"        content="website">
-  <meta property="og:site_name"   content="The Tech Brief">
-  <meta property="og:title"       content="Gaming News — Consoles, PC Games & Industry | The Tech Brief">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Tech Brief">
+  <meta property="og:title" content="Gaming News — Consoles, PC Games & Industry | The Tech Brief">
   <meta property="og:description" content="Original coverage of video game releases, console news, reviews and gaming industry developments. Written by The Tech Brief editorial team.">
-  <meta property="og:url"         content="https://www.thetechbrief.net/gaming.html">
-
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Gaming News — Consoles, PC Games & Industry | The Tech Brief">
+  <meta property="og:url" content="https://www.thetechbrief.net/gaming.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gaming News — Consoles, PC Games & Industry | The Tech Brief">
   <meta name="twitter:description" content="Original coverage of video game releases, console news, reviews and gaming industry developments. Written by The Tech Brief editorial team.">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Gaming News",
-    "description": "Original coverage of video game releases, console news, reviews and gaming industry developments. Written by The Tech Brief editorial team.",
+    "name": "Gaming — The Tech Brief",
     "url": "https://www.thetechbrief.net/gaming.html",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.thetechbrief.net/"},
-        {"@type":"ListItem","position":2,"name":"Gaming News","item":"https://www.thetechbrief.net/gaming.html"}
-      ]
-    },
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/"
-    },
+    "description": "Original coverage of video game releases, console news, reviews and gaming industry developments. Written by The Tech Brief editorial team.",
     "publisher": {
       "@type": "Organization",
       "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/",
-      "email": "technodate3@gmail.com"
+      "url": "https://www.thetechbrief.net"
     }
   }
   </script>
-
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
-
-  <style>
-    /* ── Fix: uniform cards — remove the broken first-card split layout ── */
-    .grid .card:first-child {
-      grid-column: auto !important;
-      display: flex !important;
-      flex-direction: column !important;
-      grid-template-columns: unset !important;
-    }
-    .grid .card:first-child img {
-      width: 100% !important;
-      height: 185px !important;
-      object-fit: cover !important;
-      border-radius: var(--radius) var(--radius) 0 0 !important;
-    }
-
-    /* ── Editorial article cards (deep-dives from generate_articles.py) ── */
-    .editorial-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent-2);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      display: flex; flex-direction: column;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .editorial-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .editorial-card img {
-      width: 100%; height: 185px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .editorial-card .ec-body {
-      padding: 18px 20px 12px; flex: 1;
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    .editorial-card .ec-badge {
-      display: inline-block; background: var(--accent-2); color: #fff;
-      font-size: 10px; font-weight: 700; letter-spacing: .8px;
-      text-transform: uppercase; padding: 3px 9px; border-radius: 999px;
-      align-self: flex-start;
-    }
-    .editorial-card h3 {
-      font-family: var(--font-serif); font-size: 18px;
-      line-height: 1.3; color: var(--ink); flex: 1;
-    }
-    .editorial-card h3 a { color: inherit; }
-    .editorial-card h3 a:hover { color: var(--accent); }
-    .editorial-card .ec-desc { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
-    .editorial-card .ec-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .editorial-card .ec-meta { font-size: 11px; color: var(--ink-3); font-family: var(--font-mono); }
-    .ec-read {
-      font-size: 12.5px; font-weight: 600; color: var(--accent);
-    }
-    .ec-read:hover { color: var(--accent-h); }
-    .ec-read::after { content: ' →'; }
-
-    /* ── Standard editorial news cards ── */
-    /* Same .card class but with cleaned footer — no source attribution */
-    .card .card-footer-clean {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .card .card-date-tag {
-      font-size: 11px; color: var(--ink-3); font-family: var(--font-mono);
-    }
-
-    /* ── "In focus" featured card for latest item in category ── */
-    .in-focus-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      margin-bottom: 28px;
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 768px) {
-      .in-focus-card { grid-template-columns: 340px 1fr; }
-      .in-focus-card img { height: 100%; min-height: 220px; border-radius: var(--radius) 0 0 var(--radius); }
-    }
-    .in-focus-card img {
-      width: 100%; height: 220px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .in-focus-body {
-      padding: 24px 28px;
-      display: flex; flex-direction: column; gap: 12px;
-    }
-    .in-focus-label {
-      font-size: 10px; font-weight: 700; letter-spacing: 1.2px;
-      text-transform: uppercase; color: var(--accent);
-      font-family: var(--font-mono);
-    }
-    .in-focus-body h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(20px, 2.5vw, 28px);
-      line-height: 1.25; color: var(--ink);
-    }
-    .in-focus-body h2 a { color: inherit; }
-    .in-focus-body h2 a:hover { color: var(--accent); }
-    .in-focus-body p {
-      font-size: 15px; color: var(--ink-2); line-height: 1.65; flex: 1;
-    }
-    .in-focus-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 12px; margin-top: auto; padding-top: 14px;
-      border-top: 1px solid var(--border);
-    }
-    .in-focus-date { font-size: 12px; color: var(--ink-3); font-family: var(--font-mono); }
-  </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<!-- ===== TICKER ===== -->
+<div class="ticker-bar" aria-hidden="true">
+  <span class="ticker-label">LIVE</span>
+  <div class="ticker-track-wrap">
+    <div class="ticker-track">
+      <span class="ticker-item"><span>AI</span>LLM inference costs down 80% year-on-year across major cloud providers</span>
+      <span class="ticker-item"><span>CYBER</span>State-sponsored APT groups increasingly targeting critical infrastructure OT networks</span>
+      <span class="ticker-item"><span>ENTERPRISE</span>Gartner: 65% of enterprises to deploy AI agents in production by end of 2026</span>
+      <span class="ticker-item"><span>EVs</span>Global EV penetration hits 28% of new car sales in Q1 2026</span>
+      <span class="ticker-item"><span>MOBILE</span>Qualcomm Snapdragon X2 benchmarks leak ahead of MWC announcement</span>
+      <span class="ticker-item"><span>AI</span>LLM inference costs down 80% year-on-year across major cloud providers</span>
+      <span class="ticker-item"><span>CYBER</span>State-sponsored APT groups increasingly targeting critical infrastructure OT networks</span>
+      <span class="ticker-item"><span>ENTERPRISE</span>Gartner: 65% of enterprises to deploy AI agents in production by end of 2026</span>
+      <span class="ticker-item"><span>EVs</span>Global EV penetration hits 28% of new car sales in Q1 2026</span>
+      <span class="ticker-item"><span>MOBILE</span>Qualcomm Snapdragon X2 benchmarks leak ahead of MWC announcement</span>
+    </div>
+  </div>
+</div>
 
 <!-- ===== HEADER ===== -->
 <header class="site-header" role="banner">
-  <a href="index.html" class="header-brand" aria-label="The Tech Brief — Home">
-    <div class="brand-icon" aria-hidden="true">TB</div>
-    <span class="brand-name">Tech Brief</span>
+  <a href="index.html" class="header-brand" aria-label="The Tech Brief home">
+    <div class="brand-icon">TB</div>
+    <div>
+      <span class="brand-name">The Tech Brief</span>
+      <span class="brand-tagline">Technology Intelligence</span>
+    </div>
   </a>
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="currentColor"/><rect y="10" width="22" height="2" rx="1" fill="currentColor"/><rect y="16" width="22" height="2" rx="1" fill="currentColor"/></svg>
   </button>
-  <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
-    <a href="index.html">Home</a>
-    <a href="ai-news.html">AI News</a>
-    <a href="broadcast-tech.html">Broadcast Tech</a>
-    <a href="enterprise-tech.html">Enterprise Tech</a>
-    <a href="cybersecurity-updates.html">Cybersecurity</a>
-    <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
-    <a href="consumer-tech.html">Consumer Tech</a>
-    <a href="gaming.html">Gaming</a>
-    <a href="evs-automotive.html">EVs &amp; Automotive</a>
-    <a href="startups-business.html">Startups &amp; Business</a>
-    <a href="how-to.html">How-To Guides</a>
+  <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
+    <a href="ai-news.html" >AI</a>
+    <a href="cybersecurity-updates.html" >Cybersecurity</a>
+    <a href="enterprise-tech.html" >Enterprise</a>
+    <a href="mobile-gadgets.html" >Mobile</a>
+    <a href="evs-automotive.html" >EVs</a>
+    <a href="gaming.html" aria-current="page">Gaming</a>
+    <a href="startups-business.html" >Startups</a>
+    <a href="how-to.html" >How-To</a>
     <a href="about.html" class="nav-cta">About</a>
   </nav>
 </header>
 
 <!-- ===== CATEGORY HERO ===== -->
-<section class="cat-hero" aria-label="Category overview">
+<div class="cat-hero">
   <div class="cat-hero-inner">
-    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-      <a href="index.html">Home</a>
-      <span aria-hidden="true">&rsaquo;</span>
-      <span aria-current="page">Gaming News</span>
-    </nav>
-    <h1 class="cat-hero-title">Gaming News</h1>
-    <p class="cat-hero-desc">Original coverage of console gaming, PC games, reviews and the gaming industry</p>
-  </div>
-</section>
-
-<!-- ===== MAIN CONTENT ===== -->
-<main id="main-content">
-
-  <!-- ===== EDITORIAL DEEP DIVES ===== -->
-  
-
-  <!-- ===== EDITORIAL NEWS COVERAGE ===== -->
-  
-  <div class="section" >
-    <div class="section-head">
-      <h2>Gaming News Coverage</h2>
-      <span class="section-count">50 editorially-written pieces &mdash; refreshed every 6 hours</span>
-      <span class="section-sub">Original editorial commentary and analysis on the latest developments in Gaming News</span>
+    <div>
+      <p class="cat-crumb"><a href="index.html">Home</a> &rsaquo; Gaming</p>
+      <h1 class="cat-hero-title">
+        <span>🎮</span>Gaming
+      </h1>
+      <p class="cat-hero-meta">50 articles &middot; Updated every 6 hours &middot; 24 Mar 2026, 16:22 UTC</p>
     </div>
+  </div>
+</div>
+
+<!-- ===== MAIN ===== -->
+<main id="main">
+
+  <!-- ===== FEATURED ARTICLES ===== -->
+  
+  <div class="section">
+    <div class="section-head">
+      <h2>Latest <span class="accent">Gaming</span></h2>
+      <span class="section-sub">50 articles · refreshed every 6 hrs</span>
+    </div>
+
+    <!-- First article featured -->
+    
+    <div style="margin-bottom: 22px;">
+      <article class="card" style="max-width: 100%; flex-direction: row; min-height: 200px;" itemscope itemtype="https://schema.org/Article">
+        
+        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80" alt="Asus ROG Strix Morph 96 Wireless review" loading="eager"
+          style="width: 340px; min-width: 240px; height: auto; object-fit: cover; flex-shrink: 0; border-radius: var(--radius) 0 0 var(--radius);"
+          itemprop="image">
+        
+        <div style="display: flex; flex-direction: column; flex: 1;">
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-cat card-cat-gaming">Gaming</span>
+              <time datetime="2026-03-24">March 24, 2026</time>
+            </div>
+            <h2 itemprop="headline" style="font-family: var(--font-serif); font-size: clamp(18px, 2.5vw, 24px); line-height: 1.25; color: var(--ink); font-weight: 700;">
+              <a href="articles/rss-5826a9980a75754f.html" style="color: inherit;">Asus ROG Strix Morph 96 Wireless review</a>
+            </h2>
+            <p class="card-desc">The Asus Strix Morph Wireless space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not …</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-date">4 min read</span>
+            <a href="articles/rss-5826a9980a75754f.html" class="card-read">Read analysis</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <style>
+      @media (max-width: 600px) {
+        .feat-article { flex-direction: column !important; }
+        .feat-article img { width: 100% !important; border-radius: var(--radius) var(--radius) 0 0 !important; height: 200px !important; }
+      }
+    </style>
+    
+
+    <!-- Remaining articles grid -->
     <div class="grid">
       
-      <article class="card" aria-label="High on Life 2's Switch 2 release delayed "to better meet not only our high standards for gaming, but yours as well"">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=900&auto=format&fit=crop&q=80" alt="High on Life 2's Switch 2 release delayed "to better meet not only our high standards for gaming, but yours as well"" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80" alt="Fortnite Removing Game Modes As Epic Desperately Seeks To Cut Costs" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-3654f5f8aee8140f.html">High on Life 2's Switch 2 release delayed "to better meet not only our high standards for gaming, but yours as well"</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and high on life 2's switch 2 release delayed "to better meet not only our high… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-da1392f0968371a6.html">Fortnite Removing Game Modes As Epic Desperately Seeks To Cut Costs</a></h3>
+          <p class="card-desc">Recent signals from the Fortnite Removing Game Modes ecosystem point to accelerating maturity. The transition from experimental deployments …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-3654f5f8aee8140f.html" class="read-link" aria-label="Read: High on Life 2's Switch 2 release delayed "to better meet not only our high standards for gaming, but yours as well"">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-da1392f0968371a6.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="I've tested Intel's new Binary Optimization Tool to see what all the fuss is about and while it's almost everything the chip giant claims it to be, few PC gamers will ever see the benefits">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=900&auto=format&fit=crop&q=80" alt="I've tested Intel's new Binary Optimization Tool to see what all the fuss is about and while it's almost everything the chip giant claims it to be, few PC gamers will ever see the benefits" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&q=80" alt="Following Epic's mass layoffs, a bunch of Fortnite modes are going offline and arcade racer Horizon Chase Turbo's downloads will be pulled" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-4a5606c7be807613.html">I've tested Intel's new Binary Optimization Tool to see what all the fuss is about and while it's almost everything the chip giant claims it to be, few PC gamers will ever see the benefits</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as i've tested intel's new binary optimization tool to see what all the fuss is…. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-fd868d9999bd7f3e.html">Following Epic's mass layoffs, a bunch of Fortnite modes are going offline and arcade racer Horizon Chase Turbo's downloads will be pulled</a></h3>
+          <p class="card-desc">Recent signals from the Following Epics mass layoffs ecosystem point to accelerating maturity. The transition from experimental deployments …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-4a5606c7be807613.html" class="read-link" aria-label="Read: I've tested Intel's new Binary Optimization Tool to see what all the fuss is about and while it's almost everything the chip giant claims it to be, few PC gamers will ever see the benefits">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-fd868d9999bd7f3e.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Crimson Desert legendary horse locations">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=900&auto=format&fit=crop&q=80" alt="Crimson Desert legendary horse locations" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80" alt="Nvidia's Jensen Huang confirms he was once asked to become chief executive of TSMC: 'I declined it... it's an unbelievable offer, but I simply couldn't take it'" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-e38b1babf0c970a7.html">Crimson Desert legendary horse locations</a></h3>
-          <p class="card-summary">A clearer picture is emerging around crimson desert legendary horse locations, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-9e71b2d2d89eb499.html">Nvidia's Jensen Huang confirms he was once asked to become chief executive of TSMC: 'I declined it... it's an unbelievable offer, but I simply couldn't take it'</a></h3>
+          <p class="card-desc">The latest developments in Nvidias Jensen Huang confirms signal a meaningful inflection point for the industry. Organisations that move quic…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-e38b1babf0c970a7.html" class="read-link" aria-label="Read: Crimson Desert legendary horse locations">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-9e71b2d2d89eb499.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="GTA 6 fans have some wild theories about adult content in the game">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1601887389937-0b02f7683064?w=900&auto=format&fit=crop&q=80" alt="GTA 6 fans have some wild theories about adult content in the game" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80" alt="Laid Off Fortnite Devs Didn’t See The Cuts Coming: ‘I Am Genuinely So Confused And Bewildered’" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-0fd71f5d93272a67.html">GTA 6 fans have some wild theories about adult content in the game</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and gta 6 fans have some wild theories about adult content in the game is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-c4c5d391e12740a6.html">Laid Off Fortnite Devs Didn’t See The Cuts Coming: ‘I Am Genuinely So Confused And Bewildered’</a></h3>
+          <p class="card-desc">What is unfolding in Laid Fortnite Devs Didnt represents a convergence of technical capability, regulatory clarity, and market readiness tha…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-0fd71f5d93272a67.html" class="read-link" aria-label="Read: GTA 6 fans have some wild theories about adult content in the game">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-c4c5d391e12740a6.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label=""The thing we are trying to stop keeps happening": Highguard and other high-profile demises keep making the argument for Stop Killing Games">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=900&auto=format&fit=crop&q=80" alt=""The thing we are trying to stop keeps happening": Highguard and other high-profile demises keep making the argument for Stop Killing Games" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1486401899868-0e435ed85128?w=800&q=80" alt="Epic Games lays off more than 1,000 employees: 'We're spending significantly more than we're making,' CEO Tim Sweeney says" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-0e345d8c4b978f75.html">"The thing we are trying to stop keeps happening": Highguard and other high-profile demises keep making the argument for Stop Killing Games</a></h3>
-          <p class="card-summary">A clearer picture is emerging around "the thing we are trying to stop keeps happening": highguard and other…, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-79ffe0a61bf586c0.html">Epic Games lays off more than 1,000 employees: 'We're spending significantly more than we're making,' CEO Tim Sweeney says</a></h3>
+          <p class="card-desc">The Epic Games lays more space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and c…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-0e345d8c4b978f75.html" class="read-link" aria-label="Read: "The thing we are trying to stop keeps happening": Highguard and other high-profile demises keep making the argument for Stop Killing Games">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-79ffe0a61bf586c0.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Ryan Gosling, Sandra Huller address romantic tension in Project Hail Mary">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=900&auto=format&fit=crop&q=80" alt="Ryan Gosling, Sandra Huller address romantic tension in Project Hail Mary" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80" alt=""It was just dripping in my lap" - Resident Evil Requiem's terrifying The Girl found her voice by drinking gallons of milk while recording" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-ece6b2c530d8a4ae.html">Ryan Gosling, Sandra Huller address romantic tension in Project Hail Mary</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and ryan gosling, sandra huller address romantic tension in project hail mary is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-729ae28d57220d95.html">"It was just dripping in my lap" - Resident Evil Requiem's terrifying The Girl found her voice by drinking gallons of milk while recording</a></h3>
+          <p class="card-desc">The latest developments in just dripping Resident Evil signal a meaningful inflection point for the industry. Organisations that move quickl…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-ece6b2c530d8a4ae.html" class="read-link" aria-label="Read: Ryan Gosling, Sandra Huller address romantic tension in Project Hail Mary">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-729ae28d57220d95.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Report: Nintendo Is Slashing Switch 2 Production By A Third After Poor U.S. Sales">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1586182987320-4f376d39d787?w=900&auto=format&fit=crop&q=80" alt="Report: Nintendo Is Slashing Switch 2 Production By A Third After Poor U.S. Sales" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80" alt="How to beat Marni's Excavatron in Crimson Desert" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-75a07a08806e24da.html">Report: Nintendo Is Slashing Switch 2 Production By A Third After Poor U.S. Sales</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and report: nintendo is slashing switch 2 production by a third after poor u.s. sales is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-26db67d522c563e4.html">How to beat Marni's Excavatron in Crimson Desert</a></h3>
+          <p class="card-desc">Recent signals from the beat Marnis Excavatron Crimson ecosystem point to accelerating maturity. The transition from experimental deployment…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-75a07a08806e24da.html" class="read-link" aria-label="Read: Report: Nintendo Is Slashing Switch 2 Production By A Third After Poor U.S. Sales">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-26db67d522c563e4.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Super Mario Galaxy Movie age-rating accidentally confirms a 20-year-old fan theory">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1586182987320-4f376d39d787?w=900&auto=format&fit=crop&q=80" alt="Super Mario Galaxy Movie age-rating accidentally confirms a 20-year-old fan theory" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=800&q=80" alt="Hello Kitty Island Adventure has announced its second DLC, adding one of Sanrio's most colourful characters, a customisable cafe, and over 90 quests" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-809688bde18b1dc8.html">Super Mario Galaxy Movie age-rating accidentally confirms a 20-year-old fan theory</a></h3>
-          <p class="card-summary">The story of super mario galaxy movie age-rating accidentally confirms a 20-year-old fan theory reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-6941a0029e0aff8a.html">Hello Kitty Island Adventure has announced its second DLC, adding one of Sanrio's most colourful characters, a customisable cafe, and over 90 quests</a></h3>
+          <p class="card-desc">The Hello Kitty Island Adventure space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metri…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-809688bde18b1dc8.html" class="read-link" aria-label="Read: Super Mario Galaxy Movie age-rating accidentally confirms a 20-year-old fan theory">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-6941a0029e0aff8a.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Resurrection, an astounding Chinese sci-fi movie, is streaming now">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=900&auto=format&fit=crop&q=80" alt="Resurrection, an astounding Chinese sci-fi movie, is streaming now" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80" alt="Mouse: P.I. for Hire physical and digital edition details revealed" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-4d68d1580f028dca.html">Resurrection, an astounding Chinese sci-fi movie, is streaming now</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as resurrection, an astounding chinese sci-fi movie, is streaming now. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-1a9d792b64e7b642.html">Mouse: P.I. for Hire physical and digital edition details revealed</a></h3>
+          <p class="card-desc">What is unfolding in Mouse Hire physical digital represents a convergence of technical capability, regulatory clarity, and market readiness …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-4d68d1580f028dca.html" class="read-link" aria-label="Read: Resurrection, an astounding Chinese sci-fi movie, is streaming now">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-1a9d792b64e7b642.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="'We are not going to pick one': Clair Obscur: Expedition 33 dev confirms there's no canon ending, instead opting for a more elusive 'Schrodinger's ending'">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1601887389937-0b02f7683064?w=900&auto=format&fit=crop&q=80" alt="'We are not going to pick one': Clair Obscur: Expedition 33 dev confirms there's no canon ending, instead opting for a more elusive 'Schrodinger's ending'" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80" alt="Life is Strange: Reunion's Max and Chloe say the sequel 'deepens' the original" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-5eb61beeedec245b.html">'We are not going to pick one': Clair Obscur: Expedition 33 dev confirms there's no canon ending, instead opting for a more elusive 'Schrodinger's ending'</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around 'we are not going to pick one': clair obscur: expedition 33 dev confirms there's…. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-7b6b4b4085391cd2.html">Life is Strange: Reunion's Max and Chloe say the sequel 'deepens' the original</a></h3>
+          <p class="card-desc">As Life Strange Reunions Chloe continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strat…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-5eb61beeedec245b.html" class="read-link" aria-label="Read: 'We are not going to pick one': Clair Obscur: Expedition 33 dev confirms there's no canon ending, instead opting for a more elusive 'Schrodinger's ending'">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-7b6b4b4085391cd2.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Hyperkin Competitor review">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1601887389937-0b02f7683064?w=900&auto=format&fit=crop&q=80" alt="Hyperkin Competitor review" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=800&q=80" alt=""It's essential to me that it's approached with care and love and caution" - How Life is Strange: Reunion actors Hannah Telle and Rhianna DeVries are preparing to say farewell to Max and Chloe" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-73e40a4925fd00ef.html">Hyperkin Competitor review</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as hyperkin competitor review. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-c363bfff1ec51e1d.html">"It's essential to me that it's approached with care and love and caution" - How Life is Strange: Reunion actors Hannah Telle and Rhianna DeVries are preparing to say farewell to Max and Chloe</a></h3>
+          <p class="card-desc">The essential approached care love space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption met…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-73e40a4925fd00ef.html" class="read-link" aria-label="Read: Hyperkin Competitor review">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-c363bfff1ec51e1d.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="How to get the Soul Spear in Crimson Desert">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=900&auto=format&fit=crop&q=80" alt="How to get the Soul Spear in Crimson Desert" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80" alt="Fortnite developer Epic Games lays off 1,000 staffers, citing 'industry-wide challenges'" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-e967b1aa028dc305.html">How to get the Soul Spear in Crimson Desert</a></h3>
-          <p class="card-summary">The story of how to get the soul spear in crimson desert reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-a4ca47d56a45cbab.html">Fortnite developer Epic Games lays off 1,000 staffers, citing 'industry-wide challenges'</a></h3>
+          <p class="card-desc">As Fortnite developer Epic Games continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and str…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-e967b1aa028dc305.html" class="read-link" aria-label="Read: How to get the Soul Spear in Crimson Desert">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-a4ca47d56a45cbab.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="'Golden goose' indie games get Gabe Newell's attention, says Steam expert: 'You're like a little goblin that has a magical power to turn straw into gold'">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1569429593410-b498b3fb3387?w=900&auto=format&fit=crop&q=80" alt="'Golden goose' indie games get Gabe Newell's attention, says Steam expert: 'You're like a little goblin that has a magical power to turn straw into gold'" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1597211584474-ae3171c7dbea?w=800&q=80" alt="Atomfall players have munched 16.8m Cornish pasties in the last 12 months, eye-opening stats reveal as survival hit turns one" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-90240ed71c84ed0e.html">'Golden goose' indie games get Gabe Newell's attention, says Steam expert: 'You're like a little goblin that has a magical power to turn straw into gold'</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around 'golden goose' indie games get gabe newell's attention, says steam expert:…. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-fbc6a494a041ad32.html">Atomfall players have munched 16.8m Cornish pasties in the last 12 months, eye-opening stats reveal as survival hit turns one</a></h3>
+          <p class="card-desc">The latest developments in Atomfall players munched 168m signal a meaningful inflection point for the industry. Organisations that move quic…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-90240ed71c84ed0e.html" class="read-link" aria-label="Read: 'Golden goose' indie games get Gabe Newell's attention, says Steam expert: 'You're like a little goblin that has a magical power to turn straw into gold'">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-fbc6a494a041ad32.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Asus ROG Falchion Ace 75 HE review">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=900&auto=format&fit=crop&q=80" alt="Asus ROG Falchion Ace 75 HE review" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80" alt="Steam Spring Sale 2026 includes 20 of 2025's best games" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-b780f97f217f9dd2.html">Asus ROG Falchion Ace 75 HE review</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and asus rog falchion ace 75 he review is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-af9696e3007cd33e.html">Steam Spring Sale 2026 includes 20 of 2025's best games</a></h3>
+          <p class="card-desc">The Steam Spring Sale 2026 space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-b780f97f217f9dd2.html" class="read-link" aria-label="Read: Asus ROG Falchion Ace 75 HE review">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-af9696e3007cd33e.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Switch 2 demand appears to be flagging as Nintendo reportedly lowers production">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=900&auto=format&fit=crop&q=80" alt="Switch 2 demand appears to be flagging as Nintendo reportedly lowers production" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80" alt="Asus ROG Cetra Open Wireless review" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-e4c9a085f7e84918.html">Switch 2 demand appears to be flagging as Nintendo reportedly lowers production</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around switch 2 demand appears to be flagging as nintendo reportedly lowers production. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-b4f5507ac4d67d76.html">Asus ROG Cetra Open Wireless review</a></h3>
+          <p class="card-desc">As Asus Cetra Open Wireless continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategi…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-e4c9a085f7e84918.html" class="read-link" aria-label="Read: Switch 2 demand appears to be flagging as Nintendo reportedly lowers production">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-b4f5507ac4d67d76.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Arcade racer Screamer’s first update nerfs AI difficulty, with an "additional balance pass" coming soon">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=900&auto=format&fit=crop&q=80" alt="Arcade racer Screamer’s first update nerfs AI difficulty, with an "additional balance pass" coming soon" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1616440347437-b1c73416efc2?w=800&q=80" alt="How to solve the Root's End puzzle in Crimson Desert" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-e9c82a4d32cbf5b6.html">Arcade racer Screamer’s first update nerfs AI difficulty, with an "additional balance pass" coming soon</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and arcade racer screamer’s first update nerfs ai difficulty, with an "additional… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-4481612c5d766e73.html">How to solve the Root's End puzzle in Crimson Desert</a></h3>
+          <p class="card-desc">What is unfolding in solve Roots puzzle Crimson represents a convergence of technical capability, regulatory clarity, and market readiness t…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-e9c82a4d32cbf5b6.html" class="read-link" aria-label="Read: Arcade racer Screamer’s first update nerfs AI difficulty, with an "additional balance pass" coming soon">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-4481612c5d766e73.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Microsoft is 'working on' removing the online account login requirement for new Windows 11 installs and also 'reducing unnecessary Copilot entry points'">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1569429593410-b498b3fb3387?w=900&auto=format&fit=crop&q=80" alt="Microsoft is 'working on' removing the online account login requirement for new Windows 11 installs and also 'reducing unnecessary Copilot entry points'" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=800&q=80" alt="Intel's new 200K Plus chips support ultra-fast DRAM out of the box but as my tests show, there's little benefit for most PC gamers in using warp-speed stuff" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-553653c9f074407b.html">Microsoft is 'working on' removing the online account login requirement for new Windows 11 installs and also 'reducing unnecessary Copilot entry points'</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around microsoft is 'working on' removing the online account login requirement for new…. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-3cae618f293b4b39.html">Intel's new 200K Plus chips support ultra-fast DRAM out of the box but as my tests show, there's little benefit for most PC gamers in using warp-speed stuff</a></h3>
+          <p class="card-desc">The latest developments in Intels 200K Plus chips signal a meaningful inflection point for the industry. Organisations that move quickly to …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-553653c9f074407b.html" class="read-link" aria-label="Read: Microsoft is 'working on' removing the online account login requirement for new Windows 11 installs and also 'reducing unnecessary Copilot entry points'">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-3cae618f293b4b39.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The FCC says foreign routers 'pose an unacceptable risk' and now require special approval to be sold in the US">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=900&auto=format&fit=crop&q=80" alt="The FCC says foreign routers 'pose an unacceptable risk' and now require special approval to be sold in the US" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80" alt=""A decline of unprecedented scale and speed" is hitting UK game development, trade association report finds" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-7422c862155ab843.html">The FCC says foreign routers 'pose an unacceptable risk' and now require special approval to be sold in the US</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around the fcc says foreign routers 'pose an unacceptable risk' and now require special…. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-ae6d3a4faa73cd74.html">"A decline of unprecedented scale and speed" is hitting UK game development, trade association report finds</a></h3>
+          <p class="card-desc">The decline unprecedented scale speed space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-7422c862155ab843.html" class="read-link" aria-label="Read: The FCC says foreign routers 'pose an unacceptable risk' and now require special approval to be sold in the US">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-ae6d3a4faa73cd74.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Bungie tackles slow Marathon matchmaking in "isolated geographical regions"">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=900&auto=format&fit=crop&q=80" alt="Bungie tackles slow Marathon matchmaking in "isolated geographical regions"" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&q=80" alt="How to complete the Toward the Nest puzzle in Crimson Desert" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-107bae56cbb55a49.html">Bungie tackles slow Marathon matchmaking in "isolated geographical regions"</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around bungie tackles slow marathon matchmaking in "isolated geographical regions". This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-42fa8e37231894bc.html">How to complete the Toward the Nest puzzle in Crimson Desert</a></h3>
+          <p class="card-desc">What is unfolding in complete Toward Nest puzzle represents a convergence of technical capability, regulatory clarity, and market readiness …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-107bae56cbb55a49.html" class="read-link" aria-label="Read: Bungie tackles slow Marathon matchmaking in "isolated geographical regions"">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-42fa8e37231894bc.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Baldur's Gate 3 is the cheapest it's ever been right now thanks to massive discount">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=900&auto=format&fit=crop&q=80" alt="Baldur's Gate 3 is the cheapest it's ever been right now thanks to massive discount" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1616440347437-b1c73416efc2?w=800&q=80" alt="Fortnite maker Epic cuts over 1,000 jobs as battle royale suffers slump - "We're spending significantly more than we're making"" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-d892c1e6e37af95c.html">Baldur's Gate 3 is the cheapest it's ever been right now thanks to massive discount</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and baldur's gate 3 is the cheapest it's ever been right now thanks to massive discount is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-f7622cd616aa6700.html">Fortnite maker Epic cuts over 1,000 jobs as battle royale suffers slump - "We're spending significantly more than we're making"</a></h3>
+          <p class="card-desc">What is unfolding in Fortnite maker Epic cuts represents a convergence of technical capability, regulatory clarity, and market readiness tha…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-d892c1e6e37af95c.html" class="read-link" aria-label="Read: Baldur's Gate 3 is the cheapest it's ever been right now thanks to massive discount">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-f7622cd616aa6700.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label=""I can see where they’re coming from, because I don’t love AI slop myself": Nvidia boss plays DLSS 5 good cop after criticism">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=900&auto=format&fit=crop&q=80" alt=""I can see where they’re coming from, because I don’t love AI slop myself": Nvidia boss plays DLSS 5 good cop after criticism" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=800&q=80" alt=""It was clear to us we needed to get spookier" - how Warframe's next update started as Prop Hunt, but ended up survival horror" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-b1853ea291929779.html">"I can see where they’re coming from, because I don’t love AI slop myself": Nvidia boss plays DLSS 5 good cop after criticism</a></h3>
-          <p class="card-summary">A clearer picture is emerging around "i can see where they’re coming from, because i don’t love ai slop myself":…, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-8a8e036515b69b05.html">"It was clear to us we needed to get spookier" - how Warframe's next update started as Prop Hunt, but ended up survival horror</a></h3>
+          <p class="card-desc">The clear needed spookier Warframes space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption me…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-b1853ea291929779.html" class="read-link" aria-label="Read: "I can see where they’re coming from, because I don’t love AI slop myself": Nvidia boss plays DLSS 5 good cop after criticism">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-8a8e036515b69b05.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label=""It's all of us against apathy, entropy, and loss of art" - Stop Killing Games has reached the EU Parliament, but what happens now?">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1586182987320-4f376d39d787?w=900&auto=format&fit=crop&q=80" alt=""It's all of us against apathy, entropy, and loss of art" - Stop Killing Games has reached the EU Parliament, but what happens now?" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=800&q=80" alt="Trump Banning All New Foreign-Made Routers As He Continues To Just Make Everything Worse" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-8af51749efb2a1f3.html">"It's all of us against apathy, entropy, and loss of art" - Stop Killing Games has reached the EU Parliament, but what happens now?</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and "it's all of us against apathy, entropy, and loss of art" - stop killing games… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-ed6dcd2730cc4bf9.html">Trump Banning All New Foreign-Made Routers As He Continues To Just Make Everything Worse</a></h3>
+          <p class="card-desc">The latest developments in Trump Banning ForeignMade Routers signal a meaningful inflection point for the industry. Organisations that move …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-8af51749efb2a1f3.html" class="read-link" aria-label="Read: "It's all of us against apathy, entropy, and loss of art" - Stop Killing Games has reached the EU Parliament, but what happens now?">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-ed6dcd2730cc4bf9.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Dragon Ball Super artist Toyotaro teases the manga could still come back">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1569429593410-b498b3fb3387?w=900&auto=format&fit=crop&q=80" alt="Dragon Ball Super artist Toyotaro teases the manga could still come back" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1597211584474-ae3171c7dbea?w=800&q=80" alt="Razer's web-based gaming mouse and keyboard software is finally leaving beta, just in time for the Viper V4 Pro" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-43e22fd1166573db.html">Dragon Ball Super artist Toyotaro teases the manga could still come back</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as dragon ball super artist toyotaro teases the manga could still come back. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-f6e29b3ece73b376.html">Razer's web-based gaming mouse and keyboard software is finally leaving beta, just in time for the Viper V4 Pro</a></h3>
+          <p class="card-desc">What is unfolding in Razers webbased gaming mouse represents a convergence of technical capability, regulatory clarity, and market readiness…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-43e22fd1166573db.html" class="read-link" aria-label="Read: Dragon Ball Super artist Toyotaro teases the manga could still come back">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-f6e29b3ece73b376.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Crunchyroll's data breach is 'limited to customer service ticket data,' representatives say">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=900&auto=format&fit=crop&q=80" alt="Crunchyroll's data breach is 'limited to customer service ticket data,' representatives say" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80" alt="Brandon Sanderson MTG novella Children of the Nameless gets a pricy print edition" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-07e0c8170afce21c.html">Crunchyroll's data breach is 'limited to customer service ticket data,' representatives say</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around crunchyroll's data breach is 'limited to customer service ticket data,'…. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-1dd03dc18d75b4a1.html">Brandon Sanderson MTG novella Children of the Nameless gets a pricy print edition</a></h3>
+          <p class="card-desc">The latest developments in Brandon Sanderson novella Children signal a meaningful inflection point for the industry. Organisations that move…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-07e0c8170afce21c.html" class="read-link" aria-label="Read: Crunchyroll's data breach is 'limited to customer service ticket data,' representatives say">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-1dd03dc18d75b4a1.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Banquet For Fools review">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=900&auto=format&fit=crop&q=80" alt="Banquet For Fools review" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1486401899868-0e435ed85128?w=800&q=80" alt="Borderlands 4 Mad Ellie DLC release time in your time zone" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-1d7977b47ae0a36c.html">Banquet For Fools review</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as banquet for fools review. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-5d5048c25819e16f.html">Borderlands 4 Mad Ellie DLC release time in your time zone</a></h3>
+          <p class="card-desc">As Borderlands Ellie release time continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and st…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-1d7977b47ae0a36c.html" class="read-link" aria-label="Read: Banquet For Fools review">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-5d5048c25819e16f.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Fortnite Adds Peak Skins That Cost Twice As Much As The Indie Game">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1601887389937-0b02f7683064?w=900&auto=format&fit=crop&q=80" alt="Fortnite Adds Peak Skins That Cost Twice As Much As The Indie Game" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80" alt=""I'm sorry we're here again," says Epic Games CEO as Fortnite maker lays off over 1000 employees" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-c2ab965427941d25.html">Fortnite Adds Peak Skins That Cost Twice As Much As The Indie Game</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and fortnite adds peak skins that cost twice as much as the indie game is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-0d6697d72fe59be5.html">"I'm sorry we're here again," says Epic Games CEO as Fortnite maker lays off over 1000 employees</a></h3>
+          <p class="card-desc">What is unfolding in sorry here again says represents a convergence of technical capability, regulatory clarity, and market readiness that r…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-c2ab965427941d25.html" class="read-link" aria-label="Read: Fortnite Adds Peak Skins That Cost Twice As Much As The Indie Game">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-0d6697d72fe59be5.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The most unexpected Marvel TV series just got renewed for season 2">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=900&auto=format&fit=crop&q=80" alt="The most unexpected Marvel TV series just got renewed for season 2" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80" alt="YouTuber Who Faked A Six-Hour GTA Livestream To Murder His Partner Is Found Guilty" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-ed8e985a30b6035b.html">The most unexpected Marvel TV series just got renewed for season 2</a></h3>
-          <p class="card-summary">The story of the most unexpected marvel tv series just got renewed for season 2 reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-aae2a48060079ee4.html">YouTuber Who Faked A Six-Hour GTA Livestream To Murder His Partner Is Found Guilty</a></h3>
+          <p class="card-desc">As YouTuber Faked SixHour Livestream continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-ed8e985a30b6035b.html" class="read-link" aria-label="Read: The most unexpected Marvel TV series just got renewed for season 2">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-aae2a48060079ee4.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The Latest Chappell Roan Controversy Is Nonsense, But At Least The Memes Are Funny">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1580327344181-c1163234e5a0?w=900&auto=format&fit=crop&q=80" alt="The Latest Chappell Roan Controversy Is Nonsense, But At Least The Memes Are Funny" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=800&q=80" alt="Punisher TV special release date and title revealed, and they could be a major clues" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-c59a15011254e21c.html">The Latest Chappell Roan Controversy Is Nonsense, But At Least The Memes Are Funny</a></h3>
-          <p class="card-summary">A clearer picture is emerging around the latest chappell roan controversy is nonsense, but at least the memes are funny, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-88aee62289a1abc6.html">Punisher TV special release date and title revealed, and they could be a major clues</a></h3>
+          <p class="card-desc">The latest developments in Punisher special release date signal a meaningful inflection point for the industry. Organisations that move quic…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-c59a15011254e21c.html" class="read-link" aria-label="Read: The Latest Chappell Roan Controversy Is Nonsense, But At Least The Memes Are Funny">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-88aee62289a1abc6.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="How to beat the Reed Devil in Crimson Desert">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1569429593410-b498b3fb3387?w=900&auto=format&fit=crop&q=80" alt="How to beat the Reed Devil in Crimson Desert" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1585620385456-4759f9b5c7d9?w=800&q=80" alt="How to solve the Arboria Castle puzzle in Crimson Desert" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-97fdebd34c092893.html">How to beat the Reed Devil in Crimson Desert</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and how to beat the reed devil in crimson desert is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-04714a8cc6e1092b.html">How to solve the Arboria Castle puzzle in Crimson Desert</a></h3>
+          <p class="card-desc">What is unfolding in solve Arboria Castle puzzle represents a convergence of technical capability, regulatory clarity, and market readiness …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-97fdebd34c092893.html" class="read-link" aria-label="Read: How to beat the Reed Devil in Crimson Desert">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-04714a8cc6e1092b.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Crimson Desert Has Pretty Rocks, But After 12 Hours Playing It, I Don’t Want To Go On">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=900&auto=format&fit=crop&q=80" alt="Crimson Desert Has Pretty Rocks, But After 12 Hours Playing It, I Don’t Want To Go On" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1486401899868-0e435ed85128?w=800&q=80" alt="I visited the set of S.S. Rajamouli's epic new movie Varanasi, and it blew my mind" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-48c53acc60146c47.html">Crimson Desert Has Pretty Rocks, But After 12 Hours Playing It, I Don’t Want To Go On</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as crimson desert has pretty rocks, but after 12 hours playing it, i don’t want to go on. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-8f11045b35e139c4.html">I visited the set of S.S. Rajamouli's epic new movie Varanasi, and it blew my mind</a></h3>
+          <p class="card-desc">Recent signals from the visited Rajamoulis epic movie ecosystem point to accelerating maturity. The transition from experimental deployments…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-48c53acc60146c47.html" class="read-link" aria-label="Read: Crimson Desert Has Pretty Rocks, But After 12 Hours Playing It, I Don’t Want To Go On">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-8f11045b35e139c4.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="How to solve the Azure Moon Labyrinth puzzle in Crimson Desert">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=900&auto=format&fit=crop&q=80" alt="How to solve the Azure Moon Labyrinth puzzle in Crimson Desert" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1616440347437-b1c73416efc2?w=800&q=80" alt="Pokémon Champions launches in two weeks with day-one Switch 2 upgrade" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-bb4b08ab8b06d7b6.html">How to solve the Azure Moon Labyrinth puzzle in Crimson Desert</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around how to solve the azure moon labyrinth puzzle in crimson desert. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-2d3a633079ce97c4.html">Pokémon Champions launches in two weeks with day-one Switch 2 upgrade</a></h3>
+          <p class="card-desc">What is unfolding in Pokmon Champions launches weeks represents a convergence of technical capability, regulatory clarity, and market readin…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-bb4b08ab8b06d7b6.html" class="read-link" aria-label="Read: How to solve the Azure Moon Labyrinth puzzle in Crimson Desert">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-2d3a633079ce97c4.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Slay the Spire 2's worst card has become an explosive debate">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1569429593410-b498b3fb3387?w=900&auto=format&fit=crop&q=80" alt="Slay the Spire 2's worst card has become an explosive debate" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80" alt="Epic Games Laying Off Over 1,000 Employees, Blames Drop In Fortnite Engagement" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-a363a424a759263c.html">Slay the Spire 2's worst card has become an explosive debate</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and slay the spire 2's worst card has become an explosive debate is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-7c2c5e8422203864.html">Epic Games Laying Off Over 1,000 Employees, Blames Drop In Fortnite Engagement</a></h3>
+          <p class="card-desc">Recent signals from the Epic Games Laying 1000 ecosystem point to accelerating maturity. The transition from experimental deployments to pro…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-a363a424a759263c.html" class="read-link" aria-label="Read: Slay the Spire 2's worst card has become an explosive debate">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-7c2c5e8422203864.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="How To Collect Pokémon Cards In 2026 Without Spending A Fortune">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1586182987320-4f376d39d787?w=900&auto=format&fit=crop&q=80" alt="How To Collect Pokémon Cards In 2026 Without Spending A Fortune" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=800&q=80" alt="Pokémon Champions Is Coming Out Real Soon, And It Seems Kind Of Complicated" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-9c3bebd86fa53bc7.html">How To Collect Pokémon Cards In 2026 Without Spending A Fortune</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around how to collect pokémon cards in 2026 without spending a fortune. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-cdff348272a6e96f.html">Pokémon Champions Is Coming Out Real Soon, And It Seems Kind Of Complicated</a></h3>
+          <p class="card-desc">The latest developments in Pokmon Champions Coming Real signal a meaningful inflection point for the industry. Organisations that move quick…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-9c3bebd86fa53bc7.html" class="read-link" aria-label="Read: How To Collect Pokémon Cards In 2026 Without Spending A Fortune">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-cdff348272a6e96f.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Nvidia CEO Says He Gets Where The DLSS 5 Outrage Is Coming From: ‘I Don’t Love AI Slop Myself’">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1580327344181-c1163234e5a0?w=900&auto=format&fit=crop&q=80" alt="Nvidia CEO Says He Gets Where The DLSS 5 Outrage Is Coming From: ‘I Don’t Love AI Slop Myself’" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=800&q=80" alt="Crimson Desert developers are "preparing to provide a smooth and stable gameplay experience" following Intel GPU launch woes" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-5d23650cbef34bef.html">Nvidia CEO Says He Gets Where The DLSS 5 Outrage Is Coming From: ‘I Don’t Love AI Slop Myself’</a></h3>
-          <p class="card-summary">The story of nvidia ceo says he gets where the dlss 5 outrage is coming from: ‘i don’t love ai… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-6f8c98c4005e1817.html">Crimson Desert developers are "preparing to provide a smooth and stable gameplay experience" following Intel GPU launch woes</a></h3>
+          <p class="card-desc">The Crimson Desert developers preparing space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoptio…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-5d23650cbef34bef.html" class="read-link" aria-label="Read: Nvidia CEO Says He Gets Where The DLSS 5 Outrage Is Coming From: ‘I Don’t Love AI Slop Myself’">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-6f8c98c4005e1817.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Let’s Rank The Resident Evil Games For The 30th Anniversary">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1569429593410-b498b3fb3387?w=900&auto=format&fit=crop&q=80" alt="Let’s Rank The Resident Evil Games For The 30th Anniversary" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1585620385456-4759f9b5c7d9?w=800&q=80" alt="It Has My Face, my favourite sci-fi assassination sim about being stalked by a clone of yourself, has a 1.0 release date" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-2fb66540860de1a0.html">Let’s Rank The Resident Evil Games For The 30th Anniversary</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as let’s rank the resident evil games for the 30th anniversary. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-8c811c8afde54079.html">It Has My Face, my favourite sci-fi assassination sim about being stalked by a clone of yourself, has a 1.0 release date</a></h3>
+          <p class="card-desc">What is unfolding in Face favourite scifi assassination represents a convergence of technical capability, regulatory clarity, and market rea…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-2fb66540860de1a0.html" class="read-link" aria-label="Read: Let’s Rank The Resident Evil Games For The 30th Anniversary">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-8c811c8afde54079.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Fantasy tactics RPG Wartales is getting a "dense, reactive" capital city in the next DLC expansion, yours to save or destroy">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=900&auto=format&fit=crop&q=80" alt="Fantasy tactics RPG Wartales is getting a "dense, reactive" capital city in the next DLC expansion, yours to save or destroy" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=800&q=80" alt="Tekken 8 Bombarded With Negative Reviews After ‘Gaslighting, Money Hungry, Cheapskate, And Tone Deaf’ New Season" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-c4a4459186b24a9c.html">Fantasy tactics RPG Wartales is getting a "dense, reactive" capital city in the next DLC expansion, yours to save or destroy</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and fantasy tactics rpg wartales is getting a "dense, reactive" capital city in the… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-a10a8d3f63fbfc5e.html">Tekken 8 Bombarded With Negative Reviews After ‘Gaslighting, Money Hungry, Cheapskate, And Tone Deaf’ New Season</a></h3>
+          <p class="card-desc">Recent signals from the Tekken Bombarded Negative Reviews ecosystem point to accelerating maturity. The transition from experimental deploym…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-c4a4459186b24a9c.html" class="read-link" aria-label="Read: Fantasy tactics RPG Wartales is getting a "dense, reactive" capital city in the next DLC expansion, yours to save or destroy">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-a10a8d3f63fbfc5e.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="New Live-Action Moana Trailer Reveals The Rock As Maui And Oh…No">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=900&auto=format&fit=crop&q=80" alt="New Live-Action Moana Trailer Reveals The Rock As Maui And Oh…No" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&q=80" alt="High on Life 2's Switch 2 release delayed "to better meet not only our high standards for gaming, but yours as well"" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-2f815ac40dc38074.html">New Live-Action Moana Trailer Reveals The Rock As Maui And Oh…No</a></h3>
-          <p class="card-summary">The story of live-action moana trailer reveals the rock as maui and oh…no reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-3654f5f8aee8140f.html">High on Life 2's Switch 2 release delayed "to better meet not only our high standards for gaming, but yours as well"</a></h3>
+          <p class="card-desc">Recent signals from the High Life Switch release ecosystem point to accelerating maturity. The transition from experimental deployments to p…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-2f815ac40dc38074.html" class="read-link" aria-label="Read: New Live-Action Moana Trailer Reveals The Rock As Maui And Oh…No">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-3654f5f8aee8140f.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Yoda Is Now The Ugliest Lego Star Wars Character">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=900&auto=format&fit=crop&q=80" alt="Yoda Is Now The Ugliest Lego Star Wars Character" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1616440347437-b1c73416efc2?w=800&q=80" alt=""The thing we are trying to stop keeps happening": Highguard and other high-profile demises keep making the argument for Stop Killing Games" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-d49ba332c16cbe0a.html">Yoda Is Now The Ugliest Lego Star Wars Character</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as yoda is now the ugliest lego star wars character. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-0e345d8c4b978f75.html">"The thing we are trying to stop keeps happening": Highguard and other high-profile demises keep making the argument for Stop Killing Games</a></h3>
+          <p class="card-desc">What is unfolding in thing trying stop keeps represents a convergence of technical capability, regulatory clarity, and market readiness that…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-d49ba332c16cbe0a.html" class="read-link" aria-label="Read: Yoda Is Now The Ugliest Lego Star Wars Character">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-0e345d8c4b978f75.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="After a 90% discount, Call of Duty: Modern Warfare has more players than the past few CoD games combined on Steam">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=900&auto=format&fit=crop&q=80" alt="After a 90% discount, Call of Duty: Modern Warfare has more players than the past few CoD games combined on Steam" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1585620385456-4759f9b5c7d9?w=800&q=80" alt="Report: Nintendo Is Slashing Switch 2 Production By A Third After Poor U.S. Sales" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-241ece4a0f93b0e4.html">After a 90% discount, Call of Duty: Modern Warfare has more players than the past few CoD games combined on Steam</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and after a 90% discount, call of duty: modern warfare has more players than the past… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-75a07a08806e24da.html">Report: Nintendo Is Slashing Switch 2 Production By A Third After Poor U.S. Sales</a></h3>
+          <p class="card-desc">Recent signals from the Report Nintendo Slashing Switch ecosystem point to accelerating maturity. The transition from experimental deploymen…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-241ece4a0f93b0e4.html" class="read-link" aria-label="Read: After a 90% discount, Call of Duty: Modern Warfare has more players than the past few CoD games combined on Steam">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-75a07a08806e24da.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Solve a crab housing crisis and fight a Dreadhog in part one of Runescape's big Havenhythe expansion, which is out now">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=900&auto=format&fit=crop&q=80" alt="Solve a crab housing crisis and fight a Dreadhog in part one of Runescape's big Havenhythe expansion, which is out now" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1585620385456-4759f9b5c7d9?w=800&q=80" alt="Super Mario Galaxy Movie age-rating accidentally confirms a 20-year-old fan theory" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-8c864ef1657c5f47.html">Solve a crab housing crisis and fight a Dreadhog in part one of Runescape's big Havenhythe expansion, which is out now</a></h3>
-          <p class="card-summary">A clearer picture is emerging around solve a crab housing crisis and fight a dreadhog in part one of runescape's big…, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-809688bde18b1dc8.html">Super Mario Galaxy Movie age-rating accidentally confirms a 20-year-old fan theory</a></h3>
+          <p class="card-desc">The Super Mario Galaxy Movie space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics a…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-8c864ef1657c5f47.html" class="read-link" aria-label="Read: Solve a crab housing crisis and fight a Dreadhog in part one of Runescape's big Havenhythe expansion, which is out now">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-809688bde18b1dc8.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Sony Fights Back Against The Scourge Of Shovelware, Wiping Over 1,000 Games From The PlayStation Store">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1601887389937-0b02f7683064?w=900&auto=format&fit=crop&q=80" alt="Sony Fights Back Against The Scourge Of Shovelware, Wiping Over 1,000 Games From The PlayStation Store" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80" alt="Switch 2 demand appears to be flagging as Nintendo reportedly lowers production" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-fb643e01bfb84821.html">Sony Fights Back Against The Scourge Of Shovelware, Wiping Over 1,000 Games From The PlayStation Store</a></h3>
-          <p class="card-summary">The story of sony fights back against the scourge of shovelware, wiping over 1,000 games from… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-e4c9a085f7e84918.html">Switch 2 demand appears to be flagging as Nintendo reportedly lowers production</a></h3>
+          <p class="card-desc">The latest developments in Switch demand appears flagging signal a meaningful inflection point for the industry. Organisations that move qui…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-fb643e01bfb84821.html" class="read-link" aria-label="Read: Sony Fights Back Against The Scourge Of Shovelware, Wiping Over 1,000 Games From The PlayStation Store">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-e4c9a085f7e84918.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="After all that furore over Nvidia's AI-powered DLSS 5 makeover of Resident Evil Requiem, Capcom promises gen-AI assets won't be part of its games any time soon">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=900&auto=format&fit=crop&q=80" alt="After all that furore over Nvidia's AI-powered DLSS 5 makeover of Resident Evil Requiem, Capcom promises gen-AI assets won't be part of its games any time soon" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=800&q=80" alt="Arcade racer Screamer’s first update nerfs AI difficulty, with an "additional balance pass" coming soon" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-658cbccd0153305b.html">After all that furore over Nvidia's AI-powered DLSS 5 makeover of Resident Evil Requiem, Capcom promises gen-AI assets won't be part of its games any time soon</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and after all that furore over nvidia's ai-powered dlss 5 makeover of resident evil… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-e9c82a4d32cbf5b6.html">Arcade racer Screamer’s first update nerfs AI difficulty, with an "additional balance pass" coming soon</a></h3>
+          <p class="card-desc">Recent signals from the Arcade racer Screamers first ecosystem point to accelerating maturity. The transition from experimental deployments …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-658cbccd0153305b.html" class="read-link" aria-label="Read: After all that furore over Nvidia's AI-powered DLSS 5 makeover of Resident Evil Requiem, Capcom promises gen-AI assets won't be part of its games any time soon">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-e9c82a4d32cbf5b6.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Out now, Journey of the Garden Rose is a 3D action game with pulp comic art direction and an undertone of real darkness">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=900&auto=format&fit=crop&q=80" alt="Out now, Journey of the Garden Rose is a 3D action game with pulp comic art direction and an undertone of real darkness" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1597211584474-ae3171c7dbea?w=800&q=80" alt="Bungie tackles slow Marathon matchmaking in "isolated geographical regions"" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-2303c387645d3abb.html">Out now, Journey of the Garden Rose is a 3D action game with pulp comic art direction and an undertone of real darkness</a></h3>
-          <p class="card-summary">The story of i love the pulpy floral palace of journey of the garden rose, a 3d action… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-107bae56cbb55a49.html">Bungie tackles slow Marathon matchmaking in "isolated geographical regions"</a></h3>
+          <p class="card-desc">The latest developments in Bungie tackles slow Marathon signal a meaningful inflection point for the industry. Organisations that move quick…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-2303c387645d3abb.html" class="read-link" aria-label="Read: Out now, Journey of the Garden Rose is a 3D action game with pulp comic art direction and an undertone of real darkness">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-107bae56cbb55a49.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Resident Evil Requiem devs Capcom say they'll use AI to "improve efficiency and productivity", but not to generate game assets">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=900&auto=format&fit=crop&q=80" alt="Resident Evil Requiem devs Capcom say they'll use AI to "improve efficiency and productivity", but not to generate game assets" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=800&q=80" alt=""I can see where they’re coming from, because I don’t love AI slop myself": Nvidia boss plays DLSS 5 good cop after criticism" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-2f0b9ac63d44f7b8.html">Resident Evil Requiem devs Capcom say they'll use AI to "improve efficiency and productivity", but not to generate game assets</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and resident evil requiem devs capcom say they'll use ai to "improve efficiency and… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-b1853ea291929779.html">"I can see where they’re coming from, because I don’t love AI slop myself": Nvidia boss plays DLSS 5 good cop after criticism</a></h3>
+          <p class="card-desc">What is unfolding in where theyre coming because represents a convergence of technical capability, regulatory clarity, and market readiness …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-2f0b9ac63d44f7b8.html" class="read-link" aria-label="Read: Resident Evil Requiem devs Capcom say they'll use AI to "improve efficiency and productivity", but not to generate game assets">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-b1853ea291929779.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="As Crimson Desert developer Pearl Abyss rushes to fix pressing issues, players are asking for updates to the time-gated dragon mount">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=900&auto=format&fit=crop&q=80" alt="As Crimson Desert developer Pearl Abyss rushes to fix pressing issues, players are asking for updates to the time-gated dragon mount" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1486401899868-0e435ed85128?w=800&q=80" alt="Fortnite Adds Peak Skins That Cost Twice As Much As The Indie Game" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-cb133a95e91be552.html">As Crimson Desert developer Pearl Abyss rushes to fix pressing issues, players are asking for updates to the time-gated dragon mount</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as as crimson desert developer pearl abyss rushes to fix pressing issues, players…. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-c2ab965427941d25.html">Fortnite Adds Peak Skins That Cost Twice As Much As The Indie Game</a></h3>
+          <p class="card-desc">Recent signals from the Fortnite Adds Peak Skins ecosystem point to accelerating maturity. The transition from experimental deployments to p…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-cb133a95e91be552.html" class="read-link" aria-label="Read: As Crimson Desert developer Pearl Abyss rushes to fix pressing issues, players are asking for updates to the time-gated dragon mount">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-c2ab965427941d25.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Intel Core Ultra 7 270K Plus and Intel Core Ultra 5 250K Plus review: another skippable CPU series">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1580327344181-c1163234e5a0?w=900&auto=format&fit=crop&q=80" alt="Intel Core Ultra 7 270K Plus and Intel Core Ultra 5 250K Plus review: another skippable CPU series" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=800&q=80" alt="The Latest Chappell Roan Controversy Is Nonsense, But At Least The Memes Are Funny" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-2b5448a83d3be2f7.html">Intel Core Ultra 7 270K Plus and Intel Core Ultra 5 250K Plus review: another skippable CPU series</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as intel core ultra 7 270k plus and intel core ultra 5 250k plus review: another…. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-c59a15011254e21c.html">The Latest Chappell Roan Controversy Is Nonsense, But At Least The Memes Are Funny</a></h3>
+          <p class="card-desc">What is unfolding in Latest Chappell Roan Controversy represents a convergence of technical capability, regulatory clarity, and market readi…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-2b5448a83d3be2f7.html" class="read-link" aria-label="Read: Intel Core Ultra 7 270K Plus and Intel Core Ultra 5 250K Plus review: another skippable CPU series">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-c59a15011254e21c.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Google's Gemini will make its way into Dragon Quest X to power a "Chatty Slimey" AI companion, Square Enix has announced">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1601887389937-0b02f7683064?w=900&auto=format&fit=crop&q=80" alt="Google's Gemini will make its way into Dragon Quest X to power a "Chatty Slimey" AI companion, Square Enix has announced" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&q=80" alt="Fantasy tactics RPG Wartales is getting a "dense, reactive" capital city in the next DLC expansion, yours to save or destroy" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-a95ac6cdbfaa6afc.html">Google's Gemini will make its way into Dragon Quest X to power a "Chatty Slimey" AI companion, Square Enix has announced</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around google's gemini will make its way into dragon quest x to power a "chatty slimey"…. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-c4a4459186b24a9c.html">Fantasy tactics RPG Wartales is getting a "dense, reactive" capital city in the next DLC expansion, yours to save or destroy</a></h3>
+          <p class="card-desc">Recent signals from the Fantasy tactics Wartales getting ecosystem point to accelerating maturity. The transition from experimental deployme…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-a95ac6cdbfaa6afc.html" class="read-link" aria-label="Read: Google's Gemini will make its way into Dragon Quest X to power a "Chatty Slimey" AI companion, Square Enix has announced">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-c4a4459186b24a9c.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Peter Molyneux's Masters of Albion looks to have everything I love about those Bullfrog and Lionhead classics, but the scepticism is hard to shake">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=900&auto=format&fit=crop&q=80" alt="Peter Molyneux's Masters of Albion looks to have everything I love about those Bullfrog and Lionhead classics, but the scepticism is hard to shake" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1616440347437-b1c73416efc2?w=800&q=80" alt="Solve a crab housing crisis and fight a Dreadhog in part one of Runescape's big Havenhythe expansion, which is out now" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-95d397ae2c4095b8.html">Peter Molyneux's Masters of Albion looks to have everything I love about those Bullfrog and Lionhead classics, but the scepticism is hard to shake</a></h3>
-          <p class="card-summary">A clearer picture is emerging around peter molyneux's masters of albion looks to have everything i love about those…, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-8c864ef1657c5f47.html">Solve a crab housing crisis and fight a Dreadhog in part one of Runescape's big Havenhythe expansion, which is out now</a></h3>
+          <p class="card-desc">What is unfolding in Solve crab housing crisis represents a convergence of technical capability, regulatory clarity, and market readiness th…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-95d397ae2c4095b8.html" class="read-link" aria-label="Read: Peter Molyneux's Masters of Albion looks to have everything I love about those Bullfrog and Lionhead classics, but the scepticism is hard to shake">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-8c864ef1657c5f47.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label=""All was well until it wasn't" is a summary of both freshly revealed Minecraft Dungeons 2 and pretty much every story ever told">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=900&auto=format&fit=crop&q=80" alt=""All was well until it wasn't" is a summary of both freshly revealed Minecraft Dungeons 2 and pretty much every story ever told" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80" alt="Out now, Journey of the Garden Rose is a 3D action game with pulp comic art direction and an undertone of real darkness" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-2f61ec5feb6506f4.html">"All was well until it wasn't" is a summary of both freshly revealed Minecraft Dungeons 2 and pretty much every story ever told</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around minecraft dungeons 2 will dungeon-crawl through the blockworld yet again when it…. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-gaming">Gaming</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-2303c387645d3abb.html">Out now, Journey of the Garden Rose is a 3D action game with pulp comic art direction and an undertone of real darkness</a></h3>
+          <p class="card-desc">The Journey Garden Rose action space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-2f61ec5feb6506f4.html" class="read-link" aria-label="Read: "All was well until it wasn't" is a summary of both freshly revealed Minecraft Dungeons 2 and pretty much every story ever told">Read more</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="This week in PC games: a new Hooded Horse city-builder, some PS2-style horror, a school-day RPG and an absolutely tremendous catfish">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=900&auto=format&fit=crop&q=80" alt="This week in PC games: a new Hooded Horse city-builder, some PS2-style horror, a school-day RPG and an absolutely tremendous catfish" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="articles/rss-e2b91437b49a48d7.html">This week in PC games: a new Hooded Horse city-builder, some PS2-style horror, a school-day RPG and an absolutely tremendous catfish</a></h3>
-          <p class="card-summary">The story of this week in pc games: a new hooded horse city-builder, some ps2-style horror, a… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The gaming industry sits at the intersection of technology, culture, and commerce — making each significant development a signal worth reading carefully.</p>
-        </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-e2b91437b49a48d7.html" class="read-link" aria-label="Read: This week in PC games: a new Hooded Horse city-builder, some PS2-style horror, a school-day RPG and an absolutely tremendous catfish">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-2303c387645d3abb.html" class="card-read">Read brief</a>
         </div>
       </article>
       
     </div>
+
+    
   </div>
+
+  <!-- ===== AD SLOT ===== -->
+  <div class="section" style="padding-top: 0; padding-bottom: 0;">
+    <!-- AdSense slot -->
+  </div>
+
+  <!-- ===== EDITORIAL ARTICLES ===== -->
   
 
-
+  <!-- ===== BROWSE OTHER CATEGORIES ===== -->
+  <div class="section">
+    <div class="section-head">
+      <h2>More Coverage</h2>
+    </div>
+    <nav class="cat-tile-grid" aria-label="Browse other categories">
+      <a href="ai-news.html" class="cat-tile"><span class="cat-tile-icon">🤖</span><span class="cat-tile-name">AI News</span></a>
+      <a href="cybersecurity-updates.html" class="cat-tile"><span class="cat-tile-icon">🔐</span><span class="cat-tile-name">Cybersecurity</span></a>
+      <a href="enterprise-tech.html" class="cat-tile"><span class="cat-tile-icon">🏢</span><span class="cat-tile-name">Enterprise Tech</span></a>
+      <a href="mobile-gadgets.html" class="cat-tile"><span class="cat-tile-icon">📱</span><span class="cat-tile-name">Mobile &amp; Gadgets</span></a>
+      <a href="evs-automotive.html" class="cat-tile"><span class="cat-tile-icon">🚗</span><span class="cat-tile-name">EVs &amp; Automotive</span></a>
+      
+      <a href="startups-business.html" class="cat-tile"><span class="cat-tile-icon">💼</span><span class="cat-tile-name">Startups &amp; Business</span></a>
+      <a href="broadcast-tech.html" class="cat-tile"><span class="cat-tile-icon">📡</span><span class="cat-tile-name">Broadcast Tech</span></a>
+      <a href="consumer-tech.html" class="cat-tile"><span class="cat-tile-icon">🛒</span><span class="cat-tile-name">Consumer Tech</span></a>
+    </nav>
+  </div>
 
 </main>
 
@@ -1055,7 +1077,7 @@
   <div class="footer-inner">
     <div class="footer-about">
       <span class="brand-name">The Tech Brief</span>
-      <p>An independent technology publication delivering original editorial analysis across the technology industry. Updated every six hours, 24/7.</p>
+      <p>An independent technology publication delivering original editorial analysis across AI, cybersecurity, mobile, enterprise tech, EVs, gaming, and more.</p>
     </div>
     <div class="footer-col">
       <h4>Categories</h4>
@@ -1068,7 +1090,6 @@
       <a href="gaming.html">Gaming</a>
       <a href="evs-automotive.html">EVs &amp; Automotive</a>
       <a href="startups-business.html">Startups &amp; Business</a>
-      <a href="how-to.html">How-To Guides</a>
     </div>
     <div class="footer-col">
       <h4>Site Info</h4>
@@ -1082,23 +1103,40 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; <span id="footer-year"></span> The Tech Brief &mdash; thetechbrief.net. All rights reserved.</span>
-    <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
+    <span>&copy; <span id="footer-year"></span> The Tech Brief — thetechbrief.net. All rights reserved.</span>
+    <span>Independent technology journalism.</span>
   </div>
 </footer>
 
+<!-- ===== COOKIE BANNER ===== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <p>We use cookies to improve experience and analyse traffic. See our <a href="legal/privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn primary" id="cookieAccept">Accept</button>
+    <button class="btn secondary" id="cookieReject">Decline</button>
+  </div>
+</div>
+
 <script>
-  document.getElementById('footer-year').textContent = new Date().getFullYear();
-  (function(){
-    var c=localStorage.getItem('cookieConsent');
-    if(c){document.getElementById('cookieBanner') && document.getElementById('cookieBanner').remove();return;}
-  })();
-  (function(){
-    var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
-    if(!t||!n)return;
-    t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
-  })();
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+(function(){
+  var t=document.querySelector('.nav-toggle'), n=document.getElementById('siteNav');
+  if(!t||!n) return;
+  t.addEventListener('click', function(){ var o=n.classList.toggle('open'); t.setAttribute('aria-expanded',o); });
+})();
+(function(){
+  var c=localStorage.getItem('cookieConsent');
+  if(c){ document.getElementById('cookieBanner').remove(); return; }
+  document.getElementById('cookieAccept').onclick=function(){
+    localStorage.setItem('cookieConsent','yes');
+    document.getElementById('cookieBanner').remove();
+    gtag('consent','update',{'analytics_storage':'granted','ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+  };
+  document.getElementById('cookieReject').onclick=function(){
+    localStorage.setItem('cookieConsent','no');
+    document.getElementById('cookieBanner').remove();
+  };
+})();
 </script>
-<script src="assets/cookie-consent.js"></script>
 </body>
 </html>

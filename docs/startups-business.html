@@ -2,1163 +2,1199 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Google Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
       'analytics_storage': 'denied', 'ad_storage': 'denied',
-      'ad_user_data': 'denied', 'ad_personalization': 'denied', 'wait_for_update': 500
+      'ad_user_data': 'denied', 'ad_personalization': 'denied',
+      'wait_for_update': 500
     });
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJEGDPW7G"></script>
   <script>gtag('js', new Date()); gtag('config', 'G-YCJEGDPW7G');</script>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>Startups, Tech Business & Funding News | The Tech Brief</title>
   <meta name="description" content="Original coverage of startup launches, funding rounds, mergers and acquisitions, and Big Tech business strategy. Written by The Tech Brief editorial team.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.thetechbrief.net/startups-business.html">
-
-  <meta property="og:type"        content="website">
-  <meta property="og:site_name"   content="The Tech Brief">
-  <meta property="og:title"       content="Startups, Tech Business & Funding News | The Tech Brief">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Tech Brief">
+  <meta property="og:title" content="Startups, Tech Business & Funding News | The Tech Brief">
   <meta property="og:description" content="Original coverage of startup launches, funding rounds, mergers and acquisitions, and Big Tech business strategy. Written by The Tech Brief editorial team.">
-  <meta property="og:url"         content="https://www.thetechbrief.net/startups-business.html">
-
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Startups, Tech Business & Funding News | The Tech Brief">
+  <meta property="og:url" content="https://www.thetechbrief.net/startups-business.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Startups, Tech Business & Funding News | The Tech Brief">
   <meta name="twitter:description" content="Original coverage of startup launches, funding rounds, mergers and acquisitions, and Big Tech business strategy. Written by The Tech Brief editorial team.">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Startups & Tech Business",
-    "description": "Original coverage of startup launches, funding rounds, mergers and acquisitions, and Big Tech business strategy. Written by The Tech Brief editorial team.",
+    "name": "Startups & Business — The Tech Brief",
     "url": "https://www.thetechbrief.net/startups-business.html",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.thetechbrief.net/"},
-        {"@type":"ListItem","position":2,"name":"Startups & Tech Business","item":"https://www.thetechbrief.net/startups-business.html"}
-      ]
-    },
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/"
-    },
+    "description": "Original coverage of startup launches, funding rounds, mergers and acquisitions, and Big Tech business strategy. Written by The Tech Brief editorial team.",
     "publisher": {
       "@type": "Organization",
       "name": "The Tech Brief",
-      "url": "https://www.thetechbrief.net/",
-      "email": "technodate3@gmail.com"
+      "url": "https://www.thetechbrief.net"
     }
   }
   </script>
-
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
-
-  <style>
-    /* ── Fix: uniform cards — remove the broken first-card split layout ── */
-    .grid .card:first-child {
-      grid-column: auto !important;
-      display: flex !important;
-      flex-direction: column !important;
-      grid-template-columns: unset !important;
-    }
-    .grid .card:first-child img {
-      width: 100% !important;
-      height: 185px !important;
-      object-fit: cover !important;
-      border-radius: var(--radius) var(--radius) 0 0 !important;
-    }
-
-    /* ── Editorial article cards (deep-dives from generate_articles.py) ── */
-    .editorial-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent-2);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      display: flex; flex-direction: column;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .editorial-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .editorial-card img {
-      width: 100%; height: 185px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .editorial-card .ec-body {
-      padding: 18px 20px 12px; flex: 1;
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    .editorial-card .ec-badge {
-      display: inline-block; background: var(--accent-2); color: #fff;
-      font-size: 10px; font-weight: 700; letter-spacing: .8px;
-      text-transform: uppercase; padding: 3px 9px; border-radius: 999px;
-      align-self: flex-start;
-    }
-    .editorial-card h3 {
-      font-family: var(--font-serif); font-size: 18px;
-      line-height: 1.3; color: var(--ink); flex: 1;
-    }
-    .editorial-card h3 a { color: inherit; }
-    .editorial-card h3 a:hover { color: var(--accent); }
-    .editorial-card .ec-desc { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
-    .editorial-card .ec-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .editorial-card .ec-meta { font-size: 11px; color: var(--ink-3); font-family: var(--font-mono); }
-    .ec-read {
-      font-size: 12.5px; font-weight: 600; color: var(--accent);
-    }
-    .ec-read:hover { color: var(--accent-h); }
-    .ec-read::after { content: ' →'; }
-
-    /* ── Standard editorial news cards ── */
-    /* Same .card class but with cleaned footer — no source attribution */
-    .card .card-footer-clean {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 20px; border-top: 1px solid var(--border);
-      background: #FAFAFA;
-    }
-    .card .card-date-tag {
-      font-size: 11px; color: var(--ink-3); font-family: var(--font-mono);
-    }
-
-    /* ── "In focus" featured card for latest item in category ── */
-    .in-focus-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-      margin-bottom: 28px;
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 768px) {
-      .in-focus-card { grid-template-columns: 340px 1fr; }
-      .in-focus-card img { height: 100%; min-height: 220px; border-radius: var(--radius) 0 0 var(--radius); }
-    }
-    .in-focus-card img {
-      width: 100%; height: 220px; object-fit: cover;
-      background: var(--surface-2); display: block;
-    }
-    .in-focus-body {
-      padding: 24px 28px;
-      display: flex; flex-direction: column; gap: 12px;
-    }
-    .in-focus-label {
-      font-size: 10px; font-weight: 700; letter-spacing: 1.2px;
-      text-transform: uppercase; color: var(--accent);
-      font-family: var(--font-mono);
-    }
-    .in-focus-body h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(20px, 2.5vw, 28px);
-      line-height: 1.25; color: var(--ink);
-    }
-    .in-focus-body h2 a { color: inherit; }
-    .in-focus-body h2 a:hover { color: var(--accent); }
-    .in-focus-body p {
-      font-size: 15px; color: var(--ink-2); line-height: 1.65; flex: 1;
-    }
-    .in-focus-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 12px; margin-top: auto; padding-top: 14px;
-      border-top: 1px solid var(--border);
-    }
-    .in-focus-date { font-size: 12px; color: var(--ink-3); font-family: var(--font-mono); }
-  </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<!-- ===== TICKER ===== -->
+<div class="ticker-bar" aria-hidden="true">
+  <span class="ticker-label">LIVE</span>
+  <div class="ticker-track-wrap">
+    <div class="ticker-track">
+      <span class="ticker-item"><span>AI</span>LLM inference costs down 80% year-on-year across major cloud providers</span>
+      <span class="ticker-item"><span>CYBER</span>State-sponsored APT groups increasingly targeting critical infrastructure OT networks</span>
+      <span class="ticker-item"><span>ENTERPRISE</span>Gartner: 65% of enterprises to deploy AI agents in production by end of 2026</span>
+      <span class="ticker-item"><span>EVs</span>Global EV penetration hits 28% of new car sales in Q1 2026</span>
+      <span class="ticker-item"><span>MOBILE</span>Qualcomm Snapdragon X2 benchmarks leak ahead of MWC announcement</span>
+      <span class="ticker-item"><span>AI</span>LLM inference costs down 80% year-on-year across major cloud providers</span>
+      <span class="ticker-item"><span>CYBER</span>State-sponsored APT groups increasingly targeting critical infrastructure OT networks</span>
+      <span class="ticker-item"><span>ENTERPRISE</span>Gartner: 65% of enterprises to deploy AI agents in production by end of 2026</span>
+      <span class="ticker-item"><span>EVs</span>Global EV penetration hits 28% of new car sales in Q1 2026</span>
+      <span class="ticker-item"><span>MOBILE</span>Qualcomm Snapdragon X2 benchmarks leak ahead of MWC announcement</span>
+    </div>
+  </div>
+</div>
 
 <!-- ===== HEADER ===== -->
 <header class="site-header" role="banner">
-  <a href="index.html" class="header-brand" aria-label="The Tech Brief — Home">
-    <div class="brand-icon" aria-hidden="true">TB</div>
-    <span class="brand-name">Tech Brief</span>
+  <a href="index.html" class="header-brand" aria-label="The Tech Brief home">
+    <div class="brand-icon">TB</div>
+    <div>
+      <span class="brand-name">The Tech Brief</span>
+      <span class="brand-tagline">Technology Intelligence</span>
+    </div>
   </a>
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="currentColor"/><rect y="10" width="22" height="2" rx="1" fill="currentColor"/><rect y="16" width="22" height="2" rx="1" fill="currentColor"/></svg>
   </button>
-  <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
-    <a href="index.html">Home</a>
-    <a href="ai-news.html">AI News</a>
-    <a href="broadcast-tech.html">Broadcast Tech</a>
-    <a href="enterprise-tech.html">Enterprise Tech</a>
-    <a href="cybersecurity-updates.html">Cybersecurity</a>
-    <a href="mobile-gadgets.html">Mobile &amp; Gadgets</a>
-    <a href="consumer-tech.html">Consumer Tech</a>
-    <a href="gaming.html">Gaming</a>
-    <a href="evs-automotive.html">EVs &amp; Automotive</a>
-    <a href="startups-business.html">Startups &amp; Business</a>
-    <a href="how-to.html">How-To Guides</a>
+  <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
+    <a href="ai-news.html" >AI</a>
+    <a href="cybersecurity-updates.html" >Cybersecurity</a>
+    <a href="enterprise-tech.html" >Enterprise</a>
+    <a href="mobile-gadgets.html" >Mobile</a>
+    <a href="evs-automotive.html" >EVs</a>
+    <a href="gaming.html" >Gaming</a>
+    <a href="startups-business.html" aria-current="page">Startups</a>
+    <a href="how-to.html" >How-To</a>
     <a href="about.html" class="nav-cta">About</a>
   </nav>
 </header>
 
 <!-- ===== CATEGORY HERO ===== -->
-<section class="cat-hero" aria-label="Category overview">
+<div class="cat-hero">
   <div class="cat-hero-inner">
-    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-      <a href="index.html">Home</a>
-      <span aria-hidden="true">&rsaquo;</span>
-      <span aria-current="page">Startups & Tech Business</span>
-    </nav>
-    <h1 class="cat-hero-title">Startups & Tech Business</h1>
-    <p class="cat-hero-desc">Original coverage of startup funding, acquisitions, Big Tech strategy and regulatory developments</p>
-  </div>
-</section>
-
-<!-- ===== MAIN CONTENT ===== -->
-<main id="main-content">
-
-  <!-- ===== EDITORIAL DEEP DIVES ===== -->
-  
-
-  <!-- ===== EDITORIAL NEWS COVERAGE ===== -->
-  
-  <div class="section" >
-    <div class="section-head">
-      <h2>Startups & Tech Business Coverage</h2>
-      <span class="section-count">57 editorially-written pieces &mdash; refreshed every 6 hours</span>
-      <span class="section-sub">Original editorial commentary and analysis on the latest developments in Startups & Tech Business</span>
+    <div>
+      <p class="cat-crumb"><a href="index.html">Home</a> &rsaquo; Startups & Business</p>
+      <h1 class="cat-hero-title">
+        <span>💼</span>Startups & Business
+      </h1>
+      <p class="cat-hero-meta">57 articles &middot; Updated every 6 hours &middot; 24 Mar 2026, 16:22 UTC</p>
     </div>
+  </div>
+</div>
+
+<!-- ===== MAIN ===== -->
+<main id="main">
+
+  <!-- ===== FEATURED ARTICLES ===== -->
+  
+  <div class="section">
+    <div class="section-head">
+      <h2>Latest <span class="accent">Startups & Business</span></h2>
+      <span class="section-sub">57 articles · refreshed every 6 hrs</span>
+    </div>
+
+    <!-- First article featured -->
+    
+    <div style="margin-bottom: 22px;">
+      <article class="card" style="max-width: 100%; flex-direction: row; min-height: 200px;" itemscope itemtype="https://schema.org/Article">
+        
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" alt="Meet the former Apple designer building a new AI interface at Hark" loading="eager"
+          style="width: 340px; min-width: 240px; height: auto; object-fit: cover; flex-shrink: 0; border-radius: var(--radius) 0 0 var(--radius);"
+          itemprop="image">
+        
+        <div style="display: flex; flex-direction: column; flex: 1;">
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+              <time datetime="2026-03-24">March 24, 2026</time>
+            </div>
+            <h2 itemprop="headline" style="font-family: var(--font-serif); font-size: clamp(18px, 2.5vw, 24px); line-height: 1.25; color: var(--ink); font-weight: 700;">
+              <a href="articles/rss-81cc4b8b9599e7bd.html" style="color: inherit;">Meet the former Apple designer building a new AI interface at Hark</a>
+            </h2>
+            <p class="card-desc">The Meet former Apple designer space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not…</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-date">4 min read</span>
+            <a href="articles/rss-81cc4b8b9599e7bd.html" class="card-read">Read analysis</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <style>
+      @media (max-width: 600px) {
+        .feat-article { flex-direction: column !important; }
+        .feat-article img { width: 100% !important; border-radius: var(--radius) var(--radius) 0 0 !important; height: 200px !important; }
+      }
+    </style>
+    
+
+    <!-- Remaining articles grid -->
     <div class="grid">
       
-      <article class="card" aria-label="TikTok ads are about to get a tad more disruptive">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&auto=format&fit=crop&q=80" alt="TikTok ads are about to get a tad more disruptive" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9aca?w=800&q=80" alt="The three disciplines separating AI agent demos from real-world deployment" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-3d8b47a5d71ce990.html">TikTok ads are about to get a tad more disruptive</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and tiktok ads are about to get a tad more disruptive is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-929d00af394f35ce.html">The three disciplines separating AI agent demos from real-world deployment</a></h3>
+          <p class="card-desc">The three disciplines separating agent space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-3d8b47a5d71ce990.html" class="read-link" aria-label="Read: TikTok ads are about to get a tad more disruptive">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-929d00af394f35ce.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Mirage raises $75M to continue building models for its AI video editing app Captions">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&auto=format&fit=crop&q=80" alt="Mirage raises $75M to continue building models for its AI video editing app Captions" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9aca?w=800&q=80" alt="As war continues to rage, the World Economic Forum is the latest to postpone Gulf conference in Saudi" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-d7c7b75a95c668f5.html">Mirage raises $75M to continue building models for its AI video editing app Captions</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and mirage raises $75m to continue building models for its ai video editing app captions is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-99454d9edf2c0dfa.html">As war continues to rage, the World Economic Forum is the latest to postpone Gulf conference in Saudi</a></h3>
+          <p class="card-desc">Recent signals from the continues rage World Economic ecosystem point to accelerating maturity. The transition from experimental deployments…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-d7c7b75a95c668f5.html" class="read-link" aria-label="Read: Mirage raises $75M to continue building models for its AI video editing app Captions">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-99454d9edf2c0dfa.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Spotify’s new SongDNA feature maps how your favorite songs are connected">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?w=900&auto=format&fit=crop&q=80" alt="Spotify’s new SongDNA feature maps how your favorite songs are connected" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Shark devices on sale ahead of Amazons Big Spring Sale: Stick vacuums, stain removers, hair tools" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-517be1d7caf3296a.html">Spotify’s new SongDNA feature maps how your favorite songs are connected</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and spotify’s new songdna feature maps how your favorite songs are connected is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-2ebb94abdb2a0672.html">Shark devices on sale ahead of Amazons Big Spring Sale: Stick vacuums, stain removers, hair tools</a></h3>
+          <p class="card-desc">Recent signals from the Shark devices sale ahead ecosystem point to accelerating maturity. The transition from experimental deployments to p…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-517be1d7caf3296a.html" class="read-link" aria-label="Read: Spotify’s new SongDNA feature maps how your favorite songs are connected">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-2ebb94abdb2a0672.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Snapchat’s new ‘AI Clips’ Lens format turns photos into five-second videos">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?w=900&auto=format&fit=crop&q=80" alt="Snapchat’s new ‘AI Clips’ Lens format turns photos into five-second videos" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80" alt="From 12 hours of video games a day to Big Ten Player of the year: The unlikely rise of Yaxel Lendeborg" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-49456abcbf459f5d.html">Snapchat’s new ‘AI Clips’ Lens format turns photos into five-second videos</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around snapchat’s new ‘ai clips’ lens format turns photos into five-second videos. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-aa653b3c787f8427.html">From 12 hours of video games a day to Big Ten Player of the year: The unlikely rise of Yaxel Lendeborg</a></h3>
+          <p class="card-desc">Recent signals from the hours video games Player ecosystem point to accelerating maturity. The transition from experimental deployments to p…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-49456abcbf459f5d.html" class="read-link" aria-label="Read: Snapchat’s new ‘AI Clips’ Lens format turns photos into five-second videos">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-aa653b3c787f8427.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Zoox brings its robotaxis to Austin and Miami">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&auto=format&fit=crop&q=80" alt="Zoox brings its robotaxis to Austin and Miami" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=800&q=80" alt="The best deals under $25 ahead of Amazons Big Spring Sale — save on Lego, Fire Sticks, and more" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-e5a96587709ff69b.html">Zoox brings its robotaxis to Austin and Miami</a></h3>
-          <p class="card-summary">A clearer picture is emerging around zoox brings its robotaxis to austin and miami, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The electric vehicle revolution is accelerating on multiple fronts simultaneously, and the decisions being made today will shape mobility for the next decade.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-6110971ae4e7d938.html">The best deals under $25 ahead of Amazons Big Spring Sale — save on Lego, Fire Sticks, and more</a></h3>
+          <p class="card-desc">Recent signals from the best deals under ahead ecosystem point to accelerating maturity. The transition from experimental deployments to pro…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-e5a96587709ff69b.html" class="read-link" aria-label="Read: Zoox brings its robotaxis to Austin and Miami">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-6110971ae4e7d938.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Cauldron Ferm has turned microbes into nonstop assembly lines">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1444653389962-8149286c578a?w=900&auto=format&fit=crop&q=80" alt="Cauldron Ferm has turned microbes into nonstop assembly lines" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Palantir’s billionaire CEO says only two kinds of people will succeed in the AI era: trade workers — ‘or you’re neurodivergent’" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-ce2eec378e159a92.html">Cauldron Ferm has turned microbes into nonstop assembly lines</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as cauldron ferm has turned microbes into nonstop assembly lines. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-3060f5097dbe8ddf.html">Palantir’s billionaire CEO says only two kinds of people will succeed in the AI era: trade workers — ‘or you’re neurodivergent’</a></h3>
+          <p class="card-desc">Recent signals from the Palantirs billionaire says only ecosystem point to accelerating maturity. The transition from experimental deploymen…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-ce2eec378e159a92.html" class="read-link" aria-label="Read: Cauldron Ferm has turned microbes into nonstop assembly lines">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-3060f5097dbe8ddf.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Pinterest launches a new feature to promote a Pin">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&auto=format&fit=crop&q=80" alt="Pinterest launches a new feature to promote a Pin" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9aca?w=800&q=80" alt="Epic Games cuts 1,000 jobs, says Fortnite engagement is down" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-ae9b08a8cedac011.html">Pinterest launches a new feature to promote a Pin</a></h3>
-          <p class="card-summary">The story of pinterest launches a new feature to promote a pin reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-23c1bb58ad7c94e2.html">Epic Games cuts 1,000 jobs, says Fortnite engagement is down</a></h3>
+          <p class="card-desc">What is unfolding in Epic Games cuts 1000 represents a convergence of technical capability, regulatory clarity, and market readiness that ra…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-ae9b08a8cedac011.html" class="read-link" aria-label="Read: Pinterest launches a new feature to promote a Pin">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-23c1bb58ad7c94e2.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The Magic: The Gathering Avatar The Last Airbender Beginner Box is under market price at Amazon">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&auto=format&fit=crop&q=80" alt="The Magic: The Gathering Avatar The Last Airbender Beginner Box is under market price at Amazon" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=800&q=80" alt="JPMorgan has started monitoring the keystrokes, video calls, and meetings of its junior investment bankers—and they say it’s for employee well-being" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-87227667e2923721.html">The Magic: The Gathering Avatar The Last Airbender Beginner Box is under market price at Amazon</a></h3>
-          <p class="card-summary">The story of the magic: the gathering avatar the last airbender beginner box is under market… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-c0e74aa0c756b636.html">JPMorgan has started monitoring the keystrokes, video calls, and meetings of its junior investment bankers—and they say it’s for employee well-being</a></h3>
+          <p class="card-desc">The JPMorgan started monitoring keystrokes space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adop…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-87227667e2923721.html" class="read-link" aria-label="Read: The Magic: The Gathering Avatar The Last Airbender Beginner Box is under market price at Amazon">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-c0e74aa0c756b636.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Moon phase today: What the Moon will look like on March 24">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?w=900&auto=format&fit=crop&q=80" alt="Moon phase today: What the Moon will look like on March 24" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=800&q=80" alt="15+ Ninja kitchen deals to shop before the Amazon Big Spring Sale" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-1ca620ab5b7dc5d1.html">Moon phase today: What the Moon will look like on March 24</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around moon phase today: what the moon will look like on march 24. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-b6e2f1794c89e809.html">15+ Ninja kitchen deals to shop before the Amazon Big Spring Sale</a></h3>
+          <p class="card-desc">What is unfolding in Ninja kitchen deals shop represents a convergence of technical capability, regulatory clarity, and market readiness tha…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-1ca620ab5b7dc5d1.html" class="read-link" aria-label="Read: Moon phase today: What the Moon will look like on March 24">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-b6e2f1794c89e809.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Current price of oil as of March 24, 2026">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&auto=format&fit=crop&q=80" alt="Current price of oil as of March 24, 2026" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9aca?w=800&q=80" alt="Flighty’s new update gives you real-time alerts about airport disturbances" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-ef465c7748707ec7.html">Current price of oil as of March 24, 2026</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around current price of oil as of march 24, 2026. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-6e6cae7bdbef599a.html">Flighty’s new update gives you real-time alerts about airport disturbances</a></h3>
+          <p class="card-desc">What is unfolding in Flightys update gives realtime represents a convergence of technical capability, regulatory clarity, and market readine…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-ef465c7748707ec7.html" class="read-link" aria-label="Read: Current price of oil as of March 24, 2026">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-6e6cae7bdbef599a.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Jimmy Kimmel uses a 10-year-old tweet to roast Trump">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=900&auto=format&fit=crop&q=80" alt="Jimmy Kimmel uses a 10-year-old tweet to roast Trump" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80" alt="Ads are coming to Apple Maps, as Apple expands its business offerings" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-8027e2ce357a574e.html">Jimmy Kimmel uses a 10-year-old tweet to roast Trump</a></h3>
-          <p class="card-summary">A clearer picture is emerging around jimmy kimmel uses a 10-year-old tweet to roast trump, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-1bef04c695e520de.html">Ads are coming to Apple Maps, as Apple expands its business offerings</a></h3>
+          <p class="card-desc">What is unfolding in coming Apple Maps Apple represents a convergence of technical capability, regulatory clarity, and market readiness that…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-8027e2ce357a574e.html" class="read-link" aria-label="Read: Jimmy Kimmel uses a 10-year-old tweet to roast Trump">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-1bef04c695e520de.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The Pokémon TCG Perfect Order Chikorita 3-Pack Blister is under market price at Amazon">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&auto=format&fit=crop&q=80" alt="The Pokémon TCG Perfect Order Chikorita 3-Pack Blister is under market price at Amazon" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Ai2 releases MolmoWeb, an open-weight visual web agent with 30K human task trajectories and a full training stack" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-749248ddc64cb62d.html">The Pokémon TCG Perfect Order Chikorita 3-Pack Blister is under market price at Amazon</a></h3>
-          <p class="card-summary">The story of the pokémon tcg perfect order chikorita 3-pack blister is under market price at… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-1e8177ee570e95f1.html">Ai2 releases MolmoWeb, an open-weight visual web agent with 30K human task trajectories and a full training stack</a></h3>
+          <p class="card-desc">The latest developments in releases MolmoWeb openweight visual signal a meaningful inflection point for the industry. Organisations that mov…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-749248ddc64cb62d.html" class="read-link" aria-label="Read: The Pokémon TCG Perfect Order Chikorita 3-Pack Blister is under market price at Amazon">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-1e8177ee570e95f1.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Agile Robots becomes the latest robotics company to partner with Google DeepMind">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&auto=format&fit=crop&q=80" alt="Agile Robots becomes the latest robotics company to partner with Google DeepMind" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9aca?w=800&q=80" alt="Philippine president declares state of emergency due to “imminent danger of a critically low energy supply”" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-8f1cf11c521c9bb2.html">Agile Robots becomes the latest robotics company to partner with Google DeepMind</a></h3>
-          <p class="card-summary">The story of agile robots becomes the latest robotics company to partner with google deepmind reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. Artificial intelligence continues to reshape how software is built, deployed, and experienced — making each new development an important reference point for the year ahead.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-98566b9bb2b84c00.html">Philippine president declares state of emergency due to “imminent danger of a critically low energy supply”</a></h3>
+          <p class="card-desc">Recent signals from the Philippine president declares state ecosystem point to accelerating maturity. The transition from experimental deplo…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-8f1cf11c521c9bb2.html" class="read-link" aria-label="Read: Agile Robots becomes the latest robotics company to partner with Google DeepMind">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-98566b9bb2b84c00.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="One prediction isn’t enough — Why CEOs are shifting to wartime planning">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?w=900&auto=format&fit=crop&q=80" alt="One prediction isn’t enough — Why CEOs are shifting to wartime planning" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80" alt="Republican states rush to ban abortion pills as surveys suggest they’re spiking in pro-life states" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-a8a848566819c87e.html">One prediction isn’t enough — Why CEOs are shifting to wartime planning</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as one prediction isn’t enough — why ceos are shifting to wartime planning. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-c0009f4bbeef73e3.html">Republican states rush to ban abortion pills as surveys suggest they’re spiking in pro-life states</a></h3>
+          <p class="card-desc">The latest developments in Republican states rush abortion signal a meaningful inflection point for the industry. Organisations that move qu…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-a8a848566819c87e.html" class="read-link" aria-label="Read: One prediction isn’t enough — Why CEOs are shifting to wartime planning">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-c0009f4bbeef73e3.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Wall Street is ‘bewitched’ by positive news on Iran, says UBS, and investors want to believe the war is over without verifiable information">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?w=900&auto=format&fit=crop&q=80" alt="Wall Street is ‘bewitched’ by positive news on Iran, says UBS, and investors want to believe the war is over without verifiable information" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80" alt="Amazon Big Spring Sale 2026: Tablet deals are in full bloom with savings on the latest iPad Air" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-b1360d3cab0340c1.html">Wall Street is ‘bewitched’ by positive news on Iran, says UBS, and investors want to believe the war is over without verifiable information</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around wall street is ‘bewitched’ by positive news on iran, says ubs, and investors want…. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-1fe49055737e59f2.html">Amazon Big Spring Sale 2026: Tablet deals are in full bloom with savings on the latest iPad Air</a></h3>
+          <p class="card-desc">The latest developments in Amazon Spring Sale 2026 signal a meaningful inflection point for the industry. Organisations that move quickly to…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-b1360d3cab0340c1.html" class="read-link" aria-label="Read: Wall Street is ‘bewitched’ by positive news on Iran, says UBS, and investors want to believe the war is over without verifiable information">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-1fe49055737e59f2.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Invesco takes over Superstate’s $900 million T-bill fund as Wall Street accelerates tokenization push">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&auto=format&fit=crop&q=80" alt="Invesco takes over Superstate’s $900 million T-bill fund as Wall Street accelerates tokenization push" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80" alt="Kalshi and Polymarket rush to update their policies after realizing that Congress could destroy them" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-41c9c3e024656c09.html">Invesco takes over Superstate’s $900 million T-bill fund as Wall Street accelerates tokenization push</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around invesco takes over superstate’s $900 million t-bill fund as wall street…. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-56eae56f63f122a1.html">Kalshi and Polymarket rush to update their policies after realizing that Congress could destroy them</a></h3>
+          <p class="card-desc">What is unfolding in Kalshi Polymarket rush update represents a convergence of technical capability, regulatory clarity, and market readines…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-41c9c3e024656c09.html" class="read-link" aria-label="Read: Invesco takes over Superstate’s $900 million T-bill fund as Wall Street accelerates tokenization push">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-56eae56f63f122a1.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The rise and uncertain future of $29 billion AI coding startup Cursor">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=900&auto=format&fit=crop&q=80" alt="The rise and uncertain future of $29 billion AI coding startup Cursor" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80" alt="Roku’s $3 Howdy subscription service launches on Prime Video" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-c2704bf73a743e08.html">The rise and uncertain future of $29 billion AI coding startup Cursor</a></h3>
-          <p class="card-summary">A clearer picture is emerging around the rise and uncertain future of $29 billion ai coding startup cursor, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-55fbdb555a00b43e.html">Roku’s $3 Howdy subscription service launches on Prime Video</a></h3>
+          <p class="card-desc">As Rokus Howdy subscription service continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-c2704bf73a743e08.html" class="read-link" aria-label="Read: The rise and uncertain future of $29 billion AI coding startup Cursor">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-55fbdb555a00b43e.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Trump searches for an exit strategy in Iran as $100 oil looms over the midterms">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&auto=format&fit=crop&q=80" alt="Trump searches for an exit strategy in Iran as $100 oil looms over the midterms" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Robot vacuum deals ahead of Amazons Big Spring Sale: Our Dreame, Roborock, and Eufy favorites on sale" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-f15279e4a4e6b637.html">Trump searches for an exit strategy in Iran as $100 oil looms over the midterms</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as trump searches for an exit strategy in iran as $100 oil looms over the midterms. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-3c94d345516439be.html">Robot vacuum deals ahead of Amazons Big Spring Sale: Our Dreame, Roborock, and Eufy favorites on sale</a></h3>
+          <p class="card-desc">What is unfolding in Robot vacuum deals ahead represents a convergence of technical capability, regulatory clarity, and market readiness tha…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-f15279e4a4e6b637.html" class="read-link" aria-label="Read: Trump searches for an exit strategy in Iran as $100 oil looms over the midterms">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-3c94d345516439be.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Exclusive: Cambridge Mobile Telematics secures $350 million from TPG, Allianz to make driving safer">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=900&auto=format&fit=crop&q=80" alt="Exclusive: Cambridge Mobile Telematics secures $350 million from TPG, Allianz to make driving safer" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80" alt="FCC bans import of new consumer routers made overseas, citing security risks" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-f3fc6823c05e0aed.html">Exclusive: Cambridge Mobile Telematics secures $350 million from TPG, Allianz to make driving safer</a></h3>
-          <p class="card-summary">A clearer picture is emerging around cambridge mobile telematics secures $350 million from tpg, allianz to make…, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-3f9aa1043769fa02.html">FCC bans import of new consumer routers made overseas, citing security risks</a></h3>
+          <p class="card-desc">As bans import consumer routers continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and stra…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-f3fc6823c05e0aed.html" class="read-link" aria-label="Read: Exclusive: Cambridge Mobile Telematics secures $350 million from TPG, Allianz to make driving safer">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-3f9aa1043769fa02.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Jon Stewart has a brutal reaction to Punch the monkeys new girlfriend">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1444653389962-8149286c578a?w=900&auto=format&fit=crop&q=80" alt="Jon Stewart has a brutal reaction to Punch the monkeys new girlfriend" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9aca?w=800&q=80" alt="25+ Amazon device deals live ahead of the Big Spring Sale: Echo, Fire TV, and more" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-6ec2b34823639439.html">Jon Stewart has a brutal reaction to Punch the monkeys new girlfriend</a></h3>
-          <p class="card-summary">A clearer picture is emerging around jon stewart has a brutal reaction to punch the monkeys new girlfriend, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-4f09f00ba118f540.html">25+ Amazon device deals live ahead of the Big Spring Sale: Echo, Fire TV, and more</a></h3>
+          <p class="card-desc">As Amazon device deals live continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategi…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-6ec2b34823639439.html" class="read-link" aria-label="Read: Jon Stewart has a brutal reaction to Punch the monkeys new girlfriend">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-4f09f00ba118f540.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Pokémon TCG Perfect Order Booster Bundle preorders are under $59 at Amazon — save vs. Walmart">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&auto=format&fit=crop&q=80" alt="Pokémon TCG Perfect Order Booster Bundle preorders are under $59 at Amazon — save vs. Walmart" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80" alt="40+ home deals from Amazons Big Spring Sale for fresher air and cleaner floors" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-3604959e6ae20b19.html">Pokémon TCG Perfect Order Booster Bundle preorders are under $59 at Amazon — save vs. Walmart</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around pokémon tcg perfect order booster bundle preorders are under $59 at amazon — save…. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-88fbe2378063d17a.html">40+ home deals from Amazons Big Spring Sale for fresher air and cleaner floors</a></h3>
+          <p class="card-desc">Recent signals from the home deals Amazons Spring ecosystem point to accelerating maturity. The transition from experimental deployments to …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-3604959e6ae20b19.html" class="read-link" aria-label="Read: Pokémon TCG Perfect Order Booster Bundle preorders are under $59 at Amazon — save vs. Walmart">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-88fbe2378063d17a.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Chris Hayes Has Some Advice for Keeping Up With the News">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&auto=format&fit=crop&q=80" alt="Chris Hayes Has Some Advice for Keeping Up With the News" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80" alt="The Sheep Detectives trailer sees a flock of sheep avenge Hugh Jackmans murder. Yes, really." class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-09b20f94983e56c3.html">Chris Hayes Has Some Advice for Keeping Up With the News</a></h3>
-          <p class="card-summary">A clearer picture is emerging around chris hayes has some advice for keeping up with the news, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-302b565de3263477.html">The Sheep Detectives trailer sees a flock of sheep avenge Hugh Jackmans murder. Yes, really.</a></h3>
+          <p class="card-desc">As Sheep Detectives trailer sees continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and str…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-09b20f94983e56c3.html" class="read-link" aria-label="Read: Chris Hayes Has Some Advice for Keeping Up With the News">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-302b565de3263477.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Amazons Big Spring Sale is back: The best deals already live on Apple, robot vacuums, headphones, and more">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&auto=format&fit=crop&q=80" alt="Amazons Big Spring Sale is back: The best deals already live on Apple, robot vacuums, headphones, and more" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9aca?w=800&q=80" alt="Claude can now keep working on your Mac while youre away" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-3309d9416e6724f0.html">Amazons Big Spring Sale is back: The best deals already live on Apple, robot vacuums, headphones, and more</a></h3>
-          <p class="card-summary">The story of amazons big spring sale is back: the best deals already live on apple, robot… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-d9035532522496a7.html">Claude can now keep working on your Mac while youre away</a></h3>
+          <p class="card-desc">What is unfolding in Claude keep working your represents a convergence of technical capability, regulatory clarity, and market readiness tha…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-3309d9416e6724f0.html" class="read-link" aria-label="Read: Amazons Big Spring Sale is back: The best deals already live on Apple, robot vacuums, headphones, and more">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-d9035532522496a7.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="How CEOs are grappling with the greatest energy shock ever">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1444653389962-8149286c578a?w=900&auto=format&fit=crop&q=80" alt="How CEOs are grappling with the greatest energy shock ever" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=800&q=80" alt="The best headphones deals ahead of Amazons Big Spring Sale — Sony leads the pack" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-ed662a8a50e0d76b.html">How CEOs are grappling with the greatest energy shock ever</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and how ceos are grappling with the greatest energy shock ever is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-5bece5fa9a6115bf.html">The best headphones deals ahead of Amazons Big Spring Sale — Sony leads the pack</a></h3>
+          <p class="card-desc">The best headphones deals ahead space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metric…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-ed662a8a50e0d76b.html" class="read-link" aria-label="Read: How CEOs are grappling with the greatest energy shock ever">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-5bece5fa9a6115bf.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Apple WWDC 2026 is official, with iOS 27 and AI advancements on the menu">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&auto=format&fit=crop&q=80" alt="Apple WWDC 2026 is official, with iOS 27 and AI advancements on the menu" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=800&q=80" alt="TikTok ads are about to get a tad more disruptive" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-3d547df2d12e19ac.html">Apple WWDC 2026 is official, with iOS 27 and AI advancements on the menu</a></h3>
-          <p class="card-summary">The story of apple wwdc 2026 is official, with ios 27 and ai advancements on the menu reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-3d8b47a5d71ce990.html">TikTok ads are about to get a tad more disruptive</a></h3>
+          <p class="card-desc">Recent signals from the TikTok more disruptive ecosystem point to accelerating maturity. The transition from experimental deployments to pro…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-3d547df2d12e19ac.html" class="read-link" aria-label="Read: Apple WWDC 2026 is official, with iOS 27 and AI advancements on the menu">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-3d8b47a5d71ce990.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Ultrahuman ramps up U.S. push with Ring Pro as Oura tightens its grip">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&auto=format&fit=crop&q=80" alt="Ultrahuman ramps up U.S. push with Ring Pro as Oura tightens its grip" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80" alt="Mirage raises $75M to continue building models for its AI video editing app Captions" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-cf3cd28937c8454b.html">Ultrahuman ramps up U.S. push with Ring Pro as Oura tightens its grip</a></h3>
-          <p class="card-summary">A clearer picture is emerging around ultrahuman ramps up u.s. push with ring pro as oura tightens its grip, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-d7c7b75a95c668f5.html">Mirage raises $75M to continue building models for its AI video editing app Captions</a></h3>
+          <p class="card-desc">Recent signals from the Mirage raises continue building ecosystem point to accelerating maturity. The transition from experimental deploymen…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-cf3cd28937c8454b.html" class="read-link" aria-label="Read: Ultrahuman ramps up U.S. push with Ring Pro as Oura tightens its grip">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-d7c7b75a95c668f5.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The best deals this week, according to Mashables team of shopping experts">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&auto=format&fit=crop&q=80" alt="The best deals this week, according to Mashables team of shopping experts" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9aca?w=800&q=80" alt="Spotify’s new SongDNA feature maps how your favorite songs are connected" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-5bb170ea07cb3c98.html">The best deals this week, according to Mashables team of shopping experts</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and the best deals this week, according to mashables team of shopping experts is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-517be1d7caf3296a.html">Spotify’s new SongDNA feature maps how your favorite songs are connected</a></h3>
+          <p class="card-desc">Recent signals from the Spotifys SongDNA feature maps ecosystem point to accelerating maturity. The transition from experimental deployments…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-5bb170ea07cb3c98.html" class="read-link" aria-label="Read: The best deals this week, according to Mashables team of shopping experts">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-517be1d7caf3296a.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Build apps faster with Microsoft Visual Studio Professional 2026 for under $50">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=900&auto=format&fit=crop&q=80" alt="Build apps faster with Microsoft Visual Studio Professional 2026 for under $50" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9aca?w=800&q=80" alt="Snapchat’s new ‘AI Clips’ Lens format turns photos into five-second videos" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-05b371eceeaf531d.html">Build apps faster with Microsoft Visual Studio Professional 2026 for under $50</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around build apps faster with microsoft visual studio professional 2026 for under $50. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-49456abcbf459f5d.html">Snapchat’s new ‘AI Clips’ Lens format turns photos into five-second videos</a></h3>
+          <p class="card-desc">The latest developments in Snapchats Clips Lens format signal a meaningful inflection point for the industry. Organisations that move quickl…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-05b371eceeaf531d.html" class="read-link" aria-label="Read: Build apps faster with Microsoft Visual Studio Professional 2026 for under $50">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-49456abcbf459f5d.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Nearly three in five Americans think AI will push homeownership even further out of reach">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=80" alt="Nearly three in five Americans think AI will push homeownership even further out of reach" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80" alt="Chris Hayes Has Some Advice for Keeping Up With the News" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-ea81cb627e9be0ee.html">Nearly three in five Americans think AI will push homeownership even further out of reach</a></h3>
-          <p class="card-summary">A clearer picture is emerging around nearly three in five americans think ai will push homeownership even further out…, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-09b20f94983e56c3.html">Chris Hayes Has Some Advice for Keeping Up With the News</a></h3>
+          <p class="card-desc">What is unfolding in Chris Hayes Some Advice represents a convergence of technical capability, regulatory clarity, and market readiness that…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-ea81cb627e9be0ee.html" class="read-link" aria-label="Read: Nearly three in five Americans think AI will push homeownership even further out of reach">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-09b20f94983e56c3.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="AI’s disruption is a choice, not a forecast">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?w=900&auto=format&fit=crop&q=80" alt="AI’s disruption is a choice, not a forecast" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9aca?w=800&q=80" alt="AI’s disruption is a choice, not a forecast" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-c436977364d2cbf6.html">AI’s disruption is a choice, not a forecast</a></h3>
-          <p class="card-summary">The story of ai’s disruption is a choice, not a forecast reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-c436977364d2cbf6.html">AI’s disruption is a choice, not a forecast</a></h3>
+          <p class="card-desc">The disruption choice forecast space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-c436977364d2cbf6.html" class="read-link" aria-label="Read: AI’s disruption is a choice, not a forecast">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-c436977364d2cbf6.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Insight Partners scrubs investment post about Delve amid ‘fake compliance’ allegations">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=900&auto=format&fit=crop&q=80" alt="Insight Partners scrubs investment post about Delve amid ‘fake compliance’ allegations" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Say hello to 10 a.m. starts. Billionaire Mark Cuban says AI will cut your workday by an hour—and you’ll still get paid the same" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-13f91426b7c5ed04.html">Insight Partners scrubs investment post about Delve amid ‘fake compliance’ allegations</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around insight partners scrubs investment post about delve amid ‘fake compliance’…. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-e60a73b2d657d391.html">Say hello to 10 a.m. starts. Billionaire Mark Cuban says AI will cut your workday by an hour—and you’ll still get paid the same</a></h3>
+          <p class="card-desc">As hello starts Billionaire Mark continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and str…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-13f91426b7c5ed04.html" class="read-link" aria-label="Read: Insight Partners scrubs investment post about Delve amid ‘fake compliance’ allegations">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-e60a73b2d657d391.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="What is DeerFlow 2.0 and what should enterprises know about this new, powerful local AI agent orchestrator?">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1444653389962-8149286c578a?w=900&auto=format&fit=crop&q=80" alt="What is DeerFlow 2.0 and what should enterprises know about this new, powerful local AI agent orchestrator?" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Inside the Seattle clinic that treats tech addiction like heroin, and clients detox for up to 16 weeks" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-3f424aa70d68fc72.html">What is DeerFlow 2.0 and what should enterprises know about this new, powerful local AI agent orchestrator?</a></h3>
-          <p class="card-summary">The story of what is deerflow 2.0 and what should enterprises know about this new, powerful… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-ff22bb65f3feabeb.html">Inside the Seattle clinic that treats tech addiction like heroin, and clients detox for up to 16 weeks</a></h3>
+          <p class="card-desc">What is unfolding in Inside Seattle clinic treats represents a convergence of technical capability, regulatory clarity, and market readiness…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 24, 2026</span>
-          <a href="articles/rss-3f424aa70d68fc72.html" class="read-link" aria-label="Read: What is DeerFlow 2.0 and what should enterprises know about this new, powerful local AI agent orchestrator?">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-ff22bb65f3feabeb.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Show us your agents: VB Transform 2026 is looking for the most innovative agentic AI technologies">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&auto=format&fit=crop&q=80" alt="Show us your agents: VB Transform 2026 is looking for the most innovative agentic AI technologies" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=800&q=80" alt="Liquid-cooled AI systems expose the limits of traditional storage architecture" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-1ea1d42b73e1bfb9.html">Show us your agents: VB Transform 2026 is looking for the most innovative agentic AI technologies</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and show us your agents: vb transform 2026 is looking for the most innovative agentic… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-29dd425900da4076.html">Liquid-cooled AI systems expose the limits of traditional storage architecture</a></h3>
+          <p class="card-desc">The latest developments in Liquidcooled systems expose limits signal a meaningful inflection point for the industry. Organisations that move…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-1ea1d42b73e1bfb9.html" class="read-link" aria-label="Read: Show us your agents: VB Transform 2026 is looking for the most innovative agentic AI technologies">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-29dd425900da4076.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="You thought the generalist was dead — in the 'vibe work' era, they're more important than ever">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=900&auto=format&fit=crop&q=80" alt="You thought the generalist was dead — in the 'vibe work' era, they're more important than ever" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80" alt="What is DeerFlow 2.0 and what should enterprises know about this new, powerful local AI agent orchestrator?" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-97cd0d821b929e27.html">You thought the generalist was dead — in the 'vibe work' era, they're more important than ever</a></h3>
-          <p class="card-summary">A clearer picture is emerging around you thought the generalist was dead — in the 'vibe work' era, they're more…, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-24">March 24, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-3f424aa70d68fc72.html">What is DeerFlow 2.0 and what should enterprises know about this new, powerful local AI agent orchestrator?</a></h3>
+          <p class="card-desc">The What DeerFlow what enterprises space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption met…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-97cd0d821b929e27.html" class="read-link" aria-label="Read: You thought the generalist was dead — in the 'vibe work' era, they're more important than ever">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-3f424aa70d68fc72.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="US Startup Funding Slows Sharply In March">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&auto=format&fit=crop&q=80" alt="US Startup Funding Slows Sharply In March" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" alt="Show us your agents: VB Transform 2026 is looking for the most innovative agentic AI technologies" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-07163efed6f883c0.html">US Startup Funding Slows Sharply In March</a></h3>
-          <p class="card-summary">The story of us startup funding slows sharply in march reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-1ea1d42b73e1bfb9.html">Show us your agents: VB Transform 2026 is looking for the most innovative agentic AI technologies</a></h3>
+          <p class="card-desc">Recent signals from the Show your agents Transform ecosystem point to accelerating maturity. The transition from experimental deployments to…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-07163efed6f883c0.html" class="read-link" aria-label="Read: US Startup Funding Slows Sharply In March">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-1ea1d42b73e1bfb9.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The three disciplines separating AI agent demos from real-world deployment">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?w=900&auto=format&fit=crop&q=80" alt="The three disciplines separating AI agent demos from real-world deployment" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=800&q=80" alt="You thought the generalist was dead — in the 'vibe work' era, they're more important than ever" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-929d00af394f35ce.html">The three disciplines separating AI agent demos from real-world deployment</a></h3>
-          <p class="card-summary">The story of the three disciplines separating ai agent demos from real-world deployment reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-97cd0d821b929e27.html">You thought the generalist was dead — in the 'vibe work' era, they're more important than ever</a></h3>
+          <p class="card-desc">What is unfolding in thought generalist dead vibe represents a convergence of technical capability, regulatory clarity, and market readiness…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-929d00af394f35ce.html" class="read-link" aria-label="Read: The three disciplines separating AI agent demos from real-world deployment">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-97cd0d821b929e27.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Testing autonomous agents (Or: how I learned to stop worrying and embrace chaos)">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=900&auto=format&fit=crop&q=80" alt="Testing autonomous agents (Or: how I learned to stop worrying and embrace chaos)" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" alt="US Startup Funding Slows Sharply In March" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-781499e95c138d89.html">Testing autonomous agents (Or: how I learned to stop worrying and embrace chaos)</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and testing autonomous agents (or: how i learned to stop worrying and embrace chaos) is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-07163efed6f883c0.html">US Startup Funding Slows Sharply In March</a></h3>
+          <p class="card-desc">The Startup Funding Slows Sharply space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metr…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-781499e95c138d89.html" class="read-link" aria-label="Read: Testing autonomous agents (Or: how I learned to stop worrying and embrace chaos)">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-07163efed6f883c0.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Nvidia's Nemotron-Cascade 2 wins math and coding gold medals with 3B active parameters — and its post-training recipe is now open-source">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=900&auto=format&fit=crop&q=80" alt="Nvidia's Nemotron-Cascade 2 wins math and coding gold medals with 3B active parameters — and its post-training recipe is now open-source" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=800&q=80" alt="Testing autonomous agents (Or: how I learned to stop worrying and embrace chaos)" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-674bd45993fb63b4.html">Nvidia's Nemotron-Cascade 2 wins math and coding gold medals with 3B active parameters — and its post-training recipe is now open-source</a></h3>
-          <p class="card-summary">The story of nvidia's nemotron-cascade 2 wins math and coding gold medals with 3b active… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-781499e95c138d89.html">Testing autonomous agents (Or: how I learned to stop worrying and embrace chaos)</a></h3>
+          <p class="card-desc">Recent signals from the Testing autonomous agents learned ecosystem point to accelerating maturity. The transition from experimental deploym…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-674bd45993fb63b4.html" class="read-link" aria-label="Read: Nvidia's Nemotron-Cascade 2 wins math and coding gold medals with 3B active parameters — and its post-training recipe is now open-source">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-781499e95c138d89.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The Tax Credit Opportunities Startups Often Forget (And Why It Keeps Happening)">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=900&auto=format&fit=crop&q=80" alt="The Tax Credit Opportunities Startups Often Forget (And Why It Keeps Happening)" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="The Tax Credit Opportunities Startups Often Forget (And Why It Keeps Happening)" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-cac3092cedc6b1f1.html">The Tax Credit Opportunities Startups Often Forget (And Why It Keeps Happening)</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as the tax credit opportunities startups often forget (and why it keeps happening). Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-cac3092cedc6b1f1.html">The Tax Credit Opportunities Startups Often Forget (And Why It Keeps Happening)</a></h3>
+          <p class="card-desc">As Credit Opportunities Startups Often continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical a…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-cac3092cedc6b1f1.html" class="read-link" aria-label="Read: The Tax Credit Opportunities Startups Often Forget (And Why It Keeps Happening)">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-cac3092cedc6b1f1.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The AI Race Is Pressuring Utilities to Squeeze More From Europe’s Power Grids">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=900&auto=format&fit=crop&q=80" alt="The AI Race Is Pressuring Utilities to Squeeze More From Europe’s Power Grids" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=800&q=80" alt="The AI Race Is Pressuring Utilities to Squeeze More From Europe’s Power Grids" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-fedac122e260d045.html">The AI Race Is Pressuring Utilities to Squeeze More From Europe’s Power Grids</a></h3>
-          <p class="card-summary">The story of the ai race is pressuring utilities to squeeze more from europe’s power grids reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-23">March 23, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-fedac122e260d045.html">The AI Race Is Pressuring Utilities to Squeeze More From Europe’s Power Grids</a></h3>
+          <p class="card-desc">The Race Pressuring Utilities Squeeze space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-fedac122e260d045.html" class="read-link" aria-label="Read: The AI Race Is Pressuring Utilities to Squeeze More From Europe’s Power Grids">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-fedac122e260d045.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Luma AI launches Uni-1, a model that outscores Google and OpenAI while costing up to 30 percent less">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1444653389962-8149286c578a?w=900&auto=format&fit=crop&q=80" alt="Luma AI launches Uni-1, a model that outscores Google and OpenAI while costing up to 30 percent less" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Anthropic Denies It Could Sabotage AI Tools During War" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-36891c58a213d6a8.html">Luma AI launches Uni-1, a model that outscores Google and OpenAI while costing up to 30 percent less</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as luma ai launches uni-1, a model that outscores google and openai while costing up…. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-21">March 21, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-224d141ab5dafe97.html">Anthropic Denies It Could Sabotage AI Tools During War</a></h3>
+          <p class="card-desc">The latest developments in Anthropic Denies Sabotage Tools signal a meaningful inflection point for the industry. Organisations that move qu…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 23, 2026</span>
-          <a href="articles/rss-36891c58a213d6a8.html" class="read-link" aria-label="Read: Luma AI launches Uni-1, a model that outscores Google and OpenAI while costing up to 30 percent less">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-224d141ab5dafe97.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Anthropic Denies It Could Sabotage AI Tools During War">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&auto=format&fit=crop&q=80" alt="Anthropic Denies It Could Sabotage AI Tools During War" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=800&q=80" alt="‘A Rigged and Dangerous Product’: The Wildest Week for Prediction Markets Yet" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-224d141ab5dafe97.html">Anthropic Denies It Could Sabotage AI Tools During War</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around anthropic denies it could sabotage ai tools during war. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-20">March 20, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-156579a6254800b6.html">‘A Rigged and Dangerous Product’: The Wildest Week for Prediction Markets Yet</a></h3>
+          <p class="card-desc">What is unfolding in Rigged Dangerous Product Wildest represents a convergence of technical capability, regulatory clarity, and market readi…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 21, 2026</span>
-          <a href="articles/rss-224d141ab5dafe97.html" class="read-link" aria-label="Read: Anthropic Denies It Could Sabotage AI Tools During War">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-156579a6254800b6.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="‘A Rigged and Dangerous Product’: The Wildest Week for Prediction Markets Yet">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=900&auto=format&fit=crop&q=80" alt="‘A Rigged and Dangerous Product’: The Wildest Week for Prediction Markets Yet" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="The Week’s 10 Biggest Funding Rounds: Investment Slows, But Security And AI Remain Top Picks" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-156579a6254800b6.html">‘A Rigged and Dangerous Product’: The Wildest Week for Prediction Markets Yet</a></h3>
-          <p class="card-summary">A clearer picture is emerging around ‘a rigged and dangerous product’: the wildest week for prediction markets yet, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-20">March 20, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-1fe8ff9ee0051c9c.html">The Week’s 10 Biggest Funding Rounds: Investment Slows, But Security And AI Remain Top Picks</a></h3>
+          <p class="card-desc">The Weeks Biggest Funding Rounds space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metri…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 20, 2026</span>
-          <a href="articles/rss-156579a6254800b6.html" class="read-link" aria-label="Read: ‘A Rigged and Dangerous Product’: The Wildest Week for Prediction Markets Yet">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-1fe8ff9ee0051c9c.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The Week’s 10 Biggest Funding Rounds: Investment Slows, But Security And AI Remain Top Picks">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=900&auto=format&fit=crop&q=80" alt="The Week’s 10 Biggest Funding Rounds: Investment Slows, But Security And AI Remain Top Picks" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Kalshi Has Been Temporarily Banned in Nevada" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-1fe8ff9ee0051c9c.html">The Week’s 10 Biggest Funding Rounds: Investment Slows, But Security And AI Remain Top Picks</a></h3>
-          <p class="card-summary">The story of the week’s 10 biggest funding rounds: investment slows, but security and ai… reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-20">March 20, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-b7c2f09e03066375.html">Kalshi Has Been Temporarily Banned in Nevada</a></h3>
+          <p class="card-desc">The latest developments in Kalshi Been Temporarily Banned signal a meaningful inflection point for the industry. Organisations that move qui…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 20, 2026</span>
-          <a href="articles/rss-1fe8ff9ee0051c9c.html" class="read-link" aria-label="Read: The Week’s 10 Biggest Funding Rounds: Investment Slows, But Security And AI Remain Top Picks">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-b7c2f09e03066375.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Kalshi Has Been Temporarily Banned in Nevada">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&auto=format&fit=crop&q=80" alt="Kalshi Has Been Temporarily Banned in Nevada" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="At Palantir’s Developer Conference, AI Is Built to Win Wars" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-b7c2f09e03066375.html">Kalshi Has Been Temporarily Banned in Nevada</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around kalshi has been temporarily banned in nevada. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-20">March 20, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-4b2c8fa389bc1e6a.html">At Palantir’s Developer Conference, AI Is Built to Win Wars</a></h3>
+          <p class="card-desc">Recent signals from the Palantirs Developer Conference Built ecosystem point to accelerating maturity. The transition from experimental depl…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 20, 2026</span>
-          <a href="articles/rss-b7c2f09e03066375.html" class="read-link" aria-label="Read: Kalshi Has Been Temporarily Banned in Nevada">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-4b2c8fa389bc1e6a.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="At Palantir’s Developer Conference, AI Is Built to Win Wars">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&auto=format&fit=crop&q=80" alt="At Palantir’s Developer Conference, AI Is Built to Win Wars" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=800&q=80" alt="The Most Active Startup Acquirers Of The Past 3 Years Aren’t Always Who You’d Expect" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-4b2c8fa389bc1e6a.html">At Palantir’s Developer Conference, AI Is Built to Win Wars</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and at palantir’s developer conference, ai is built to win wars is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-20">March 20, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-0215b71465e1cb2c.html">The Most Active Startup Acquirers Of The Past 3 Years Aren’t Always Who You’d Expect</a></h3>
+          <p class="card-desc">Recent signals from the Most Active Startup Acquirers ecosystem point to accelerating maturity. The transition from experimental deployments…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 20, 2026</span>
-          <a href="articles/rss-4b2c8fa389bc1e6a.html" class="read-link" aria-label="Read: At Palantir’s Developer Conference, AI Is Built to Win Wars">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-0215b71465e1cb2c.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The Most Active Startup Acquirers Of The Past 3 Years Aren’t Always Who You’d Expect">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&auto=format&fit=crop&q=80" alt="The Most Active Startup Acquirers Of The Past 3 Years Aren’t Always Who You’d Expect" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Why You Haven’t Raised Startup Funding (Yet)" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-0215b71465e1cb2c.html">The Most Active Startup Acquirers Of The Past 3 Years Aren’t Always Who You’d Expect</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and the most active startup acquirers of the past 3 years aren’t always who you’d expect is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-20">March 20, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-0c56943a644c40a0.html">Why You Haven’t Raised Startup Funding (Yet)</a></h3>
+          <p class="card-desc">The Havent Raised Startup Funding space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metr…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 20, 2026</span>
-          <a href="articles/rss-0215b71465e1cb2c.html" class="read-link" aria-label="Read: The Most Active Startup Acquirers Of The Past 3 Years Aren’t Always Who You’d Expect">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-0c56943a644c40a0.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Why You Haven’t Raised Startup Funding (Yet)">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&auto=format&fit=crop&q=80" alt="Why You Haven’t Raised Startup Funding (Yet)" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="My AI Agent ‘Cofounder’ Conquered LinkedIn. Then It Got Banned" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-0c56943a644c40a0.html">Why You Haven’t Raised Startup Funding (Yet)</a></h3>
-          <p class="card-summary">The story of why you haven’t raised startup funding (yet) reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-20">March 20, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-70cbdb39ab0c5005.html">My AI Agent ‘Cofounder’ Conquered LinkedIn. Then It Got Banned</a></h3>
+          <p class="card-desc">What is unfolding in Agent Cofounder Conquered LinkedIn represents a convergence of technical capability, regulatory clarity, and market rea…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 20, 2026</span>
-          <a href="articles/rss-0c56943a644c40a0.html" class="read-link" aria-label="Read: Why You Haven’t Raised Startup Funding (Yet)">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-70cbdb39ab0c5005.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="My AI Agent ‘Cofounder’ Conquered LinkedIn. Then It Got Banned">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=900&auto=format&fit=crop&q=80" alt="My AI Agent ‘Cofounder’ Conquered LinkedIn. Then It Got Banned" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80" alt="‘Uncanny Valley’: Nvidia’s ‘Super Bowl of AI,’ Tesla Disappoints, and Meta’s VR Metaverse ‘Shutdown’" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-70cbdb39ab0c5005.html">My AI Agent ‘Cofounder’ Conquered LinkedIn. Then It Got Banned</a></h3>
-          <p class="card-summary">A clearer picture is emerging around my ai agent ‘cofounder’ conquered linkedin. then it got banned, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-19">March 19, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-e11edd9c7673c16c.html">‘Uncanny Valley’: Nvidia’s ‘Super Bowl of AI,’ Tesla Disappoints, and Meta’s VR Metaverse ‘Shutdown’</a></h3>
+          <p class="card-desc">Recent signals from the Uncanny Valley Nvidias Super ecosystem point to accelerating maturity. The transition from experimental deployments …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 20, 2026</span>
-          <a href="articles/rss-70cbdb39ab0c5005.html" class="read-link" aria-label="Read: My AI Agent ‘Cofounder’ Conquered LinkedIn. Then It Got Banned">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-e11edd9c7673c16c.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="‘Uncanny Valley’: Nvidia’s ‘Super Bowl of AI,’ Tesla Disappoints, and Meta’s VR Metaverse ‘Shutdown’">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1444653389962-8149286c578a?w=900&auto=format&fit=crop&q=80" alt="‘Uncanny Valley’: Nvidia’s ‘Super Bowl of AI,’ Tesla Disappoints, and Meta’s VR Metaverse ‘Shutdown’" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80" alt="Google Shakes Up Its Browser Agent Team Amid OpenClaw Craze" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-e11edd9c7673c16c.html">‘Uncanny Valley’: Nvidia’s ‘Super Bowl of AI,’ Tesla Disappoints, and Meta’s VR Metaverse ‘Shutdown’</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and ‘uncanny valley’: nvidia’s ‘super bowl of ai,’ tesla disappoints, and meta’s vr… is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-19">March 19, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-e6965f8d262b6152.html">Google Shakes Up Its Browser Agent Team Amid OpenClaw Craze</a></h3>
+          <p class="card-desc">The latest developments in Google Shakes Browser Agent signal a meaningful inflection point for the industry. Organisations that move quickl…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 19, 2026</span>
-          <a href="articles/rss-e11edd9c7673c16c.html" class="read-link" aria-label="Read: ‘Uncanny Valley’: Nvidia’s ‘Super Bowl of AI,’ Tesla Disappoints, and Meta’s VR Metaverse ‘Shutdown’">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-e6965f8d262b6152.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Google Shakes Up Its Browser Agent Team Amid OpenClaw Craze">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=80" alt="Google Shakes Up Its Browser Agent Team Amid OpenClaw Craze" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="A New Game Turns the H-1B Visa System Into a Surreal Simulation" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-e6965f8d262b6152.html">Google Shakes Up Its Browser Agent Team Amid OpenClaw Craze</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around google shakes up its browser agent team amid openclaw craze. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-19">March 19, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-97a4a781d88dce7f.html">A New Game Turns the H-1B Visa System Into a Surreal Simulation</a></h3>
+          <p class="card-desc">The latest developments in Game Turns Visa System signal a meaningful inflection point for the industry. Organisations that move quickly to …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 19, 2026</span>
-          <a href="articles/rss-e6965f8d262b6152.html" class="read-link" aria-label="Read: Google Shakes Up Its Browser Agent Team Amid OpenClaw Craze">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-97a4a781d88dce7f.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="A New Game Turns the H-1B Visa System Into a Surreal Simulation">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=900&auto=format&fit=crop&q=80" alt="A New Game Turns the H-1B Visa System Into a Surreal Simulation" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" alt="Don’t Just Talk About AI. Measure Business Outputs. Here’s How." class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-97a4a781d88dce7f.html">A New Game Turns the H-1B Visa System Into a Surreal Simulation</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around a new game turns the h-1b visa system into a surreal simulation. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-19">March 19, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-80762640291f65a1.html">Don’t Just Talk About AI. Measure Business Outputs. Here’s How.</a></h3>
+          <p class="card-desc">What is unfolding in Dont Just Talk Measure represents a convergence of technical capability, regulatory clarity, and market readiness that …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 19, 2026</span>
-          <a href="articles/rss-97a4a781d88dce7f.html" class="read-link" aria-label="Read: A New Game Turns the H-1B Visa System Into a Surreal Simulation">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-80762640291f65a1.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Don’t Just Talk About AI. Measure Business Outputs. Here’s How.">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&auto=format&fit=crop&q=80" alt="Don’t Just Talk About AI. Measure Business Outputs. Here’s How." loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80" alt="After Swarmer’s Soaring Debut, Here Are 12 Other Potential Defense Tech IPOs" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-80762640291f65a1.html">Don’t Just Talk About AI. Measure Business Outputs. Here’s How.</a></h3>
-          <p class="card-summary">A clearer picture is emerging around don’t just talk about ai. measure business outputs. here’s how, and it points to meaningful change ahead for the sector. Industry observers are paying close attention to how key players respond, given the competitive and commercial stakes involved. What makes this development particularly notable is its potential to shift established assumptions about performance, cost, and user value in ways that go beyond incremental improvement. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-18">March 18, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-98f9dc7d00a5892a.html">After Swarmer’s Soaring Debut, Here Are 12 Other Potential Defense Tech IPOs</a></h3>
+          <p class="card-desc">Recent signals from the Swarmers Soaring Debut Here ecosystem point to accelerating maturity. The transition from experimental deployments t…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 19, 2026</span>
-          <a href="articles/rss-80762640291f65a1.html" class="read-link" aria-label="Read: Don’t Just Talk About AI. Measure Business Outputs. Here’s How.">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-98f9dc7d00a5892a.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="After Swarmer’s Soaring Debut, Here Are 12 Other Potential Defense Tech IPOs">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&auto=format&fit=crop&q=80" alt="After Swarmer’s Soaring Debut, Here Are 12 Other Potential Defense Tech IPOs" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80" alt="The Crunchbase Tech Layoffs Tracker" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-98f9dc7d00a5892a.html">After Swarmer’s Soaring Debut, Here Are 12 Other Potential Defense Tech IPOs</a></h3>
-          <p class="card-summary">Technology rarely moves in isolation, and after swarmer’s soaring debut, here are 12 other potential defense tech ipos is no exception. It connects to broader trends around digital transformation, platform consolidation, and the growing demand for smarter, more connected experiences. For businesses weighing their next strategic move and consumers evaluating their options, this moment offers both clarity and important new questions worth exploring carefully. The decisions taken in response will have lasting effects on the organisations and markets involved. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-18">March 18, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-8ab27e9e20be8652.html">The Crunchbase Tech Layoffs Tracker</a></h3>
+          <p class="card-desc">The latest developments in Crunchbase Tech Layoffs Tracker signal a meaningful inflection point for the industry. Organisations that move qu…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 18, 2026</span>
-          <a href="articles/rss-98f9dc7d00a5892a.html" class="read-link" aria-label="Read: After Swarmer’s Soaring Debut, Here Are 12 Other Potential Defense Tech IPOs">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-8ab27e9e20be8652.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="The Crunchbase Tech Layoffs Tracker">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=900&auto=format&fit=crop&q=80" alt="The Crunchbase Tech Layoffs Tracker" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=800&q=80" alt="Exclusive: Stripe Alum Raises $9M For Meadow To Help People Plan Funerals Online" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-8ab27e9e20be8652.html">The Crunchbase Tech Layoffs Tracker</a></h3>
-          <p class="card-summary">The technology sector is witnessing significant movement around the crunchbase tech layoffs tracker. This shift carries meaningful implications for professionals, enterprises, and everyday users navigating a rapidly evolving digital environment. Understanding what drives this development — and the forces likely to shape its trajectory — helps businesses and individuals make more informed decisions about the platforms and tools they rely on. The pace of change in this area shows no signs of slowing, and the decisions being made now will set important precedents for the years ahead. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-18">March 18, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-d45c4be09f7f09a6.html">Exclusive: Stripe Alum Raises $9M For Meadow To Help People Plan Funerals Online</a></h3>
+          <p class="card-desc">The Exclusive Stripe Alum Raises space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metri…</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 18, 2026</span>
-          <a href="articles/rss-8ab27e9e20be8652.html" class="read-link" aria-label="Read: The Crunchbase Tech Layoffs Tracker">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-d45c4be09f7f09a6.html" class="card-read">Read brief</a>
         </div>
       </article>
       
-      <article class="card" aria-label="Exclusive: Stripe Alum Raises $9M For Meadow To Help People Plan Funerals Online">
+      <article class="card" itemscope itemtype="https://schema.org/Article">
         
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&auto=format&fit=crop&q=80" alt="Exclusive: Stripe Alum Raises $9M For Meadow To Help People Plan Funerals Online" loading="lazy" width="400" height="185">
-        </div>
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80" alt="PwC’s US IPO Lead On The 2026 Outlook, IPO Timing And The Secondary Boom" class="card-img" loading="lazy" itemprop="image">
         
         <div class="card-body">
-          <h3><a href="articles/rss-d45c4be09f7f09a6.html">Exclusive: Stripe Alum Raises $9M For Meadow To Help People Plan Funerals Online</a></h3>
-          <p class="card-summary">The story of stripe alum raises $9m for meadow to help people plan funerals online reflects a recurring pattern in modern technology: rapid change driven by competitive pressure and the relentless push for better performance. Those closest to the industry are watching closely, as the decisions being made now could define market dynamics for years ahead. The implications extend across multiple dimensions — from how organisations manage their infrastructure to how end users experience the products and services they depend on daily. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
+          <div class="card-meta">
+            <span class="card-cat card-cat-startupsbusiness">Startups & Business</span>
+            <time datetime="2026-03-18">March 18, 2026</time>
+          </div>
+          <h3 itemprop="headline"><a href="articles/rss-7cabe1ed53918f33.html">PwC’s US IPO Lead On The 2026 Outlook, IPO Timing And The Secondary Boom</a></h3>
+          <p class="card-desc">As PwCs Lead 2026 Outlook continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic …</p>
         </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 18, 2026</span>
-          <a href="articles/rss-d45c4be09f7f09a6.html" class="read-link" aria-label="Read: Exclusive: Stripe Alum Raises $9M For Meadow To Help People Plan Funerals Online">Read more</a>
-        </div>
-      </article>
-      
-      <article class="card" aria-label="PwC’s US IPO Lead On The 2026 Outlook, IPO Timing And The Secondary Boom">
-        
-        <div class="card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1444653389962-8149286c578a?w=900&auto=format&fit=crop&q=80" alt="PwC’s US IPO Lead On The 2026 Outlook, IPO Timing And The Secondary Boom" loading="lazy" width="400" height="185">
-        </div>
-        
-        <div class="card-body">
-          <h3><a href="articles/rss-7cabe1ed53918f33.html">PwC’s US IPO Lead On The 2026 Outlook, IPO Timing And The Secondary Boom</a></h3>
-          <p class="card-summary">Few technology developments have drawn as much attention recently as pwc’s us ipo lead on the 2026 outlook, ipo timing and the secondary boom. Analysts and practitioners are closely tracking the implications, which span strategy, infrastructure, and user experience in equal measure. The broader context — competitive pressures, shifting regulatory frameworks, and evolving consumer expectations — shapes how this will unfold in practice. Organisations that stay informed and move with agility will be best positioned to turn this moment into a genuine advantage. The startup and investment landscape remains dynamic and selective, reflecting continued confidence in technology as a driver of value alongside disciplined capital allocation.</p>
-        </div>
-        <div class="card-footer-clean card-footer">
-          <span class="card-date-tag source-tag">March 18, 2026</span>
-          <a href="articles/rss-7cabe1ed53918f33.html" class="read-link" aria-label="Read: PwC’s US IPO Lead On The 2026 Outlook, IPO Timing And The Secondary Boom">Read more</a>
+        <div class="card-footer">
+          <span class="card-date">4 min read</span>
+          <a href="articles/rss-7cabe1ed53918f33.html" class="card-read">Read brief</a>
         </div>
       </article>
       
     </div>
+
+    
   </div>
+
+  <!-- ===== AD SLOT ===== -->
+  <div class="section" style="padding-top: 0; padding-bottom: 0;">
+    <!-- AdSense slot -->
+  </div>
+
+  <!-- ===== EDITORIAL ARTICLES ===== -->
   
 
-
+  <!-- ===== BROWSE OTHER CATEGORIES ===== -->
+  <div class="section">
+    <div class="section-head">
+      <h2>More Coverage</h2>
+    </div>
+    <nav class="cat-tile-grid" aria-label="Browse other categories">
+      <a href="ai-news.html" class="cat-tile"><span class="cat-tile-icon">🤖</span><span class="cat-tile-name">AI News</span></a>
+      <a href="cybersecurity-updates.html" class="cat-tile"><span class="cat-tile-icon">🔐</span><span class="cat-tile-name">Cybersecurity</span></a>
+      <a href="enterprise-tech.html" class="cat-tile"><span class="cat-tile-icon">🏢</span><span class="cat-tile-name">Enterprise Tech</span></a>
+      <a href="mobile-gadgets.html" class="cat-tile"><span class="cat-tile-icon">📱</span><span class="cat-tile-name">Mobile &amp; Gadgets</span></a>
+      <a href="evs-automotive.html" class="cat-tile"><span class="cat-tile-icon">🚗</span><span class="cat-tile-name">EVs &amp; Automotive</span></a>
+      <a href="gaming.html" class="cat-tile"><span class="cat-tile-icon">🎮</span><span class="cat-tile-name">Gaming</span></a>
+      
+      <a href="broadcast-tech.html" class="cat-tile"><span class="cat-tile-icon">📡</span><span class="cat-tile-name">Broadcast Tech</span></a>
+      <a href="consumer-tech.html" class="cat-tile"><span class="cat-tile-icon">🛒</span><span class="cat-tile-name">Consumer Tech</span></a>
+    </nav>
+  </div>
 
 </main>
 
@@ -1167,7 +1203,7 @@
   <div class="footer-inner">
     <div class="footer-about">
       <span class="brand-name">The Tech Brief</span>
-      <p>An independent technology publication delivering original editorial analysis across the technology industry. Updated every six hours, 24/7.</p>
+      <p>An independent technology publication delivering original editorial analysis across AI, cybersecurity, mobile, enterprise tech, EVs, gaming, and more.</p>
     </div>
     <div class="footer-col">
       <h4>Categories</h4>
@@ -1180,7 +1216,6 @@
       <a href="gaming.html">Gaming</a>
       <a href="evs-automotive.html">EVs &amp; Automotive</a>
       <a href="startups-business.html">Startups &amp; Business</a>
-      <a href="how-to.html">How-To Guides</a>
     </div>
     <div class="footer-col">
       <h4>Site Info</h4>
@@ -1194,23 +1229,40 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; <span id="footer-year"></span> The Tech Brief &mdash; thetechbrief.net. All rights reserved.</span>
-    <span>Independent technology journalism. Trademarks belong to their respective owners.</span>
+    <span>&copy; <span id="footer-year"></span> The Tech Brief — thetechbrief.net. All rights reserved.</span>
+    <span>Independent technology journalism.</span>
   </div>
 </footer>
 
+<!-- ===== COOKIE BANNER ===== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <p>We use cookies to improve experience and analyse traffic. See our <a href="legal/privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn primary" id="cookieAccept">Accept</button>
+    <button class="btn secondary" id="cookieReject">Decline</button>
+  </div>
+</div>
+
 <script>
-  document.getElementById('footer-year').textContent = new Date().getFullYear();
-  (function(){
-    var c=localStorage.getItem('cookieConsent');
-    if(c){document.getElementById('cookieBanner') && document.getElementById('cookieBanner').remove();return;}
-  })();
-  (function(){
-    var t=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');
-    if(!t||!n)return;
-    t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
-  })();
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+(function(){
+  var t=document.querySelector('.nav-toggle'), n=document.getElementById('siteNav');
+  if(!t||!n) return;
+  t.addEventListener('click', function(){ var o=n.classList.toggle('open'); t.setAttribute('aria-expanded',o); });
+})();
+(function(){
+  var c=localStorage.getItem('cookieConsent');
+  if(c){ document.getElementById('cookieBanner').remove(); return; }
+  document.getElementById('cookieAccept').onclick=function(){
+    localStorage.setItem('cookieConsent','yes');
+    document.getElementById('cookieBanner').remove();
+    gtag('consent','update',{'analytics_storage':'granted','ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+  };
+  document.getElementById('cookieReject').onclick=function(){
+    localStorage.setItem('cookieConsent','no');
+    document.getElementById('cookieBanner').remove();
+  };
+})();
 </script>
-<script src="assets/cookie-consent.js"></script>
 </body>
 </html>
