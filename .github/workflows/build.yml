@@ -1,90 +1,110 @@
-name: 🤖 Generate + Build The Tech Brief
+name: 🤖 The Tech Brief V3 — Intelligence Build
 
 on:
   schedule:
-    # Deep-dive article generation (1 per category, 700-900 words): daily 05:00 UTC
+    # Deep-dive article generation: daily 05:00 UTC
     - cron: "0 5 * * *"
-    # Trending article generation (6 full articles, 400-500 words): daily 05:30 UTC
-    - cron: "30 5 * * *"
-    # RSS rebuild + summary rewrites: every 6 hours
+    # RSS rebuild + intelligence rewrites: every 6 hours
     - cron: "0 */6 * * *"
-
   push:
     branches: [ main ]
     paths-ignore:
       - "docs/**"
       - "**.md"
-
   workflow_dispatch:
     inputs:
       skip_generate:
-        description: "Skip generation (rebuild RSS only)"
+        description: "Skip deep-dive generation"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
+      content_engine:
+        description: "Run content engine plan (generates 10 AdSense articles)"
         required: false
         default: "false"
         type: choice
         options: ["false", "true"]
 
-# Allow the workflow to commit and push back to the repo
 permissions:
   contents: write
 
-env:
-  # Opt into Node.js 24 now (suppresses deprecation warnings)
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 # ════════════════════════════════════════════════════════════════════
-# JOB 1 — GENERATE DEEP-DIVE ARTICLES (Groq, 1 per category)
-# Runs only on: daily 05:00 UTC cron OR manual dispatch
+# JOB 1 — CONTENT ENGINE (manual / weekly)
+# Runs: manual dispatch with content_engine=true
+# Generates high-quality AdSense articles via intelligence pipeline
 # ════════════════════════════════════════════════════════════════════
 jobs:
+  content-engine:
+    name: Run AdSense Content Engine
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'workflow_dispatch' &&
+      github.event.inputs.content_engine == 'true'
+
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main, fetch-depth: 0, token: "${{ secrets.GITHUB_TOKEN }}" }
+
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11", cache: "pip" }
+
+      - name: Install dependencies
+        run: pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Run content engine (10 articles from plan)
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_DAILY_CAP: "15"
+        run: |
+          echo "=== Content Engine — AdSense Article Generator ==="
+          python scripts/run_content_engine.py plan --max 10 --priority 1
+
+      - name: Show site readiness report
+        run: python scripts/run_content_engine.py site-report
+
+      - name: Commit generated articles
+        run: |
+          git config user.name "Tech Brief Bot"
+          git config user.email "technodate3@gmail.com"
+          git add docs/articles/ data/generated_articles.json data/article_cache_v3.json data/content_engine.log
+          if git diff --cached --quiet; then
+            echo "No new articles generated."
+          else
+            git commit -m "✍️ AdSense content engine — $(date -u '+%Y-%m-%d') [skip ci]"
+            git push origin main
+          fi
+
+  # ════════════════════════════════════════════════════════════════════
+  # JOB 2 — GENERATE DEEP-DIVE ARTICLES (daily)
+  # ════════════════════════════════════════════════════════════════════
   generate:
     name: Generate AI Deep-Dive Articles
     runs-on: ubuntu-latest
-
     if: |
       (github.event_name == 'schedule' && github.event.schedule == '0 5 * * *') ||
-      (github.event_name == 'workflow_dispatch' && github.event.inputs.skip_generate != 'true')
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.skip_generate != 'true' && github.event.inputs.content_engine != 'true')
+    outputs:
+      ran: "true"
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
+        with: { ref: main, fetch-depth: 0, token: "${{ secrets.GITHUB_TOKEN }}" }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11", cache: "pip" }
+      - run: pip install --upgrade pip && pip install -r requirements.txt
+      - run: python -c "import nltk; nltk.download('punkt', quiet=True); nltk.download('punkt_tab', quiet=True)"
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-          # No pip cache here — avoids the requirements.txt lookup error
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Download NLTK data
-        run: |
-          python -c "
-          import nltk
-          nltk.download('punkt', quiet=True)
-          nltk.download('punkt_tab', quiet=True)
-          print('NLTK ready')
-          "
-
-      - name: Generate 9 deep-dive articles (1 per category)
+      - name: Generate 9 deep-dive articles
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-        run: |
-          echo "=== Deep-Dive Generator: $(date -u '+%Y-%m-%d %H:%M UTC') ==="
-          python scripts/generate_articles.py
+        run: python scripts/generate_articles.py
 
-      - name: Commit deep-dive articles
+      - name: Commit generated articles
         run: |
-          git config user.name  "Tech Brief Bot"
+          git config user.name "Tech Brief Bot"
           git config user.email "technodate3@gmail.com"
-          git add site/articles/ data/generated_articles.json site/assets/data/trending.txt || true
+          git add site/articles/ data/generated_articles.json site/assets/data/trending.txt 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No new deep-dive articles today."
           else
@@ -93,131 +113,50 @@ jobs:
           fi
 
   # ════════════════════════════════════════════════════════════════════
-  # JOB 2 — GENERATE TRENDING ARTICLES (6 full 400-500w articles)
-  # Runs only on: daily 05:30 UTC cron OR manual dispatch
-  # ════════════════════════════════════════════════════════════════════
-  generate-trending:
-    name: Generate Trending Articles
-    runs-on: ubuntu-latest
-
-    if: |
-      (github.event_name == 'schedule' && github.event.schedule == '30 5 * * *') ||
-      (github.event_name == 'workflow_dispatch' && github.event.inputs.skip_generate != 'true')
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install requests feedparser
-
-      - name: Generate 6 trending articles (400-500 words each)
-        env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-        run: |
-          echo "=== Trending Generator: $(date -u '+%Y-%m-%d %H:%M UTC') ==="
-          python scripts/generate_trending.py
-
-      - name: Commit trending JSON
-        run: |
-          git config user.name  "Tech Brief Bot"
-          git config user.email "technodate3@gmail.com"
-          git add site/assets/data/trending.json data/trending_cache.json || true
-          if git diff --cached --quiet; then
-            echo "Trending unchanged."
-          else
-            git commit -m "📰 Trending articles updated — $(date -u '+%Y-%m-%d') [skip ci]"
-            git push origin main
-          fi
-
-  # ════════════════════════════════════════════════════════════════════
-  # JOB 3 — BUILD SITE (RSS rewrites + editorial injection → docs/)
-  # Always runs; waits for both generation jobs if they ran
+  # JOB 3 — BUILD SITE (every 6h)
   # ════════════════════════════════════════════════════════════════════
   build:
-    name: Build & Deploy Site
+    name: Build & Deploy Site (V3 Intelligence)
     runs-on: ubuntu-latest
-    needs: [generate, generate-trending]
+    needs: [generate]
     if: always()
 
     steps:
-      - name: Checkout repository (latest — includes new articles)
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
+        with: { ref: main, fetch-depth: 0, token: "${{ secrets.GITHUB_TOKEN }}" }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11", cache: "pip" }
+      - run: pip install --upgrade pip && pip install -r requirements.txt
+      - run: python -c "import nltk; nltk.download('punkt', quiet=True); nltk.download('punkt_tab', quiet=True)"
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Download NLTK data
-        run: |
-          python -c "
-          import nltk
-          nltk.download('punkt', quiet=True)
-          nltk.download('punkt_tab', quiet=True)
-          print('NLTK ready')
-          "
-
-      - name: Build full site (RSS rewrites + editorial → docs/)
+      - name: Build site — V3 Intelligence Pipeline
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
-          echo "=== Site Builder: $(date -u '+%Y-%m-%d %H:%M UTC') ==="
+          echo "=== The Tech Brief V3 — Site Builder ==="
           python scripts/build.py
+          test -f docs/index.html  || (echo "ERROR: index.html missing"  && exit 1)
+          test -f docs/sitemap.xml || (echo "ERROR: sitemap.xml missing" && exit 1)
 
-      - name: Verify build output
+      - name: Commit site output
         run: |
-          test -f docs/index.html          || (echo "ERROR: docs/index.html missing"      && exit 1)
-          test -f docs/ai-news.html        || (echo "ERROR: docs/ai-news.html missing"    && exit 1)
-          test -f docs/enterprise-tech.html || (echo "ERROR: docs/enterprise-tech.html missing" && exit 1)
-          test -f docs/sitemap.xml         || (echo "ERROR: docs/sitemap.xml missing"     && exit 1)
-          echo "✓ All required output files present"
-          echo "Category pages : $(find docs -maxdepth 1 -name '*.html' | wc -l)"
-          echo "Article pages  : $(find docs/articles -name '*.html' 2>/dev/null | wc -l)"
-          echo "Sitemap URLs   : $(grep -c '<loc>' docs/sitemap.xml)"
-
-      - name: Commit site output + cache
-        run: |
-          git config user.name  "Tech Brief Bot"
+          git config user.name "Tech Brief Bot"
           git config user.email "technodate3@gmail.com"
-          git add docs/ data/article_cache.json || true
+          git add docs/ data/article_cache.json
           if git diff --cached --quiet; then
-            echo "No site changes to commit."
+            echo "No site changes."
           else
-            git commit -m "chore: site build — $(date -u '+%Y-%m-%d %H:%M UTC') [skip ci]"
+            git commit -m "chore: V3 site build — $(date -u '+%Y-%m-%d %H:%M UTC') [skip ci]"
             git push origin main
           fi
 
       - name: Build summary
         if: always()
         run: |
-          echo "╔══════════════════════════════════════════════════╗"
-          echo "  ✅  The Tech Brief — Build Complete"
+          echo "╔══════════════════════════════════════════════╗"
+          echo "  The Tech Brief V3 — Build Complete"
           echo "  $(date -u '+%Y-%m-%d %H:%M UTC')"
-          HTML=$(find docs -maxdepth 1 -name '*.html' 2>/dev/null | wc -l)
-          ARTS=$(find docs/articles -name '*.html' 2>/dev/null | wc -l)
-          URLS=$(grep -c '<loc>' docs/sitemap.xml 2>/dev/null || echo 0)
-          echo "  HTML pages    : $HTML"
-          echo "  Article pages : $ARTS"
-          echo "  Sitemap URLs  : $URLS"
-          echo "╚══════════════════════════════════════════════════╝"
+          echo "  HTML pages   : $(find docs -maxdepth 1 -name '*.html' | wc -l)"
+          echo "  Article pages: $(find docs/articles -name '*.html' 2>/dev/null | wc -l)"
+          echo "  Sitemap URLs : $(grep -c '<loc>' docs/sitemap.xml 2>/dev/null || echo 0)"
+          echo "╚══════════════════════════════════════════════╝"
