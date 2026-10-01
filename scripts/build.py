@@ -663,7 +663,7 @@ def build_internal_article_page(title, editorial_summary, category, cat_slug, ca
     </div>'''
 
     read_time = '4' if not intel_sections else '6'
-    _rel = re.search(r'\b(ai|photo|photos|photograph\w*|camera|image|images|creator|creators|youtube|upscal\w*|thumbnail|midjourney|photoshop|lightroom|canva|generative)\b', title, re.I)
+    _rel = re.search(r'\b(photo|photos|photograph\w*|camera|image|images|creator|creators|youtube|upscal\w*|thumbnail|midjourney|photoshop|lightroom|canva|generative)\b', title, re.I)
     promo_html = VISTA_CARD if _rel else ''
 
     return f"""<!doctype html>
