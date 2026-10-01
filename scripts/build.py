@@ -587,6 +587,12 @@ _CAT_ICONS = {
 }
 
 
+def _trim(text, n):
+    text = ' '.join(str(text).split())
+    if len(text) <= n: return text
+    return text[:n].rsplit(' ', 1)[0].rstrip(' ,;:-—') + '…'
+
+
 VISTA_CARD = '''<aside class="vista-promo" data-vista-promo="article_card" data-dest="https://vistaimagestudio.thestreamic.in/" aria-label="From our publisher">
       <span class="vista-promo-tag">From our publisher</span>
       <p class="vista-promo-text">Editing photos for your own site or channel? Try our AI background remover and upscaler. Free.</p>
@@ -608,13 +614,22 @@ def build_internal_article_page(title, editorial_summary, category, cat_slug, ca
     except: pub_date = date_str
     safe_title   = title.replace('"','&quot;').replace('<','&lt;').replace('>','&gt;')
     safe_summary = editorial_summary.replace('<','&lt;').replace('>','&gt;')
+    from html import escape as _esc
+    page_title   = _esc(_trim(title, 58), quote=True)
+    meta_desc    = _esc(((intel_data or {}).get('meta_description') or _trim(f"{title}: what it means and why it matters. Analysis from The Tech Brief's {category} coverage.", 155)), quote=True)
+    img_alt      = _esc(f"{category} news illustration", quote=True)
     schema = json.dumps({
         "@context":"https://schema.org","@type":"Article","headline":title,
         "image":image_url,"datePublished":date_str,"dateModified":date_str,
         "author":{"@type":"Organization","name":"The Tech Brief Editorial Team"},
         "publisher":{"@type":"Organization","name":"The Tech Brief","url":SITE_URL},
-        "mainEntityOfPage":canon_url,"articleSection":category
+        "mainEntityOfPage":canon_url,"articleSection":category,"inLanguage":"en",
+        "publisher":{"@type":"Organization","name":"The Tech Brief","url":SITE_URL,"logo":{"@type":"ImageObject","url":SITE_URL+"/assets/logo.png"}}
     }, indent=2)
+    crumbs = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":SITE_URL+"/"},
+        {"@type":"ListItem","position":2,"name":category,"item":f"{SITE_URL}/{cat_page}"},
+        {"@type":"ListItem","position":3,"name":title,"item":canon_url}]}, indent=2)
 
     # Build optional intelligence sections from intel_data
     intel_sections = ''
@@ -675,21 +690,28 @@ def build_internal_article_page(title, editorial_summary, category, cat_slug, ca
   <script>gtag('js',new Date());gtag('config','{GA_TAG}');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>{safe_title} | The Tech Brief</title>
-  <meta name="description" content="{(intel_data or {}).get('meta_description') or safe_summary[:155]}">
-  <meta name="robots" content="index, follow">
+  <title>{page_title} | The Tech Brief</title>
+  <meta name="description" content="{meta_desc}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="{canon_url}">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="The Tech Brief">
   <meta property="og:title" content="{safe_title}">
-  <meta property="og:description" content="{safe_summary[:155]}">
+  <meta property="og:description" content="{meta_desc}">
+  <meta property="article:published_time" content="{date_str}">
+  <meta property="article:section" content="{category}">
+  <meta property="og:image:alt" content="{img_alt}">
   <meta property="og:url" content="{canon_url}">
   <meta property="og:image" content="{image_url}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{safe_title}">
+  <meta name="twitter:description" content="{meta_desc}">
   <meta name="twitter:image" content="{image_url}">
   <script type="application/ld+json">
 {schema}
+  </script>
+  <script type="application/ld+json">
+{crumbs}
   </script>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -744,7 +766,7 @@ def build_internal_article_page(title, editorial_summary, category, cat_slug, ca
 
 <main id="main-content">
   <div class="article-layout" style="padding:0 24px 60px;">
-    <img src="{image_url}" alt="{safe_title}" style="width:100%;max-height:440px;object-fit:cover;border-radius:var(--radius);margin:32px 0;display:block;" loading="eager">
+    <img src="{image_url}" alt="{img_alt}" width="1200" height="440" style="width:100%;max-height:440px;object-fit:cover;border-radius:var(--radius);margin:32px 0;display:block;" loading="eager">
 
     <div class="article-body">
       <p style="font-size:18px;line-height:1.75;color:var(--ink-2);font-weight:300;margin-bottom:28px;">{safe_summary}</p>
@@ -757,6 +779,7 @@ def build_internal_article_page(title, editorial_summary, category, cat_slug, ca
       <a href="../about.html" style="color:var(--accent);margin-left:4px;">About our editorial process →</a>
     </div>
 
+    <!--RELATED-->
     <div style="border-top:2px solid var(--border);margin-top:40px;padding-top:24px;">
       <h3 style="font-family:var(--font-serif);font-size:20px;margin-bottom:16px;">Continue Reading</h3>
       <div style="display:flex;flex-direction:column;gap:0;">
@@ -931,6 +954,15 @@ def build_category(category: str, urls: list, editorial_articles: list, cache: d
             'cat_slug': cat_slug,
             'read_time': f"{5 if intel_data else 4} min read",
         })
+
+    for i, c in enumerate(cards):
+        rel = [cards[(i + k) % len(cards)] for k in (1, 2, 3) if len(cards) > 1 and cards[(i + k) % len(cards)] is not c][:3]
+        if not rel: continue
+        from html import escape as _e
+        block = '<div style="margin-top:40px;"><h2 style="font-family:var(--font-serif);font-size:20px;margin-bottom:12px;">Related ' + _e(category) + ' coverage</h2><ul style="padding-left:20px;line-height:1.9;">' + ''.join(f'<li><a href="../{r["url"]}">{_e(r["title"])}</a></li>' for r in rel) + '</ul></div>'
+        p = os.path.join(RSS_ARTICLES_OUT, f'{c["url"].split("/")[-1]}')
+        with open(p, 'r', encoding='utf-8') as fh: page = fh.read()
+        with open(p, 'w', encoding='utf-8') as fh: fh.write(page.replace('<!--RELATED-->', block))
 
     cat_editorial = [a for a in editorial_articles if a.get('cat_slug') == cat_slug][:3]
     cat_icon = _CAT_ICONS.get(cat_slug, '📰')
