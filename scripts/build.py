@@ -720,6 +720,7 @@ def build_internal_article_page(title, editorial_summary, category, cat_slug, ca
     <a href="../evs-automotive.html">EVs</a>
     <a href="../gaming.html">Gaming</a>
     <a href="../startups-business.html">Startups</a>
+    <a data-vista-promo="nav" data-dest="https://vistaimage.thestreamic.in/" href="https://vistaimage.thestreamic.in/?utm_source=thetechbrief&amp;utm_medium=owned_media&amp;utm_campaign=vista_launch&amp;utm_content=nav&amp;utm_term=A" rel="noopener">Photo Editor</a>
     <a href="../about.html" class="nav-cta">About</a>
   </nav>
 </header>
@@ -1010,6 +1011,8 @@ def build_sitemap(editorial_articles: list, rss_slugs: list):
         ('articles/how-to-factory-reset-android.html','2025-03-01'),
         ('articles/how-to-factory-reset-iphone.html','2025-03-01'),
         ('articles/how-to-upgrade-windows.html','2025-03-01'),
+        ('articles/how-to-remove-photo-background.html','2026-10-01'),
+        ('articles/how-to-upscale-photo.html','2026-10-01'),
     ]
 
     def u(loc, lastmod, freq, pri):
@@ -1028,7 +1031,7 @@ def build_sitemap(editorial_articles: list, rss_slugs: list):
     if rss_slugs:
         lines.append('')
         for slug in rss_slugs:
-            lines.append(u(f'{SITE_URL}/articles/{slug}.html', today, 'monthly', '0.65'))
+            lines.append(u(f'{SITE_URL}/articles/{slug}.html', today, 'monthly', '0.65').replace(f'    <lastmod>{today}</lastmod>\n', ''))
     lines += ['', '</urlset>']
     with open(os.path.join(SITE_OUT, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
