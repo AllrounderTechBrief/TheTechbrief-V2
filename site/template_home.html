@@ -57,30 +57,6 @@
 <a href="#main" class="skip-link">Skip to content</a>
 
 <!-- ===== TICKER ===== -->
-<div class="ticker-bar" aria-hidden="true">
-  <span class="ticker-label">LIVE</span>
-  <div class="ticker-track-wrap">
-    <div class="ticker-track" id="tickerTrack">
-      <span class="ticker-item"><span>AI</span>OpenAI releases GPT-5 with multimodal reasoning improvements</span>
-      <span class="ticker-item"><span>CYBER</span>Critical CVE patched in enterprise VPN products — update recommended</span>
-      <span class="ticker-item"><span>EVs</span>Tesla Cybertruck range update pushes EPA estimate to 380 miles</span>
-      <span class="ticker-item"><span>ENTERPRISE</span>Microsoft Azure announces 40% price reduction on GPU compute</span>
-      <span class="ticker-item"><span>MOBILE</span>Samsung Galaxy S26 leaks: under-display camera confirmed</span>
-      <span class="ticker-item"><span>STARTUP</span>AI infrastructure funding hits $18B in Q1 2026</span>
-      <span class="ticker-item"><span>GAMING</span>Nintendo Switch 2 pre-orders exceed 4M units globally</span>
-      <span class="ticker-item"><span>BROADCAST</span>8K HDR live streaming achieves commercial viability in Asia-Pacific</span>
-      <!-- Duplicate for seamless loop -->
-      <span class="ticker-item"><span>AI</span>OpenAI releases GPT-5 with multimodal reasoning improvements</span>
-      <span class="ticker-item"><span>CYBER</span>Critical CVE patched in enterprise VPN products — update recommended</span>
-      <span class="ticker-item"><span>EVs</span>Tesla Cybertruck range update pushes EPA estimate to 380 miles</span>
-      <span class="ticker-item"><span>ENTERPRISE</span>Microsoft Azure announces 40% price reduction on GPU compute</span>
-      <span class="ticker-item"><span>MOBILE</span>Samsung Galaxy S26 leaks: under-display camera confirmed</span>
-      <span class="ticker-item"><span>STARTUP</span>AI infrastructure funding hits $18B in Q1 2026</span>
-      <span class="ticker-item"><span>GAMING</span>Nintendo Switch 2 pre-orders exceed 4M units globally</span>
-      <span class="ticker-item"><span>BROADCAST</span>8K HDR live streaming achieves commercial viability in Asia-Pacific</span>
-    </div>
-  </div>
-</div>
 
 <!-- ===== HEADER ===== -->
 <header class="site-header" role="banner">
@@ -140,6 +116,11 @@
 
 <!-- ===== MAIN ===== -->
 <main id="main">
+  <aside class="vista-promo" data-vista-promo="hero" data-dest="https://vistaimage.thestreamic.in/" aria-label="From our publisher">
+  <span class="vista-promo-tag">From our publisher</span>
+  <p class="vista-promo-text">Vista Image Studio: remove backgrounds, upscale and optimize photos in your browser. Free to try.</p>
+  <a class="vista-promo-btn" href="https://vistaimage.thestreamic.in/?utm_source=thetechbrief&amp;utm_medium=owned_media&amp;utm_campaign=vista_launch&amp;utm_content=hero&amp;utm_term=A" rel="noopener">Try Vista Image Studio</a>
+</aside>
 
   <!-- AD SLOT — Leaderboard -->
   <div class="section" style="padding-bottom: 0; padding-top: 28px;">
@@ -504,6 +485,7 @@
       <a href="legal/privacy.html">Privacy Policy</a>
       <a href="legal/terms.html">Terms of Use</a>
       <a href="legal/disclaimer.html">Disclaimer</a>
+      <a data-vista-promo="footer" data-dest="https://vistaimage.thestreamic.in/" href="https://vistaimage.thestreamic.in/?utm_source=thetechbrief&amp;utm_medium=owned_media&amp;utm_campaign=vista_launch&amp;utm_content=footer&amp;utm_term=A" rel="noopener">Vista Image Studio (our free AI photo editor)</a>
       <a href="legal/copyright.html">Copyright</a>
       <a href="legal/affiliate.html">Affiliate Disclosure</a>
     </div>
@@ -553,5 +535,6 @@ document.getElementById('footer-year').textContent = new Date().getFullYear();
 })();
 </script>
 <script src="assets/trending-loader.js" defer></script>
+<script src="assets/vista-promo.js" defer></script>
 </body>
 </html>

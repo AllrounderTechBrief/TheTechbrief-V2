@@ -587,6 +587,13 @@ _CAT_ICONS = {
 }
 
 
+VISTA_CARD = '''<aside class="vista-promo" data-vista-promo="article_card" data-dest="https://vistaimagestudio.thestreamic.in/" aria-label="From our publisher">
+      <span class="vista-promo-tag">From our publisher</span>
+      <p class="vista-promo-text">Editing photos for your own site or channel? Try our AI background remover and upscaler. Free.</p>
+      <a class="vista-promo-btn" href="https://vistaimagestudio.thestreamic.in/?utm_source=thetechbrief&amp;utm_medium=owned_media&amp;utm_campaign=vista_launch&amp;utm_content=article_card&amp;utm_term=A" rel="noopener">Try Vista Image Studio</a>
+    </aside>'''
+
+
 def build_internal_article_page(title, editorial_summary, category, cat_slug, cat_page, date_str, slug, intel_data=None):
     """
     V3: Builds a rich article page. If intel_data is present (from intelligence_rewrite),
@@ -656,6 +663,8 @@ def build_internal_article_page(title, editorial_summary, category, cat_slug, ca
     </div>'''
 
     read_time = '4' if not intel_sections else '6'
+    _rel = re.search(r'\b(photo|photos|photograph\w*|camera|image|images|creator|creators|youtube|upscal\w*|thumbnail|midjourney|photoshop|lightroom|canva|generative)\b', title, re.I)
+    promo_html = VISTA_CARD if _rel else ''
 
     return f"""<!doctype html>
 <html lang="en">
@@ -741,6 +750,7 @@ def build_internal_article_page(title, editorial_summary, category, cat_slug, ca
       {intel_sections}
     </div>
 
+    {promo_html}
     <div style="margin-top:32px;padding:14px 20px;background:var(--surface-2);border-radius:var(--radius);font-size:13px;color:var(--ink-3);">
       <strong style="color:var(--ink);">Editorial Note:</strong> This analysis is independently produced by The Tech Brief editorial team.
       <a href="../about.html" style="color:var(--accent);margin-left:4px;">About our editorial process →</a>
@@ -780,6 +790,7 @@ def build_internal_article_page(title, editorial_summary, category, cat_slug, ca
       <a href="../legal/privacy.html">Privacy Policy</a>
       <a href="../legal/terms.html">Terms of Use</a>
       <a href="../legal/disclaimer.html">Disclaimer</a>
+      <a data-vista-promo="footer" data-dest="https://vistaimage.thestreamic.in/" href="https://vistaimage.thestreamic.in/?utm_source=thetechbrief&amp;utm_medium=owned_media&amp;utm_campaign=vista_launch&amp;utm_content=footer&amp;utm_term=A" rel="noopener">Vista Image Studio (our free AI photo editor)</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -815,6 +826,7 @@ def build_internal_article_page(title, editorial_summary, category, cat_slug, ca
   }};
 }})();
 </script>
+<script src="../assets/vista-promo.js" defer></script>
 </body>
 </html>"""
 
