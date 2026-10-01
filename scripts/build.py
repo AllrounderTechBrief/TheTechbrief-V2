@@ -720,7 +720,7 @@ def build_internal_article_page(title, editorial_summary, category, cat_slug, ca
     <a href="../evs-automotive.html">EVs</a>
     <a href="../gaming.html">Gaming</a>
     <a href="../startups-business.html">Startups</a>
-    <a data-vista-promo="nav" data-dest="https://vistaimage.thestreamic.in/" href="https://vistaimage.thestreamic.in/?utm_source=thetechbrief&amp;utm_medium=owned_media&amp;utm_campaign=vista_launch&amp;utm_content=nav&amp;utm_term=A" rel="noopener">Photo Editor</a>
+    <a data-vista-promo="nav" data-dest="https://vistaimage.thestreamic.in/" href="https://vistaimage.thestreamic.in/?utm_source=thetechbrief&amp;utm_medium=owned_media&amp;utm_campaign=vista_launch&amp;utm_content=nav&amp;utm_term=A" rel="noopener">Our Tools ↗</a>
     <a href="../about.html" class="nav-cta">About</a>
   </nav>
 </header>
