@@ -587,10 +587,14 @@ _CAT_ICONS = {
 }
 
 
-VISTA_CARD = '''<aside class="vista-promo" data-vista-promo="article_card" data-dest="https://vistaimagestudio.thestreamic.in/" aria-label="From our publisher">
-      <span class="vista-promo-tag">From our publisher</span>
-      <p class="vista-promo-text">Editing photos for your own site or channel? Try our AI background remover and upscaler. Free.</p>
-      <a class="vista-promo-btn" href="https://vistaimagestudio.thestreamic.in/?utm_source=thetechbrief&amp;utm_medium=owned_media&amp;utm_campaign=vista_launch&amp;utm_content=article_card&amp;utm_term=A" rel="noopener">Try Vista Image Studio</a>
+VISTA_CARD = '''<aside class="vad vad-inline" data-vista-promo="article_card" data-dest="https://vistaimage.thestreamic.in/" aria-label="Sponsored: Vista Image Studio">
+      <div class="vad-copy">
+        <span class="vad-tag"><b>FREE</b> From our publisher</span>
+        <h3>Need a cleaner photo? <span>Fix it in 3 seconds.</span></h3>
+        <p>Vista Image Studio removes backgrounds and upscales to 4K with AI. No signup, runs in your browser.</p>
+        <a class="vad-cta" href="https://vistaimage.thestreamic.in/?utm_source=thetechbrief&amp;utm_medium=owned_media&amp;utm_campaign=vista_launch&amp;utm_content=article_card&amp;utm_term=A" rel="noopener">Try Vista Image Studio Free <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="vad-disc">Our own product — disclosed as the publisher.</div>
+      </div>
     </aside>'''
 
 

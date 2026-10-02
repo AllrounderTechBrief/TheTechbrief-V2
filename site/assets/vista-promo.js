@@ -10,4 +10,15 @@ function view(){ev('vista_promo_view',{placement:p,variant:v})}
 if('IntersectionObserver' in window){var o=new IntersectionObserver(function(e){if(e[0].isIntersecting){view();o.disconnect()}},{threshold:.5});o.observe(el)}
 if(a)a.addEventListener('click',function(){ev('vista_promo_click',{utm_content:p,placement:p,variant:v,destination:a.getAttribute('data-dest')||el.getAttribute('data-dest')})});
 });
+
+document.querySelectorAll('[data-vad-demo]').forEach(function(d){var r=d.querySelector('input');r.addEventListener('input',function(){d.style.setProperty('--pos',r.value+'%')});var t=0,n=0;(function a(){if(d.dataset.used)return;n=(n+.03)%6.283;var x=50+Math.sin(n)*18;d.style.setProperty('--pos',x+'%');r.value=x;t=requestAnimationFrame(a)})();['pointerdown','touchstart','keydown'].forEach(function(e){r.addEventListener(e,function(){d.dataset.used=1;cancelAnimationFrame(t)},{once:true})})});
+(function(){var K='vad_bar_x';try{if(Date.now()-(+localStorage.getItem(K)||0)<864e5)return}catch(e){}
+if(document.querySelector('.vad-bar'))return;
+var u='https://vistaimage.thestreamic.in/?utm_source=thetechbrief&utm_medium=owned_media&utm_campaign=vista_launch&utm_content=sticky_bar&utm_term='+v;
+var b=document.createElement('div');b.className='vad-bar';b.setAttribute('data-vista-promo','sticky_bar');b.setAttribute('data-dest','https://vistaimage.thestreamic.in/');b.setAttribute('role','complementary');
+b.innerHTML='<div class="vad-bar-ico">✨</div><div class="vad-bar-txt"><strong>Remove backgrounds in 3 sec. Free.</strong><span>Vista Image Studio, our AI photo editor</span></div><a class="vad-cta" rel="noopener" href="'+u+'">Try Free</a><button type="button" aria-label="Close">×</button>';
+var shown=false;function show(){if(shown)return;shown=true;document.body.appendChild(b);requestAnimationFrame(function(){requestAnimationFrame(function(){b.classList.add('show')})});ev('vista_promo_view',{placement:'sticky_bar',variant:v})}
+b.querySelector('button').addEventListener('click',function(){b.classList.remove('show');try{localStorage.setItem(K,Date.now())}catch(e){}});
+b.querySelector('a').addEventListener('click',function(){ev('vista_promo_click',{utm_content:'sticky_bar',placement:'sticky_bar',variant:v,destination:'https://vistaimage.thestreamic.in/'})});
+setTimeout(show,10000);window.addEventListener('scroll',function(){if(scrollY>innerHeight*.5)show()},{passive:true});})();
 })();
