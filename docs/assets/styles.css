@@ -816,3 +816,49 @@ main { max-width: var(--max-w); margin: 0 auto; padding: 0 24px 48px; }
 [data-vista-promo="hero"] .vista-promo-text{color:#fff}
 [data-vista-promo="hero"] .vista-chips li{background:rgba(255,255,255,.1);color:#fff}
 @media(max-width:600px){[data-vista-promo="hero"].vista-promo{min-height:200px}}
+
+/* ── Vista Image Studio — high-impact ad units ── */
+.vad{--vb:#1A56DB;--vc:#22D3EE;--vp:#8B5CF6;position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;box-sizing:border-box;max-width:1100px;min-height:330px;margin:24px auto;padding:34px 38px;border-radius:18px;overflow:hidden;color:#fff;background:radial-gradient(900px 400px at 85% 10%,rgba(139,92,246,.45),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(34,211,238,.28),transparent 60%),#0B0B16;border:1px solid rgba(255,255,255,.1);box-shadow:0 18px 50px rgba(26,86,219,.28)}
+.vad::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.07) 50%,transparent 60%);transform:translateX(-100%);animation:vadShine 6s ease-in-out infinite;pointer-events:none}
+@keyframes vadShine{0%,60%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.vad-copy{position:relative;z-index:1}
+.vad-tag{display:inline-flex;gap:8px;align-items:center;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.vad-tag b{background:#FACC15;color:#111;padding:2px 8px;border-radius:4px;letter-spacing:.6px}
+.vad h2,.vad h3{margin:12px 0 10px;font-size:clamp(26px,3.6vw,40px);line-height:1.08;font-weight:800;letter-spacing:-.02em;color:#fff;border:0;padding:0}
+.vad h2 span,.vad h3 span{background:linear-gradient(90deg,var(--vc),#A78BFA);-webkit-background-clip:text;background-clip:text;color:transparent}
+.vad p{margin:0 0 16px;font-size:16px;line-height:1.55;color:rgba(255,255,255,.82);max-width:46ch}
+.vad-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+.vad-chips li{font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);color:#fff}
+.vad-cta{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:12px;font-size:16px;font-weight:800;color:#fff!important;text-decoration:none!important;background:linear-gradient(135deg,#2563EB,#7C3AED);box-shadow:0 8px 26px rgba(37,99,235,.55);animation:vadPulse 2.4s ease-in-out infinite;transition:transform .15s}
+.vad-cta:hover{transform:translateY(-2px) scale(1.03)}
+.vad-cta svg{transition:transform .15s}.vad-cta:hover svg{transform:translateX(4px)}
+@keyframes vadPulse{0%,100%{box-shadow:0 8px 26px rgba(37,99,235,.55),0 0 0 0 rgba(124,58,237,.5)}50%{box-shadow:0 8px 26px rgba(37,99,235,.55),0 0 0 12px rgba(124,58,237,0)}}
+.vad-trust{margin-top:12px;font-size:12px;color:rgba(255,255,255,.6)}
+.vad-trust span+span::before{content:"·";margin:0 8px}
+.vad-disc{margin-top:10px;font-size:10.5px;color:rgba(255,255,255,.4)}
+.vad-demo{position:relative;z-index:1;aspect-ratio:4/3;border-radius:14px;overflow:hidden;box-shadow:0 10px 34px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.15);user-select:none;touch-action:pan-y}
+.vad-demo svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.vad-after{clip-path:inset(0 0 0 var(--pos,50%))}
+.vad-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:#fff;transform:translateX(-50%);pointer-events:none}
+.vad-handle::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:#fff;color:#1A56DB;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.vad-demo input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.vad-lbl{position:absolute;top:10px;padding:3px 9px;border-radius:5px;font-size:11px;font-weight:800;letter-spacing:.8px;background:rgba(0,0,0,.6);color:#fff;pointer-events:none}
+.vad-lbl.l{left:10px}.vad-lbl.r{right:10px;background:#16A34A}
+.vad-inline{grid-template-columns:1fr;min-height:0;padding:22px 24px;margin:32px 0}
+.vad-inline .vad-demo{display:none}.vad-inline h3{font-size:24px}
+.vad-feed{margin:36px auto}
+@media(max-width:760px){.vad{grid-template-columns:1fr;padding:24px 20px;margin:16px;min-height:0}.vad-demo{order:-1;aspect-ratio:16/10}.vad-cta{width:100%;justify-content:center;box-sizing:border-box}.vad-inline{margin:24px 0}}
+.vad-bar{position:fixed;left:50%;bottom:16px;z-index:9990;transform:translate(-50%,160%);width:min(680px,calc(100% - 24px));box-sizing:border-box;display:flex;align-items:center;gap:14px;padding:12px 14px 12px 16px;border-radius:14px;background:#0B0B16;color:#fff;border:1px solid rgba(255,255,255,.18);box-shadow:0 14px 40px rgba(0,0,0,.5);transition:transform .5s cubic-bezier(.2,.9,.3,1.2)}
+.vad-bar.show{transform:translate(-50%,0)}
+.vad-bar-ico{flex:0 0 38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#2563EB,#7C3AED);display:flex;align-items:center;justify-content:center;font-size:20px}
+.vad-bar-txt{flex:1;min-width:0;font-size:13.5px;line-height:1.35}.vad-bar-txt strong{display:block;font-size:14.5px}
+.vad-bar a.vad-cta{padding:10px 16px;font-size:14px;border-radius:9px;animation:none;white-space:nowrap}
+.vad-bar button{background:none;border:0;color:rgba(255,255,255,.5);font-size:22px;line-height:1;cursor:pointer;padding:2px 4px}
+@media(max-width:480px){.vad-bar{bottom:0;border-radius:14px 14px 0 0;width:100%}.vad-bar-txt span{display:none}}
+@media(prefers-reduced-motion:reduce){.vad::before,.vad-cta{animation:none}.vad-bar{transition:none}}
+.vad:not(.vad-inline){grid-template-columns:.9fr 1.3fr}
+.vad-screen{position:relative;z-index:1;border-radius:12px;overflow:hidden;background:#0d0d14;border:1px solid rgba(255,255,255,.18);box-shadow:0 14px 40px rgba(0,0,0,.55);transform:perspective(1400px) rotateY(-3deg)}
+.vad-screen video{display:block;width:100%;height:100%;object-fit:cover}
+.vad-live{position:absolute;left:10px;top:10px;padding:3px 9px;border-radius:5px;font-size:10px;font-weight:800;letter-spacing:.8px;background:rgba(0,0,0,.65);color:#fff}
+.vad-live::first-letter{color:#EF4444}
+@media(max-width:760px){.vad:not(.vad-inline){grid-template-columns:1fr}.vad-screen{order:-1;transform:none}}
