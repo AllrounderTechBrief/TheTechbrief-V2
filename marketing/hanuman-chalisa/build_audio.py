@@ -10,7 +10,7 @@ def clean(src,dst):
     subprocess.run(['ffmpeg','-v','error','-y','-i',src,'-af',CHAIN,'-ar',str(SR),'-ac','1',dst],check=True)
 clean(f'{U}/4d666cc4-Starting.m4a',f'{W}/start_clean.wav'); clean(f'{U}/a23d1e32-Hanuman_chalisa_full_.m4a',f'{W}/full_clean.wav')
 vs,_=librosa.load(f'{W}/start_clean.wav',sr=SR,mono=True); vf,_=librosa.load(f'{W}/full_clean.wav',sr=SR,mono=True)
-CUT=18.95
+CUT=0.0
 vf=vf[int(CUT*SR):]
 def fade(x,a=0.015,b=0.03):
     x=x.copy();n=int(a*SR);m=int(b*SR);x[:n]*=np.linspace(0,1,n);x[-m:]*=np.linspace(1,0,m);return x
@@ -23,7 +23,7 @@ N=int(tot*SR)
 voc=np.zeros(N);voc[int(T_START*SR):int(T_START*SR)+len(vs)]+=vs;voc[int(T_FULL*SR):int(T_FULL*SR)+len(vf)]+=vf
 def mt(tfull): return tfull-CUT+T_FULL
 # ---------- tempo map ----------
-L=np.load(f'{W}/lines.npy'); full_end=249.15
+L=np.load(f'{W}/lines0.npy'); full_end=249.15
 lines_m=[mt(x) for x in L]+[mt(full_end)]
 # opening line starts from the slow take
 y,_=librosa.load(f'{U}/4d666cc4-Starting.m4a',sr=16000,mono=True)
@@ -35,11 +35,7 @@ open_starts=[T_START+x for x in open_starts]
 # ---------- intensity ----------
 Ik={1:.30,2:.32,3:.55,4:.40,5:.40,6:.42,7:.45,8:.48,9:.62,10:.68,11:.70,12:.65,13:.45,14:.42,15:.42,16:.45,17:.48,18:.78,19:.85,20:.82,
     21:.90,22:.92,23:.98,24:.98,25:.92,26:.82,27:.80,28:.78,29:.80,30:.78,31:.55,32:.50,33:.48,34:.45,35:.42,36:.45,37:1.0,38:.60,39:.35,40:.22}
-line_I=[Ik[i//2+1] for i in range(80)]+[.12,.12]
-def intensity_at(t):
-    for i in range(82):
-        if lines_m[i]<=t<lines_m[i+1]: return line_I[i]
-    return 0.12 if t<T_FULL else 0.0
+line_I=[(Ik[min(40,int(x/240*40)+1)] if x<240 else .12) for x in L]
 # ---------- instruments ----------
 def tt(d): return np.arange(int(d*SR))/SR
 def lp(x,f,o=2): return sosfilt(butter(o,f,'low',fs=SR,output='sos'),x)
@@ -101,13 +97,13 @@ for a,b in zip(open_starts[:-1],open_starts[1:]):
     nb=max(4,int(round((b-a)/.857)))
     bar(a,b,.2,beats=nb)
 # main
-for i in range(82):
+for i in range(len(L)):
     a,b=lines_m[i],lines_m[i+1]
     bar(a,b,line_I[i],beats=6)
 # bells
-def kk(k): return lines_m[2*(k-1)]
+def kk(k): return mt((k-1)/40*240)
 bells=[(0.5,523,.5),(3.8,392,.25),(7.0,523,.15),(61.6,523,.45),(63.0,392,.25),(kk(9),523,.3),(kk(13),392,.2),(kk(18),523,.35),(kk(21),523,.4),(kk(26),392,.35),(kk(31),392,.25),
-       (kk(37),523,.6),(kk(37)+.45,659,.35),(kk(37)+.9,784,.3),(kk(38),392,.2),(lines_m[80],392,.3),(tot-13.0,523,.55),(tot-10.0,392,.3)]
+       (kk(37),523,.6),(kk(37)+.45,659,.35),(kk(37)+.9,784,.3),(kk(38),392,.2),(mt(240),392,.3),(tot-13.0,523,.55),(tot-10.0,392,.3)]
 for t,f,a in bells: put(t,bell(f),a,.35 if f==523 else .65,.65 if f==523 else .35)
 # ambience bed
 n=N;amb=lp(noise(n),900,2)+0.6*lp(noise(n),300,2)

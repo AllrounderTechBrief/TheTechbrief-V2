@@ -1,15 +1,16 @@
 import subprocess,numpy as np
 def run(c): subprocess.run(c,shell=True,check=True)
-TOT=308.158;FPS=30
-L=np.load('lines.npy');CUT=18.95;TF=64.0
-def kk(k): return float(L[2*(k-1)]-CUT+TF)
+import subprocess as _sp
+TOT=float(_sp.check_output('ffprobe -v error -show_entries format=duration -of csv=p=0 master.wav',shell=True));FPS=30;END=64.0+249.15
+CUT=0.0;TF=64.0
+def kk(k): return (k-1)/40*240-CUT+TF
 def prep16(src,out):
     run(f'ffmpeg -v error -y -i {src} -vf "crop=\'min(iw,ih*16/9)\':\'min(ih,iw*9/16)\',scale=3840:2160:flags=lanczos,unsharp=5:5:0.6" -frames:v 1 {out}')
 def portrait(src,out,h=1980):
     run(f'''ffmpeg -v error -y -i {src} -filter_complex "[0:v]split[a][b];[a]scale=3840:-2:flags=lanczos,crop=3840:2160,gblur=sigma=60,eq=brightness=-0.12:saturation=1.15[bg];[b]scale=-2:{h}:flags=lanczos,unsharp=5:5:0.7[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2" -frames:v 1 {out}''')
 prep16('3.jpg','s3.png');prep16('4.jpg','s4.png');prep16('5.webp','s5.png');prep16('8.jpg','s8.png')
 portrait('6.jpg','s6.png');portrait('7.webp','s7.png')
-B=[0,34,64,kk(5),kk(9),kk(13),kk(15),kk(18),kk(21),kk(26),kk(31),kk(34),kk(37),kk(38),294.0]
+B=[0,34,64,kk(5),kk(9),kk(13),kk(15),kk(18),kk(21),kk(26),kk(31),kk(34),kk(37),kk(38),END]
 # (img,z0,z1,x0,y0,x1,y1)
 S=[('s7',1.00,1.10,.50,.50,.50,.42),   #0 intro dawn
    ('s7',1.55,1.35,.51,.31,.51,.33),   #1 face closeup (slow doha)
@@ -47,8 +48,8 @@ F.append(f'[{n}:v]format=gbrp,trim=0:{TOT},setpts=PTS-STARTPTS[pt];[bl][pt]blend
 ti=n+1
 F.append(f'[{ti}:v]format=rgba,fade=t=in:st=0.8:d=1.2:alpha=1,fade=t=out:st=5.3:d=1.2:alpha=1[tt]')
 F.append(f'[{ti+1}:v]format=rgba,fade=t=in:st=8:d=1:alpha=1,fade=t=out:st=60:d=1:alpha=1[td]')
-F.append(f'[{ti+2}:v]format=rgba,fade=t=in:st=65:d=1:alpha=1,fade=t=out:st=290:d=1:alpha=1[tc]')
-F.append(f'[{ti+3}:v]format=rgba,fade=t=in:st=295:d=1.5:alpha=1[te]')
+F.append(f'[{ti+2}:v]format=rgba,fade=t=in:st=65:d=1:alpha=1,fade=t=out:st={END-4}:d=1:alpha=1[tc]')
+F.append(f'[{ti+3}:v]format=rgba,fade=t=in:st={END+1}:d=1.5:alpha=1[te]')
 F.append('[pv][tt]overlay=0:0:eof_action=pass[o1];[o1][td]overlay=0:0:eof_action=pass[o2];[o2][tc]overlay=0:0:eof_action=pass[o3];[o3][te]overlay=0:0:eof_action=pass[o4]')
 F.append(f'[o4]fade=t=in:st=0:d=1.2,fade=t=out:st={TOT-2.5}:d=2.5,format=yuv420p[vout]')
 open('graph.txt','w').write(';\n'.join(F))
