@@ -782435,5 +782435,1526 @@
     "category": "Startups & Business",
     "intel_data": null,
     "cached_on": "2026-11-06T13:57:46.101170+00:00"
+  },
+  "dcfedcc7440be1b6": {
+    "editorial_summary": "Recent signals from the Meta introduces Spaces collaborate ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Organisations that treat AI adoption as a strategic imperative rather than a tactical experiment will define the competitive landscape of the next decade.",
+    "slug": "rss-dcfedcc7440be1b6",
+    "title": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+    "cat_slug": "ai-news",
+    "category": "AI News",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:14.867565+00:00"
+  },
+  "39eb6389cd506408": {
+    "editorial_summary": "The latest developments in Blue Wave midterm might signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Organisations that treat AI adoption as a strategic imperative rather than a tactical experiment will define the competitive landscape of the next decade.",
+    "slug": "rss-39eb6389cd506408",
+    "title": "How a Blue Wave midterm might reshape the AI industry",
+    "cat_slug": "ai-news",
+    "category": "AI News",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:15.132107+00:00"
+  },
+  "36a8a0219ae7c4c6": {
+    "editorial_summary": "The Agents reveal secrets when space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-36a8a0219ae7c4c6",
+    "title": "Agents reveal secrets when offered to team up with each other",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:18.650146+00:00"
+  },
+  "379cc3ccefccdd39": {
+    "editorial_summary": "As Thinking Machines debuts Inkling continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-379cc3ccefccdd39",
+    "title": "Thinking Machines debuts Inkling 2 Small amid reported $5B fundraising push",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:18.965159+00:00"
+  },
+  "9f4a9e9498b61459": {
+    "editorial_summary": "Recent signals from the Colleen Aubrey Stop inventing ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-9f4a9e9498b61459",
+    "title": "AWS’ Colleen Aubrey: Stop inventing new AI metrics — it’s your business metrics that matter",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:19.195702+00:00"
+  },
+  "3b5176bf138b6926": {
+    "editorial_summary": "What is unfolding in PyTorch tackles problem represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-3b5176bf138b6926",
+    "title": "PyTorch 2.15 tackles the 'one bad GPU' problem",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:19.472767+00:00"
+  },
+  "910ad9c68493bebd": {
+    "editorial_summary": "What is unfolding in traffic control enters 21st represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-910ad9c68493bebd",
+    "title": "US air traffic control enters the 21st century, starts to abandon floppy disks",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:19.757822+00:00"
+  },
+  "a582aef9230745cc": {
+    "editorial_summary": "What is unfolding in Android getting favorite tracking represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-a582aef9230745cc",
+    "title": "Android is getting my favorite iOS tracking feature – what to expect",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:20.027161+00:00"
+  },
+  "ab6caa3c8bb11a9d": {
+    "editorial_summary": "What is unfolding in Thinking Machines model takes represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-ab6caa3c8bb11a9d",
+    "title": "Thinking Machines’ new model takes the lead in western open-weight AI",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:20.286870+00:00"
+  },
+  "820472312039ef6b": {
+    "editorial_summary": "What is unfolding in lookalikes multiply Linux raids represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-820472312039ef6b",
+    "title": "Mac lookalikes multiply as Linux raids Apple's wardrobe",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:20.576983+00:00"
+  },
+  "88fbab1ad7482d44": {
+    "editorial_summary": "As Ridge labs gets hybrid continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-88fbab1ad7482d44",
+    "title": "Oak Ridge labs gets hybrid quantum-HPC system to test qubit error correction",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:20.858467+00:00"
+  },
+  "104a984077f090af": {
+    "editorial_summary": "The latest developments in worlds ugliest signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-104a984077f090af",
+    "title": "RIP to the world’s ugliest car",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:21.098109+00:00"
+  },
+  "7d86e99438d9dc3e": {
+    "editorial_summary": "The latest developments in Apple monitor your public signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-7d86e99438d9dc3e",
+    "title": "Apple will monitor your public iCloud links now, starting with iOS 27.3",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:21.418055+00:00"
+  },
+  "15a902ebb27f24d4": {
+    "editorial_summary": "Recent signals from the DoJs Super Intelligence Task ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-15a902ebb27f24d4",
+    "title": "DoJ's 'Super Intelligence Task Force' up and running",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:21.680875+00:00"
+  },
+  "38a97a673d7ac842": {
+    "editorial_summary": "Recent signals from the Midterm elections data centers ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-38a97a673d7ac842",
+    "title": "Midterm elections will put AI and data centers on trial, but Big Tech may end up winning anyway",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:21.944140+00:00"
+  },
+  "25721532c55d0973": {
+    "editorial_summary": "What is unfolding in booms missing balancesheet question represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-25721532c55d0973",
+    "title": "The AI boom’s missing balance-sheet question: What has actually been verified?",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:22.222147+00:00"
+  },
+  "90af6db81267ba72": {
+    "editorial_summary": "What is unfolding in Crowd fave Linux Mint represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-90af6db81267ba72",
+    "title": "Crowd fave Linux Mint update approaches, fresh from autumn release of Cinnamon desktop",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:22.477746+00:00"
+  },
+  "76031c6737807c19": {
+    "editorial_summary": "The latest developments in Blue Origin unveils more signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-76031c6737807c19",
+    "title": "Blue Origin unveils more thrust, less haste as New Glenn slips to 2027",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:22.756272+00:00"
+  },
+  "90a14d836760dd3b": {
+    "editorial_summary": "The Atomicwork launches certified coworker space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The enterprises that win in this environment will be those that align technology investment with measurable business outcomes, not those that simply accumulate tools.",
+    "slug": "rss-90a14d836760dd3b",
+    "title": "Atomicwork launches certified AI coworker marketplace for enterprise IT and security",
+    "cat_slug": "enterprise-tech",
+    "category": "Enterprise Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:23.005579+00:00"
+  },
+  "c7e695ed298c7927": {
+    "editorial_summary": "The Wades Tech Sovereignty Amid space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. In an environment of persistent, sophisticated threats, security posture is no longer an IT concern — it is a board-level business risk that demands continuous investment.",
+    "slug": "rss-c7e695ed298c7927",
+    "title": "UK Wades Into Tech Sovereignty Amid AI Policy Changes",
+    "cat_slug": "cybersecurity-updates",
+    "category": "Cybersecurity Updates",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:24.253856+00:00"
+  },
+  "8cfa4e5f9c70b3e3": {
+    "editorial_summary": "The latest developments in Gave Your Incident Archive signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. In an environment of persistent, sophisticated threats, security posture is no longer an IT concern — it is a board-level business risk that demands continuous investment.",
+    "slug": "rss-8cfa4e5f9c70b3e3",
+    "title": "AI Gave Your Incident Archive a Second Job",
+    "cat_slug": "cybersecurity-updates",
+    "category": "Cybersecurity Updates",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:24.559685+00:00"
+  },
+  "9f674275cfa6eeef": {
+    "editorial_summary": "As Europes Freezer Hacks Spread continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. In an environment of persistent, sophisticated threats, security posture is no longer an IT concern — it is a board-level business risk that demands continuous investment.",
+    "slug": "rss-9f674275cfa6eeef",
+    "title": "Why Europe's Freezer Hacks Spread So Far, So Fast",
+    "cat_slug": "cybersecurity-updates",
+    "category": "Cybersecurity Updates",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:24.826475+00:00"
+  },
+  "c61f771c21bd961e": {
+    "editorial_summary": "Recent signals from the Operao influncia russa como ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. In an environment of persistent, sophisticated threats, security posture is no longer an IT concern — it is a board-level business risk that demands continuous investment.",
+    "slug": "rss-c61f771c21bd961e",
+    "title": "Operação de influência russa tem como alvo generalizado a América Latina",
+    "cat_slug": "cybersecurity-updates",
+    "category": "Cybersecurity Updates",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:25.235757+00:00"
+  },
+  "baedc1af8c93b5be": {
+    "editorial_summary": "Recent signals from the Google Messages pinned chats ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-baedc1af8c93b5be",
+    "title": "Google Messages’ new pinned chats are dividing users, and we want your take",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:27.120261+00:00"
+  },
+  "2f74799e2b779cdb": {
+    "editorial_summary": "What is unfolding in Airbnb building travel agent represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-2f74799e2b779cdb",
+    "title": "Airbnb is building an AI travel agent that designs its own interface",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:27.385755+00:00"
+  },
+  "360c3c3d6d1111e3": {
+    "editorial_summary": "What is unfolding in Google Health update revamps represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-360c3c3d6d1111e3",
+    "title": "Google Health app 5.12 update revamps glucose, blood pressure, and resilience tracking",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:27.658108+00:00"
+  },
+  "8d7de1ba04ec1c0b": {
+    "editorial_summary": "The latest developments in KPop Demon Hunters Bluray signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-8d7de1ba04ec1c0b",
+    "title": "KPop Demon Hunters on 4K Blu-ray costs less than a month of Netflix Premium",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:27.926287+00:00"
+  },
+  "20fb7edf55939b3d": {
+    "editorial_summary": "The Microsofts 2026 Surface Laptop space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-20fb7edf55939b3d",
+    "title": "Microsoft’s 2026 Surface Laptop gets a $450 Amazon discount",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:28.217260+00:00"
+  },
+  "5d6a3e3f3398ed03": {
+    "editorial_summary": "The latest developments in Gentle Monster teases Samsung signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-5d6a3e3f3398ed03",
+    "title": "Gentle Monster teases Samsung Android XR glasses with some help from Joaquin Phoenix",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:28.496067+00:00"
+  },
+  "c0f360396175af87": {
+    "editorial_summary": "Recent signals from the Samsung Health leaves users ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-c0f360396175af87",
+    "title": "Samsung Health bug leaves users with missing step history",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:28.776898+00:00"
+  },
+  "99fe15afa48d4ada": {
+    "editorial_summary": "The Apple says 100000 apps space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-99fe15afa48d4ada",
+    "title": "Apple says over 100,000 apps are now optimized for the iPhone Duo",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:29.114117+00:00"
+  },
+  "02f0db3c4359a849": {
+    "editorial_summary": "What is unfolding in Some Nest doorbells stopped represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-02f0db3c4359a849",
+    "title": "Some Nest doorbells have stopped showing the live video feed",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:29.409296+00:00"
+  },
+  "088b136dac7f1bc1": {
+    "editorial_summary": "What is unfolding in Shures popular podcasting streaming represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-088b136dac7f1bc1",
+    "title": "Shure’s popular podcasting and streaming mic is almost $50 off",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:29.670070+00:00"
+  },
+  "70b90e91a7bcb3ae": {
+    "editorial_summary": "The latest developments in Googles eyewear partners cant signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-70b90e91a7bcb3ae",
+    "title": "Google's eyewear partners can't keep a lid on its smart glasses plans",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:29.930963+00:00"
+  },
+  "b162e68e61351746": {
+    "editorial_summary": "What is unfolding in Samsung Display tipped lead represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-b162e68e61351746",
+    "title": "Samsung Display tipped to lead OLED supply for 2027 iPad Air",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:30.185768+00:00"
+  },
+  "12d7432c99f235f9": {
+    "editorial_summary": "Recent signals from the Google says almost wants ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-12d7432c99f235f9",
+    "title": "Google says almost no one wants NFC in the Fitbit Edge but readers strongly disagree",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:30.761451+00:00"
+  },
+  "9b444dac7471cd50": {
+    "editorial_summary": "As vivo review continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-9b444dac7471cd50",
+    "title": "vivo V80 review",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.057810+00:00"
+  },
+  "1f26df3870acd1ea": {
+    "editorial_summary": "The Google bringing iOSstyle Settings space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-1f26df3870acd1ea",
+    "title": "Google is bringing iOS-style Settings icons to Chrome for Android",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.277470+00:00"
+  },
+  "5b1f3fb0f8544b56": {
+    "editorial_summary": "Recent signals from the Lenovo Legion E510 earbuds ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-5b1f3fb0f8544b56",
+    "title": "Lenovo Legion E510 earbuds hit their lowest price this year",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.536748+00:00"
+  },
+  "2c628f70b8f41b30": {
+    "editorial_summary": "The Kobo soon upload sync space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-2c628f70b8f41b30",
+    "title": "Kobo will soon let you upload and sync your own ebooks across devices, for a price",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.777468+00:00"
+  },
+  "f39b456dca09d764": {
+    "editorial_summary": "The latest developments in wraps billion Roku deal signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-f39b456dca09d764",
+    "title": "Fox wraps up its $22 billion Roku deal",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.777828+00:00"
+  },
+  "504cad65a3b332cf": {
+    "editorial_summary": "The latest developments in Gemini prepares parents know signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-504cad65a3b332cf",
+    "title": "Gemini prepares to let parents know when kids discuss self-harm",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.777950+00:00"
+  },
+  "4eaddedf7fd0908a": {
+    "editorial_summary": "Recent signals from the Galaxy Ultra chipset rumors ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-4eaddedf7fd0908a",
+    "title": "Galaxy S27 Ultra and S27 Pro chipset rumors take another turn, Snapdragon is back in Korea",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.778046+00:00"
+  },
+  "bebc4f499fbac9fe": {
+    "editorial_summary": "The accuses TikToks rabbit hole space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-bebc4f499fbac9fe",
+    "title": "The EU accuses TikTok's 'rabbit hole' algorithm of breaching its content rules",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.778142+00:00"
+  },
+  "038ed26e27c2fc30": {
+    "editorial_summary": "What is unfolding in Youll soon able text represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-038ed26e27c2fc30",
+    "title": "You'll soon be able to text Alexa to shop on Amazon",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.778232+00:00"
+  },
+  "5e637bc02ab37f84": {
+    "editorial_summary": "The just launched something called space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-5e637bc02ab37f84",
+    "title": "DOJ just launched something called the Super Intelligence Task Force",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.778320+00:00"
+  },
+  "639dc270ee49c6b0": {
+    "editorial_summary": "The Oppos first gimbal camera space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-639dc270ee49c6b0",
+    "title": "Oppo's first gimbal camera is almost ready to take on DJI and Insta360",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.778409+00:00"
+  },
+  "69d96efc657346e5": {
+    "editorial_summary": "The Metas refurbished Quest headset space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-69d96efc657346e5",
+    "title": "Meta’s refurbished Quest 3S headset is nearly $100 off right now",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.778500+00:00"
+  },
+  "b8851797863ea479": {
+    "editorial_summary": "Recent signals from the Akai Moog embracing vibecoded ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-b8851797863ea479",
+    "title": "How Akai and Moog are embracing vibe-coded mods",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.778592+00:00"
+  },
+  "afb30e767851de2a": {
+    "editorial_summary": "The latest developments in Eufys clever outdoor security signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-afb30e767851de2a",
+    "title": "Eufy's clever outdoor security camera that lives inside is now available to buy",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.778694+00:00"
+  },
+  "6be75f2bf9775647": {
+    "editorial_summary": "As seethrough camera lets photographers continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-6be75f2bf9775647",
+    "title": "This see-through camera lets photographers maintain eye contact with their subjects",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.778784+00:00"
+  },
+  "a636a11bcbfb4e29": {
+    "editorial_summary": "The latest developments in WhatsApp announces Events Home signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-a636a11bcbfb4e29",
+    "title": "WhatsApp announces Events Home and shareable event invites",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.778887+00:00"
+  },
+  "316a37fb3ff67ef1": {
+    "editorial_summary": "As Stranger Things prequel series continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-316a37fb3ff67ef1",
+    "title": "A Stranger Things prequel series is coming to Netflix in 2028",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.779036+00:00"
+  },
+  "6280a5d9b2bf3e24": {
+    "editorial_summary": "The Verges 2026 holiday gift space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-6280a5d9b2bf3e24",
+    "title": "The Verge’s 2026 holiday gift guide",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.779126+00:00"
+  },
+  "a7cc41daac6256b5": {
+    "editorial_summary": "Recent signals from the Anker Soundcore Space review ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-a7cc41daac6256b5",
+    "title": "Anker Soundcore Space 2 Pro review: Big bang for fewer bucks",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.779293+00:00"
+  },
+  "27491b290cf837e6": {
+    "editorial_summary": "What is unfolding in Oppo Find Ultra reportedly represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. Mobile hardware and software are converging faster than most roadmaps anticipated, creating new opportunities for developers and new expectations for consumers.",
+    "slug": "rss-27491b290cf837e6",
+    "title": "Oppo Find X10 Ultra has reportedly been cancelled",
+    "cat_slug": "mobile-gadgets",
+    "category": "Mobile & Gadgets",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:31.779383+00:00"
+  },
+  "478b0aa308afb4bb": {
+    "editorial_summary": "As Early Black Friday Price continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-478b0aa308afb4bb",
+    "title": "This Early Black Friday Price Drop Brings Apple’s M5 MacBook Air to Its Lowest Price Ever",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.250173+00:00"
+  },
+  "7895af256277589f": {
+    "editorial_summary": "As Call Duty Modern Warfare continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-7895af256277589f",
+    "title": "Call of Duty: Modern Warfare 4 composer says multiplayer music requires a 'flexible framework' compared to the campaign with 'dramatic moments' as 'you have no idea how any given match is going to unfold'  — 'Multiplayer is completely unpredictable'",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.250510+00:00"
+  },
+  "8fec76c8ae9860f9": {
+    "editorial_summary": "As Disney wants robots more continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-8fec76c8ae9860f9",
+    "title": "Disney wants robots to do more than entertain you — they could help run its theme park operations, too",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.250637+00:00"
+  },
+  "d31153e6887856d2": {
+    "editorial_summary": "The Good Riddance Tesla Cybertruck space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-d31153e6887856d2",
+    "title": "Good Riddance: Tesla to End Cybertruck Production in 2027",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.250737+00:00"
+  },
+  "3876d5c5b7eac5d2": {
+    "editorial_summary": "The Russian Federal State Statistics space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-3876d5c5b7eac5d2",
+    "title": "Russian Federal State Statistics Service says it was hit by massive cyberattack — hackers steal 23TB of data, including Ukraine war casualty figures",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.250860+00:00"
+  },
+  "2a72f75b5c25ab5a": {
+    "editorial_summary": "The Todays Wordle Hints Answer space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-2a72f75b5c25ab5a",
+    "title": "Today’s NYT Wordle Hints, Answer and Help for Saturday, Nov. 7, #1967",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.250960+00:00"
+  },
+  "9a0cad5ca2bcd3ea": {
+    "editorial_summary": "What is unfolding in Google Store Drops Prices represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-9a0cad5ca2bcd3ea",
+    "title": "Google Store Drops Prices on Pixel Phones, Buds, Smart Home Gear and More Ahead of Black Friday",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.251049+00:00"
+  },
+  "52a2f83592350434": {
+    "editorial_summary": "The latest developments in Speak Geek Tech Terms signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-52a2f83592350434",
+    "title": "Do You Speak Geek? 5 Tech Terms That Endure, and 5 That Got Defragged",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.251139+00:00"
+  },
+  "18daf01b472c3beb": {
+    "editorial_summary": "As waterproof jacket deals save continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-18daf01b472c3beb",
+    "title": "13 waterproof jacket deals to save you from the November drizzle — up to 40% off leading brands",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.251226+00:00"
+  },
+  "b59f5daa18efbbe4": {
+    "editorial_summary": "The latest developments in iPhone Apple Pencil good signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-b59f5daa18efbbe4",
+    "title": "The iPhone Duo with an Apple Pencil is as good a drawing platform as an iPad Mini",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.251312+00:00"
+  },
+  "9a6d604c65ba6df6": {
+    "editorial_summary": "As Hulu shows need bingewatch continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-9a6d604c65ba6df6",
+    "title": "3 new Hulu shows you need to binge-watch this weekend — including a legal drama from the creator of 'Glee' and the reboot of beloved medical comedy 'Scrubs' (Nov. 6-8)",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.251400+00:00"
+  },
+  "e2186a75ccc74cfa": {
+    "editorial_summary": "What is unfolding in sues OpenAI alleging ChatGPT represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-e2186a75ccc74cfa",
+    "title": "Man sues OpenAI alleging ChatGPT helped his wife try to murder him: it's the 10th homicide the AI chatbot has been accused of abetting in less than two years",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.251490+00:00"
+  },
+  "961ff4782065726c": {
+    "editorial_summary": "The latest developments in bill powerful heres what signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-961ff4782065726c",
+    "title": "A new bill could ban powerful AI in the US — here's what it means for ChatGPT",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.251575+00:00"
+  },
+  "f29e9953659d477c": {
+    "editorial_summary": "The Windows 27H2 rumored full space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-f29e9953659d477c",
+    "title": "Windows 11 27H2 is rumored to be a 'full OS swap' with major work therein",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.251658+00:00"
+  },
+  "cb308bbaf6cc9e20": {
+    "editorial_summary": "The Even Microsoft Paint being space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-cb308bbaf6cc9e20",
+    "title": "Even Microsoft Paint is being targeted by cyberattackers — update now or face the consequences",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.251743+00:00"
+  },
+  "5b51950434314955": {
+    "editorial_summary": "Recent signals from the Best practically giving away ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-5b51950434314955",
+    "title": "Best Buy is practically giving away these 12 appliances at 50% off— save big on LG, Lenovo and more",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.251844+00:00"
+  },
+  "1ce43f85d919fb75": {
+    "editorial_summary": "What is unfolding in Theres simple watch Ireland represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-1ce43f85d919fb75",
+    "title": "There's a simple way to watch Ireland vs Argentina for *FREE*",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.251928+00:00"
+  },
+  "993c19c36ff7461c": {
+    "editorial_summary": "Recent signals from the Geekoms Ryzen mini gets ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-993c19c36ff7461c",
+    "title": "Geekom's A6 Ryzen 7 mini PC gets a massive $282 Black Friday price cut, plus a free $70 gift",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.252174+00:00"
+  },
+  "accb625da33ee7f9": {
+    "editorial_summary": "The Netflix shows bingewatch weekend space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-accb625da33ee7f9",
+    "title": "3 new Netflix shows you should binge-watch this weekend —including returning Keira Knightley spy thriller 'Black Doves' (Nov. 6-8)",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.252270+00:00"
+  },
+  "dbbb73ead1d89504": {
+    "editorial_summary": "As DreamCloud Classic Premier Luxe continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-dbbb73ead1d89504",
+    "title": "The DreamCloud Classic, Premier, and Luxe Memory Foam mattresses are up to 79% off in new flash sale — here's how to choose between them",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.252356+00:00"
+  },
+  "5298b7635ad1bae5": {
+    "editorial_summary": "Recent signals from the TechRadars weekly crossword here ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-5298b7635ad1bae5",
+    "title": "TechRadar's weekly crossword is here — puzzle #11, Friday, November 6",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.252439+00:00"
+  },
+  "cb4645615f7f6453": {
+    "editorial_summary": "Recent signals from the Hackers fake OpenAI SpaceX ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-cb4645615f7f6453",
+    "title": "Hackers use fake OpenAI, SpaceX, and Anthropic event invites in new phishing scam to steal Microsoft and Google accounts",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.252526+00:00"
+  },
+  "a34e71b04ed96194": {
+    "editorial_summary": "Recent signals from the Amazons texttoshop feature arrives ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-a34e71b04ed96194",
+    "title": "Amazon’s new text-to-shop feature arrives ahead of the holidays — here’s how the latest improvement to the Alexa for Shopping AI agent works",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.252611+00:00"
+  },
+  "8d83f6dde79d51ac": {
+    "editorial_summary": "As What watch tonight shows continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-8d83f6dde79d51ac",
+    "title": "What to watch tonight: 55 new shows and movies just added to Netflix, Prime Video, Peacock and more (Nov. 6)",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.252695+00:00"
+  },
+  "b145b4eba668f2cb": {
+    "editorial_summary": "The latest developments in massive 212GB download finished signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-b145b4eba668f2cb",
+    "title": "GTA 6's massive 212GB download can be finished in under 30 minutes with Spectrum's free Gig Speed Lift — eligible customers get upgraded to 1 Gbps through Thanksgiving",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.252775+00:00"
+  },
+  "f578ffd38b92a231": {
+    "editorial_summary": "Recent signals from the Sleep Numbers Black Friday ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-f578ffd38b92a231",
+    "title": "Sleep Number’s Black Friday Sale Can Save You Up to 25% on Mattresses, Bedding and More",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.253873+00:00"
+  },
+  "17c14eadeb60212b": {
+    "editorial_summary": "The Laptops Tablets Putting Holiday space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Consumer expectations are being reset by rapid hardware and software iteration, and the brands that fail to keep pace risk rapid commoditisation.",
+    "slug": "rss-17c14eadeb60212b",
+    "title": "These Are the Laptops and Tablets We’re Putting on Our Holiday Lists This Year",
+    "cat_slug": "consumer-tech",
+    "category": "Consumer Tech",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:33.254134+00:00"
+  },
+  "4386ffcc6a13dde1": {
+    "editorial_summary": "What is unfolding in Happy Mask Shop buyer represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-4386ffcc6a13dde1",
+    "title": "All Happy Mask Shop buyer locations in Zelda Ocarina of Time",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.425923+00:00"
+  },
+  "483109cb2ca4cbbf": {
+    "editorial_summary": "What is unfolding in Favorite Stupid Details They represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-483109cb2ca4cbbf",
+    "title": "This Is One Of My Favorite Stupid Details They Kept In The Ocarina Of Time Remake",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.426245+00:00"
+  },
+  "abaa8592f4fcd702": {
+    "editorial_summary": "The posting heating Please leave space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-abaa8592f4fcd702",
+    "title": "The AI posting war is heating up: 'Please, leave me behind,' says artist who got into it with Epic CEO Tim Sweeney on X",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.426367+00:00"
+  },
+  "23ba7eac747405d3": {
+    "editorial_summary": "As Where Epona Ocarina Time continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-23ba7eac747405d3",
+    "title": "Where to get Epona in Ocarina of Time",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.426469+00:00"
+  },
+  "22dceebddaf6e3b1": {
+    "editorial_summary": "The latest developments in Movies Watch Weekend Netflix signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-22dceebddaf6e3b1",
+    "title": "10 New Movies to Watch This Weekend on Netflix, Prime Video, and Peacock (November 6 - 8)",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.426564+00:00"
+  },
+  "fbe4d603d68a930e": {
+    "editorial_summary": "The MuchRequested Battlefield Feature Revealed space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-fbe4d603d68a930e",
+    "title": "A Much-Requested Battlefield 6 Feature Revealed Last Spring Won’t Arrive In 2026 After All",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.426656+00:00"
+  },
+  "bf6fc5d813fd7f1a": {
+    "editorial_summary": "The latest developments in Path Exile announces second signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-bf6fc5d813fd7f1a",
+    "title": "Path of Exile 2 announces a second new class, the Shadow, for its December 1.0 release",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.426753+00:00"
+  },
+  "0eb3a7a5f33b9d0b": {
+    "editorial_summary": "The locations Zelda Ocarina Time space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-0eb3a7a5f33b9d0b",
+    "title": "All Big Poe locations in Zelda Ocarina of Time",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.426881+00:00"
+  },
+  "6194342f70a663d9": {
+    "editorial_summary": "What is unfolding in Where offering fish JabuJabu represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-6194342f70a663d9",
+    "title": "Where to get an offering fish for Jabu-Jabu in Ocarina of Time",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.426976+00:00"
+  },
+  "89ed3f5b4e09064a": {
+    "editorial_summary": "The latest developments in 6YearOld Daughter Save Spot signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-89ed3f5b4e09064a",
+    "title": "Dad Has 6-Year-Old Daughter Save His Spot In Line At Target For Pokémon Cards And Then Leaves",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.427066+00:00"
+  },
+  "1db85185f9f70770": {
+    "editorial_summary": "Recent signals from the Underkeep favorite oldschool dungeon ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-1db85185f9f70770",
+    "title": "Underkeep is my favorite old-school dungeon crawler since Legend of Grimrock, and yes that includes Queen's Domain",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.427157+00:00"
+  },
+  "daaf31aa45383931": {
+    "editorial_summary": "The latest developments in Critical Role Officially Returns signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-daaf31aa45383931",
+    "title": "Critical Role Officially Returns to Its Roots for New Campaign with Hololive",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.427246+00:00"
+  },
+  "a601718b93e3e6cb": {
+    "editorial_summary": "The latest developments in came nowhere shocked face signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-a601718b93e3e6cb",
+    "title": "'It came out of nowhere. I was shocked and sad': He was the face of Hunt: Showdown for years, then Crytek laid him off",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.427333+00:00"
+  },
+  "0e5705203d959033": {
+    "editorial_summary": "Recent signals from the Shows Watch Weekend Netflix ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-0e5705203d959033",
+    "title": "8 New TV Shows to Watch This Weekend on Netflix, HBO, and Apple TV (November 6 - 8)",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.427421+00:00"
+  },
+  "004f0a4f12626cc5": {
+    "editorial_summary": "The songs Zelda Ocarina Time space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-004f0a4f12626cc5",
+    "title": "All songs in Zelda Ocarina of Time",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.427505+00:00"
+  },
+  "c6380ca4e556614b": {
+    "editorial_summary": "What is unfolding in Where find Princess Ruto represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-c6380ca4e556614b",
+    "title": "Where to find Princess Ruto in Ocarina of Time",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.427585+00:00"
+  },
+  "7aaf6c37f3a08e4a": {
+    "editorial_summary": "What is unfolding in Zelda Ocarina Time Tips represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-7aaf6c37f3a08e4a",
+    "title": "10 Zelda: Ocarina Of Time Tips For The First-Time Player",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.427666+00:00"
+  },
+  "1b0904bb3fa28cee": {
+    "editorial_summary": "The latest developments in soft soil Magic Bean signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-1b0904bb3fa28cee",
+    "title": "All soft soil and Magic Bean planting locations in Ocarina of Time",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.427751+00:00"
+  },
+  "a4c2518d9f8f36dd": {
+    "editorial_summary": "Recent signals from the Updated Xbox promises faster ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-a4c2518d9f8f36dd",
+    "title": "Updated Xbox PC app promises 60% faster loading and easier access to games, but CEO Asha Sharma says there's \"plenty more to do\"",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.427867+00:00"
+  },
+  "6c633c1987635f24": {
+    "editorial_summary": "The Cant Cheat Chicken Game space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-6c633c1987635f24",
+    "title": "You Can’t Cheat At The Chicken Game Anymore In Zelda: Ocarina Of Time",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.427965+00:00"
+  },
+  "2385e409f63f0e70": {
+    "editorial_summary": "Recent signals from the What Video Game Preservation ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-2385e409f63f0e70",
+    "title": "This Is What Video Game Preservation Looks Like",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.428052+00:00"
+  },
+  "85c153fd5c1187b6": {
+    "editorial_summary": "The Mass Effectlike Expanse Osiris space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-85c153fd5c1187b6",
+    "title": "Mass Effect-like RPG The Expanse: Osiris Reborn ropes in David Gaider, the original lead writer of Bioware's Dragon Age series",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.428138+00:00"
+  },
+  "f89abd927e519560": {
+    "editorial_summary": "Recent signals from the Pirate Shop Token Hunt ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-f89abd927e519560",
+    "title": "The Pirate Shop Token Hunt Is Tearing Fortnite Apart",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.428222+00:00"
+  },
+  "8c3940e63884404e": {
+    "editorial_summary": "What is unfolding in Truck Demanding Save Mass represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-8c3940e63884404e",
+    "title": "A Truck Demanding EA ‘Save Mass Effect’ Is Currently Driving Around The Company’s Headquarters",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.428305+00:00"
+  },
+  "68f9aecadc910d3e": {
+    "editorial_summary": "The Forevers Dungeon Nerf Shaping space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-68f9aecadc910d3e",
+    "title": "WoW: Forever’s Dungeon EXP Nerf Is Shaping Up To Be A Disaster For Dungeon Lovers",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.428506+00:00"
+  },
+  "89ade3eada9f6bc1": {
+    "editorial_summary": "The hard meet women when space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-89ade3eada9f6bc1",
+    "title": "It's hard to meet women when I keep teleporting all the time",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.428597+00:00"
+  },
+  "81b4b61b7b7efa3c": {
+    "editorial_summary": "Recent signals from the Bringing Bloodborne back tricky ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-81b4b61b7b7efa3c",
+    "title": "Bringing Bloodborne back is tricky because \"there's a lot of involved rights associated,\" according to former PlayStation boss",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.428683+00:00"
+  },
+  "0e438ce2d189391b": {
+    "editorial_summary": "The stands between hacker admin space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-0e438ce2d189391b",
+    "title": "All that stands between a hacker and admin privileges on some Linux distros is a 257-character long string of literally anything",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.428777+00:00"
+  },
+  "7fa8259530f79c05": {
+    "editorial_summary": "The latest developments in Realtime strategy game Fertile signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-7fa8259530f79c05",
+    "title": "Real-time strategy game The Fertile Crescent 2 is an isometric odyssey inspired by Age of Empires, with the 1.0 release out now",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.428878+00:00"
+  },
+  "da1a2a98bed5fad8": {
+    "editorial_summary": "The PlayStation Already Killing Ratchet space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-da1a2a98bed5fad8",
+    "title": "PlayStation Is Already Killing Off Ratchet & Clank Mobile Game Just 12 Months After It Was Revealed",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.428962+00:00"
+  },
+  "f4b5604e2476ed01": {
+    "editorial_summary": "What is unfolding in public petition save BioWare represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-f4b5604e2476ed01",
+    "title": "A public petition to save BioWare has drawn enough signatures that the Canadian government will at least have to think about it: 'This is absolutely possible,' MP says",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.429056+00:00"
+  },
+  "7ab28086578f98d8": {
+    "editorial_summary": "As Epomaker HE75 review continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-7ab28086578f98d8",
+    "title": "Epomaker HE75 V2 TMR review",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.429142+00:00"
+  },
+  "bc6c5c51ce567ba8": {
+    "editorial_summary": "As David Gaider been working continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-bc6c5c51ce567ba8",
+    "title": "David Gaider has been working on Owlcat's Expanse RPG: 'The Expanse has long been one of my favourite series, and so obviously I jumped at the opportunity to be involved'",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.429225+00:00"
+  },
+  "629df2a3316a16f4": {
+    "editorial_summary": "Recent signals from the Forever takes 250000 memory ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-629df2a3316a16f4",
+    "title": "WoW: Forever takes 250,000 GB of memory to run, and I can't even joke about Sam Altman being jealous because that's almost nothing compared to the monolithic demands of AI",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.429315+00:00"
+  },
+  "2a5c0a37a1033041": {
+    "editorial_summary": "The just found your Steam space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-2a5c0a37a1033041",
+    "title": "I just found out you can use your Steam Wishlist to search for deals on games outside of Steam, saving my nephew more than £40 on Total War: Warhammer 3",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.429403+00:00"
+  },
+  "99eec72dd16aa5b8": {
+    "editorial_summary": "The latest developments in Terrific fantasy Queens Domain signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-99eec72dd16aa5b8",
+    "title": "Terrific fantasy RPG Queen's Domain gets first proper update, adding a new throwing weapon and options to make puzzles \"less frustrating\"",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.429487+00:00"
+  },
+  "7cfb2ae3a7489f6a": {
+    "editorial_summary": "The World Warcraft Forever hotfix space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-7cfb2ae3a7489f6a",
+    "title": "World of Warcraft: Forever hotfix puts a stop to super speedy flag carriers that were dominating PvP battlegrounds",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.429568+00:00"
+  },
+  "3d971bcc17d62e19": {
+    "editorial_summary": "Recent signals from the Airframe Ultras cyberpunk city ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. The gaming industry is rapidly becoming the most technically sophisticated consumer entertainment medium, with implications that extend far beyond entertainment.",
+    "slug": "rss-3d971bcc17d62e19",
+    "title": "Airframe Ultra's PS1 cyberpunk city is an amazing tribute to G-Police and WipEout, and I wish you people would slow down to appreciate it",
+    "cat_slug": "gaming",
+    "category": "Gaming",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:37.429654+00:00"
+  },
+  "242589c581cb3d1c": {
+    "editorial_summary": "The Apollos newest electric scooter space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-242589c581cb3d1c",
+    "title": "Apollo’s newest electric scooter is also its lowest-cost yet",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.860131+00:00"
+  },
+  "acb30b12f014b27a": {
+    "editorial_summary": "As Hyundais IONIQ lease looks continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-acb30b12f014b27a",
+    "title": "Hyundai’s $359 IONIQ 5 lease looks like a deal, but don’t overlook its bigger sibling",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.860403+00:00"
+  },
+  "eec590b20c6031f0": {
+    "editorial_summary": "As Yangwang Xtreme Just Guinness continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-eec590b20c6031f0",
+    "title": "The Yangwang U9 Xtreme Just Set Two Guinness World Speed Records",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.860568+00:00"
+  },
+  "0c8bba5b48943e12": {
+    "editorial_summary": "What is unfolding in EVgo opens first Tesla represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-0c8bba5b48943e12",
+    "title": "EVgo opens its first Tesla Superchargers, with hundreds more planned",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.860665+00:00"
+  },
+  "b786ac08651f80d1": {
+    "editorial_summary": "What is unfolding in launching 5seat luxury electric represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-b786ac08651f80d1",
+    "title": "BYD is launching this 5-seat luxury electric SUV next week with over 1,000 km of range",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.860766+00:00"
+  },
+  "5d82ff5b2198b3a9": {
+    "editorial_summary": "The 2028 Subaru Getaway space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-5d82ff5b2198b3a9",
+    "title": "2028 Subaru Getaway",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.860894+00:00"
+  },
+  "d6b8c5879c278f99": {
+    "editorial_summary": "What is unfolding in 2027 Karma Gyesera Stylish represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-d6b8c5879c278f99",
+    "title": "The 2027 Karma Gyesera Is a Stylish Curiosity",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.860981+00:00"
+  },
+  "46858a6d38c298af": {
+    "editorial_summary": "What is unfolding in View Exterior Photos 2027 represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-46858a6d38c298af",
+    "title": "View Exterior Photos of the 2027 Karma Gyesera Grand Coupe",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.861059+00:00"
+  },
+  "19698e9ca051e9dc": {
+    "editorial_summary": "As View Interior Photos 2027 continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-19698e9ca051e9dc",
+    "title": "View Interior Photos of the 2027 Karma Gyesera Grand Coupe",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.861144+00:00"
+  },
+  "7edca80f631da787": {
+    "editorial_summary": "As Podcast Tesla kills Cybertruck continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-7edca80f631da787",
+    "title": "Podcast: Tesla kills the Cybertruck, EVs are surging, and more",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.861222+00:00"
+  },
+  "8ec8ed08f1b9bb61": {
+    "editorial_summary": "The Bluetti Apex 2560Wh power space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-8ec8ed08f1b9bb61",
+    "title": "Bluetti Apex 200 2,560Wh power station exclusive $1,044 in Early Black Friday deals, Velotric e-bikes up to $760 off, Segway, more",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.861307+00:00"
+  },
+  "799ab154646d1520": {
+    "editorial_summary": "The latest developments in throwing free public charging signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-799ab154646d1520",
+    "title": "BMW is throwing in $500 in free public charging with its new 2027 iX3, i5, and i7 EVs",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.861398+00:00"
+  },
+  "42a1663cea95ef9d": {
+    "editorial_summary": "The latest developments in Toyota Quietly Gave 2027 signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-42a1663cea95ef9d",
+    "title": "Toyota Quietly Gave The 2027 Toyota RAV4 PHEV A Big Upgrade",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.861483+00:00"
+  },
+  "a0a60d312de83b8d": {
+    "editorial_summary": "As 2027 Ford Mustang continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-a0a60d312de83b8d",
+    "title": "2027 Ford Mustang GTD",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.861565+00:00"
+  },
+  "6bf8baa2ec4e988c": {
+    "editorial_summary": "The 2027 Jeep Recon space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-6bf8baa2ec4e988c",
+    "title": "2027 Jeep Recon EV",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.861637+00:00"
+  },
+  "f7eec16adc758d3a": {
+    "editorial_summary": "As 2027 Buick Envista continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-f7eec16adc758d3a",
+    "title": "2027 Buick Envista",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.861707+00:00"
+  },
+  "7ef41326cc60433f": {
+    "editorial_summary": "The latest developments in Official Cybertruck Greatest Flops signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-7ef41326cc60433f",
+    "title": "It’s Official: The Cybertruck Is One Of The Greatest Flops In Automotive History",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.861784+00:00"
+  },
+  "7004c8f62a24d57e": {
+    "editorial_summary": "As 2027 Lotus Evija continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-7004c8f62a24d57e",
+    "title": "2027 Lotus Evija",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.861917+00:00"
+  },
+  "f5e0029514da13ed": {
+    "editorial_summary": "As smashed range rating driving continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-f5e0029514da13ed",
+    "title": "The BMW iX3 smashed its EPA range rating, driving well over 400 miles in a real-world test",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.861994+00:00"
+  },
+  "aa02f53ce5301805": {
+    "editorial_summary": "The latest developments in Kias electric stretches feet signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-aa02f53ce5301805",
+    "title": "Kia’s PV7 electric van stretches over 17 feet and seats 9",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.862156+00:00"
+  },
+  "d8f9e6facacf893b": {
+    "editorial_summary": "Recent signals from the Tesla hikes Cybertruck prices ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. The EV transition is accelerating faster than legacy automakers planned for, and the supply chain, software, and infrastructure implications are still being absorbed.",
+    "slug": "rss-d8f9e6facacf893b",
+    "title": "Tesla hikes Cybertruck prices up to 10% after announcing it will kill production",
+    "cat_slug": "evs-automotive",
+    "category": "EVs & Automotive",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:38.862244+00:00"
+  },
+  "4a31c477fa18a635": {
+    "editorial_summary": "The latest developments in Elon Musk once said signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-4a31c477fa18a635",
+    "title": "Elon Musk once said the Cybertruck would be Tesla’s ‘best product ever.’ Now he’s winding down production",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.730852+00:00"
+  },
+  "49e08a10a186ebfb": {
+    "editorial_summary": "As midterms didnt stop buildout continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-49e08a10a186ebfb",
+    "title": "The midterms didn’t stop the AI buildout. They simply repriced it—and OpenAI is already promising to pay up",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.730985+00:00"
+  },
+  "b303603891555497": {
+    "editorial_summary": "The apps coming says Apple space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-b303603891555497",
+    "title": "The Duo apps are coming, says Apple",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.731085+00:00"
+  },
+  "3f262fb9016e3c0e": {
+    "editorial_summary": "As tech stocks performing Friday continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-3f262fb9016e3c0e",
+    "title": "How tech stocks are performing Friday amid AI slowdown fears",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.731202+00:00"
+  },
+  "23ed139a02298a02": {
+    "editorial_summary": "The latest developments in Democrats just control Georgia signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-23ed139a02298a02",
+    "title": "Democrats just won control of Georgia Power’s regulator for the first time in 30 years — and its OpenAI data center contract was entirely redacted",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.731299+00:00"
+  },
+  "0bb4b62185e8aa8c": {
+    "editorial_summary": "The latest developments in Everyone knows lost Vance signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-0bb4b62185e8aa8c",
+    "title": "‘Everyone knows why we lost,’ JD Vance points to the Iran war — which has already cost at least $38 billion and 19 American lives",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.731397+00:00"
+  },
+  "e081c1d7cf4fbecc": {
+    "editorial_summary": "The latest developments in voters broke Democrats midterms signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-e081c1d7cf4fbecc",
+    "title": "Gen Z voters broke for Democrats 66% to 31% in the midterms — and the Iran war cracked their top three issues",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.731492+00:00"
+  },
+  "ae3e9c0eaad07c8b": {
+    "editorial_summary": "What is unfolding in pricier Election than almost represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-ae3e9c0eaad07c8b",
+    "title": "Gas was pricier on this Election Day than any before it — up almost 40% to $4.15 a gallon since the Iran war began",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.731582+00:00"
+  },
+  "cd587dab154d48b2": {
+    "editorial_summary": "As Florida voters nearly tripled continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-cd587dab154d48b2",
+    "title": "Florida voters nearly tripled the homeowner tax break — blowing an $11.8 billion hole in county budgets",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.731670+00:00"
+  },
+  "d90e4e0ab483656e": {
+    "editorial_summary": "The Sharks CryoGlow Plus face space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-d90e4e0ab483656e",
+    "title": "Sharks CryoGlow Plus face mask gets first-ever discount for Sephora Savings Event",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.731754+00:00"
+  },
+  "4ba8375b624a4e9f": {
+    "editorial_summary": "Recent signals from the WhatsApp channel called Lulas ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-4ba8375b624a4e9f",
+    "title": "A WhatsApp channel called Lula’s Army grew from 50,000 to more than 10 million subscribers as Brazil’s president staged a historic comeback",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.731853+00:00"
+  },
+  "41f62594f76e2a20": {
+    "editorial_summary": "The latest developments in Ferraris Luce ridiculed Magic signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-41f62594f76e2a20",
+    "title": "Ferrari’s Luce was ridiculed as a ‘Magic Mouse on wheels.’ Now the EV is sold out for 2027, and buyers haven’t even driven it yet",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.732144+00:00"
+  },
+  "ecce1ba7baa4c5e8": {
+    "editorial_summary": "The latest developments in Weeks Biggest Funding Rounds signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-ecce1ba7baa4c5e8",
+    "title": "The Week’s 10 Biggest Funding Rounds: AI, Defense And Space Tech Lead For Large Rounds",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.732244+00:00"
+  },
+  "37d75a0fa3790bf4": {
+    "editorial_summary": "What is unfolding in Hundreds Artex hacking tools represents a convergence of technical capability, regulatory clarity, and market readiness that rarely occurs simultaneously. The window to act strategically is narrowing. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-37d75a0fa3790bf4",
+    "title": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.732329+00:00"
+  },
+  "9f8968f0883b5b38": {
+    "editorial_summary": "The Kalshis claim commodities trader space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-9f8968f0883b5b38",
+    "title": "Kalshi’s claim to be a commodities trader is being rejected by courts",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.732738+00:00"
+  },
+  "7800f403565b24b6": {
+    "editorial_summary": "As Meta puts controversial scraping continues to evolve, the gap between early adopters and laggards is widening rapidly. The technical and strategic stakes are higher than most industry observers currently appreciate. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-7800f403565b24b6",
+    "title": "Meta puts controversial web scraping policy changes on hold indefinitely",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.732878+00:00"
+  },
+  "bff51f156030f91f": {
+    "editorial_summary": "The says phase floppy disks space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-bff51f156030f91f",
+    "title": "The FAA says it will phase out floppy disks by 2028",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.732975+00:00"
+  },
+  "8f51c7b390aa45bf": {
+    "editorial_summary": "The latest developments in midterms industry rough years signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-8f51c7b390aa45bf",
+    "title": "After the midterms, is the AI industry in for a rough two years?",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.733059+00:00"
+  },
+  "d0e88cab17e98452": {
+    "editorial_summary": "The latest developments in watching Brazilian free weekend signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-d0e88cab17e98452",
+    "title": "Im watching the Brazilian GP for free this weekend — how to live stream F1 for free",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.733135+00:00"
+  },
+  "d14db64e1c1b04aa": {
+    "editorial_summary": "The latest developments in Pentagon offers battery startup signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-d14db64e1c1b04aa",
+    "title": "Pentagon offers battery startup 6K $250M loan to build US factory",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.733218+00:00"
+  },
+  "fc41e3f3d4824151": {
+    "editorial_summary": "The completes acquisition Roku space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-fc41e3f3d4824151",
+    "title": "Fox completes its $22B acquisition of Roku",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.733369+00:00"
+  },
+  "ef249c4a5b7b7a9e": {
+    "editorial_summary": "The Apple Meta Elon Musks space is experiencing compounding momentum that goes beyond the usual hype cycle. Underlying adoption metrics and capital allocation patterns suggest this is a durable structural shift, not a transient trend. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-ef249c4a5b7b7a9e",
+    "title": "Apple, Meta, Elon Musk’s companies reportedly in the crosshairs of congressional investigation",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.733441+00:00"
+  },
+  "e68a091d66a23493": {
+    "editorial_summary": "Recent signals from the Billionaires Dalio Richard Branson ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-e68a091d66a23493",
+    "title": "Billionaires Ray Dalio and Richard Branson hate workplace gossip—but men who do it could face a steeper career penalty than women, study finds",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.733529+00:00"
+  },
+  "59495c775bf305ae": {
+    "editorial_summary": "Recent signals from the Companies Really Really Want ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-59495c775bf305ae",
+    "title": "AI Companies Really, Really Want to Buy Your Work Files and Emails",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.733615+00:00"
+  },
+  "7b5a2965d87a1f12": {
+    "editorial_summary": "The latest developments in Ramp data shows spending signal a meaningful inflection point for the industry. Organisations that move quickly to understand the implications will be better positioned to adapt their strategies and workflows before competitors do. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-7b5a2965d87a1f12",
+    "title": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.733693+00:00"
+  },
+  "ea483cb425389e0b": {
+    "editorial_summary": "Recent signals from the Certain porn banned what ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-ea483cb425389e0b",
+    "title": "Certain porn is now banned in the UK — what cant you watch anymore?",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.733764+00:00"
+  },
+  "bacb3f0e9b0a9c2b": {
+    "editorial_summary": "Recent signals from the blocking Muse Amazon lets ecosystem point to accelerating maturity. The transition from experimental deployments to production-grade infrastructure is underway across multiple sectors simultaneously. Capital is flowing to founders who can demonstrate not just technical innovation but clear paths to defensible, scalable business models.",
+    "slug": "rss-bacb3f0e9b0a9c2b",
+    "title": "After blocking Muse, Amazon now lets users text Alexa to help them shop",
+    "cat_slug": "startups-business",
+    "category": "Startups & Business",
+    "intel_data": null,
+    "cached_on": "2026-11-06T22:52:40.733859+00:00"
   }
 }
